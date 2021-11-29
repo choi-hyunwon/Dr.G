@@ -1,0 +1,35 @@
+/*
+|----------------------------------|
+ v.0.1 (주연) 최초 작업 -- 2021.11.9
+ v.0.2 (선미) .no-data / M-divider 추가 -- 2021.11.18
+|----------------------------------|
+*/
+
+hr.divider {
+  width: 100%;
+  height: 10px;
+  margin: 0;
+  opacity: 1;
+  background: $bg-f5f5f5;
+}
+
+
+/*공통 - 데이터 없는경우*/
+.no-data {
+  padding: 90px 0!important;
+  text-align: center;
+  p {
+    font-size: 16px;
+    color:$gray-454545;
+    padding-top: 66px;
+    background: url(../img/common/img-empty.png) no-repeat center top;
+  }
+}
+
+/*공통 - 얇은버전*/
+.M-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e9e9e9;
+  margin: 64px 0 65px;
+}

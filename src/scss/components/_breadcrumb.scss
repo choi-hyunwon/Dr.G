@@ -1,0 +1,51 @@
+/*
+|----------------------------------|
+ v.0.1 선미 : 최초 작업 -- 2021.08.31
+ v.0.2 선미 : .breadcrumb-item {letter-spacing: -0.5px}추가 -- 2021.09.15
+|----------------------------------|
+*/
+.breadcrumb {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: end;
+  justify-content: flex-end;
+  font-size: 14px;
+  margin-bottom: 90px;
+  letter-spacing: 0;
+  padding-top: 30px;
+
+  .breadcrumb-item {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: $gray-909090;
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.5px;
+
+
+    &.active {
+        color: $gray-000000;
+    }
+
+    + .breadcrumb-item {
+      padding-left: 6px;
+
+      &::before {
+        color: $gray-909090;
+        padding-right: 6px;
+      }
+    }
+  }
+  &.breadcrumb-white{
+    .breadcrumb-item{
+      color: $gray-ffffff;
+      &.active {
+        color: $gray-ffffff;
+      }
+    }
+  }
+}
+

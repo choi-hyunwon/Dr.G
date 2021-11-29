@@ -1,0 +1,168 @@
+/*
+|----------------------------------|
+ v.0.1 주연 : 최초 작업 -- 2021.11.3
+|----------------------------------|
+*/
+
+.btn {
+  display: block;
+  text-align: center;
+  height: 65px;
+  line-height: 65px;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  font-family: $font-family-bold;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+  color: $gray-ffffff;
+
+  &.btn-primary {
+    background-color: $point-primary;
+
+    &.disabled {
+      background-color: $gray-d9d9d9;
+    }
+  }
+
+  &.btn-black {
+    background-color: $bg-222222;
+
+    &:hover {
+      color: $gray-ffffff;
+    }
+
+    &.disabled {
+      background-color: $gray-d9d9d9;
+    }
+  }
+
+  &.btn-light {
+    background-color: transparent;
+    border: 1px solid $gray-707070;
+    color: $gray-000000;
+
+    &.disabled {
+      border: 1px solid $gray-d9d9d9;
+
+      span {
+        color: $gray-d9d9d9;
+      }
+    }
+  }
+
+  &.btn-round {
+    height: 56px;
+    line-height: 56px;
+    border-radius: 4px;
+    font-size: 16px;
+
+    &.btn-light {
+      border: 1px solid $gray-d9d9d9;
+    }
+  }
+
+  &.btn-flexible {
+    display: inline-block;
+    padding: 0 25px;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  + .btn {
+    margin-top: 8px;
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  width: 100%;
+
+  .btn {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+
+    + .btn {
+      margin-top: 0;
+      margin-left: 4px;
+    }
+  }
+  + .btn-wrapper {
+    margin-top: 8px;
+  }
+}
+
+/* icon button */
+.btn-zoom {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/common/btn-img-zoom.svg);
+  background-size: cover;
+  z-index: 1;
+}
+
+.btn-service {
+  display: block;
+  width: 131px;
+  height: 46px;
+  background-image: url(../img/common/btn-service.png);
+  background-size: cover;
+}
+
+.btn-download {
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-image: url(../img/common/btn-download.svg);
+  background-size: cover;
+}
+
+.btn-view-zoom {
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-image: url(../img/common/btn-zoom.svg);
+  background-size: cover;
+}
+
+.btn-more {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-image: url(../img/common/ico-more.svg);
+}
+
+.btn-tooltip {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/common/btn-tooltip.svg);
+}
+
+.btn-close-dark {
+  display: block;
+  width: 34px;
+  height: 34px;
+  background-image: url(../img/common/btn-close-dark.svg);
+}
+
+.btn-close-light {
+  display: block;
+  width: 34px;
+  height: 34px;
+  background-image: url(../img/common/btn-close-light.svg);
+}
+
+.btn-share {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-image: url(../img/common/btn-share.svg);
+}

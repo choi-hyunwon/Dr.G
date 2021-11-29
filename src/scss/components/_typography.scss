@@ -1,0 +1,116 @@
+/*
+|----------------------------------|
+ v.0.1 주연 : 최초 작업 -- 2021.11.2
+|----------------------------------|
+*/
+@import "variables";
+
+.font-bold {
+  font-family: $font-family-bold;
+}
+
+.font-h1 {
+  font-family: $font-family-bold;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: -1px;
+}
+
+.font-h3 {
+  font-family: $font-family-bold;
+  font-size: 34px;
+  line-height: 50px;
+  letter-spacing: -1px;
+}
+
+.font-h4 {
+  font-family: $font-family-bold;
+  font-size: 28px;
+  line-height: 44px;
+  letter-spacing: -1px;
+}
+
+.font-h5 {
+  font-family: $font-family-bold;
+  font-size: 26px;
+  line-height: 42px;
+  letter-spacing: -1px;
+}
+
+.font-h7 {
+  font-family: $font-family-bold;
+  font-size: 22px;
+  line-height: 38px;
+  letter-spacing: -1px;
+}
+
+.font-h7-r {
+  font-size: 22px;
+  line-height: 38px;
+  letter-spacing: -1px;
+}
+
+.font-slogan {
+  font-family: $font-family-bold;
+  font-size: 42px;
+  line-height: 58px;
+  letter-spacing: -1px;
+}
+
+.font-slogan-en {
+  font-family: $font-family-bold;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -1px;
+}
+
+.font-body-h-b {
+  font-family: $font-family-bold;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+  color: $gray-454545;
+}
+
+.font-body-h {
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+  color: $gray-454545;
+}
+
+.font-body-b {
+  font-family: $font-family-bold;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  color: $gray-454545;
+}
+
+.font-body {
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  color: $gray-454545;
+}
+
+.font-small-b {
+  font-family: $font-family-bold;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: -0.5px;
+  color: $gray-707070;
+}
+
+.font-small {
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: -0.5px;
+  color: $gray-707070;
+}
+
+.font-date {
+  font-size: 14px;
+  line-height: 30px;
+  color: $gray-909090;
+}

@@ -1,0 +1,81 @@
+/*
+|----------------------------------|
+ v.0.1 선미 : 최초 작업 -- 2021.08.31
+ v.0.2 선미 : .pagination-wrap (margin-top : 40px) 제거 / .pagination (margin-top : 40px)추가-- 2021.10.14
+|----------------------------------|
+*/
+//.pagination-wrap {
+//  position: relative;
+//  width: 100%;
+//  height: 45px;
+//  margin: 0 auto 0;
+//}
+//
+//.navigation {
+//  width: 100%;
+//  height: 45px;
+//  position: absolute;
+//  left: 0;
+//  top: 0;
+//
+//  .page-item {
+//    position: absolute;
+//    display: inline-block;
+//    width: 45px;
+//    height: 45px;
+//
+//    .page-link {
+//      display: block;
+//      border: 0;
+//      top: 0;
+//      @include background-img($width: 45px, $height: 45px, $category: 'common', $img: 'ico-pagination-first.svg');
+//    }
+//
+//    &.first {
+//      left: 0;
+//
+//      .page-link {
+//        background-image: url(../../dist/img/common/ico-pagination-first.svg);
+//      }
+//    }
+//
+//    &.prev {
+//      left: 45px + 10px;
+//
+//      .page-link {
+//        background-image: url(../../dist/img/common/ico-pagination-prev.svg);
+//      }
+//    }
+//
+//    &.next {
+//      right: 45px + 10px;
+//
+//      .page-link {
+//        background-image: url(../../dist/img/common/ico-pagination-next.svg);
+//      }
+//    }
+//
+//    &.last {
+//      right: 0;
+//
+//      .page-link {
+//        background-image: url(../../dist/img/common/ico-pagination-last.svg);
+//      }
+//    }
+//  }
+//}
+//
+//.pagination {
+//  width: 100%;
+//  height: 45px;
+//  justify-content: center;
+//  align-items: center;
+//  margin-top: 40px;
+//
+//  .page-item {
+//    .page-link {
+//      font-size: 22px;
+//      font-weight: 700;
+//    }
+//  }
+//}

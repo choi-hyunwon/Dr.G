@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="guide input">
+            <div class="font-h2">Input</div>
+            <div class="box">
+                <div class="search-wrap mb-5">
+                    <div class="select-box">
+                        <a href="#" class="select_default _select_default"><span class="text">제목</span></a>
+                        <ul class="select_list _select_list">
+                           <li><span>제목</span></li>
+                           <li><span>One</span></li>
+                           <li><span>Two</span></li>
+                           <li><span>Three</span></li>
+                        </ul>
+                    </div>
+                    <div class="input-search">
+                        <input type="text" class="form-control" placeholder="검색어를 입력해주세요" aria-label="검색어를 입력해주세요"
+                               aria-describedby="search">
+                        <button class="btn-search" type="button" id="search"><span class="sr-only">검색</span></button>
+                    </div>
+                </div>
+                <div class="search-wrap mb-5">
+                    <div class="input-search">
+                        <input type="text" class="form-control" placeholder="검색어를 입력해주세요" aria-label="검색어를 입력해주세요"
+                               aria-describedby="search2">
+                        <button class="btn-search" type="button" id="search2"><span class="sr-only">검색</span></button>
+                    </div>
+                </div>
+                <!-- input / text-->
+                <div class="input-group">
+                    <span class="input-group-text" id="name">이름</span>
+                    <input type="text" placeholder="이름을 입력하세요" class="form-control" aria-label="input"
+                           aria-describedby="name">
+                </div>
+                <!-- input / phone-->
+                <div class="input-group">
+                    <span class="input-group-text" id="num1">휴대폰 번호</span>
+                    <div class="input-group-phone">
+                        <div class="select-box">
+                            <a href="#" class="select_default _select_default"><span class="text">010</span></a>
+                            <ul class="select_list _select_list">
+                                <li><span>010</span></li>
+                                <li><span>011</span></li>
+                                <li><span>016</span></li>
+                                <li><span>017</span></li>
+                                <li><span>018</span></li>
+                                <li><span>019</span></li>
+                            </ul>
+                        </div>
+                        <input type="text" placeholder="이름을 입력하세요" class="form-control" aria-label="input"
+                               aria-describedby="num2">
+                        <input type="text" placeholder="이름을 입력하세요" class="form-control" aria-label="input"
+                               aria-describedby="num3">
+                    </div>
+                </div>
+                <!-- file / input -->
+                <div class="input-group">
+                    <span class="input-group-text" id="fileUpload">첨부파일</span>
+                    <label class="form-control-file _fileUpload">
+                        <span class="btn-add-file">파일첨부</span>
+                        <span class="file-box"></span>
+                        <input type="file" class="form-control-file" aria-describedby="fileUpload" aria-label="Upload">
+                    </label>
+                </div>
+                <!-- textarea -->
+                <div class="input-group">
+                    <span class="input-group-text" id="faq">문의내용</span>
+                    <textarea type="text" placeholder="문의하실 내용을 입력하세요" class="form-control" aria-label="input"
+                              aria-describedby="faq"></textarea>
+                </div>
+                <div class="mb-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check">
+                        <label class="form-check-label" for="check">동의합니다</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title">Paging</div>
+            <div class="box">
+                <div class="mb-5">
+                </div>
+                <div class="mb-5">
+                    <div class="pagination-wrap">
+                        <ul class="navigation">
+                            <li class="page-item first">
+                                <a class="page-link" href="#">
+                                    <span class="sr-only">맨 앞</span>
+                                </a>
+                            </li>
+                            <li class="page-item prev">
+                                <a class="page-link" href="#">
+                                    <span class="sr-only">이전</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="board">
+                        <div class="navigation">
+                            <div class="content clearfix">
+                                <a href="#" class="item prev">
+                                    <div class="title">이전</div>
+                                </a>
+                                <a href="#" class="item next">
+                                    <div class="title">앞으로</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title mb-3">FILE DOWNLOAD</div>
+            <div class="box">
+                <div class="file-download">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="item">
+                                <i class="icon icon-pdf"></i>
+                                <span class="title">Construction of Targeting vector.pdf</span>
+                                <a href="#" class="btn-download"><i class="icon icon-download"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="item">
+                                <i class="icon icon-pdf"></i>
+                                <span class="title">Construction of Targeting vector.pdf</span>
+                                <a href="#" class="btn-download"><i class="icon icon-download"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="item">
+                                <i class="icon icon-pdf"></i>
+                                <span class="title">Construction of Targeting vector.pdf</span>
+                                <a href="#" class="btn-download"><i class="icon icon-download"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="item">
+                                <i class="icon icon-pdf"></i>
+                                <span class="title">Construction of Targeting vector.pdf</span>
+                                <a href="#" class="btn-download"><i class="icon icon-download"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="item">
+                                <i class="icon icon-pdf"></i>
+                                <span class="title">Construction of Targeting vector.pdf</span>
+                                <a href="#" class="btn-download"><i class="icon icon-download"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="item">
+                                <i class="icon icon-pdf"></i>
+                                <span class="title">Construction of Targeting vector.pdf</span>
+                                <a href="#" class="btn-download"><i class="icon icon-download"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="item">
+                                <i class="icon icon-pdf"></i>
+                                <span class="title">Construction of Targeting vector.pdf</span>
+                                <a href="#" class="btn-download"><i class="icon icon-download"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="item">
+                                <i class="icon icon-pdf"></i>
+                                <span class="title">Construction of Targeting vector.pdf</span>
+                                <a href="#" class="btn-download"><i class="icon icon-download"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="title">Dropdown</div>
+            <div class="box">
+                <div class="mb-5">
+                    <div class="dropdown_area">
+                    <div class="select-box">
+                        <div class="select_default _select_default">
+                            <span>2020. 03. 31 ~ 현재</span>
+                        </div>
+                        <ul class="select_list _select_list">
+                            <li><span>2020. 03. 31 ~ 현재</span></li>
+                            <li><span>2019. 10. 21 - 2020. 03 .31</span></li>
+                            <li><span>2018. 10. 26 - 2019. 10 .20</span></li>
+                            <li><span>2017. 03. 31 - 2018. 10 .25</span></li>
+                            <li><span>2012. 12. 03 - 2017. 03 .31</span></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../../html/include/common/footer.html')
+</div>
+</body>
+</html>
+
+<style>
+    .box{
+        padding: 30px;
+        border-radius: 10px;
+        border:1px solid #d9d9d9;
+        margin-bottom: 50px;
+    }
+    .font-h2{
+        margin-bottom: 30px;
+    }
+</style>
