@@ -1,6 +1,6 @@
 /*
 |----------------------------------|
- v.0.1 주연 : 최초 작업 -- 2021.11.2
+ v.0.1 주연 : 최초 작업 -- 2021.11.30
 |----------------------------------|
 */
 .icon {
@@ -12,256 +12,58 @@
   overflow: hidden;
 }
 
-.ico-attach {
-  width: 18px;
-  height: 18px;
-  background-image: url(../img/common/ico-attach.svg);
-}
-
-.ico-bullet {
-  width: 5px;
-  height: 5px;
-  background-image: url(../img/common/ico-bullet.svg);
-}
-
-.ico-cart-black {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/ico-cart-black.svg);
-}
-
-.ico-cart-white {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/ico-cart-white.svg);
-}
-
-.ico-cart-black {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/ico-cart-black.svg);
-}
-
-.ico-close-black {
-  width: 12px;
-  height: 12px;
-  background-image: url(../img/common/ico-close-black.svg);
-}
-
-.ico-close-white {
-  width: 12px;
-  height: 12px;
-  background-image: url(../img/common/ico-close-white.svg);
-}
-
-.ico-down-black {
-  width: 14px;
-  height: 14px;
-  background-image: url(../img/common/ico-down-black.svg);
-}
-
-.ico-down-black-sm {
-  width: 10px;
-  height: 7px;
-  background-image: url(../img/common/ico-down-black-sm.svg);
-}
-
-.ico-download-black {
-  width: 24px;
-  height: 20px;
-  background-image: url(../img/common/ico-download-black.svg);
-}
-
-.ico-download-white {
-  width: 19px;
-  height: 24px;
-  background-image: url(../img/common/ico-download-white.svg);
-}
-
-.ico-download-white-sm {
-  width: 14px;
-  height: 18px;
-  background-image: url(../img/common/ico-download-white-sm.svg);
-}
-
-.ico-bullet-blue {
-  width: 6px;
-  height: 6px;
-  background-image: url(../img/common/ico-ellipse.svg);
-}
-
-.ico-bullet-4545 {
-  width: 6px;
-  height: 6px;
-  background-image: url(../img/common/ico-bullet-black.svg);
-}
-
-.ico-bullet-222 {
-  width: 6px;
-  height: 6px;
-  background-image: url(../img/common/ico-bullet-222.svg);
-}
-
-.ico-bullet-white {
-  width: 6px;
-  height: 6px;
-  background-image: url(../img/common/ico-bullet-white.svg);
-}
-
-.ico-file-doc {
-  width: 26px;
-  height: 28px;
-  background-image: url(../img/common/ico-file-doc.svg);
-}
-
-.ico-file-hwp {
-  width: 26px;
-  height: 28px;
-  background-image: url(../img/common/ico-file-hwp.svg);
-}
-
-.ico-file-pdf {
-  width: 26px;
-  height: 28px;
-  background-image: url(../img/common/ico-file-pdf.svg);
-}
-
-.ico-imgCount-black {
-  width: 18px;
-  height: 18px;
-  background-image: url(../img/common/ico-imgCount-black.svg);
-}
-
-.ico-imgCount-white {
-  width: 18px;
-  height: 18px;
-  background-image: url(../img/common/ico-imgCount-white.svg);
-}
-
-.ico-info-blue {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/ico-info-blue.svg);
-}
-
-.ico-launch-black {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/ico-launch-black.svg);
-}
-
-.ico-launch {
-  width: 18px;
-  height: 18px;
-  background-image: url(../img/common/ico-launch.svg);
-}
-
-.ico-left-black {
-  width: 12px;
-  height: 20px;
-  background-image: url(../img/common/ico-left-black.svg);
-}
-
-.ico-left-dark {
-  width: 14px;
-  height: 14px;
-  background-image: url(../img/common/ico-left-dark.svg);
-}
-
-.ico-more-black {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/ico-more-black.svg);
-}
-
-.ico-move-black {
-  width: 14px;
-  height: 12px;
-  background-image: url(../img/common/ico-move-black.svg);
-}
-
-.ico-move-white {
-  width: 14px;
-  height: 12px;
-  background-image: url(../img/common/ico-move-white.svg);
-}
-
-.ico-moveLong-black {
-  width: 66px;
-  height: 12px;
-  background-image: url(../img/common/ico-moveLong-black.svg);
-}
-
-.ico-notice {
-  width: 60px;
-  height: 60px;
-  background-image: url(../img/common/ico-notice.png);
-}
-
-.ico-poly {
-  width: 9px;
-  height: 6px;
-  background-image: url(../img/common/ico-poly.svg);
-}
-
 .ico-prev {
-  width: 24px;
-  height: 18px;
-  background-image: url(../img/common/ico-prev.svg);
+  @include background-img ($width: 12px, $height: 12px, $category: 'common', $img: 'ico-prev.png');
 }
 
-.ico-search-black {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/ico-search.svg);
+.ico-next {
+  @include background-img ($width: 12px, $height: 12px, $category: 'common', $img: 'ico-next.png');
 }
 
-.ico-share-black {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/ico-share-black.svg);
+.ico-alert {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-alert.png');
+
+  &.white {
+    background-image: url(../img/common/ico-alert-white.png);
+  }
 }
 
-.ico-swipe-gray {
-  width: 12px;
-  height: 12px;
-  background-image: url(../img/common/ico-swipe-gray.svg);
+.ico-nav-menu-shop {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'nav-menu-shop.png');
 }
 
-.ico-up-black {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/ico-up-black.svg);
+.ico-accordion {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-accordion-open.png');
+
+  &.ico-accordion-close {
+    background-image: url(../img/common/ico-accordion-close.png);
+  }
 }
 
-.ico-write-black {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/ico-write-black.svg);
+.ico-accordion-close {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-accordion-open.png');
 }
 
-.ico-write-white {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/ico-write-white.svg);
+.ico-close {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-close.png');
+
+  &.white {
+    background-image: url(../img/common/ico-close-white.png);
+  }
 }
 
-.ico-zoom-white {
-  width: 24px;
-  height: 24px;
-  background-image: url(../img/common/ico-zoom-white.svg);
+.ico-nav-prev {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-nav-prev.png');
 }
 
-.ico-tooltip {
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/common/btn-tooltip.svg);
+.ico-nav-next {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-nav-next.png');
 }
 
-.img-empty {
-  display: inline-block;
-  width: 83px;
-  height: 50px;
-  background-image: url(../img/common/img-empty.png);
-  background-size: cover;
+.ico-search {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-search.png');
+}
+
+.ico-remove {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-remove.png');
 }

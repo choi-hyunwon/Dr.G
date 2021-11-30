@@ -1,10 +1,6 @@
 /*
 |----------------------------------|
- v.0.1 주연 : 최초 작업 -- 2021.11.5
- v.0.2 주연 : 파일 다운로드 UI 추가 -- 2021.11.10
- v.0.3 선미 : .input-tip { margin-bottom 제거 } / form-check-input {marging 수정} /
-             input-group-text {margin 제거} / placeholder {bold 제거}-- 2021.11.18
- v.0.4 선미 : btn-search 아이콘 경로 변경 -- 2021.11.24
+ v.0.1 주연 : 최초 작업 -- 2021.11.30
 |----------------------------------|
 */
 input[type="number"]::-webkit-outer-spin-button,
@@ -15,11 +11,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input::placeholder {
   font-size: 18px;
-  color: $gray-d9d9d9;
+  color: $gray-400;
 }
 
 textarea::placeholder {
-  color: $gray-d9d9d9;
+  color: $gray-400;
 }
 
 .form-check {
@@ -39,8 +35,7 @@ textarea::placeholder {
     line-height: 26px;
     margin: 0 8px 0 0;
     border-radius: 0;
-    border: 2px solid $line-d9d9d9;
-    background-image: url(../../dist/img/common/ico-check-nor.png);
+    //border: 2px solid $line-d9d9d9;
     background-size: 16px 12px;
 
     &:focus {
@@ -49,12 +44,11 @@ textarea::placeholder {
     }
 
     &:checked {
-      border: 2px solid $point-primary;
-      background-color: $point-primary;
-      background-image: url(../../dist/img/common/ico-check-checked.png);
+      border: 2px solid $primary;
+      background-color: $primary;
 
       + .form-check-label {
-        color: $gray-000000;
+        color: $gray-900;
       }
     }
   }
@@ -65,7 +59,7 @@ textarea::placeholder {
     font-weight: bold;
     font-size: 18px;
     letter-spacing: -0.5px;
-    color: $gray-909090;
+    color:$gray-900;
   }
 }
 
@@ -74,7 +68,7 @@ textarea::placeholder {
   font-size: 18px;
   line-height: 34px;
   letter-spacing: -0.5px;
-  color: $gray-000000;
+  color: $gray-900;
   margin-bottom: 8px;
 }
 
@@ -114,15 +108,15 @@ textarea::placeholder {
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 1px solid $gray-000000;
+    border-bottom: 1px solid $gray-900;
     padding: 0;
     border-radius: 0;
     font-size: 18px;
     letter-spacing: -0.5px;
-    color: $gray-454545;
+    color: $gray-900;
 
     &::placeholder {
-      color: $disabled-d9d9d9;
+      //color: $gray-400;
     }
 
     &:focus {
@@ -147,7 +141,7 @@ textarea::placeholder {
         height: 1px;
         bottom: 0;
         left: 0;
-        background-color: $gray-000000;
+        background-color: $gray-900;
       }
     }
   }
@@ -166,14 +160,14 @@ textarea::placeholder {
     padding: 24px;
     width: 100%;
     min-height: 320px;
-    border: 1px solid $gray-000000;
+    border: 1px solid $gray-900;
     resize: none;
     line-height: 34px;
 
     &:disabled {
-      border: 1px solid $line-e9e9e9;
-      background-color: $bg-f7f7f7;
-      color: $gray-909090;
+      //border: 1px solid $line-e9e9e9;
+      //background-color: $bg-f7f7f7;
+      color:$gray-900;
     }
   }
 
@@ -212,14 +206,14 @@ textarea::placeholder {
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 1px solid $line-000000;
+    //border-bottom: 1px solid $gray-900;
     border-radius: 0;
     font-size: 18px;
     letter-spacing: -0.5px;
-    color: $gray-454545;
+    color: $gray-900;
 
     &::placeholder {
-      color: $disabled-d9d9d9;
+      //color: $gray-400;
     }
 
     &:focus {
@@ -230,7 +224,7 @@ textarea::placeholder {
 
   .btn-search {
     position: absolute;
-    background-image: url("../img/common/ico-search.png");
+    //background-image: url("../img/common/ico-search.png");
     width: 20px;
     height: 20px;
     background-size: contain;
@@ -255,7 +249,7 @@ textarea::placeholder {
   transition: all .5s ease;
   font-size: 18px;
   text-align: left;
-  border-bottom: 1px solid $gray-000000;
+  border-bottom: 1px solid $gray-900;
 
   &:focus {
     box-shadow: none;
@@ -268,7 +262,7 @@ textarea::placeholder {
 
     .ico-select-nor {
       position: absolute;
-      @include background-img($width: 9px, $height: 6px, $category: 'common', $img: 'ico-select-nor.svg');
+      //@include background-img($width: 9px, $height: 6px, $category: 'common', $img: 'ico-select-nor.svg');
       right: 27px;
       top: 50%;
       transform: translateY(-50%);
@@ -284,7 +278,7 @@ textarea::placeholder {
     left: 0;
     margin-top: 1px;
     box-shadow: 0 8px 6px rgba(0, 0, 0, 0.08);
-    border: 1px solid $gray-000000;
+    border: 1px solid $gray-900;
     border-radius: 7px;
     overflow: hidden;
     overflow-y: auto;
@@ -300,7 +294,7 @@ textarea::placeholder {
       padding: 0;
       font-size: 16px;
       line-height: 32px;
-      color: $gray-454545;
+      color: $gray-900;
       letter-spacing: -.5px;
 
       &:last-child {
@@ -325,7 +319,7 @@ textarea::placeholder {
     display: flex;
     width: 100%;
     padding: 14px 20px 14px 50px;
-    background-color: $bg-f7f7f7;
+    //background-color: $bg-f7f7f7;
     align-items: center;
 
     .icon {
@@ -340,7 +334,7 @@ textarea::placeholder {
       font-size: 16px;
       line-height: 32px;
       letter-spacing: -0.5px;
-      color: $gray-454545;
+      color: $gray-900;
     }
 
     + .file {
@@ -355,7 +349,7 @@ textarea::placeholder {
     display: flex;
     width: 100%;
     padding: 14px 25px;
-    background-color: $bg-f7f7f7;
+    //background-color: $bg-f7f7f7;
     margin-bottom: 8px;
     border-radius: 5px;
     align-items: center;
@@ -387,8 +381,57 @@ textarea::placeholder {
         left: -16px;
         top: 50%;
         transform: translateY(-50%);
-        background-color: $line-e9e9e9;
+        //background-color: $line-e9e9e9;
       }
     }
+  }
+}
+
+.custom-switch {
+  padding-left: 40px;
+
+  .custom-control-input {
+    width: 40px;
+    height: 24px;
+  }
+
+  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    background-color: $gray-500;
+    border-color: $gray-500;
+  }
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: $gray-500;
+    border-color: $gray-500;
+  }
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+  }
+  .custom-control-label::before {
+    background-color: $gray-500;
+    border-color: $gray-500;
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 100px;
+    left: -40px;
+    top: 0;
+  }
+  .custom-control-label::after {
+    background-color: $gray-fff;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: 3px;
+    left: -37px;
+  }
+  .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: $primary;
+    border-color: $primary;
+  }
+  .custom-control-input:checked ~ .custom-control-label::after {
+    transform: translateX(1rem);
+  }
+  .custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before {
+    background-color: $gray-500;
+    border-color: $gray-500;
   }
 }

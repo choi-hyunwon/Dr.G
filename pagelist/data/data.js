@@ -8,12 +8,12 @@ data.guide = {
       category: 'guide',
       page: 'COLORS'
     },
-    {
-      stateClass: 'complete',
-      url: 'table',
-      category: 'guide',
-      page: 'table'
-    },
+    // {
+    //   stateClass: 'complete',
+    //   url: 'table',
+    //   category: 'guide',
+    //   page: 'table'
+    // },
     {
       stateClass: 'complete',
       url: 'button',
@@ -22,39 +22,27 @@ data.guide = {
     },
     {
       stateClass: 'complete',
-      url: 'typography_01',
+      url: 'typography',
       category: 'guide',
       page: 'TYPOGRAPHY'
     },
-    {
-      stateClass: 'complete',
-      url: 'typography_02',
-      category: 'guide',
-      page: 'TYPOGRAPHY(한글)'
-    },
-    {
-      stateClass: 'complete',
-      url: 'typography_03',
-      category: 'guide',
-      page: 'TYPOGRAPHY(영어)'
-    },
-    {
-      stateClass: 'complete',
-      url: 'grid',
-      category: 'guide',
-      page: 'grid'
-    },
-    {
-      stateClass: 'complete',
-      url: 'input',
-      category: 'guide',
-      page: 'INPUT'
-    },
-    {
-      stateClass: 'complete',
-      url: 'loading',
-      category: 'guide',
-      page: 'loading'
-    }
+    // {
+    //   stateClass: 'complete',
+    //   url: 'grid',
+    //   category: 'guide',
+    //   page: 'grid'
+    // },
+    // {
+    //   stateClass: 'complete',
+    //   url: 'input',
+    //   category: 'guide',
+    //   page: 'INPUT'
+    // },
+    // {
+    //   stateClass: 'complete',
+    //   url: 'loading',
+    //   category: 'guide',
+    //   page: 'loading'
+    // }
   ]
 }
