@@ -49,6 +49,12 @@ data.guide = {
       url: 'typography',
       category: 'guide',
       page: 'TYPOGRAPHY'
+    },
+    {
+      stateClass: 'complete',
+      url: 'layout',
+      category: 'guide',
+      page: 'layout'
     }
   ]
 }
