@@ -9,11 +9,6 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input[type="checkbox"]{
-  outline: none!important;
-  box-shadow: none!important;
-}
-
 
 .custom-switch {
   padding-left: 40px;
@@ -63,9 +58,6 @@ input[type="checkbox"]{
     border-color: $gray-500;
   }
 }
-
-
-
 .custom-checkbox{ display: inline-block;
   .custom-control-input{
     width: 24px;
@@ -126,7 +118,6 @@ input[type="checkbox"]{
     }
   }
 }
-
 .custom-radio{ display: inline-block;
   .custom-control-input{
     width: 24px;
