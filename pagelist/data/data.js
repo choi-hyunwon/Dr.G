@@ -15,40 +15,34 @@ data.guide = {
       page: 'COLORS'
     },
     {
-      stateClass: 'working',
+      stateClass: 'complete',
       url: 'grid',
       category: 'guide',
       page: 'grid'
     },
     {
-      stateClass: 'working',
+      stateClass: 'complete',
       url: 'icons',
       category: 'guide',
       page: 'icons'
     },
     {
-      stateClass: 'working',
+      stateClass: 'complete',
       url: 'input',
       category: 'guide',
       page: 'INPUT'
     },
     {
-      stateClass: 'working',
+      stateClass: 'complete',
       url: 'loading',
       category: 'guide',
       page: 'loading'
     },
     {
-      stateClass: 'working',
+      stateClass: 'complete',
       url: 'tab',
       category: 'guide',
       page: 'tab'
-    },
-    {
-      stateClass: 'working',
-      url: 'table',
-      category: 'guide',
-      page: 'table'
     },
     {
       stateClass: 'complete',

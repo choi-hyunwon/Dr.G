@@ -4,7 +4,7 @@
 |----------------------------------|
 */
 .guide {
-  padding: 50px;
+  padding: 30px;
 
   &.typography {
     .title-lg {
@@ -171,5 +171,12 @@
       margin-bottom: 30px;
       text-transform: uppercase;
     }
+  }
+
+  >.box{
+    padding: 30px;
+    border-radius: 10px;
+    border:1px solid #d9d9d9;
+    margin-bottom: 50px;
   }
 }
