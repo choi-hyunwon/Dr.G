@@ -4,45 +4,57 @@ data.guide = {
   list: [
     {
       stateClass: 'complete',
-      url: 'color',
-      category: 'guide',
-      page: 'COLORS'
-    },
-    // {
-    //   stateClass: 'complete',
-    //   url: 'table',
-    //   category: 'guide',
-    //   page: 'table'
-    // },
-    {
-      stateClass: 'complete',
       url: 'button',
       category: 'guide',
       page: 'button'
     },
     {
       stateClass: 'complete',
+      url: 'color',
+      category: 'guide',
+      page: 'COLORS'
+    },
+    {
+      stateClass: 'working',
+      url: 'grid',
+      category: 'guide',
+      page: 'grid'
+    },
+    {
+      stateClass: 'working',
+      url: 'icons',
+      category: 'guide',
+      page: 'icons'
+    },
+    {
+      stateClass: 'working',
+      url: 'input',
+      category: 'guide',
+      page: 'INPUT'
+    },
+    {
+      stateClass: 'working',
+      url: 'loading',
+      category: 'guide',
+      page: 'loading'
+    },
+    {
+      stateClass: 'working',
+      url: 'tab',
+      category: 'guide',
+      page: 'tab'
+    },
+    {
+      stateClass: 'working',
+      url: 'table',
+      category: 'guide',
+      page: 'table'
+    },
+    {
+      stateClass: 'complete',
       url: 'typography',
       category: 'guide',
       page: 'TYPOGRAPHY'
-    },
-    // {
-    //   stateClass: 'complete',
-    //   url: 'grid',
-    //   category: 'guide',
-    //   page: 'grid'
-    // },
-    // {
-    //   stateClass: 'complete',
-    //   url: 'input',
-    //   category: 'guide',
-    //   page: 'INPUT'
-    // },
-    // {
-    //   stateClass: 'complete',
-    //   url: 'loading',
-    //   category: 'guide',
-    //   page: 'loading'
-    // }
+    }
   ]
 }
