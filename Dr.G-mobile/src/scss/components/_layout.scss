@@ -31,6 +31,137 @@ a {
 /* footer */
 .footer {
   position: relative;
-  padding: 60px 20px 56px;
+  padding: 32px 20px 70px;
+  border: 1px solid red;
+  background-color: #4b5563;
+  color: #ffffff;
+  .section-top{
+    .service_center{
+      margin-bottom: 17px;
+      .info{
+        float: left;
+        width: 50%;
+        .num{
+          font-size: 30px;
+        }
+      }
+      .time{
+        float: left;
+        width: 50%;
+      }
+    }
+    .link{
+      ul{
+        li{
+          width: 33.333%;
+          a{
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .font-h5 {
+    margin-bottom: 16px;
+  }
+
+
+
+  .link-list {
+    display: block;
+    margin-bottom: 48px;
+
+    ul {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+
+      li {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid #e9e9e9;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 9px;
+          height: 6px;
+          background-image: url(../img/common/ico-select.svg);
+          background-size: cover;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        a, .select {
+          display: block;
+          width: 100%;
+          font-family: $font-family-bold;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 32px;
+          letter-spacing: -0.5px;
+          color: #000000;
+          background-color: #ffffff;
+          padding: 0;
+        }
+
+        .select {
+          border: 0;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        &:first-child {
+          border-top: 1px solid #e9e9e9;
+        }
+      }
+    }
+  }
+
+  .sns {
+    display: flex;
+
+    li {
+      margin-right: 8px;
+
+      a {
+        display: block;
+
+        .icon {
+          display: block;
+          width: 30px;
+          height: 30px;
+          background-size: cover;
+
+          &.icon-facebook {
+            background-image: url(../img/common/btn-facebook.svg);
+          }
+
+          &.icon-youtube {
+            background-image: url(../img/common/btn-youtube.svg);
+          }
+
+          &.icon-blog {
+            background-image: url(../img/common/btn-blog.svg);
+          }
+
+          &.icon-linkedin {
+            background-image: url(../img/common/btn-linkedin.svg);
+          }
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 
 }
