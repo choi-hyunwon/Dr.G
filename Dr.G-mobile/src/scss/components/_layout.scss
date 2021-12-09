@@ -141,8 +141,10 @@ a {
         }
       }
       .desc{
+        display: none;
         &.show{
           margin-top: 2.93333333vw;
+          display: block;
         }
         .address{
           margin-bottom: 5.333vw;
