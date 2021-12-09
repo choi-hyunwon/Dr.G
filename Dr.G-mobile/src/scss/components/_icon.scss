@@ -67,3 +67,27 @@
 .ico-remove {
   @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-remove.png');
 }
+
+.ico-arrow-left {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-arrow-left.png');
+}
+
+.ico-arrow-right {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-arrow-right.png');
+}
+
+.ico-arrow-up {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-arrow-up.png');
+}
+
+.ico-arrow-down {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-arrow-down.png');
+}
+
+.ico-delete {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-delete.png');
+}
+
+.ico-edit {
+  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-edit.png');
+}
