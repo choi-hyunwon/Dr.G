@@ -127,7 +127,7 @@ caption.visually_hidden {
 }
 
 .working {
-  background: #ffa726 !important;
+  background: $working !important;
   color: #ffffff !important;
 }
 
@@ -136,7 +136,7 @@ caption.visually_hidden {
 }
 
 .complete {
-  background-color: #377EF9;
+  background-color: $complete;
   color: #ffffff !important;
 }
 

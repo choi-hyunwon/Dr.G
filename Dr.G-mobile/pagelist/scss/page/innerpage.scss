@@ -129,7 +129,7 @@ h2.title {
 }
 
 .box_list .ing .circle_working {
-  background-color: #ffa726;
+  background-color: $working;
 }
 
 .box_list .ing .circle_complete {
@@ -315,7 +315,7 @@ h2.title {
 }
 
 .popup_area_title {
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid $textColor;
   margin-bottom: 10px;
 }
 

@@ -17,8 +17,7 @@ a {
   position: absolute;
   width: 25px;
   height: 100%;
-  //background-color: $bgColor-dark;
-  background: linear-gradient(106.65deg, #00ADA9 9.33%, #377EF9 93.88%);
+  background-color: $bgColor-dark;
   color: $textColor;
   font-size: 15px;
   font-weight: bold;
@@ -124,8 +123,7 @@ a {
       font-weight: bold;
       padding-bottom: 10px;
       border-bottom: 1px solid $textColor;
-      color: #000;
-      text-transform: uppercase;
+      color: $textColor;
     }
 
     & .btn_control_all {
@@ -296,15 +294,15 @@ a {
         }
 
         & .circle_waiting {
-          background-color: #333333;
+          background-color: $waiting;
         }
 
         & .circle_working {
-          background-color: #ffa726;
+          background-color: $working;
         }
 
         & .circle_complete {
-          background-color: #29b6f6;
+          background-color: $complete;
         }
 
       }
@@ -327,7 +325,7 @@ a {
         }
 
         &:hover span, &.focus span {
-          color: #000;
+          color: $textColor;
         }
 
         &.focus span.depths_2_filename {
@@ -336,8 +334,8 @@ a {
       }
 
       &:hover, &.nav_depth_2 .wrap_scroll ul li .link.focus {
-        //background-color: $bgColor-light;
-        background-color: rgba(141, 187, 242,.4);
+        background-color: $bgColor-light;
+        //background-color: rgba(141, 187, 242,.4);
       }
 
       &:hover .fa-external-link-alt:before {

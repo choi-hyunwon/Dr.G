@@ -185,3 +185,7 @@ fabric.properties
 /dist/
 /package-lock.json
 /.idea/
+/Dr.G-mobile/.idea/
+/Dr.G-mobile/node_modules/
+/Dr.G-mobile/package-lock.json
+/Dr.G-mobile/dist/
