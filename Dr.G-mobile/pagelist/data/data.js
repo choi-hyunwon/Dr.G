@@ -55,6 +55,12 @@ data.guide = {
       url: 'layout',
       category: 'guide',
       page: 'layout'
-    }
+    },
+    {
+      stateClass: 'complete',
+      url: 'popup',
+      category: 'guide',
+      page: 'popup'
+    },
   ]
 }
