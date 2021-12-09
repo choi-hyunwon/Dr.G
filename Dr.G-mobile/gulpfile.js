@@ -105,7 +105,7 @@ function server() {
         }
     });
     gulp.watch(devPaths.js, gulp.series(copyJs)).on("change", reload);
-    gulp.watch(devPaths.css, gulp.series(copyCss)).on("change", reload);
+    gulp.watch('/scss/**/*.scss', gulp.series(copyCss)).on("change", reload);
     gulp.watch(devPaths.html, gulp.series(copyHtml)).on("change", reload);
     gulp.watch(devPaths.index, gulp.series(copyIndex)).on("change", reload);
     gulp.watch(devPaths.font, gulp.series(copyFonts)).on("change", reload);
