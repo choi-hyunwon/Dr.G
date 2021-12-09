@@ -479,7 +479,6 @@ template {
   display: none !important;
 }
 
-/*# sourceMappingURL=bootstrap-reboot.css.map */
 /**
 layout
  */
@@ -6313,7 +6312,7 @@ a {
   text-transform: uppercase;
 }
 .nav_depth_2 .wrap_scroll .title_page_category ul span.tooltip {
-  font-size: 12px;
+  font-size: 11px;
 }
 .nav_depth_2 .wrap_scroll .title_page_category ul .fas {
   position: absolute;
@@ -6375,7 +6374,6 @@ a {
 }
 .nav_depth_2 .wrap_scroll ul li {
   position: relative;
-  margin-bottom: 5px;
   font-size: 16px;
 }
 .nav_depth_2 .wrap_scroll ul li .link, .nav_depth_2 .wrap_scroll ul li .unlink {
