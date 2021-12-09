@@ -14,12 +14,12 @@ data.guide = {
       category: 'guide',
       page: 'COLORS'
     },
-    {
-      stateClass: 'complete',
-      url: 'grid',
-      category: 'guide',
-      page: 'grid'
-    },
+    // {
+    //   stateClass: 'complete',
+    //   url: 'grid',
+    //   category: 'guide',
+    //   page: 'grid'
+    // },
     {
       stateClass: 'complete',
       url: 'icons',
