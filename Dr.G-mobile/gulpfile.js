@@ -88,7 +88,7 @@ function delInclude() {
 // watch
 function watch() {
     gulp.watch(devPaths.js, gulp.series(copyJs));
-    gulp.watch(devPaths.css, gulp.series(copyCss));
+    gulp.watch('/scss/**/*.scss', gulp.series(copyCss));
     gulp.watch(devPaths.html, gulp.series(copyHtml));
     gulp.watch(devPaths.index, gulp.series(copyIndex));
     gulp.watch(devPaths.font, gulp.series(copyFonts));
