@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
 var sass = require("gulp-sass")(require('sass'));
 const del = require('del');
 const browserSync = require('browser-sync').create();
@@ -12,7 +11,7 @@ const devSrc = 'src';
 const devPaths = {
     js: devSrc + '/js/*.js',
     libJs: devSrc + '/js/lib/*.js',
-    css: devSrc + '/scss/*.scss',
+    css: devSrc + '/scss/**/*.scss',
     html : devSrc + '/html/**/*.html',
     index : devSrc + '/index.html',
     image : devSrc + '/img/**/*',
@@ -26,7 +25,6 @@ const distdSrc = 'dist'
 function copyJs() {
     return gulp.src(devPaths.js)
         .pipe(concat('common.js'))
-        .pipe(uglify())
         .pipe(gulp.dest(distdSrc + '/js'));
 }
 
@@ -39,16 +37,21 @@ function copyLibJs() {
 
     return gulp.src(sourceLib)
         .pipe(concat('bundle.js'))
-        .pipe(uglify())
         .pipe(gulp.dest(distdSrc + '/js'));
 }
 
-// css
-function copyCss() {
-    return gulp.src(devPaths.css)
+// compile css
+function compileScss() {
+    return gulp.src('src/scss/*.scss')
         .pipe(sass())
         .pipe(gulp.dest(distdSrc + '/css'));
 }
+
+// css
+// function copyCss() {
+//     // return gulp.src(devSrc + '/css')
+//     //     .pipe(gulp.dest(distdSrc + '/css'));
+// }
 
 // html
 function copyHtml() {
@@ -88,7 +91,7 @@ function delInclude() {
 // watch
 function watch() {
     gulp.watch(devPaths.js, gulp.series(copyJs));
-    gulp.watch(devPaths.css, gulp.series(copyCss));
+    gulp.watch(devPaths.css, gulp.series(compileScss));
     gulp.watch(devPaths.html, gulp.series(copyHtml));
     gulp.watch(devPaths.index, gulp.series(copyIndex));
     gulp.watch(devPaths.font, gulp.series(copyFonts));
@@ -105,7 +108,7 @@ function server() {
         }
     });
     gulp.watch(devPaths.js, gulp.series(copyJs)).on("change", reload);
-    gulp.watch('/scss/**/*.scss', gulp.series(copyCss)).on("change", reload);
+    gulp.watch(devPaths.css, gulp.series(compileScss)).on("change", reload);
     gulp.watch(devPaths.html, gulp.series(copyHtml)).on("change", reload);
     gulp.watch(devPaths.index, gulp.series(copyIndex)).on("change", reload);
     gulp.watch(devPaths.font, gulp.series(copyFonts)).on("change", reload);
@@ -113,7 +116,7 @@ function server() {
 }
 
 //task
-gulp.task("dev", gulp.series(delDist, copyHtml, copyCss, copyLibJs, copyJs, copyFonts, copyImages, copyIndex, delInclude, server))
+gulp.task("dev", gulp.series(delDist, copyHtml, compileScss, copyLibJs, copyJs, copyFonts, copyImages, copyIndex, delInclude, server))
 gulp.task("watch", gulp.series(watch))
 
 exports.default = gulp.series("dev");
