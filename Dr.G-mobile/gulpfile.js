@@ -47,12 +47,6 @@ function compileScss() {
         .pipe(gulp.dest(distdSrc + '/css'));
 }
 
-// css
-// function copyCss() {
-//     // return gulp.src(devSrc + '/css')
-//     //     .pipe(gulp.dest(distdSrc + '/css'));
-// }
-
 // html
 function copyHtml() {
     return gulp.src(devPaths.html)

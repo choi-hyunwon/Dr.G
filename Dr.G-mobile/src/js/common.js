@@ -21,6 +21,23 @@ front.common = (function () {
     }
 
     var commonHandler = function () {
+        /* select */
+        $('.custom-select').on('change', function() {
+            var value = $(this).children("option:selected").attr('value');
+            if (!value) {
+                $(this).css({
+                    'font-weight' : 'normal',
+                    'color' : '#666666',
+                    'background' : '#fff url(../../img/common/ico-select-disabled.png) right 20px center/20px 20px no-repeat'
+                });
+            } else {
+                $(this).css({
+                    'font-weight' : 'bold',
+                    'color' : '#444444',
+                    'background' : '#fff url(../../img/common/ico-select.png) right 20px center/20px 20px no-repeat'
+                });
+            }
+        });
     }
 
     return {

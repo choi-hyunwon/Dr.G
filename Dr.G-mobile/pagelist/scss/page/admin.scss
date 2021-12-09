@@ -24,15 +24,15 @@ a {
   text-align: center;
   z-index: 100;
 
-  & i {
+  i {
     color: $textColor;
   }
 
-  & a {
+  a {
     display: block;
     text-align: center;
 
-    & img {
+    img {
       width: 40px;
       display: inline-block;
     }
@@ -41,7 +41,7 @@ a {
       margin-bottom: 10px;
     }
 
-    & span {
+    span {
       font-size: 12px;
       color: $textColor;
       display: block;
@@ -49,27 +49,27 @@ a {
 
   }
 
-  & .logo {
+  .logo {
     padding: 30px 0;
     display: inline-block;
 
-    & a {
+    a {
       color: #ffffff;
       display: block;
       margin-top: 0;
 
-      & img {
+      img {
         width: 40px;
       }
 
-      & .link {
+      .link {
         display: block;
         position: relative;
       }
     }
   }
 
-  & .btn_open_depths {
+  .btn_open_depths {
     width: 35px;
     height: 35px;
     left: 359px;
@@ -81,7 +81,7 @@ a {
     transition: .5s;
     cursor: pointer;
 
-    & i {
+    i {
       margin-top: 10px;
     }
 
@@ -100,7 +100,7 @@ a {
   height: 100%;
   background: $bgColor;
   transition: .5s;
-  box-shadow: 2px 2px 3px rgba(0,0,0,.2);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
   padding: 28px 20px 0;
 
   &.close {
@@ -108,16 +108,16 @@ a {
     transition: 0.5s;
     padding: 28px 0 0;
 
-    & > * {
+    > * {
       display: none;
     }
   }
 
-  & .title {
+  .title {
     position: relative;
     margin-bottom: 20px;
 
-    & h2 {
+    h2 {
       font-size: 21px;
       margin-bottom: 10px;
       font-weight: bold;
@@ -126,7 +126,7 @@ a {
       color: $textColor;
     }
 
-    & .btn_control_all {
+    .btn_control_all {
       right: 0;
       top: 0;
       width: 61px;
@@ -169,14 +169,14 @@ a {
       }
     }
 
-    & p {
+    p {
       text-align: right;
 
-      & a {
+      a {
         color: $textColor;
         cursor: pointer;
 
-        & .fa-check-square {
+        .fa-check-square {
           display: none;
         }
 
@@ -190,27 +190,27 @@ a {
       }
     }
 
-    & i {
+    i {
       font-size: 13px;
     }
 
   }
 
-  & .wrap_scroll {
+  .wrap_scroll {
     overflow: scroll;
     height: calc(100% - 120px);
     width: 100%;
     overflow-x: hidden;
 
-    & .title_page_category {
+    .title_page_category {
       position: relative;
 
-      & li:hover {
+      li:hover {
         background-color: $bgColor-dark;
         color: $textColor;
       }
 
-      & > h3 {
+      > h3 {
         font-size: 16px;
         height: 34px;
         line-height: 34px;
@@ -221,10 +221,10 @@ a {
         background-color: $bgColor-light;
       }
 
-      & ul {
+      ul {
         padding-bottom: 10px;
 
-        & span {
+        span {
           color: $textColor;
 
           &.depths_2_filename {
@@ -233,11 +233,11 @@ a {
           }
 
           &.tooltip {
-            font-size: 12px;
+            font-size: 11px;
           }
         }
 
-        & .fas {
+        .fas {
           position: absolute;
           right: 3px;
           top: 10px;
@@ -245,28 +245,28 @@ a {
         }
       }
 
-      & .ing {
+      .ing {
         font-size: 14px;
         width: 100%;
         display: block;
         padding-bottom: 10px;
         padding-top: 5px;
 
-        & i {
+        i {
           color: #aaa;
           font-size: 16px;
           display: inline-block;
           margin-left: 5px;
         }
 
-        & span {
+        span {
           position: relative;
           width: 23%;
           display: inline-block;
           text-align: right;
         }
 
-        & strong {
+        strong {
           color: #999;
 
           &.percent {
@@ -275,7 +275,7 @@ a {
           }
         }
 
-        & em {
+        em {
           position: relative;
           top: -3px;
           display: inline-block;
@@ -293,27 +293,26 @@ a {
           line-height: 15px;
         }
 
-        & .circle_waiting {
+        .circle_waiting {
           background-color: $waiting;
         }
 
-        & .circle_working {
+        .circle_working {
           background-color: $working;
         }
 
-        & .circle_complete {
+        .circle_complete {
           background-color: $complete;
         }
 
       }
     }
 
-    & ul li {
+    ul li {
       position: relative;
-      margin-bottom: 5px;
       font-size: 16px;
 
-      & .link, .unlink {
+      .link, .unlink {
         position: relative;
         display: block;
         padding: 7px 18px 7px 60px;
@@ -321,7 +320,7 @@ a {
         text-overflow: ellipsis;
 
         &.focus {
-          background-color: rgba(141, 187, 242,.4);
+          background-color: rgba(141, 187, 242, .4);
         }
 
         &:hover span, &.focus span {
