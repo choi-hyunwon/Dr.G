@@ -90,36 +90,39 @@
 
   &.show {
     display: block;
+    .toast-popup{
+      .toast-content{
+        bottom: 0;
+        @keyframes animateup {
+          from {
+            bottom: -300px;
+            opacity: 0;
+          }
+          to {
+            bottom: 0;
+            opacity: 1;
+          }
+        }
+        animation: animateup 0.5s;
+      }
+    }
   }
 
   .toast-popup {
     position: relative;
     width: auto;
     height: 100%;
-    @keyframes animatebottom {
-      from {
-        bottom: -300px;
-        opacity: 0;
-      }
-      to {
-        bottom: 0;
-        opacity: 1;
-      }
-    }
-    animation: animatebottom 1s;
     overflow-x: hidden;
     overflow-y: auto;
 
     .toast-content {
       width: 100%;
       position: absolute;
-      bottom: 0;
-      transition: transform 0.3s ease-out;
       background-color: #fff;
       padding: 32px;
       box-shadow: 0px -6px 10px rgba(34, 34, 34, 0.1);
       border-radius: 20px 20px 0px 0px;
-
+      bottom: -300px;
       .toast-header {
         margin-bottom: 24px;
         padding: 0px;
@@ -137,7 +140,6 @@
           color: #444444;
         }
       }
-
       .toast-body {
         padding: 0px;
         margin-bottom: 24px;
