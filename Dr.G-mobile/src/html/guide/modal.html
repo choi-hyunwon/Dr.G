@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="guide popup">
+            <p class="title font-h2">토스트팝업_type1</p>
+            <div class="box">
+                <!-- Button trigger modal -->
+                <a href="#" class="btn btn-primary _toast-popup-open-title">
+                    토스트팝업_타이틀O_닫기O
+                </a>
+                <div class="toast-dim _toast-dim-title">
+                    <div class="toast-popup">
+                        <div class="toast-content title">
+                            <div class="toast-header">
+                                <p class="title">댓글 작성하기</p>
+                                <a href="#" class="_toast-popup-close-title icon ico-close-sm"></a>
+                            </div>
+                            <div class="toast-body bg-docter">
+                                <p class="main-title">여러분의 <span>피부고민</span>을 들려주세요.</p>
+                                <p class="desc">작성한 댓글은 다음 편 영상 제작 시<br>참고 예정입니다. </p>
+                                <textarea placeholder="고민 채택 시, 마일리지 5,000점 증정!&#10닥터안이 직접 솔루션을 드립니다."></textarea>
+                                <p class="caption">자세한 피부고민 상담은 1:1 스킨 멘토링을 이용해주세요!</p>
+                            </div>
+                            <div class="toast-footer">
+                                <a href="#" class="btn btn-lg btn-secondary _toast-popup-close-title">댓글 작성하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--toastPopupScript-->
+                <script>
+                    (function () {
+                        $('._toast-popup-open-title').click(function () {
+                            $('._toast-dim-title').addClass('fade show');
+                        });
+                        $('._toast-popup-close-title').click(function () {
+                            $('._toast-dim-title').removeClass('fade show');
+                        });
+                    })();
+                </script>
+            </div>
+            <p class="title font-h2">토스트팝업_type2</p>
+            <div class="box">
+                <!-- Button trigger modal -->
+                <a href="#" class="btn btn-primary _toast-popup-title-noclose">
+                    토스트팝업_타이틀O_닫기X
+                </a>
+                <div class="toast-dim _toast-dim-title-close">
+                    <div class="toast-popup">
+                        <div class="toast-content title">
+                            <div class="toast-header">
+                                <p class="title">Ai 피부 진단 안내</p>
+                            </div>
+                            <div class="toast-body">
+                                <div class="img logo">
+                                    <img src="../../img/common/img-AI-symbol-bling.png" alt="Ai심블">
+                                </div>
+                                <p class="main-title text-center">여기부터는 첫 분석에서만 확인하는<br><span>과거력, 가족력</span>에 대한 질문입니다.</p>
+                                <p class="desc text-center">제품 추천 미신청 시 피부 고민에 맞는<br>제품 및 할인쿠폰을 만나보실 수 없어요.</p>
+                                <a href="#" class="text-btn _toast-popup-close">네, 답변을 보고 수정할게요.</a>
+                            </div>
+                            <div class="toast-footer">
+                                <a href="#" class="btn btn-lg btn-secondary _toast-popup-noclose-title">아니오, 설문을 완료할게요.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--toastPopupScript-->
+                <script>
+                    (function () {
+                        $('._toast-popup-title-noclose').click(function () {
+                            $('._toast-dim-title-close').addClass('fade show');
+                        });
+                        $('._toast-popup-noclose-title').click(function () {
+                            $('._toast-dim-title-close').removeClass('fade show');
+                        });
+                    })();
+                </script>
+            </div>
+            <p class="title font-h2">토스트팝업_type3</p>
+            <div class="box">
+                <!-- Button trigger modal -->
+                <a href="#" class="btn btn-primary _toast-popup-open">
+                    토스트팝업_타이틀x
+                </a>
+                <!-- Modal -->
+                <div class="toast-dim _toast-dim-no-title">
+                    <div class="toast-popup">
+                        <div class="toast-content no-title">
+                            <div class="toast-body">
+                                <p class="desc">제품 추천 미신청 시 피부 고민에 맞는<br>제품 및 할인쿠폰을 만나보실 수 없어요.</p>
+                                <p class="main-title">스킨멘토의 <span>맞춤형 추천 혜택</span>을<br>받아보시겠어요?</p>
+                                <a href="#" class="text-btn _toast-popup-close">아니오, 받지 않겠습니다.</a>
+                            </div>
+                            <div class="toast-footer">
+                                <a href="#" class="btn btn-lg btn-secondary _toast-popup-close">네, 제품 추천을 받을게요.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--toastPopupScript-->
+                <script>
+                    (function () {
+                        $('._toast-popup-open').click(function () {
+                            $('._toast-dim-no-title').addClass('fade show');
+                        });
+                        $('._toast-popup-close').click(function () {
+                            $('._toast-dim-no-title').removeClass('fade show');
+                        });
+                    })();
+                </script>
+            </div>
+            <p class="title font-h2">알럿팝업_type1</p>
+            <div class="box text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alertPopupType1">
+                    알럿팝업_버튼두개
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="alertPopupType1" tabindex="-1" role="dialog"
+                     aria-labelledby="ModalCenterTitleOneButton" aria-hidden="true">
+                    <div class="modal-dialog alert-popup modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="ModalCenterTitleOneButton">로그인</h5>
+                            </div>
+                            <div class="modal-body">
+                                로그인 후 이용가능합니다.<br>
+                                로그인 페이지로 이동 하시겠습니까?
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" type="button" class="btn btn-close" data-dismiss="modal">취소</a>
+                                <a href="#" type="button" class="btn">확인</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal -->
+            </div>
+            <p class="title font-h2">알럿팝업_type2</p>
+            <div class="box text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alertPopupType2">
+                    알럿팝업_버튼한개
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="alertPopupType2" tabindex="-1" role="dialog"
+                     aria-labelledby="alertPopupType2" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered alert-popup" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">로그인</h5>
+                            </div>
+                            <div class="modal-body">
+                                로그인 후 이용가능합니다.<br>
+                                로그인 페이지로 이동 하시겠습니까?
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" type="button" class="btn one" data-dismiss="modal">확인</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('../../html/include/common/footer.html')
+    </div>
+</body>
+</html>

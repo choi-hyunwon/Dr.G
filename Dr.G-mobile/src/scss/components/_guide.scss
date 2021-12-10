@@ -1,6 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 주연 : 최초 작업 -- 2021.11.2
+ v.0.2 태윤 : modal 추가-- 2021.12.9
 |----------------------------------|
 */
 .guide {
@@ -173,10 +174,29 @@
     }
   }
 
+  &.popup{
+      .font-h2{
+        margin-bottom: 30px;
+      }
+      .box{
+        display: flex;
+        flex-direction: column;
+        >.btn{
+          margin-bottom: 30px;
+          &:nth-last-of-type(1){
+            margin-bottom: 0px;
+          }
+        }
+      }
+
+  }
+
   >.box{
     padding: 30px;
     border-radius: 10px;
     border:1px solid #d9d9d9;
     margin-bottom: 50px;
   }
+
+
 }

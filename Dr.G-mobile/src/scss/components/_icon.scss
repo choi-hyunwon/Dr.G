@@ -1,6 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 주연 : 최초 작업 -- 2021.11.30
+ v.0.1 태윤 : .icon-close-sm 추가 -- 2021.12.10
 |----------------------------------|
 */
 .icon {
@@ -50,7 +51,13 @@
   &.white {
     background-image: url(../img/common/ico-close-white.png);
   }
+
 }
+
+.ico-close-sm{
+  @include background-img ($width: 16px, $height: 16px, $category: 'common', $img: 'ico-close-sm.png');
+}
+
 
 .ico-nav-prev {
   @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-nav-prev.png');
