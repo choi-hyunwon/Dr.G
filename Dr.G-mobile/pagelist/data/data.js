@@ -58,9 +58,9 @@ data.guide = {
     },
     {
       stateClass: 'complete',
-      url: 'popup',
+      url: 'modal',
       category: 'guide',
-      page: 'popup'
+      page: 'modal'
     },
   ]
 }
