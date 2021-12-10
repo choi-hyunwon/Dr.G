@@ -2,6 +2,7 @@
 |----------------------------------|
  v.0.1 주연 : 최초 작업 -- 2021.11.30
  v.0.2 선미 : tab(width: 100vw -> 100% 변경) -- 2021.12.07
+ v.0.3 선미 : tab(color -> $primary 변경) -- 2021.12.07
 |----------------------------------|
 */
 .tab {
@@ -10,11 +11,13 @@
   background-color: $gray-fff;
   overflow-x: auto;
   overflow-y: hidden;
+  font-weight: 700;
+  padding: 0 25px;
 
   .item {
     float: left;
     height: 50px;
-    padding: 0 24px;
+    padding-right: 28px;
 
     a {
       position: relative;
@@ -28,7 +31,7 @@
 
     &.active {
       a {
-        color: $gray-900;
+        color: $primary;
 
         &::after {
           content: '';
@@ -37,7 +40,7 @@
           position: absolute;
           bottom: 0;
           left: 0;
-          background-color: #56CAF0;
+          background-color: $primary;
         }
       }
     }
