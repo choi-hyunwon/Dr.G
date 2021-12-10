@@ -83,11 +83,6 @@
   overflow: hidden;
   outline: 0;
   background-color: rgba(33, 37, 41, 0.3);
-
-  &.fade {
-    transition: opacity 0.15s linear;
-  }
-
   &.show {
     display: block;
     .toast-popup{
@@ -107,7 +102,25 @@
       }
     }
   }
-
+  &.hide {
+    display: block;
+    .toast-popup{
+      bottom: 0;
+      .toast-content{
+        @keyframes animatedown {
+          from {
+            bottom: 0;
+            opacity: 1;
+          }
+          to {
+            bottom: -300px;
+            opacity: 0;
+          }
+        }
+        animation: animatedown 0.5s;
+      }
+    }
+  }
   .toast-popup {
     position: relative;
     width: auto;
