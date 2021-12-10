@@ -33,11 +33,14 @@
                 <!--toastPopupScript-->
                 <script>
                     (function () {
-                        $('._toast-popup-open-title').click(function () {
-                            $('._toast-dim-title').addClass('fade show');
+                        $('._toast-popup-open-title').on('click',function () {
+                            $('._toast-dim-title').removeClass('hide').addClass('fade show').css('display','block');
                         });
-                        $('._toast-popup-close-title').click(function () {
-                            $('._toast-dim-title').removeClass('fade show');
+                        $('._toast-popup-close-title').on('click',function () {
+                            $('._toast-dim-title').addClass('hide');
+                            setTimeout(() => {
+                                $('._toast-dim-title').removeClass('fade show').css('display','none');
+                            }, 400);
                         });
                     })();
                 </script>
@@ -71,11 +74,14 @@
                 <!--toastPopupScript-->
                 <script>
                     (function () {
-                        $('._toast-popup-title-noclose').click(function () {
-                            $('._toast-dim-title-close').addClass('fade show');
+                        $('._toast-popup-title-noclose').on('click',function () {
+                            $('._toast-dim-title-close').removeClass('hide').addClass('fade show').css('display','block');
                         });
-                        $('._toast-popup-noclose-title').click(function () {
-                            $('._toast-dim-title-close').removeClass('fade show');
+                        $('._toast-popup-noclose-title').on('click',function () {
+                            $('._toast-dim-title-close').addClass('hide');
+                            setTimeout(() => {
+                                $('._toast-dim-title-close').removeClass('fade show').css('display','none');
+                            }, 400);
                         });
                     })();
                 </script>
@@ -105,10 +111,13 @@
                 <script>
                     (function () {
                         $('._toast-popup-open').click(function () {
-                            $('._toast-dim-no-title').addClass('fade show');
+                            $('._toast-dim-no-title').removeClass('hide').addClass('fade show').css('display','block');
                         });
                         $('._toast-popup-close').click(function () {
-                            $('._toast-dim-no-title').removeClass('fade show');
+                            $('._toast-dim-no-title').addClass('hide');
+                            setTimeout(() => {
+                                $('._toast-dim-no-title').removeClass('fade show').css('display','none');
+                                }, 400);
                         });
                     })();
                 </script>
