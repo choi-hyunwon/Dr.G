@@ -11,94 +11,180 @@
                 <li class="item"><a href="#">나의 제안 내역</a></li>
             </ul>
         </div>
-        <div class="content opinion">
-            <div class="section-input">
+        <div class="tab-content">
+            <div class="tab-pane active" id="opinion">
+                <div class="section-input">
                     <input type="text" title="검색" class="form-control" placeholder="제목을 입력해주세요">
-                    <select title="select" class="custom-select">
+                   <!-- <select title="select" class="custom-select">
                         <option selected>유형을 선택하세요.</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
-                    </select>
+                    </select>-->
+                    <div class="select-popup">
+                            <!-- Button trigger modal -->
+                            <a href="#" class="btn-select _toast-popup-open">
+                                유형을 선택하세요.
+                            </a>
+                            <!-- Modal -->
+                            <div class="toast-dim _toast-dim-no-title">
+                                <div class="toast-popup">
+                                    <div class="toast-content no-title">
+                                        <ul>
+                                            <li><a href="#">제품</a></li>
+                                            <li><a href="#">Ai 피부분석</a></li>
+                                            <li><a href="#">서비스</a></li>
+                                            <li><a href="#">홈페이지</a></li>
+                                            <li><a href="#">모바일</a></li>
+                                            <li><a href="#">프로모션(이벤트)</a></li>
+                                            <li><a href="#">주문 및 배송</a></li>
+                                            <li><a href="#">기타</a></li>
+                                            </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
                     <div class="input-group">
                     <textarea title="textarea" class="form-control form-control-lg" placeholder="불편함을 느꼈거나 바라는 점이 있다면
 들려주세요."></textarea>
-                </div>
-            </div>
-            <div class="section-privacy">
-                <div class="font-h5">개인정보 입력</div>
-                <div class="font-body-1">모든 항목을 빠짐없이 작성해주세요.</div>
-                <div class="radio-box">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" name="gender" id="man">
-                        <label class="custom-control-label" for="man">남성</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" name="gender" id="girl" checked>
-                        <label class="custom-control-label" for="girl">여성</label>
                     </div>
                 </div>
-                <div class="input-box">
-                    <select title="select" class="custom-select">
-                        <option selected>연령대를 선택해주세요.</option>
-                        <option value="10대">10대</option>
-                        <option value="20대">20대</option>
-                        <option value="30대">30대</option>
-                        <option value="40대">40대</option>
-                        <option value="50대">50대</option>
-                        <option value="50대">60대</option>
-                    </select>
-                    <input type="number" title="휴대폰 번호" class="form-control" placeholder="휴대폰 번호 Ex) 01022334455"  maxlength="11" oninput="numberMaxLength(this)">
-                    <input type="password" title="비밀번호" class="form-control" placeholder="비밀번호를 4자리로 설정해주세요."  maxlength="4" oninput="numberMaxLength(this)">
-                    <script>
-                        function numberMaxLength(object){
-                            if (object.value.length > object.maxLength){
-                                object.value = object.value.slice(0, object.maxLength);
+                <div class="section-privacy">
+                    <div class="font-h5">개인정보 입력</div>
+                    <div class="font-body-1">모든 항목을 빠짐없이 작성해주세요.</div>
+                    <div class="radio-box">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="gender" id="man">
+                            <label class="custom-control-label" for="man">남성</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="gender" id="girl" checked>
+                            <label class="custom-control-label" for="girl">여성</label>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                     <!--   <select title="select" class="custom-select">
+                            <option selected>연령대를 선택해주세요.</option>
+                            <option value="10대">10대</option>
+                            <option value="20대">20대</option>
+                            <option value="30대">30대</option>
+                            <option value="40대">40대</option>
+                            <option value="50대">50대</option>
+                            <option value="50대">60대</option>
+                        </select>-->
+                        <div class="select-popup">
+                            <!-- Button trigger modal -->
+                            <a href="#" class="btn-select _toast-popup-open">
+                                연령대를 선택해주세요.
+                            </a>
+                            <!-- Modal -->
+                            <div class="toast-dim _toast-dim-no-title">
+                                <div class="toast-popup">
+                                    <div class="toast-content no-title">
+                                        <ul>
+                                            <li><a href="#">10대</a></li>
+                                            <li><a href="#">20대</a></li>
+                                            <li><a href="#">30대</a></li>
+                                            <li><a href="#">40대</a></li>
+                                            <li><a href="#">50대</a></li>
+                                            <li><a href="#">60대</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="number" title="휴대폰 번호" class="form-control" placeholder="휴대폰 번호 Ex) 01022334455"
+                               maxlength="11" oninput="numberMaxLength(this)">
+                        <input type="password" title="비밀번호" class="form-control" placeholder="비밀번호를 4자리로 설정해주세요."
+                               maxlength="4" oninput="numberMaxLength(this)">
+                        <script>
+                            function numberMaxLength(object) {
+                                if (object.value.length > object.maxLength) {
+                                    object.value = object.value.slice(0, object.maxLength);
+                                }
                             }
-                        }
-                    </script>
-                </div>
-
-
-                <div class="upload-box">
-                    <div class="custom-file img-upload">
-                        <input type="file" class="custom-file-input" id="imgFile" accept="image/*">
-                        <p class="num"><span>4</span>/5</p>
+                        </script>
                     </div>
-                    <div class="upload-list">
-                        <ul>
-                            <li><img src="../../img/@temp/sample01.png" alt="temp img 1">
-                                <a href="#" class="delete-upload">삭제</a>
-                            </li>
-                            <li><img src="../../img/@temp/sample02.png" alt="temp img 2">
-                                <a href="#" class="delete-upload">삭제</a>
-                            </li>
-                            <li><img src="../../img/@temp/sample03.png" alt="temp img 3">
-                                <a href="#" class="delete-upload">삭제</a>
-                            </li>
-                            <li><img src="../../img/@temp/sample04.png" alt="temp img 4">
-                                <a href="#" class="delete-upload">삭제</a>
-                            </li>
-                        </ul>
+
+                    <div class="upload-box">
+                        <div class="custom-file img-upload">
+                            <input type="file" class="custom-file-input" id="imgFile" accept="image/*">
+                            <p class="num"><span>4</span>/5</p>
+                        </div>
+                        <div class="upload-list">
+                            <ul>
+                                <li><img src="../../img/@temp/sample01.png" alt="temp img 1">
+                                    <a href="#" class="delete-upload">삭제</a>
+                                </li>
+                                <li><img src="../../img/@temp/sample02.png" alt="temp img 2">
+                                    <a href="#" class="delete-upload">삭제</a>
+                                </li>
+                                <li><img src="../../img/@temp/sample03.png" alt="temp img 3">
+                                    <a href="#" class="delete-upload">삭제</a>
+                                </li>
+                                <li><img src="../../img/@temp/sample04.png" alt="temp img 4">
+                                    <a href="#" class="delete-upload">삭제</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+                    <div class="custom-control custom-checkbox checkbox-sm">
+                        <input type="checkbox" class="custom-control-input" id="notice">
+                        <label class="custom-control-label" for="notice">답변이 등록되면 카카오톡 알림을 보내주세요.</label>
+                    </div>
+                    <div class="custom-control custom-checkbox checkbox-sm">
+                        <input type="checkbox" class="custom-control-input" id="consentUse" checked>
+                        <label class="custom-control-label" for="consentUse">개인정보 활용동의 <a href="#">자세히 보기</a></label>
+                    </div>
+                    <div class="desc">[개인정보 활용동의] 3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로
+                        예상됩니다.
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <a href="#" class="btn btn-lg" data-toggle="modal" data-target="#completePopup"><span>등록하기</span></a>
+                </div>
+
+                <div class="modal fade" id="completePopup" tabindex="-1" role="dialog" aria-labelledby="completePopup" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered alert-popup" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">완료</h5>
+                            </div>
+                            <div class="modal-body">
+                                등록이 완료되었습니다.
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" type="button" class="btn one" data-dismiss="modal">확인</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
+                <!--toastPopupScript-->
+                <script>
+                    (function () {
+                        $('._toast-popup-open').click(function () {
+                            $(this).next().addClass('fade show');
+                            $('body').css('overflow-y','hidden')
+                        });
+                    })();
+                    $('.toast-popup li a').on('click',function (){
+                        $(this).parents('.toast-popup').find('li').removeClass('active')
+                        $(this).parent().addClass('active')
 
+                        $('._toast-dim-no-title').removeClass('fade show');
+                        $('body').css('overflow-y','scroll')
 
-
-                <hr class="divider">
-                <div class="custom-control custom-checkbox checkbox-sm">
-                    <input type="checkbox" class="custom-control-input" id="notice">
-                    <label class="custom-control-label" for="notice">답변이 등록되면 카카오톡 알림을 보내주세요.</label>
-                </div>
-                <div class="custom-control custom-checkbox checkbox-sm">
-                    <input type="checkbox" class="custom-control-input" id="consentUse" checked>
-                    <label class="custom-control-label" for="consentUse">개인정보 활용동의 <a href="#">자세히 보기</a></label>
-                </div>
-                <div class="desc">[개인정보 활용동의] 3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로 예상됩니다.</div>
+                        let text = $(this).text();
+                        $(this).parents('.select-popup').find('.btn-select').text(text)
+                    })
+                </script>
             </div>
-            <div class="btn-wrap">
-                <a href="#" class="btn btn-lg"><span>등록하기</span></a>
+            <div class="tab-pane" id="suggestion">
+            2
             </div>
         </div>
     </div>

@@ -3,8 +3,11 @@
  v.0.1 주연 : 최초 작업 -- 2021.11.30
  v.0.2 선미 : tab(width: 100vw -> 100% 변경) -- 2021.12.07
  v.0.3 선미 : tab(color -> $primary 변경) -- 2021.12.07
+ v.0.4 선미 : tab-content 추가 -- 2021.12.13
 |----------------------------------|
 */
+
+
 .tab {
   width: 100%;
   height: 50px;
@@ -45,4 +48,14 @@
       }
     }
   }
+}
+
+.tab-content{
+  .tab-pane{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+
 }
