@@ -85,6 +85,12 @@ data.suggestion = {
       category: 'suggestion',
       page: '09고객제안_01의견남기기tab_등록완료알럿팝업'
     },
+    {
+      stateClass: 'working',
+      url: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업',
+      category: 'suggestion',
+      page: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업'
+    },
 
 
   ]

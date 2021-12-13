@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+
+<div class="wrap">
+    <div class="container">
+    </div>
+</div>
+
+
+<!-- 삭제 Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog"
+     aria-labelledby="deleteModal" aria-hidden="true">
+    <div class="modal-dialog alert-popup modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">삭제</h5>
+            </div>
+            <div class="modal-body">
+                게시물을 삭제하면 다시 복구할 수<br>없습니다. 그래도 삭제할까요?
+            </div>
+            <div class="modal-footer">
+                <a href="#" type="button" class="btn btn-close" data-dismiss="modal">취소</a>
+                <!--data-dismiss="modal"은 첫번째 모달창 삭제
+                data-toggle="modal" data-target="#completeAlert"은 두번째 모달창 출력-->
+                <a href="#" type="button" class="btn" data-dismiss="modal" data-toggle="modal"
+                   data-target="#completeAlert">확인</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 완료 Modal -->
+<div class="modal fade" id="completeAlert" tabindex="-1" role="dialog"
+     aria-labelledby="alertPopupType2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered alert-popup" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">완료</h5>
+            </div>
+            <div class="modal-body">
+                삭제되었습니다.
+            </div>
+            <div class="modal-footer">
+                <a href="#" type="button" class="btn one" data-dismiss="modal">확인</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--페이지 보여주기 위한 show 실행 (생략가능)-->
+<script>
+    $('#deleteModal').modal('show')
+</script>
