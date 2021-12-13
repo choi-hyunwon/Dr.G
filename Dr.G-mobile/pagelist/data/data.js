@@ -108,6 +108,12 @@ data.suggestion = {
       category: 'suggestion',
       page: '01의견남기기tab_02비회원의견남기기'
     },
+  /*  {
+      stateClass: 'working',
+      url: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)',
+      category: 'suggestion',
+      page: '01의견남기기tab_03개선사례조회_01상세보기(답변대기)'
+    },*/
 
   ]
 }
