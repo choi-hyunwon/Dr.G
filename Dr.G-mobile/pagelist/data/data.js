@@ -73,6 +73,12 @@ data.suggestion = {
       category: 'suggestion',
       page: '01의견남기기tab_02비회원의견남기기'
     },
+    {
+      stateClass: 'complete',
+      url: '09고객제안_01의견남기기tab_등록완료알럿팝업',
+      category: 'suggestion',
+      page: '09고객제안_01의견남기기tab_등록완료알럿팝업'
+    },
 
   ]
 }
