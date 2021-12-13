@@ -64,6 +64,41 @@ data.guide = {
     },
   ]
 }
+data.common = {
+  title: 'common',
+  list: [
+    {
+      stateClass: 'complete',
+      url: '09고객제안_01의견남기기tab_유형선택',
+      category: 'common',
+      page: '09고객제안_01의견남기기tab_유형선택'
+    },
+    {
+      stateClass: 'complete',
+      url: '09고객제안_01의견남기기tab_01비회원로그인알림팝업',
+      category: 'common',
+      page: '09고객제안_01의견남기기tab_01비회원로그인알림팝업'
+    },
+    {
+      stateClass: 'complete',
+      url: '09고객제안_01의견남기기tab_등록완료알럿팝업',
+      category: 'common',
+      page: '09고객제안_01의견남기기tab_등록완료알럿팝업'
+    },
+    {
+      stateClass: 'complete',
+      url: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업',
+      category: 'common',
+      page: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업'
+    },
+    {
+      stateClass: 'complete',
+      url: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업_검색된내역없을시',
+      category: 'common',
+      page: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업_검색된내역없을시'
+    },
+  ]
+}
 data.suggestion = {
   title: '고객제안',
   list: [
@@ -72,36 +107,6 @@ data.suggestion = {
       url: '09고객제안_01의견남기기tab_02비회원의견남기기',
       category: 'suggestion',
       page: '01의견남기기tab_02비회원의견남기기'
-    },
-    {
-      stateClass: 'working',
-      url: '09고객제안_01의견남기기tab_유형선택',
-      category: 'suggestion',
-      page: '09고객제안_01의견남기기tab_유형선택'
-    },
-    {
-      stateClass: 'complete',
-      url: '09고객제안_01의견남기기tab_01비회원로그인알림팝업',
-      category: 'suggestion',
-      page: '09고객제안_01의견남기기tab_01비회원로그인알림팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '09고객제안_01의견남기기tab_등록완료알럿팝업',
-      category: 'suggestion',
-      page: '09고객제안_01의견남기기tab_등록완료알럿팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업',
-      category: 'suggestion',
-      page: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업_검색된내역없을시',
-      category: 'suggestion',
-      page: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업_검색된내역없을시'
     },
 
   ]
