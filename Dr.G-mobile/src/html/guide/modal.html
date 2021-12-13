@@ -33,11 +33,14 @@
                 <!--toastPopupScript-->
                 <script>
                     (function () {
-                        $('._toast-popup-open-title').click(function () {
-                            $('._toast-dim-title').addClass('fade show');
+                        $('._toast-popup-open-title').on('click', function () {
+                            $('._toast-dim-title').removeClass('hide').addClass('fade show').css('display', 'block');
                         });
-                        $('._toast-popup-close-title').click(function () {
-                            $('._toast-dim-title').removeClass('fade show');
+                        $('._toast-popup-close-title').on('click', function () {
+                            $('._toast-dim-title').addClass('hide');
+                            setTimeout(() => {
+                                $('._toast-dim-title').removeClass('fade show').css('display', 'none');
+                            }, 400);
                         });
                     })();
                 </script>
@@ -58,12 +61,14 @@
                                 <div class="img logo">
                                     <img src="../../img/common/img-AI-symbol-bling.png" alt="Ai심블">
                                 </div>
-                                <p class="main-title text-center">여기부터는 첫 분석에서만 확인하는<br><span>과거력, 가족력</span>에 대한 질문입니다.</p>
+                                <p class="main-title text-center">여기부터는 첫 분석에서만 확인하는<br><span>과거력, 가족력</span>에 대한 질문입니다.
+                                </p>
                                 <p class="desc text-center">제품 추천 미신청 시 피부 고민에 맞는<br>제품 및 할인쿠폰을 만나보실 수 없어요.</p>
                                 <a href="#" class="text-btn _toast-popup-noclose-title">네, 답변을 보고 수정할게요.</a>
                             </div>
                             <div class="toast-footer">
-                                <a href="#" class="btn btn-lg btn-secondary _toast-popup-noclose-title">아니오, 설문을 완료할게요.</a>
+                                <a href="#" class="btn btn-lg btn-secondary _toast-popup-noclose-title">아니오, 설문을
+                                    완료할게요.</a>
                             </div>
                         </div>
                     </div>
@@ -71,11 +76,14 @@
                 <!--toastPopupScript-->
                 <script>
                     (function () {
-                        $('._toast-popup-title-noclose').click(function () {
-                            $('._toast-dim-title-close').addClass('fade show');
+                        $('._toast-popup-title-noclose').on('click', function () {
+                            $('._toast-dim-title-close').removeClass('hide').addClass('fade show').css('display', 'block');
                         });
-                        $('._toast-popup-noclose-title').click(function () {
-                            $('._toast-dim-title-close').removeClass('fade show');
+                        $('._toast-popup-noclose-title').on('click', function () {
+                            $('._toast-dim-title-close').addClass('hide');
+                            setTimeout(() => {
+                                $('._toast-dim-title-close').removeClass('fade show').css('display', 'none');
+                            }, 400);
                         });
                     })();
                 </script>
@@ -96,7 +104,7 @@
                                 <a href="#" class="text-btn _toast-popup-close">아니오, 받지 않겠습니다.</a>
                             </div>
                             <div class="toast-footer">
-                                <a href="#" class="btn btn-lg btn-secondary _toast-popup-close">네, 제품 추천을 받을게요.</a>
+                                <a href="#" class="btn btn-lg btn-blue _toast-popup-close">네, 제품 추천을 받을게요.</a>
                             </div>
                         </div>
                     </div>
@@ -105,10 +113,87 @@
                 <script>
                     (function () {
                         $('._toast-popup-open').click(function () {
-                            $('._toast-dim-no-title').addClass('fade show');
+                            $('._toast-dim-no-title').removeClass('hide').addClass('fade show').css('display', 'block');
                         });
                         $('._toast-popup-close').click(function () {
-                            $('._toast-dim-no-title').removeClass('fade show');
+                            $('._toast-dim-no-title').addClass('hide');
+                            setTimeout(() => {
+                                $('._toast-dim-no-title').removeClass('fade show').css('display', 'none');
+                            }, 400);
+                        });
+                    })();
+                </script>
+            </div>
+
+            <p class="title font-h2">토스트팝업_클릭시 텍스트변경</p>
+            <div class="box">
+                <a href="#" class="btn btn-primary _toast-popup-open-text">
+                    <span>토스트팝업_선택시텍스트변경</span>
+                </a>
+                <!-- Modal -->
+                <div class="toast-dim _select-toast">
+                    <div class="toast-popup select">
+                        <div class="toast-content no-title select">
+                            <div class="toast-body">
+                                <ul class="select-list">
+                                    <li class="list"><span class="text">제품</span><i class="icon ico-check-green"></i>
+                                    </li>
+                                    <li class="list active"><span class="text">Ai 피부분석</span><i
+                                            class="icon ico-check-green"></i></li>
+                                    <li class="list"><span class="text">서비스</span><i class="icon ico-check-green"></i>
+                                    </li>
+                                    <li class="list"><span class="text">홈페이지</span><i class="icon ico-check-green"></i>
+                                    </li>
+                                    <li class="list"><span class="text">모바일</span><i class="icon ico-check-green"></i>
+                                    </li>
+                                    <li class="list"><span class="text">프로모션(이벤트)</span><i
+                                            class="icon ico-check-green"></i></li>
+                                    <li class="list"><span class="text">주문 및 배송</span><i
+                                            class="icon ico-check-green"></i></li>
+                                    <li class="list"><span class="text">기타</span><i class="icon ico-check-green"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--toastPopupScript-->
+                <script>
+                    (function () {
+                        /*버튼에 _toast-popup-open-text을 클래스에 넣으면 버튼효과적용됩니다.*/
+                        $('._toast-popup-open-text').click(function () {
+                            $('._select-toast')
+                                .removeClass('hide')
+                                .addClass('fade show')
+                                .css('display', 'block');
+                        });
+                    })();
+                    (function List() {
+                        let list = $('.select-list > .list');
+                        function hidePopup() {
+                            $('._select-toast').addClass('hide');
+                            setTimeout(() => {
+                                $('._select-toast').removeClass('fade show').css('display', 'none');
+                            }, 400);
+                        }
+                        /*클릭시 텍스트 변경*/
+                        $(document).ready(function () {
+                            $('.list').on("click", function (e) {
+                                let textValue =  $(this).find('span').text();
+
+                                function ChangeText() {
+                                    $('._toast-popup-open-text').find('span').text(textValue);
+                                }
+
+                                if (list.hasClass("active")) {
+                                    list.removeClass("active");
+                                    $(this).addClass("active");
+                                    hidePopup();
+                                    ChangeText();
+                                } else {
+                                    list.addClass("active");
+                                }
+                            });
                         });
                     })();
                 </script>
@@ -121,7 +206,7 @@
                 <!-- Modal -->
                 <div class="modal fade" id="alertPopupType1" tabindex="-1" role="dialog"
                      aria-labelledby="ModalCenterTitleOneButton" aria-hidden="true">
-                    <div class="modal-dialog alert-popup modal-dialog-centered" role="document">
+                    <div class="modal-dialog modal-sm alert-popup modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="ModalCenterTitleOneButton">로그인</h5>
@@ -148,7 +233,7 @@
                 <!-- Modal -->
                 <div class="modal fade" id="alertPopupType2" tabindex="-1" role="dialog"
                      aria-labelledby="alertPopupType2" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered alert-popup" role="document">
+                    <div class="modal-dialog modal-sm modal-dialog-centered alert-popup" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title">로그인</h5>
