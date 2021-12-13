@@ -1,6 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 태윤 : 최초 작업 -- 2021.12.09
+ v.0.2 태윤 : modal-footer > .btn css속성 제거 (클래스로 버튼 색상 제어)
 |----------------------------------|
 */
 
@@ -83,10 +84,12 @@
   overflow: hidden;
   outline: 0;
   background-color: rgba(33, 37, 41, 0.3);
+
   &.show {
     display: block;
-    .toast-popup{
-      .toast-content{
+
+    .toast-popup {
+      .toast-content {
         bottom: 0;
         @keyframes animateup {
           from {
@@ -102,11 +105,14 @@
       }
     }
   }
+
   &.hide {
     display: block;
-    .toast-popup{
+
+    .toast-popup {
       bottom: 0;
-      .toast-content{
+
+      .toast-content {
         @keyframes animatedown {
           from {
             bottom: 0;
@@ -121,6 +127,7 @@
       }
     }
   }
+
   .toast-popup {
     position: relative;
     width: auto;
@@ -136,6 +143,7 @@
       box-shadow: 0px -6px 10px rgba(34, 34, 34, 0.1);
       border-radius: 20px 20px 0px 0px;
       bottom: -300px;
+
       .toast-header {
         margin-bottom: 24px;
         padding: 0px;
@@ -153,6 +161,7 @@
           color: #444444;
         }
       }
+
       .toast-body {
         padding: 0px;
         margin-bottom: 24px;
@@ -165,6 +174,7 @@
           text-align: center;
 
         }
+
         .desc {
           font-size: 16px;
           font-weight: 400;
@@ -172,6 +182,7 @@
           letter-spacing: -0.5px;
           text-align: center;
         }
+
         .img {
           margin: 0 auto 24px;
 
@@ -185,6 +196,7 @@
             }
           }
         }
+
         .text-btn {
           display: block;
           font-size: 15px;
@@ -270,37 +282,31 @@
 
 
         }
-
-        .toast-footer {
-          .btn {
-            border: 1px solid $primary;
-            background-color: $primary;
-          }
-        }
       }
 
       &.no-title {
-        .toast-body {
-          .main-title {
-            margin-bottom: 12px;
-          }
+        &.non-member {
+          .toast-body {
+            .desc {
+              margin-bottom: 12px;
+            }
 
-          .desc {
+          }
+          .main-title {
             margin-bottom: 32px;
+            span {
+              color: $primary;
+            }
           }
         }
-
-        .toast-footer {
-          .btn {
-            border: 1px solid $blue;
-            background-color: $blue;
-          }
+        .main-title {
+          margin-bottom: 12px;
+        }
+        .desc {
+          margin-bottom: 32px;
         }
       }
-
-
     }
-
   }
 
 }
