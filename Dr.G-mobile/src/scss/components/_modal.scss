@@ -11,16 +11,16 @@
   .modal-dialog {
     &.alert-popup {
       .modal-content {
-        border-radius: 12px;
+        border-radius: vw(12);
         overflow: hidden;
 
         .modal-header {
-          padding: 24px 24px 0px 24px;
+          padding: vw(24) vw(24) 0px vw(24);
           border-bottom: none;
 
           .modal-title {
-            font-size: 16px;
-            line-height: 24px;
+            font-size: vw(16);
+            line-height: vw(24);
             letter-spacing: -0.5px;
             font-weight: 700;
             color: $gray-900;
@@ -28,11 +28,11 @@
         }
 
         .modal-body {
-          padding: 4px 24px 24px 24px;
+          padding: vw(4) vw(24) vw(24) vw(24);
           text-align: left;
           color: $gray-800;
-          font-size: 15px;
-          line-height: 22px;
+          font-size: vw(15);
+          line-height: vw(22);
           font-weight: 400;
 
         }
@@ -44,12 +44,12 @@
 
           .btn {
             display: inline-block;
-            line-height: 50px;
+            line-height: vw(50);
             background-color: #fff;
             border-color: #fff;
             border-radius: 0px;
             font-weight: 400;
-            font-size: 13px;
+            font-size: vw(13);
             padding: 0px;
             margin: 0px;
             width: 50%;
@@ -70,6 +70,11 @@
           }
         }
       }
+    }
+    &.modal-sm{
+      width: vw(300);
+      max-width:vw(300);
+      margin: 0 auto;
     }
   }
   .btn{
@@ -96,7 +101,7 @@
         bottom: 0;
         @keyframes animateup {
           from {
-            bottom: -300px;
+            bottom: vw(-300);
             opacity: 0;
           }
           to {
@@ -121,7 +126,7 @@
             opacity: 1;
           }
           to {
-            bottom: -300px;
+            bottom: vw(-300);
             opacity: 0;
           }
         }
@@ -139,22 +144,21 @@
       width: 100%;
       position: absolute;
       background-color: #fff;
-      padding: 32px;
-      box-shadow: 0px -6px 10px rgba(34, 34, 34, 0.1);
-      border-radius: 20px 20px 0px 0px;
-      bottom: -300px;
+      padding: vw(32);
+      border-radius: vw(20) vw(20) 0px 0px;
+      bottom: vw(-300);
       &.title {
         .toast-body {
           &.bg-docter {
             background-position: 100% 0;
             background-repeat: no-repeat;
-            background-size: 115px 120px;
+            background-size: vw(115) vw(120);
             background-image: url("../img/common/img-docterAnn.png");
           }
 
           .main-title {
             text-align: left;
-            margin-bottom: 6px;
+            margin-bottom: vw(6);
 
             span {
               color: $primary;
@@ -162,29 +166,29 @@
           }
 
           .desc {
-            font-size: 13px;
+            font-size: vw(13);
             font-weight: 400;
-            line-height: 18px;
+            line-height: vw(18);
             letter-spacing: -0.005em;
             text-align: left;
             color: #666;
-            margin-bottom: 24px;
+            margin-bottom: vw(24);
           }
 
           textarea {
-            border-radius: 12px;
+            border-radius: vw(12);
             width: 100%;
-            border: 1px solid #eee;
-            min-height: 160px;
+            border: vw(1) solid #eee;
+            min-height: vw(160);
             resize: none;
-            padding: 20px;
-            margin-bottom: 12px;
+            padding: vw(20);
+            margin-bottom: vw(12);
 
             &::placeholder {
-              font-size: 15px;
+              font-size: vw(15);
               font-style: normal;
               font-weight: 400;
-              line-height: 22px;
+              line-height: vw(22);
               letter-spacing: -0.005em;
               text-align: left;
               color: #bbb;
@@ -196,10 +200,10 @@
           }
 
           .caption {
-            font-size: 13px;
+            font-size: vw(13);
             font-style: normal;
             font-weight: 500;
-            line-height: 18px;
+            line-height: vw(18);
             letter-spacing: -0.005em;
             text-align: left;
             color: #888888;
@@ -211,12 +215,12 @@
         &.non-member {
           .toast-body {
             .desc {
-              margin-bottom: 12px;
+              margin-bottom: vw(12);
             }
 
           }
           .main-title {
-            margin-bottom: 32px;
+            margin-bottom: vw(32);
             span {
               color: $primary;
             }
@@ -232,7 +236,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-content: center;
-                margin-bottom: 28px;
+                margin-bottom: vw(28);
                 cursor: pointer;
                 .icon{
                   display: none;
@@ -250,9 +254,9 @@
                 }
                 span{
                   font-family: Noto Sans KR;
-                  font-size: 16px;
+                  font-size: vw(16);
                   font-weight: 400;
-                  line-height: 24px;
+                  line-height: vw(24);
                   letter-spacing: -0.005em;
                   text-align: left;
                   color: $gray-800;
@@ -262,14 +266,14 @@
           }
         }
         .main-title {
-          margin-bottom: 12px;
+          margin-bottom: vw(12);
         }
         .desc {
-          margin-bottom: 32px;
+          margin-bottom: vw(32);
         }
       }
       .toast-header {
-        margin-bottom: 24px;
+        margin-bottom: vw(24);
         padding: 0px;
         display: flex;
         align-content: center;
@@ -277,9 +281,9 @@
         border-bottom: 0px;
 
         .title {
-          font-size: 20px;
+          font-size: vw(20);
           font-weight: 700;
-          line-height: 30px;
+          line-height: vw(30);
           letter-spacing: -0.005em;
           text-align: left;
           color: #444444;
@@ -287,27 +291,27 @@
       }
       .toast-body {
         padding: 0px;
-        margin-bottom: 24px;
+        margin-bottom: vw(24);
 
         .main-title {
-          font-size: 16px;
+          font-size: vw(16);
           font-weight: 700;
-          line-height: 24px;
-          letter-spacing: -0.5px;
+          line-height: vw(24);
+          letter-spacing: -0.005em;
           text-align: center;
 
         }
 
         .desc {
-          font-size: 16px;
+          font-size: vw(16);
           font-weight: 400;
-          line-height: 25px;
-          letter-spacing: -0.5px;
+          line-height: vw(25);
+          letter-spacing: -0.005em;
           text-align: center;
         }
 
         .img {
-          margin: 0 auto 24px;
+          margin: 0 auto vw(24);
 
           &.logo {
             width: 88px;
@@ -322,9 +326,9 @@
 
         .text-btn {
           display: block;
-          font-size: 15px;
+          font-size: vw(15);
           font-weight: 500;
-          line-height: 22px;
+          line-height: vw(22);
           letter-spacing: -0.005em;
           text-align: center;
           text-decoration: underline;
