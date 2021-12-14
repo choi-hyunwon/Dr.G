@@ -30,6 +30,64 @@
     }
   }
 
+  .my-opinion-list {
+    background-color: $gray-200;
+    padding: vw(48) vw(24) vw(76);
+
+    .item {
+      margin-bottom: vw(16);
+      padding: vw(20);
+      background-color: #fff;
+      border-radius: vw(20);
+
+      .badge-box {
+        margin-bottom: vw(8);
+      }
+
+      .cont-box {
+        margin-bottom: vw(13);
+
+        .cont {
+          line-height: vw(22);
+          font-size: vw(15);
+
+          .category {
+            display: inline-block;
+            font-weight: bold;
+            margin-right: vw(2);
+          }
+        }
+      }
+
+      .bottom-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .date {
+          font-family: $poppins-regular;
+          font-size: vw(13);
+          color: $gray-600;
+        }
+
+        .btn-like {
+          .icon {
+            margin-right: vw(2);
+          }
+          span {
+            font-family: $poppins-semiBold;
+            font-size: vw(13);
+            color: $gray-700;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-bottom: vw(48);
+      }
+    }
+  }
+
   .suggestion-slider {
     position: relative;
 
@@ -97,6 +155,7 @@
       top: vw(263);
       right: 0;
       z-index: 2;
+      @include background-img ($width: 276, $height: 180, $category: 'suggestion', $img: 'img-smile-motif.svg');
     }
 
     .swiper-pagination-bullets {
@@ -120,10 +179,10 @@
     .list-heading {
       margin-bottom: vw(32);
       padding-left: vw(25);
-      padding-right: vw(81);
 
       .font-h2 {
-        max-width: vw(280);
+        max-width: vw(269);
+        font-family: $poppins-semiBold;
       }
     }
 
@@ -265,7 +324,7 @@
   }
 
   .caution-box {
-    padding: 0 vw(20);
+    padding: vw(48) vw(20) 0;
     margin-bottom: vw(76);
 
     .title {
