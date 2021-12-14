@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+@@include('../../html/include/common/header.html')
+<div class="wrap">
+    <div class="container">
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="select-popup">
+    <!-- Button trigger modal -->
+    <a href="#" class="btn-select _toast-popup-open">
+        유형을 선택하세요.
+    </a>
+    <!-- Modal -->
+    <div class="toast-dim _toast-dim-no-title">
+        <div class="toast-popup">
+            <div class="toast-content no-title">
+                <ul>
+                    <li><a href="#">제품</a></li>
+                    <li><a href="#">Ai 피부분석</a></li>
+                    <li><a href="#">서비스</a></li>
+                    <li><a href="#">홈페이지</a></li>
+                    <li><a href="#">모바일</a></li>
+                    <li><a href="#">프로모션(이벤트)</a></li>
+                    <li><a href="#">주문 및 배송</a></li>
+                    <li><a href="#">기타</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--toastPopupScript-->
+<script>
+    (function () {
+        $('._toast-popup-open').click(function () {
+            $(this).next().addClass('fade show');
+            $('body').css('overflow-y','hidden')
+        });
+    })();
+    $('.toast-popup li a').on('click',function (){
+        $(this).parents('.toast-popup').find('li').removeClass('active')
+        $(this).parent().addClass('active')
+
+        $('._toast-dim-no-title').removeClass('fade show');
+        $('body').css('overflow-y','scroll')
+
+        let text = $(this).text();
+        $(this).parents('.select-popup').find('.btn-select').text(text)
+    })
+</script>
+
+<!--페이지 보여주기 위한 show 실행 (생략가능)-->
+<script>
+    $('._select-toast').addClass('fade show').css('display','block');
+</script>
+
+</body>
+</html>
