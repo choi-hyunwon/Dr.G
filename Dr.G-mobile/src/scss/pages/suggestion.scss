@@ -10,38 +10,38 @@
 
 /*공통*/
 .select-popup{
-  margin-bottom: 8px;
+  margin-bottom: vw(8);
   .btn-select{
     width: 100%;
-    height: 60px;
-    line-height: 58px;
-    padding: 0 20px;
+    height: vw(60);
+    line-height: vw(58);
+    padding: 0 vw(20);
     border: 1px solid $gray-300;
-    font-size: 15px;
+    font-size: vw(15);
     font-weight: 400;
-    letter-spacing: -0.5px;
-    border-radius: 12px;
+    letter-spacing: vw(-0.5);
+    border-radius: vw(12);
     color: $gray-700;
     display: inline-block;
-    background: #fff url(../img/common/ico-select-disabled.png) right 20px center/20px 20px no-repeat;
+    background: #fff url(../img/common/ico-select-disabled.png) right vw(20) center/vw(20) vw(20) no-repeat;
   }
   .toast-content{
-    padding: 24px!important;
+    padding: vw(24)!important;
     ul{
       li{
-        margin-bottom: 12px;
+        margin-bottom: vw(12);
 
         &:last-of-type{
           margin-bottom: 0;
         }
         a{
           display: block;
-          line-height: 40px;
+          line-height: vw(40);
           letter-spacing: 0;
         }
         &.active{
           background: url("../img/common/check-primary.png") no-repeat right center;
-          background-size: 24px 24px;
+          background-size: vw(24) vw(24);
           display: block;
           a{
             color: $primary;
@@ -57,26 +57,26 @@
 /*공통 - 얇은버전*/
 .divider {
   width: 100%;
-  height: 1px;
+  height: vw(1);
   background-color: $gray-300;
-  margin: 25px 0 25px;
+  margin: vw(25) 0 vw(25);
 }
 
 /*공통*/
 .upload-box{
-  margin-right: -24px;
+  margin-right: vw(-24);
   white-space: nowrap;
   overflow-x: scroll;
-  padding-top: 2px;
+  padding-top: vw(2);
   &::-webkit-scrollbar {
     display: none;
   }
   .img-upload{
-    width: 72px;
-    height: 72px;
-    border-radius: 12px;
-    background : $gray-400 url("../img/common/icon-camera.png") no-repeat center top 14px;
-    background-size: 28px 28px;
+    width: vw(72);
+    height: vw(72);
+    border-radius: vw(12);
+    background : $gray-400 url("../img/common/icon-camera.png") no-repeat center top vw(14);
+    background-size: vw(28) vw(28);
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -84,12 +84,12 @@
       height: 100%;
     }
     .num{
-      font-size: 13px;
+      font-size: vw(13);
       color:$gray-700;
       text-align: center;
-      padding-top: 5px;
+      padding-top: vw(5);
       position: absolute;
-      bottom: 10px;
+      bottom: vw(10);
       left: 50%;
       transform: translateX(-50%);
     }
@@ -101,25 +101,25 @@
       li{
         position: relative;
         display: inline-block;
-        margin-left: 4px;
+        margin-left: vw(4);
         &:last-of-type{
-          margin-right: 25px;
+          margin-right: vw(25);
         }
         img{
-          width: 72px;
-          height: 72px;
-          border-radius: 12px;
+          width: vw(72);
+          height: vw(72);
+          border-radius: vw(12);
         }
         .delete-upload{
           background: url("../img/common/icon-cancel.png") no-repeat 0 0;
           background-size: 100% auto;
-          width: 20px;
-          height: 20px;
+          width: vw(20);
+          height: vw(20);
           display: inline-block;
           font-size: 0;
           position: absolute;
-          right: -2px;
-          top: -2px;
+          right: vw(-2);
+          top: vw(-2);
         }
       }
     }
@@ -131,40 +131,40 @@
 /*의견남기기*/
 .opinion {
   background-color: $gray-200;
-  padding: 48px 24px 76px;
+  padding: vw(48) vw(24) vw(76);
 }
 .section-input{
-  letter-spacing: -0.5%;
-  margin-bottom: 48px;
+  letter-spacing: 0;
+  margin-bottom: vw(48);
   input{
-    margin-bottom: 8px;
+    margin-bottom: vw(8);
   }
 }
 .section-privacy{
-  margin-bottom: 48px;
+  margin-bottom: vw(48);
   .font-h5{
     color: $gray-800;
-    margin-bottom: 8px;
+    margin-bottom: vw(8);
     font-weight: 700;
   }
   .font-body-1{
     color: $gray-700;
-    margin-bottom: 32px;
+    margin-bottom: vw(32);
   }
   .radio-box{
-    margin-bottom: 24px;
+    margin-bottom: vw(24);
     .custom-radio{
-      margin-right: 24px;
+      margin-right: vw(24);
     }
   }
   .input-box{
     input[type=password]{
-      margin-bottom: 14px;
+      margin-bottom: vw(14);
     }
   }
   .custom-checkbox{
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: vw(3);
     &:last-of-type{
       margin-bottom: 0;
     }
@@ -175,16 +175,17 @@
 
   }
   .desc{
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: -0.5px;
+    font-size: vw(12);
+    line-height: vw(16);
+    letter-spacing: vw(-0.5);
     color: $gray-600;
-    padding-top: 16px;
+    padding-top: vw(16);
   }
 }
 .btn-wrap{
   text-align: center;
 }
+/*
 #completePopup{
   .modal-content{
     width: 77.333% !important;
@@ -192,58 +193,59 @@
   }
 }
 
+*/
 
 
 
 /*개선사례조회_상세보기*/
 .view-details{
   .header-details{
-    height: 60px;
+    height: vw(60);
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 25px;
+    padding: 0 vw(25);
     line-height: 1.155;
   }
   .body-details{
     .area-title{
-      padding: 20px 25px 32px;
+      padding: vw(20) vw(25) vw(32);
       text-align: center;
       border-bottom:1px solid $gray-900;
       .badge-box{
-        margin-bottom: 8px;
+        margin-bottom: vw(8);
       }
       .title{
-        font-size: 28px;
-        line-height: 39px;
+        font-size: vw(28);
+        line-height: vw(39);
         color: #222222;
         font-weight: 700;
-        margin-bottom: 12px;
+        margin-bottom: vw(12);
       }
       .info-line{
         letter-spacing: 0;
-        font-size: 13px;
+        font-size: vw(13);
         .like{
-          margin-right: 8px;
+          margin-right: vw(8);
           .num{
             font-weight: 600;
             color: $gray-700;
-            margin-left: 2px;
+            margin-left: vw(2);
           }
         }
         .date{
           font-weight: 400;
           color: $gray-600;
-          margin-left: 8px;
+          margin-left: vw(8);
           position: relative;
           &:before{
             content: '';
             display: inline-block;
             position: absolute;
-            width: 1px;
-            height: 10px;
+            width:vw(1);
+            height: vw(10);
             background-color: $gray-400;
-            left: -8px;
+            left: vw(-8);
             top: 50%;
             transform: translateY(-50%);
           }
@@ -251,14 +253,14 @@
       }
     }
     .area-desc{
-      padding: 48px 24px 0;
+      padding: vw(48) vw(24) 0;
       .text{
         word-break: keep-all;
         color: $gray-700;
         letter-spacing: 0;
       }
       .divider{
-        margin: 32px 0;
+        margin: vw(32) 0;
       }
       .attach-box{
         white-space: nowrap;
@@ -267,32 +269,32 @@
           li{
             position: relative;
             display: inline-block;
-            margin-left: 4px;
+            margin-left: vw(4);
             &:first-of-type{
               margin-left: 0;
             }
             img{
-              width: 72px;
-              height: 72px;
-              border-radius: 12px;
+              width: vw(72);
+              height: vw(72);
+              border-radius: vw(12);
             }
           }
         }
       }
       .btn-wrap{
         text-align: center;
-        padding: 32px 0;
+        padding: vw(32) 0;
         .btn-outline{
           background-color: #ffffff;
           border:1px solid $gray-800;
           color: $gray-800;
-          padding: 0 20px;
+          padding: 0 vw(20);
           min-width: unset;
           .icon{
-            margin-left: 4px;
+            margin-left: vw(4);
           }
           &:first-of-type{
-            margin-right: 4px;
+            margin-right: vw(4);
           }
         }
       }
@@ -301,10 +303,10 @@
     /*답변완료*/
     .answer-wrap{
       background-color: #f8f8f8;
-      padding: 32px 64px 32px 24px;
-      margin: 17px 0;
+      padding: vw(32) vw(64) vw(32) vw(24);
+      margin: vw(17) 0;
       .badge{
-        margin-bottom: 8px;
+        margin-bottom: vw(8);
       }
       .text{
         color:$gray-800
@@ -313,17 +315,17 @@
 
     /*수정하기*/
     .edit-wrap{
-      padding: 20px 24px 48px;
+      padding: vw(20) vw(24) vw(48);
       input{
-        margin-bottom: 8px;
+        margin-bottom: vw(8);
       }
       .section-input{
-        margin-bottom: 12px;
+        margin-bottom: vw(12);
       }
     }
   }
   .footer-details{
     border-top: 1px solid $gray-400;
-    padding: 32px 20px 48px;
+    padding: vw(32) vw(20) vw(48);
   }
 }
