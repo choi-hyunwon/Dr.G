@@ -119,6 +119,18 @@ data.suggestion = {
       url: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)',
       category: 'suggestion',
       page: '01의견남기기tab_03개선사례조회_01상세보기(답변대기)'
+    },
+    {
+      stateClass: 'complete',
+      url: '09고객제안_01의견남기기tab_03개선사례조회_02상세보기(답변완료)',
+      category: 'suggestion',
+      page: '09고객제안_01의견남기기tab_03개선사례조회_02상세보기(답변완료)'
+    },
+    {
+      stateClass: 'complete',
+      url: '09고객제안_01의견남기기tab_03개선사례조회_03수정하기실행',
+      category: 'suggestion',
+      page: '09고객제안_01의견남기기tab_03개선사례조회_03수정하기실행'
     }
 
   ]

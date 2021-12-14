@@ -4,23 +4,15 @@
 <body>
 @@include('../../html/include/common/header.html')
 <div class="wrap">
-    <div class="container">
-        <div class="tab">
-            <ul class="clearfix">
-                <li class="item active"><a href="#">의견 남기기</a></li>
-                <li class="item"><a href="#">나의 제안 내역</a></li>
-            </ul>
+    <div class="container view-details">
+        <div class="header-details">
+            <a href="#"><i class="icon ico-close"></i></a>
         </div>
-        <div class="tab-content">
-            <div class="tab-pane opinion active">
+        <div class="body-details">
+            <div class="edit-wrap">
                 <div class="section-input">
                     <input type="text" title="검색" class="form-control" placeholder="제목을 입력해주세요">
-                    <!-- <select title="select" class="custom-select">
-                         <option selected>유형을 선택하세요.</option>
-                         <option value="1">One</option>
-                         <option value="2">Two</option>
-                         <option value="3">Three</option>
-                     </select>-->
+
                     <div class="select-popup">
                         <!-- Button trigger modal -->
                         <a href="#" class="btn-select _toast-popup-open text">
@@ -94,101 +86,15 @@
                     </div>
 
                     <div class="input-group">
-                    <textarea title="textarea" class="form-control form-control-lg" placeholder="불편함을 느꼈거나 바라는 점이 있다면 들려주세요."></textarea>
+                        <textarea title="textarea" class="form-control form-control-lg" placeholder="불편함을 느꼈거나 바라는 점이 있다면 들려주세요."></textarea>
                     </div>
                 </div>
                 <div class="section-privacy">
-                    <div class="font-h5">개인정보 입력</div>
-                    <div class="font-body-1">모든 항목을 빠짐없이 작성해주세요.</div>
-                    <div class="radio-box">
-                        <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input" name="gender" id="man">
-                            <label class="custom-control-label" for="man">남성</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input" name="gender" id="girl" checked>
-                            <label class="custom-control-label" for="girl">여성</label>
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <div class="select-popup">
-                            <!-- Button trigger modal -->
-                            <a href="#" class="btn-select _toast-popup-open age">
-                                <span class="text">연령대를 선택해주세요.</span>
-                            </a>
-                            <!-- Modal -->
-                            <div class="toast-dim _toast-popup age">
-                                <div class="toast-popup">
-                                    <div class="toast-content no-title">
-                                        <ul class="select-list">
-                                            <li class="list"><a href="#">10대</a></li>
-                                            <li class="list"><a href="#">20대</a></li>
-                                            <li class="list"><a href="#">30대</a></li>
-                                            <li class="list"><a href="#">40대</a></li>
-                                            <li class="list"><a href="#">50대</a></li>
-                                            <li class="list"><a href="#">60대</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--연령 toastPopupScript-->
-                        <script>
-                            (function() {
-                                $('._toast-popup-open.age').click(function () {
-                                    $('._toast-popup.age')
-                                        .removeClass('hide')
-                                        .addClass('fade show')
-                                        .css('display', 'block');
-                                });
-                            })();
-                            (function List() {
-                                let list = $('._toast-popup.age .select-list > .list');
-                                function hidePopup() {
-                                    $('._toast-popup.age').addClass('hide');
-                                    setTimeout(() => {
-                                        $('._toast-popup.age').removeClass('fade show').css('display', 'none');
-                                    }, 400);
-                                }
-                                /*클릭시 텍스트 변경*/
-                                $(document).ready(function () {
-                                    list.on("click", function (e) {
-                                        let textValue = $(this).find('a').text();
-                                        function ChangeText() {
-                                            $('._toast-popup-open.age').find('span').text(textValue);
-                                        }
-                                        if (list.hasClass("active")) {
-                                            list.removeClass("active");
-                                            $(this).addClass("active");
-                                            hidePopup();
-                                            ChangeText();
-                                        } else {
-                                            /*active가 하나도 없을 경우 active가 있으면 변경*/
-                                            $(this).addClass("active")
-                                            hidePopup();
-                                            ChangeText();
-                                        }
-                                    });
-                                });
-                            })();
-                        </script>
-                        <input type="number" title="휴대폰 번호" class="form-control" placeholder="휴대폰 번호 Ex) 01022334455"
-                               maxlength="11" oninput="numberMaxLength(this)">
-                        <input type="password" title="비밀번호" class="form-control" placeholder="비밀번호를 4자리로 설정해주세요."
-                               maxlength="4" oninput="numberMaxLength(this)">
-                        <script>
-                            function numberMaxLength(object) {
-                                if (object.value.length > object.maxLength) {
-                                    object.value = object.value.slice(0, object.maxLength);
-                                }
-                            }
-                        </script>
-                    </div>
 
                     <div class="upload-box">
                         <div class="custom-file img-upload">
                             <input type="file" class="custom-file-input" id="imgFile" accept="image/*">
-                            <p class="num"><span>4</span>/5</p>
+                            <p class="num"><span>3</span>/5</p>
                         </div>
                         <div class="upload-list">
                             <ul>
@@ -199,9 +105,6 @@
                                     <a href="#" class="delete-upload">삭제</a>
                                 </li>
                                 <li><img src="../../img/@temp/sample03.png" alt="temp img 3">
-                                    <a href="#" class="delete-upload">삭제</a>
-                                </li>
-                                <li><img src="../../img/@temp/sample04.png" alt="temp img 4">
                                     <a href="#" class="delete-upload">삭제</a>
                                 </li>
                             </ul>
@@ -223,7 +126,7 @@
                 </div>
                 <div class="btn-wrap">
                     <a href="#" class="btn btn-lg" data-toggle="modal"
-                       data-target="#completePopup"><span>등록하기</span></a>
+                       data-target="#completePopup"><span>저장하기</span></a>
                 </div>
 
                 <div class="modal fade" id="completePopup" tabindex="-1" role="dialog" aria-labelledby="completePopup"
@@ -243,9 +146,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane suggestion">
-                나의 제안 내역
-            </div>
+
         </div>
     </div>
 </div>
