@@ -62,6 +62,12 @@ data.guide = {
       category: 'guide',
       page: 'modal'
     },
+    {
+      stateClass: 'complete',
+      url: 'badge',
+      category: 'guide',
+      page: 'badge'
+    },
   ]
 }
 data.common = {
@@ -109,7 +115,7 @@ data.suggestion = {
       page: '01의견남기기tab_02비회원의견남기기'
     },
     {
-      stateClass: 'working',
+      stateClass: 'complete',
       url: '09고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)',
       category: 'suggestion',
       page: '01의견남기기tab_03개선사례조회_01상세보기(답변대기)'

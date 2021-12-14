@@ -1,10 +1,12 @@
 /*
-|--------------------------------------------------------------------|
+|----------------------------------|
  v.0.1 주연 : 최초 작업 -- 2021.11.30
  v.0.2 태윤 : .icon-close-sm 추가 -- 2021.12.10
  v.0.3 태윤 : .icon-check-green 추가 -- 2021.12.13
  v.0.4 주연 : .ico-like / .ico-bookmark / .ico-caution 추가 -- 2021.12.13
 |--------------------------------------------------------------------|
+ v.0.4 선미 : .ico-heart 추가 / ico-delete, ico-edit 사이즈 축소-- 2021.12.14
+|----------------------------------|
 */
 .icon {
   display: inline-block;
@@ -73,10 +75,6 @@
   @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-search.png');
 }
 
-.ico-remove {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-remove.png');
-}
-
 .ico-arrow-left {
   @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-arrow-left.png');
 }
@@ -94,11 +92,11 @@
 }
 
 .ico-delete {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-delete.png');
+  @include background-img ($width: 20px, $height: 20px, $category: 'common', $img: 'ico-delete.png');
 }
 
 .ico-edit {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-edit.png');
+  @include background-img ($width: 20px, $height: 20px, $category: 'common', $img: 'ico-edit.png');
 }
 
 .ico-like {
@@ -111,6 +109,14 @@
 
 .ico-check-green {
   @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-check-green.png');
+}
+
+.ico-heart {
+  @include background-img ($width: 14px, $height: 14px, $category: 'common', $img: 'ico-heart.png');
+}
+
+.ico-link {
+  @include background-img ($width: 14px, $height: 14px, $category: 'common', $img: 'ico-link.png');
 }
 
 .ico-caution {

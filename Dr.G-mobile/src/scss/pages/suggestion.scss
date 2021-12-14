@@ -2,7 +2,8 @@
 |----------------------------------------------------------------------|
  v.0.1 선미 : 최초 작업 -- 2021.12.10
  v.0.2 선미 : toast-popup 추가 -- 2021.12.13
-  v.0.3 주연 : 고객제안 메인 -- 2021.12.13
+ v.0.3 선미 : btn-select 화살표 추가 / 개선사례조회_상세보기 추가 -- 2021.12.14
+ v.0.4 주연 : 고객제안 메인 -- 2021.12.13
 |----------------------------------------------------------------------|
 */
 
@@ -21,8 +22,8 @@
     letter-spacing: -0.5px;
     border-radius: 12px;
     color: $gray-700;
-    background: #fff;
     display: inline-block;
+    background: #fff url(../img/common/ico-select-disabled.png) right 20px center/20px 20px no-repeat;
   }
   .toast-content{
     padding: 24px!important;
@@ -51,9 +52,6 @@
     }
 
   }
-
-
-
 }
 
 /*공통 - 얇은버전*/
@@ -193,6 +191,111 @@
   }
 }
 
+/*개선사례조회_상세보기*/
 .view-details{
-
+  .header-details{
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 25px;
+    line-height: 1.155;
+  }
+  .body-details{
+    .area-title{
+      padding: 20px 25px 32px;
+      text-align: center;
+      border-bottom:1px solid $gray-900;
+      .badge-box{
+        margin-bottom: 8px;
+      }
+      .title{
+        font-size: 28px;
+        line-height: 39px;
+        color: #222222;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .info-line{
+        letter-spacing: 0;
+        font-size: 13px;
+        .like{
+          margin-right: 8px;
+          .num{
+            font-weight: 600;
+            color: $gray-700;
+            margin-left: 2px;
+          }
+        }
+        .date{
+          font-weight: 400;
+          color: $gray-600;
+          margin-left: 8px;
+          position: relative;
+          &:before{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 1px;
+            height: 10px;
+            background-color: $gray-400;
+            left: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+    .area-desc{
+      padding: 48px 24px 32px;
+      .text{
+        word-break: keep-all;
+        color: $gray-700;
+        letter-spacing: 0;
+      }
+      .divider{
+        margin: 32px 0;
+      }
+      .attach-box{
+        white-space: nowrap;
+        overflow-x: scroll;
+        margin-bottom: 32px;
+        ul{
+          li{
+            position: relative;
+            display: inline-block;
+            margin-left: 4px;
+            &:first-of-type{
+              margin-left: 0;
+            }
+            img{
+              width: 72px;
+              height: 72px;
+              border-radius: 12px;
+            }
+          }
+        }
+      }
+      .btn-wrap{
+        text-align: center;
+        .btn-outline{
+          background-color: #ffffff;
+          border:1px solid $gray-800;
+          color: $gray-800;
+          padding: 0 20px;
+          min-width: unset;
+          .icon{
+            margin-left: 4px;
+          }
+          &:first-of-type{
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+  .footer-details{
+    border-top: 1px solid $gray-400;
+    padding: 32px 20px 48px;
+  }
 }
