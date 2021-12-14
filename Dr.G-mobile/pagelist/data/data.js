@@ -74,6 +74,12 @@ data.guide = {
 data.suggestion = {
   title: '고객제안',
   list: [
+      {
+          stateClass: 'complete',
+          url: '09고객제안_01의견남기기tab',
+          category: 'suggestion',
+          page: '09고객제안_01의견남기기tab'
+      },
     {
       stateClass: 'complete',
       url: '09고객제안_01의견남기기tab_01비회원로그인알림팝업',

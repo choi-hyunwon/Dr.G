@@ -12043,7 +12043,7 @@ input[type=number]::-webkit-inner-spin-button {
 .ico-alert {
   width: 24px;
   height: 24px;
-  background-image: url("../img/common/ico-alert.png");
+  background-image: url("../img/common/ico-alert.svg");
   background-size: cover;
 }
 .ico-alert.white {
