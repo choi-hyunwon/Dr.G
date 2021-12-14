@@ -47,7 +47,6 @@
     $.Gal.settings = {
         selector: '.item',
         width: 225,
-        gutter: 20,
         animate: false,
         animationOptions: {
             speed: 200,
@@ -106,15 +105,16 @@
             this.cols = Math.floor(this.box.width() / this.options.width);
             //If Cols lower than 1, the grid disappears
             if (this.cols < 1) { this.cols = 1; }
-            diff = (this.box.width() - (this.cols * this.options.width) - this.options.gutter) / this.cols;
-            w = (this.options.width + diff) / this.box.width() * 100;
+            // diff = (this.box.width() - (this.cols * this.options.width) - this.options.gutter) / this.cols;
+            w = (this.options.width * 100) / 375 + 3;
             this.w = w;
+            console.log(w)
             // add columns to box
             for (var i = 0; i < this.cols; i++) {
                 var div = $('<div></div>').addClass('galcolumn').attr('id', 'item' + i + this.name).css({
-                    'width': w + '%',
-                    'paddingLeft': this.options.gutter,
-                    'paddingBottom': this.options.gutter,
+                    'width': w + 'vw',
+                    'padding-left': (this.options.gutter * 100) / 375 + 'vw',
+                    'padding-bottom': (this.options.gutter * 100) / 375 + 'vw',
                     'float': 'left',
                     '-webkit-box-sizing': 'border-box',
                     '-moz-box-sizing': 'border-box',
