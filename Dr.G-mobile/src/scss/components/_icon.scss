@@ -100,6 +100,14 @@
   @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-edit.png');
 }
 
+.ico-like {
+  @include background-img ($width: 18px, $height: 18px, $category: 'common', $img: 'ico-link-nor.png');
+}
+
+.ico-bookmark {
+  @include background-img ($width: 18px, $height: 18px, $category: 'common', $img: 'ico-bookmark.png');
+}
+
 .ico-check-green {
   @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-check-green.png');
 }
