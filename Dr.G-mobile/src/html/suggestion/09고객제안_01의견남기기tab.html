@@ -25,13 +25,7 @@
 
             <!-- s 슬라이더 -->
             <div class="swiper suggestion-slider">
-                <div class="smile-motif">
-                    <svg width="276" height="179" viewBox="0 0 276 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.4"
-                              d="M358.013 0H281.856C281.856 27.4281 271.021 53.7328 251.734 73.1274C232.447 92.522 206.288 103.418 179.013 103.418C151.737 103.418 125.578 92.522 106.291 73.1274C87.0046 53.7328 76.1694 27.4281 76.1694 0H0C0.396593 47.4787 19.4309 92.8773 52.958 126.31C86.4851 159.742 131.79 178.501 179.006 178.501C226.223 178.501 271.528 159.742 305.055 126.31C338.582 92.8773 357.616 47.4787 358.013 0Z"
-                              fill="#D5F4EF"/>
-                    </svg>
-                </div>
+                <div class="smile-motif"></div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background-color: #2fcab0;">
                         <div class="text-box">
@@ -87,199 +81,276 @@
             </div>
             <!-- e 슬라이더 -->
 
-            <!-- s 의견 남기기 -- todo! 선미님 완료 하시면 다시 가져오기 -->
+            <!-- s 탭 -->
             <div class="tab _tab">
                 <ul class="clearfix">
                     <li class="item active"><a href="#">의견 남기기</a></li>
                     <li class="item"><a href="#">나의 제안 내역</a></li>
                 </ul>
             </div>
-            <div class="opinion">
-                <div class="section-input">
-                    <input type="text" title="검색" class="form-control" placeholder="제목을 입력해주세요">
-                    <select title="select" class="custom-select">
-                        <option selected>유형을 선택하세요.</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <div class="input-group">
+            <!-- e 탭 -->
+
+            <div class="tab-content">
+                <!-- s 의견 남기기 컨텐츠 -->
+                <div class="tab-pane active">
+                    <div class="opinion">
+                        <div class="section-input">
+                            <input type="text" title="검색" class="form-control" placeholder="제목을 입력해주세요">
+                            <select title="select" class="custom-select">
+                                <option selected disabled>유형을 선택하세요.</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <div class="input-group">
                     <textarea title="textarea" class="form-control form-control-lg" placeholder="불편함을 느꼈거나 바라는 점이 있다면
 들려주세요."></textarea>
-                    </div>
-                </div>
-                <div class="section-privacy">
-                    <div class="upload-box">
-                        <div class="custom-file img-upload">
-                            <input type="file" class="custom-file-input" id="imgFile" accept="image/*">
-                            <p class="num"><span>4</span>/5</p>
+                            </div>
                         </div>
-                        <div class="upload-list">
-                            <ul>
-                                <li><img src="../../img/@temp/sample01.png" alt="temp img 1">
-                                    <a href="#" class="delete-upload">삭제</a>
-                                </li>
-                                <li><img src="../../img/@temp/sample02.png" alt="temp img 2">
-                                    <a href="#" class="delete-upload">삭제</a>
-                                </li>
-                                <li><img src="../../img/@temp/sample03.png" alt="temp img 3">
-                                    <a href="#" class="delete-upload">삭제</a>
-                                </li>
-                                <li><img src="../../img/@temp/sample04.png" alt="temp img 4">
-                                    <a href="#" class="delete-upload">삭제</a>
-                                </li>
-                            </ul>
+                        <div class="section-privacy">
+                            <div class="upload-box">
+                                <div class="custom-file img-upload">
+                                    <input type="file" class="custom-file-input" id="imgFile" accept="image/*">
+                                    <p class="num"><span>4</span>/5</p>
+                                </div>
+                                <div class="upload-list">
+                                    <ul>
+                                        <li><img src="../../img/@temp/sample01.png" alt="temp img 1">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                        <li><img src="../../img/@temp/sample02.png" alt="temp img 2">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                        <li><img src="../../img/@temp/sample03.png" alt="temp img 3">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                        <li><img src="../../img/@temp/sample04.png" alt="temp img 4">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr class="divider">
+                            <div class="custom-control custom-checkbox checkbox-sm">
+                                <input type="checkbox" class="custom-control-input" id="notice">
+                                <label class="custom-control-label" for="notice">답변이 등록되면 카카오톡 알림을 보내주세요.</label>
+                            </div>
+                            <div class="custom-control custom-checkbox checkbox-sm mb-0">
+                                <input type="checkbox" class="custom-control-input" id="consentUse" checked>
+                                <label class="custom-control-label" for="consentUse">개인정보 활용동의 <a href="#">자세히 보기</a></label>
+                            </div>
+                            <div class="desc">[개인정보 활용동의] 3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로
+                                예상됩니다.
+                            </div>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn btn-lg"><span>등록하기</span></a>
                         </div>
                     </div>
-                    <hr class="divider">
-                    <div class="custom-control custom-checkbox checkbox-sm">
-                        <input type="checkbox" class="custom-control-input" id="notice">
-                        <label class="custom-control-label" for="notice">답변이 등록되면 카카오톡 알림을 보내주세요.</label>
-                    </div>
-                    <div class="custom-control custom-checkbox checkbox-sm mb-0">
-                        <input type="checkbox" class="custom-control-input" id="consentUse" checked>
-                        <label class="custom-control-label" for="consentUse">개인정보 활용동의 <a href="#">자세히 보기</a></label>
-                    </div>
-                    <div class="desc">[개인정보 활용동의] 3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로 예상됩니다.3줄정도 입력될 것으로
-                        예상됩니다.
+                    <div class="subject-list">
+                        <div class="list-heading">
+                            <div class="font-h2 font-bold">
+                                1,459건의 의견 중<br/>
+                                <span class="color-primary">공감되는 주제</span>가 있다면
+                                좋아요를 눌러주세요.
+                            </div>
+                        </div>
+                        <div class="list-tab">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-link active" id="list-tab-1" data-toggle="tab" href="#list-item-1" role="tab"
+                                   aria-controls="list-item-1" aria-selected="true">최신순</a>
+                                <a class="nav-link" id="list-tab-2" data-toggle="tab" href="#list-item-2" role="tab"
+                                   aria-controls="list-item-2" aria-selected="false">좋아요 순</a>
+                            </div>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="list-item-1" role="tabpanel"
+                                     aria-labelledby="list-tab-1 not-responsive">
+                                    <ul class="clearfix _subjectList">
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
+                                            <div class="link on"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item completed">
+                                            <div class="completed-txt"><i class="icon ico-bookmark"></i><span>개선완료</span></div>
+                                            <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 나오면 좋을 것 같아요. 제발요~</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-wrap">
+                                        <a href="#" class="btn btn-black btn-lg">더보기</a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="list-item-2" role="tabpanel" aria-labelledby="list-tab-2">
+                                    <ul class="clearfix _subjectList2 not-responsive">
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
+                                            <div class="link on"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 나오면 좋을 것 같아요. 제발요~</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="font-body-2">248번째 의견</div>
+                                            <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
+                                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
+                                                    class="num">28</span></a></div>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-wrap">
+                                        <a href="#" class="btn btn-black btn-lg">더보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="btn-wrap">
-                    <a href="#" class="btn btn-lg"><span>등록하기</span></a>
-                </div>
-            </div>
-            <!-- e 의견 남기기  -->
+                <!-- e 의견 남기기 컨텐츠 -->
 
-            <!-- s 주제 리스트 -->
-            <div class="subject-list">
-                <div class="list-heading">
-                    <div class="font-h2 font-bold">
-                        1,459건의 의견 중<br/>
-                        <span class="color-primary">공감되는 주제</span>가 있다면
-                        좋아요를 눌러주세요.
-                    </div>
-                </div>
-                <div class="list-tab">
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-link active" id="list-tab-1" data-toggle="tab" href="#list-item-1" role="tab"
-                           aria-controls="list-item-1" aria-selected="true">최신순</a>
-                        <a class="nav-link" id="list-tab-2" data-toggle="tab" href="#list-item-2" role="tab"
-                           aria-controls="list-item-2" aria-selected="false">좋아요 순</a>
-                    </div>
-                    <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="list-item-1" role="tabpanel"
-                             aria-labelledby="list-tab-1 not-responsive">
-                            <ul class="clearfix _subjectList">
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
-                                    <div class="link on"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item completed">
-                                    <div class="completed-txt"><i class="icon ico-bookmark"></i><span>개선완료</span></div>
-                                    <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 나오면 좋을 것 같아요. 제발요~</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn btn-black btn-lg">더보기</a>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="list-item-2" role="tabpanel" aria-labelledby="list-tab-2">
-                            <ul class="clearfix _subjectList2 not-responsive">
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
-                                    <div class="link on"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 나오면 좋을 것 같아요. 제발요~</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">그린 마일드 업 선 플러스 선크림 대용량으로 펌프형으로도 나오면 좋을 것 같아요. 제발요~</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                                <li class="item">
-                                    <div class="font-body-2">248번째 의견</div>
-                                    <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
-                                    <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span
-                                            class="num">28</span></a></div>
-                                </li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn btn-black btn-lg">더보기</a>
-                            </div>
+                <!-- s 나의 제안 내역 컨텐츠 -->
+                <div class="tab-pane">
+                    <div class="my-opinion-list">
+                        <ul>
+                            <li class="item">
+                                <div class="badge-box">
+                                    <span class="badge badge-blue">답변대기</span>
+                                </div>
+                                <div class="cont-box">
+                                    <a href="#" class="cont">
+                                        <span class="category">[프로모션(이벤트)]</span>
+                                        <span class="txt">닥터지 매니아! 여행용 미니어처를 만들어주세요. 꼭 필요해요!</span>
+                                    </a>
+                                </div>
+                                <div class="bottom-box">
+                                    <a href="#" class="btn-like"><i class="icon ico-heart"></i><span>336</span></a>
+                                    <span class="date">21-10-12</span>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-box">
+                                    <span class="badge badge-blue">답변대기</span>
+                                </div>
+                                <div class="cont-box">
+                                    <a href="#" class="cont">
+                                        <span class="category">[제품]</span>
+                                        <span class="txt">닥터지 매니아! 여행용 미니어처를 만들어주세요. 꼭 필요해요!</span>
+                                    </a>
+                                </div>
+                                <div class="bottom-box">
+                                    <a href="#" class="btn-like"><i class="icon ico-heart"></i><span>336</span></a>
+                                    <span class="date">21-10-12</span>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-box">
+                                    <span class="badge badge-gray">답변완료</span>
+                                </div>
+                                <div class="cont-box">
+                                    <a href="#" class="cont">
+                                        <span class="category">[서비스]</span>
+                                        <span class="txt">닥터지 매니아! 여행용 미니어처를 만들어주세요. 꼭 필요해요!</span>
+                                    </a>
+                                </div>
+                                <div class="bottom-box">
+                                    <a href="#" class="btn-like"><i class="icon ico-heart"></i><span>336</span></a>
+                                    <span class="date">21-10-12</span>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-box">
+                                    <span class="badge badge-gray">답변완료</span>
+                                </div>
+                                <div class="cont-box">
+                                    <a href="#" class="cont">
+                                        <span class="category">[서비스]</span>
+                                        <span class="txt">닥터지 매니아! 여행용 미니어처를 만들어주세요. 꼭 필요해요!</span>
+                                    </a>
+                                </div>
+                                <div class="bottom-box">
+                                    <a href="#" class="btn-like"><i class="icon ico-heart"></i><span>336</span></a>
+                                    <span class="date">21-10-12</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <div class="btn btn-black btn-lg">더보기</div>
                         </div>
                     </div>
                 </div>
+                <!-- s 나의 제안 내역 컨텐츠 -->
             </div>
             <!-- e 주제 리스트 -->
 
@@ -312,6 +383,16 @@
         $('._subjectList').gridalicious({
             width: 158,
             gutter: 10,
+        });
+
+        $('._tab').eq(1).find('a').on("click", function (event) {
+            setTimeout(function () {
+                $('._subjectList2').gridalicious({
+                    width: 158,
+                    gutter: 10,
+                });
+            }, 200)
+            $(this).off(event);
         });
 
         $('#list-tab-2').on("click", function (event) {
