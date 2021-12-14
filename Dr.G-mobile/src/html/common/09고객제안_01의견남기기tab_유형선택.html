@@ -5,6 +5,9 @@
 @@include('../../html/include/common/header.html')
 <div class="wrap">
     <div class="container">
+        <a href="#" class="btn-select _toast-popup-open-text">
+            <span class="text">유형을 선택하세요.</span>
+        </a>
     </div>
 </div>
 
@@ -47,16 +50,18 @@
     })();
     (function List() {
         let list = $('.select-list > .list');
+
         function hidePopup() {
             $('._select-toast').addClass('hide');
             setTimeout(() => {
                 $('._select-toast').removeClass('fade show').css('display', 'none');
             }, 400);
         }
+
         /*클릭시 텍스트 변경*/
         $(document).ready(function () {
             $('.list').on("click", function (e) {
-                let textValue =  $(this).find('span').text();
+                let textValue = $(this).find('span').text();
 
                 function ChangeText() {
                     $('._toast-popup-open-text').find('span').text(textValue);
@@ -77,7 +82,7 @@
 
 <!--페이지 보여주기 위한 show 실행 (생략가능)-->
 <script>
-    $('._select-toast').addClass('fade show').css('display','block');
+    $('._select-toast').addClass('fade show').css('display', 'block');
 </script>
 
 </body>
