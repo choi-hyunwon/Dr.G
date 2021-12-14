@@ -258,6 +258,7 @@
         word-break: keep-all;
         color: $gray-700;
         letter-spacing: 0;
+        font-size: vw(16);
       }
       .divider{
         margin: vw(32) 0;
@@ -309,7 +310,8 @@
         margin-bottom: vw(8);
       }
       .text{
-        color:$gray-800
+        color:$gray-800;
+        font-size: vw(16);
       }
     }
 
