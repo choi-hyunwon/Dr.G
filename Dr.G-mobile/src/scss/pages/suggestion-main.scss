@@ -7,25 +7,25 @@
 /* 고객제안 메인 */
 .suggestion-wrap {
   .heading-box {
-    padding: 20px 20px 24px;
+    padding: vw(20) vw(20) vw(24);
 
     .font-h1 {
-      margin-bottom: 12px;
+      margin-bottom: vw(12);
     }
   }
 
   .opinion {
     .custom-select {
-      margin-bottom: 8px;
+      margin-bottom: vw(8);
     }
 
     .section-input {
-      margin-bottom: 14px;
+      margin-bottom: vw(14);
     }
 
     .section-privacy {
       .upload-box {
-        padding-bottom: 7px;
+        padding-bottom: vw(7);
       }
     }
   }
@@ -36,8 +36,8 @@
     .swiper-slide {
       position: relative;
       width: 100%;
-      height: 493px;
-      padding: 48px 0 0 24px;
+      height: vw(493);
+      padding: vw(48) 0 0 vw(24);
 
       &.swiper-slide-active {
         .text-box {
@@ -55,12 +55,12 @@
         transform: translateX(90%);
 
         .font-body-2 {
-          margin-bottom: 6px;
+          margin-bottom: vw(6);
         }
 
         .font-h2 {
-          margin-bottom: 14px;
-          max-width: 280px;
+          margin-bottom: vw(14);
+          max-width: vw(280);
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
@@ -69,20 +69,20 @@
         }
 
         .font-body-1 {
-          width: 150px;
+          width: vw(150);
         }
       }
 
       .img-box {
         position: absolute;
         right: 0;
-        top: 174px;
+        top: vw(174);
         transition: 1.2s;
         transform: translateX(910%);
 
         .img {
-          width: 210px;
-          height: 234px;
+          width: vw(210);
+          height: vw(234);
 
           img {
             width: 100%;
@@ -94,14 +94,14 @@
 
     .smile-motif {
       position: absolute;
-      top: 263px;
+      top: vw(263);
       right: 0;
       z-index: 2;
     }
 
     .swiper-pagination-bullets {
       width: 100%;
-      bottom: 27px;
+      bottom: vw(27);
 
       .swiper-pagination-bullet {
         background: #ffffff;
@@ -115,34 +115,34 @@
   }
 
   .subject-list {
-    padding-top: 76px;
+    padding-top: vw(76);
 
     .list-heading {
-      margin-bottom: 32px;
-      padding-left: 25px;
-      padding-right: 81px;
+      margin-bottom: vw(32);
+      padding-left: vw(25);
+      padding-right: vw(81);
 
       .font-h2 {
-        max-width: 280px;
+        max-width: vw(280);
       }
     }
 
     .list-tab {
-      padding: 0 13px;
+      padding: 0 vw(13);
 
       .nav-tabs {
         border-bottom: 0;
-        margin-bottom: 24px;
+        margin-bottom: vw(24);
         justify-content: flex-end;
 
         .nav-link {
           position: relative;
-          padding: 0 8px;
+          padding: 0 vw(8);
           border: 0 !important;
           color: $gray-400;
-          font-size: 13px;
-          line-height: 18px;
-          letter-spacing: -0.005em;
+          font-size: vw(13);
+          line-height: vw(18);
+          letter-spacing: vw(-0.05);
 
           &.active {
             color: $gray-700;
@@ -152,8 +152,8 @@
               content: '';
               display: inline-block;
               vertical-align: middle;
-              @include background-img($width: 12px, $height: 12px, $category: 'common', $img: 'ico-check.png');
-              margin-right: 3px;
+              @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-check.png');
+              margin-right: vw(3);
             }
           }
 
@@ -164,8 +164,8 @@
               left: 0;
               top: 50%;
               transform: translateY(-50%);
-              width: 3px;
-              height: 3px;
+              width: vw(3);
+              height: vw(3);
               border-radius: 50%;
               background-color: $gray-400;
             }
@@ -174,26 +174,26 @@
       }
 
       .gridalicious {
-        margin-bottom: 26px;
+        margin-bottom: vw(26);
       }
     }
 
     .btn-wrap {
       display: flex;
       justify-content: center;
-      margin-bottom: 76px;
+      margin-bottom: vw(76);
     }
 
     .grid-item {
-      margin-bottom: 10px;
+      margin-bottom: vw(10);
     }
 
     .item {
       float: left;
-      //width: calc(50% - 5.5px);
+      //width: calc(50% - 5.5);
       background-color: $gray-200;
-      border-radius: 12px;
-      padding: 20px 16px;
+      border-radius: vw(12);
+      padding: vw(20) vw(16);
 
       &.completed {
         background-color: $primary-light;
@@ -212,8 +212,8 @@
       }
 
       .completed-txt {
-        margin-bottom: 6px;
-        line-height: 18px;
+        margin-bottom: vw(6);
+        line-height: vw(18);
 
         .ico-link {
           background-image: url(../img/common/);
@@ -223,9 +223,9 @@
           display: inline-block;
           vertical-align: middle;
           font-weight: bold;
-          font-size: 13px;
-          line-height: 18px;
-          letter-spacing: -0.005em;
+          font-size: vw(13);
+          line-height: vw(18);
+          letter-spacing: vw(-0.05);
           color: $primary;
         }
       }
@@ -234,25 +234,25 @@
         color: $primary;
         font-family: $poppins-semiBold;
         font-weight: bold;
-        margin-bottom: 6px;
+        margin-bottom: vw(6);
       }
 
       .font-body-1 {
         color: $gray-700;
-        margin-bottom: 8px;
+        margin-bottom: vw(8);
       }
 
       .link {
         .ico-like {
           vertical-align: middle;
-          transform: translateY(-2px);
+          transform: translateY(vw(-2));
         }
 
         .num {
           font-family: $poppins-semiBold;
           display: inline-block;
           vertical-align: middle;
-          margin-left: 4px;
+          margin-left: vw(4);
         }
 
         &.on {
@@ -261,43 +261,39 @@
           }
         }
       }
-
-      &:nth-child(2n-1) {
-        //margin-right: 11px;
-      }
     }
   }
 
   .caution-box {
-    padding: 0 20px;
-    margin-bottom: 76px;
+    padding: 0 vw(20);
+    margin-bottom: vw(76);
 
     .title {
-      margin-bottom: 10px;
-      line-height: 19px;
-      padding-left: 5px;
+      margin-bottom: vw(10);
+      line-height: vw(19);
+      padding-left: vw(5);
 
       i, span {
         display: inline-block;
         vertical-align: middle;
-        line-height: 19px;
+        line-height: vw(19);
       }
 
       span {
         font-weight: bold;
-        font-size: 15px;
-        letter-spacing: -0.005em;
+        font-size: vw(15);
+        letter-spacing: vw(-0.05);
         color: $gray-800;
       }
 
       i {
-        margin-right: 3px;
-        transform: translateY(1px);
+        margin-right: vw(3);
+        transform: translateY(vw(1));
       }
     }
 
     .list-with-dot {
-      padding-left: 3px;
+      padding-left: vw(3);
     }
   }
 }
