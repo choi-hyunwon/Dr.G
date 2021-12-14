@@ -21,6 +21,8 @@
 
   &:focus, &:hover {
     color: $gray-fff;
+    outline: none;
+    box-shadow: none;
   }
 
   &.btn-black {

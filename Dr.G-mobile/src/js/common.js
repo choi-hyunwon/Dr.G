@@ -25,7 +25,8 @@ front.common = (function () {
         $('.custom-select').on('change', function() {
             var value = $(this).children("option:selected").attr('value');
 
-            if($(this).not('&.footer-select')){
+            $('.custom-select').on('change', function() {
+                var value = $(this).children("option:selected").attr('value');
                 if (!value) {
                     $(this).css({
                         'font-weight' : 'normal',
@@ -39,7 +40,7 @@ front.common = (function () {
                         'background' : '#fff url(../../img/common/ico-select.png) right 20px center/20px 20px no-repeat'
                     });
                 }
-            }
+            });
         });
     }
 
