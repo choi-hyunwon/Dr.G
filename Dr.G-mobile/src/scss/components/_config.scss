@@ -27,3 +27,7 @@
   background-image: url($url + $category + "/" + $img);
   background-size: cover;
 }
+
+@function vw($px) {
+  @return #{($px * 100) / 375}vw;
+}
