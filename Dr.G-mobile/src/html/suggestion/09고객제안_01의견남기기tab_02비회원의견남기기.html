@@ -12,37 +12,92 @@
             </ul>
         </div>
         <div class="tab-content">
-            <div class="tab-pane active" id="opinion">
+            <div class="tab-pane opinion active">
                 <div class="section-input">
                     <input type="text" title="검색" class="form-control" placeholder="제목을 입력해주세요">
-                   <!-- <select title="select" class="custom-select">
-                        <option selected>유형을 선택하세요.</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>-->
+                    <!-- <select title="select" class="custom-select">
+                         <option selected>유형을 선택하세요.</option>
+                         <option value="1">One</option>
+                         <option value="2">Two</option>
+                         <option value="3">Three</option>
+                     </select>-->
                     <div class="select-popup">
-                            <!-- Button trigger modal -->
-                            <a href="#" class="btn-select _toast-popup-open">
-                                유형을 선택하세요.
-                            </a>
-                            <!-- Modal -->
-                            <div class="toast-dim _toast-dim-no-title">
-                                <div class="toast-popup">
-                                    <div class="toast-content no-title">
-                                        <ul>
-                                            <li><a href="#">제품</a></li>
-                                            <li><a href="#">Ai 피부분석</a></li>
-                                            <li><a href="#">서비스</a></li>
-                                            <li><a href="#">홈페이지</a></li>
-                                            <li><a href="#">모바일</a></li>
-                                            <li><a href="#">프로모션(이벤트)</a></li>
-                                            <li><a href="#">주문 및 배송</a></li>
-                                            <li><a href="#">기타</a></li>
-                                            </ul>
+                        <!-- Button trigger modal -->
+                        <a href="#" class="btn-select _toast-popup-open-text">
+                            <span class="text">유형을 선택하세요.</span>
+                        </a>
+                        <!--modal-->
+                        <div class="toast-dim _select-toast">
+                            <div class="toast-popup select">
+                                <div class="toast-content no-title select">
+                                    <div class="toast-body mb-0">
+                                        <ul class="select-list">
+                                            <li class="list"><span class="text">제품</span><i
+                                                    class="icon ico-check-green"></i></li>
+                                            <li class="list"><span class="text">Ai 피부분석</span><i
+                                                    class="icon ico-check-green"></i></li>
+                                            <li class="list"><span class="text">서비스</span><i
+                                                    class="icon ico-check-green"></i></li>
+                                            <li class="list"><span class="text">홈페이지</span><i
+                                                    class="icon ico-check-green"></i></li>
+                                            <li class="list"><span class="text">모바일</span><i
+                                                    class="icon ico-check-green"></i></li>
+                                            <li class="list"><span class="text">프로모션(이벤트)</span><i
+                                                    class="icon ico-check-green"></i></li>
+                                            <li class="list"><span class="text">주문 및 배송</span><i
+                                                    class="icon ico-check-green"></i></li>
+                                            <li class="list"><span class="text">기타</span><i
+                                                    class="icon ico-check-green"></i></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <!--toastPopupScript-->
+                        <script>
+                            (function () {
+                                /*버튼에 _toast-popup-open-text을 클래스에 넣으면 버튼효과적용됩니다.*/
+                                $('._toast-popup-open-text').click(function () {
+                                    $('._select-toast')
+                                        .removeClass('hide')
+                                        .addClass('fade show')
+                                        .css('display', 'block');
+                                });
+                            })();
+                            (function List() {
+                                let list = $('.select-list > .list');
+
+                                function hidePopup() {
+                                    $('._select-toast').addClass('hide');
+                                    setTimeout(() => {
+                                        $('._select-toast').removeClass('fade show').css('display', 'none');
+                                    }, 400);
+                                }
+
+                                /*클릭시 텍스트 변경*/
+                                $(document).ready(function () {
+                                    $('.list').on("click", function (e) {
+                                        let textValue = $(this).find('span').text();
+
+                                        function ChangeText() {
+                                            $('._toast-popup-open-text').find('span').text(textValue);
+                                        }
+
+                                        if (list.hasClass("active")) {
+                                            list.removeClass("active");
+                                            $(this).addClass("active");
+                                            hidePopup();
+                                            ChangeText();
+                                        } else {
+                                            /*active가 하나도 없을 경우 active가 있으면 변경*/
+                                            $(this).addClass("active")
+                                            hidePopup();
+                                            ChangeText();
+                                        }
+                                    });
+                                });
+                            })();
+                        </script>
                     </div>
 
                     <div class="input-group">
@@ -64,15 +119,15 @@
                         </div>
                     </div>
                     <div class="input-box">
-                     <!--   <select title="select" class="custom-select">
-                            <option selected>연령대를 선택해주세요.</option>
-                            <option value="10대">10대</option>
-                            <option value="20대">20대</option>
-                            <option value="30대">30대</option>
-                            <option value="40대">40대</option>
-                            <option value="50대">50대</option>
-                            <option value="50대">60대</option>
-                        </select>-->
+                        <!--   <select title="select" class="custom-select">
+                               <option selected>연령대를 선택해주세요.</option>
+                               <option value="10대">10대</option>
+                               <option value="20대">20대</option>
+                               <option value="30대">30대</option>
+                               <option value="40대">40대</option>
+                               <option value="50대">50대</option>
+                               <option value="50대">60대</option>
+                           </select>-->
                         <div class="select-popup">
                             <!-- Button trigger modal -->
                             <a href="#" class="btn-select _toast-popup-open">
@@ -144,10 +199,12 @@
                     </div>
                 </div>
                 <div class="btn-wrap">
-                    <a href="#" class="btn btn-lg" data-toggle="modal" data-target="#completePopup"><span>등록하기</span></a>
+                    <a href="#" class="btn btn-lg" data-toggle="modal"
+                       data-target="#completePopup"><span>등록하기</span></a>
                 </div>
 
-                <div class="modal fade" id="completePopup" tabindex="-1" role="dialog" aria-labelledby="completePopup" aria-hidden="true">
+                <div class="modal fade" id="completePopup" tabindex="-1" role="dialog" aria-labelledby="completePopup"
+                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered alert-popup" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -162,28 +219,8 @@
                         </div>
                     </div>
                 </div>
-
-                <!--toastPopupScript-->
-                <script>
-                    (function () {
-                        $('._toast-popup-open').click(function () {
-                            $(this).next().addClass('fade show');
-                            $('body').css('overflow-y','hidden')
-                        });
-                    })();
-                    $('.toast-popup li a').on('click',function (){
-                        $(this).parents('.toast-popup').find('li').removeClass('active')
-                        $(this).parent().addClass('active')
-
-                        $('._toast-dim-no-title').removeClass('fade show');
-                        $('body').css('overflow-y','scroll')
-
-                        let text = $(this).text();
-                        $(this).parents('.select-popup').find('.btn-select').text(text)
-                    })
-                </script>
             </div>
-            <div class="tab-pane" id="suggestion">
+            <div class="tab-pane suggestion">
                 나의 제안 내역
             </div>
         </div>
