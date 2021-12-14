@@ -47,7 +47,7 @@ front.common = (function () {
             let idx = $(this).parent().index()
             let tabItem = $('.tab .item')
             let tabPane = $('.tab-content .tab-pane')
-            console.log('a')
+            // console.log('a')
             tabItem.removeClass('active')
             tabItem.eq(idx).addClass('active')
             tabPane.removeClass('active')

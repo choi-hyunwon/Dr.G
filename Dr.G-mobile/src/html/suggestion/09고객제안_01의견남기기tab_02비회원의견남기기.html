@@ -23,11 +23,11 @@
                      </select>-->
                     <div class="select-popup">
                         <!-- Button trigger modal -->
-                        <a href="#" class="btn-select _toast-popup-open-text">
+                        <a href="#" class="btn-select _toast-popup-open text">
                             <span class="text">유형을 선택하세요.</span>
                         </a>
                         <!--modal-->
-                        <div class="toast-dim _select-toast">
+                        <div class="toast-dim _toast-popup text">
                             <div class="toast-popup select">
                                 <div class="toast-content no-title select">
                                     <div class="toast-body mb-0">
@@ -53,43 +53,36 @@
                                 </div>
                             </div>
                         </div>
-                        <!--toastPopupScript-->
+                        <!--유형 toastPopupScript-->
                         <script>
                             (function () {
-                                /*버튼에 _toast-popup-open-text을 클래스에 넣으면 버튼효과적용됩니다.*/
-                                $('._toast-popup-open-text').click(function () {
-                                    $('._select-toast')
-                                        .removeClass('hide')
-                                        .addClass('fade show')
-                                        .css('display', 'block');
+                                $('._toast-popup-open.text').click(function () {
+                                    let select =  $('._toast-popup.text')
+                                    select.removeClass('hide').addClass('fade show').css('display', 'block');
                                 });
                             })();
                             (function List() {
-                                let list = $('.select-list > .list');
-
+                                let list = $('._toast-popup.text .select-list > .list');
                                 function hidePopup() {
-                                    $('._select-toast').addClass('hide');
+                                    $('._toast-popup.text').addClass('hide');
                                     setTimeout(() => {
-                                        $('._select-toast').removeClass('fade show').css('display', 'none');
+                                        $('._toast-popup.text').removeClass('fade show').css('display', 'none');
                                     }, 400);
                                 }
 
                                 /*클릭시 텍스트 변경*/
                                 $(document).ready(function () {
-                                    $('.list').on("click", function (e) {
+                                    list.on("click", function (e) {
                                         let textValue = $(this).find('span').text();
-
                                         function ChangeText() {
-                                            $('._toast-popup-open-text').find('span').text(textValue);
+                                            $('._toast-popup-open.text').find('span').text(textValue);
                                         }
-
                                         if (list.hasClass("active")) {
                                             list.removeClass("active");
                                             $(this).addClass("active");
                                             hidePopup();
                                             ChangeText();
                                         } else {
-                                            /*active가 하나도 없을 경우 active가 있으면 변경*/
                                             $(this).addClass("active")
                                             hidePopup();
                                             ChangeText();
@@ -119,36 +112,67 @@
                         </div>
                     </div>
                     <div class="input-box">
-                        <!--   <select title="select" class="custom-select">
-                               <option selected>연령대를 선택해주세요.</option>
-                               <option value="10대">10대</option>
-                               <option value="20대">20대</option>
-                               <option value="30대">30대</option>
-                               <option value="40대">40대</option>
-                               <option value="50대">50대</option>
-                               <option value="50대">60대</option>
-                           </select>-->
                         <div class="select-popup">
                             <!-- Button trigger modal -->
-                            <a href="#" class="btn-select _toast-popup-open">
-                                연령대를 선택해주세요.
+                            <a href="#" class="btn-select _toast-popup-open age">
+                                <span class="text">연령대를 선택해주세요.</span>
                             </a>
                             <!-- Modal -->
-                            <div class="toast-dim _toast-dim-no-title">
+                            <div class="toast-dim _toast-popup age">
                                 <div class="toast-popup">
                                     <div class="toast-content no-title">
-                                        <ul>
-                                            <li><a href="#">10대</a></li>
-                                            <li><a href="#">20대</a></li>
-                                            <li><a href="#">30대</a></li>
-                                            <li><a href="#">40대</a></li>
-                                            <li><a href="#">50대</a></li>
-                                            <li><a href="#">60대</a></li>
+                                        <ul class="select-list">
+                                            <li class="list"><a href="#">10대</a></li>
+                                            <li class="list"><a href="#">20대</a></li>
+                                            <li class="list"><a href="#">30대</a></li>
+                                            <li class="list"><a href="#">40대</a></li>
+                                            <li class="list"><a href="#">50대</a></li>
+                                            <li class="list"><a href="#">60대</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!--연령 toastPopupScript-->
+                        <script>
+                            (function() {
+                                $('._toast-popup-open.age').click(function () {
+                                    $('._toast-popup.age')
+                                        .removeClass('hide')
+                                        .addClass('fade show')
+                                        .css('display', 'block');
+                                });
+                            })();
+                            (function List() {
+                                let list = $('._toast-popup.age .select-list > .list');
+                                function hidePopup() {
+                                    $('._toast-popup.age').addClass('hide');
+                                    setTimeout(() => {
+                                        $('._toast-popup.age').removeClass('fade show').css('display', 'none');
+                                    }, 400);
+                                }
+                                /*클릭시 텍스트 변경*/
+                                $(document).ready(function () {
+                                    list.on("click", function (e) {
+                                        let textValue = $(this).find('a').text();
+                                        function ChangeText() {
+                                            $('._toast-popup-open.age').find('span').text(textValue);
+                                        }
+                                        if (list.hasClass("active")) {
+                                            list.removeClass("active");
+                                            $(this).addClass("active");
+                                            hidePopup();
+                                            ChangeText();
+                                        } else {
+                                            /*active가 하나도 없을 경우 active가 있으면 변경*/
+                                            $(this).addClass("active")
+                                            hidePopup();
+                                            ChangeText();
+                                        }
+                                    });
+                                });
+                            })();
+                        </script>
                         <input type="number" title="휴대폰 번호" class="form-control" placeholder="휴대폰 번호 Ex) 01022334455"
                                maxlength="11" oninput="numberMaxLength(this)">
                         <input type="password" title="비밀번호" class="form-control" placeholder="비밀번호를 4자리로 설정해주세요."
