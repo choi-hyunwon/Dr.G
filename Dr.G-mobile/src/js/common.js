@@ -14,7 +14,6 @@ front.common = (function () {
         this.a();
         this.commonHandler();
         this.tab();
-        this.suggestPage();
     }
 
     var a = function () {
@@ -32,13 +31,13 @@ front.common = (function () {
                     $(this).css({
                         'font-weight' : 'normal',
                         'color' : '#666666',
-                        'background-image' : 'url(../../img/common/ico-select-disabled.png)'
+                        'background-image' : 'url(../../img/common/ico-select-disabled.svg)'
                     });
                 } else {
                     $(this).css({
                         'font-weight' : 'bold',
                         'color' : '#444444',
-                        'background-image' : 'url(../../img/common/ico-select.png)'
+                        'background-image' : 'url(../../img/common/ico-select.svg)'
                     });
                 }
             });
@@ -57,66 +56,11 @@ front.common = (function () {
         })
     }
 
-    var suggestPage = function (){
-        // 메인 슬라이더
-        // https://swiperjs.com/swiper-api
-        if($('.suggestion-slider').length === 1 ) {
-            new Swiper(".suggestion-slider", {
-                pagination: {
-                    el: ".swiper-pagination",
-                }
-            });
-        }
-
-        // 리스트
-        // http://suprb.com/apps/gridalicious/
-        $(document).ready(function () {
-            $('._subjectList').gridalicious({
-                width: 158,
-                gutter: 10,
-            });
-
-            $('._tab').eq(1).find('a').on("click", function (event) {
-                setTimeout(function () {
-                    $('._subjectList2').gridalicious({
-                        width: 158,
-                        gutter: 10,
-                    });
-                }, 200)
-                $(this).off(event);
-            });
-
-            $('#list-tab-2').on("click", function (event) {
-                setTimeout(function () {
-                    $('._subjectList2').gridalicious({
-                        width: 158,
-                        gutter: 10,
-                    });
-                }, 200)
-                $(this).off(event);
-            });
-        })
-
-        // 좋아요 버튼 이벤트
-        $('._likeBtn').on('click', function () {
-            let number = Number($(this).children('.num').text())
-
-            if ($(this).parent().hasClass('on')) {
-                $(this).parent().removeClass('on')
-                $(this).children('.num').text(number - 1)
-            } else {
-                $(this).parent().addClass('on')
-                $(this).children('.num').text(number + 1)
-            }
-        })
-    }
-
     return {
         a: a,
         commonHandler: commonHandler,
         init: init,
         tab: tab,
-        suggestPage: suggestPage,
     }
 })();
 

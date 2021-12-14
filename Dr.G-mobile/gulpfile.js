@@ -35,7 +35,7 @@ function copyLibJs() {
         'src/js/lib/bootstrap.js',
         'src/js/lib/jquery.sticky.js',
         'src/js/lib/swiper.js',
-        'src/js/lib/jquery.grid-a-licious.js',
+        'src/js/lib/masonry.js',
     ];
 
     return gulp.src(sourceLib)

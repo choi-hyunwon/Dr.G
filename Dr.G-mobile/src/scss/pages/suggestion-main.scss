@@ -186,8 +186,8 @@
       }
     }
 
-    .list-tab {
-      padding: 0 vw(13);
+    .list-body {
+      padding: 0 vw(20);
 
       .nav-tabs {
         border-bottom: 0;
@@ -211,8 +211,9 @@
               content: '';
               display: inline-block;
               vertical-align: middle;
-              @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-check.png');
+              @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-check.svg');
               margin-right: vw(3);
+              transform: translateY(vw(-2));
             }
           }
 
@@ -232,94 +233,106 @@
         }
       }
 
-      .gridalicious {
-        margin-bottom: vw(26);
+      .list {
+        margin-bottom: vw(36);
+      }
+
+      .sizer,  .item {
+        width: 50%;
+      }
+
+      .item {
+        float: left;
+        padding: 0 vw(5);
+        margin-bottom: vw(12);
+        //width: calc(50% - 5.5);
+
+        .item-inner {
+          background-color: $gray-200;
+          border-radius: vw(12);
+          padding: vw(20) vw(16);
+        }
+
+        &:nth-child(2n) {
+          //margin-right: vw(11);
+        }
+
+        &.completed {
+          .item-inner {
+            background-color: $primary-light;
+          }
+
+          .link {
+            .num {
+              color: $primary;
+            }
+
+            &.on {
+              .ico-like {
+                background-image: url(../img/common/ico-link-foc2.svg);
+              }
+            }
+          }
+        }
+
+        .completed-txt {
+          margin-bottom: vw(6);
+          line-height: vw(18);
+
+          .ico-link {
+            background-image: url(../img/common/);
+          }
+
+          > span {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: bold;
+            font-size: vw(13);
+            line-height: vw(18);
+            letter-spacing: vw(-0.05);
+            color: $primary;
+          }
+        }
+
+        .font-body-2 {
+          color: $primary;
+          font-family: $poppins-semiBold;
+          font-weight: bold;
+          margin-bottom: vw(6);
+        }
+
+        .font-body-1 {
+          color: $gray-700;
+          margin-bottom: vw(8);
+        }
+
+        .link {
+          .ico-like {
+            vertical-align: middle;
+            transform: translateY(vw(-2));
+          }
+
+          .num {
+            font-family: $poppins-semiBold;
+            display: inline-block;
+            font-size: vw(13);
+            vertical-align: middle;
+            margin-left: vw(4);
+          }
+
+          &.on {
+            .ico-like {
+              background-image: url(../img/common/ico-link-foc.svg);
+            }
+          }
+        }
       }
     }
 
     .btn-wrap {
       display: flex;
       justify-content: center;
-      margin-bottom: vw(76);
-    }
-
-    .grid-item {
-      margin-bottom: vw(10);
-    }
-
-    .item {
-      float: left;
-      //width: calc(50% - 5.5);
-      background-color: $gray-200;
-      border-radius: vw(12);
-      padding: vw(20) vw(16);
-
-      &.completed {
-        background-color: $primary-light;
-
-        .link {
-          .num {
-            color: $primary;
-          }
-
-          &.on {
-            .ico-like {
-              background-image: url(../img/common/ico-link-foc2.png);
-            }
-          }
-        }
-      }
-
-      .completed-txt {
-        margin-bottom: vw(6);
-        line-height: vw(18);
-
-        .ico-link {
-          background-image: url(../img/common/);
-        }
-
-        > span {
-          display: inline-block;
-          vertical-align: middle;
-          font-weight: bold;
-          font-size: vw(13);
-          line-height: vw(18);
-          letter-spacing: vw(-0.05);
-          color: $primary;
-        }
-      }
-
-      .font-body-2 {
-        color: $primary;
-        font-family: $poppins-semiBold;
-        font-weight: bold;
-        margin-bottom: vw(6);
-      }
-
-      .font-body-1 {
-        color: $gray-700;
-        margin-bottom: vw(8);
-      }
-
-      .link {
-        .ico-like {
-          vertical-align: middle;
-          transform: translateY(vw(-2));
-        }
-
-        .num {
-          font-family: $poppins-semiBold;
-          display: inline-block;
-          vertical-align: middle;
-          margin-left: vw(4);
-        }
-
-        &.on {
-          .ico-like {
-            background-image: url(../img/common/ico-link-foc.png);
-          }
-        }
-      }
+      margin-bottom: vw(28);
     }
   }
 
