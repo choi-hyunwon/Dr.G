@@ -48,8 +48,8 @@
 }
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
-  -webkit-transform: translate3d(0px, 0, 0);
-  transform: translate3d(0px, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .swiper-container-multirow > .swiper-wrapper {
   -webkit-flex-wrap: wrap;
@@ -96,8 +96,8 @@
 }
 /* 3D Effects */
 .swiper-container-3d {
-  -webkit-perspective: 1200px;
-  perspective: 1200px;
+  -webkit-perspective: vw(1200);
+  perspective: vw(1200);
 }
 .swiper-container-3d .swiper-wrapper,
 .swiper-container-3d .swiper-slide,
@@ -160,12 +160,12 @@
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  width: 27px;
-  height: 44px;
-  margin-top: -22px;
+  width: vw(27);
+  height: vw(44);
+  margin-top: vw(-22);
   z-index: 10;
   cursor: pointer;
-  background-size: 27px 44px;
+  background-size: vw(27) vw(44);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -178,13 +178,13 @@
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
-  left: 10px;
+  left: vw(10);
   right: auto;
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
-  right: 10px;
+  right: vw(10);
   left: auto;
 }
 .swiper-button-prev.swiper-button-white,
@@ -223,7 +223,7 @@
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 10px;
+  bottom: vw(10);
   left: 0;
   width: 100%;
 }
@@ -269,8 +269,8 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: vw(8);
+  height: vw(8);
   display: inline-block;
   border-radius: 100%;
   background: #000;
@@ -294,13 +294,13 @@ button.swiper-pagination-bullet {
   background: #007aff;
 }
 .swiper-container-vertical > .swiper-pagination-bullets {
-  right: 10px;
+  right: vw(10);
   top: 50%;
-  -webkit-transform: translate3d(0px, -50%, 0);
-  transform: translate3d(0px, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
 }
 .swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 6px 0;
+  margin: vw(6) 0;
   display: block;
 }
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
@@ -308,7 +308,7 @@ button.swiper-pagination-bullet {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 8px;
+  width: vw(8);
 }
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
@@ -319,7 +319,7 @@ button.swiper-pagination-bullet {
   transition: 200ms transform, 200ms top, 200ms -webkit-transform;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 4px;
+  margin: 0 vw(4);
 }
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 50%;
@@ -369,13 +369,13 @@ button.swiper-pagination-bullet {
 .swiper-container-horizontal > .swiper-pagination-progressbar,
 .swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
   width: 100%;
-  height: 4px;
+  height: vw(4);
   left: 0;
   top: 0;
 }
 .swiper-container-vertical > .swiper-pagination-progressbar,
 .swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
-  width: 4px;
+  width: vw(4);
   height: 100%;
   left: 0;
   top: 0;
@@ -403,7 +403,7 @@ button.swiper-pagination-bullet {
 }
 /* Scrollbar */
 .swiper-scrollbar {
-  border-radius: 10px;
+  border-radius: vw(10);
   position: relative;
   -ms-touch-action: none;
   background: rgba(0, 0, 0, 0.1);
@@ -411,17 +411,17 @@ button.swiper-pagination-bullet {
 .swiper-container-horizontal > .swiper-scrollbar {
   position: absolute;
   left: 1%;
-  bottom: 3px;
+  bottom: vw(3);
   z-index: 50;
-  height: 5px;
+  height: vw(5);
   width: 98%;
 }
 .swiper-container-vertical > .swiper-scrollbar {
   position: absolute;
-  right: 3px;
+  right: vw(3);
   top: 1%;
   z-index: 50;
-  width: 5px;
+  width: vw(5);
   height: 98%;
 }
 .swiper-scrollbar-drag {
@@ -429,7 +429,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   position: relative;
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  border-radius: vw(10);
   left: 0;
   top: 0;
 }
@@ -469,13 +469,13 @@ button.swiper-pagination-bullet {
 }
 /* Preloader */
 .swiper-lazy-preloader {
-  width: 42px;
-  height: 42px;
+  width: vw(42);
+  height: vw(42);
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -21px;
-  margin-top: -21px;
+  margin-left: vw(-21);
+  margin-top: vw(-21);
   z-index: 10;
   -webkit-transform-origin: 50%;
   -ms-transform-origin: 50%;
@@ -580,13 +580,13 @@ button.swiper-pagination-bullet {
 .swiper-container-cube .swiper-cube-shadow {
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   height: 100%;
   background: #000;
   opacity: 0.6;
-  -webkit-filter: blur(50px);
-  filter: blur(50px);
+  -webkit-filter: blur(vw(50));
+  filter: blur(vw(50));
   z-index: 0;
 }
 .swiper-container-flip {
@@ -615,5 +615,5 @@ button.swiper-pagination-bullet {
 }
 .swiper-container-coverflow .swiper-wrapper {
   /* Windows 8 IE 10 fix */
-  -ms-perspective: 1200px;
+  -ms-perspective: vw(1200);
 }
