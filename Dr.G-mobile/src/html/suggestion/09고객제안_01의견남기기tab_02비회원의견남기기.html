@@ -146,6 +146,7 @@
                             })();
                             (function List() {
                                 let list = $('._toast-popup.age .select-list > .list');
+                                // console.log(list);
                                 function hidePopup() {
                                     $('._toast-popup.age').addClass('hide');
                                     setTimeout(() => {
@@ -155,7 +156,8 @@
                                 /*클릭시 텍스트 변경*/
                                 $(document).ready(function () {
                                     list.on("click", function (e) {
-                                        let textValue = $(this).find('a').text();
+                                        let textValue = $(this).find('span').text();
+                                        // console.log(textValue);
                                         function ChangeText() {
                                             $('._toast-popup-open.age').find('span').text(textValue);
                                         }
@@ -227,7 +229,6 @@
                     <a href="#" class="btn btn-lg" data-toggle="modal"
                        data-target="#completePopup"><span>등록하기</span></a>
                 </div>
-
                 <div class="modal fade" id="completePopup" tabindex="-1" role="dialog" aria-labelledby="completePopup"
                      aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered alert-popup" role="document">
