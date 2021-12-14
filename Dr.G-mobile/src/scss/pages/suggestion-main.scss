@@ -15,6 +15,10 @@
   }
 
   .opinion {
+    .custom-select {
+      margin-bottom: 8px;
+    }
+
     .section-input {
       margin-bottom: 14px;
     }
@@ -96,6 +100,7 @@
     }
 
     .swiper-pagination-bullets {
+      width: 100%;
       bottom: 27px;
 
       .swiper-pagination-bullet {
@@ -153,7 +158,7 @@
           }
 
           + .nav-link {
-            &::before {
+            &::after {
               content: '';
               position: absolute;
               left: 0;
@@ -260,6 +265,39 @@
       &:nth-child(2n-1) {
         //margin-right: 11px;
       }
+    }
+  }
+
+  .caution-box {
+    padding: 0 20px;
+    margin-bottom: 76px;
+
+    .title {
+      margin-bottom: 10px;
+      line-height: 19px;
+      padding-left: 5px;
+
+      i, span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 19px;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 15px;
+        letter-spacing: -0.005em;
+        color: $gray-800;
+      }
+
+      i {
+        margin-right: 3px;
+        transform: translateY(1px);
+      }
+    }
+
+    .list-with-dot {
+      padding-left: 3px;
     }
   }
 }

@@ -1,9 +1,10 @@
 /*
-|----------------------------------|
+|--------------------------------------------------------------------|
  v.0.1 주연 : 최초 작업 -- 2021.11.30
  v.0.2 태윤 : .icon-close-sm 추가 -- 2021.12.10
  v.0.3 태윤 : .icon-check-green 추가 -- 2021.12.13
-|----------------------------------|
+ v.0.4 주연 : .ico-like / .ico-bookmark / .ico-caution 추가 -- 2021.12.13
+|--------------------------------------------------------------------|
 */
 .icon {
   display: inline-block;
@@ -110,4 +111,8 @@
 
 .ico-check-green {
   @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-check-green.png');
+}
+
+.ico-caution {
+  @include background-img ($width: 18px, $height: 18px, $category: 'common', $img: 'ico-caution.png');
 }
