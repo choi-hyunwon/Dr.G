@@ -3,21 +3,20 @@
  v.0.1 주연 : 최초 작업 -- 2021.11.30
  v.0.2 선미 : 버튼 사이즈별 폰트사이즈 변경 -- 2021.12.10
  v.0.3 선미 : btn focus ->  box-shadow 제거 -- 2021.12.13
+ v.0.4 주연 : vw 적용 -- 2021.12.14
 |----------------------------------|
 */
-@import "variables";
-
 .btn {
   display: inline-block;
-  min-width: 132px;
-  height: 48px;
-  line-height: 46px;
-  padding: 0 16px;
+  min-width: vw(132);
+  height: vw(48);
+  line-height: vw(46);
+  padding: 0 vw(16);
   background-color: $primary;
   border-color: $primary;
-  border-radius: 100px;
+  border-radius: vw(100);
   font-weight: bold;
-  font-size: 15px;
+  font-size: vw(15);
   color: $gray-fff;
 
   &:focus, &:hover {
@@ -42,22 +41,22 @@
   }
 
   &.btn-sm {
-    //min-width: 113px;
-    height: 32px;
-    line-height: 30px;
-    font-size: 13px;
+    //min-width: vw(113);
+    height: vw(32);
+    line-height: vw(30);
+    font-size: vw(13);
   }
 
   &.btn-lg {
-    //min-width: 179px;
-    height: 56px;
-    line-height: 54px;
-    font-size: 16px;
+    //min-width: vw(179);
+    height: vw(56);
+    line-height: vw(54);
+    font-size: vw(16);
   }
 
   &.btn-xl {
-    height: 62px;
-    line-height: 60px;
+    height: vw(62);
+    line-height: vw(60);
   }
 }
 
@@ -68,15 +67,16 @@
   .btn-page {
     i {
       + span {
-        margin-left: 6px;
+        margin-left: vw(6);
       }
     }
+
     span {
       display: inline-block;
       vertical-align: middle;
 
       + i {
-        margin-left: 6px;
+        margin-left: vw(6);
       }
     }
   }

@@ -1,6 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 주연 : 최초 작업 -- 2021.11.30
+ v.0.2 주연 : vw 적용 -- 2021.12.14
 |----------------------------------|
 */
 /* point */
@@ -41,7 +42,7 @@ $font-family-sans-serif: $font-family-base, -apple-system, BlinkMacSystemFont, "
 
 /* modal */
 $modal-backdrop-opacity:            .5;
-$modal-sm:                          300px;
-$modal-md:                          500px;
-$modal-lg:                          1000px;
-$modal-xl:                          1140px;
+$modal-sm:                          vw(300px);
+$modal-md:                          vw(500px);
+$modal-lg:                          vw(1000px);
+$modal-xl:                          vw(1140px);

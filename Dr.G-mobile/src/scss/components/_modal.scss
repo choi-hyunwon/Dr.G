@@ -2,12 +2,14 @@
 |----------------------------------|
  v.0.1 태윤 : 최초 작업 -- 2021.12.09
  v.0.2 태윤 : modal-footer > .btn css속성 제거 (클래스로 버튼 색상 제어)
+ v.0.3 주연 : vw 적용 -- 2021.12.14
 |----------------------------------|
 */
 
 
 .modal {
   word-break: keep-all;
+
   .modal-dialog {
     &.alert-popup {
       .modal-content {
@@ -15,13 +17,13 @@
         overflow: hidden;
 
         .modal-header {
-          padding: vw(24) vw(24) 0px vw(24);
+          padding: vw(24) vw(24) 0 vw(24);
           border-bottom: none;
 
           .modal-title {
             font-size: vw(16);
             line-height: vw(24);
-            letter-spacing: -0.5px;
+            letter-spacing: -0.005em;
             font-weight: 700;
             color: $gray-900;
           }
@@ -39,7 +41,7 @@
 
         .modal-footer {
           display: flex;
-          padding: 0px;
+          padding: 0;
           justify-content: space-between;
 
           .btn {
@@ -47,11 +49,11 @@
             line-height: vw(50);
             background-color: #fff;
             border-color: #fff;
-            border-radius: 0px;
+            border-radius: 0;
             font-weight: 400;
             font-size: vw(13);
-            padding: 0px;
-            margin: 0px;
+            padding: 0;
+            margin: 0;
             width: 50%;
             height: auto;
             color: $gray-600;
@@ -59,7 +61,7 @@
             + .btn {
               font-weight: 700;
               color: $gray-900;
-              border-left: 1px solid $gray-300;
+              border-left: vw(1) solid $gray-300;
             }
 
             &.one {
@@ -71,13 +73,15 @@
         }
       }
     }
-    &.modal-sm{
+
+    &.modal-sm {
       width: vw(300);
-      max-width:vw(300);
+      max-width: vw(300);
       margin: 0 auto;
     }
   }
-  .btn{
+
+  .btn {
     outline: none;
   }
 }
@@ -93,6 +97,7 @@
   overflow: hidden;
   outline: 0;
   background-color: rgba(33, 37, 41, 0.3);
+
   &.show {
     display: block;
 
@@ -113,6 +118,7 @@
       }
     }
   }
+
   &.hide {
     display: block;
 
@@ -134,19 +140,22 @@
       }
     }
   }
+
   .toast-popup {
     position: relative;
     width: auto;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+
     .toast-content {
       width: 100%;
       position: absolute;
       background-color: #fff;
       padding: vw(32);
-      border-radius: vw(20) vw(20) 0px 0px;
+      border-radius: vw(20) vw(20) 0 0;
       bottom: vw(-300);
+
       &.title {
         .toast-body {
           &.bg-docter {
@@ -211,6 +220,7 @@
 
         }
       }
+
       &.no-title {
         &.non-member {
           .toast-body {
@@ -219,40 +229,49 @@
             }
 
           }
+
           .main-title {
             margin-bottom: vw(32);
+
             span {
               color: $primary;
             }
           }
         }
-        &.select{
-          .toast-body{
-            .select-list{
+
+        &.select {
+          .toast-body {
+            .select-list {
               display: flex;
               flex-direction: column;
-              .list{
+
+              .list {
                 display: inline-block;
                 display: flex;
                 justify-content: space-between;
                 align-content: center;
                 margin-bottom: vw(28);
                 cursor: pointer;
-                .icon{
+
+                .icon {
                   display: none;
                 }
-                &.active{
-                  span{
+
+                &.active {
+                  span {
                     color: $primary;
                   }
-                  .icon{
+
+                  .icon {
                     display: block;
                   }
                 }
-                &:nth-last-of-type(1){
-                  margin-bottom:0px;
+
+                &:nth-last-of-type(1) {
+                  margin-bottom: 0;
                 }
-                span{
+
+                span {
                   font-family: Noto Sans KR;
                   font-size: vw(16);
                   font-weight: 400;
@@ -265,20 +284,23 @@
             }
           }
         }
+
         .main-title {
           margin-bottom: vw(12);
         }
+
         .desc {
           margin-bottom: vw(32);
         }
       }
+
       .toast-header {
         margin-bottom: vw(24);
-        padding: 0px;
+        padding: 0;
         display: flex;
         align-content: center;
         justify-content: space-between;
-        border-bottom: 0px;
+        border-bottom: 0;
 
         .title {
           font-size: vw(20);
@@ -289,8 +311,9 @@
           color: #444444;
         }
       }
+
       .toast-body {
-        padding: 0px;
+        padding: 0;
         margin-bottom: vw(24);
 
         .main-title {
@@ -314,7 +337,7 @@
           margin: 0 auto vw(24);
 
           &.logo {
-            width: 88px;
+            width: vw(88);
             height: auto;
 
             img {
@@ -338,6 +361,7 @@
           color: $blue;
         }
       }
+
       .toast-footer {
         .btn {
           width: 100%;

@@ -2,51 +2,52 @@
 |----------------------------------|
  v.0.1 주연 : 최초 작업 -- 2021.11.2
  v.0.2 태윤 : modal 추가-- 2021.12.9
+ v.0.3 주연 : vw 적용 -- 2021.12.14
 |----------------------------------|
 */
 .guide {
-  padding: 30px;
+  padding: vw(30);
 
   &.typography {
     .title-lg {
-      font-size: 20px;
+      font-size: vw(20);
       font-weight: bold;
     }
 
     .title {
       font-weight: bold;
-      font-size: 16px;
-      line-height: 25px;
-      margin-bottom: 20px;
+      font-size: vw(16);
+      line-height: vw(25);
+      margin-bottom: vw(20);
     }
 
     .title-sm {
       font-family: $poppins-semiBold;
       font-weight: bold;
-      font-size: 24px;
-      line-height: 36px;
+      font-size: vw(24);
+      line-height: vw(36);
       color: #000000;
     }
 
     .title-xl {
       font-weight: bold;
-      font-size: 48px;
-      line-height: 70px;
+      font-size: vw(48);
+      line-height: vw(70);
       text-align: center;
       letter-spacing: -0.01em;
       color: #222222;
-      margin-bottom: 20px;
+      margin-bottom: vw(20);
     }
 
     .box {
-      margin-bottom: 60px;
+      margin-bottom: vw(60);
 
       &.box-sm {
         .d-flex {
-          margin-right: 20px;
+          margin-right: vw(20);
 
           p {
-            margin-right: 20px;
+            margin-right: vw(20);
 
             &:last-child {
               margin-right: 0;
@@ -62,21 +63,21 @@
       .d-flex.justify-content-center {
         p {
           display: inline-block;
-          font-size: 16px;
-          line-height: 23px;
+          font-size: vw(16);
+          line-height: vw(23);
 
           + p {
-            margin-left: 20px;
+            margin-left: vw(20);
           }
         }
       }
 
       .font-sm {
-        font-size: 14px;
-        line-height: 28px;
+        font-size: vw(14);
+        line-height: vw(28);
         text-transform: uppercase;
         color: #999999;
-        margin-top: 20px;
+        margin-top: vw(20);
       }
     }
   }
@@ -84,23 +85,23 @@
   &.color-palette {
     .title {
       font-weight: bold;
-      font-size: 20px;
-      line-height: 23px;
-      margin-bottom: 30px;
+      font-size: vw(20);
+      line-height: vw(23);
+      margin-bottom: vw(30);
       text-transform: uppercase;
     }
 
     .box {
-      margin-bottom: 70px;
+      margin-bottom: vw(70);
       overflow: hidden;
 
       .item {
         float: left;
-        width: 145px;
-        margin-right: 15px;
+        width: vw(145);
+        margin-right: vw(15);
         overflow: hidden;
-        border: 1px solid $gray-300;
-        margin-bottom: 10px;
+        border: vw(1) solid $gray-300;
+        margin-bottom: vw(10);
 
         &:last-child {
           margin-right: 0;
@@ -108,46 +109,46 @@
 
         .color {
           width: 100%;
-          height: 100px;
-          border-bottom: 1px solid $gray-300;
+          height: vw(100);
+          border-bottom: vw(1) solid $gray-300;
         }
 
         .info {
-          padding: 15px;
+          padding: vw(15);
 
           .tit {
             display: block;
             font-weight: 500;
-            font-size: 14px;
-            line-height: 16px;
-            margin-bottom: 5px;
+            font-size: vw(14);
+            line-height: vw(16);
+            margin-bottom: vw(1);
             color: #909090;
           }
 
           .val {
             display: block;
             font-weight: 500;
-            font-size: 16px;
-            line-height: 21px;
+            font-size: vw(16);
+            line-height: vw(21);
             color: #000000;
           }
         }
 
         &.item-lg {
-          width: 305px;
+          width: vw(305);
         }
       }
     }
   }
 
   &.grid {
-    padding: 0 20px;
+    padding: 0 vw(20);
 
     .col {
       > div {
-        height: 2609px;
+        height: vw(2609);
         background: rgba(255, 0, 0, 0.06);
-        border: 1px solid rgba(255, 0, 0, 0.1);
+        border: vw(1) solid rgba(255, 0, 0, 0.1);
       }
     }
   }
@@ -155,9 +156,9 @@
   &.input {
     > .title {
       font-weight: bold;
-      font-size: 20px;
-      line-height: 23px;
-      margin-bottom: 30px;
+      font-size: vw(20);
+      line-height: vw(23);
+      margin-bottom: vw(30);
       text-transform: uppercase;
     }
   }
@@ -167,36 +168,36 @@
 
     .title {
       font-weight: bold;
-      font-size: 20px;
-      line-height: 23px;
-      margin-bottom: 30px;
+      font-size: vw(20);
+      line-height: vw(23);
+      margin-bottom: vw(30);
       text-transform: uppercase;
     }
   }
 
-  &.popup{
-      .font-h2{
-        margin-bottom: 30px;
-      }
-      .box{
-        display: flex;
-        flex-direction: column;
-        >.btn{
-          margin-bottom: 30px;
-          &:nth-last-of-type(1){
-            margin-bottom: 0px;
-          }
+  &.popup {
+    .font-h2 {
+      margin-bottom: vw(30);
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+
+      > .btn {
+        margin-bottom: vw(30);
+
+        &:nth-last-of-type(1) {
+          margin-bottom: 0;
         }
       }
-
+    }
   }
 
-  >.box{
-    padding: 30px;
-    border-radius: 10px;
-    border:1px solid #d9d9d9;
-    margin-bottom: 50px;
+  > .box {
+    padding: vw(30);
+    border-radius: vw(10);
+    border: vw(1) solid #d9d9d9;
+    margin-bottom: vw(50);
   }
-
-
 }

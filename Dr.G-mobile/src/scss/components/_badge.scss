@@ -1,25 +1,29 @@
 /*
 |----------------------------------|
  v.0.1 선미 : 최초 작업 -- 2021.12.14
+ v.0.2 주연 : vw 적용 -- 2021.12.14
 |----------------------------------|
 */
-
-.badge{
-  padding: 6px 10px;
-  border-radius: 12.5px;
-  font-size: 13px;
+.badge {
+  padding: vw(6) vw(10);
+  border-radius: vw(12.5);
+  font-size: vw(13);
   color: #ffffff;
   font-weight: 500;
-  &.badge-primary{
+
+  &.badge-primary {
     background-color: $primary;
   }
-  &.badge-blue{
+
+  &.badge-blue {
     background-color: $blue;
   }
-  &.badge-gray{
+
+  &.badge-gray {
     background-color: $gray-600;
   }
-  &.badge-dark{
+
+  &.badge-dark {
     background-color: $gray-800;
   }
 }

@@ -4,8 +4,8 @@
  v.0.2 태윤 : .icon-close-sm 추가 -- 2021.12.10
  v.0.3 태윤 : .icon-check-green 추가 -- 2021.12.13
  v.0.4 주연 : .ico-like / .ico-bookmark / .ico-caution 추가 -- 2021.12.13
-|--------------------------------------------------------------------|
- v.0.4 선미 : .ico-heart 추가 / ico-delete, ico-edit 사이즈 축소-- 2021.12.14
+ v.0.5 선미 : .ico-heart 추가 / ico-delete, ico-edit 사이즈 축소-- 2021.12.14
+ v.0.6 주연 : vw 적용 -- 2021.12.14
 |----------------------------------|
 */
 .icon {
@@ -18,15 +18,15 @@
 }
 
 .ico-prev {
-  @include background-img ($width: 12px, $height: 12px, $category: 'common', $img: 'ico-prev.png');
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-prev.png');
 }
 
 .ico-next {
-  @include background-img ($width: 12px, $height: 12px, $category: 'common', $img: 'ico-next.png');
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-next.png');
 }
 
 .ico-alert {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-alert.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-alert.png');
 
   &.white {
     background-image: url(../img/common/ico-alert-white.png);
@@ -34,11 +34,11 @@
 }
 
 .ico-nav-menu-shop {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'nav-menu-shop.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'nav-menu-shop.png');
 }
 
 .ico-accordion {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-accordion-open.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-accordion-open.png');
 
   &.ico-accordion-close {
     background-image: url(../img/common/ico-accordion-close.png);
@@ -46,11 +46,11 @@
 }
 
 .ico-accordion-close {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-accordion-open.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-accordion-open.png');
 }
 
 .ico-close {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-close.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-close.png');
 
   &.white {
     background-image: url(../img/common/ico-close-white.png);
@@ -59,66 +59,66 @@
 }
 
 .ico-close-sm{
-  @include background-img ($width: 16px, $height: 16px, $category: 'common', $img: 'ico-close-sm.png');
+  @include background-img ($width: 16, $height: 16, $category: 'common', $img: 'ico-close-sm.png');
 }
 
 
 .ico-nav-prev {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-nav-prev.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-nav-prev.png');
 }
 
 .ico-nav-next {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-nav-next.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-nav-next.png');
 }
 
 .ico-search {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-search.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-search.png');
 }
 
 .ico-arrow-left {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-arrow-left.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-left.png');
 }
 
 .ico-arrow-right {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-arrow-right.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-right.png');
 }
 
 .ico-arrow-up {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-arrow-up.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-up.png');
 }
 
 .ico-arrow-down {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-arrow-down.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-down.png');
 }
 
 .ico-delete {
-  @include background-img ($width: 20px, $height: 20px, $category: 'common', $img: 'ico-delete.png');
+  @include background-img ($width: 20, $height: 20, $category: 'common', $img: 'ico-delete.png');
 }
 
 .ico-edit {
-  @include background-img ($width: 20px, $height: 20px, $category: 'common', $img: 'ico-edit.png');
+  @include background-img ($width: 20, $height: 20, $category: 'common', $img: 'ico-edit.png');
 }
 
 .ico-like {
-  @include background-img ($width: 18px, $height: 18px, $category: 'common', $img: 'ico-link-nor.png');
+  @include background-img ($width: 18, $height: 18, $category: 'common', $img: 'ico-link-nor.png');
 }
 
 .ico-bookmark {
-  @include background-img ($width: 18px, $height: 18px, $category: 'common', $img: 'ico-bookmark.png');
+  @include background-img ($width: 18, $height: 18, $category: 'common', $img: 'ico-bookmark.png');
 }
 
 .ico-check-green {
-  @include background-img ($width: 24px, $height: 24px, $category: 'common', $img: 'ico-check-green.png');
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-check-green.png');
 }
 
 .ico-heart {
-  @include background-img ($width: 14px, $height: 14px, $category: 'common', $img: 'ico-heart.png');
+  @include background-img ($width: 14, $height: 14, $category: 'common', $img: 'ico-heart.png');
 }
 
 .ico-link {
-  @include background-img ($width: 14px, $height: 14px, $category: 'common', $img: 'ico-link.png');
+  @include background-img ($width: 14, $height: 14, $category: 'common', $img: 'ico-link.png');
 }
 
 .ico-caution {
-  @include background-img ($width: 18px, $height: 18px, $category: 'common', $img: 'ico-caution.png');
+  @include background-img ($width: 18, $height: 18, $category: 'common', $img: 'ico-caution.png');
 }

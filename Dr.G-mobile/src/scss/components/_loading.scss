@@ -1,6 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 주연 : 최초 작업 -- 2021.11.30
+ v.0.2 주연 : vw 적용 -- 2021.12.14
 |----------------------------------|
 */
 .loading-wrap {
@@ -20,25 +21,25 @@
   .loading {
     display: inline-block;
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: vw(80);
+    height: vw(80);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 
     div {
       animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-      transform-origin: 40px 40px;
+      transform-origin: vw(40) vw(40);
 
       &::after {
         content: " ";
         display: block;
         position: absolute;
-        width: 7px;
-        height: 7px;
+        width: vw(7);
+        height: vw(7);
         border-radius: 50%;
         background: $primary;
-        margin: -4px 0 0 -4px;
+        margin: vw(-4) 0 0 vw(-4);
       }
 
       &:nth-child(1) {
@@ -46,8 +47,8 @@
       }
 
       &:nth-child(1):after {
-        top: 63px;
-        left: 63px;
+        top: vw(63);
+        left: vw(63);
       }
 
       &:nth-child(2) {
@@ -55,8 +56,8 @@
       }
 
       &:nth-child(2):after {
-        top: 68px;
-        left: 56px;
+        top: vw(68);
+        left: vw(56);
       }
 
       &:nth-child(3) {
@@ -64,8 +65,8 @@
       }
 
       &:nth-child(3):after {
-        top: 71px;
-        left: 48px;
+        top: vw(71);
+        left: vw(48);
       }
 
       &:nth-child(4) {
@@ -73,8 +74,8 @@
       }
 
       &:nth-child(4):after {
-        top: 72px;
-        left: 40px;
+        top: vw(72);
+        left: vw(40);
       }
 
       &:nth-child(5) {
@@ -82,8 +83,8 @@
       }
 
       &:nth-child(5):after {
-        top: 71px;
-        left: 32px;
+        top: vw(71);
+        left: vw(32);
       }
 
       &:nth-child(6) {
@@ -91,8 +92,8 @@
       }
 
       &:nth-child(6):after {
-        top: 68px;
-        left: 24px;
+        top: vw(68);
+        left: vw(24);
       }
 
       &:nth-child(7) {
@@ -100,8 +101,8 @@
       }
 
       &:nth-child(7):after {
-        top: 63px;
-        left: 17px;
+        top: vw(63);
+        left: vw(17);
       }
 
       &:nth-child(8) {
@@ -109,8 +110,8 @@
       }
 
       &:nth-child(8):after {
-        top: 56px;
-        left: 12px;
+        top: vw(56);
+        left: vw(12);
       }
     }
   }
