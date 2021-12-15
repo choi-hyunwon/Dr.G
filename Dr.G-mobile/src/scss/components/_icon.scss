@@ -6,6 +6,7 @@
  v.0.4 주연 : .ico-like / .ico-bookmark / .ico-caution 추가 -- 2021.12.13
  v.0.5 선미 : .ico-heart 추가 / ico-delete, ico-edit 사이즈 축소-- 2021.12.14
  v.0.6 주연 : vw 적용 -- 2021.12.14
+ v.0.7 선미 : ico-arrow-green-right, ico-sns-kakao, ico-sns-facebook, ico-sns-line 추가 -- 2021.12.15
 |----------------------------------|
 */
 .icon {
@@ -65,6 +66,10 @@
   @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-right.svg');
 }
 
+.ico-arrow-green-right {
+  @include background-img ($width: 8, $height: 8, $category: 'common', $img: 'ico-arrow-green-right.svg');
+}
+
 .ico-arrow-up {
   @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-up.svg');
 }
@@ -111,4 +116,16 @@
 
 .ico-check-white {
   @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-check-white.svg');
+}
+
+.ico-sns-kakao {
+  @include background-img ($width: 44, $height: 44, $category: 'common', $img: 'ico-sns-kakao.svg');
+}
+
+.ico-sns-facebook {
+  @include background-img ($width: 44, $height: 44, $category: 'common', $img: 'ico-sns-facebook.svg');
+}
+
+.ico-sns-line {
+  @include background-img ($width: 44, $height: 44, $category: 'common', $img: 'ico-sns-line.svg');
 }
