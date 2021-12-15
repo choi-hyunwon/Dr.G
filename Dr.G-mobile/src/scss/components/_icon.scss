@@ -45,6 +45,14 @@
   }
 }
 
+.ico-prev {
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-prev.svg');
+}
+
+.ico-next {
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-next.svg');
+}
+
 .ico-close-sm {
   @include background-img ($width: 20, $height: 20, $category: 'common', $img: 'ico-close-sm.svg');
 }
