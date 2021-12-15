@@ -71,6 +71,9 @@
         }
 
         .btn-like {
+          display: flex;
+          align-items: center;
+
           .icon {
             margin-right: vw(2);
           }
