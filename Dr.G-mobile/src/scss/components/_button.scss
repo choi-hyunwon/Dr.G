@@ -8,10 +8,10 @@
 */
 .btn {
   display: inline-block;
-  min-width: vw(132);
+  min-width: auto;
   height: vw(48);
   line-height: vw(46);
-  padding: 0 vw(16);
+  padding: 0 vw(36);
   background-color: $primary;
   border-color: $primary;
   border-radius: vw(100);

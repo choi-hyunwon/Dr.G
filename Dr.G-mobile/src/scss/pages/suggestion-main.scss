@@ -74,6 +74,7 @@
           .icon {
             margin-right: vw(2);
           }
+
           span {
             font-family: $poppins-semiBold;
             font-size: vw(13);
@@ -155,7 +156,7 @@
       top: vw(263);
       right: 0;
       z-index: 2;
-      @include background-img ($width: 276, $height: 180, $category: 'suggestion', $img: 'img-smile-motif.svg');
+      @include background-img($width: 276, $height: 180, $category: 'suggestion', $img: 'img-smile-motif.svg');
     }
 
     .swiper-pagination-bullets {
@@ -237,7 +238,7 @@
         margin-bottom: vw(36);
       }
 
-      .sizer,  .item {
+      .sizer, .item {
         width: 50%;
       }
 
@@ -336,6 +337,55 @@
     }
   }
 
+  .register-box {
+    text-align: center;
+    background-color: $gray-200;
+    padding: vw(2) vw(20) vw(28);
+
+    .box {
+      position: relative;
+      padding: vw(48) 0;
+
+      &:last-child {
+        &::after {
+          content: none;
+        }
+      }
+
+      .input-box {
+        margin-bottom: vw(24);
+
+        input {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: vw(1);
+        background-color: $gray-300;
+      }
+    }
+
+    .img {
+      margin-bottom: vw(16);
+    }
+
+    .font-h4 {
+      margin-bottom: vw(8);
+      color: $gray-800;
+    }
+
+    .font-body-1 {
+      margin-bottom: vw(24);
+      color: $gray-700;
+    }
+  }
+
   .caution-box {
     padding: vw(48) vw(20) 0;
     margin-bottom: vw(76);
@@ -360,7 +410,6 @@
 
       i {
         margin-right: vw(3);
-        transform: translateY(vw(1));
       }
     }
 
