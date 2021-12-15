@@ -23,6 +23,9 @@ front.common = (function () {
     }
 
     var commonHandler = function () {
+        /* header */
+        $('._header-sticky').sticky({topSpacing:0})
+
         /* select */
         $('.custom-select').each(function (){
             $(this).on('change', function() {

@@ -3,15 +3,12 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
-    <div class="container">
-        <!-- s header -->
-        <div class="header _header-sticky">
-            <div class="brand-logo"><a href="#"><img src="../../img/common/m-logo-black.svg" alt="Dr.G"></a></div>
-            <div class="btn-alert"><a href="#"><i class="icon ico-alert"></i></a></div>
-        </div>
-        <!-- e header -->
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
 
-        <!-- s contents -->
+    <!-- s contents -->
+    <div class="container">
         <div class="suggestion-wrap">
             <!-- s heading -->
             <div class="heading-box">
@@ -320,8 +317,12 @@
             </div>
             <!-- e 유의사항 -->
         </div>
-        <!-- e contents -->
     </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
 </div>
 @@include('./_subMainScript.html')
 </body>
