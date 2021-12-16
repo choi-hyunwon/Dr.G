@@ -199,6 +199,52 @@
                     })();
                 </script>
             </div>
+
+            <p class="title font-h2">풀페이지_팝업</p>
+            <div class="box">
+                <a href="#" class="btn btn-primary _toast-popup-open full">
+                    <span>풀페이지_팝업</span>
+                </a>
+                <!--popup-->
+                <div class="full-popup _full-popup">
+                    <div class="popup-content">
+                        <div class="popup-header">
+                            <p class="title font-h3">내가 쓴 댓글 보기</p>
+                            <i class="icon ico-close"></i>
+                        </div>
+                        <div class="popup-body">
+                            <ul class="comment-list">
+                                <li class="comment">
+                                    <div class="info-area">
+                                        <i class=""></i>
+                                        <span class="username">kimkim08</span>
+                                        <span class="nickname">수부민건</span>
+                                    </div>
+                                    <div class="connetnt">
+                                        <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍 발라보세요!</p>
+                                    </div>
+                                    <div class="date">
+                                        <span>21-10-12</span>
+                                    </div>
+                                </li>
+                                <li class="comment manager"></li>
+                            </ul>
+                        </div>
+                        <div class="popup-footer"></div>
+                    </div>
+                </div>
+                <!--유형 toastPopupScript-->
+                <script>
+                    (function () {
+                        $('._toast-popup-open.full').on('click', function () {
+                            let select = $('._full-popup');
+                            select.removeClass('hide').addClass('show');
+                        });
+                    })();
+                </script>
+            </div>
+
+
             <p class="title font-h2">알럿팝업_type1</p>
             <div class="box text-center">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alertPopupType1">

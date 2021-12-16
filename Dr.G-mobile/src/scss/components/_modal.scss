@@ -9,7 +9,6 @@
 
 .modal {
   word-break: keep-all;
-
   .modal-dialog {
     &.alert-popup {
       .modal-content {
@@ -80,12 +79,55 @@
       margin: 0 auto;
     }
   }
-
   .btn {
     outline: none;
   }
 }
 
+.full-popup{
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  &.show{
+    display: block;
+  }
+  &.full-popup{
+    .popup-content{
+      padding: vw(14) vw(24);
+      .popup-header{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: vw(60);
+        min-height: vw(60);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .popup-body{
+        height: calc (vw(100) - vw(60));
+        padding: vw(20) 0px;
+        .comment-list{
+          .comment{
+            background-color: #fff;
+              border-radius: vw(12);
+              padding: vw(20);
+            &.manager{
+
+            }
+            +.comment.manager{
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .toast-dim {
   position: fixed;
   top: 0;
