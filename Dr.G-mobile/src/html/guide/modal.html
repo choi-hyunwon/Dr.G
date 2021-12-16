@@ -124,7 +124,6 @@
                     })();
                 </script>
             </div>
-
             <p class="title font-h2">토스트팝업_클릭시 텍스트변경</p>
             <div class="box">
                 <a href="#" class="btn btn-primary _toast-popup-open text">
@@ -199,6 +198,33 @@
                     })();
                 </script>
             </div>
+            <p class="title font-h2">달력팝업</p>
+            <div class="box">
+                <input type="text" name="datefilter" value="" />
+
+                <script type="text/javascript">
+                    $(function() {
+                        $('input[name="datefilter"]').daterangepicker({
+                            autoUpdateInput: false,
+                            singleDatePicker: false,
+                            locale: {
+                                cancelLabel: 'Clear',
+                                "separator": " ~ ",
+                            }
+                        });
+
+                        $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+                            $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+                        });
+
+                        $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+                            $(this).val('');
+                        });
+
+                    });
+                </script>
+            </div>
+
             <p class="title font-h2">알럿팝업_type1</p>
             <div class="box text-center">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alertPopupType1">
