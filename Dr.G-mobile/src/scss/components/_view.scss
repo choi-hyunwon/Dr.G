@@ -1,0 +1,193 @@
+/*
+|----------------------------------------------------------------------|
+ v.0.1 선미 : 최초 작업 -- 2021.12.16
+|----------------------------------------------------------------------|
+*/
+
+
+/*고객제안 / 스킨멘토링*/
+.view-details{
+  .header-details{
+    height: vw(60);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 vw(25);
+    line-height: 1.155;
+  }
+  .body-details{
+    .area-title{
+      padding: vw(20) vw(25) vw(32);
+      text-align: center;
+      border-bottom:1px solid $gray-900;
+      .badge-box{
+        margin-bottom: vw(8);
+      }
+      .title{
+        font-size: vw(28);
+        line-height: vw(39);
+        color: #222222;
+        font-weight: 700;
+        margin-bottom: vw(12);
+      }
+      .info-line{
+        letter-spacing: 0;
+        font-size: vw(13);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .like{
+          margin-right: vw(8);
+          position: relative;
+          .num{
+            font-weight: 600;
+            color: $gray-700;
+            margin-left: vw(2);
+          }
+          &:after{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width:vw(1);
+            height: vw(10);
+            background-color: $gray-400;
+            right: vw(-8);
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        .date{
+          font-weight: 400;
+          color: $gray-600;
+          margin-left: vw(8);
+        }
+
+        .desc{
+          color: $gray-700;
+          font-size: vw(15);
+        }
+      }
+    }
+    .area-desc{
+      padding: vw(48) vw(24) 0;
+      .text{
+        word-break: keep-all;
+        color: $gray-700;
+        letter-spacing: 0;
+        font-size: vw(16);
+      }
+      .divider{
+        margin: vw(32) 0;
+      }
+      .attach-box{
+        white-space: nowrap;
+        overflow-x: scroll;
+        ul{
+          li{
+            position: relative;
+            display: inline-block;
+            margin-left: vw(4);
+            &:first-of-type{
+              margin-left: 0;
+            }
+            img{
+              width: vw(72);
+              height: vw(72);
+              border-radius: vw(12);
+            }
+          }
+        }
+      }
+      .product-box{
+        margin-top: vw(48);
+        background: $primary-light;
+        border-radius: vw(16);
+        padding: vw(12) vw(60) vw(12) vw(12);
+        display: flex;
+        align-items: center;
+        >img{
+          width: vw(76);
+          height: vw(76);
+          border-radius: vw(10);
+        }
+        .text{
+          padding-left: vw(16);
+          font-weight: 700;
+          .name{
+            font-size: vw(15);
+            line-height: vw(22);
+            color: $gray-800;
+            margin-bottom: vw(8);
+            display: inline-block;
+          }
+          .more{
+            display: block;
+            color: $primary;
+            font-size: vw(12);
+            line-height: vw(18);
+            .ico-arrow-green-right{
+              margin-left: vw(2);
+            }
+          }
+        }
+
+
+      }
+      .btn-wrap{
+        text-align: center;
+        padding: vw(32) 0;
+        .btn-outline{
+          background-color: #ffffff;
+          border:1px solid $gray-800;
+          color: $gray-800;
+          padding: 0 vw(20);
+          min-width: unset;
+          .icon{
+            margin-left: vw(4);
+          }
+          &:first-of-type{
+            margin-right: vw(4);
+          }
+        }
+        &.sns{
+          padding: vw(48) 0 vw(32);
+          >a{
+            margin-right: vw(8);
+            &:last-of-type{
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    /*답변완료*/
+    .answer-wrap{
+      background-color: #f8f8f8;
+      padding: vw(32) vw(57) vw(32) vw(24);
+      margin: vw(17) 0;
+      .badge{
+        margin-bottom: vw(8);
+      }
+      .text{
+        color:$gray-800;
+        font-size: vw(16);
+      }
+    }
+
+    /*수정하기*/
+    .edit-wrap{
+      padding: vw(20) vw(24) vw(48);
+      input{
+        margin-bottom: vw(8);
+      }
+      .section-input{
+        margin-bottom: vw(12);
+      }
+    }
+  }
+  .footer-details{
+    border-top: 1px solid $gray-400;
+    padding: vw(32) vw(20) vw(48);
+  }
+}

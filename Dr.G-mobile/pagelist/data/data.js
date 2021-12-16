@@ -71,6 +71,18 @@ data.guide = {
     ]
 }
 
+data.mentoring = {
+    title: '1:1스킨 멘토링',
+    list: [
+        {
+            stateClass: 'working',
+            url: '03스킨멘토_03내역_02상세_01답변대기',
+            category: 'mentoring',
+            page: '03스킨멘토_03내역_02상세_01답변대기'
+        }
+    ]
+}
+
 data.suggestion = {
     title: '고객제안',
     list: [
@@ -155,3 +167,5 @@ data.suggestion = {
 
     ]
 }
+
+
