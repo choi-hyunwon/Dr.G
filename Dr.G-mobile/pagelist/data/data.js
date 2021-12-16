@@ -126,7 +126,7 @@ data.suggestion = {
             stateClass: 'complete',
             url: '고객제안_01의견남기기tab_02비회원의견남기기',
             category: 'suggestion',
-            page: '01의견남기기tab_02비회원의견남기기'
+            page: '고객제안_01의견남기기tab_02비회원의견남기기'
         },
         {
             stateClass: 'complete',
@@ -138,7 +138,7 @@ data.suggestion = {
             stateClass: 'complete',
             url: '고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)',
             category: 'suggestion',
-            page: '01의견남기기tab_03개선사례조회_01상세보기(답변대기)'
+            page: '고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)'
         },
         {
             stateClass: 'complete',
