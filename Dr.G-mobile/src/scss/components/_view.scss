@@ -133,29 +133,42 @@
 
 
       }
-      .btn-wrap{
-        text-align: center;
-        padding: vw(32) 0;
-        .btn-outline{
-          background-color: #ffffff;
-          border:1px solid $gray-800;
-          color: $gray-800;
-          padding: 0 vw(20);
-          min-width: unset;
-          .icon{
-            margin-left: vw(4);
-          }
-          &:first-of-type{
-            margin-right: vw(4);
-          }
+
+    }
+    .unfold-box{
+      &._unfold{
+        background-color: $gray-200;
+      }
+      .title{
+
+      }
+      .list{
+        display: none
+
+      }
+    }
+    .btn-wrap{
+      text-align: center;
+      padding: vw(32) 0;
+      .btn-outline{
+        background-color: #ffffff;
+        border:1px solid $gray-800;
+        color: $gray-800;
+        padding: 0 vw(20);
+        min-width: unset;
+        .icon{
+          margin-left: vw(4);
         }
-        &.sns{
-          padding: vw(48) 0 vw(32);
-          >a{
-            margin-right: vw(8);
-            &:last-of-type{
-              margin-right: 0;
-            }
+        &:first-of-type{
+          margin-right: vw(4);
+        }
+      }
+      &.sns{
+        padding: vw(48) 0 vw(32);
+        >a{
+          margin-right: vw(8);
+          &:last-of-type{
+            margin-right: 0;
           }
         }
       }

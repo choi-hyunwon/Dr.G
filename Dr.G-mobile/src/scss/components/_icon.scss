@@ -7,6 +7,7 @@
  v.0.5 선미 : .ico-heart 추가 / ico-delete, ico-edit 사이즈 축소-- 2021.12.14
  v.0.6 주연 : vw 적용 -- 2021.12.14
  v.0.7 선미 : ico-arrow-green-right, ico-sns-kakao, ico-sns-facebook, ico-sns-line 추가 -- 2021.12.15
+ v.0.8 선미 : ico-plus / ico-minus 추가 -- 2021.12.16
 |----------------------------------|
 */
 .icon {
@@ -140,4 +141,12 @@
 
 .ico-sns-line {
   @include background-img ($width: 44, $height: 44, $category: 'common', $img: 'ico-sns-line.svg');
+}
+
+.ico-plus {
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-plus.svg');
+}
+
+.ico-minus {
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-minus.svg');
 }
