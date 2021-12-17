@@ -402,14 +402,39 @@
           padding: 0px;
           .toast-header{
             padding: vw(24) vw(24) 0px;
+            margin-bottom: vw(36);
           }
           .toast-body{
-
+            margin: 0 auto;
+            text-align: center;
+            .desc{
+              word-break: keep-all;
+              padding: 0 vw(20);
+              margin-bottom: vw(12);
+                span{
+                  color: $primary;
+                  font-weight: 700;
+                }
+            }
+            .text-btn{
+              margin-bottom: vw(32);
+            }
           }
           .toast-footer{
             background-color: $gray-800;
-            .navigation{
-              padding: 20px 0px;
+            .page-btn-wrap{
+              display: block;
+              padding: vw(20) vw(25);
+              .btn-page{
+                color: $gray-fff;
+                &.btn-prev{
+                  float: left;
+                }
+                &.btn-next{
+                  float: right;
+                }
+              }
+
             }
 
           }
@@ -478,6 +503,9 @@
 
         span {
           color: $blue;
+        }
+        .agree-area{
+          margin-bottom: vw(25);
         }
       }
       .toast-footer {
