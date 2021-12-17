@@ -3,6 +3,7 @@
  v.0.1 태윤 : 최초 작업 -- 2021.12.09
  v.0.2 태윤 : modal-footer > .btn css속성 제거 (클래스로 버튼 색상 제어)
  v.0.3 주연 : vw 적용 -- 2021.12.14
+ v.0.4 태윤 : .full-popup 추가 , footer에 네비게이션있는 모달 추가 -- 2021.12.17
 |----------------------------------|
 */
 
@@ -46,8 +47,8 @@
           .btn {
             display: inline-block;
             line-height: vw(50);
-            background-color: #fff;
-            border-color: #fff;
+            background-color: $gray-fff;
+            border-color: $gray-fff;
             border-radius: 0;
             font-weight: 400;
             font-size: vw(13);
@@ -92,7 +93,7 @@
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: #f8f8f8;
+  background-color: $gray-200;
   &.show{
     display: block;
   }
@@ -113,11 +114,88 @@
       justify-content: space-between;
       align-items: center;
       &.header-white{
-        background-color: #fff;
+        background-color: $gray-fff;
       }
     }
     .popup-body{
       padding-top: vw(80);
+      .comment-list{
+        .item{
+          background-color: $gray-fff;
+          border-radius: vw(12);
+          padding: vw(20);
+          .connetnt{
+            margin-bottom: vw(10);
+            p{
+              font-size: vw(15);
+              line-height: vw(22);
+              font-weight: 400;
+              color: #444;}
+          }
+          +.item{
+            margin-top: vw(16);
+          }
+          &.manager{
+            margin-top: 0px;
+            background-color: #E2F5FF;
+            position:relative;
+            .info-area{
+              .icon{
+                +.nickname{
+                    margin-left: 0px;
+                }
+              }
+            }
+            &:before{
+              content: '';
+              width: vw(20);
+              height: vw(20);
+              position: absolute;
+              top: vw(-18);
+              right: vw(24);
+              background-image: url("../img/common/ico-comment-triaggle.svg");
+              background-size: cover;
+              background-size: 100% 100%;
+            }
+          }
+          .info-area{
+            margin-bottom: vw(6);
+            display: flex;
+            align-items: center;
+            .icon{
+              margin-right: vw(8);
+            }
+            span{
+              font-size: vw(13);
+              line-height: vw(18);
+              &.username{
+                padding-right: vw(8);
+                position: relative;
+                &:before{
+                  content: '';
+                  position: absolute;
+                  top: vw(4);
+                  right: vw(0);
+                  width: vw(1);
+                  height: vw(10);
+                  background-color: $gray-400;
+                }
+              }
+              &.nickname{
+                font-weight: 700;
+                margin-left: vw(8);
+              }
+            }
+          }
+          .date{
+            span{
+              font-size: vw(13);
+              line-height: vw(18);
+              color: #888;
+            }
+          }
+        }
+      }
     }
     .popup-footer{
       padding: vw(24) 0;
@@ -135,7 +213,6 @@
   overflow: hidden;
   outline: 0;
   background-color: rgba(33, 37, 41, 0.3);
-
   &.show {
     display: block;
 
@@ -156,7 +233,6 @@
       }
     }
   }
-
   &.hide {
     display: block;
 
@@ -178,22 +254,19 @@
       }
     }
   }
-
   .toast-popup {
     position: relative;
     width: auto;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-
     .toast-content {
       width: 100%;
       position: absolute;
-      background-color: #fff;
+      background-color: $gray-fff;
       padding: vw(32);
       border-radius: vw(20) vw(20) 0 0;
       bottom: vw(-300);
-
       &.title {
         .toast-body {
           &.bg-docter {
@@ -202,7 +275,6 @@
             background-size: vw(115) vw(120);
             background-image: url("../img/common/img-docterAnn.png");
           }
-
           .main-title {
             text-align: left;
             margin-bottom: vw(6);
@@ -211,7 +283,6 @@
               color: $primary;
             }
           }
-
           .desc {
             font-size: vw(13);
             font-weight: 400;
@@ -221,7 +292,6 @@
             color: #666;
             margin-bottom: vw(24);
           }
-
           textarea {
             border-radius: vw(12);
             width: 100%;
@@ -245,7 +315,6 @@
               outline: none;
             }
           }
-
           .caption {
             font-size: vw(13);
             font-style: normal;
@@ -253,12 +322,10 @@
             line-height: vw(18);
             letter-spacing: -0.005em;
             text-align: left;
-            color: #888888;
+            color: $gray-600;
           }
-
         }
       }
-
       &.no-title {
         &.non-member {
           .toast-body {
@@ -331,7 +398,47 @@
           margin-bottom: vw(32);
         }
       }
+      &.navi{
+          padding: 0px;
+          .toast-header{
+            padding: vw(24) vw(24) 0px;
+            margin-bottom: vw(36);
+          }
+          .toast-body{
+            margin: 0 auto;
+            text-align: center;
+            .desc{
+              word-break: keep-all;
+              padding: 0 vw(20);
+              margin-bottom: vw(12);
+                span{
+                  color: $primary;
+                  font-weight: 700;
+                }
+            }
+            .text-btn{
+              margin-bottom: vw(32);
+            }
+          }
+          .toast-footer{
+            background-color: $gray-800;
+            .page-btn-wrap{
+              display: block;
+              padding: vw(20) vw(25);
+              .btn-page{
+                color: $gray-fff;
+                &.btn-prev{
+                  float: left;
+                }
+                &.btn-next{
+                  float: right;
+                }
+              }
 
+            }
+
+          }
+      }
       .toast-header {
         margin-bottom: vw(24);
         padding: 0;
@@ -346,10 +453,9 @@
           line-height: vw(30);
           letter-spacing: -0.005em;
           text-align: left;
-          color: #444444;
+          color: $gray-800;
         }
       }
-
       .toast-body {
         padding: 0;
         margin-bottom: vw(24);
@@ -398,8 +504,10 @@
         span {
           color: $blue;
         }
+        .agree-area{
+          margin-bottom: vw(25);
+        }
       }
-
       .toast-footer {
         .btn {
           width: 100%;

@@ -9,6 +9,7 @@
  v.0.7 선미 : ico-arrow-green-right, ico-sns-kakao, ico-sns-facebook, ico-sns-line 추가 -- 2021.12.15
  v.0.8 선미 : ico-plus / ico-minus 추가 -- 2021.12.16
  v.0.9 태윤 : ico-comment-info-docter, ico-comment-info-basic 추가 -- 2021.12.17
+ v.1.0 태윤 : ico-prev , icon-next  &.white 추가 -- 2021.12.17
 |----------------------------------|
 */
 .icon {
@@ -50,10 +51,16 @@
 
 .ico-prev {
   @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-prev.svg');
+  &.white{
+    background-image: url(../img/common/ico-prev-white.svg);
+  }
 }
 
 .ico-next {
   @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-next.svg');
+  &.white{
+    background-image: url(../img/common/ico-next-white.svg);
+  }
 }
 
 .ico-close-sm {
@@ -74,6 +81,10 @@
 
 .ico-arrow-left {
   @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-left.svg');
+}
+
+.ico-arrow-left-white-sm{
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-arrow-left.svg');
 }
 
 .ico-arrow-right {
@@ -152,13 +163,6 @@
   @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-minus.svg');
 }
 
-.ico-comment-info-docter{
-  @include background-img ($width: 32, $height: 32, $category: 'common', $img: 'ico-comment-info-docter.svg');
-}
-
-.ico-comment-info-basic{
-  @include background-img ($width: 32, $height: 32, $category: 'common', $img: 'ico-comment-info-basic.svg');
-}
 .ico-youtube {
   @include background-img ($width: 20, $height: 20, $category: 'story', $img: 'ico-youtube.svg');
 }
