@@ -4,6 +4,7 @@
  v.0.2 선미 : 버튼 사이즈별 폰트사이즈 변경 -- 2021.12.10
  v.0.3 선미 : btn focus ->  box-shadow 제거 -- 2021.12.13
  v.0.4 주연 : vw 적용 -- 2021.12.14
+ v.0.5 주연 : border case 추가 -- 2021.12.17
 |----------------------------------|
 */
 .btn {
@@ -24,15 +25,30 @@
     box-shadow: none;
   }
 
+  &.btn-border {
+    background-color: #fff;
+    color: $primary;
+  }
+
   &.btn-black {
     background-color: $gray-800;
     border-color: $gray-800;
+  }
+
+  &.btn-border-black {
+    background-color: #fff;
+    color: $gray-800;
   }
 
   &.btn-white {
     background-color: $gray-fff;
     border-color: $gray-fff;
     color: $gray-800;
+  }
+
+  &.btn-border-white {
+    background-color: transparent;
+    color: #fff;
   }
 
   &.disabled {

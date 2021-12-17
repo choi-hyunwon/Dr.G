@@ -119,8 +119,12 @@
 
     .item {
       float: left;
-      width: vw(156);
+      width: 50%;
       margin-bottom: vw(48);
+
+      a {
+        display: block;
+      }
 
       &.green {
         .badge {
@@ -146,8 +150,12 @@
         }
       }
 
+      &:nth-child(2n) {
+        padding-left: vw(8);
+      }
+
       &:nth-child(2n-1) {
-        margin-right: vw(15);
+        padding-right: vw(8);
       }
 
       &:nth-child(2n+1) {
@@ -159,21 +167,30 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        width: vw(156);
+        width: 100%;
         height: vw(156);
         border-radius: vw(16) vw(16) vw(16) 0;
         overflow: hidden;
-        margin-bottom: vw(4);
+        padding-bottom: vw(8);
+
+        .img-inner {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
 
         img {
-          max-width: 100%;
-          max-height: 100%;
+          width: 100%;
+          height: 100%;
         }
 
         .badge {
           position: absolute;
           left: 0;
-          bottom: 0;
+          bottom: vw(8);
           border-radius: 0 vw(8) 0 0;
         }
       }
@@ -280,7 +297,7 @@
 
   /* 인사이드 닥터지 */
   .inside-drg {
-    padding: vw(20) vw(24) vw(76);
+    padding: vw(20) vw(23) vw(76) vw(24);
 
     .heading {
       margin-bottom: vw(24);
@@ -332,7 +349,7 @@
           align-items: center;
           justify-content: center;
           padding-top: vw(24);
-          border-top: 1px solid $gray-300;
+          border-top: vw(1) solid $gray-300;
         }
 
         a {
@@ -347,8 +364,7 @@
 
     .detail-list-wrap {
       background-color: #F8F8F8;
-      padding-top: vw(48);
-      padding-left: vw(24);
+      padding: vw(48) vw(24);
 
       .font-h4 {
         color: $gray-800;
@@ -358,6 +374,47 @@
   }
 
   /* 닥터지 영상 */
+  .drg-video {
+    .font-h1 {
+      padding:  0 vw(24);
+      margin-bottom: vw(24);
+    }
+  }
+
+  .video-box {
+    position: relative;
+    width: 100%;
+    height: vw(211);
+    margin-bottom: vw(24);
+
+    .video {
+      width: 100%;
+      height: 100%;
+    }
+
+    .btn-play {
+      @include background-img ($width: 68, $height: 48, $category: 'story', $img: 'btn-play.svg');
+    }
+  }
+
+  .video-info {
+    padding:  0 vw(24);
+
+    .font-h4 {
+      padding-bottom: vw(24);
+      border-bottom: vw(1) solid $gray-300;
+      margin-bottom: vw(24);
+    }
+
+    .social-btn-wrap {
+      display: flex;
+      justify-content: space-between;
+
+      .sns-wrap {
+        display: flex;
+      }
+    }
+  }
 
   /* 스킨 리포트 */
 }
