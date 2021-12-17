@@ -5,15 +5,10 @@
 */
 
 
-/*고객제안 / 스킨멘토링*/
+/*고객제안 , 스킨멘토링*/
 .view-details{
   .header-details{
-    height: vw(60);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 vw(25);
-    line-height: 1.155;
+    /*layout.scss*/
   }
   .body-details{
     .area-title{
