@@ -176,6 +176,12 @@ data.story = {
             category: 'story',
             page: '닥터지스토리_01인사이드닥터지_목록'
         },
+        {
+            stateClass: 'complete',
+            url: '닥터지스토리_01인사이드닥터지_상세',
+            category: 'story',
+            page: '닥터지스토리_01인사이드닥터지_상세'
+        },
     ]
 }
 

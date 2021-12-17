@@ -4,6 +4,72 @@
 |----------------------------------------------------------------------|
 */
 
+/* components */
+.story-heading-img {
+  position: relative;
+  width: 100%;
+  height: vw(500);
+  background-size: cover;
+
+  .flag {
+    position: absolute;
+    width: vw(187);
+    height: vw(276);
+    top: 0;
+
+    .title {
+      font-size: vw(22);
+      line-height: vw(26);
+      letter-spacing: vw(-0.002);
+      color: #FFFFFF;
+      padding-top: vw(89);
+      padding-left: vw(24);
+      margin-bottom: vw(10);
+    }
+
+    .category {
+      position: absolute;
+      font-family: $poppins-medium;
+      font-weight: 500;
+      font-size: vw(13);
+      line-height: vw(24);
+      letter-spacing: vw(-0.002);
+      color: #FFFFFF;
+      transform: rotate(90deg);
+      right: vw(-11);
+      top: vw(49);
+    }
+
+    .tag {
+      font-size: vw(14);
+      line-height: vw(18);
+      letter-spacing: vw(-0.002);
+      color: #FFFFFF;
+      padding-left: vw(24);
+      margin-bottom: vw(34);
+    }
+
+    .smile {
+      position: absolute;
+      bottom: vw(25);
+      left: vw(26);
+      @include background-img ($width: 42, $height: 21, $category: 'story', $img: 'img-smile.svg');
+    }
+
+    &.drg {
+      left: 0;
+      border-radius: 0 0 vw(40) 0;
+      background-color: rgba(47, 202, 176, .9);
+    }
+
+    &.user {
+      right: 0;
+      border-radius: 0 0 0 vw(40);
+      background-color: rgba(97, 112, 255, .9);
+    }
+  }
+}
+
 /* 닥터지스토리  */
 .story-wrap {
   /* 공통 */
@@ -95,7 +161,7 @@
         position: relative;
         width: vw(156);
         height: vw(156);
-        border-radius:  vw(16) vw(16) vw(16) 0;
+        border-radius: vw(16) vw(16) vw(16) 0;
         overflow: hidden;
         margin-bottom: vw(4);
 
@@ -168,6 +234,48 @@
         }
       }
     }
+
+    &.list-scroll {
+      overflow-x: auto;
+
+      ul {
+        white-space: nowrap;
+      }
+
+      .item {
+        width: vw(120);
+        margin-right: vw(16);
+        margin-bottom: 0;
+
+        .img {
+          width: vw(120);
+          height: vw(120);
+          border-radius: vw(12);
+          overflow: hidden;
+          margin-bottom: vw(16);
+        }
+
+        .title {
+          overflow: initial;
+          text-overflow: initial;
+          white-space: normal;
+          -webkit-line-clamp: 0;
+          display: block;
+          margin-bottom: 0;
+          font-weight: 400;
+          font-size: vw(13);
+          line-height: vw(18);
+        }
+
+        &:nth-child(2n-1) {
+          margin-right: vw(16);
+        }
+
+        &:nth-child(2n+1) {
+          clear: none;
+        }
+      }
+    }
   }
 
   /* 인사이드 닥터지 */
@@ -181,8 +289,70 @@
         margin-bottom: vw(12);
       }
 
-      .font-h6  {
+      .font-h6 {
         color: $gray-700;
+      }
+    }
+  }
+
+  .inside-drg-detail {
+    .editor-area {
+      margin-top: vw(48);
+      margin-bottom: vw(48);
+      height: vw(423);
+    }
+
+    .more-product {
+      .font-h4 {
+        margin-bottom: vw(24);
+        padding-left: vw(24);
+        color: $gray-800;
+      }
+
+      .list-scroll {
+        margin-bottom: vw(32);
+
+        ul {
+          width: vw(850);
+          .item {
+            &:first-child {
+              margin-left: vw(24);
+            }
+          }
+        }
+      }
+
+      .btn-sns-wrap {
+        padding-right: vw(24);
+        padding-left: vw(24);
+        margin-bottom: vw(42);
+
+        .btn-sns-inner {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-top: vw(24);
+          border-top: 1px solid $gray-300;
+        }
+
+        a {
+          margin-right: vw(12);
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .detail-list-wrap {
+      background-color: #F8F8F8;
+      padding-top: vw(48);
+      padding-left: vw(24);
+
+      .font-h4 {
+        color: $gray-800;
+        margin-bottom: vw(24);
       }
     }
   }
