@@ -667,7 +667,7 @@
         .title {
           display: block;
           float: left;
-          width: vw(155);
+          width: calc(100% - #{vw(156)});
           @include ellipsis(3);
           color: $gray-800;
           font-size: vw(15);
@@ -686,4 +686,22 @@
   }
 
   /* 스킨 리포트 */
+  .skin-report {
+    .heading {
+      padding: 0 vw(24);
+
+      .font-h1 {
+        padding-top: vw(20);
+        margin-bottom: vw(48);
+      }
+    }
+
+    .list {
+      padding: 0 vw(24) vw(76);
+
+      .item {
+        border-radius: vw(12);
+      }
+    }
+  }
 }

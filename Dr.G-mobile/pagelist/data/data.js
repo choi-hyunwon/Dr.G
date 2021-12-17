@@ -194,5 +194,11 @@ data.story = {
             category: 'story',
             page: '닥터지스토리_Dr.Ahn영상_리스트'
         },
+        {
+            stateClass: 'complete',
+            url: '닥터지스토리_스킨리포트_리스트',
+            category: 'story',
+            page: '닥터지스토리_스킨리포트_리스트'
+        },
     ]
 }
