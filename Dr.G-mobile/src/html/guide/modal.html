@@ -208,9 +208,9 @@
                 <!--popup-->
                 <div class="full-popup _full-popup">
                     <div class="popup-content">
-                        <div class="popup-header">
+                        <div class="popup-header _popup-header">
                             <p class="title font-h3">내가 쓴 댓글 보기</p>
-                            <i class="icon ico-close"></i>
+                            <i class="icon ico-close _toast-popup-close full"></i>
                         </div>
                         <div class="popup-body">
                             <ul class="comment-list">
@@ -230,6 +230,18 @@
                                 <li class="item manager">
                                     <div class="info-area">
                                         <i class="icon ico-comment-info-docter"></i>
+                                        <span class="nickname">수부민건</span>
+                                    </div>
+                                    <div class="connetnt">
+                                        <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍 발라보세요!</p>
+                                    </div>
+                                    <div class="date">
+                                        <span>21-10-12</span>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="info-area">
+                                        <i class="icon ico-comment-info-basic"></i>
                                         <span class="username">kimkim08</span>
                                         <span class="nickname">수부민건</span>
                                     </div>
@@ -240,6 +252,58 @@
                                         <span>21-10-12</span>
                                     </div>
                                 </li>
+                                <li class="item manager">
+                                    <div class="info-area">
+                                        <i class="icon ico-comment-info-docter"></i>
+                                        <span class="nickname">수부민건</span>
+                                    </div>
+                                    <div class="connetnt">
+                                        <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍 발라보세요!</p>
+                                    </div>
+                                    <div class="date">
+                                        <span>21-10-12</span>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="info-area">
+                                        <i class="icon ico-comment-info-basic"></i>
+                                        <span class="username">kimkim08</span>
+                                        <span class="nickname">수부민건</span>
+                                    </div>
+                                    <div class="connetnt">
+                                        <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍 발라보세요!</p>
+                                    </div>
+                                    <div class="date">
+                                        <span>21-10-12</span>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="info-area">
+                                        <i class="icon ico-comment-info-basic"></i>
+                                        <span class="username">kimkim08</span>
+                                        <span class="nickname">수부민건</span>
+                                    </div>
+                                    <div class="connetnt">
+                                        <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍 발라보세요!</p>
+                                    </div>
+                                    <div class="date">
+                                        <span>21-10-12</span>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="info-area">
+                                        <i class="icon ico-comment-info-basic"></i>
+                                        <span class="username">kimkim08</span>
+                                        <span class="nickname">수부민건</span>
+                                    </div>
+                                    <div class="connetnt">
+                                        <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍 발라보세요!</p>
+                                    </div>
+                                    <div class="date">
+                                        <span>21-10-12</span>
+                                    </div>
+                                </li>
+
                             </ul>
                         </div>
                         <div class="popup-footer"></div>
@@ -252,7 +316,28 @@
                             let select = $('._full-popup');
                             select.removeClass('hide').addClass('show');
                         });
+                        $('._toast-popup-close.full').on('click', function () {
+                            let select = $('._full-popup');
+                            select.removeClass('show').addClass('hide');
+                        });
                     })();
+                    (function introScroll(){
+                        var lastScroll = 0;
+                        $(window).scroll(function(){
+                            var st = $(this).scrollTop();
+                            // console.log(st);
+                            if (st > lastScroll){
+                                // console.log('Down');
+                                $('._popup-header').addClass('header-white');
+                            }
+                            else {
+                                // console.log('Up');
+                                $('._popup-header').removeClass('header-white');
+                            }
+                            lastScroll = st;
+                        });
+                    }());
+
                 </script>
             </div>
 
