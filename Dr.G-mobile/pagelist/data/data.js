@@ -76,9 +76,15 @@ data.mentoring = {
     list: [
         {
             stateClass: 'waiting',
-            url: '스킨멘토_03내역_02상세_01답변대기',
+            url: '스킨멘토링_스킨멘토링내역_목록',
             category: 'mentoring',
-            page: '스킨멘토_03내역_02상세_01답변대기'
+            page: '스킨멘토링_스킨멘토링내역_목록'
+        },
+        {
+            stateClass: 'waiting',
+            url: '스킨멘토링_내역_상세페이지_답변대기상태',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_상세페이지_답변대기상태'
         }
     ]
 }
@@ -88,81 +94,81 @@ data.suggestion = {
     list: [
         {
             stateClass: 'complete',
-            url: '고객제안_01의견남기기tab',
+            url: '고객제안_의견남기기',
             category: 'suggestion',
-            page: '고객제안_01의견남기기tab'
+            page: '고객제안_의견남기기'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_02나의제안내역tab(회원)',
+            url: '고객제안_나의제안내역-회원',
             category: 'suggestion',
-            page: '고객제안_02나의제안내역tab(회원)'
+            page: '고객제안_나의제안내역-회원'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_02나의제안내역tab(비회원)',
+            url: '고객제안_나의제안내역-비회원',
             category: 'suggestion',
-            page: '고객제안_02나의제안내역tab(비회원)'
+            page: '고객제안_나의제안내역-비회원'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_01의견남기기tab_01비회원로그인알림팝업',
+            url: '고객제안_의견남기기_비회원_로그인알림',
             category: 'suggestion',
-            page: '고객제안_01의견남기기tab_01비회원로그인알림팝업'
+            page: '고객제안_의견남기기_비회원_로그인알림'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업',
+            url: '고객제안_나의제안내역_상세보기_얼럿팝업',
             category: 'suggestion',
-            page: '고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업'
+            page: '고객제안_나의제안내역_상세보기_얼럿팝업'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업_검색된내역없을시',
+            url: '고객제안_나의제안내역-비회원_얼럿팝업',
             category: 'suggestion',
-            page: '고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)_알럿팝업_검색된내역없을시'
+            page: '고객제안_나의제안내역-비회원_얼럿팝업'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_01의견남기기tab_유형선택',
+            url: '고객제안_의견남기기_유형선택',
             category: 'suggestion',
-            page: '고객제안_01의견남기기tab_유형선택'
+            page: '고객제안_의견남기기_유형선택'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_01의견남기기tab_등록완료알럿팝업',
+            url: '고객제안_의견남기기_얼럿팝업',
             category: 'suggestion',
-            page: '고객제안_01의견남기기tab_등록완료알럿팝업'
+            page: '고객제안_의견남기기_얼럿팝업'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_01의견남기기tab_02비회원의견남기기',
+            url: '고객제안_비회원_의견남기기',
             category: 'suggestion',
-            page: '고객제안_01의견남기기tab_02비회원의견남기기'
+            page: '고객제안_비회원_의견남기기'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_01의견남기기tab_03개선사례조회',
+            url: '고객제안_개선사례_조회',
             category: 'suggestion',
-            page: '고객제안_01의견남기기tab_03개선사례조회'
+            page: '고객제안_개선사례_조회'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)',
+            url: '고객제안_나의제안내역_상세보기_답변대기',
             category: 'suggestion',
-            page: '고객제안_01의견남기기tab_03개선사례조회_01상세보기(답변대기)'
+            page: '고객제안_나의제안내역_상세보기-답변대기'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_01의견남기기tab_03개선사례조회_02상세보기(답변완료)',
+            url: '고객제안_나의제안내역_상세보기_답변완료',
             category: 'suggestion',
-            page: '고객제안_01의견남기기tab_03개선사례조회_02상세보기(답변완료)'
+            page: '고객제안_나의제안내역_상세보기-답변완료'
         },
         {
             stateClass: 'complete',
-            url: '고객제안_01의견남기기tab_03개선사례조회_03수정하기실행',
+            url: '고객제안_나의제안내역_상세보기_수정하기실행',
             category: 'suggestion',
-            page: '고객제안_01의견남기기tab_03개선사례조회_03수정하기실행'
+            page: '고객제안_나의제안내역_상세보기_수정하기실행'
         }
     ]
 }
