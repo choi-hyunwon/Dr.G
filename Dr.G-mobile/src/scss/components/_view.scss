@@ -75,6 +75,12 @@
         color: $gray-700;
         letter-spacing: 0;
         font-size: vw(16);
+        .more{
+          text-decoration: underline;
+          font-weight: 500;
+          color: $gray-500;
+          font-size: vw(15);
+        }
       }
       .divider{
         margin: vw(32) 0;
@@ -136,14 +142,91 @@
 
     }
     .unfold-box{
+      margin-top: vw(48);
+      border-top:1px solid $gray-400;
+      padding: vw(32) vw(24) 0;
       &._unfold{
         background-color: $gray-200;
+        border-top: none;
       }
       .title{
+        text-align: center;
+        font-weight: 700;
+        font-size: vw(15);
+        color: $gray-800;
 
       }
       .list{
-        display: none
+        display: none;
+        padding-top: vw(56);
+        >li{
+          margin-bottom: vw(32);
+          &:first-of-type{
+            margin-bottom: vw(22);
+          }
+         &:last-of-type{
+          margin-bottom: 0;
+         }
+          .sub-title{
+            color: $gray-800;
+            font-size: vw(16);
+            line-height: vw(24);
+            font-weight: 700;
+            margin-bottom: vw(12);
+          }
+
+          .badge-box{
+            .badge{
+              font-weight: 700;
+              margin-right: vw(6);
+              margin-bottom: vw(10);
+              &:last-of-type{
+                margin-right: 0;
+              }
+            }
+          }
+          .habit{
+            background-color: #ffffff;
+            border-radius: vw(12);
+            padding: vw(20);
+            li{
+              font-size: vw(15);
+              color: $gray-800;
+              font-weight: 500;
+              margin-bottom: vw(8);
+              &:last-of-type{margin-bottom: 0}
+              .num{
+                color: $gray-600;
+                margin-right: vw(4);
+              }
+              .answer{
+                color: $blue;
+                font-weight: 700;
+                margin-left: vw(4);
+              }
+            }
+          }
+          .attach-box{
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-bottom: vw(48);
+              li{
+                position: relative;
+                display: inline-block;
+                margin-left: vw(4);
+                &:first-of-type{
+                  margin-left: 0;
+                }
+                img{
+                  width: vw(72);
+                  height: vw(72);
+                  border-radius: vw(12);
+                }
+              }
+          }
+        }
+
+
 
       }
     }

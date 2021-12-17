@@ -75,7 +75,7 @@ data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
         {
-            stateClass: 'working',
+            stateClass: 'waiting',
             url: '스킨멘토_03내역_02상세_01답변대기',
             category: 'mentoring',
             page: '스킨멘토_03내역_02상세_01답변대기'
