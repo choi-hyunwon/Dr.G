@@ -2,7 +2,8 @@
 |----------------------------------------------------------------------|
  v.0.1 선미 : 최초 작업 -- 2021.12.07
  v.0.2 주연 : 헤더 추가 -- 2021.12.13
- v.0.3주연 : vw 적용 -- 2021.12.14
+ v.0.3 주연 : vw 적용 -- 2021.12.14
+ v.0.4 주연 : header-detail 추가 -- 2021.12.17
 |----------------------------------------------------------------------|
 */
 
@@ -45,6 +46,24 @@ a {
     a {
       display: block;
     }
+  }
+}
+
+.header-details {
+  position: relative;
+  height: vw(60);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 vw(18);
+  line-height: 1.155;
+
+  .btn-prev {
+    display: block;
+    position: absolute;
+    left: vw(17);
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

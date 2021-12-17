@@ -154,3 +154,15 @@ data.suggestion = {
         }
     ]
 }
+
+data.story = {
+    title: '닥터지 스토리',
+    list: [
+        {
+            stateClass: 'complete',
+            url: '닥터지스토리_01인사이드닥터지_목록',
+            category: 'story',
+            page: '닥터지스토리_01인사이드닥터지_목록'
+        },
+    ]
+}

@@ -1,0 +1,193 @@
+/*
+|----------------------------------------------------------------------|
+ v.0.1 주연 : 최초 작업 -- 2021.12.16
+|----------------------------------------------------------------------|
+*/
+
+/* 닥터지스토리  */
+.story-wrap {
+  /* 공통 */
+  .tab {
+    margin-bottom: vw(48);
+    padding: 0;
+
+    > ul {
+      display: flex;
+      justify-content: center;
+
+      .item {
+        height: vw(54);
+        padding: 0 vw(16);
+
+        a {
+          white-space: nowrap;
+
+          &::after {
+            bottom: vw(4);
+          }
+        }
+      }
+    }
+  }
+
+  .input-search-list {
+    margin-bottom: vw(32);
+  }
+
+  .list {
+    .total {
+      font-size: vw(13);
+      line-height: vw(18);
+      color: $gray-700;
+      margin-bottom: vw(16);
+
+      .num {
+        color: $gray-900;
+        font-weight: bold;
+      }
+
+      .unit {
+        font-weight: bold;
+      }
+    }
+
+    .item {
+      float: left;
+      width: vw(156);
+      margin-bottom: vw(48);
+
+      &.green {
+        .badge {
+          background-color: $primary;
+        }
+
+        .tag {
+          em {
+            color: $primary;
+          }
+        }
+      }
+
+      &.violet {
+        .badge {
+          background-color: rgba(97, 112, 255, 0.9);
+        }
+
+        .tag {
+          em {
+            color: $violet;
+          }
+        }
+      }
+
+      &:nth-child(2n-1) {
+        margin-right: vw(15);
+      }
+
+      &:nth-child(2n+1) {
+        clear: both;
+      }
+
+      .img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: vw(156);
+        height: vw(156);
+        border-radius:  vw(16) vw(16) vw(16) 0;
+        overflow: hidden;
+        margin-bottom: vw(4);
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+
+        .badge {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          border-radius: 0 vw(8) 0 0;
+        }
+      }
+
+      .title {
+        display: block;
+        font-weight: bold;
+        font-size: vw(15);
+        line-height: vw(22);
+        color: $gray-800;
+        @include ellipsis(2);
+        margin-bottom: vw(4);
+      }
+
+      .tag {
+        display: block;
+        line-height: vw(16);
+
+        em {
+          display: inline-block;
+          font-size: vw(12);
+          line-height: vw(16);
+          margin-right: vw(6);
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .date {
+        display: block;
+        font-family: $poppins-regular;
+        font-size: vw(12);
+        line-height: vw(16);
+        color: $gray-600;
+        margin-top: vw(6);
+      }
+    }
+
+    .empty {
+      text-align: center;
+      padding-top: vw(84);
+      margin-bottom: vw(155);
+
+      .img {
+        width: vw(62);
+        height: auto;
+        margin: 0 auto vw(16);
+      }
+
+      .font-h6 {
+        color: $gray-800;
+        line-height: vw(24);
+
+        span {
+          color: $gray-500;
+        }
+      }
+    }
+  }
+
+  /* 인사이드 닥터지 */
+  .inside-drg {
+    padding: vw(20) vw(24) vw(76);
+
+    .heading {
+      margin-bottom: vw(24);
+
+      .font-h1 {
+        margin-bottom: vw(12);
+      }
+
+      .font-h6  {
+        color: $gray-700;
+      }
+    }
+  }
+
+  /* 닥터지 영상 */
+
+  /* 스킨 리포트 */
+}

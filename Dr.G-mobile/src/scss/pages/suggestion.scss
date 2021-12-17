@@ -199,14 +199,6 @@
 
 /*개선사례조회_상세보기*/
 .view-details{
-  .header-details{
-    height: vw(60);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 vw(25);
-    line-height: 1.155;
-  }
   .body-details{
     .area-title{
       padding: vw(20) vw(25) vw(32);
