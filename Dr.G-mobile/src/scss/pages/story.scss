@@ -21,7 +21,7 @@
       font-size: vw(22);
       line-height: vw(26);
       letter-spacing: vw(-0.002);
-      color: #FFFFFF;
+      color: #ffffff;
       padding-top: vw(89);
       padding-left: vw(24);
       margin-bottom: vw(10);
@@ -34,7 +34,7 @@
       font-size: vw(13);
       line-height: vw(24);
       letter-spacing: vw(-0.002);
-      color: #FFFFFF;
+      color: #ffffff;
       transform: rotate(90deg);
       right: vw(-11);
       top: vw(49);
@@ -44,7 +44,7 @@
       font-size: vw(14);
       line-height: vw(18);
       letter-spacing: vw(-0.002);
-      color: #FFFFFF;
+      color: #ffffff;
       padding-left: vw(24);
       margin-bottom: vw(34);
     }
@@ -53,7 +53,7 @@
       position: absolute;
       bottom: vw(25);
       left: vw(26);
-      @include background-img ($width: 42, $height: 21, $category: 'story', $img: 'img-smile.svg');
+      @include background-img($width: 42, $height: 21, $category: 'story', $img: 'img-smile.svg');
     }
 
     &.drg {
@@ -295,34 +295,41 @@
     }
   }
 
-  .comment-list{
-    .item{
+  .comment-list {
+    .item {
       background-color: #fff;
       border-radius: vw(12);
       padding: vw(20);
-      .connetnt{
+
+      .content {
         margin-bottom: vw(10);
-        p{
+
+        p {
           font-size: vw(15);
           line-height: vw(22);
           font-weight: 400;
-          color: #444;}
+          color: #444;
+        }
       }
-      +.item{
-        margin-top: vw(16);
+
+      + .item {
+        margin-top: vw( );
       }
-      &.manager{
+
+      &.manager {
         margin-top: 0px;
-        background-color: #E2F5FF;
-        position:relative;
-        .info-area{
-          .icon{
-            +.nickname{
+        background-color: #e2f5ff;
+        position: relative;
+
+        .info-area {
+          .icon {
+            + .nickname {
               margin-left: 0px;
             }
           }
         }
-        &:before{
+
+        &:before {
           content: '';
           width: vw(20);
           height: vw(20);
@@ -330,43 +337,57 @@
           top: vw(-18);
           right: vw(24);
           background-image: url("../img/common/ico-comment-triaggle.svg");
-          background-size: cover;
           background-size: 100% 100%;
         }
       }
-      .info-area{
+
+      .info-area {
         margin-bottom: vw(6);
         display: flex;
         align-items: center;
-        .icon{
+
+        .icon {
           margin-right: vw(8);
         }
-        span{
+
+        span {
+          display: inline-block;
           font-size: vw(13);
           line-height: vw(18);
-          &.username{
+
+          &.username {
             padding-right: vw(8);
             position: relative;
-            &:before{
+            color: $gray-600;
+            font-family: $poppins-medium;
+
+            &:before {
               content: '';
               position: absolute;
               top: vw(4);
               right: vw(0);
               width: vw(1);
               height: vw(10);
-              background-color: #DDDDDD;
+              background-color: #dddddd;
             }
           }
-          &.nickname{
+
+          &.nickname {
             font-weight: 700;
             margin-left: vw(8);
+            color: $gray-800;
           }
         }
       }
-      .date{
-        span{
+
+      .date {
+        display: flex;
+        align-items: center;
+        height: vw(18);
+
+        span {
+          font-family: $poppins-regular;
           font-size: vw(13);
-          line-height: vw(18);
           color: #888;
         }
       }
@@ -409,6 +430,7 @@
 
         ul {
           width: vw(850);
+
           .item {
             &:first-child {
               margin-left: vw(24);
@@ -441,7 +463,7 @@
     }
 
     .detail-list-wrap {
-      background-color: #F8F8F8;
+      background-color: #f8f8f8;
       padding: vw(48) vw(24);
 
       .font-h4 {
@@ -454,7 +476,7 @@
   /* 닥터지 영상 */
   .drg-video {
     .font-h1 {
-      padding:  0 vw(24);
+      padding: 0 vw(24);
       margin-bottom: vw(24);
     }
   }
@@ -471,12 +493,12 @@
     }
 
     .btn-play {
-      @include background-img ($width: 68, $height: 48, $category: 'story', $img: 'btn-play.svg');
+      @include background-img($width: 68, $height: 48, $category: 'story', $img: 'btn-play.svg');
     }
   }
 
   .video-info {
-    padding:  0 vw(24);
+    padding: 0 vw(24);
 
     .font-h4 {
       padding-bottom: vw(24);
@@ -572,6 +594,7 @@
           .font-h5 {
             color: $gray-800;
           }
+
           .color-primary {
             font-family: $poppins-semiBold;
             font-size: vw(18);
@@ -583,6 +606,14 @@
           line-height: vw(18);
           text-decoration-line: underline;
           color: $gray-800;
+        }
+      }
+
+      .comment-list {
+        .item {
+          + .item {
+            margin-top: vw(12);
+          }
         }
       }
     }
