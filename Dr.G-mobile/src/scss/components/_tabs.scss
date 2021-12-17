@@ -5,6 +5,7 @@
  v.0.3 선미 : tab(color -> $primary 변경) -- 2021.12.07
  v.0.4 선미 : tab-content 추가 -- 2021.12.13
  v.0.5 주연 : vw 적용 -- 2021.12.14
+ v.0.6 선미 : tab > item  padding-right: vw(28)-> vw(40) 변경,  tab (padding -> padding-left 변경-- 2021.12.17
 |----------------------------------|
 */
 .tab {
@@ -14,12 +15,12 @@
   overflow-x: auto;
   overflow-y: hidden;
   font-weight: 700;
-  padding: 0 vw(25);
+  padding-left:  vw(25);
 
   .item {
     float: left;
     height: vw(50);
-    padding-right: vw(28);
+    padding-right: vw(40);
 
     a {
       position: relative;
