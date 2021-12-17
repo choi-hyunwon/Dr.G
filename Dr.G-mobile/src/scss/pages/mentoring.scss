@@ -15,26 +15,29 @@
       color: $gray-fff;
     }
     .floating-box{
-      background-color: $gray-fff;
-      box-shadow: 0 vw(4) vw(12) rgba(34, 34, 34, 0.08);
-      border-radius: vw(16);
-      padding: vw(20);
       position: relative;
       bottom: vw(-32);
-      .badge{
-        margin-bottom: vw(3.5);
-        font-size: vw(12);
-      }
-      .question{
-        font-size: vw(15);
-        line-height: vw(22);
-        color: $gray-800;
-        margin-bottom: vw(5);
-      }
-      .date{
-        font-size: vw(13);
-        line-height: vw(18);
-        color: $gray-600;
+      .item{
+        background-color: $gray-fff;
+        box-shadow: 0 vw(4) vw(12) rgba(34, 34, 34, 0.08);
+        border-radius: vw(16);
+        padding: vw(20);
+        .badge{
+          margin-bottom: vw(3.5);
+          font-size: vw(12);
+          padding: vw(5) vw(10);
+        }
+        .question{
+          font-size: vw(15);
+          line-height: vw(22);
+          color: $gray-800;
+          margin-bottom: vw(5);
+        }
+        .date{
+          font-size: vw(13);
+          line-height: vw(18);
+          color: $gray-600;
+        }
       }
     }
   }
@@ -56,6 +59,74 @@
       }
     }
     .tab-content{
+      background-color: $gray-200;
+      border-top: $gray-300;
+      padding: vw(50) vw(24) vw(76);
+      .total{
+        font-size: vw(13);
+        line-height: vw(18);
+        color: $gray-700;
+        font-weight: 500;
+        text-align: right;
+        margin-bottom: vw(17);
+        .answer{
+          display: inline-block;
+          &.waiting{
+            padding-right: vw(8);
+            position: relative;
+            .num{
+              font-weight: 600;
+              color: $blue;
+            }
+            &:after{
+              content: '';
+              clear: both;
+              display: inline-block;
+              width: vw(1);
+              height: vw(10);
+              background-color: $gray-400;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+          &.complete{
+            padding-left: vw(8);
+            .num{
+              font-weight: 600;
+              color: $gray-900;
+            }
+          }
+        }
+      }
+      .answer-list{
+        .item{
+          background-color: $gray-fff;
+          border-radius: vw(16);
+          padding: vw(20);
+          margin-bottom: vw(16);
+          &:last-of-type{
+            margin-bottom: vw(48);
+          }
+          .badge{
+            margin-bottom: vw(3.5);
+            font-size: vw(12);
+            padding: vw(5) vw(10);
+          }
+          .question{
+            font-size: vw(15);
+            line-height: vw(22);
+            color: $gray-800;
+            margin-bottom: vw(5);
+          }
+          .date{
+            font-size: vw(13);
+            line-height: vw(18);
+            color: $gray-600;
+          }
+        }
+      }
 
     }
   }

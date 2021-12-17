@@ -21,6 +21,9 @@
     float: left;
     height: vw(50);
     padding-right: vw(40);
+    &:last-of-type{
+      padding-right: 0;
+    }
 
     a {
       position: relative;
