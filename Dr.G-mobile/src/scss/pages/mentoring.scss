@@ -1,0 +1,62 @@
+/*
+|------------------------------------|
+ v.0.1 선미 : 최초 작업 -- 2021.12.17
+|------------------------------------|
+*/
+
+.mentoring-wrap{
+  .section-color{
+    padding: vw(80) vw(24) 0;
+    margin-bottom: vw(80);
+    &.bg-blue{
+      background-color: $blue;
+    }
+    .font-h1{
+      color: $gray-fff;
+    }
+    .floating-box{
+      background-color: $gray-fff;
+      box-shadow: 0 vw(4) vw(12) rgba(34, 34, 34, 0.08);
+      border-radius: vw(16);
+      padding: vw(20);
+      position: relative;
+      bottom: vw(-32);
+      .badge{
+        margin-bottom: vw(3.5);
+        font-size: vw(12);
+      }
+      .question{
+        font-size: vw(15);
+        line-height: vw(22);
+        color: $gray-800;
+        margin-bottom: vw(5);
+      }
+      .date{
+        font-size: vw(13);
+        line-height: vw(18);
+        color: $gray-600;
+      }
+    }
+  }
+  .section-tab{
+    .font-h4{
+      padding: 0 vw(24);
+      margin-bottom: vw(16);
+    }
+    .tab{
+      .item{
+        &.active{
+          a{
+            color: $blue;
+            &:after{
+              background-color: $blue;
+            }
+          }
+        }
+      }
+    }
+    .tab-content{
+
+    }
+  }
+}

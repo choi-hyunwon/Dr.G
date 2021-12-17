@@ -180,7 +180,7 @@
             }
           }
           .habit{
-            background-color: #ffffff;
+            background-color: $gray-fff;
             border-radius: vw(12);
             padding: vw(20);
             li{
@@ -228,7 +228,7 @@
       text-align: center;
       padding: vw(32) 0;
       .btn-outline{
-        background-color: #ffffff;
+        background-color: $gray-fff;
         border:1px solid $gray-800;
         color: $gray-800;
         padding: 0 vw(20);
