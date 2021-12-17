@@ -124,6 +124,47 @@
                     })();
                 </script>
             </div>
+            <p class="title font-h2">토스트팝업_type4</p>
+            <div class="box">
+                <!-- Button trigger modal -->
+                <a href="#" class="btn btn-primary _toast-popup-open-navi">
+                    토스트팝업_navi
+                </a>
+                <div class="toast-dim _toast-dim-navi">
+                    <div class="toast-popup">
+                        <div class="toast-content navi">
+                            <div class="toast-header">
+                                <p class="title">개인정보 수집 및 활용 동의</p>
+                                <a href="#" class="_toast-popup-close-navi icon ico-close-sm"></a>
+                            </div>
+                            <div class="toast-body">
+                                <p>닥터지는 사진 촬영 후 피부 분석 결과를<br>제공해 드립니다.<Br>닥터지 Ai 피부분석을 통한 <span>피부 분석과 주기 관리,개인정보 수집 활용 및
+                                    내용에 동의</span> 하십니까?</p>
+                            </div>
+                            <div class="toast-footer">
+                                <div class="navigation">
+                                    <a class="navi prev" href="#">이전</a>
+                                    <a class="navi next" href="#">다음</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--toastPopupScript-->
+                <script>
+                    (function () {
+                        $('._toast-popup-open-navi').on('click', function () {
+                            $('._toast-dim-navi').removeClass('hide').addClass('fade show').css('display', 'block');
+                        });
+                        $('._toast-popup-close-navi').on('click', function () {
+                            $('._toast-dim-navi').addClass('hide');
+                            setTimeout(() => {
+                                $('._toast-dim-navi').removeClass('fade show').css('display', 'none');
+                            }, 400);
+                        });
+                    })();
+                </script>
+            </div>
 
             <p class="title font-h2">토스트팝업_클릭시 텍스트변경</p>
             <div class="box">
