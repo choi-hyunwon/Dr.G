@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+
+    <!-- s contents -->
+    <div class="container view-details">
+        <div class="header-details">
+            <a href="#"><i class="icon ico-close"></i></a>
+        </div>
+        <div class="body-details">
+            <div class="area-title">
+                <div class="badge-box">
+                    <div class="badge badge-blue">목록</div>
+                </div>
+                <div class="title">블랙헤드가 안없어져요. 어떻게 없애나요?</div>
+                <div class="info-line">
+                    <span class="date">2020.08.12</span>
+                </div>
+            </div>
+            <div class="area-desc">
+                <!--10줄이상 말줄임필요 / 개발 - 글자수로 컨트롤 부탁드립니다.-->
+                <div class="text">
+                    안녕하세요! 닥터지 기초제품을 구매했다가 사이트까지 검색해보다가, 문의드립니다.<br>
+                    저는 과민성 민감성 트러블+모공과 블랙헤드가 심각한 편이에요. 최근 샴푸를 바꾸었다가 얼굴과 몸에 많이 여드름이 생겨서 피부과에 다녀왔고, 미노신을 1개월을 처방받아 먹고있습니다.<br>
+                    최근 1년 사이에는 피부과를 정기적으로 다닌 적이 없고, 이전에 정기적으로 다닐 때에 클렌징 워터+토너만 사용하고, 크림류는 최대한 쓰지 말아라, 선크림도 쓰지 말아라 라고 말씀하셔서 마스크나 양산으로 햇볕을 가리고 다닌 편이었습니다.<br>
+                    그런데 선크림은 그럼에도 바르는 게 좋다고 하는 이야기도 있어서.. 전체적인 관리법과 기초제품 루틴을 추천받고싶어요.<br>
+                    추가 정보는 화장은 한달에 2-3번, 에스티로더 파운데이션을 쓰고 성분이 좋은 약산성 클렌징워터, 토너를 썼고요. 운동을 조금 격한 것을 하는 편입니다.<br>
+                    술은 주1회 정도 마시는데 얼굴이 쉽게 달아올라요. 감사합니다.
+                    <span class="more">더보기</span>
+                </div>
+            </div>
+            <div class="unfold-box">
+                <div class="title">나의 피부고민 및 생활습관 펼쳐보기 <i class="icon ico-plus"></i></div>
+                <ul class="list">
+                    <li>
+                        <p class="sub-title">내가 선택한 피부고민</p>
+                        <div class="badge-box">
+                            <div class="badge badge-lg badge-yellow">블랙헤드</div>
+                            <div class="badge badge-lg badge-yellow">유수분 밸런스</div>
+                            <div class="badge badge-lg badge-yellow">속건조</div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <p class="sub-title">나의 생활습관</p>
+                        <ul class="habit">
+                            <li><span class="num">Q1.</span>흡연을 하나요?<span class="answer">네</span></li>
+                            <li><span class="num">Q2.</span>운동을 하나요?<span class="answer">아니오</span></li>
+                            <li><span class="num">Q3.</span>음주를 하나요?<span class="answer">네</span></li>
+                            <li><span class="num">Q4.</span>자외선 차단제를 사용하나요?<span class="answer">네</span></li>
+                            <li><span class="num">Q5.</span>수면의 질은 좋은가요?<span class="answer">나빠요</span></li>
+                            <li><span class="num">Q6.</span>스트레스가 있나요?<span class="answer">많음</span></li>
+                            <li><span class="num">Q7.</span>월경 주기는 어떤가요?<span class="answer">불규칙</span></li>
+                            <li><span class="num">Q8.</span>물 섭취량은 어떤가요?<span class="answer">1L 이상</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="sub-title">업로드된 나의 고민 사진</p>
+                        <ul class="attach-box">
+                            <li><img src="../../img/@temp/sample01.png" alt="temp img 1"></li>
+                            <li><img src="../../img/@temp/sample02.png" alt="temp img 2"></li>
+                            <li><img src="../../img/@temp/sample03.png" alt="temp img 3"></li>
+                            <li><img src="../../img/@temp/sample04.png" alt="temp img 4"></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+            <script>
+                $(document).ready(function() {
+                    $('.unfold-box .title').on('click',function (){
+                        if (!$(this).hasClass('_title')) {
+                            $(this).children().removeClass('ico-plus').addClass('ico-minus');
+                            $(this).addClass('_title');
+                            $(this).parent().addClass('_unfold');
+                            $(this).siblings().slideDown(200);
+                        }else {
+                            $(this).children().removeClass('ico-minus').addClass('ico-plus');
+                            $(this).removeClass('_title');
+                            $(this).parent().removeClass('_unfold');
+                            $(this).siblings().slideUp(200);
+                        }
+                    })
+                });
+            </script>
+            <div class="btn-wrap">
+                <a href="#" class="btn btn-outline"><span>수정</span><i class="icon ico-edit"></i></a>
+                <a href="#" class="btn btn-outline"><span>삭제</span><i class="icon ico-delete"></i></a>
+            </div>
+
+        </div>
+        <div class="footer-details">
+            <div class="page-btn-wrap">
+                <a href="#" class="btn-page btn-prev"><i class="icon ico-prev"></i><span class="font-body-1">이전</span></a>
+                <a href="#" class="btn-page btn-next"><span class="font-body-1">다음</span><i class="icon ico-next"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+</body>
+</html>
