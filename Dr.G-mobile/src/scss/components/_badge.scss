@@ -30,5 +30,15 @@
   &.badge-violet {
     background-color: rgba(97, 112, 255, 0.9);
   }
+
+  &.badge-yellow {
+    background-color: $yellow;
+    color: $gray-800 ;
+  }
+
+  &.badge-lg{
+    padding:vw(12) vw(18);
+    border-radius: vw(21);
+  }
 }
 
