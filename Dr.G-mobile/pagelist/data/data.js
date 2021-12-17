@@ -206,5 +206,11 @@ data.story = {
             category: 'story',
             page: '닥터지스토리_스킨리포트_상세페이지'
         },
+        {
+            stateClass: 'complete',
+            url: '닥터지스토리_Dr.Ann_영상_내가쓴댓글보기',
+            category: 'story',
+            page: '닥터지스토리_Dr.Ann_영상_내가쓴댓글보기'
+        },
     ]
 }
