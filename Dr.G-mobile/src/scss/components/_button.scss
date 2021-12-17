@@ -21,34 +21,88 @@
   color: $gray-fff;
 
   &:focus, &:hover {
+    background-color: $primary;
     color: $gray-fff;
+    box-shadow: none;
+  }
+
+  &:active {
+    background-color: $primary !important;
     box-shadow: none;
   }
 
   &.btn-border {
     background-color: #fff;
     color: $primary;
+
+    &:focus, &:hover {
+      background-color: #fff !important;
+      color: $primary;
+    }
+
+    &:active {
+      background-color: #fff  !important;
+    }
   }
 
   &.btn-black {
     background-color: $gray-800;
     border-color: $gray-800;
+    color: #fff;
+
+    &:focus, &:hover {
+      background-color: $gray-800;
+      border-color: $gray-800;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: $gray-800  !important;
+    }
   }
 
   &.btn-border-black {
     background-color: #fff;
     color: $gray-800;
+
+    &:focus, &:hover {
+      background-color: #fff;
+      color: $gray-800;
+    }
+
+    &:active {
+      background-color: #fff  !important;
+    }
   }
 
   &.btn-white {
     background-color: $gray-fff;
     border-color: $gray-fff;
     color: $gray-800;
+
+    &:focus, &:hover {
+      background-color: $gray-fff;
+      border-color: $gray-fff;
+      color: $gray-800;
+    }
+
+    &:active {
+      background-color: $gray-fff  !important;
+    }
   }
 
   &.btn-border-white {
     background-color: transparent;
     color: #fff;
+
+    &:focus, &:hover {
+      background-color: transparent;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: transparent  !important;
+    }
   }
 
   &.disabled {
