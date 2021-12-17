@@ -300,54 +300,18 @@
       background-color: #fff;
       border-radius: vw(12);
       padding: vw(20);
-
-      .content {
-        margin-bottom: vw(10);
-
-        p {
-          font-size: vw(15);
-          line-height: vw(22);
-          font-weight: 400;
-          color: #444;
-        }
-      }
-
-      + .item {
-        margin-top: vw(16);
-      }
-
-      &.manager {
-        margin-top: 0px;
-        background-color: #e2f5ff;
-        position: relative;
-
-        .info-area {
-          .icon {
-            + .nickname {
-              margin-left: 0px;
-            }
-          }
-        }
-
-        &:before {
-          content: '';
-          width: vw(20);
-          height: vw(20);
-          position: absolute;
-          top: vw(-18);
-          right: vw(24);
-          background-image: url("../img/common/ico-comment-triaggle.svg");
-          background-size: 100% 100%;
-        }
-      }
-
       .info-area {
         margin-bottom: vw(6);
         display: flex;
         align-items: center;
-
-        .icon {
+        .img {
           margin-right: vw(8);
+          width: vw(32);
+          height: vw(32);
+          img{
+            width: 100%;
+            height: 100%;
+          }
         }
 
         span {
@@ -379,6 +343,47 @@
           }
         }
       }
+      .content {
+        margin-bottom: vw(10);
+        p {
+          @include ellipsis(4);
+          font-size: vw(15);
+          line-height: vw(22);
+          font-weight: 400;
+          color: #444;
+        }
+      }
+
+      + .item {
+        margin-top: vw(16);
+      }
+
+      &.manager {
+        margin-top: 0px;
+        background-color: #e2f5ff;
+        position: relative;
+
+        .info-area {
+          .img {
+            + .nickname {
+              margin-left: 0px;
+            }
+          }
+        }
+
+        &:before {
+          content: '';
+          width: vw(20);
+          height: vw(20);
+          position: absolute;
+          top: vw(-18);
+          right: vw(24);
+          background-image: url("../img/common/ico-comment-triaggle.svg");
+          background-size: 100% 100%;
+        }
+      }
+
+
 
       .date {
         display: flex;
