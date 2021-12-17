@@ -350,7 +350,7 @@
           font-size: vw(15);
           line-height: vw(22);
           font-weight: 400;
-          color: #444;
+          color: $gray-800;
         }
       }
 
@@ -538,7 +538,7 @@
     }
   }
 
-  .board-box {
+  .comment-box {
     background-color: $gray-200;
     padding: vw(48) vw(24);
 
@@ -588,7 +588,7 @@
       }
     }
 
-    .comment-area {
+    .total-comment {
       .heading {
         display: flex;
         justify-content: space-between;
@@ -625,6 +625,63 @@
       .btn-wrap {
         margin-top: vw(44);
       }
+    }
+  }
+
+  .search-box {
+    padding: vw(48) vw(24) vw(78);
+
+    .font-h4 {
+      margin-bottom: vw(32);
+      color: $gray-800;
+    }
+
+    .input-search {
+      margin-bottom: vw(32);
+    }
+
+    .search-list {
+      .item {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        a {
+          display: flex;
+          align-items: center;
+        }
+
+        .img {
+          display: block;
+          float: left;
+          width: vw(156);
+          height: vw(87);
+          margin-right: vw(16);
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .title {
+          display: block;
+          float: left;
+          width: vw(155);
+          @include ellipsis(3);
+          color: $gray-800;
+          font-size: vw(15);
+          line-height: vw(22);
+        }
+
+        + .item {
+          margin-top: vw(24);
+        }
+      }
+    }
+
+    .btn-wrap {
+      margin-top: vw(48);
     }
   }
 

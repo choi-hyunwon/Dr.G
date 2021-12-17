@@ -178,17 +178,21 @@ data.story = {
     list: [
         {
             stateClass: 'complete',
-            url: '닥터지스토리_01인사이드닥터지_목록',
+            url: '닥터지스토리_인사이드닥터지_리스트',
             category: 'story',
-            page: '닥터지스토리_01인사이드닥터지_목록'
+            page: '닥터지스토리_인사이드닥터지_리스트'
         },
         {
             stateClass: 'complete',
-            url: '닥터지스토리_01인사이드닥터지_상세',
+            url: '닥터지스토리_인사이드닥터지_상세페이지',
             category: 'story',
-            page: '닥터지스토리_01인사이드닥터지_상세'
+            page: '닥터지스토리_인사이드닥터지_상세페이지'
+        },
+        {
+            stateClass: 'complete',
+            url: '닥터지스토리_Dr.Ahn영상_리스트',
+            category: 'story',
+            page: '닥터지스토리_Dr.Ahn영상_리스트'
         },
     ]
 }
-
-
