@@ -313,7 +313,7 @@
       }
 
       + .item {
-        margin-top: vw( );
+        margin-top: vw(16);
       }
 
       &.manager {
@@ -615,6 +615,10 @@
             margin-top: vw(12);
           }
         }
+      }
+
+      .btn-wrap {
+        margin-top: vw(44);
       }
     }
   }
