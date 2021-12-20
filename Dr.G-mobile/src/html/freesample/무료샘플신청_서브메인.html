@@ -1,10 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
 <body>
+<div class="wrap">
+    <!-- s header -->
+    <div class="header bg-primary header-slogan">
+        <div class="brand-logo"><a href="#"><img src="../../img/common/logo-white.svg" alt="Dr.G"></a></div>
+        <div class="btn-alert"><a href="#"><i class="icon ico-alert white"></i></a></div>
+    </div>
+    <!-- e header -->
+    <!-- s contents -->
+    <div class="container">
+        <div class="freesample-wrap">
+            <!--무료 샘플 신청 s-->
+            <section class="slogan-section">
+                <p class="title">무료 샘플 신청</p>
+                <p class="slogan">월 1회 피부 고민에 따른<br>
+                    <span>각보자 무료 샘플</span>을 신청해보세요.
+                </p>
+                <div class="img">
+                    <img src="../../img/@temp/img-free-sample.svg" alt="무료샘플리뉴얼이미지">
+                </div>
+            </section>
+            <!--무료 샘플 신청 e-->
 
+            <!--무료샘플구성안내 s-->
+            <section class="composition-section">
+                <p class="title">
+                    무료 샘플 구성안내
+                </p>
+                <ul class="sample-list">
+                    <li class="list bg-sample1">
+                        <span class="num">1</span>
+                        <div class="text">
+                            <p class="title">각질&클렌징</p>
+                            <p class="desc">클렌징부터 시작하는<br>건강한 피부바탕 만들기</p>
+                        </div>
+                    </li>
+                    <li class="list bg-sample2">
+                        <span class="num">2</span>
+                        <div class="text">
+                            <p class="title">보습 케어</p>
+                            <p class="desc">진정 강한 수분 보습으로<br>채우는 튼튼한 피부장벽</p>
+                        </div>
+                    </li>
+                    <li class="list bg-sample3">
+                        <span class="num">3</span>
+                        <div class="text">
+                            <p class="title">자외선 차단</p>
+                            <p class="desc">유해한 빛을 차단하는<br>꼼꼼한 피부 방어</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!--무료샘플구성안내 e-->
+
+            <!--이렇게 신청 하세요 s-->
+            <section class="application-section">
+                <p class="title">
+                    이렇게 신청하세요
+                </p>
+                <div class="step-list">
+                    <div class="step">
+                        <p class="title">STEP1</p>
+                        <i class=""></i>
+                        <p class="desc">
+                            AI 분석으로 <br>피부 상태를 확인
+                        </p>
+                    </div>
+                    <div class="dot-area">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="step">
+                        <p class="title">STEP2</p>
+                        <i class=""></i>
+                        <p class="desc">
+                            하단 버튼으로<br>
+                            무료 샘플 신청<br>
+                            <span>(월 1회)</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!--이렇게 신청 하세요 e-->
+
+            <!--무료 샘플 신청 주의사항 s-->
+            <section class="precautions-section">
+                <span class="title"><i class="icon ico-"></i>무료 샘플 신청 주의사항</span>
+                <ul class="precautions-list">
+                    <li class="list"><p>샘플 신청은 월 1회 가능하며, 재신청은 마지막 신청일로부터 30일 이후부터 가능합니다.</p></li>
+                    <li class="list"><p>매주 금요일에 우편으로 일괄발송되며 수령까지 2~3주 소요됩니다.(전주 수요일~금주 화요일 신청자 대상)</p></li>
+                    <li class="list"><p>주소지 오류로 인한 반송 시 재발송 되지 않으므로 정확한 주소를 꼭 확인해주세요.</p></li>
+                    <li class="list"><p>네이버, 카카오톡 간편가입으로 인해 연락처 및 주소지 미기재 시 샘플 발송에서 제외됩니다.</p></li>
+                    <li class="list"><p>마지막 AI 피부분석일로부터 30일이 지났다면 최신 테스트를 꼭 진행해야 합니다.</p></li>
+                    <li class="list"><p>최초 AI 피부분석 시 자동으로 무료샘플이 발송되며, 그 이후 별도 신청으로 가능합니다.</p></li>
+                </ul>
+            </section>
+            <!--무료 샘플 신청 주의사항 e-->
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+
+
+</div>
 </body>
 </html>
