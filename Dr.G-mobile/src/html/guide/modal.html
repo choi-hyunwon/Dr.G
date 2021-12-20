@@ -173,8 +173,7 @@
                     })();
                 </script>
             </div>
-
-            <p class="title font-h2">토스트팝업_클릭시 텍스트변경</p>
+            <p class="title font-h2">토스트팝업_type5</p>
             <div class="box">
                 <a href="#" class="btn btn-primary _toast-popup-open text">
                     <span>토스트팝업_선택시텍스트변경</span>
@@ -248,14 +247,53 @@
                     })();
                 </script>
             </div>
-
+            <p class="title font-h2">토스트팝업_type6</p>
+            <div class="box">
+                <!-- Button trigger modal -->
+                <a href="#" class="btn btn-primary _toast-popup-open search">
+                    토스트팝업_검색
+                </a>
+                <div class="toast-dim _toast-dim search">
+                    <div class="toast-popup">
+                        <div class="toast-content title">
+                            <div class="toast-header">
+                                <p class="title">제품명으로 검색하기</p>
+                                <a href="#" class="_toast-popup-close search icon ico-close-sm"></a>
+                            </div>
+                            <div class="toast-body">
+                                <p class="main-title">여러분의 <span>피부고민</span>을 들려주세요.</p>
+                                <p class="desc">작성한 댓글은 다음 편 영상 제작 시<br>참고 예정입니다. </p>
+                                <textarea placeholder="고민 채택 시, 마일리지 5,000점 증정!&#10닥터안이 직접 솔루션을 드립니다."></textarea>
+                                <p class="caption">자세한 피부고민 상담은 1:1 스킨 멘토링을 이용해주세요!</p>
+                            </div>
+                            <div class="toast-footer">
+                                <a href="#" class="btn btn-lg btn-secondary _toast-popup-close-title">댓글 작성하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--toastPopupScript-->
+                <script>
+                    (function () {
+                        $('._toast-popup-open.search').on('click', function () {
+                            $('._toast-dim.search').removeClass('hide').addClass('fade show').css('display', 'block');
+                        });
+                        $('._toast-popup-close.search').on('click', function () {
+                            $('._toast-dim.search').addClass('hide');
+                            setTimeout(() => {
+                                $('._toast-dim.search').removeClass('fade show').css('display', 'none');
+                            }, 400);
+                        });
+                    })();
+                </script>
+            </div>
             <p class="title font-h2">풀페이지_팝업</p>
             <div class="box">
                 <a href="#" class="btn btn-primary _toast-popup-open full">
                     <span>풀페이지_팝업</span>
                 </a>
                 <!--popup-->
-                <div class="full-popup _full-popup show">
+                <div class="full-popup _full-popup hide">
                     <div class="popup-content">
                         <div class="popup-header _popup-header">
                             <p class="title font-h3">내가 쓴 댓글 보기</p>
@@ -406,8 +444,6 @@
 
                 </script>
             </div>
-
-
             <p class="title font-h2">알럿팝업_type1</p>
             <div class="box text-center">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alertPopupType1">
