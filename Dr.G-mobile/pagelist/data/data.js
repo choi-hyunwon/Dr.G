@@ -71,6 +71,7 @@ data.guide = {
     ]
 }
 
+/*
 data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
@@ -85,9 +86,23 @@ data.mentoring = {
             url: '스킨멘토링_내역_상세페이지_답변대기상태',
             category: 'mentoring',
             page: '스킨멘토링_내역_상세페이지_답변대기상태'
+        },
+        {
+            stateClass: 'waiting',
+            url: '스킨멘토링_내역_수정페이지_STEP1',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_수정페이지_STEP1'
+        },
+        {
+            stateClass: 'waiting',
+            url: '스킨멘토링_내역_수정페이지_STEP2',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_수정페이지_STEP2'
         }
+
     ]
 }
+*/
 
 data.suggestion = {
     title: '고객제안',

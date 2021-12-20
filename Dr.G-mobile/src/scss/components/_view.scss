@@ -9,8 +9,10 @@
 .view-details{
   .header-details{
     /*layout.scss*/
+
   }
   .body-details{
+
     .area-title{
       padding: vw(20) vw(25) vw(32);
       text-align: center;
@@ -65,7 +67,7 @@
     }
     .area-desc{
       padding: vw(48) vw(24) 0;
-      .text{
+      >.text{
         word-break: keep-all;
         color: $gray-700;
         letter-spacing: 0;
@@ -135,6 +137,96 @@
 
       }
 
+      /*질문 title 영역*/
+      .guidance{
+        margin-bottom: vw(32);
+        .sub-desc{
+          padding-top: vw(12);
+          color: $gray-600;
+        }
+      }
+      /*질문 영역*/
+      .asking{
+        padding-bottom: vw(48);
+        .font-h6{
+          color: $gray-800;
+          margin-bottom: vw(12);
+          padding-top: vw(32);
+          &:first-of-type{
+            padding-top: 0;
+          }
+        }
+        .select-popup{
+          margin-bottom: 0;
+        }
+        .badge-box{
+          .badge{
+            margin-right: vw(6);
+            margin-bottom: vw(12);
+            background-color: $gray-300;
+            color: $gray-800;
+            &.active{
+              background-color: $yellow;
+              font-weight: bold;
+            }
+          }
+        }
+        .font_right{
+          text-align: right;
+          padding-top: vw(20);
+          font-weight: bold;
+          font-size: vw(18);
+          color: $gray-800;
+        }
+        .question-box{
+          .habit{
+            li{
+              background-color: $gray-fff;
+              border-radius: vw(16);
+              font-size: vw(16);
+              color: $gray-800;
+              font-weight: 700;
+              margin-bottom: vw(16);
+              padding: vw(20);
+              &:last-of-type{margin-bottom: 0}
+              >p{
+                margin-bottom: vw(16);
+                .num{
+                  color: $gray-600;
+                  margin-right: vw(4);
+                }
+              }
+              >div{
+                display: flex;
+                justify-content: space-between;
+                .btn{
+                  width: 50%;
+                  background-color: transparent;
+                  border: 1px solid #dddddd;
+                  color: $gray-500;
+                  font-weight: 500;
+                  padding: 0;
+                  margin-right: vw(8);
+                  &:last-of-type{
+                    margin-right: 0;
+                  }
+                  &:active{
+                    background-color: transparent!important;
+                  }
+                  &.active{
+                    background-color: $blue!important;
+                    color: $gray-fff;
+                    border: unset;
+                    font-weight: 700;
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+
     }
     .unfold-box{
       margin-top: vw(48);
@@ -158,7 +250,7 @@
           &:first-of-type{
             margin-bottom: vw(22);
           }
-         &:last-of-type{
+          &:last-of-type{
           margin-bottom: 0;
          }
           .sub-title{
@@ -275,9 +367,34 @@
         margin-bottom: vw(12);
       }
     }
+
+    /*step*/
+    .step-heading{
+      padding: vw(20) 0 vw(37);
+      margin: 0 auto;
+      border: 1px solid red;
+      background-color: $gray-fff;
+    }
+
+
+
+
   }
   .footer-details{
     border-top: 1px solid $gray-400;
     padding: vw(32) vw(20) vw(48);
+    &.bg-dark{
+      background-color: $gray-800!important;
+      padding: vw(20);
+      .page-btn-wrap{
+        a{
+          color: $gray-fff;
+        }
+        /*오른쪽 정렬일 경우 (기본은 space-between)*/
+        &.btn-next{
+          justify-content: flex-end;
+        }
+      }
+    }
   }
 }

@@ -68,7 +68,7 @@
                                     list.on("click", function (e) {
                                         let textValue = $(this).find('span').text();
                                         function ChangeText() {
-                                            $('._toast-popup-open.text').find('span').text(textValue);
+                                            $('._toast-popup-open.text').find('span').text(textValue).css({'color':'#444444','font-weight':'bold'});
                                         }
                                         if (list.hasClass("active")) {
                                             list.removeClass("active");
@@ -158,7 +158,7 @@
                                         let textValue = $(this).find('span').text();
                                         // console.log(textValue);
                                         function ChangeText() {
-                                            $('._toast-popup-open.age').find('span').text(textValue);
+                                            $('._toast-popup-open.age').find('span').text(textValue).css({'color':'#444444','font-weight':'bold'});
                                         }
                                         if (list.hasClass("active")) {
                                             list.removeClass("active");

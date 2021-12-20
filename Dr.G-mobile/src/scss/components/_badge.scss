@@ -36,6 +36,11 @@
     color: $gray-800 ;
   }
 
+  &.badge-lightgray {
+    background-color: $gray-300;
+    color: $gray-800 ;
+  }
+
   &.badge-lg{
     padding:vw(12) vw(18);
     border-radius: vw(21);
