@@ -113,6 +113,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      .title{
+        font-weight: 700;
+      }
       &.header-white{
         background-color: $gray-fff;
       }
