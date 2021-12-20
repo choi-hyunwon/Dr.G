@@ -214,3 +214,32 @@ data.story = {
         },
     ]
 }
+data.freesample = {
+    title: '무료샘플신청',
+    list: [
+        {
+            stateClass: 'working',
+            url: '무료샘플신청_서브메인',
+            category: 'freesample',
+            page: '무료샘플신청_서브메인'
+        },
+        {
+            stateClass: 'working',
+            url: '무료샘플신청_무료샘플신청팝업',
+            category: 'freesample',
+            page: '무료샘플신청_무료샘플신청팝업'
+        },
+        {
+            stateClass: 'working',
+            url: '무료샘플신청_나의신청내역',
+            category: 'freesample',
+            page: '무료샘플신청_나의신청내역'
+        },
+        {
+            stateClass: 'working',
+            url: '무료샘플신청_나의신청내역_수정팝업',
+            category: 'freesample',
+            page: '무료샘플신청_나의신청내역_수정팝업'
+        },
+    ]
+}
