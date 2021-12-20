@@ -359,14 +359,14 @@
       }
 
       &.manager {
-        margin-top: 0px;
+        margin-top: 0;
         background-color: #e2f5ff;
         position: relative;
 
         .info-area {
           .img {
             + .nickname {
-              margin-left: 0px;
+              margin-left: 0;
             }
           }
         }
@@ -707,8 +707,20 @@
 
   .skin-report-detail {
     .heading {
-      padding: 0 vw(24);
-      margin-bottom: vw(64);
+      padding: vw(21) vw(24) vw(32);
+      text-align: center;
+
+      .font-h2 {
+        margin-bottom: vw(12);
+      }
+
+      .date {
+        font-family: $poppins-regular;
+        font-size: vw(13);
+        line-height: vw(20);
+        text-align: center;
+        color: $gray-600;
+      }
     }
 
     .editor-area {
@@ -727,13 +739,44 @@
       }
     }
 
-    .list {
-      padding: vw(48) vw(24);
+    .list-wrap {
+      padding: vw(48) 0;
       background-color: $gray-200;
 
       .font-h4 {
         margin-bottom: vw(24);
         color: $gray-800;
+        padding: 0 vw(24);
+      }
+
+      .list {
+        overflow-x: auto;
+        margin-bottom: vw(48);
+
+        ul {
+          margin-left: vw(24);
+        }
+
+        .item {
+          width: vw(156);
+          margin-bottom: 0;
+          margin-right: vw(16);
+
+          &:nth-child(2n+1) {
+            clear: none;
+          }
+          &:nth-child(2n) {
+            padding-left: 0;
+          }
+
+          &:nth-child(2n-1) {
+            padding-right: 0;
+          }
+
+          .img {
+            height: vw(156);
+          }
+        }
       }
     }
   }

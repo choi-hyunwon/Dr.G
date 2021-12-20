@@ -201,7 +201,7 @@ data.story = {
             page: '닥터지스토리_스킨리포트_리스트'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: '닥터지스토리_스킨리포트_상세페이지',
             category: 'story',
             page: '닥터지스토리_스킨리포트_상세페이지'
