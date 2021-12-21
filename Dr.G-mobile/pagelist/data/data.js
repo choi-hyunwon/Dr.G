@@ -239,16 +239,16 @@ data.freesample = {
             page: '무료샘플신청_서브메인'
         },
         {
+            stateClass: 'complete',
+            url: '무료샘플신청_나의신청내역',
+            category: 'freesample',
+            page: '무료샘플신청_나의신청내역'
+        },
+        {
             stateClass: 'working',
             url: '무료샘플신청_무료샘플신청팝업',
             category: 'freesample',
             page: '무료샘플신청_무료샘플신청팝업'
-        },
-        {
-            stateClass: 'working',
-            url: '무료샘플신청_나의신청내역',
-            category: 'freesample',
-            page: '무료샘플신청_나의신청내역'
         },
         {
             stateClass: 'working',
