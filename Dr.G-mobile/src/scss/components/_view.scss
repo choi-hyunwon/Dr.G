@@ -225,9 +225,19 @@
             }
           }
         }
+        >textarea{
+          margin-bottom: vw(12);
+        }
+        .complete{
+          >.img{
+
+          }
+        }
       }
 
     }
+
+    /*생활습관 펼쳐보기*/
     .unfold-box{
       margin-top: vw(48);
       border-top:1px solid $gray-400;
@@ -316,6 +326,7 @@
 
       }
     }
+
     .btn-wrap{
       text-align: center;
       padding: vw(32) 0;
@@ -347,7 +358,7 @@
     .answer-wrap{
       background-color: #f8f8f8;
       padding: vw(32) vw(57) vw(32) vw(24);
-      margin: vw(17) 0;
+      margin-top: vw(48);
       .badge{
         margin-bottom: vw(8);
       }
@@ -376,6 +387,23 @@
       background-color: $gray-fff;
     }
 
+    /*이용약관 펼쳐보기*/
+    .terms{
+      .title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        padding: vw(17) vw(24);
+        background-color: $gray-fff;
+        border-top: 1px solid $gray-400;
+      }
+      .list-with-dot{
+        padding: vw(32) vw(23);
+        display: none;
+      }
+
+    }
 
 
 
