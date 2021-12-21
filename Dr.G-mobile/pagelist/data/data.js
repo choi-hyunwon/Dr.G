@@ -71,8 +71,7 @@ data.guide = {
     ]
 }
 
-/*
-data.mentoring = {
+/*data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
         {
@@ -98,11 +97,22 @@ data.mentoring = {
             url: '스킨멘토링_내역_수정페이지_STEP2',
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP2'
+        },
+        {
+            stateClass: 'waiting',
+            url: '스킨멘토링_내역_수정페이지_STEP3',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_수정페이지_STEP3'
+        },
+        {
+            stateClass: 'waiting',
+            url: '스킨멘토링_내역_수정페이지_STEP4',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_수정페이지_STEP4'
         }
 
     ]
-}
-*/
+}*/
 
 data.suggestion = {
     title: '고객제안',
