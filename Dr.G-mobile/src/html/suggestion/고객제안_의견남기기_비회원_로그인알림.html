@@ -22,22 +22,6 @@
         </div>
     </div>
 </div>
-<!--toastPopupScript-->
-<script>
-    (function () {
-        /*버튼에 _toast-popup-open을 클래스에 넣으면 버튼효과적용됩니다.*/
-        $('._toast-popup-open').click(function () {
-            $('._toast-dim-no-title').removeClass('hide').addClass('fade show').css('display','block');
-        });
-        $('._toast-popup-close').click(function () {
-            $('._toast-dim-no-title').addClass('hide');
-            setTimeout(() => {
-                $('._toast-dim-no-title').removeClass('fade show').css('display','none');
-            }, 400);
-        });
-    })();
-</script>
-
 
 <!--페이지 보여주기 위한 show 실행 (생략가능)-->
 <script>
