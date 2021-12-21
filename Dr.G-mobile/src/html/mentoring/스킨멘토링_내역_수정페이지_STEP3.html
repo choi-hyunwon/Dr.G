@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+
+    <!-- s contents -->
+    <div class="container view-details">
+        <div class="header-details">
+            <a href="#"><i class="icon ico-close"></i></a>
+        </div>
+        <div class="body-details bg-gray">
+            <div class="step-heading">
+                step3
+            </div>
+
+            <div class="area-desc">
+                <div class="guidance">
+                    <p class="font-h3 font-bold">조수인님의<br><span class="color-blue">피부고민</span>을 스킨멘토에게<br>자유롭게 들려주세요.</p>
+                    <p class="font-body-1 sub-desc">고민되는 부위의 사진을 첨부해주시면<br>정확한 상담에 도움이 됩니다.</p>
+                </div>
+                <div class="asking">
+                    <input type="text" title="피부고민 입력" class="form-control" placeholder="피부고민 입력">
+
+
+                    <textarea title="피부고민을 들려주세요" class="form-control form-control-lg" placeholder="피부고민을 들려주세요"></textarea>
+
+                    <div class="upload-box">
+                        <div class="custom-file img-upload">
+                            <input type="file" class="custom-file-input" id="imgFile" accept="image/*">
+                            <p class="num"><span>4</span>/5</p>
+                        </div>
+                        <div class="upload-list">
+                            <ul>
+                                <li><img src="../../img/@temp/sample01.png" alt="temp img 1">
+                                    <a href="#" class="delete-upload">삭제</a>
+                                </li>
+                                <li><img src="../../img/@temp/sample02.png" alt="temp img 2">
+                                    <a href="#" class="delete-upload">삭제</a>
+                                </li>
+                                <li><img src="../../img/@temp/sample03.png" alt="temp img 3">
+                                    <a href="#" class="delete-upload">삭제</a>
+                                </li>
+                                <li><img src="../../img/@temp/sample04.png" alt="temp img 4">
+                                    <a href="#" class="delete-upload">삭제</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="divider">
+
+                    <div class="custom-control custom-checkbox checkbox-sm">
+                        <input type="checkbox" class="custom-control-input" id="notice" checked="">
+                        <label class="custom-control-label" for="notice">스킨 멘토의 답변이 등록되면, 알림을 보내주세요</label>
+                    </div>
+
+                    <div class="custom-control custom-checkbox checkbox-sm">
+                        <input type="checkbox" class="custom-control-input" id="suggestion">
+                        <label class="custom-control-label" for="suggestion">피부고민에 맞는 닥터지 제품을 추천 받을게요!</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="terms">
+                <div class="title">읽어주세요!<i class="icon ico-plus-md"></i></div>
+                <ul class="list-with-dot">
+                    <li>정확한 솔루션을 위해 사진을 남겨주세요.<br>
+                        (얼굴 정면, 고민 부위 등) 사진은 분석용으로만 활용됩니다.</li>
+                    <li>스킨 멘토링 외에 다른 목적이나 부적절한 내용을 등록하신 경우 삭제 처리 될 수 있습니다.</li>
+                    <li>피부과 전문의 상담이 필요한 경우 인근 병원에서 전문적인 상담을 받으시는 것을 추천합니다.</li>
+                    <li>작성하신 스킨 멘토링 내용은 고운세상 코스메틱의 마케팅 자료로 활용될 수 있습니다.</li>
+                </ul>
+            </div>
+            <script>
+                $(document).ready(function() {
+                    $('.terms .title').on('click',function (){
+                        if (!$(this).hasClass('_title')) {
+                            $(this).children().removeClass('ico-plus-md').addClass('ico-minus-md');
+                            $(this).addClass('_title');
+                            $(this).siblings().slideDown(200);
+                        }else {
+                            $(this).children().removeClass('ico-minus-md').addClass('ico-plus-md');
+                            $(this).removeClass('_title');
+                            $(this).siblings().slideUp(200);
+                        }
+                    })
+                });
+            </script>
+
+
+        </div>
+        <div class="footer-details bg-dark">
+            <div class="page-btn-wrap">
+                <a href="#" class="btn-page">
+                    <i class="icon ico-prev white"></i><span class="font-body-1">이전</span>
+                </a>
+                <a href="#" class="btn-page">
+                    <span class="font-body-1">작성완료</span><i class="icon ico-next white"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+</body>
+</html>

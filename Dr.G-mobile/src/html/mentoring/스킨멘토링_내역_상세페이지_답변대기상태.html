@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="unfold-box">
-                <div class="title">나의 피부고민 및 생활습관 펼쳐보기 <i class="icon ico-plus"></i></div>
+                <div class="title">나의 피부고민 및 생활습관 펼쳐보기 <i class="icon ico-plus-sm"></i></div>
                 <ul class="list">
                     <li>
                         <p class="sub-title">내가 선택한 피부고민</p>
@@ -71,12 +71,12 @@
                 $(document).ready(function() {
                     $('.unfold-box .title').on('click',function (){
                         if (!$(this).hasClass('_title')) {
-                            $(this).children().removeClass('ico-plus').addClass('ico-minus');
+                            $(this).children().removeClass('ico-plus-sm').addClass('ico-minus-sm');
                             $(this).addClass('_title');
                             $(this).parent().addClass('_unfold');
                             $(this).siblings().slideDown(200);
                         }else {
-                            $(this).children().removeClass('ico-minus').addClass('ico-plus');
+                            $(this).children().removeClass('ico-minus-sm').addClass('ico-plus-sm');
                             $(this).removeClass('_title');
                             $(this).parent().removeClass('_unfold');
                             $(this).siblings().slideUp(200);

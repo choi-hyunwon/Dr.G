@@ -83,6 +83,13 @@
                         </ul>
 
                     </div>
+
+                    <script>
+                        $('.question-box .habit li .btn').on('click', function () {
+                            $(this).parents('li').find('.btn').removeClass('active')
+                            $(this).addClass('active');
+                        })
+                    </script>
                 </div>
             </div>
 
