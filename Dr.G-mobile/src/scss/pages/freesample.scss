@@ -175,7 +175,6 @@
       margin-bottom: vw(32);
 
     }
-
     .step-list {
       padding: 0px vw(24);
       display: flex;
@@ -234,7 +233,6 @@
         }
       }
     }
-
     .dot-area {
       display: flex;
       align-items: center;
@@ -252,7 +250,6 @@
       }
     }
   }
-
   .precautions-section {
     background-color: $gray-200;
     padding: 0px vw(24) vw(76);
@@ -265,6 +262,10 @@
       letter-spacing: -0.005em;
       color: $gray-800;
       margin-bottom: vw(12);
+      .icon{
+        transform: translateY(vw(-1));
+        margin-right: vw(4.5);
+      }
     }
 
     .precautions-list {

@@ -233,7 +233,7 @@ data.freesample = {
     title: '무료샘플신청',
     list: [
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '무료샘플신청_서브메인',
             category: 'freesample',
             page: '무료샘플신청_서브메인'

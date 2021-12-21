@@ -10,6 +10,7 @@
  v.0.8 선미 : ico-plus / ico-minus 추가 -- 2021.12.16
  v.0.9 태윤 : ico-comment-info-docter, ico-comment-info-basic 추가 -- 2021.12.17
  v.1.0 태윤 : ico-prev , icon-next  &.white 추가 -- 2021.12.17
+ v.1.0 태윤 : ico-alert-circle 추가 -- 2021.12.17
 |----------------------------------|
 */
 .icon {
@@ -165,4 +166,8 @@
 
 .ico-youtube {
   @include background-img ($width: 20, $height: 20, $category: 'story', $img: 'ico-youtube.svg');
+}
+
+.ico-alert-circle {
+  @include background-img ($width: 15, $height: 15, $category: 'common', $img: 'ico-alert-circle.svg');
 }

@@ -61,9 +61,9 @@
                     이렇게 신청하세요
                 </p>
                 <div class="step-list">
-                    <div class="step">
+                    <div class="step active">
                         <p class="title">STEP1</p>
-                        <i class="icon ico-skin-scan-off"></i>
+                        <i class="icon ico-skin-scan-on"></i>
                         <p class="desc">
                             AI 분석으로 <br>피부 상태를 확인
                         </p>
@@ -88,7 +88,7 @@
 
             <!--무료 샘플 신청 주의사항 s-->
             <section class="precautions-section">
-                <span class="title"><i class="icon ico-"></i>무료 샘플 신청 주의사항</span>
+                <p class="title"><i class="icon ico-alert-circle"></i>무료 샘플 신청 주의사항</p>
                 <ul class="precautions-list">
                     <li class="list"><p>샘플 신청은 월 1회 가능하며, 재신청은 마지막 신청일로부터 30일 이후부터 가능합니다.</p></li>
                     <li class="list"><p>매주 금요일에 우편으로 일괄발송되며 수령까지 2~3주 소요됩니다.(전주 수요일~금주 화요일 신청자 대상)</p></li>
@@ -99,6 +99,38 @@
                 </ul>
             </section>
             <!--무료 샘플 신청 주의사항 e-->
+
+            <!--무료 샘플 신청 주의사항 스크립트 s-->
+            <script>
+
+                (function introScroll() {
+                    let scrollTopAction = $('.application-section').offset().top
+                    let step = $('.application-section > .step-list > .step')
+                    $(this).scroll(function () {
+                        var scrollTop = $(this).scrollTop();
+                        // console.log(st);
+                        if (scrollTop > scrollTopAction) {
+                            setTimeout(() => {
+                                    $(step).eq(0).removeClass('active');
+                                    $(step).eq(0).children('.ico-skin-scan-on')
+                                        .removeClass('ico-skin-scan-on')
+                                        .addClass('ico-skin-scan-off')
+                                    $(step).eq(1).addClass('active');
+                                    $(step).eq(1).children('.ico-phone-application-off')
+                                        .removeClass('ico-phone-application-off')
+                                        .addClass('ico-phone-application-on')
+                                    return;
+                                }
+                                , 4000);
+
+
+                        }
+                    });
+                }());
+
+
+            </script>
+            <!--무료 샘플 신청 주의사항 스크립트 e-->
         </div>
     </div>
     <!-- e contents -->
