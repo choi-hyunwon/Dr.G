@@ -21,7 +21,7 @@
         });
 
         // filter tab click event
-        $('._filterTab a').on('click',function (){
+        $('._filterTab a').on('click', function () {
             $(this).addClass('active').siblings().removeClass('active')
         })
 
@@ -37,5 +37,52 @@
                 $(this).children('.num').text(number + 1)
             }
         })
+
+        // popup on off
+        function popup(){
+            $('._toast-popup-open.text').on('click',function () {
+                let select = $('._toast-popup.text')
+                select.removeClass('hide').addClass('fade show').css('display', 'block');
+            });
+        }
+        function List() {
+            let list = $('._toast-popup.text .select-list > .list');
+            function hidePopup() {
+                $('._toast-popup.text').addClass('hide');
+                setTimeout(() => {
+                    $('._toast-popup.text').removeClass('fade show').css('display', 'none');
+                }, 400);
+            }
+            /*클릭시 텍스트 변경*/
+            $(document).ready(function () {
+                list.on("click", function (e) {
+                    let textValue = $(this).find('span').text();
+
+                    function ChangeText() {
+                        $('._toast-popup-open.text').find('span').text(textValue).css({
+                            'color': '#444444',
+                            'font-weight': 'bold'
+                        });
+                    }
+
+                    if (list.hasClass("active")) {
+                        list.removeClass("active");
+                        $(this).addClass("active");
+                        hidePopup();
+                        ChangeText();
+                    } else {
+                        $(this).addClass("active")
+                        hidePopup();
+                        ChangeText();
+                    }
+                });
+            });
+        }
+
+        function init() {
+            popup();
+            List()
+        }
+        init();
     })
 </script>
