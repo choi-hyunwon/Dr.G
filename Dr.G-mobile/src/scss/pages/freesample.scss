@@ -4,6 +4,7 @@
 |------------------------------------|
 */
 .freesample-wrap {
+
   .slogan-section {
     padding: vw(20) vw(24) vw(32);
     background-color: $primary;
@@ -166,6 +167,7 @@
   .application-section {
     background-color: $gray-200;
     padding: vw(76) vw(24);
+
     .title {
       font-size: vw(28);
       font-weight: 700;
@@ -175,11 +177,13 @@
       margin-bottom: vw(32);
 
     }
+
     .step-list {
       padding: 0px vw(24);
       display: flex;
       justify-content: space-between;
       margin-bottom: vw(48);
+
       .step {
         &.active {
           .desc {
@@ -191,6 +195,7 @@
 
           }
         }
+
         .title {
           font-family: $poppins-semiBold;
           font-weight: 600;
@@ -201,6 +206,7 @@
           text-align: center;
           margin-bottom: vw(8);
         }
+
         .desc {
           font-size: vw(16);
           font-weight: 500;
@@ -216,27 +222,34 @@
           }
 
         }
+
         .icon {
           margin-bottom: vw(12);
         }
+
         .ico-skin-scan-off {
           @include background-img($width: 106, $height: 106, $category: 'freesample', $img: 'ico-skin-scan-off.svg');
         }
+
         .ico-skin-scan-on {
           @include background-img($width: 106, $height: 106, $category: 'freesample', $img: 'ico-skin-scan-on.svg');
         }
+
         .ico-phone-application-off {
           @include background-img($width: 106, $height: 106, $category: 'freesample', $img: 'ico-phone-application-off.svg');
         }
+
         .ico-phone-application-on {
           @include background-img($width: 106, $height: 106, $category: 'freesample', $img: 'ico-phone-application-on.svg');
         }
       }
     }
+
     .dot-area {
       display: flex;
       align-items: center;
       transform: translateY(vw(-23));
+
       .dot {
         width: vw(3);
         height: vw(3);
@@ -250,6 +263,7 @@
       }
     }
   }
+
   .precautions-section {
     background-color: $gray-200;
     padding: 0px vw(24) vw(76);
@@ -262,40 +276,173 @@
       letter-spacing: -0.005em;
       color: $gray-800;
       margin-bottom: vw(12);
-      .icon{
+
+      .icon {
         transform: translateY(vw(-1));
         margin-right: vw(4.5);
       }
     }
 
-    .precautions-list {
+
+  }
+
+  .myapplication-section {
+    .text-area {
+      padding: vw(20) vw(24) vw(24);
+
+      .title {
+        font-size: vw(32);
+        font-weight: 700;
+        line-height: vw(44);
+        letter-spacing: -0.01em;
+        color: $gray-900;
+        margin-bottom: vw(12);
+
+        span {
+          color: $primary;
+        }
+      }
+
+      .slogan {
+        font-size: vw(16);
+        font-weight: 400;
+        line-height: vw(24);
+        letter-spacing: -0.005em;
+        color: $gray-700;
+      }
+    }
+  }
+
+  .myapplicationlist-section {
+    background-color: $gray-200;
+    padding: vw(48) vw(24) vw(76);
+
+    .dot-list {
+      margin-bottom: vw(32);
+
       .list {
-        position: relative;
-        margin-bottom: vw(8);
+        p {
+          color: $gray-800;
+
+          > span {
+            color: $gray-500;
+          }
+        }
+      }
+
+
+    }
+
+    .info-list {
+      .list {
+        padding: vw(20);
+        background-color: $gray-fff;
+        border-radius: vw(16);
+        margin-bottom: vw(16);
 
         &:nth-last-of-type(1) {
           margin-bottom: 0px;
         }
 
-        > p {
-          color: $gray-600;
-          font-size: vw(13);
-          font-weight: 400;
-          line-height: vw(18);
-          letter-spacing: -0.005em;
-          padding-left: vw(8);
+        .list-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: vw(8);
+
+          .date {
+            font-family: $poppins-semiBold;
+            font-size: vw(15);
+            font-weight: 600;
+            line-height: vw(22);
+            letter-spacing: -0.005em;
+            color: $gray-900;
+
+            span {
+              margin-left: vw(4);
+            }
+          }
         }
 
-        &:before {
-          top: vw(7);
-          content: '';
-          width: vw(3);
-          height: vw(3);
-          border-radius: 50%;
-          background-color: $gray-600;
+        .list-body {
+          .info {
+            display: flex;
+            &.address{
+              margin-bottom: vw(8);
+            }
+            .title {
+              font-size: vw(13);
+              font-style: normal;
+              font-weight: 700;
+              line-height: vw(18);
+              letter-spacing: -0.005em;
+              margin-right: vw(6);
+              color: $gray-700;
+            }
 
-          position: absolute;
+            .desc {
+              color: $gray-700;
+              word-break: keep-all;
+              flex: vw(220) 0 0;
+              font-size: vw(13);
+              font-weight: 400;
+              line-height: vw(18);
+              letter-spacing: -0.005em;
+            }
+
+          }
         }
+
+        .list-footer {
+          padding-top: vw(16);
+          display: flex;
+          justify-content: center;
+          .btn {
+            padding-left: vw(12);
+            padding-right: vw(12);
+            max-width: vw(83);
+            min-width: vw(83);
+            &:nth-child(1){
+              margin-right: vw(8);
+            }
+          }
+        }
+      }
+    }
+
+    .btn-wrap{
+      padding-top: vw(48);
+    }
+  }
+
+  /*컴포넌트*/
+  .dot-list {
+    .list {
+      position: relative;
+      margin-bottom: vw(8);
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+      }
+
+      > p {
+        color: $gray-600;
+        font-size: vw(13);
+        font-weight: 400;
+        line-height: vw(18);
+        letter-spacing: -0.005em;
+        padding-left: vw(8);
+      }
+
+      &:before {
+        top: vw(7);
+        content: '';
+        width: vw(3);
+        height: vw(3);
+        border-radius: 50%;
+        background-color: $gray-600;
+
+        position: absolute;
       }
     }
   }
