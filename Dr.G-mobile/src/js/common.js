@@ -54,9 +54,10 @@ front.common = (function () {
         /* modal-select */
         $('._toast-popup .select-list > .list').on('click', function (e) {
             let textValueParent = $(this).parents('._toast-popup');
-            let textValueSelectPopup = $(this).parents('.select-popup').children('._toast-popup-open');
+            let toastPopup = $('._toast-popup-open');
+            let toastPopupText = $('._toast-popup-open.text');
+            let toastPopupAge = $('._toast-popup-open.age');
             let textValue = $(this).find('span').text();
-
 
             function hidePopup() {
                 textValueParent.addClass('hide');
@@ -67,22 +68,24 @@ front.common = (function () {
             }
 
             function ChangeText() {
-                textValueSelectPopup.find('span').text(textValue).css({
-                    'color': '#444444',
-                    'font-weight': 'bold'
-                });
+                if (toastPopup.hasClass('text') === true){
+                    toastPopupText.find('span').text(textValue).css({
+                        'color': '#444444',
+                        'font-weight': 'bold'
+                    });
+                }
+                else if (toastPopup.hasClass('age') === true){
+                    toastPopupAge.find('span').text(textValue).css({
+                        'color': '#444444',
+                        'font-weight': 'bold'
+                    });
+                }
             }
 
-            if ($('._toast-popup .select-list > .list').hasClass("active")) {
-                $(this).siblings().removeClass("active");
-                $(this).addClass("active");
-                hidePopup();
-                ChangeText();
-            } else {
-                $(this).addClass("active")
-                hidePopup();
-                ChangeText();
-            }
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active");
+            hidePopup();
+            ChangeText();
 
 
         })
