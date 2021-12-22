@@ -101,69 +101,71 @@ front.common = (function () {
     var selectChange = function selectChange() {
         let list = $('._toast-popup')
         let selectValue = $('._toast-popup .select-list > .list');
+        let toastPopupOpen = $('._toast-popup-open');
 
-
-
-        if (list.hasClass('text') === true) {
-            $('._toast-popup').addClass('hide');
-
-            setTimeout(() => {
-                list.removeClass('fade show').css('display', 'none');
-            }, 400);
-            $(document).ready(function () {
-                selectValue.on("click", function (e) {
-                    let textValue = $(this).find('span').text();
-                    function ChangeText() {
-                        $('._toast-popup-open').find('span').text(textValue).css({
-                            'color': '#444444',
-                            'font-weight': 'bold'
-                        });
-                    }
-
-
-                    if (list.hasClass("active")) {
-                        list.removeClass("active");
-                        $(this).addClass("active");
-                        hidePopup();
-                        ChangeText();
-                    } else {
-                        $(this).addClass("active")
-                        hidePopup();
-                        ChangeText();
-                    }
-                });
-            });
-
-        } else if (list.hasClass('age') === true) {
-            $('._toast-popup').addClass('hide');
+        function hidePopup() {
+            list.addClass('hide');
             setTimeout(() => {
                 $('._toast-popup.age').removeClass('fade show').css('display', 'none');
             }, 400);
+        }
 
-            $(document).ready(function () {
-                list.on("click", function (e) {
-                    let textValue = $(this).find('span').text();
-
-                    function ChangeText() {
-                        $('._toast-popup-open.age').find('span').text(textValue).css({
-                            'color': '#444444',
-                            'font-weight': 'bold'
-                        });
-                    }
-
-                    if (list.hasClass("active")) {
-                        list.removeClass("active");
-                        $(this).addClass("active");
-                        hidePopup();
-                        ChangeText();
-                    } else {
-                        $(this).addClass("active")
-                        hidePopup();
-                        ChangeText();
-                    }
-                });
+        function selectText() {
+            selectValue.on("click", function (e) {
+                let textValue = $(this).find('span').text();
+                function ChangeText() {
+                    toastPopupOpen.find('span').text(textValue).css({
+                        'color': '#444444',
+                        'font-weight': 'bold'
+                    });
+                }
+                if (selectValue.hasClass("active") === true) {
+                    textValue.removeClass("active");
+                    $(this).addClass("active");
+                    hidePopup();
+                    ChangeText();
+                } else {
+                    $(this).addClass("active")
+                    hidePopup();
+                    ChangeText();
+                }
             });
         }
+
+
+        if (list.hasClass('text') === true) {
+            hidePopup();
+            selectText();
+        }
+        // else if (list.hasClass('age') === true) {
+        //     $('._toast-popup').addClass('hide');
+        //     setTimeout(() => {
+        //         $('._toast-popup.age').removeClass('fade show').css('display', 'none');
+        //     }, 400);
+        //     $(document).ready(function () {
+        //         list.on("click", function (e) {
+        //             let textValue = $(this).find('span').text();
+        //
+        //             function ChangeText() {
+        //                 $('._toast-popup-open.age').find('span').text(textValue).css({
+        //                     'color': '#444444',
+        //                     'font-weight': 'bold'
+        //                 });
+        //             }
+        //
+        //             if (list.hasClass("active")) {
+        //                 list.removeClass("active");
+        //                 $(this).addClass("active");
+        //                 hidePopup();
+        //                 ChangeText();
+        //             } else {
+        //                 $(this).addClass("active")
+        //                 hidePopup();
+        //                 ChangeText();
+        //             }
+        //         });
+        //     });
+        // }
     }
 
     return {
