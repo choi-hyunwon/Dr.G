@@ -6,6 +6,7 @@
  v.0.4 주연 : vw 적용 -- 2021.12.14
  v.0.5 주연 : border case 추가 -- 2021.12.17
  v.0.6 선미 : focus, active (box-shadow: none!important;) 추가 -- 2021.12.20
+ v.0.7 선미 : btn-blue 추가 -- 2021.12.22
 |----------------------------------|
 */
 .btn {
@@ -103,6 +104,22 @@
 
     &:active {
       background-color: transparent  !important;
+    }
+  }
+
+  &.btn-blue {
+    background-color: $blue;
+    border-color: $blue;
+    color: $gray-fff;
+
+    &:focus, &:hover {
+      background-color: $blue;
+      border-color: $blue;
+      color: $gray-fff;
+    }
+
+    &:active {
+      background-color: $blue !important;
     }
   }
 

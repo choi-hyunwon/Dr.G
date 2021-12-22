@@ -68,10 +68,16 @@ data.guide = {
             category: 'guide',
             page: 'badge'
         },
+        {
+            stateClass: 'complete',
+            url: 'file',
+            category: 'guide',
+            page: 'file'
+        },
     ]
 }
 
-/*data.mentoring = {
+data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
         {
@@ -112,7 +118,7 @@ data.guide = {
         }
 
     ]
-}*/
+}
 
 data.suggestion = {
     title: '고객제안',
