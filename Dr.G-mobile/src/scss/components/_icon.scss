@@ -11,6 +11,7 @@
  v.0.9 태윤 : ico-comment-info-docter, ico-comment-info-basic 추가 -- 2021.12.17
  v.0.10 태윤 : ico-prev , icon-next  &.white 추가 -- 2021.12.17
  v.0.11 선미 : ico-plus -> ico-plus-sm 변경 , ico-minus -> ico-minus-sm 변경 ,ico-minus-md 추가 ,ico-plus-md 추가 -- 2021.12.21
+ v.0.12 선미 : ico-link 추가 / ico-close-xs &.gray 추가-- 2021.12.22
 |----------------------------------|
 */
 .icon {
@@ -66,6 +67,12 @@
 
 .ico-close-sm {
   @include background-img ($width: 20, $height: 20, $category: 'common', $img: 'ico-close-sm.svg');
+}
+
+.ico-close-xs {
+  &.gray{
+    @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-close-xs-gray.svg');
+  }
 }
 
 .ico-nav-prev {
@@ -129,7 +136,7 @@
 }
 
 .ico-link {
-  @include background-img ($width: 14, $height: 14, $category: 'common', $img: 'ico-link.png');
+  @include background-img ($width: 14, $height: 14, $category: 'common', $img: 'ico-link.svg');
 }
 
 .ico-caution {

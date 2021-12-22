@@ -1,0 +1,133 @@
+/*
+|----------------------------------|
+ v.0.1 선미 : 최초 작업 -- 2021.12.22
+|----------------------------------|
+*/
+
+
+/*수정화면*/
+.upload-box{
+  margin-right: vw(-24);
+  white-space: nowrap;
+  overflow-x: scroll;
+  padding-top: vw(2);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .img-upload{
+    width: vw(72);
+    height: vw(72);
+    border-radius: vw(12);
+    background : $gray-400 url("../img/common/icon-camera.png") no-repeat center top vw(14);
+    background-size: vw(28) vw(28);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    input[type=file]{
+      height: 100%;
+    }
+    .num{
+      font-size: vw(13);
+      color:$gray-700;
+      text-align: center;
+      padding-top: vw(5);
+      position: absolute;
+      bottom: vw(10);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .upload-list{
+    display: inline-block;
+    vertical-align: middle;
+    ul{
+      li{
+        position: relative;
+        display: inline-block;
+        margin-left: vw(4);
+        &:last-of-type{
+          margin-right: vw(25);
+        }
+        img{
+          width: vw(72);
+          height: vw(72);
+          border-radius: vw(12);
+        }
+        .delete-upload{
+          background: url("../img/common/icon-cancel.png") no-repeat 0 0;
+          background-size: 100% auto;
+          width: vw(20);
+          height: vw(20);
+          display: inline-block;
+          font-size: 0;
+          position: absolute;
+          right: vw(-2);
+          top: vw(-2);
+        }
+      }
+    }
+  }
+  +.file-list{
+  .file_name{
+    padding-top: vw(8);
+    display: flex;
+    justify-content: space-between;
+    .text{
+      word-break: break-all;
+      font-size: vw(15);
+      line-height: vw(22);
+      color: $gray-800;
+      font-weight: bold;
+    }
+    .btn-close{
+      padding-left: vw(20);
+    }
+
+    &:first-of-type{
+      padding-top: vw(24);
+    }
+  }
+}
+}
+
+/*확인화면*/
+.attach-box{
+  white-space: nowrap;
+  overflow-x: scroll;
+  padding-bottom: vw(48);
+  li{
+    position: relative;
+    display: inline-block;
+    margin-left: vw(4);
+    &:first-of-type{
+      margin-left: 0;
+    }
+    img{
+      width: vw(72);
+      height: vw(72);
+      border-radius: vw(12);
+    }
+  }
+}
+
+/*첨부파일명*/
+.file-list{
+  >p{
+    font-weight: bold;
+    margin-bottom: vw(12);
+    &.title{
+      font-size: vw(13);
+      line-height: vw(18);
+      color: $gray-600;
+      .ico-link{
+        margin-right: vw(3);
+      }
+    }
+    &.file_name{
+      font-size: vw(15);
+      line-height: vw(22);
+      color: $gray-800;
+      word-break: break-all;
+    }
+  }
+}

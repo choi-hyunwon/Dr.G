@@ -82,25 +82,6 @@
       .divider{
         margin: vw(32) 0;
       }
-      .attach-box{
-        white-space: nowrap;
-        overflow-x: scroll;
-        ul{
-          li{
-            position: relative;
-            display: inline-block;
-            margin-left: vw(4);
-            &:first-of-type{
-              margin-left: 0;
-            }
-            img{
-              width: vw(72);
-              height: vw(72);
-              border-radius: vw(12);
-            }
-          }
-        }
-      }
       .product-box{
         margin-top: vw(48);
         background: $primary-light;
@@ -228,13 +209,7 @@
         >textarea{
           margin-bottom: vw(12);
         }
-        .complete{
-          >.img{
-
-          }
-        }
       }
-
     }
 
     /*생활습관 펼쳐보기*/
@@ -302,24 +277,6 @@
               }
             }
           }
-          .attach-box{
-            white-space: nowrap;
-            overflow-x: scroll;
-            padding-bottom: vw(48);
-              li{
-                position: relative;
-                display: inline-block;
-                margin-left: vw(4);
-                &:first-of-type{
-                  margin-left: 0;
-                }
-                img{
-                  width: vw(72);
-                  height: vw(72);
-                  border-radius: vw(12);
-                }
-              }
-          }
         }
 
 
@@ -358,7 +315,7 @@
     .answer-wrap{
       background-color: #f8f8f8;
       padding: vw(32) vw(57) vw(32) vw(24);
-      margin-top: vw(48);
+      margin-top: vw(32);
       .badge{
         margin-bottom: vw(8);
       }
@@ -397,6 +354,7 @@
         padding: vw(17) vw(24);
         background-color: $gray-fff;
         border-top: 1px solid $gray-400;
+        font-size: vw(16);
       }
       .list-with-dot{
         padding: vw(32) vw(23);
@@ -404,9 +362,6 @@
       }
 
     }
-
-
-
   }
   .footer-details{
     border-top: 1px solid $gray-400;
