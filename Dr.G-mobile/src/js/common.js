@@ -54,11 +54,6 @@ front.common = (function () {
         /* modal-select */
         $('._toast-popup .select-list > .list').on('click', function (e) {
             let textValueParent = $(this).parents('._toast-popup');
-            let toastPopup = $('._toast-popup-open');
-            let toastPopupText = $('._toast-popup-open.text');
-            let toastPopupAge = $('._toast-popup-open.age');
-            let textValue = $(this).find('span').text();
-
             function hidePopup() {
                 textValueParent.addClass('hide');
                 setTimeout(() => {
@@ -67,27 +62,9 @@ front.common = (function () {
                 /*클릭시 텍스트 변경*/
             }
 
-            function ChangeText() {
-                if (toastPopup.hasClass('text') === true){
-                    toastPopupText.find('span').text(textValue).css({
-                        'color': '#444444',
-                        'font-weight': 'bold'
-                    });
-                }
-                else if (toastPopup.hasClass('age') === true){
-                    toastPopupAge.find('span').text(textValue).css({
-                        'color': '#444444',
-                        'font-weight': 'bold'
-                    });
-                }
-            }
-
             $(this).siblings().removeClass("active");
             $(this).addClass("active");
             hidePopup();
-            ChangeText();
-
-
         })
     }
 
@@ -120,32 +97,41 @@ front.common = (function () {
     }
 
     var popup = function popup() {
+
         let popupOpen = $('._toast-popup-open');
         let popupClose = $('._toast-popup-close');
+
+
+        anchorOption.on('click', function () {
+            var select = target.find('a').text();
+            $('._selected-value').find('span').text(select);
+        });
+
+
         popupOpen.on('click', function () {
-                if ($(this).hasClass('text') === true) {
-                    let select = $('._toast-popup.text')
-                    select.removeClass('hide').addClass('fade show').css('display', 'block');
-                }
-                else if ($(this).hasClass('age') === true) {
-                    let select = $('._toast-popup.age')
-                    select.removeClass('hide').addClass('fade show').css('display', 'block');
-                }
-                else if ($(this).hasClass('full') === true) {
-                    let select = $('._full-popup');
-                    select.removeClass('hide').addClass('show');
-                }
-            })
-        popupClose.on('click',function(){
             if ($(this).hasClass('text') === true) {
+                let select = $('._toast-popup.text');
+                select.removeClass('hide').addClass('fade show').css('display', 'block');
+                $(this).find('span').text('value');
+            } else if ($(this).hasClass('age') === true) {
+                let select = $('._toast-popup.age')
+                select.removeClass('hide').addClass('fade show').css('display', 'block');
+                $(this).find('span').text('');
+            } else if ($(this).hasClass('full') === true) {
+                let select = $('._full-popup');
+                select.removeClass('hide').addClass('show');
+            }
+        })
+        popupClose.on('click', function () {
+            if ($(this).hasClass('text') === true) {
+
                 let select = $('._toast-popup.text')
                 select.removeClass('show').addClass('hide').css('display', 'none');
-            }
-            else if ($(this).hasClass('age') === true) {
+
+            } else if ($(this).hasClass('age') === true) {
                 let select = $('._toast-popup.age')
                 select.removeClass('show').addClass('hide').css('display', 'none');
-            }
-            else if ($(this).hasClass('full') === true) {
+            } else if ($(this).hasClass('full') === true) {
                 let select = $('._full-popup');
                 select.removeClass('show').addClass('hide');
             }
