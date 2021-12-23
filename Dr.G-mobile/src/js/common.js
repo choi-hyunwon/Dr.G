@@ -54,6 +54,8 @@ front.common = (function () {
         /* modal-select */
         $('._toast-popup .select-list > .list').on('click', function (e) {
             let textValueParent = $(this).parents('._toast-popup');
+            let popupOpen = $('._toast-popup-open');
+            let selectValue = $(this).find('span').text();
 
             function hidePopup() {
                 textValueParent.addClass('hide');
@@ -63,9 +65,28 @@ front.common = (function () {
                 /*클릭시 텍스트 변경*/
             }
 
+            function ChangeText() {
+                if ((popupOpen.hasClass('text') === true)){
+                    let select = $('._toast-popup-open.text');
+                    select.find('span').text(selectValue).css({
+                        'color': '#444444',
+                        'font-weight': 'bold'
+                    });
+                }
+                else if((popupOpen.hasClass('age') === true)){
+                    let select = $('._toast-popup-open.age');
+                    select.find('span').text(selectValue).css({
+                        'color': '#444444',
+                        'font-weight': 'bold'
+                    });
+                }
+            }
+
+
             $(this).siblings().removeClass("active");
             $(this).addClass("active");
             hidePopup();
+            ChangeText();
         })
     }
 
