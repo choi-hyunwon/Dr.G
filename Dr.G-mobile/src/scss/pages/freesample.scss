@@ -381,7 +381,7 @@
       .list {
         margin-bottom: vw(32);
 
-        input{
+        input {
           font-size: vw(15);
           letter-spacing: vw(-0.5);
         }
@@ -389,20 +389,24 @@
         &:nth-last-of-type(1) {
           margin-bottom: vw(24);
         }
-        .zip-code{
+
+        .zip-code {
           margin-bottom: vw(8);
           display: flex;
           align-items: center;
-          input{
+
+          input {
             margin-right: vw(8);
             width: calc(100% - #{vw(103)});
           }
-          .btn{
+
+          .btn {
 
             width: vw(103);
             border-radius: vw(12);
             padding: vw(0) vw(0);
-            span{
+
+            span {
               font-size: vw(15);
               font-style: normal;
               font-weight: 700;
@@ -518,7 +522,37 @@
           }
         }
 
+        &.sold-out {
+          pointer-events: none;
+          .custom-control {
+            position: relative;
+            &:after {
+              font-weight: 500;
+              margin-left: vw(4);
+              position: absolute;
+              text-align: center;
+              font-size: vw(12);
+              line-height: vw(20);
+              border-radius: vw(6);
+              color: $gray-fff;
+              background-color: #EF4C57;
+              content: '품절';
+              display: inline-block;
+              letter-spacing:-0.005em;
+              width: vw(39);
+              height: vw(22);
+              border: 1px solid #EF4C57;
+            }
+            .custom-control-label {
+              opacity: 0.5;
+            }
+          }
+          .text-area{
+            opacity: 0.5;
+          }
+        }
       }
+
     }
 
   }
@@ -526,9 +560,11 @@
   .privacy-agree-section {
     padding: vw(0) vw(24) vw(48);
     background-color: $gray-200;
+
     .privacy-agree {
       padding: vw(24) 0px vw(48);
       border-top: 1px solid $gray-300;
+
       .dot-list {
         .list {
           margin-bottom: vw(2);
@@ -541,25 +577,34 @@
           letter-spacing: -0.005em;
         }
       }
-      .custom-checkbox{
+
+      .custom-checkbox {
         font-size: vw(13);
         font-weight: 400;
         line-height: vw(20);
         letter-spacing: -0.005em;
         margin-bottom: vw(13);
-        a{
+
+        a {
           text-decoration: underline;
         }
       }
 
     }
-    .btn-wrap{
+
+    .btn-wrap {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .btn{
+      .btn {
         width: vw(160);
         max-width: vw(160);
+      }
+      &.one-btn-wrap{
+        justify-content: center;
+        .btn{
+          width: auto;
+        }
       }
     }
   }

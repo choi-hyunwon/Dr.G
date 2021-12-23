@@ -26,7 +26,7 @@
                     </li>
                     <li class="list">
                         <p class="title">샘플 옵션 선택</p>
-                        <ul class="info-list">
+                        <ul class="info-list _info-list">
                             <li class="list active">
                                 <div class="custom-control custom-radio radio-sm" onclick="bgChange(0)">
                                     <input type="radio" class="custom-control-input" value="green"
@@ -108,9 +108,8 @@
 
                     </ul>
                 </div>
-                <div class="btn-wrap">
-                    <a href="#" class="btn"><span>신청완료</span></a>
-                    <a href="#" class="btn btn-black btn-border-black"><span>마이페이지</span></a>
+                <div class="btn-wrap one-btn-wrap">
+                    <a href="#" class="btn"><span>수정완료</span></a>
                 </div>
             </section>
             <!--개인정보 수집 및 이용에 대한 동의 e-->
@@ -127,7 +126,7 @@
 </body>
 <script>
     function bgChange(idx){
-        let list = $('.info-list > .list').eq(idx)
+        let list = $('._info-list > .list').eq(idx)
         list.addClass('active').siblings().removeClass('active');
     }
 </script>
