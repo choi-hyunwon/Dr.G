@@ -367,7 +367,6 @@
     padding: vw(48) vw(24) vw(32);
     background-color: $gray-200;
 
-
     .title {
       color: $gray-800;
       font-size: vw(16);
@@ -389,6 +388,30 @@
 
         &:nth-last-of-type(1) {
           margin-bottom: vw(24);
+        }
+        .zip-code{
+          margin-bottom: vw(8);
+          display: flex;
+          align-items: center;
+          input{
+            margin-right: vw(8);
+            width: calc(100% - #{vw(103)});
+          }
+          .btn{
+
+            width: vw(103);
+            border-radius: vw(12);
+            padding: vw(0) vw(0);
+            span{
+              font-size: vw(15);
+              font-style: normal;
+              font-weight: 700;
+              letter-spacing: -0.005em;
+              text-align: center;
+
+              color: $gray-800;
+            }
+          }
         }
       }
     }
