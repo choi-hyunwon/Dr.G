@@ -54,7 +54,6 @@ front.common = (function () {
         /* modal-select */
         $('._toast-popup .select-list > .list').on('click', function (e) {
             let textValueParent = $(this).parents('._toast-popup');
-            let selectValue = $(this).find('span').text();
 
             function hidePopup() {
                 textValueParent.addClass('hide');
@@ -106,6 +105,7 @@ front.common = (function () {
 
         function popupOpens() {
             buttonOpen.on('click', function () {
+                console.log(this);
                 if ($(this).hasClass('text') === true) {
                     console.log(this);
                     let select = $('._toast-popup.text');
@@ -123,6 +123,7 @@ front.common = (function () {
         }
         function popupClose(){
             ButtonClose.on('click', function () {
+
                 if ($(this).hasClass('text') === true) {
                     let select = $('._toast-popup.text')
                     select.removeClass('show').addClass('hide');
@@ -135,9 +136,6 @@ front.common = (function () {
                 }
             })
         }
-
-
-
 
         popupOpens();
         popupClose();

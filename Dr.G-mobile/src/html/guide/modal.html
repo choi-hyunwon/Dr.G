@@ -8,11 +8,11 @@
             <p class="title font-h2">토스트팝업_type1</p>
             <div class="box">
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary _toast-popup-open-title">
+                <a href="#" class="btn btn-primary _toast-popup-open">
                     토스트팝업_타이틀O_닫기O
                 </a>
                 <div class="toast-dim _toast-dim-title">
-                    <div class="toast-popup">
+                    <div class="toast-popup text">
                         <div class="toast-content title">
                             <div class="toast-header">
                                 <p class="title">댓글 작성하기</p>
@@ -30,25 +30,11 @@
                         </div>
                     </div>
                 </div>
-                <!--toastPopupScript-->
-                <script>
-                    (function () {
-                        $('._toast-popup-open-title').on('click', function () {
-                            $('._toast-dim-title').removeClass('hide').addClass('fade show').css('display', 'block');
-                        });
-                        $('._toast-popup-close-title').on('click', function () {
-                            $('._toast-dim-title').addClass('hide');
-                            setTimeout(() => {
-                                $('._toast-dim-title').removeClass('fade show').css('display', 'none');
-                            }, 400);
-                        });
-                    })();
-                </script>
             </div>
             <p class="title font-h2">토스트팝업_type2</p>
             <div class="box">
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary _toast-popup-title-noclose">
+                <a href="#" class="btn btn-primary _toast-popup-open">
                     토스트팝업_타이틀O_닫기X
                 </a>
                 <div class="toast-dim _toast-dim-title-close">
@@ -73,20 +59,6 @@
                         </div>
                     </div>
                 </div>
-                <!--toastPopupScript-->
-                <script>
-                    (function () {
-                        $('._toast-popup-title-noclose').on('click', function () {
-                            $('._toast-dim-title-close').removeClass('hide').addClass('fade show').css('display', 'block');
-                        });
-                        $('._toast-popup-noclose-title').on('click', function () {
-                            $('._toast-dim-title-close').addClass('hide');
-                            setTimeout(() => {
-                                $('._toast-dim-title-close').removeClass('fade show').css('display', 'none');
-                            }, 400);
-                        });
-                    })();
-                </script>
             </div>
             <p class="title font-h2">토스트팝업_type3</p>
             <div class="box">
@@ -109,25 +81,11 @@
                         </div>
                     </div>
                 </div>
-                <!--toastPopupScript-->
-                <script>
-                    (function () {
-                        $('._toast-popup-open').click(function () {
-                            $('._toast-dim-no-title').removeClass('hide').addClass('fade show').css('display', 'block');
-                        });
-                        $('._toast-popup-close').click(function () {
-                            $('._toast-dim-no-title').addClass('hide');
-                            setTimeout(() => {
-                                $('._toast-dim-no-title').removeClass('fade show').css('display', 'none');
-                            }, 400);
-                        });
-                    })();
-                </script>
             </div>
             <p class="title font-h2">토스트팝업_type4</p>
             <div class="box">
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary _toast-popup-open-navi">
+                <a href="#" class="btn btn-primary _toast-popup-open">
                     토스트팝업_navi
                 </a>
                 <div class="toast-dim _toast-dim-navi">
@@ -158,20 +116,6 @@
                         </div>
                     </div>
                 </div>
-                <!--toastPopupScript-->
-                <script>
-                    (function () {
-                        $('._toast-popup-open-navi').on('click', function () {
-                            $('._toast-dim-navi').removeClass('hide').addClass('fade show').css('display', 'block');
-                        });
-                        $('._toast-popup-close-navi').on('click', function () {
-                            $('._toast-dim-navi').addClass('hide');
-                            setTimeout(() => {
-                                $('._toast-dim-navi').removeClass('fade show').css('display', 'none');
-                            }, 400);
-                        });
-                    })();
-                </script>
             </div>
             <p class="title font-h2">토스트팝업_클릭시 텍스트변경</p>
             <div class="box">
@@ -205,47 +149,6 @@
                         </div>
                     </div>
                 </div>
-                <!--유형 toastPopupScript-->
-                <script>
-                    (function () {
-                        $('._toast-popup-open.text').click(function () {
-                            let select = $('._toast-popup.text')
-                            select.removeClass('hide').addClass('fade show').css('display', 'block');
-                        });
-                    })();
-                    (function List() {
-                        let list = $('._toast-popup.text .select-list > .list');
-
-                        function hidePopup() {
-                            $('._toast-popup.text').addClass('hide');
-                            setTimeout(() => {
-                                $('._toast-popup.text').removeClass('fade show').css('display', 'none');
-                            }, 400);
-                        }
-
-                        /*클릭시 텍스트 변경*/
-                        $(document).ready(function () {
-                            list.on("click", function (e) {
-                                let textValue = $(this).find('span').text();
-
-                                function ChangeText() {
-                                    $('._toast-popup-open.text').find('span').text(textValue);
-                                }
-
-                                if (list.hasClass("active")) {
-                                    list.removeClass("active");
-                                    $(this).addClass("active");
-                                    hidePopup();
-                                    ChangeText();
-                                } else {
-                                    $(this).addClass("active")
-                                    hidePopup();
-                                    ChangeText();
-                                }
-                            });
-                        });
-                    })();
-                </script>
             </div>
             <p class="title font-h2">풀페이지_팝업</p>
             <div class="box">
@@ -372,37 +275,6 @@
                         <div class="popup-footer"></div>
                     </div>
                 </div>
-                <!--유형 toastPopupScript-->
-                <script>
-                    (function () {
-                        $('._toast-popup-open.full').on('click', function () {
-
-                            let select = $('._full-popup');
-                            select.removeClass('hide').addClass('show');
-                        });
-                        $('._toast-popup-close.full').on('click', function () {
-
-                            let select = $('._full-popup');
-                            select.removeClass('show').addClass('hide');
-                        });
-                    })();
-                    (function introScroll() {
-                        var lastScroll = 0;
-                        $('._full-popup > .popup-content').scroll(function () {
-                            var st = $(this).scrollTop();
-                            // console.log(st);
-                            if (st === 0) {
-                                // console.log('Down');
-                                $('._popup-header').removeClass('header-white');
-                            } else {
-                                // console.log('Up');
-                                $('._popup-header').addClass('header-white');
-                            }
-                            lastScroll = st;
-                        });
-                    }());
-
-                </script>
             </div>
             <p class="title font-h2">알럿팝업_type1</p>
             <div class="box text-center">
