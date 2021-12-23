@@ -273,7 +273,7 @@ data.freesample = {
             page: '무료샘플신청_무료샘플신청팝업_수정팝업'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '무료샘플신청_무료샘플신청팝업_솔드아웃',
             category: 'freesample',
             page: '무료샘플신청_무료샘플신청팝업_솔드아웃'
