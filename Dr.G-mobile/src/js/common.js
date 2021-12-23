@@ -54,6 +54,7 @@ front.common = (function () {
         /* modal-select */
         $('._toast-popup .select-list > .list').on('click', function (e) {
             let textValueParent = $(this).parents('._toast-popup');
+
             function hidePopup() {
                 textValueParent.addClass('hide');
                 setTimeout(() => {
@@ -80,6 +81,7 @@ front.common = (function () {
         })
     }
 
+
     var introScroll = function introScroll() {
         var lastScroll = 0;
         $('._full-popup > .popup-content').scroll(function () {
@@ -96,27 +98,19 @@ front.common = (function () {
         });
     }
 
+    /*popup Close&open*/
     var popup = function popup() {
 
         let popupOpen = $('._toast-popup-open');
         let popupClose = $('._toast-popup-close');
 
-
-        anchorOption.on('click', function () {
-            var select = target.find('a').text();
-            $('._selected-value').find('span').text(select);
-        });
-
-
         popupOpen.on('click', function () {
             if ($(this).hasClass('text') === true) {
                 let select = $('._toast-popup.text');
                 select.removeClass('hide').addClass('fade show').css('display', 'block');
-                $(this).find('span').text('value');
             } else if ($(this).hasClass('age') === true) {
                 let select = $('._toast-popup.age')
                 select.removeClass('hide').addClass('fade show').css('display', 'block');
-                $(this).find('span').text('');
             } else if ($(this).hasClass('full') === true) {
                 let select = $('._full-popup');
                 select.removeClass('hide').addClass('show');
@@ -124,10 +118,8 @@ front.common = (function () {
         })
         popupClose.on('click', function () {
             if ($(this).hasClass('text') === true) {
-
                 let select = $('._toast-popup.text')
                 select.removeClass('show').addClass('hide').css('display', 'none');
-
             } else if ($(this).hasClass('age') === true) {
                 let select = $('._toast-popup.age')
                 select.removeClass('show').addClass('hide').css('display', 'none');
@@ -139,12 +131,7 @@ front.common = (function () {
     }
 
     return {
-        a: a,
-        commonHandler: commonHandler,
-        popup: popup,
-        introScroll: introScroll,
-        tab: tab,
-        init: init,
+        a: a, commonHandler: commonHandler, popup: popup, introScroll: introScroll, tab: tab, init: init,
     }
 })();
 
