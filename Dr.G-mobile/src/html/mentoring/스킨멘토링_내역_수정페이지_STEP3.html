@@ -11,8 +11,35 @@
                 <a href="#"><i class="icon ico-close"></i></a>
             </div>
             <div class="body-details bg-gray">
-                <div class="step-heading">
-                    step3
+                <div class="step-heading row">
+                    <div class="step col-3">
+                        <span class="tit">기본정보</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3 active">
+                        <span class="tit">생활습관</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">피부고민</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">완료</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="area-desc">
@@ -76,22 +103,6 @@
                         <li>작성하신 스킨 멘토링 내용은 고운세상 코스메틱의 마케팅 자료로 활용될 수 있습니다.</li>
                     </ul>
                 </div>
-                <script>
-                    $(document).ready(function () {
-                        $('.terms .title').on('click', function () {
-                            if (!$(this).hasClass('_title')) {
-                                $(this).children().removeClass('ico-plus-md').addClass('ico-minus-md');
-                                $(this).addClass('_title');
-                                $(this).siblings().slideDown(200);
-                            } else {
-                                $(this).children().removeClass('ico-minus-md').addClass('ico-plus-md');
-                                $(this).removeClass('_title');
-                                $(this).siblings().slideUp(200);
-                            }
-                        })
-                    });
-                </script>
-
 
             </div>
             <div class="footer-details bg-dark">
@@ -112,5 +123,6 @@
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
+@@include('./_mentoringScript.html')
 </body>
 </html>

@@ -6,17 +6,21 @@
 
 .mentoring-wrap{
   .section-color{
-    padding: vw(80) vw(24) 0;
+    padding: vw(80) vw(0) vw(132);
     margin-bottom: vw(80);
+    position: relative;
     &.bg-blue{
       background-color: $blue;
     }
-    .font-h1{
+    .font-h1, .font-h3{
       color: $gray-fff;
+      padding: 0 vw(24);
     }
     .floating-box{
-      position: relative;
+      position: absolute;
       bottom: vw(-32);
+      margin: 0 vw(24);
+
       .item{
         background-color: $gray-fff;
         box-shadow: 0 vw(4) vw(12) rgba(34, 34, 34, 0.08);
@@ -132,7 +136,7 @@
   }
 
   .area-desc{
-      .complete{
+    .complete{
         padding-bottom: 16px;
         .img{
           margin-bottom: vw(12);
@@ -192,6 +196,70 @@
           color: $gray-600;
         }
       }
+  }
+  .etc_service{
+    background-color: $gray-fff;
+    padding: vw(48) vw(0) vw(76);
+    .shortcuts{
+      padding-top: vw(20);
+      a{
+        font-weight: bold;
+        line-height: 1;
+        background-color: red;
+        padding: vw(62) 0 vw(20);
+        width: calc(50% - #{vw(5)});
+        display: inline-block;
+        text-align: center;
+        border-radius: vw(12);
+        span{
+          vertical-align: middle;
+          margin-right: vw(3);
+        }
+        &.ingredient{
+          color: $gray-900;
+          margin-right: vw(6);
+          background: #DFE2FF url("../img/mentoring/img-ingredient.svg") no-repeat top vw(23) center;
+          background-size: vw(36) vw(36);
+        }
+        &.inside{
+          color: $gray-800;
+          background: #d5f4ef url("../img/mentoring/img-inside.svg") no-repeat top vw(23) center;
+          background-size: vw(36) vw(36);
+
+        }
+      }
+    }
+
+  }
+
+  .solution-details{
+    .section-color{
+      padding: vw(48) vw(0) vw(94);
+      margin-bottom: vw(64);
+      background: $blue url("../img/mentoring/bg-round.svg") no-repeat;
+      background-size: vw(375) vw(208);
+      &:after{
+        content: '';
+        display: inline-block;
+        background: url("../img/mentoring/img-mentor2.svg") no-repeat ;
+        width: vw(134);
+        height: vw(206);
+        background-size: 100% auto;
+        position: absolute;
+        right: vw(36);
+        bottom: vw(-14);
+      }
+      .floating-box{
+        z-index: 1;
+        p{
+          color: $gray-800;
+          font-weight: 500;
+          font-size: vw(15);
+        }
+      }
+    }
+
+
   }
 
 

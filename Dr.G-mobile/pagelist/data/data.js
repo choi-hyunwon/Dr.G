@@ -94,6 +94,12 @@ data.mentoring = {
         },
         {
             stateClass: 'waiting',
+            url: '스킨멘토링_내역_상세페이지_답변완료상태',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_상세페이지_답변완료상태'
+        },
+        {
+            stateClass: 'waiting',
             url: '스킨멘토링_내역_수정페이지_STEP1',
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP1'

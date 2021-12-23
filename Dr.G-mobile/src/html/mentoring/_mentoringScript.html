@@ -1,0 +1,44 @@
+<script>
+    $(document).ready(function () {
+        /*step1*/
+        $('.asking .badge-box .badge').on('click', function () {
+        $(this).toggleClass('active')
+    })
+
+        /*step2*/
+        $('.question-box .habit li .btn').on('click', function () {
+        $(this).parents('li').find('.btn').removeClass('active')
+        $(this).addClass('active');
+    })
+
+        /*step3*/
+        $('.terms .title').on('click', function () {
+            if (!$(this).hasClass('_title')) {
+                $(this).children().removeClass('ico-plus-md').addClass('ico-minus-md');
+                $(this).addClass('_title');
+                $(this).siblings().slideDown(200);
+            } else {
+                $(this).children().removeClass('ico-minus-md').addClass('ico-plus-md');
+                $(this).removeClass('_title');
+                $(this).siblings().slideUp(200);
+            }
+        })
+
+        /*답변 대기, 답변 완료*/
+        $('.unfold-box .title').on('click', function () {
+            if (!$(this).hasClass('_title')) {
+                $(this).children().removeClass('ico-plus-sm').addClass('ico-minus-sm');
+                $(this).addClass('_title');
+                $(this).parent().addClass('_unfold');
+                $(this).siblings().slideDown(200);
+            } else {
+                $(this).children().removeClass('ico-minus-sm').addClass('ico-plus-sm');
+                $(this).removeClass('_title');
+                $(this).parent().removeClass('_unfold');
+                $(this).siblings().slideUp(200);
+            }
+        })
+
+    });
+
+</script>

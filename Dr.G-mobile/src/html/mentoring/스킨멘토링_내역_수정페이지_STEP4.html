@@ -11,15 +11,42 @@
                 <a href="#"><i class="icon ico-close"></i></a>
             </div>
             <div class="body-details bg-gray">
-                <div class="step-heading">
-                    step4
+                <div class="step-heading row">
+                    <div class="step col-3">
+                        <span class="tit">기본정보</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">생활습관</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">피부고민</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3 active">
+                        <span class="tit">완료</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="area-desc text-center">
-                    <div class="guidance">
+                <div class="area-desc">
+                    <div class="guidance text-center">
                         <p class="font-h3 font-bold">스킨 멘토에게 조수인님의<br><span class="color-blue">고민</span>이 전달되었습니다:)</p>
                     </div>
-                    <div class="complete">
+                    <div class="complete text-center">
                         <div class="img">
                             <img src="../../img/mentoring/img-mentor.svg" alt="멘토이미지">
                             <img src="../../img/mentoring/img-speech_bubble.svg" alt="말풍선 이미지">
@@ -34,6 +61,19 @@
                     </div>
                 </div>
 
+                <div class="etc_service">
+                    <p class="font-h5 font-bold">조수인님,<br>이런 서비스는 어떠세요?</p>
+                    <div class="shortcuts">
+                        <a href="#" class="ingredient">
+                            <span class="font-body-1">1:1 성분분석</span><i class="icon ico-next"></i>
+                        </a>
+                        <a href="#" class="inside">
+                            <span class="font-body-1">인사이드 닥터지</span><i class="icon ico-next"></i>
+                        </a>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>
@@ -43,5 +83,6 @@
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
+@@include('./_mentoringScript.html')
 </body>
 </html>

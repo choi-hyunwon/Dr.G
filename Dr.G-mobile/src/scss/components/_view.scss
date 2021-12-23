@@ -221,7 +221,7 @@
         background-color: $gray-200;
         border-top: none;
       }
-      .title{
+      >.title{
         text-align: center;
         font-weight: 700;
         font-size: vw(15);
@@ -338,10 +338,129 @@
 
     /*step*/
     .step-heading{
-      padding: vw(20) 0 vw(37);
+      padding: vw(20) vw(15) vw(32);
       margin: 0 auto;
-      border: 1px solid red;
       background-color: $gray-fff;
+      font-size:0;
+
+      .step{
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+        padding:0;
+        &:before{
+          content: '..';
+          display: inline-block;
+          color: $gray-400;
+          font-size: vw(20);
+          position: absolute;
+          right: vw(-6);
+          top: vw(35);
+        }
+        .tit{
+          font-size: vw(13);
+          line-height: vw(18);
+          font-weight: 400;
+          color: $gray-600;
+          display: block;
+          margin-bottom: vw(13);
+
+        }
+        .icon{
+          height: vw(56);
+          width: vw(56);
+        }
+        &:nth-of-type(1){
+          .icon{background: url("../img/mentoring/ico-step1.svg") no-repeat center center;}
+        }
+        &:nth-of-type(2){
+          .icon{background: url("../img/mentoring/ico-step2.svg") no-repeat center center;}
+        }
+        &:nth-of-type(3){
+          .icon{background: url("../img/mentoring/ico-step3.svg") no-repeat center center;}
+        }
+        &:nth-of-type(4){
+          .icon{background: url("../img/mentoring/ico-step4.svg") no-repeat center center;}
+          &:before{
+            display: none;
+          }
+        }
+
+        .smile-graph {
+          display: none;
+          margin: 0 auto ;
+          padding: 0;
+          list-style-type: none;
+          overflow: hidden;
+          position: relative;
+          width: vw(64);
+          height: vw(32);
+          &::before { /*배경*/
+            position: absolute;
+            content: '';
+            width: inherit;
+            height: inherit;
+            border: vw(10) solid rgba(211, 211, 211, .3);
+            border-top: none;
+            border-bottom-left-radius: vw(32);
+            border-bottom-right-radius: vw(32);
+            top: 0;
+            left: 0;
+          }
+          li { /*li기준점*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: vw(10) solid;
+            width: inherit;
+            height: inherit;
+            border-top: none;
+            border-bottom-left-radius: vw(32);
+            border-bottom-right-radius: vw(32);
+            transform-origin: 50% 0;
+            &.value{ /*실제 그래프*/
+              z-index: 1;
+              border-color: orange;
+              transform:rotateZ(100deg);
+              animation: chartAni4 1s 0.5s ;
+            }
+          }
+        }
+        @keyframes chartAni4{
+          0%{transform: rotateZ(180deg);}
+        }
+
+        &.active{
+          .tit{
+            font-weight: 700;
+            color: $gray-900;
+            margin-bottom: vw(37);
+          }
+          .icon{
+            height: vw(44);
+            width: vw(44);
+            position: absolute;
+            bottom: vw(10);
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          &:nth-of-type(1){
+            .icon{background: url("../img/mentoring/ico-step1-active.svg") no-repeat center center;}
+          }
+          &:nth-of-type(2){
+            .icon{background: url("../img/mentoring/ico-step2-active.svg") no-repeat center center;}
+          }
+          &:nth-of-type(3){
+            .icon{background: url("../img/mentoring/ico-step3-active.svg") no-repeat center center;}
+          }
+          &:nth-of-type(4){
+            .icon{background: url("../img/mentoring/ico-step4-active.svg") no-repeat center center;}
+          }
+          .smile-graph{display: block}
+        }
+      }
+
     }
 
     /*이용약관 펼쳐보기*/

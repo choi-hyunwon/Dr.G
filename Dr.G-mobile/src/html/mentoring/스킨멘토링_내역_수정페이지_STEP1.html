@@ -11,8 +11,35 @@
                 <a href="#"><i class="icon ico-close"></i></a>
             </div>
             <div class="body-details bg-gray">
-                <div class="step-heading">
-                    step1
+                <div class="step-heading row">
+                    <div class="step col-3 active">
+                        <span class="tit">기본정보</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">생활습관</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">피부고민</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">완료</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="area-desc">
@@ -78,13 +105,6 @@
 
                     <input type="text" title="피부고민 입력(최대10글자)" class="form-control" placeholder="최대 10자 입력 가능">
                     <p class="font_right">입니다.</p>
-
-                    <script>
-                        $('.asking .badge-box .badge').on('click', function () {
-                           $(this).toggleClass('active')
-                        })
-                    </script>
-
                 </div>
             </div>
 
@@ -104,5 +124,7 @@
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
+
+@@include('./_mentoringScript.html')
 </body>
 </html>
