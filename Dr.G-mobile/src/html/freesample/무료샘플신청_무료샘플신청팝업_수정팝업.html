@@ -13,7 +13,7 @@
             <!--무료 샘플 신청 타이틀 s-->
             <section class="freesample-application-section">
                 <p class="title"><span>무료 샘플</span> 신청</p>
-                <p class="slogan">월 1회 피부 고민에 따른<br>각보자 무료 샘플을 신청해보세요.</p>
+                <p class="slogan">내가 신청한 내역을 수정해보세요.</p>
             </section>
             <!--무료 샘플 신청 타이틀 e-->
 
@@ -30,7 +30,7 @@
                             <li class="list active">
                                 <div class="custom-control custom-radio radio-sm" onclick="bgChange(0)">
                                     <input type="radio" class="custom-control-input" value="green"
-                                          name="radioGuide" id="radio01" checked>
+                                           name="radioGuide" id="radio01" checked>
                                     <label class="custom-control-label" for="radio01">A타입</label>
                                 </div>
                                 <div class="option-area">
@@ -76,16 +76,20 @@
                     </li>
                     <li class="list">
                         <p class="title">이름</p>
-                        <input type="text" title="이름" class="form-control" value="조수인" disabled>
+                        <input type="text" title="이름" class="form-control" value="조수인">
                     </li>
                     <li class="list">
                         <p class="title">휴대전화</p>
-                        <input type="number" title="휴대전화" class="form-control" value="01012233002" disabled>
+                        <input type="number" title="휴대전화" class="form-control" value="01012233002">
                     </li>
                     <li class="list">
                         <p class="title">주소</p>
-                        <input type="text" title="주소" class="form-control" value="경기도 성남시 중원구 성남대로 185 (베스티안)" disabled>
-                        <input type="text" title="상세주소" class="form-control" value="305호" disabled>
+                        <div class="zip-code">
+                            <input type="number" title="우편번호" class="form-control" value="07077">
+                            <a href="#" class="btn btn-lg btn-black btn-border-black"><span>우편번호</span></a>
+                        </div>
+                        <input type="text" title="주소" class="form-control" value="경기도 성남시 중원구 성남대로 185 (베스티안)">
+                        <input type="text" title="상세주소" class="form-control" value="305호">
                     </li>
                 </ul>
                 <p class="caption">개인 정보는 <a href="#">마이페이지</a>를 통해 변경해주세요.</p>
@@ -104,9 +108,8 @@
 
                     </ul>
                 </div>
-                <div class="btn-wrap">
-                    <a href="#" class="btn"><span>신청완료</span></a>
-                    <a href="#" class="btn btn-black btn-border-black"><span>마이페이지</span></a>
+                <div class="btn-wrap one-btn-wrap">
+                    <a href="#" class="btn"><span>수정완료</span></a>
                 </div>
             </section>
             <!--개인정보 수집 및 이용에 대한 동의 e-->
