@@ -7,6 +7,7 @@
  v.0.5 선미 : select 화살표 재추가 -- 2021.12.13
  v.0.6 주연 : vw 적용 -- 2021.12.14
  v.0.7 선미 : form-control 색상 $gray-800 추가 -- 2021.12.20
+ v.0.8 태윤 : input &:disable 속성값 추가
 |--------------------------------------------------------------------|
 */
 input[type="number"]::-webkit-outer-spin-button,
@@ -293,6 +294,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
   + .form-control {
     margin-top: vw(8);
+  }
+  &:disabled,.form-control[readonly]{
+    background-color:$gray-300;
+    color: $gray-600;
   }
 }
 
