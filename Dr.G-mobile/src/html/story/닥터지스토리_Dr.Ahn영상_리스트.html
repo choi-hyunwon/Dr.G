@@ -195,6 +195,7 @@
     <!-- e footer -->
 </div>
 </body>
+
 <!--full-page modal-->
 <div class="full-popup _full-popup">
     <div class="popup-content">
@@ -314,6 +315,36 @@
         <div class="popup-footer"></div>
     </div>
 </div>
+
+<!--풀페이지팝업 script-->
+<script>
+    $(document).ready(function () {
+        $('._toast-popup-open.full').on('click', function () {
+            let select = $('._full-popup');
+            select.removeClass('hide').addClass('show');
+        });
+        $('._toast-popup-close.full').on('click', function () {
+            let select = $('._full-popup');
+            select.removeClass('show').addClass('hide');
+        });
+    });
+    $(document).ready(function () {
+        var lastScroll = 0;
+        $('._full-popup > .popup-content').scroll(function () {
+            var st = $(this).scrollTop();
+            // console.log(st);
+            if (st === 0) {
+                // console.log('Down');
+                $('._popup-header').removeClass('header-white');
+            } else {
+                // console.log('Up');
+                $('._popup-header').addClass('header-white');
+            }
+            lastScroll = st;
+        });
+    });
+</script>
+
 <script>
     // video autoplay
     document.querySelector('video').play();
