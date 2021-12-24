@@ -29,7 +29,7 @@
 </div>
 <!--타이틀 o 닫기 x script-->
 <script>
-    (function () {
+    $(document).ready(function () {
         $('._toast-popup-title-noclose').on('click', function () {
             $('._toast-dim-title-close').removeClass('hide').addClass('fade show').css('display', 'block');
         });
@@ -39,5 +39,5 @@
                 $('._toast-dim-title-close').removeClass('fade show').css('display', 'none');
             }, 400);
         });
-    })();
+    });
 </script>

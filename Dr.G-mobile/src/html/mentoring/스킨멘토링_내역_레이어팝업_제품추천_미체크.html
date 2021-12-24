@@ -142,7 +142,7 @@
 </div>
 <!--toastPopupScript-->
 <script>
-    (function () {
+    $(document).ready(function () {
         $('._toast-popup-open-no-title').on('click', function () {
             $('._toast-dim-no-title').removeClass('hide').addClass('fade show').css('display', 'block');
         });
@@ -152,7 +152,7 @@
                 $('._toast-dim-no-title').removeClass('fade show').css('display', 'none');
             }, 400);
         });
-    })();
+    });
 </script>
 
 </body>

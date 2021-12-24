@@ -130,7 +130,8 @@
     <div class="toast-popup">
         <div class="toast-content no-title un-check">
             <div class="toast-body">
-                <p class="main-title"><span class="color-blue">답변 알림</span>과 <span class="color-blue">제품 추천</span>을<br>신청해 스킨 멘토의 맞춤형 혜택을<br>받으시겠어요?</p>
+                <p class="main-title"><span class="color-blue">답변 알림</span>과 <span class="color-blue">제품 추천</span>을<br>신청해
+                    스킨 멘토의 맞춤형 혜택을<br>받으시겠어요?</p>
             </div>
             <div class="toast-footer">
                 <a href="#" class="btn btn-lg btn-blue _toast-dim-close-title">네, 받겠습니다.</a>
@@ -141,7 +142,7 @@
 </div>
 <!--toastPopupScript-->
 <script>
-    (function () {
+    $(document).ready(function () {
         $('._toast-popup-open-no-title').on('click', function () {
             $('._toast-dim-no-title').removeClass('hide').addClass('fade show').css('display', 'block');
         });
@@ -151,7 +152,7 @@
                 $('._toast-dim-no-title').removeClass('fade show').css('display', 'none');
             }, 400);
         });
-    })();
+    });
 </script>
 </body>
 </html>
