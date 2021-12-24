@@ -103,8 +103,17 @@ front.common = (function () {
         let buttonOpen = $('._modal-open');
         let ButtonClose = $('._modal-close');
         let select = $('._modal');
+        let array = []
 
-        buttonOpen.on('click', function () {
+
+
+
+
+
+        buttonOpen.on('click', function (e) {
+
+            console.log(document.getElementsByClassName("toast-dim")[e.currentTarget.id])
+            document.getElementsByClassName("toast-dim")[e.currentTarget.id]
             select.removeClass('hide').addClass('fade show').css('display', 'block');
         });
 
@@ -114,10 +123,12 @@ front.common = (function () {
 
         /*button length*/
         for (var i = 0; i < buttonOpen.length; i++) {
+
         }
 
         /*modal length*/
-        for (var j = 0; j < buttonOpen.length; j++) {
+        for (var j = 0; j < select.length; j++) {
+
         }
     }
 

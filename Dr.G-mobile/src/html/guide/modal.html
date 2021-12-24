@@ -8,21 +8,21 @@
             <p class="title font-h2">토스트팝업_type1</p>
             <div class="box">
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary _modal-open">
+                <a href="#" class="btn btn-primary _modal-open" id="0">
                     토스트팝업_타이틀O_닫기O
                 </a>
             </div>
             <p class="title font-h2">토스트팝업_type2</p>
             <div class="box">
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary _modal-open">
+                <a href="#" class="btn btn-primary _modal-open" id="1">
                     토스트팝업_타이틀O_닫기X
                 </a>
             </div>
             <p class="title font-h2">토스트팝업_type3</p>
             <div class="box">
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary _modal-open">
+                <a href="#" class="btn btn-primary _modal-open" id="2">
                     토스트팝업_타이틀x
                 </a>
                 <!-- Modal -->
@@ -30,49 +30,48 @@
             <p class="title font-h2">토스트팝업_type4</p>
             <div class="box">
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary _modal-open">
+                <a href="#" class="btn btn-primary _modal-open" id="3">
                     토스트팝업_navi
                 </a>
-
             </div>
             <p class="title font-h2">토스트팝업_클릭시 텍스트변경</p>
             <div class="box">
-                <a href="#" class="btn btn-primary _modal-open text">
+                <a href="#" class="btn btn-primary _modal-open text" id="4">
                     <span>토스트팝업_선택시텍스트변경</span>
                 </a>
                 <!--modal-->
 
             </div>
-            <p class="title font-h2">풀페이지_팝업</p>
-            <div class="box">
-                <a href="#" class="btn btn-primary _modal-open full">
-                    <span>풀페이지_팝업</span>
-                </a>
-                <!--popup-->
+<!--            <p class="title font-h2">풀페이지_팝업</p>-->
+<!--            <div class="box">-->
+<!--                <a href="#" class="btn btn-primary _modal-open full">-->
+<!--                    <span>풀페이지_팝업</span>-->
+<!--                </a>-->
+<!--                &lt;!&ndash;popup&ndash;&gt;-->
 
-            </div>
-            <p class="title font-h2">알럿팝업_type1</p>
-            <div class="box text-center">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alertPopupType1">
-                    알럿팝업_버튼두개
-                </button>
-                <!-- Modal -->
-                <!-- Button trigger modal -->
-            </div>
-            <p class="title font-h2">알럿팝업_type2</p>
-            <div class="box text-center">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alertPopupType2">
-                    알럿팝업_버튼한개
-                </button>
+<!--            </div>-->
+<!--            <p class="title font-h2">알럿팝업_type1</p>-->
+<!--            <div class="box text-center">-->
+<!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alertPopupType1">-->
+<!--                    알럿팝업_버튼두개-->
+<!--                </button>-->
+<!--                &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--            </div>-->
+<!--            <p class="title font-h2">알럿팝업_type2</p>-->
+<!--            <div class="box text-center">-->
+<!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alertPopupType2">-->
+<!--                    알럿팝업_버튼한개-->
+<!--                </button>-->
 
-                <!-- Modal -->
+<!--                &lt;!&ndash; Modal &ndash;&gt;-->
 
-            </div>
+<!--            </div>-->
         </div>
         @@include('../../html/include/common/footer.html')
     </div>
 </div>
-<div class="toast-dim _modal">
+<div class="toast-dim _modal" id="modal0">
     <div class="toast-popup text">
         <div class="toast-content title">
             <div class="toast-header">
@@ -91,7 +90,7 @@
         </div>
     </div>
 </div>
-<div class="toast-dim _modal">
+<div class="toast-dim _modal" id="modal1">
     <div class="toast-popup">
         <div class="toast-content title">
             <div class="toast-header">
@@ -112,7 +111,7 @@
         </div>
     </div>
 </div>
-<div class="toast-dim _modal">
+<div class="toast-dim _modal" id="modal2">
     <div class="toast-popup">
         <div class="toast-content no-title">
             <div class="toast-body">
@@ -126,7 +125,7 @@
         </div>
     </div>
 </div>
-<div class="toast-dim _modal">
+<div class="toast-dim _modal" id="modal3">
     <div class="toast-popup">
         <div class="toast-content navi">
             <div class="toast-header">
@@ -154,7 +153,7 @@
         </div>
     </div>
 </div>
-<div class="toast-dim _modal">
+<div class="toast-dim _modal" id="modal4">
     <div class="toast-popup">
         <div class="toast-content no-title type">
             <div class="toast-body mb-0">
@@ -180,7 +179,7 @@
         </div>
     </div>
 </div>
-<div class="full-popup _modal">
+<div class="full-popup _modal" id="a6">
     <div class="popup-content">
         <div class="popup-header _popup-header">
             <p class="title font-h3">내가 쓴 댓글 보기</p>
