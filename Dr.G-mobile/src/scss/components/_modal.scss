@@ -362,6 +362,16 @@
           font-weight: 700;
         }
 
+        .text-btn {
+          display: block;
+          font-size: vw(15);
+          font-weight: 500;
+          line-height: vw(22);
+          letter-spacing: -0.005em;
+          text-align: center;
+          text-decoration: underline;
+        }
+
         .agree-area {
           margin-bottom: vw(25);
         }
@@ -371,14 +381,12 @@
         .btn {
           width: 100%;
 
-          &.bg-primary {
-            background-color: $blue !important;
-            border: 1px solid $blue;
+          + .text-btn {
+            padding-top: vw(24)
           }
         }
 
         .text-btn {
-          padding-top: vw(24);
           display: block;
           font-size: vw(15);
           font-weight: 500;
