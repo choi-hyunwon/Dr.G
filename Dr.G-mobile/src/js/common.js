@@ -4,6 +4,7 @@
  v.0.1 선미 : tab 추가 -- 2021.12.13
  v.0.2 태윤 : 모달 관련 스크립트 추가 -- 2021.12.21
  v.0.3 태윤 : 모달 리팩토링 -- 2021.12.22
+ v.0.3 태윤 : 모달 관련 현재 주석처리 -- 2021.12.24
  * --------------------------------------------------------------------------
  */
 
@@ -152,8 +153,6 @@ front.common = (function () {
     return {
         a: a,
         commonHandler: commonHandler,
-        // popup: popup,
-        // introScroll: introScroll,
         tab: tab,
         init: init,
     }
