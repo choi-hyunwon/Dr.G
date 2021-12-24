@@ -135,7 +135,7 @@ data.mentoring = {
             page: '스킨멘토링_내역_상세페이지_후기팝업'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '스킨멘토링_내역_기본정보안내_팝업',
             category: 'mentoring',
             page: '스킨멘토링_내역_기본정보안내_팝업'
@@ -154,9 +154,9 @@ data.mentoring = {
         },
         {
             stateClass: 'complete',
-            url: '스킨멘토링_레이어팝업_수신동의_제품추천_미체크',
+            url: '스킨멘토링_내역_레이어팝업_수신동의_제품추천_미체크',
             category: 'mentoring',
-            page: '스킨멘토링_레이어팝업_수신동의_제품추천_미체크'
+            page: '스킨멘토링_내역_레이어팝업_수신동의_제품추천_미체크'
         },
     ]
 }

@@ -4,6 +4,7 @@
  v.0.2 태윤 : modal-footer > .btn css속성 제거 (클래스로 버튼 색상 제어)
  v.0.3 주연 : vw 적용 -- 2021.12.14
  v.0.4 태윤 : .full-popup 추가 , footer에 네비게이션있는 모달 추가 -- 2021.12.17
+ v.0.5 태윤 : 1:1 스킨멘토링 관련 팝업 추가 // 모달팝업 버튼 수정으로 인한 변경 -- 2021.12.24
 |----------------------------------|
 */
 
@@ -299,6 +300,96 @@
       border-radius: vw(20) vw(20) 0 0;
       bottom: vw(-300);
 
+      .toast-header {
+        margin-bottom: vw(24);
+        padding: 0;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        border-bottom: 0;
+
+        .title {
+          font-size: vw(20);
+          font-weight: 700;
+          line-height: vw(30);
+          letter-spacing: -0.005em;
+          text-align: left;
+          color: $gray-800;
+        }
+      }
+
+      .toast-body {
+        padding: 0;
+        margin-bottom: vw(32);
+
+        .main-title {
+          font-size: vw(16);
+          font-weight: 700;
+          line-height: vw(24);
+          letter-spacing: -0.005em;
+          text-align: center;
+
+        }
+
+        .desc {
+          font-size: vw(16);
+          font-weight: 400;
+          line-height: vw(25);
+          letter-spacing: -0.005em;
+          text-align: center;
+        }
+
+        .img {
+          margin: 0 auto vw(24);
+
+          &.logo {
+            width: vw(88);
+            height: auto;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+
+            + .main-title {
+              font-weight: 400;
+            }
+          }
+        }
+
+        span {
+          color: $blue;
+          font-weight: 700;
+        }
+
+        .agree-area {
+          margin-bottom: vw(25);
+        }
+      }
+
+      .toast-footer {
+        .btn {
+          width: 100%;
+
+          &.bg-primary {
+            background-color: $blue !important;
+            border: 1px solid $blue;
+          }
+        }
+
+        .text-btn {
+          padding-top: vw(24);
+          display: block;
+          font-size: vw(15);
+          font-weight: 500;
+          line-height: vw(22);
+          letter-spacing: -0.005em;
+          text-align: center;
+          text-decoration: underline;
+        }
+      }
+
+
       &.title {
         .toast-body {
           &.bg-docter {
@@ -314,6 +405,10 @@
 
             span {
               color: $primary;
+
+              &.color-blue {
+                color: $blue;
+              }
             }
           }
 
@@ -364,12 +459,11 @@
       }
 
       &.no-title {
-        &.non-member {
+        &.un-check {
           .toast-body {
             .desc {
               margin-bottom: vw(12);
             }
-
           }
 
           .main-title {
@@ -378,8 +472,9 @@
             span {
               color: $primary;
             }
-            .color-blue{
-              color: $blue;
+
+            .color-blue {
+              color: $blue !important;
             }
           }
         }
@@ -491,83 +586,6 @@
         }
       }
 
-      .toast-header {
-        margin-bottom: vw(24);
-        padding: 0;
-        display: flex;
-        align-content: center;
-        justify-content: space-between;
-        border-bottom: 0;
-
-        .title {
-          font-size: vw(20);
-          font-weight: 700;
-          line-height: vw(30);
-          letter-spacing: -0.005em;
-          text-align: left;
-          color: $gray-800;
-        }
-      }
-
-      .toast-body {
-        padding: 0;
-        margin-bottom: vw(24);
-
-        .main-title {
-          font-size: vw(16);
-          font-weight: 700;
-          line-height: vw(24);
-          letter-spacing: -0.005em;
-          text-align: center;
-
-        }
-
-        .desc {
-          font-size: vw(16);
-          font-weight: 400;
-          line-height: vw(25);
-          letter-spacing: -0.005em;
-          text-align: center;
-        }
-
-        .img {
-          margin: 0 auto vw(24);
-
-          &.logo {
-            width: vw(88);
-            height: auto;
-
-            img {
-              width: 100%;
-              height: auto;
-            }
-          }
-        }
-
-        .text-btn {
-          display: block;
-          font-size: vw(15);
-          font-weight: 500;
-          line-height: vw(22);
-          letter-spacing: -0.005em;
-          text-align: center;
-          text-decoration: underline;
-        }
-
-        span {
-          color: $blue;
-        }
-
-        .agree-area {
-          margin-bottom: vw(25);
-        }
-      }
-
-      .toast-footer {
-        .btn {
-          width: 100%;
-        }
-      }
 
     }
 
