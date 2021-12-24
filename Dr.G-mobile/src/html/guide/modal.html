@@ -22,7 +22,7 @@
             <p class="title font-h2">토스트팝업_type3</p>
             <div class="box">
                 <!--타이틀x-->
-                <a href="#" class="btn btn-primary _toast-popup-open">
+                <a href="#" class="btn btn-primary _toast-popup-open-no-title">
                     토스트팝업_타이틀x
                 </a>
             </div>
@@ -127,20 +127,20 @@
 <!--toastPopupScript-->
 <script>
     (function () {
-        $('._toast-popup-open').click(function () {
-            $('._toast-dim-no-title').removeClass('hide').addClass('fade show').css('display', 'block');
+        $('._toast-popup-open-title').click(function () {
+            $('._toast-dim-title').removeClass('hide').addClass('fade show').css('display', 'block');
         });
-        $('._toast-popup-close').click(function () {
-            $('._toast-dim-no-title').addClass('hide');
+        $('._toast-popup-close-title').click(function () {
+            $('._toast-dim-title').addClass('hide');
             setTimeout(() => {
-                $('._toast-dim-no-title').removeClass('fade show').css('display', 'none');
+                $('._toast-dim-title').removeClass('fade show').css('display', 'none');
             }, 400);
         });
     })();
 </script>
 
 
-<!--타이틀O 제목X--->
+<!--타이틀 o 제목 x-->
 <div class="toast-dim _toast-dim-title-close">
     <div class="toast-popup">
         <div class="toast-content title">
@@ -178,17 +178,18 @@
     })();
 </script>
 
-<!--타이틀x-->
-<div class="toast-dim 천">
+
+<!-- 타이틀 x-->
+<div class="toast-dim _toast-dim-no-title">
     <div class="toast-popup">
         <div class="toast-content no-title">
             <div class="toast-body">
                 <p class="desc">제품 추천 미신청 시 피부 고민에 맞는<br>제품 및 할인쿠폰을 만나보실 수 없어요.</p>
                 <p class="main-title">스킨멘토의 <span>맞춤형 추천 혜택</span>을<br>받아보시겠어요?</p>
-                <a href="#" class="text-btn _toast-popup-close">아니오, 받지 않겠습니다.</a>
+                <a href="#" class="text-btn _toast-dim-close-title">아니오, 받지 않겠습니다.</a>
             </div>
             <div class="toast-footer">
-                <a href="#" class="btn btn-lg btn-blue _toast-popup-close">네, 제품 추천을 받을게요.</a>
+                <a href="#" class="btn btn-lg btn-blue _toast-dim-close-title">네, 제품 추천을 받을게요.</a>
             </div>
         </div>
     </div>
@@ -196,13 +197,13 @@
 <!--toastPopupScript-->
 <script>
     (function () {
-        $('._toast-popup-open-title').on('click', function () {
-            $('._toast-dim-title').removeClass('hide').addClass('fade show').css('display', 'block');
+        $('._toast-popup-open-no-title').on('click', function () {
+            $('._toast-dim-no-title').removeClass('hide').addClass('fade show').css('display', 'block');
         });
-        $('._toast-popup-close-title').on('click', function () {
-            $('._toast-dim-title').addClass('hide');
+        $('._toast-dim-close-title').on('click', function () {
+            $('._toast-dim-no-title').addClass('hide');
             setTimeout(() => {
-                $('._toast-dim-title').removeClass('fade show').css('display', 'none');
+                $('._toast-dim-no-title').removeClass('fade show').css('display', 'none');
             }, 400);
         });
     })();
@@ -238,7 +239,7 @@
         </div>
     </div>
 </div>
-<!--toastPopupScript-->
+<!--네비게이션팝업 script-->
 <script>
     (function () {
         $('._toast-popup-open-navi').on('click', function () {
@@ -280,7 +281,7 @@
         </div>
     </div>
 </div>
-<!--유형 toastPopupScript-->
+<!--텍스트변경팝업 Script-->
 <script>
     (function () {
         $('._toast-popup-open.text').click(function () {
@@ -290,7 +291,6 @@
     })();
     (function List() {
         let list = $('._toast-popup.text .select-list > .list');
-
         function hidePopup() {
             $('._toast-popup.text').addClass('hide');
             setTimeout(() => {
@@ -302,21 +302,13 @@
         $(document).ready(function () {
             list.on("click", function (e) {
                 let textValue = $(this).find('span').text();
-
                 function ChangeText() {
                     $('._toast-popup-open.text').find('span').text(textValue);
                 }
-
-                if (list.hasClass("active")) {
-                    list.removeClass("active");
-                    $(this).addClass("active");
-                    hidePopup();
-                    ChangeText();
-                } else {
-                    $(this).addClass("active")
-                    hidePopup();
-                    ChangeText();
-                }
+                list.removeClass("active");
+                $(this).addClass("active");
+                hidePopup();
+                ChangeText();
             });
         });
     })();
@@ -454,12 +446,10 @@
 <script>
     (function () {
         $('._toast-popup-open.full').on('click', function () {
-
             let select = $('._full-popup');
             select.removeClass('hide').addClass('show');
         });
         $('._toast-popup-close.full').on('click', function () {
-
             let select = $('._full-popup');
             select.removeClass('show').addClass('hide');
         });
