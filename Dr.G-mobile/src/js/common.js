@@ -17,7 +17,7 @@ front.common = (function () {
         this.a();
         this.commonHandler();
         this.tab();
-        this.popup();
+        this.modal();
         this.introScroll();
     }
 
@@ -97,43 +97,30 @@ front.common = (function () {
         });
     }
 
-    /*popup Close&open*/
-    var popup = function popup() {
+    /*modal Close&open*/
+    var modal = function modal() {
+        let buttonOpen = $('._modal-open');
+        let ButtonClose = $('._modal-close');
+        let select = $('._modal')
+        let funcs = [];
 
-        let buttonOpen = $('._toast-popup-open');
-        let ButtonClose = $('._toast-popup-close');
+        for (var i = 0; i < buttonOpen.length; i++) {
+            console.log(i);
+        }
+
+        for (var j = 0; j < select.length; j++) {
+            console.log(j);
+        }
 
         function popupOpens() {
             buttonOpen.on('click', function () {
-                console.log(this);
-                if ($(this).hasClass('text') === true) {
-                    console.log(this);
-                    let select = $('._toast-popup.text');
-                    select.removeClass('hide').addClass('fade show').css('display', 'block');
-                } else if ($(this).hasClass('age') === true) {
-                    console.log(this);
-                    let select = $('._toast-popup.age')
-                    select.removeClass('hide').addClass('fade show').css('display', 'block');
-                } else if ($(this).hasClass('full') === true) {
-                    console.log(this);
-                    let select = $('._full-popup');
-                    select.removeClass('hide').addClass('show');
-                }
+                select.removeClass('hide').addClass('fade show').css('display', 'block');
             })
         }
-        function popupClose(){
-            ButtonClose.on('click', function () {
 
-                if ($(this).hasClass('text') === true) {
-                    let select = $('._toast-popup.text')
-                    select.removeClass('show').addClass('hide');
-                } else if ($(this).hasClass('age') === true) {
-                    let select = $('._toast-popup.age')
-                    select.removeClass('show').addClass('hide');
-                } else if ($(this).hasClass('full') === true) {
-                    let select = $('._full-popup');
-                    select.removeClass('show').addClass('hide');
-                }
+        function popupClose() {
+            ButtonClose.on('click', function () {
+                select.removeClass('show').addClass('hide').css('display', 'none');
             })
         }
 
@@ -141,8 +128,42 @@ front.common = (function () {
         popupClose();
     }
 
+
+    // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+//     function Modal(num) {
+//         return function() {
+//             // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+//             btns[num].onclick =  function() {
+//                 modals[num].style.display = "block";
+//                 console.log(num);
+//             };
+//
+//             // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+//             spanes[num].onclick = function() {
+//                 modals[num].style.display = "none";
+//             };
+//         };
+//     }
+//
+// // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+//     for(var i = 0; i < btns.length; i++) {
+//         funcs[i] = Modal(i);
+//     }
+//
+// // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+//     for(var j = 0; j < btns.length; j++) {
+//         funcs[j]();
+//     }
+//
+// // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+//     window.onclick = function(event) {
+//         if (event.target.className == "modal") {
+//             event.target.style.display = "none";
+//         }
+//     };
+
     return {
-        a: a, commonHandler: commonHandler, popup: popup, introScroll: introScroll, tab: tab, init: init,
+        a: a, commonHandler: commonHandler, modal: modal, introScroll: introScroll, tab: tab, init: init,
     }
 })();
 
