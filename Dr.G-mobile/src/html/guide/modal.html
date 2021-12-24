@@ -126,7 +126,7 @@
 </div>
 <!--toastPopupScript-->
 <script>
-    (function () {
+    $(document).ready(function () {
         $('._toast-popup-open-title').click(function () {
             $('._toast-dim-title').removeClass('hide').addClass('fade show').css('display', 'block');
         });
@@ -136,7 +136,7 @@
                 $('._toast-dim-title').removeClass('fade show').css('display', 'none');
             }, 400);
         });
-    })();
+    });
 </script>
 
 
@@ -165,7 +165,7 @@
 </div>
 <!--toastPopupScript-->
 <script>
-    (function () {
+    $(document).ready(function () {
         $('._toast-popup-title-noclose').on('click', function () {
             $('._toast-dim-title-close').removeClass('hide').addClass('fade show').css('display', 'block');
         });
@@ -175,7 +175,7 @@
                 $('._toast-dim-title-close').removeClass('fade show').css('display', 'none');
             }, 400);
         });
-    })();
+    });
 </script>
 
 
@@ -196,7 +196,7 @@
 </div>
 <!--toastPopupScript-->
 <script>
-    (function () {
+    $(document).ready(function () {
         $('._toast-popup-open-no-title').on('click', function () {
             $('._toast-dim-no-title').removeClass('hide').addClass('fade show').css('display', 'block');
         });
@@ -206,7 +206,7 @@
                 $('._toast-dim-no-title').removeClass('fade show').css('display', 'none');
             }, 400);
         });
-    })();
+    });
 </script>
 
 
@@ -241,7 +241,7 @@
 </div>
 <!--네비게이션팝업 script-->
 <script>
-    (function () {
+    $(document).ready(function () {
         $('._toast-popup-open-navi').on('click', function () {
             $('._toast-dim-navi').removeClass('hide').addClass('fade show').css('display', 'block');
         });
@@ -251,7 +251,7 @@
                 $('._toast-dim-navi').removeClass('fade show').css('display', 'none');
             }, 400);
         });
-    })();
+    });
 </script>
 
 <!--텍스트변경팝업-->
@@ -283,38 +283,33 @@
 </div>
 <!--텍스트변경팝업 Script-->
 <script>
-    (function () {
+    $(document).ready(function () {
         $('._toast-popup-open.text').click(function () {
             let select = $('._toast-popup.text')
             select.removeClass('hide').addClass('fade show').css('display', 'block');
         });
-    })();
-    (function List() {
+    });
+    $(document).ready(function () {
         let list = $('._toast-popup.text .select-list > .list');
-
         function hidePopup() {
             $('._toast-popup.text').addClass('hide');
             setTimeout(() => {
                 $('._toast-popup.text').removeClass('fade show').css('display', 'none');
             }, 400);
         }
+        list.on("click", function (e) {
+            let textValue = $(this).find('span').text();
 
-        /*클릭시 텍스트 변경*/
-        $(document).ready(function () {
-            list.on("click", function (e) {
-                let textValue = $(this).find('span').text();
+            function ChangeText() {
+                $('._toast-popup-open.text').find('span').text(textValue);
+            }
 
-                function ChangeText() {
-                    $('._toast-popup-open.text').find('span').text(textValue);
-                }
-
-                list.removeClass("active");
-                $(this).addClass("active");
-                hidePopup();
-                ChangeText();
-            });
+            list.removeClass("active");
+            $(this).addClass("active");
+            hidePopup();
+            ChangeText();
         });
-    })();
+    });
 </script>
 
 
@@ -447,7 +442,7 @@
 </div>
 <!--유형 toastPopupScript-->
 <script>
-    (function () {
+    $(document).ready(function () {
         $('._toast-popup-open.full').on('click', function () {
             let select = $('._full-popup');
             select.removeClass('hide').addClass('show');
@@ -456,8 +451,8 @@
             let select = $('._full-popup');
             select.removeClass('show').addClass('hide');
         });
-    })();
-    (function introScroll() {
+    });
+    $(document).ready(function () {
         var lastScroll = 0;
         $('._full-popup > .popup-content').scroll(function () {
             var st = $(this).scrollTop();
@@ -471,8 +466,7 @@
             }
             lastScroll = st;
         });
-    }());
-
+    });
 </script>
 </body>
 </html>

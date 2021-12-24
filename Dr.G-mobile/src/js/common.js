@@ -17,8 +17,8 @@ front.common = (function () {
         this.a();
         this.commonHandler();
         this.tab();
-        this.popup();
-        this.introScroll();
+        // this.popup();
+        // this.introScroll();
     }
 
     var a = function () {
@@ -100,60 +100,60 @@ front.common = (function () {
         })
     }
 
-    var introScroll = function introScroll() {
-        var lastScroll = 0;
-        $('._full-popup > .popup-content').scroll(function () {
-            var st = $(this).scrollTop();
-            // console.log(st);
-            if (st === 0) {
-                // console.log('Down');
-                $('._popup-header').removeClass('header-white');
-            } else {
-                // console.log('Up');
-                $('._popup-header').addClass('header-white');
-            }
-            lastScroll = st;
-        });
-    }
-
-    var popup = function popup() {
-        let popupOpen = $('._toast-popup-open');
-        let popupClose = $('._toast-popup-close');
-        popupOpen.on('click', function () {
-                if ($(this).hasClass('text') === true) {
-                    let select = $('._toast-popup.text')
-                    select.removeClass('hide').addClass('fade show').css('display', 'block');
-                }
-                else if ($(this).hasClass('age') === true) {
-                    let select = $('._toast-popup.age')
-                    select.removeClass('hide').addClass('fade show').css('display', 'block');
-                }
-                else if ($(this).hasClass('full') === true) {
-                    let select = $('._full-popup');
-                    select.removeClass('hide').addClass('show');
-                }
-            })
-        popupClose.on('click',function(){
-            if ($(this).hasClass('text') === true) {
-                let select = $('._toast-popup.text')
-                select.removeClass('show').addClass('hide').css('display', 'none');
-            }
-            else if ($(this).hasClass('age') === true) {
-                let select = $('._toast-popup.age')
-                select.removeClass('show').addClass('hide').css('display', 'none');
-            }
-            else if ($(this).hasClass('full') === true) {
-                let select = $('._full-popup');
-                select.removeClass('show').addClass('hide');
-            }
-        })
-    }
+    // var introScroll = function introScroll() {
+    //     var lastScroll = 0;
+    //     $('._full-popup > .popup-content').scroll(function () {
+    //         var st = $(this).scrollTop();
+    //         // console.log(st);
+    //         if (st === 0) {
+    //             // console.log('Down');
+    //             $('._popup-header').removeClass('header-white');
+    //         } else {
+    //             // console.log('Up');
+    //             $('._popup-header').addClass('header-white');
+    //         }
+    //         lastScroll = st;
+    //     });
+    // }
+    //
+    // var popup = function popup() {
+    //     let popupOpen = $('._toast-popup-open');
+    //     let popupClose = $('._toast-popup-close');
+    //     popupOpen.on('click', function () {
+    //             if ($(this).hasClass('text') === true) {
+    //                 let select = $('._toast-popup.text')
+    //                 select.removeClass('hide').addClass('fade show').css('display', 'block');
+    //             }
+    //             else if ($(this).hasClass('age') === true) {
+    //                 let select = $('._toast-popup.age')
+    //                 select.removeClass('hide').addClass('fade show').css('display', 'block');
+    //             }
+    //             else if ($(this).hasClass('full') === true) {
+    //                 let select = $('._full-popup');
+    //                 select.removeClass('hide').addClass('show');
+    //             }
+    //         })
+    //     popupClose.on('click',function(){
+    //         if ($(this).hasClass('text') === true) {
+    //             let select = $('._toast-popup.text')
+    //             select.removeClass('show').addClass('hide').css('display', 'none');
+    //         }
+    //         else if ($(this).hasClass('age') === true) {
+    //             let select = $('._toast-popup.age')
+    //             select.removeClass('show').addClass('hide').css('display', 'none');
+    //         }
+    //         else if ($(this).hasClass('full') === true) {
+    //             let select = $('._full-popup');
+    //             select.removeClass('show').addClass('hide');
+    //         }
+    //     })
+    // }
 
     return {
         a: a,
         commonHandler: commonHandler,
-        popup: popup,
-        introScroll: introScroll,
+        // popup: popup,
+        // introScroll: introScroll,
         tab: tab,
         init: init,
     }
