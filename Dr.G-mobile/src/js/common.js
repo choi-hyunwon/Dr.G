@@ -17,7 +17,7 @@ front.common = (function () {
         this.a();
         this.commonHandler();
         this.tab();
-        this.modal();
+        this.modals();
         this.introScroll();
     }
 
@@ -97,75 +97,36 @@ front.common = (function () {
         });
     }
 
-    /*modal Close&open*/
-    var modal = function modal() {
+    var modals = function modals() {
+
+
         let buttonOpen = $('._modal-open');
         let ButtonClose = $('._modal-close');
-        let select = $('._modal')
-        let funcs = [];
+        let select = $('._modal');
 
+        buttonOpen.on('click', function () {
+            select.removeClass('hide').addClass('fade show').css('display', 'block');
+        });
+
+        ButtonClose.on('click', function () {
+            select.removeClass('show').addClass('hide').css('display', 'none');
+        });
+
+        /*button length*/
         for (var i = 0; i < buttonOpen.length; i++) {
-            console.log(i);
         }
 
-        for (var j = 0; j < select.length; j++) {
-            console.log(j);
+        /*modal length*/
+        for (var j = 0; j < buttonOpen.length; j++) {
         }
-
-        function popupOpens() {
-            buttonOpen.on('click', function () {
-                select.removeClass('hide').addClass('fade show').css('display', 'block');
-            })
-        }
-
-        function popupClose() {
-            ButtonClose.on('click', function () {
-                select.removeClass('show').addClass('hide').css('display', 'none');
-            })
-        }
-
-        popupOpens();
-        popupClose();
     }
 
-
-    // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
-//     function Modal(num) {
-//         return function() {
-//             // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
-//             btns[num].onclick =  function() {
-//                 modals[num].style.display = "block";
-//                 console.log(num);
-//             };
-//
-//             // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
-//             spanes[num].onclick = function() {
-//                 modals[num].style.display = "none";
-//             };
-//         };
-//     }
-//
-// // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
-//     for(var i = 0; i < btns.length; i++) {
-//         funcs[i] = Modal(i);
-//     }
-//
-// // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
-//     for(var j = 0; j < btns.length; j++) {
-//         funcs[j]();
-//     }
-//
-// // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
-//     window.onclick = function(event) {
-//         if (event.target.className == "modal") {
-//             event.target.style.display = "none";
-//         }
-//     };
 
     return {
-        a: a, commonHandler: commonHandler, modal: modal, introScroll: introScroll, tab: tab, init: init,
+        a: a, commonHandler: commonHandler, modals: modals, introScroll: introScroll, tab: tab, init: init,
     }
-})();
+})
+();
 
 $(function () {
     front.common.init();
