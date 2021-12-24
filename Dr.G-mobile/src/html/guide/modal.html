@@ -291,6 +291,7 @@
     })();
     (function List() {
         let list = $('._toast-popup.text .select-list > .list');
+
         function hidePopup() {
             $('._toast-popup.text').addClass('hide');
             setTimeout(() => {
@@ -302,9 +303,11 @@
         $(document).ready(function () {
             list.on("click", function (e) {
                 let textValue = $(this).find('span').text();
+
                 function ChangeText() {
                     $('._toast-popup-open.text').find('span').text(textValue);
                 }
+
                 list.removeClass("active");
                 $(this).addClass("active");
                 hidePopup();
