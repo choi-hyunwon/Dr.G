@@ -421,7 +421,7 @@
             transform-origin: 50% 0;
             &.value{ /*실제 그래프*/
               z-index: 1;
-              border-color: orange;
+              border-color: $blue;
               transform:rotateZ(100deg);
               animation: chartAni4 1s 0.5s ;
             }

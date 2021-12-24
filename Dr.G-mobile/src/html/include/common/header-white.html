@@ -1,4 +1,30 @@
-<div class="header _header-sticky header-white">
+<!--
+<div class="header _header-sticky white">
     <div class="brand-logo"><a href="#"><img src="../../img/common/logo-white.svg" alt="Dr.G"></a></div>
     <div class="btn-alert"><a href="#"><i class="icon ico-alert white"></i></a></div>
 </div>
+
+
+<script>
+    if ($('.white').deltaY < 0) {
+        // console.log('UP');
+        if (window.pageYOffset > 124){
+            $('.header').show()
+                .css({'position': 'fixed','top':'0'})
+                .addClass('header-sm')
+        } else {
+            $('.header').show()
+                .css({'position': 'relative'})
+                .removeClass('header-sm');
+            $('.header-main').show()
+                .css({'position': 'absolute'})
+        }
+    } else {
+        // console.log('Down');
+        // console.log(window.scrollY);
+        if (window.pageYOffset > 124){
+            $('.header').hide()
+        }
+    }
+</script>
+-->

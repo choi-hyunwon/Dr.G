@@ -199,7 +199,7 @@
   }
   .etc_service{
     background-color: $gray-fff;
-    padding: vw(48) vw(0) vw(76);
+    padding: vw(48) vw(24) vw(76);
     .shortcuts{
       padding-top: vw(20);
       a{
@@ -257,6 +257,9 @@
           font-size: vw(15);
         }
       }
+    }
+    .answer{
+      border: 1px solid red;
     }
 
 
