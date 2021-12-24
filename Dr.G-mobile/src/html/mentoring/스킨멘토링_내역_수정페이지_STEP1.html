@@ -144,7 +144,10 @@
             let textValue = $(this).find('span').text();
 
             function ChangeText() {
-                $('._toast-popup-open.age').find('span').text(textValue);
+                $('._toast-popup-open.age').find('span').text(textValue).css({
+                    'color': '#444444',
+                    'font-weight': 'bold'
+                });
             }
 
             list.removeClass("active");

@@ -52,40 +52,40 @@ front.common = (function () {
         })
 
         /* modal-select */
-        $('._toast-popup .select-list > .list').on('click', function (e) {
-            let textValueParent = $(this).parents('._toast-popup');
-            let textValueSelectPopup = $(this).parents('.select-popup').children('._toast-popup-open');
-            let textValue = $(this).find('span').text();
-
-
-            function hidePopup() {
-                textValueParent.addClass('hide');
-                setTimeout(() => {
-                    textValueParent.removeClass('fade show').css('display', 'none');
-                }, 400);
-                /*클릭시 텍스트 변경*/
-            }
-
-            function ChangeText() {
-                textValueSelectPopup.find('span').text(textValue).css({
-                    'color': '#444444',
-                    'font-weight': 'bold'
-                });
-            }
-
-            if ($('._toast-popup .select-list > .list').hasClass("active")) {
-                $(this).siblings().removeClass("active");
-                $(this).addClass("active");
-                hidePopup();
-                ChangeText();
-            } else {
-                $(this).addClass("active")
-                hidePopup();
-                ChangeText();
-            }
-
-
-        })
+        // $('._toast-popup .select-list > .list').on('click', function (e) {
+        //     let textValueParent = $(this).parents('._toast-popup');
+        //     let textValueSelectPopup = $(this).parents('.select-popup').children('._toast-popup-open');
+        //     let textValue = $(this).find('span').text();
+        //
+        //
+        //     function hidePopup() {
+        //         textValueParent.addClass('hide');
+        //         setTimeout(() => {
+        //             textValueParent.removeClass('fade show').css('display', 'none');
+        //         }, 400);
+        //         /*클릭시 텍스트 변경*/
+        //     }
+        //
+        //     function ChangeText() {
+        //         textValueSelectPopup.find('span').text(textValue).css({
+        //             'color': '#444444',
+        //             'font-weight': 'bold'
+        //         });
+        //     }
+        //
+        //     if ($('._toast-popup .select-list > .list').hasClass("active")) {
+        //         $(this).siblings().removeClass("active");
+        //         $(this).addClass("active");
+        //         hidePopup();
+        //         ChangeText();
+        //     } else {
+        //         $(this).addClass("active")
+        //         hidePopup();
+        //         ChangeText();
+        //     }
+        //
+        //
+        // })
     }
 
     var tab = function () {
