@@ -300,15 +300,18 @@
       background-color: #fff;
       border-radius: vw(12);
       padding: vw(20);
+
       .info-area {
         margin-bottom: vw(6);
         display: flex;
         align-items: center;
+
         .img {
           margin-right: vw(8);
           width: vw(32);
           height: vw(32);
-          img{
+
+          img {
             width: 100%;
             height: 100%;
           }
@@ -343,14 +346,21 @@
           }
         }
       }
+
       .content {
         margin-bottom: vw(10);
+
         p {
           @include ellipsis(4);
           font-size: vw(15);
           line-height: vw(22);
           font-weight: 400;
           color: $gray-800;
+
+          .ico-lock {
+            margin-right: vw(6);
+            transform: translateY(vw(-2));
+          }
         }
       }
 
@@ -366,6 +376,7 @@
         .info-area {
           .img {
             + .nickname {
+              color: $gray-900;
               margin-left: 0;
             }
           }
@@ -382,7 +393,6 @@
           background-size: 100% 100%;
         }
       }
-
 
 
       .date {
@@ -617,6 +627,10 @@
           .item {
             + .item {
               margin-top: vw(12);
+
+              + .item.manager {
+                margin-top: 0;
+              }
             }
           }
         }
@@ -765,6 +779,7 @@
           &:nth-child(2n+1) {
             clear: none;
           }
+
           &:nth-child(2n) {
             padding-left: 0;
           }

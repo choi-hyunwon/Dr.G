@@ -13,6 +13,7 @@
  v.0.11 선미 : ico-plus -> ico-plus-sm 변경 , ico-minus -> ico-minus-sm 변경 ,ico-minus-md 추가 ,ico-plus-md 추가 -- 2021.12.21
  v.0.12 선미 : ico-link 추가 / ico-close-xs &.gray 추가-- 2021.12.22
  v.0.13 태윤 : ico-alert-circle 추가 -- 2021.12.21
+ v.0.14 주연 : ico-lock 추가 -- 2021.12.27
 |----------------------------------|
 */
 .icon {
@@ -186,4 +187,8 @@
 
 .ico-alert-circle {
   @include background-img ($width: 15, $height: 15, $category: 'common', $img: 'ico-alert-circle.svg');
+}
+
+.ico-lock {
+  @include background-img ($width: 13, $height: 16, $category: 'common', $img: 'ico-lock.svg');
 }
