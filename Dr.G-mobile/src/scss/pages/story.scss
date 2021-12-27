@@ -589,12 +589,7 @@
         border-bottom: vw(1) solid $gray-300;
         margin-bottom: vw(47);
         padding-bottom: vw(48);
-
-        .tip {
-          font-size: vw(12);
-          line-height: vw(16);
-          color: $gray-600;
-          margin-top: vw(12);
+        textarea{
           margin-bottom: vw(24);
         }
       }
@@ -638,7 +633,7 @@
         }
 
         .btn-wrap {
-          margin-top: vw(44);
+          margin-top: vw(48);
         }
       }
     }

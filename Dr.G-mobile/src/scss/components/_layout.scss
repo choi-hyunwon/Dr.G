@@ -55,6 +55,55 @@ a {
   }
 }
 
+
+.header2 {
+  position: fixed;
+  width: 100%;
+  height: vw(60);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 vw(20);
+  background-color: #fff;
+  z-index: 5 !important;
+  &.header-slogan{
+    padding: 0px vw(24);
+  }
+  .brand-logo {
+    a {
+      display: block;
+      width: vw(50);
+      height: vw(25);
+      background: url("../img/common/logo-black.svg") no-repeat 0 0;
+      background-size: 100% auto;
+    }
+  }
+
+  .btn-alert {
+    a {
+      display: block;
+    }
+  }
+
+
+  &.header-transparent{
+    background-color: transparent;
+    position: absolute;
+    .brand-logo {
+      a {
+        background: url("../img/common/logo-white.svg") no-repeat 0 0;
+      }
+    }
+    .btn-alert {
+      a {
+        i{
+          background: url("../img/common/ico-alert-white.svg");
+        }
+      }
+    }
+  }
+}
+
 .header-details {
   position: relative;
   height: vw(60);
