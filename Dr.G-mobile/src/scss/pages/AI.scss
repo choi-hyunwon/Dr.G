@@ -3,7 +3,6 @@
  v.0.1 주연 : 최초 작업 -- 2021.12.22
 |------------------------------------|
 */
-$calc : calc(100%/375);
 .AI-wrap {
   .chart-box {
     height: 338px;
@@ -32,6 +31,104 @@ $calc : calc(100%/375);
       font-size: 12px;
       line-height: 16px;
       color: $gray-800;
+    }
+  }
+
+  /* 피부분석 step 1 ~ 2 */
+  .intro {
+    .heading {
+      padding: 0 vw(24);
+      margin-bottom: vw(24);
+      margin-top: vw(21);
+
+      .font-body-2 {
+        display: inline-block;
+        vertical-align: middle;
+        color: $gray-600;
+        margin-right: vw(12);
+      }
+
+      .font-h3 {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .step-box {
+      background-color: $gray-200;
+      padding: 0 vw(24);
+
+      .step-1 {
+        padding-top: vw(48);
+
+        .font-body-1 {
+          text-align: center;
+          color: $gray-700;
+          margin-bottom: vw(24);
+        }
+
+        .img {
+          width: vw(180);
+          height: vw(180);
+          margin: 0 auto vw(24);
+          border-radius: vw(20);
+          overflow: hidden;
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+
+        .step {
+          margin-bottom: vw(21);
+
+          .item {
+            float: left;
+            display: flex;
+            align-items: center;
+            width: calc(50% - #{vw(5.5)});
+            height: vw(80);
+            background-color: #fff;
+            border-radius: vw(12);
+            margin-bottom: vw(11);
+            padding-left: vw(16);
+
+            .ico-step {
+              vertical-align: middle;
+              margin-right: vw(12);
+            }
+
+            .font-body-2 {
+              color: $gray-800;
+            }
+
+            .ico-step-1 {
+              @include background-img ($width: 34, $height: 34, $category: 'AI', $img: 'ico-visual-step-1.svg');
+            }
+
+            .ico-step-2 {
+              @include background-img ($width: 29, $height: 34, $category: 'AI', $img: 'ico-visual-step-2.svg');
+            }
+
+            .ico-step-3 {
+              @include background-img ($width: 33, $height: 38, $category: 'AI', $img: 'ico-visual-step-3.svg');
+            }
+
+            .ico-step-4 {
+              @include background-img ($width: 36, $height: 36, $category: 'AI', $img: 'ico-visual-step-4.svg');
+            }
+
+            &:nth-child(2n-1) {
+              margin-right: vw(11);
+            }
+          }
+        }
+
+        .btn-wrap {
+          margin-bottom: vw(48);
+        }
+      }
     }
   }
 }
