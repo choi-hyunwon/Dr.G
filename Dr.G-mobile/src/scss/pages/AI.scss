@@ -3,68 +3,121 @@
  v.0.1 주연 : 최초 작업 -- 2021.12.22
 |------------------------------------|
 */
-$calc : calc(100%/375);
 .AI-wrap {
-  .chart-box {
-    height: 338px;
-    background-color: $gray-200;
+  /* 피부분석 step 1 */
+  .intro {
+    .heading {
+      padding: 0 vw(24);
+      margin-bottom: vw(24);
+      margin-top: vw(21);
 
-    .chart {
-      width: 100%;
-      height: 201px;
-      resize: both;
-      //font-family: $poppins-semiBold;
+      .font-body-2 {
+        display: inline-block;
+        vertical-align: middle;
+        color: $gray-600;
+        margin-right: vw(12);
+      }
+
+      .font-h3 {
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
 
-    .number {
-      display: inline-block;
-      font-family: $poppins-semiBold;
-      font-size: 15px;
-      color: #fff;
-      transform: translateY(-2px);
+    .step-box {
+      background-color: $gray-200;
+      padding: 0 vw(24) vw(48);
+
+      .step-1 {
+        padding-top: vw(48);
+
+        .font-body-1 {
+          text-align: center;
+          color: $gray-700;
+          margin-bottom: vw(24);
+        }
+
+        .img {
+          width: vw(180);
+          height: vw(180);
+          margin: 0 auto vw(24);
+          border-radius: vw(20);
+          overflow: hidden;
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+
+        .scan-img {
+          width: vw(248);
+          height: vw(440);
+          margin: 0 auto vw(32);
+          border-radius: vw(16);
+          overflow: hidden;
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+
+        .text-link {
+          font-size: vw(15);
+          line-height: vw(22);
+          text-align: center;
+          text-decoration-line: underline;
+          margin-bottom: vw(24);
+        }
+
+        .step {
+          margin-bottom: vw(21);
+
+          .item {
+            float: left;
+            display: flex;
+            align-items: center;
+            width: calc(50% - #{vw(5.5)});
+            height: vw(80);
+            background-color: #fff;
+            border-radius: vw(12);
+            margin-bottom: vw(11);
+            padding-left: vw(16);
+
+            .ico-step {
+              vertical-align: middle;
+              margin-right: vw(12);
+            }
+
+            .font-body-2 {
+              color: $gray-800;
+            }
+
+            .ico-step-1 {
+              @include background-img ($width: 34, $height: 34, $category: 'AI', $img: 'ico-visual-step-1.svg');
+            }
+
+            .ico-step-2 {
+              @include background-img ($width: 29, $height: 34, $category: 'AI', $img: 'ico-visual-step-2.svg');
+            }
+
+            .ico-step-3 {
+              @include background-img ($width: 33, $height: 38, $category: 'AI', $img: 'ico-visual-step-3.svg');
+            }
+
+            .ico-step-4 {
+              @include background-img ($width: 36, $height: 36, $category: 'AI', $img: 'ico-visual-step-4.svg');
+            }
+
+            &:nth-child(2n-1) {
+              margin-right: vw(11);
+            }
+          }
+        }
+      }
     }
-
-    text {
-      white-space: break-spaces;
-      font-family: $font;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 16px;
-      color: $gray-800;
-    }
   }
-}
 
-.chartScroll {
-  overflow-x: auto;
+  /* 피부분석 step 1 */
 }
-
-.scaleable-wrapper {
-  padding: 20px;
-  resize: both;
-  position: relative;
-  background: #666;
-  height: 400px;
-}
-
-g[role="tooltip"] {
-  foreignObject {
-  }
-  > g {
-    fill: #BBBBBB;
-    fill-opacity: 1;
-    stroke: none;
-    stroke-width: 0;
-  }
-}
-
-.ui-resizable-se {
-  width: 10px;
-  height: 10px;
-  background: orange;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
