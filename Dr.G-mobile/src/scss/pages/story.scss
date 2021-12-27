@@ -525,7 +525,9 @@
           }
         }
 
-        .btn-youtube {
+      /*
+      12.27 .btn-icon 추가로 인한 css 제거 - 선미
+      .btn-youtube {
           display: flex;
           align-items: center;
           padding: 0 vw(20);
@@ -533,7 +535,7 @@
           .icon {
             margin-right: vw(4);
           }
-        }
+        }*/
       }
     }
 

@@ -4,13 +4,18 @@
 |----------------------------------|
 */
 
+.attach-box{
+  margin:0 vw(-24);
+  li{
 
+  }
+}
 /*수정화면*/
 .upload-box{
-  margin-right: vw(-24);
   white-space: nowrap;
   overflow-x: scroll;
   padding-top: vw(2);
+  margin: 0 vw(-24);
   &::-webkit-scrollbar {
     display: none;
   }
@@ -23,6 +28,7 @@
     display: inline-block;
     vertical-align: middle;
     position: relative;
+    margin-left: vw(24);
     input[type=file]{
       height: 100%;
     }
@@ -96,12 +102,16 @@
   white-space: nowrap;
   overflow-x: scroll;
   padding-bottom: vw(48);
+  margin:0 vw(-24);
   li{
     position: relative;
     display: inline-block;
     margin-left: vw(4);
     &:first-of-type{
-      margin-left: 0;
+      margin-left: vw(24);
+    }
+    &:last-of-type{
+      margin-right: vw(24);
     }
     img{
       width: vw(72);

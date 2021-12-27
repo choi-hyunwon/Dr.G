@@ -13,6 +13,7 @@
  v.0.11 선미 : ico-plus -> ico-plus-sm 변경 , ico-minus -> ico-minus-sm 변경 ,ico-minus-md 추가 ,ico-plus-md 추가 -- 2021.12.21
  v.0.12 선미 : ico-link 추가 / ico-close-xs &.gray 추가-- 2021.12.22
  v.0.13 태윤 : ico-alert-circle 추가 -- 2021.12.21
+ v.0.14 선미 : ico-cart 추가 -- 2021.12.27
 |----------------------------------|
 */
 .icon {
@@ -34,6 +35,9 @@
 
 .ico-shop {
   @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-shop.svg');
+}
+.ico-cart {
+  @include background-img ($width: 20, $height: 20, $category: 'common', $img: 'ico-cart.svg');
 }
 
 .ico-accordion-close {

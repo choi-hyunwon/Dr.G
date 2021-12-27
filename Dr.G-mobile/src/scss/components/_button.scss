@@ -7,6 +7,11 @@
  v.0.5 주연 : border case 추가 -- 2021.12.17
  v.0.6 선미 : focus, active (box-shadow: none!important;) 추가 -- 2021.12.20
  v.0.7 선미 : btn-blue 추가 -- 2021.12.22
+ v.0.8 선미 : &.btn-border-black  &:focus, &:hover { background-color: #fff-> transparent 변경}
+             .btn >span{ vertical-align: baseline;} 추가
+             .btn >.icon{ vertical-align: sub;} 추가'
+             .btn 내부 icon , span 간격 추가
+             .btn &.btn-icon{버튼 내부 아이콘있는경우 클래스 추가(여백 컨트롤)}-- 2021.12.27
 |----------------------------------|
 */
 .btn {
@@ -14,13 +19,30 @@
   min-width: auto;
   height: vw(48);
   line-height: vw(46);
-  padding: 0 vw(36);
+  padding: 0 vw(40);
   background-color: $primary;
   border-color: $primary;
   border-radius: vw(100);
   font-weight: bold;
   font-size: vw(15);
   color: $gray-fff;
+  >span{
+    vertical-align: baseline;
+    +.icon{
+      margin-left: vw(4);
+    }
+  }
+  .icon{
+    +span{
+      margin-left: vw(4);
+    }
+  }
+  >.icon{
+    vertical-align: sub;
+  }
+  &.btn-icon{
+    padding: 0 vw(20);
+  }
 
   &:focus, &:hover {
     background-color: $primary;
@@ -64,16 +86,16 @@
   }
 
   &.btn-border-black {
-    background-color: #fff;
+    background-color: transparent;
     color: $gray-800;
 
     &:focus, &:hover {
-      background-color: #fff;
+      background-color: transparent;
       color: $gray-800;
     }
 
     &:active {
-      background-color: #fff  !important;
+      background-color: transparent  !important;
     }
   }
 
@@ -140,6 +162,7 @@
     height: vw(56);
     line-height: vw(54);
     font-size: vw(16);
+    padding: 0 vw(36);
   }
 
   &.btn-xl {
