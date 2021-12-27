@@ -80,6 +80,27 @@
           }
         }
 
+        .scan-img {
+          width: vw(248);
+          height: vw(440);
+          margin: 0 auto vw(32);
+          border-radius: vw(16);
+          overflow: hidden;
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+
+        .text-link {
+          font-size: vw(15);
+          line-height: vw(22);
+          text-align: center;
+          text-decoration-line: underline;
+          margin-bottom: vw(24);
+        }
+
         .step {
           margin-bottom: vw(21);
 
