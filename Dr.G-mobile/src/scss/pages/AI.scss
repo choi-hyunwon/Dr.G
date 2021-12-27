@@ -4,37 +4,7 @@
 |------------------------------------|
 */
 .AI-wrap {
-  .chart-box {
-    height: 338px;
-    background-color: $gray-200;
-
-    .chart {
-      width: 100%;
-      height: 201px;
-      resize: both;
-      //font-family: $poppins-semiBold;
-    }
-
-    .number {
-      display: inline-block;
-      font-family: $poppins-semiBold;
-      font-size: 15px;
-      color: #fff;
-      transform: translateY(-2px);
-    }
-
-    text {
-      white-space: break-spaces;
-      font-family: $font;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 16px;
-      color: $gray-800;
-    }
-  }
-
-  /* 피부분석 step 1 ~ 2 */
+  /* 피부분석 step 1 */
   .intro {
     .heading {
       padding: 0 vw(24);
@@ -56,7 +26,7 @@
 
     .step-box {
       background-color: $gray-200;
-      padding: 0 vw(24);
+      padding: 0 vw(24) vw(48);
 
       .step-1 {
         padding-top: vw(48);
@@ -145,44 +115,9 @@
             }
           }
         }
-
-        .btn-wrap {
-          margin-bottom: vw(48);
-        }
       }
     }
   }
-}
 
-.chartScroll {
-  overflow-x: auto;
+  /* 피부분석 step 1 */
 }
-
-.scaleable-wrapper {
-  padding: 20px;
-  resize: both;
-  position: relative;
-  background: #666;
-  height: 400px;
-}
-
-g[role="tooltip"] {
-  foreignObject {
-  }
-  > g {
-    fill: #BBBBBB;
-    fill-opacity: 1;
-    stroke: none;
-    stroke-width: 0;
-  }
-}
-
-.ui-resizable-se {
-  width: 10px;
-  height: 10px;
-  background: orange;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-

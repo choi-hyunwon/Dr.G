@@ -1,0 +1,69 @@
+/*
+|------------------------------------|
+ v.0.1 주연 : 최초 작업 -- 2021.12.27
+|------------------------------------|
+*/
+.AI-wrap {
+  .chart-box {
+    height: 338px;
+    background-color: $gray-200;
+
+    .chart {
+      width: 100%;
+      height: 201px;
+      resize: both;
+      //font-family: $poppins-semiBold;
+    }
+
+    .number {
+      display: inline-block;
+      font-family: $poppins-semiBold;
+      font-size: 15px;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    text {
+      white-space: break-spaces;
+      font-family: $font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      color: $gray-800;
+    }
+  }
+}
+
+.chartScroll {
+  overflow-x: auto;
+}
+
+.scaleable-wrapper {
+  padding: 20px;
+  resize: both;
+  position: relative;
+  background: #666;
+  height: 400px;
+}
+
+g[role="tooltip"] {
+  foreignObject {
+  }
+  > g {
+    fill: #BBBBBB;
+    fill-opacity: 1;
+    stroke: none;
+    stroke-width: 0;
+  }
+}
+
+.ui-resizable-se {
+  width: 10px;
+  height: 10px;
+  background: orange;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
