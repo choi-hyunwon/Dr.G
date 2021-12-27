@@ -68,51 +68,98 @@ data.guide = {
             category: 'guide',
             page: 'badge'
         },
+        {
+            stateClass: 'complete',
+            url: 'file',
+            category: 'guide',
+            page: 'file'
+        },
     ]
 }
 
-/*data.mentoring = {
+data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
         {
             stateClass: 'waiting',
+            url: '스킨멘토링_서브메인',
+            category: 'mentoring',
+            page: '스킨멘토링_서브메인'
+        },
+        {
+            stateClass: 'working',
             url: '스킨멘토링_스킨멘토링내역_목록',
             category: 'mentoring',
             page: '스킨멘토링_스킨멘토링내역_목록'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: '스킨멘토링_내역_상세페이지_답변대기상태',
             category: 'mentoring',
             page: '스킨멘토링_내역_상세페이지_답변대기상태'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'working',
+            url: '스킨멘토링_내역_상세페이지_답변완료상태',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_상세페이지_답변완료상태'
+        },
+        {
+            stateClass: 'complete',
             url: '스킨멘토링_내역_수정페이지_STEP1',
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP1'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: '스킨멘토링_내역_수정페이지_STEP2',
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP2'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: '스킨멘토링_내역_수정페이지_STEP3',
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP3'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: '스킨멘토링_내역_수정페이지_STEP4',
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP4'
-        }
-
+        },
+        {
+            stateClass: 'working',
+            url: '스킨멘토링_내역_상세페이지_후기팝업',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_상세페이지_후기팝업'
+        },
+        {
+            stateClass: 'complete',
+            url: '스킨멘토링_내역_기본정보안내_팝업',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_기본정보안내_팝업'
+        },
+        {
+            stateClass: 'complete',
+            url: '스킨멘토링_내역_레이어팝업_수신동의_미체크',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_레이어팝업_수신동의_미체크'
+        },
+        {
+            stateClass: 'complete',
+            url: '스킨멘토링_내역_레이어팝업_제품추천_미체크',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_레이어팝업_제품추천_미체크'
+        },
+        {
+            stateClass: 'complete',
+            url: '스킨멘토링_내역_레이어팝업_수신동의_제품추천_미체크',
+            category: 'mentoring',
+            page: '스킨멘토링_내역_레이어팝업_수신동의_제품추천_미체크'
+        },
     ]
-}*/
+}
 
 data.suggestion = {
     title: '고객제안',
@@ -255,16 +302,22 @@ data.freesample = {
             page: '무료샘플신청_나의신청내역'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '무료샘플신청_무료샘플신청팝업',
             category: 'freesample',
             page: '무료샘플신청_무료샘플신청팝업'
         },
         {
-            stateClass: 'working',
-            url: '무료샘플신청_나의신청내역_수정팝업',
+            stateClass: 'complete',
+            url: '무료샘플신청_무료샘플신청팝업_수정팝업',
             category: 'freesample',
-            page: '무료샘플신청_나의신청내역_수정팝업'
+            page: '무료샘플신청_무료샘플신청팝업_수정팝업'
+        },
+        {
+            stateClass: 'complete',
+            url: '무료샘플신청_무료샘플신청팝업_솔드아웃',
+            category: 'freesample',
+            page: '무료샘플신청_무료샘플신청팝업_솔드아웃'
         },
     ]
 }

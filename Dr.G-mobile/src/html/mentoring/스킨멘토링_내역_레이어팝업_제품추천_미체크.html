@@ -3,7 +3,6 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
-
     <!-- s contents -->
     <div class="container view-details">
         <div class="mentoring-wrap">
@@ -125,5 +124,36 @@
     <!-- e footer -->
 </div>
 @@include('./_mentoringScript.html')
+
+<!-- 타이틀 x-->
+<div class="toast-dim _toast-dim-no-title fade show">
+    <div class="toast-popup">
+        <div class="toast-content no-title un-check">
+            <div class="toast-body">
+                <p class="desc">제품 추천 미신청 시 피부 고민에 맞는<br>제품 및 할인쿠폰을 만나보실 수 없어요.</p>
+                <p class="main-title">스킨멘토의 <span class="color-blue">맞춤형 추천 혜택</span>을<br>받아보시겠어요?</p>
+            </div>
+            <div class="toast-footer">
+                <a href="#" class="btn btn-lg btn-blue _toast-dim-close-title">네, 제품 추천을 받을게요.</a>
+                <a href="#" class="text-btn _toast-dim-close-title">아니오, 받지 않겠습니다.</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--toastPopupScript-->
+<script>
+    $(document).ready(function () {
+        $('._toast-popup-open-no-title').on('click', function () {
+            $('._toast-dim-no-title').removeClass('hide').addClass('fade show').css('display', 'block');
+        });
+        $('._toast-dim-close-title').on('click', function () {
+            $('._toast-dim-no-title').addClass('hide');
+            setTimeout(() => {
+                $('._toast-dim-no-title').removeClass('fade show').css('display', 'none');
+            }, 400);
+        });
+    });
+</script>
+
 </body>
 </html>

@@ -4,12 +4,14 @@
  v.0.2 태윤 : modal-footer > .btn css속성 제거 (클래스로 버튼 색상 제어)
  v.0.3 주연 : vw 적용 -- 2021.12.14
  v.0.4 태윤 : .full-popup 추가 , footer에 네비게이션있는 모달 추가 -- 2021.12.17
+ v.0.5 태윤 : 1:1 스킨멘토링 관련 팝업 추가 // 모달팝업 버튼 수정으로 인한 변경 -- 2021.12.24
 |----------------------------------|
 */
 
 
 .modal {
   word-break: keep-all;
+
   .modal-dialog {
     &.alert-popup {
       .modal-content {
@@ -80,12 +82,13 @@
       margin: 0 auto;
     }
   }
+
   .btn {
     outline: none;
   }
 }
 
-.full-popup{
+.full-popup {
   z-index: 1050;
   display: none;
   position: fixed;
@@ -94,14 +97,17 @@
   width: 100%;
   height: 100%;
   background-color: $gray-200;
-  &.show{
+
+  &.show {
     display: block;
   }
-  .popup-content{
+
+  .popup-content {
     padding: vw(0) vw(24);
     overflow-y: scroll;
     height: 100vh;
-    .popup-header{
+
+    .popup-header {
       z-index: 1051;
       padding: 0px vw(24);
       width: 100vw;
@@ -113,43 +119,54 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .title{
+
+      .title {
         font-weight: 700;
       }
-      &.header-white{
+
+      &.header-white {
         background-color: $gray-fff;
       }
     }
-    .popup-body{
+
+    .popup-body {
       padding-top: vw(80);
-      .comment-list{
-        .item{
+
+      .comment-list {
+        .item {
           background-color: $gray-fff;
           border-radius: vw(12);
           padding: vw(20);
-          .connetnt{
+
+          .connetnt {
             margin-bottom: vw(10);
-            p{
+
+            p {
               font-size: vw(15);
               line-height: vw(22);
               font-weight: 400;
-              color: #444;}
+              color: #444;
+            }
           }
-          +.item{
+
+          + .item {
             margin-top: vw(16);
           }
-          &.manager{
+
+          &.manager {
             margin-top: 0px;
             background-color: #E2F5FF;
-            position:relative;
-            .info-area{
-              .icon{
-                +.nickname{
-                    margin-left: 0px;
+            position: relative;
+
+            .info-area {
+              .icon {
+                + .nickname {
+                  margin-left: 0px;
                 }
               }
             }
-            &:before{
+
+            &:before {
               content: '';
               width: vw(20);
               height: vw(20);
@@ -160,20 +177,25 @@
               background-size: 100% 100%;
             }
           }
-          .info-area{
+
+          .info-area {
             margin-bottom: vw(6);
             display: flex;
             align-items: center;
-            .icon{
+
+            .icon {
               margin-right: vw(8);
             }
-            span{
+
+            span {
               font-size: vw(13);
               line-height: vw(18);
-              &.username{
+
+              &.username {
                 padding-right: vw(8);
                 position: relative;
-                &:before{
+
+                &:before {
                   content: '';
                   position: absolute;
                   top: vw(4);
@@ -183,14 +205,16 @@
                   background-color: $gray-400;
                 }
               }
-              &.nickname{
+
+              &.nickname {
                 font-weight: 700;
                 margin-left: vw(8);
               }
             }
           }
-          .date{
-            span{
+
+          .date {
+            span {
               font-size: vw(13);
               line-height: vw(18);
               color: #888;
@@ -199,11 +223,13 @@
         }
       }
     }
-    .popup-footer{
+
+    .popup-footer {
       padding: vw(24) 0;
     }
   }
 }
+
 .toast-dim {
   position: fixed;
   top: 0;
@@ -215,6 +241,7 @@
   overflow: hidden;
   outline: 0;
   background-color: rgba(33, 37, 41, 0.3);
+
   &.show {
     display: block;
 
@@ -235,6 +262,7 @@
       }
     }
   }
+
   &.hide {
     display: block;
 
@@ -256,12 +284,14 @@
       }
     }
   }
+
   .toast-popup {
     position: relative;
     width: auto;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+
     .toast-content {
       width: 100%;
       position: absolute;
@@ -269,6 +299,105 @@
       padding: vw(32);
       border-radius: vw(20) vw(20) 0 0;
       bottom: vw(-300);
+
+      .toast-header {
+        margin-bottom: vw(24);
+        padding: 0;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        border-bottom: 0;
+
+        .title {
+          font-size: vw(20);
+          font-weight: 700;
+          line-height: vw(30);
+          letter-spacing: -0.005em;
+          text-align: left;
+          color: $gray-800;
+        }
+      }
+
+      .toast-body {
+        padding: 0;
+        margin-bottom: vw(32);
+
+        .main-title {
+          font-size: vw(16);
+          font-weight: 700;
+          line-height: vw(24);
+          letter-spacing: -0.005em;
+          text-align: center;
+
+        }
+
+        .desc {
+          font-size: vw(16);
+          font-weight: 400;
+          line-height: vw(25);
+          letter-spacing: -0.005em;
+          text-align: center;
+        }
+
+        .img {
+          margin: 0 auto vw(24);
+
+          &.logo {
+            width: vw(88);
+            height: auto;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+
+            + .main-title {
+              font-weight: 400;
+            }
+          }
+        }
+
+        span {
+          color: $blue;
+          font-weight: 700;
+        }
+
+        .text-btn {
+          display: block;
+          font-size: vw(15);
+          font-weight: 500;
+          line-height: vw(22);
+          letter-spacing: -0.005em;
+          text-align: center;
+          text-decoration: underline;
+        }
+
+        .agree-area {
+          margin-bottom: vw(25);
+        }
+      }
+
+      .toast-footer {
+        .btn {
+          width: 100%;
+
+          + .text-btn {
+            padding-top: vw(24)
+          }
+        }
+
+        .text-btn {
+          display: block;
+          font-size: vw(15);
+          font-weight: 500;
+          line-height: vw(22);
+          letter-spacing: -0.005em;
+          text-align: center;
+          text-decoration: underline;
+        }
+      }
+
+
       &.title {
         .toast-body {
           &.bg-docter {
@@ -277,14 +406,20 @@
             background-size: vw(115) vw(120);
             background-image: url("../img/common/img-docterAnn.png");
           }
+
           .main-title {
             text-align: left;
             margin-bottom: vw(6);
 
             span {
               color: $primary;
+
+              &.color-blue {
+                color: $blue;
+              }
             }
           }
+
           .desc {
             font-size: vw(13);
             font-weight: 400;
@@ -294,6 +429,7 @@
             color: #666;
             margin-bottom: vw(24);
           }
+
           textarea {
             border-radius: vw(12);
             width: 100%;
@@ -317,6 +453,7 @@
               outline: none;
             }
           }
+
           .caption {
             font-size: vw(13);
             font-style: normal;
@@ -328,13 +465,13 @@
           }
         }
       }
+
       &.no-title {
-        &.non-member {
+        &.un-check {
           .toast-body {
             .desc {
               margin-bottom: vw(12);
             }
-
           }
 
           .main-title {
@@ -342,6 +479,10 @@
 
             span {
               color: $primary;
+            }
+
+            .color-blue {
+              color: $blue !important;
             }
           }
         }
@@ -400,121 +541,59 @@
           margin-bottom: vw(32);
         }
       }
-      &.navi{
-          padding: 0px;
-          .toast-header{
-            padding: vw(24) vw(24) 0px;
-            margin-bottom: vw(36);
-          }
-          .toast-body{
-            margin: 0 auto;
-            text-align: center;
-            .desc{
-              word-break: keep-all;
-              padding: 0 vw(20);
-              margin-bottom: vw(12);
-                span{
-                  color: $primary;
-                  font-weight: 700;
-                }
+
+      &.navi {
+        padding: 0px;
+
+        .toast-header {
+          padding: vw(24) vw(24) 0px;
+          margin-bottom: vw(36);
+        }
+
+        .toast-body {
+          margin: 0 auto;
+          text-align: center;
+
+          .desc {
+            word-break: keep-all;
+            padding: 0 vw(20);
+            margin-bottom: vw(12);
+
+            span {
+              color: $primary;
+              font-weight: 700;
             }
-            .text-btn{
-              margin-bottom: vw(32);
-            }
           }
-          .toast-footer{
-            background-color: $gray-800;
-            .page-btn-wrap{
-              display: block;
-              padding: vw(20) vw(25);
-              .btn-page{
-                color: $gray-fff;
-                &.btn-prev{
-                  float: left;
-                }
-                &.btn-next{
-                  float: right;
-                }
+
+          .text-btn {
+            margin-bottom: vw(32);
+          }
+        }
+
+        .toast-footer {
+          background-color: $gray-800;
+
+          .page-btn-wrap {
+            display: block;
+            padding: vw(20) vw(25);
+
+            .btn-page {
+              color: $gray-fff;
+
+              &.btn-prev {
+                float: left;
               }
 
+              &.btn-next {
+                float: right;
+              }
             }
 
           }
-      }
-      .toast-header {
-        margin-bottom: vw(24);
-        padding: 0;
-        display: flex;
-        align-content: center;
-        justify-content: space-between;
-        border-bottom: 0;
 
-        .title {
-          font-size: vw(20);
-          font-weight: 700;
-          line-height: vw(30);
-          letter-spacing: -0.005em;
-          text-align: left;
-          color: $gray-800;
         }
       }
-      .toast-body {
-        padding: 0;
-        margin-bottom: vw(24);
 
-        .main-title {
-          font-size: vw(16);
-          font-weight: 700;
-          line-height: vw(24);
-          letter-spacing: -0.005em;
-          text-align: center;
-
-        }
-
-        .desc {
-          font-size: vw(16);
-          font-weight: 400;
-          line-height: vw(25);
-          letter-spacing: -0.005em;
-          text-align: center;
-        }
-
-        .img {
-          margin: 0 auto vw(24);
-
-          &.logo {
-            width: vw(88);
-            height: auto;
-
-            img {
-              width: 100%;
-              height: auto;
-            }
-          }
-        }
-
-        .text-btn {
-          display: block;
-          font-size: vw(15);
-          font-weight: 500;
-          line-height: vw(22);
-          letter-spacing: -0.005em;
-          text-align: center;
-          text-decoration: underline;
-        }
-
-        span {
-          color: $blue;
-        }
-        .agree-area{
-          margin-bottom: vw(25);
-        }
-      }
-      .toast-footer {
-        .btn {
-          width: 100%;
-        }
-      }
 
     }
 

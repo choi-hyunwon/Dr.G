@@ -6,93 +6,98 @@
 
     <!-- s contents -->
     <div class="container view-details">
-        <div class="header-details">
-            <a href="#"><i class="icon ico-close"></i></a>
-        </div>
-        <div class="body-details bg-gray">
-            <div class="step-heading">
-                step1
+        <div class="mentoring-wrap">
+            <div class="header-details">
+                <a href="#"><i class="icon ico-close"></i></a>
             </div>
-
-            <div class="area-desc">
-                <div class="guidance">
-                    <p class="font-h3 font-bold">조수인님의<br><span class="color-blue">기본정보</span>부터 확인할게요.</p>
+            <div class="body-details bg-gray">
+                <div class="step-heading row">
+                    <div class="step col-3 active">
+                        <span class="tit">기본정보</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">생활습관</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">피부고민</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">완료</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="asking">
-                    <p class="font-h6 font-bold">저의 피부타입은</p>
-                    <input type="text" title="피부타입 입력" class="form-control" placeholder="피부타입 입력">
 
-                    <p class="font-h6 font-bold">연령대는</p>
-                    <div class="select-popup">
-                        <!-- Button trigger modal -->
-                        <a href="#" class="btn-select _toast-popup-open text">
-                            <span class="text">연령대를 선택하세요.</span>
-                        </a>
-                        <!--modal-->
-                        <div class="toast-dim _toast-popup text">
-                            <div class="toast-popup">
-                                <div class="toast-content no-title type">
-                                    <div class="toast-body mb-0">
-                                        <ul class="select-list">
-                                            <li class="list"><span class="text">10대</span><i class="icon ico-check-green"></i></li>
-                                            <li class="list"><span class="text active">20대</span><i class="icon ico-check-green"></i></li>
-                                            <li class="list"><span class="text">30대</span><i class="icon ico-check-green"></i></li>
-                                            <li class="list"><span class="text">40대</span><i class="icon ico-check-green"></i></li>
-                                            <li class="list"><span class="text">50대</span><i class="icon ico-check-green"></i></li>
-                                            <li class="list"><span class="text">60대 이상</span><i class="icon ico-check-green"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="area-desc">
+                    <div class="guidance">
+                        <p class="font-h3 font-bold">조수인님의<br><span class="color-blue">기본정보</span>부터 확인할게요.</p>
+                    </div>
+                    <div class="asking">
+                        <p class="font-h6 font-bold">저의 피부타입은</p>
+                        <input type="text" title="피부타입 입력" class="form-control" placeholder="OS-수부민지형" disabled>
+
+                        <p class="font-h6 font-bold">연령대는</p>
+                        <div class="select-popup">
+                            <!-- Button trigger modal -->
+                            <a href="#" class="btn-select _toast-popup-open age">
+                                <span class="text">연령대를 선택하세요.</span>
+                            </a>
                         </div>
+
+                        <p class="font-h6 font-bold">피부고민은</p>
+                        <div class="badge-box">
+                            <div class="badge badge-lg">블랙헤드</div>
+                            <div class="badge badge-lg active">유수분 밸런스</div>
+                            <div class="badge badge-lg">속건조</div>
+                            <div class="badge badge-lg">건조</div>
+                            <div class="badge badge-lg">피지</div>
+                            <div class="badge badge-lg">주름</div>
+                            <div class="badge badge-lg">탄력</div>
+                            <div class="badge badge-lg active">모공</div>
+                            <div class="badge badge-lg">민감</div>
+                            <div class="badge badge-lg">여드름</div>
+                            <div class="badge badge-lg">좁쌀여드름</div>
+                            <div class="badge badge-lg">기미</div>
+                            <div class="badge badge-lg">주근깨</div>
+                            <div class="badge badge-lg active">모낭염</div>
+                            <div class="badge badge-lg">색소침착</div>
+                            <div class="badge badge-lg">홍조</div>
+                            <div class="badge badge-lg">다크서클</div>
+                            <div class="badge badge-lg">따끔거림</div>
+                            <div class="badge badge-lg active">가려움</div>
+                            <div class="badge badge-lg">알레르기</div>
+                            <div class="badge badge-lg">지루성 피부염</div>
+                            <div class="badge badge-lg">비립종</div>
+                            <div class="badge badge-lg">접촉피부염</div>
+                            <div class="badge badge-lg">기타</div>
+                        </div>
+
+                        <input type="text" title="피부고민 입력(최대10글자)" class="form-control" placeholder="최대 10자 입력 가능">
+                        <p class="font_right">입니다.</p>
                     </div>
-
-                    <p class="font-h6 font-bold">피부고민은</p>
-                    <div class="badge-box">
-                        <div class="badge badge-lg">블랙헤드</div>
-                        <div class="badge badge-lg active">유수분 밸런스</div>
-                        <div class="badge badge-lg">속건조</div>
-                        <div class="badge badge-lg">건조</div>
-                        <div class="badge badge-lg">피지</div>
-                        <div class="badge badge-lg">주름</div>
-                        <div class="badge badge-lg">탄력</div>
-                        <div class="badge badge-lg active">모공</div>
-                        <div class="badge badge-lg">민감</div>
-                        <div class="badge badge-lg">여드름</div>
-                        <div class="badge badge-lg">좁쌀여드름</div>
-                        <div class="badge badge-lg">기미</div>
-                        <div class="badge badge-lg">주근깨</div>
-                        <div class="badge badge-lg active">모낭염</div>
-                        <div class="badge badge-lg">색소침착</div>
-                        <div class="badge badge-lg">홍조</div>
-                        <div class="badge badge-lg">다크서클</div>
-                        <div class="badge badge-lg">따끔거림</div>
-                        <div class="badge badge-lg active">가려움</div>
-                        <div class="badge badge-lg">알레르기</div>
-                        <div class="badge badge-lg">지루성 피부염</div>
-                        <div class="badge badge-lg">비립종</div>
-                        <div class="badge badge-lg">접촉피부염</div>
-                        <div class="badge badge-lg">기타</div>
-                    </div>
-
-                    <input type="text" title="피부고민 입력(최대10글자)" class="form-control" placeholder="최대 10자 입력 가능">
-                    <p class="font_right">입니다.</p>
-
-                    <script>
-                        $('.asking .badge-box .badge').on('click', function () {
-                           $(this).toggleClass('active')
-                        })
-                    </script>
-
                 </div>
-            </div>
 
-        </div>
-        <div class="footer-details bg-dark">
-            <div class="page-btn-wrap btn-next">
-                <a href="#" class="btn-page">
-                    <span class="font-body-1">다음</span><i class="icon ico-next white"></i>
-                </a>
+            </div>
+            <div class="footer-details bg-dark">
+                <div class="page-btn-wrap btn-next">
+                    <a href="#" class="btn-page">
+                        <span class="font-body-1">다음</span><i class="icon ico-next white"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -102,5 +107,58 @@
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
+<!--modal-->
+<div class="toast-dim _toast-popup age">
+    <div class="toast-popup">
+        <div class="toast-content no-title type">
+            <div class="toast-body mb-0">
+                <ul class="select-list">
+                    <li class="list"><span class="text">10대</span><i class="icon ico-check-green"></i></li>
+                    <li class="list"><span class="text active">20대</span><i class="icon ico-check-green"></i></li>
+                    <li class="list"><span class="text">30대</span><i class="icon ico-check-green"></i></li>
+                    <li class="list"><span class="text">40대</span><i class="icon ico-check-green"></i></li>
+                    <li class="list"><span class="text">50대</span><i class="icon ico-check-green"></i></li>
+                    <li class="list"><span class="text">60대 이상</span><i class="icon ico-check-green"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--age script-->
+<script>
+    $(document).ready(function () {
+        $('._toast-popup-open.age').click(function () {
+            let select = $('._toast-popup.age')
+            select.removeClass('hide').addClass('fade show').css('display', 'block');
+        });
+    });
+    $(document).ready(function () {
+        let list = $('._toast-popup.age .select-list > .list');
+        function hidePopup() {
+            $('._toast-popup.text').addClass('hide');
+            setTimeout(() => {
+                $('._toast-popup.text').removeClass('fade show').css('display', 'none');
+            }, 400);
+        }
+        list.on("click", function (e) {
+            let textValue = $(this).find('span').text();
+
+            function ChangeText() {
+                $('._toast-popup-open.age').find('span').text(textValue).css({
+                    'color': '#444444',
+                    'font-weight': 'bold'
+                });
+            }
+
+            list.removeClass("active");
+            $(this).addClass("active");
+            hidePopup();
+            ChangeText();
+        });
+    });
+</script>
+
+
+@@include('./_mentoringScript.html')
 </body>
 </html>
