@@ -56,7 +56,7 @@ a {
 }
 
 
-.header2 {
+.header-white {
   position: fixed;
   width: 100%;
   height: vw(60);
@@ -92,12 +92,14 @@ a {
     .brand-logo {
       a {
         background: url("../img/common/logo-white.svg") no-repeat 0 0;
+        background-size: 100% auto;
       }
     }
     .btn-alert {
       a {
         i{
-          background: url("../img/common/ico-alert-white.svg");
+          background: url("../img/common/ico-alert-white.svg") no-repeat 0 0;
+          background-size: 100% auto;
         }
       }
     }
