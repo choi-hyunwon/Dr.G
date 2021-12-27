@@ -98,10 +98,19 @@
     input[type=password]{
       margin-bottom: vw(14);
     }
+    input[type=text]{
+      margin-bottom: vw(8);
+    }
   }
   .custom-checkbox{
     display: block;
     margin-bottom: vw(6);
+    label{
+      .collection{
+        color: $gray-600;
+        font-size: vw(12);
+      }
+    }
     &:last-of-type{
       margin-bottom: 0;
     }

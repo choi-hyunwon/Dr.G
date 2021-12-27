@@ -405,6 +405,8 @@
             width: vw(103);
             border-radius: vw(12);
             padding: vw(0) vw(0);
+            /*button.scss 변경으로 인한 background-color 추가 - 선미*/
+            background-color: $gray-fff;
 
             span {
               font-size: vw(15);
