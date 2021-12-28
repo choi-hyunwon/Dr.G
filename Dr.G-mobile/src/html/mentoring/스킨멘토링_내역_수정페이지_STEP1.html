@@ -139,9 +139,9 @@
     $(document).ready(function () {
         let list = $('._toast-popup.age .select-list > .list');
         function hidePopup() {
-            $('._toast-popup.text').addClass('hide');
+            $('._toast-popup.age').addClass('hide');
             setTimeout(() => {
-                $('._toast-popup.text').removeClass('fade show').css('display', 'none');
+                $('._toast-popup.age').removeClass('fade show').css('display', 'none');
             }, 400);
         }
         list.on("click", function (e) {

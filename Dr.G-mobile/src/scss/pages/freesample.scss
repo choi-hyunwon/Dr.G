@@ -597,15 +597,12 @@
     .btn-wrap {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       .btn {
         width: vw(160);
         max-width: vw(160);
-      }
-      &.one-btn-wrap{
-        justify-content: center;
-        .btn{
-          width: auto;
+        margin: 0 auto;
+        +.btn{
+          margin-left: vw(7);
         }
       }
     }
