@@ -16,7 +16,7 @@
  v.0.14 주연 : ico-lock 추가 -- 2021.12.27
  v.0.15 선미 : ico-cart 추가 -- 2021.12.27
  v.0.15 선미 : ico-check-blue 추가 -- 2021.12.28
- v.0.16 태윤 : ico-star-gray , ico-star-yellow 추가 -- 2021.12.28
+ v.0.16 태윤 : ico-star > .active시 ico-star-yellow 추가 -- 2021.12.28
 |----------------------------------|
 */
 .icon {
@@ -201,10 +201,11 @@
 .ico-check-blue {
   @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-check-blue.svg');
 }
-.ico-star-gray {
+.ico-star {
   @include background-img ($width: 42, $height: 40, $category: 'common', $img: 'ico-star-gray.svg');
+  &.active{
+    @include background-img ($width: 42, $height: 40, $category: 'common', $img: 'ico-star-yellow.svg');
+  }
 }
-.ico-star-yellow {
-  @include background-img ($width: 42, $height: 40, $category: 'common', $img: 'ico-star-yellow.svg');
-}
+
 

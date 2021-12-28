@@ -185,9 +185,9 @@
             align-items: center;
 
             .img {
-             +.nickname{
-               margin-left: 0px;
-             }
+              + .nickname {
+                margin-left: 0px;
+              }
             }
 
             span {
@@ -378,6 +378,55 @@
         .agree-area {
           margin-bottom: vw(25);
         }
+
+        .grade-star-area {
+          margin: 0 vw(38) vw(24);
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            cursor: pointer;
+          }
+        }
+
+        .circle-list-area {
+
+          > li {
+            position: relative;
+            margin-bottom: vw(4);
+
+            &:before {
+              background-color: $gray-800;
+              width: vw(3);
+              height: vw(3);
+              border-radius: 50%;
+              content: '';
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+            &:nth-last-of-type(1) {
+              margin-bottom: 0px;
+            }
+
+            p {
+              font-size: 13px;
+              line-height: 18px;
+              letter-spacing: -0.005em;
+              color: $gray-500;
+              font-weight: 400;
+              padding-left: vw(9);
+
+              span {
+                font-weight: 500;
+                color: $gray-600;
+
+              }
+            }
+          }
+
+        }
       }
 
       .toast-footer {
@@ -511,7 +560,8 @@
                 &.active {
                   span {
                     color: $primary;
-                    &.blue{
+
+                    &.blue {
                       color: $blue;
                     }
                   }
@@ -597,6 +647,25 @@
 
           }
 
+        }
+      }
+
+      &.grade {
+        padding: vw(24) vw(24) vw(32);
+        textarea {
+          border-radius: vw(12);
+          width: 100%;
+          border: vw(1) solid $gray-600;
+          min-height: vw(200);
+          resize: none;
+          padding: vw(20);
+          margin-bottom: vw(12);
+          color: $gray-700;
+          letter-spacing: -0.005em;
+
+          &:focus {
+            outline: none;
+          }
         }
       }
 
