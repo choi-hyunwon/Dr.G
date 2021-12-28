@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
 <body>
+<div class="wrap">
+</div>
+
+<!-- 타이틀 O-->
+<div class="toast-dim _toast-dim-title fade show" style="display: block;">
+    <div class="toast-popup">
+        <div class="toast-content grade">
+            <div class="toast-header">
+                <p class="title">후기 작성하기</p>
+                <a href="#" class="_toast-popup-close-title icon ico-close-sm"></a>
+            </div>
+            <div class="toast-body">
+                <ul class="grade-star-area">
+                    <li class="icon ico-star"></li>
+                    <li class="icon ico-star"></li>
+                    <li class="icon ico-star"></li>
+                    <li class="icon ico-star"></li>
+                    <li class="icon ico-star"></li>
+                </ul>
+                <textarea></textarea>
+                <ul class="circle-list-area">
+                    <li><p>후기 작성 시 <span>적립금 500원</span> 지급(월 1회)</p></li>
+                    <li><p>월간 베스트 후기로 선정 시 <span>적립금 3,000원</span> 지급(월 3명)</p></li>
+                </ul>
+            </div>
+            <div class="toast-footer">
+                <a href="#" class="btn btn-lg btn-blue _toast-popup-close-title">등록</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--toastPopupScript-->
+<script>
+    $(document).ready(function () {
+        $('._toast-popup-open-title').click(function () {
+            $('._toast-dim-title').removeClass('hide').addClass('fade show').css('display', 'block');
+        });
+        $('._toast-popup-close-title').click(function () {
+            $('._toast-dim-title').addClass('hide');
+            setTimeout(() => {
+                $('._toast-dim-title').removeClass('fade show').css('display', 'none');
+            }, 400);
+        });
+    });
+</script>
+
+<!--grade script-->
+<script>
+    $('.grade-star-area .icon').click(function(){
+        $(this).parent().children('li').removeClass('active');
+        $(this).addClass('active').prevAll('li').addClass('active');
+        return false;
+    });
+</script>
 
 </body>
 </html>
