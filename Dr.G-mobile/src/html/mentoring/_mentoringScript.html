@@ -27,17 +27,35 @@
         /*답변 대기, 답변 완료*/
         $('.unfold-box .title').on('click', function () {
             if (!$(this).hasClass('_title')) {
-                $(this).children().removeClass('ico-plus-sm').addClass('ico-minus-sm');
+                $(this).find('.icon').removeClass('ico-plus-sm').addClass('ico-minus-sm');
                 $(this).addClass('_title');
                 $(this).parent().addClass('_unfold');
                 $(this).siblings().slideDown(200);
             } else {
-                $(this).children().removeClass('ico-minus-sm').addClass('ico-plus-sm');
+                $(this).find('.icon').removeClass('ico-minus-sm').addClass('ico-plus-sm');
                 $(this).removeClass('_title');
                 $(this).parent().removeClass('_unfold');
                 $(this).siblings().slideUp(200);
             }
         })
+
+/*
+
+        /!*서브메인*!/
+        $('.faq_box .title').on('click', function () {
+            if (!$(this).hasClass('_title')) {
+                $(this).find('.icon').removeClass('ico-plus-sm').addClass('ico-minus-sm');
+                $(this).addClass('_title');
+                $(this).parent().addClass('_unfold');
+                $(this).siblings().slideDown(200);
+            } else {
+                $(this).find('.icon').removeClass('ico-minus-sm').addClass('ico-plus-sm');
+                $(this).removeClass('_title');
+                $(this).parent().removeClass('_unfold');
+                $(this).siblings().slideUp(200);
+            }
+        })
+*/
 
     });
 

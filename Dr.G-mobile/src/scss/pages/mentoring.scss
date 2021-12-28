@@ -131,10 +131,8 @@
           }
         }
       }
-
     }
   }
-
   .area-desc{
     .complete{
         padding-bottom: 16px;
@@ -142,7 +140,6 @@
           margin-bottom: vw(12);
           position: relative;
           display: inline-block;
-
           img{
             &:first-of-type{
               width:vw(104);
@@ -229,9 +226,7 @@
         }
       }
     }
-
   }
-
   .solution-details{
     .section-color{
       padding: vw(48) vw(0) vw(94);
@@ -387,7 +382,6 @@
       >span{
         letter-spacing: -0.02em;
         color: $gray-800;
-
       }
     }
     .more{
@@ -396,10 +390,51 @@
         color: $gray-800;
         margin-bottom: vw(16);
       }
-
-
     }
+  }
 
+  &.sub-main{
+    .section-tab{
+      .tab{
+        ul{
+          li{
+
+          }
+        }
+      }
+      .tab-content{
+        padding: 0;
+        .tab-pane{
+          .content{
+            padding: vw(50) vw(24) vw(76);
+            &.about-wrap{
+              background-color: #edf8ff;
+            }
+            &.process-wrap{
+              background-color: #34a6f9;
+            }
+            &.answer-wrap{
+              background-color: #edf8ff;
+            }
+            &.voc-wrap{
+              background-color: $yellow;
+            }
+            &.faq-wrap{
+              background-color: #ffffff;
+              >  p{
+                text-align: center;
+              }
+              .faq_box{
+                background-color: $gray-200;
+                border-radius: vw(16);
+              }
+            }
+          }
+
+        }
+
+      }
+    }
 
   }
 

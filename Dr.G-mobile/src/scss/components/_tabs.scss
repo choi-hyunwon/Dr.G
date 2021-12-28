@@ -5,8 +5,8 @@
  v.0.3 선미 : tab(color -> $primary 변경) -- 2021.12.07
  v.0.4 선미 : tab-content 추가 -- 2021.12.13
  v.0.5 주연 : vw 적용 -- 2021.12.14
- v.0.6 선미 : tab > item  padding-right: vw(28)-> vw(40) 변경,  tab (padding -> padding-left 변경-- 2021.12.17
- v.0.7 선미 : tab {border-bottom: 1px solid $gray-300 추가} ,슬라이드 버전 탭추가 (slide-tab)-- 2021.12.28
+ v.0.6 선미 : .tab > .item  padding-right: vw(28)-> vw(40) 변경,  tab (padding -> padding-left 변경-- 2021.12.17
+ v.0.7 선미 : .tab {border-bottom: 1px solid $gray-300 추가} ,슬라이드 버전 탭추가 (.slide-tab)-- 2021.12.28
 |----------------------------------|
 */
 .tab {
@@ -43,7 +43,7 @@
         &::after {
           content: '';
           width: 100%;
-          height: vw(2);
+          height: vw(3);
           position: absolute;
           bottom: 0;
           left: 0;
@@ -62,10 +62,10 @@
         display: inline-block;
         float: unset;
         &:first-of-type{
-          margin-left: 24px;
+          margin-left: vw(24);
         }
         &:last-of-type{
-          margin-right: 24px;
+          margin-right: vw(24);
         }
       }
     }
