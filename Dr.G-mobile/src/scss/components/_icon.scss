@@ -17,6 +17,7 @@
  v.0.15 선미 : ico-cart 추가 -- 2021.12.27
  v.0.16 태윤 : ico-check-blue 추가 -- 2021.12.28
  v.0.17 태윤 : ico-star > .active시 ico-star-yellow 추가 -- 2021.12.28
+ v.0.18 선미 : ico-plus-sm-gray, ico-minus-sm-white 추가 -- 2021.12.28
 |----------------------------------|
 */
 .icon {
@@ -175,12 +176,20 @@
   @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-plus-sm.svg');
 }
 
+.ico-plus-sm-gray {
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-plus-sm-gray.svg');
+}
+
 .ico-plus-md {
   @include background-img ($width: 16, $height: 16, $category: 'common', $img: 'ico-plus-md.svg');
 }
 
 .ico-minus-sm {
   @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-minus-sm.svg');
+}
+
+.ico-minus-sm-white {
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-minus-sm-white.svg');
 }
 
 .ico-minus-md {
