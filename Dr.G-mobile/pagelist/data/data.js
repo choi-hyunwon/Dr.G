@@ -286,6 +286,7 @@ data.story = {
         },
     ]
 }
+
 data.freesample = {
     title: '무료샘플신청',
     list: [
@@ -318,6 +319,42 @@ data.freesample = {
             url: '무료샘플신청_무료샘플신청팝업_솔드아웃',
             category: 'freesample',
             page: '무료샘플신청_무료샘플신청팝업_솔드아웃'
+        },
+    ]
+}
+
+data.AI = {
+    title: 'AI피부분석',
+    list: [
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step1-1',
+            category: 'AI',
+            page: 'Ai피부분석_Step1-1'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기',
+            category: 'AI',
+            page: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step2-1_답변_상태_예시_화면',
+            category: 'AI',
+            page: 'Ai피부분석_Step2-1_답변_상태_예시_화면'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step2-2',
+            category: 'AI',
+            page: 'Ai피부분석_Step2-2'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step2-2_답변완료',
+            category: 'AI',
+            page: 'Ai피부분석_Step2-2_답변완료'
         },
     ]
 }
