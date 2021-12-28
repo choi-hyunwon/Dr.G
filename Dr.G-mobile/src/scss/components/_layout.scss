@@ -4,7 +4,8 @@
  v.0.2 주연 : 헤더 추가 -- 2021.12.13
  v.0.3 주연 : vw 적용 -- 2021.12.14
  v.0.4 주연 : header-detail 추가 -- 2021.12.17
- v.0.5 태윤 : header > .bg-primary 추가 -- 2021.12.20
+ v.0.5 태윤 : header > .bg-primary .header-slogan 추가 -- 2021.12.20
+ v.0.6 선미 : bg-primary / header-slogan 불필요 css 제거
 |----------------------------------------------------------------------|
 */
 
@@ -30,12 +31,16 @@ a {
   padding: 0 vw(20);
   background-color: #fff;
   z-index: 5 !important;
-  &.bg-primary{
+
+/*
+12.28 header-white 추가로인한 불필요 css 제거
+ &.bg-primary{
     background-color:$primary !important;
   }
   &.header-slogan{
     padding: 0px vw(24);
   }
+  */
   .brand-logo {
     a {
       display: block;
