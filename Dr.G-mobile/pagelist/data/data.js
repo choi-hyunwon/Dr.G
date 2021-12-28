@@ -87,7 +87,7 @@ data.mentoring = {
             page: '스킨멘토링_서브메인'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '스킨멘토링_스킨멘토링내역_목록',
             category: 'mentoring',
             page: '스킨멘토링_스킨멘토링내역_목록'
