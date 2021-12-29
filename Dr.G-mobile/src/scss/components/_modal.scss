@@ -427,6 +427,15 @@
           }
 
         }
+
+        .calender{
+          width: 100%;
+          tr{
+            td{
+              text-align: center;
+            }
+          }
+        }
       }
 
       .toast-footer {
@@ -652,6 +661,7 @@
 
       &.grade {
         padding: vw(24) vw(24) vw(32);
+
         textarea {
           border-radius: vw(12);
           width: 100%;
