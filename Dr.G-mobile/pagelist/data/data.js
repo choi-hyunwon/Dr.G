@@ -135,7 +135,7 @@ data.mentoring = {
             page: '스킨멘토링_내역_수정페이지_STEP4'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '스킨멘토링_내역_상세페이지_후기팝업',
             category: 'mentoring',
             page: '스킨멘토링_내역_상세페이지_후기팝업'
