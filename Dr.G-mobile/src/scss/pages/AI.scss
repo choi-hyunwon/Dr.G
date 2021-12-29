@@ -280,13 +280,14 @@
 
     .question-box {
       background-color: $gray-200;
-      padding: vw(48) vw(24);
+      padding: vw(24);
 
       .question-head {
         .question {
           position: relative;
           border-bottom: vw(1) solid $gray-300;
           padding-bottom: vw(24);
+          padding-top: vw(24);
 
           .num {
             display: inline-block;
@@ -309,15 +310,14 @@
           .btn-delete {
             position: absolute;
             right: 0;
-            top: vw(12);
+            top: 50%;
+            transform: translateY(-50%);
             display: inline-block;
             vertical-align: middle;
             @include background-img ($width: 24, $height: 24, $category: 'AI', $img: 'btn-delete.svg');
           }
 
           + .question {
-            margin-top: vw(24);
-
             &:last-child {
               border-bottom: 0;
             }
