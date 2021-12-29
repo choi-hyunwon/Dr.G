@@ -56,11 +56,37 @@
         }
 
         .scan-img {
+          position: relative;
           width: vw(248);
           height: vw(440);
           margin: 0 auto vw(32);
           border-radius: vw(16);
           overflow: hidden;
+
+          .scan-line {
+            position: absolute;
+            width: 100%;
+            height: vw(3);
+            background-color: $yellow;
+            border-radius: vw(100);
+            left: 0;
+            z-index: 1;
+            animation-name: scanAni;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: vw(3);
+              left: 0;
+              width: 100%;
+              height: vw(76);
+              background: linear-gradient(180deg, #DDBC0F 0%, rgba(221, 188, 15, 0) 100%);
+            }
+          }
 
           img {
             width: 100%;
@@ -239,7 +265,7 @@
         top: 0;
         left: 0;
         background-color: #fff;
-        z-index: 2;
+        z-index: 5;
 
         .step-list {
           .progress {
@@ -280,13 +306,14 @@
 
     .question-box {
       background-color: $gray-200;
-      padding: vw(48) vw(24);
+      padding: vw(24);
 
       .question-head {
         .question {
           position: relative;
           border-bottom: vw(1) solid $gray-300;
           padding-bottom: vw(24);
+          padding-top: vw(24);
 
           .num {
             display: inline-block;
@@ -309,15 +336,14 @@
           .btn-delete {
             position: absolute;
             right: 0;
-            top: vw(12);
+            top: 50%;
+            transform: translateY(-50%);
             display: inline-block;
             vertical-align: middle;
             @include background-img ($width: 24, $height: 24, $category: 'AI', $img: 'btn-delete.svg');
           }
 
           + .question {
-            margin-top: vw(24);
-
             &:last-child {
               border-bottom: 0;
             }
@@ -459,4 +485,13 @@
   }
 
   /* 피부분석 step 1 */
+}
+
+@keyframes scanAni {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
 }
