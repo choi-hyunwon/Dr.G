@@ -1,0 +1,25 @@
+<div class="header-white header-transparent">
+    <div class="brand-logo"><a href="#"></a></div>
+    <div class="btn-alert"><a href="#"><i class="icon ico-alert"></i></a></div>
+</div>
+
+
+<script>
+    $(window).on("wheel", function (event){
+        if (event.originalEvent.deltaY < 0) {
+            // console.log('UP');
+            // console.log(window.pageYOffset);
+            if (window.pageYOffset > 60){
+                $('.header-white ').show().removeClass('header-transparent')
+            } else {
+                $('.header-white ').show().addClass('header-transparent')
+            }
+        } else {
+            // console.log('Down');
+           //console.log(window.scrollY);
+            if (window.pageYOffset > 60){
+                $('.header-white').hide()
+            }
+        }
+    });
+</script>

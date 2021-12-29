@@ -2,10 +2,14 @@
 |----------------------------------|
  v.0.1 주연 : 최초 작업 -- 2021.11.30
  v.0.2 주연 : vw 적용 -- 2021.12.14
+ v.0.3 선미 : color-blue / bg-gray 추가 -- 2021.12.20
 |----------------------------------|
 */
 .bg-primary { background-color: $primary;}
 .bg-blue { background-color: $blue;}
 .bg-violet { background-color: $violet;}
+.bg-gray{ background-color: $gray-200;}
+
 
 .color-primary { color: $primary;}
+.color-blue { color: $blue;}

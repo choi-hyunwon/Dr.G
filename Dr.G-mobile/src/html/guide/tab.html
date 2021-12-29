@@ -3,51 +3,52 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
- <!--   <div class="container">
-        <div class="guide">
-            <div class="box">
-                <div class="tab _tab">
-                    <ul class="clearfix">
-                        <li class="item active"><a href="#">ABOUT</a></li>
-                        <li class="item"><a href="#">PROCESS</a></li>
-                        <li class="item"><a href="#">ANSWER</a></li>
-                        <li class="item"><a href="#">VOC</a></li>
-                        <li class="item"><a href="#">FAQ</a></li>
-                    </ul>
+    <div class="container">
+        <p>1.기본 탭 (주석제거)</p>
+      <!--  <div class="section">
+            <div class="tab _tab">
+                <ul class="clearfix">
+                    <li class="item active"><a href="#">타이틀 1</a></li>
+                    <li class="item"><a href="#">타이틀 2</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    내용1
+                </div>
+                <div class="tab-pane">
+                    내용2
                 </div>
             </div>
-        </div>
-        <script>
-            $(document).ready(function () {
-                var sum = 0;
-                var tabItem = $('._tab .item a');
+        </div>-->
 
-                setTimeout(function () {
-                    tabItem.each(function () {
-                        sum = sum + $(this).outerWidth(true) + 48;
-                    });
-                    $('._tab ul').css('width', sum + 'px');
-                }, 100);
-
-                tabItem.on('click', function () {
-                    $(this).parents().addClass('active').siblings().removeClass('active');
-                })
-            })
-        </script>
-    </div>-->
-    <div class="container">
-        <div class="tab _tab">
-            <ul class="clearfix">
-                <li class="item active"><a href="#">타이틀 1</a></li>
-                <li class="item"><a href="#">타이틀 2</a></li>
-            </ul>
-        </div>
-        <div class="tab-content">
-            <div class="tab-pane active">
-                내용1
+        <p>2. 슬라이드 탭</p>
+        <div class="section">
+            <div class="tab _tab slide-tab">
+                <ul>
+                    <li class="item active"><a href="#"> 제목 1</a></li>
+                    <li class="item"><a href="#"> 제목 2</a></li>
+                    <li class="item"><a href="#"> 제목 3</a></li>
+                    <li class="item"><a href="#"> 제목 4</a></li>
+                    <li class="item"><a href="#"> 제목 5</a></li>
+                    <li class="item"><a href="#"> 제목 6</a></li>
+                    <li class="item"><a href="#"> 제목 7</a></li>
+                    <li class="item"><a href="#"> 제목 8</a></li>
+                    <li class="item"><a href="#"> 제목 9</a></li>
+                    <li class="item"><a href="#"> 제목 10</a></li>
+                </ul>
             </div>
-            <div class="tab-pane">
-                내용2
+            <div class="tab-content">
+                <div class="tab-pane active"> 내용 1</div>
+                <div class="tab-pane"> 내용 2</div>
+                <div class="tab-pane"> 내용 3</div>
+                <div class="tab-pane"> 내용 4</div>
+                <div class="tab-pane"> 내용 5</div>
+                <div class="tab-pane"> 내용 6</div>
+                <div class="tab-pane"> 내용 7</div>
+                <div class="tab-pane"> 내용 8</div>
+                <div class="tab-pane"> 내용 9</div>
+                <div class="tab-pane"> 내용 10</div>
             </div>
         </div>
 

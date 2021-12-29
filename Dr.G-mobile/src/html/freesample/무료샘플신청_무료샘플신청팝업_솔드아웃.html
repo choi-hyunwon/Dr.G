@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header-detail-with-back.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="freesample-wrap">
+            <!--무료 샘플 신청 타이틀 s-->
+            <section class="freesample-application-section">
+                <p class="title"><span>무료 샘플</span> 신청</p>
+                <p class="slogan">월 1회 피부 고민에 따른<br>각보자 무료 샘플을 신청해보세요.</p>
+            </section>
+            <!--무료 샘플 신청 타이틀 e-->
+
+            <!--신청 입력 섹션 s-->
+            <section class="freesample-info-section">
+                <ul class="privacy-area">
+                    <li class="list">
+                        <p class="title">피부타입</p>
+                        <input type="text" title="피부타입" class="form-control" value="OS-수부민지형" disabled>
+                    </li>
+                    <li class="list">
+                        <p class="title">샘플 옵션 선택</p>
+                        <ul class="info-list _info-list">
+                            <li class="list sold-out">
+                                <div class="custom-control custom-radio radio-sm" onclick="bgChange(0)">
+                                    <input type="radio" class="custom-control-input" value="green"
+                                           name="radioGuide" id="radio01" disabled>
+                                    <label class="custom-control-label" for="radio01">A타입</label>
+                                </div>
+                                <div class="option-area">
+                                    <div class="img">
+                                        <img src="../../img/@temp/img_product_thumb01.svg">
+                                    </div>
+                                    <div class="text-area">
+                                        <p>옵션구성</p>
+                                        <ul class="dot-list title">
+                                            <li class="list"><span>각&#32;<i>:</i>&#32;</span>
+                                                <p>약산성 클렌징 젤 폼</p></li>
+                                            <li class="list"><span>보&#32;<i>:</i>&#32;</span>
+                                                <p>레드 블레미쉬 클리어 수딩 크림</p></li>
+                                            <li class="list"><span>자&#32;<i>:</i>&#32;</span>
+                                                <p>그린 마일드 업 선크림 </p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list">
+                                <div class="custom-control custom-radio radio-sm" onclick="bgChange(1)">
+                                    <input type="radio" class="custom-control-input" name="radioGuide" id="radio02">
+                                    <label class="custom-control-label" for="radio02">B타입</label>
+                                </div>
+                                <div class="option-area">
+                                    <div class="img">
+                                        <img src="../../img/@temp/img_product_thumb02.svg">
+                                    </div>
+                                    <div class="text-area">
+                                        <p>옵션구성</p>
+                                        <ul class="dot-list title">
+                                            <li class="list"><span>각&#32;<i>:</i>&#32;</span>
+                                                <p>약산성 클렌징 젤 폼</p></li>
+                                            <li class="list"><span>보&#32;<i>:</i>&#32;</span>
+                                                <p>레드 블레미쉬 클리어 수딩 크림</p></li>
+                                            <li class="list"><span>자&#32;<i>:</i>&#32;</span>
+                                                <p>그린 마일드 업 선크림 </p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <p class="title">이름</p>
+                        <input type="text" title="이름" class="form-control" value="조수인" disabled>
+                    </li>
+                    <li class="list">
+                        <p class="title">휴대전화</p>
+                        <input type="number" title="휴대전화" class="form-control" value="01012233002" disabled>
+                    </li>
+                    <li class="list">
+                        <p class="title">주소</p>
+                        <input type="text" title="주소" class="form-control" value="경기도 성남시 중원구 성남대로 185 (베스티안)" disabled>
+                        <input type="text" title="상세주소" class="form-control" value="305호" disabled>
+                    </li>
+                </ul>
+                <p class="caption">개인 정보는 <a href="#">마이페이지</a>를 통해 변경해주세요.</p>
+            </section>
+            <!--신청 입력 섹션 e-->
+            <!--개인정보 수집 및 이용에 대한 동의 s-->
+            <section class="privacy-agree-section">
+                <div class="privacy-agree">
+                    <div class="custom-control custom-checkbox checkbox-sm">
+                        <input type="checkbox" class="custom-control-input" id="consentUse">
+                        <label class="custom-control-label" for="consentUse">(필수) 개인정보 수집 및 이용에 대한 동의 <a href="#">자세히 보기</a></label>
+                    </div>
+                    <ul class="dot-list">
+                        <li class="list"><p>개인정보 위탁 항목 : 성명, 아이디, 휴대폰번호, 주소</p></li>
+                        <li class="list"><p>개인정보 처리 위탁 기간 : 이벤트 경품 발송 후 3개월 이내 파기</p></li>
+
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                    <a href="#" class="btn"><span>신청완료</span></a>
+                    <a href="#" class="btn btn-black btn-border-black"><span>마이페이지</span></a>
+                </div>
+            </section>
+            <!--개인정보 수집 및 이용에 대한 동의 e-->
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+
+
+</div>
+</body>
+<script>
+    function bgChange(idx){
+        let list = $('._info-list > .list').eq(idx)
+        list.addClass('active').siblings().removeClass('active');
+    }
+</script>
+</html>

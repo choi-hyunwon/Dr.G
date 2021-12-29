@@ -8,7 +8,7 @@
   padding: vw(6) vw(10);
   border-radius: vw(12.5);
   font-size: vw(13);
-  color: #ffffff;
+  color: $gray-fff;
   font-weight: 500;
 
   &.badge-primary {
@@ -25,6 +25,25 @@
 
   &.badge-dark {
     background-color: $gray-800;
+  }
+
+  &.badge-violet {
+    background-color: rgba(97, 112, 255, 0.9);
+  }
+
+  &.badge-yellow {
+    background-color: $yellow;
+    color: $gray-800 ;
+  }
+
+  &.badge-lightgray {
+    background-color: $gray-300;
+    color: $gray-800 ;
+  }
+
+  &.badge-lg{
+    padding:vw(12) vw(18);
+    border-radius: vw(21);
   }
 }
 

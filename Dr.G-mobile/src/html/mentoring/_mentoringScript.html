@@ -1,0 +1,85 @@
+<script>
+    $(document).ready(function () {
+        /*step1*/
+        $('.asking .badge-box .badge').on('click', function () {
+        $(this).toggleClass('active')
+    })
+
+        /*step2*/
+        $('.question-box .habit li .btn').on('click', function () {
+        $(this).parents('li').find('.btn').removeClass('active')
+        $(this).addClass('active');
+    })
+
+        /*step3*/
+        $('.terms .title').on('click', function () {
+            if (!$(this).hasClass('_title')) {
+                $(this).children().removeClass('ico-plus-md').addClass('ico-minus-md');
+                $(this).addClass('_title');
+                $(this).siblings().slideDown(200);
+            } else {
+                $(this).children().removeClass('ico-minus-md').addClass('ico-plus-md');
+                $(this).removeClass('_title');
+                $(this).siblings().slideUp(200);
+            }
+        })
+
+        /*답변 대기, 답변 완료*/
+        $('.unfold-box .title').on('click', function () {
+            if (!$(this).hasClass('_title')) {
+                $(this).find('.icon').removeClass('ico-plus-sm').addClass('ico-minus-sm');
+                $(this).addClass('_title');
+                $(this).parent().addClass('_unfold');
+                $(this).siblings().slideDown(200);
+            } else {
+                $(this).find('.icon').removeClass('ico-minus-sm').addClass('ico-plus-sm');
+                $(this).removeClass('_title');
+                $(this).parent().removeClass('_unfold');
+                $(this).siblings().slideUp(200);
+            }
+        })
+
+
+
+
+
+
+/*|--------------s 서브메인----------------------------|*/
+
+        /*서브메인 voc*/
+        $('.voc .review_box .item').on('click', function () {
+            if (!$(this).hasClass('active')) {
+                $(this).addClass('active').slideDown();
+                $(this).siblings().removeClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        })
+
+        /*서브메인 faq*/
+        let box = $('.faq_box')
+        let item = $('.faq_box .item')
+        let solution = $('.solution')
+        let wrap = $('.faq-wrap')
+        item.on('click', function () {
+          if (!$(this).hasClass('active')) {
+              $(this).siblings().removeClass('active')
+              $(this).siblings().find(solution).slideUp(200);
+              $(this).addClass('active');
+              $(this).find(solution).slideDown(200);
+          } else {
+              $(this).removeClass('active');
+              $(this).find(solution).slideUp(200);
+          }
+        })
+        wrap.click(function(e) { /*외부클릭시 닫힘처리*/
+            if(!box.has(e.target).length){
+                item.removeClass('active');
+                item.find('.solution').slideUp(200);
+            }
+        });
+
+/*|--------------e 서브메인----------------------------|*/
+    });
+
+</script>

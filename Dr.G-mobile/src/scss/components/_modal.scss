@@ -3,6 +3,9 @@
  v.0.1 태윤 : 최초 작업 -- 2021.12.09
  v.0.2 태윤 : modal-footer > .btn css속성 제거 (클래스로 버튼 색상 제어)
  v.0.3 주연 : vw 적용 -- 2021.12.14
+ v.0.4 태윤 : .full-popup 추가 , footer에 네비게이션있는 모달 추가 -- 2021.12.17
+ v.0.5 태윤 : 1:1 스킨멘토링 관련 팝업 추가 // 모달팝업 버튼 수정으로 인한 변경 -- 2021.12.24
+ v.0.6 태윤 : 1:1 스킨멘토링_내역 칼러값 변경으로 인한 추가  -- 2021.12.28
 |----------------------------------|
 */
 
@@ -47,8 +50,8 @@
           .btn {
             display: inline-block;
             line-height: vw(50);
-            background-color: #fff;
-            border-color: #fff;
+            background-color: $gray-fff;
+            border-color: $gray-fff;
             border-radius: 0;
             font-weight: 400;
             font-size: vw(13);
@@ -83,6 +86,150 @@
 
   .btn {
     outline: none;
+  }
+}
+
+.full-popup {
+  z-index: 1050;
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: $gray-200;
+
+  &.show {
+    display: block;
+  }
+
+  .popup-content {
+    padding: vw(0) vw(24);
+    overflow-y: scroll;
+    height: 100vh;
+
+    .popup-header {
+      z-index: 1051;
+      padding: 0px vw(24);
+      width: 100vw;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      height: vw(60);
+      min-height: vw(60);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        font-weight: 700;
+      }
+
+      &.header-white {
+        background-color: $gray-fff;
+      }
+    }
+
+    .popup-body {
+      padding-top: vw(80);
+
+      .comment-list {
+        .item {
+          background-color: $gray-fff;
+          border-radius: vw(12);
+          padding: vw(20);
+
+          .connetnt {
+            margin-bottom: vw(10);
+
+            p {
+              font-size: vw(15);
+              line-height: vw(22);
+              font-weight: 400;
+              color: #444;
+            }
+          }
+
+          + .item {
+            margin-top: vw(16);
+          }
+
+          &.manager {
+            margin-top: 0px;
+            background-color: #E2F5FF;
+            position: relative;
+
+            .info-area {
+              .icon {
+                + .nickname {
+                  margin-left: 0px;
+                }
+              }
+            }
+
+            &:before {
+              content: '';
+              width: vw(20);
+              height: vw(20);
+              position: absolute;
+              top: vw(-18);
+              right: vw(24);
+              background-image: url("../img/common/ico-comment-triaggle.svg");
+              background-size: 100% 100%;
+            }
+          }
+
+          .info-area {
+            margin-bottom: vw(6);
+            display: flex;
+            align-items: center;
+
+            .img {
+              + .nickname {
+                margin-left: 0px;
+              }
+            }
+
+            span {
+              font-size: vw(13);
+              line-height: vw(18);
+
+              &.username {
+                padding-right: vw(8);
+                position: relative;
+
+                &:before {
+                  content: '';
+                  position: absolute;
+                  top: vw(4);
+                  right: vw(0);
+                  width: vw(1);
+                  height: vw(10);
+                  background-color: $gray-400;
+                }
+              }
+
+              &.nickname {
+                font-weight: 700;
+                margin-left: vw(8);
+              }
+            }
+          }
+
+          .date {
+            span {
+              font-size: vw(13);
+              line-height: vw(18);
+              color: #888;
+            }
+          }
+        }
+      }
+    }
+
+    .popup-footer {
+      padding: vw(24) 0;
+    }
   }
 }
 
@@ -151,10 +298,157 @@
     .toast-content {
       width: 100%;
       position: absolute;
-      background-color: #fff;
+      background-color: $gray-fff;
       padding: vw(32);
       border-radius: vw(20) vw(20) 0 0;
       bottom: vw(-300);
+
+      .toast-header {
+        margin-bottom: vw(24);
+        padding: 0;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        border-bottom: 0;
+
+        .title {
+          font-size: vw(20);
+          font-weight: 700;
+          line-height: vw(30);
+          letter-spacing: -0.005em;
+          text-align: left;
+          color: $gray-800;
+        }
+      }
+
+      .toast-body {
+        padding: 0;
+        margin-bottom: vw(32);
+
+        .main-title {
+          font-size: vw(16);
+          font-weight: 700;
+          line-height: vw(24);
+          letter-spacing: -0.005em;
+          text-align: center;
+
+        }
+
+        .desc {
+          font-size: vw(16);
+          font-weight: 400;
+          line-height: vw(25);
+          letter-spacing: -0.005em;
+          text-align: center;
+        }
+
+        .img {
+          margin: 0 auto vw(24);
+
+          &.logo {
+            width: vw(88);
+            height: auto;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+
+            + .main-title {
+              font-weight: 400;
+            }
+          }
+        }
+
+        span {
+          color: $blue;
+          font-weight: 700;
+        }
+
+        .text-btn {
+          display: block;
+          font-size: vw(15);
+          font-weight: 500;
+          line-height: vw(22);
+          letter-spacing: -0.005em;
+          text-align: center;
+          text-decoration: underline;
+        }
+
+        .agree-area {
+          margin-bottom: vw(25);
+        }
+
+        .grade-star-area {
+          margin: 0 vw(38) vw(24);
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            cursor: pointer;
+          }
+        }
+
+        .circle-list-area {
+
+          > li {
+            position: relative;
+            margin-bottom: vw(4);
+
+            &:before {
+              background-color: $gray-800;
+              width: vw(3);
+              height: vw(3);
+              border-radius: 50%;
+              content: '';
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+            &:nth-last-of-type(1) {
+              margin-bottom: 0px;
+            }
+
+            p {
+              font-size: vw(13);
+              line-height: vw(18);
+              letter-spacing: -0.005em;
+              color: $gray-500;
+              font-weight: 400;
+              padding-left: vw(9);
+
+              span {
+                font-weight: 500;
+                color: $gray-600;
+
+              }
+            }
+          }
+
+        }
+      }
+
+      .toast-footer {
+        .btn {
+          width: 100%;
+
+          + .text-btn {
+            padding-top: vw(24)
+          }
+        }
+
+        .text-btn {
+          display: block;
+          font-size: vw(15);
+          font-weight: 500;
+          line-height: vw(22);
+          letter-spacing: -0.005em;
+          text-align: center;
+          text-decoration: underline;
+        }
+      }
+
 
       &.title {
         .toast-body {
@@ -171,6 +465,10 @@
 
             span {
               color: $primary;
+
+              &.color-blue {
+                color: $blue;
+              }
             }
           }
 
@@ -215,19 +513,17 @@
             line-height: vw(18);
             letter-spacing: -0.005em;
             text-align: left;
-            color: #888888;
+            color: $gray-600;
           }
-
         }
       }
 
       &.no-title {
-        &.non-member {
+        &.un-check {
           .toast-body {
             .desc {
               margin-bottom: vw(12);
             }
-
           }
 
           .main-title {
@@ -235,6 +531,10 @@
 
             span {
               color: $primary;
+            }
+
+            .color-blue {
+              color: $blue !important;
             }
           }
         }
@@ -260,6 +560,10 @@
                 &.active {
                   span {
                     color: $primary;
+
+                    &.blue {
+                      color: $blue;
+                    }
                   }
 
                   .icon {
@@ -294,79 +598,77 @@
         }
       }
 
-      .toast-header {
-        margin-bottom: vw(24);
-        padding: 0;
-        display: flex;
-        align-content: center;
-        justify-content: space-between;
-        border-bottom: 0;
+      &.navi {
+        padding: 0px;
 
-        .title {
-          font-size: vw(20);
-          font-weight: 700;
-          line-height: vw(30);
-          letter-spacing: -0.005em;
-          text-align: left;
-          color: #444444;
+        .toast-header {
+          padding: vw(24) vw(24) 0px;
+          margin-bottom: vw(36);
         }
-      }
 
-      .toast-body {
-        padding: 0;
-        margin-bottom: vw(24);
-
-        .main-title {
-          font-size: vw(16);
-          font-weight: 700;
-          line-height: vw(24);
-          letter-spacing: -0.005em;
+        .toast-body {
+          margin: 0 auto;
           text-align: center;
 
-        }
+          .desc {
+            word-break: keep-all;
+            padding: 0 vw(20);
+            margin-bottom: vw(12);
 
-        .desc {
-          font-size: vw(16);
-          font-weight: 400;
-          line-height: vw(25);
-          letter-spacing: -0.005em;
-          text-align: center;
-        }
-
-        .img {
-          margin: 0 auto vw(24);
-
-          &.logo {
-            width: vw(88);
-            height: auto;
-
-            img {
-              width: 100%;
-              height: auto;
+            span {
+              color: $primary;
+              font-weight: 700;
             }
+          }
+
+          .text-btn {
+            margin-bottom: vw(32);
           }
         }
 
-        .text-btn {
-          display: block;
-          font-size: vw(15);
-          font-weight: 500;
-          line-height: vw(22);
-          letter-spacing: -0.005em;
-          text-align: center;
-          text-decoration: underline;
-        }
+        .toast-footer {
+          background-color: $gray-800;
 
-        span {
-          color: $blue;
+          .page-btn-wrap {
+            display: block;
+            padding: vw(20) vw(25);
+
+            .btn-page {
+              color: $gray-fff;
+
+              &.btn-prev {
+                float: left;
+              }
+
+              &.btn-next {
+                float: right;
+              }
+            }
+
+          }
+
         }
       }
 
-      .toast-footer {
-        .btn {
+      &.grade {
+        padding: vw(24) vw(24) vw(32);
+        textarea {
+          border-radius: vw(12);
           width: 100%;
+          border: vw(1) solid $gray-600;
+          min-height: vw(200);
+          resize: none;
+          padding: vw(20);
+          margin-bottom: vw(12);
+          color: $gray-700;
+          letter-spacing: -0.005em;
+
+          &:focus {
+            outline: none;
+          }
         }
       }
+
 
     }
 

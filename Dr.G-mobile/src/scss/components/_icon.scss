@@ -7,6 +7,17 @@
  v.0.5 선미 : .ico-heart 추가 / ico-delete, ico-edit 사이즈 축소-- 2021.12.14
  v.0.6 주연 : vw 적용 -- 2021.12.14
  v.0.7 선미 : ico-arrow-green-right, ico-sns-kakao, ico-sns-facebook, ico-sns-line 추가 -- 2021.12.15
+ v.0.8 선미 : ico-plus / ico-minus 추가 -- 2021.12.16
+ v.0.9 태윤 : ico-comment-info-docter, ico-comment-info-basic 추가 -- 2021.12.17
+ v.0.10 태윤 : ico-prev , icon-next  &.white 추가 -- 2021.12.17
+ v.0.11 선미 : ico-plus -> ico-plus-sm 변경 , ico-minus -> ico-minus-sm 변경 ,ico-minus-md 추가 ,ico-plus-md 추가 -- 2021.12.21
+ v.0.12 선미 : ico-link 추가 / ico-close-xs &.gray 추가-- 2021.12.22
+ v.0.13 태윤 : ico-alert-circle 추가 -- 2021.12.21
+ v.0.14 주연 : ico-lock 추가 -- 2021.12.27
+ v.0.15 선미 : ico-cart 추가 -- 2021.12.27
+ v.0.16 태윤 : ico-check-blue 추가 -- 2021.12.28
+ v.0.17 태윤 : ico-star > .active시 ico-star-yellow 추가 -- 2021.12.28
+ v.0.18 선미 : ico-plus-sm-gray, ico-minus-sm-white 추가 -- 2021.12.28
 |----------------------------------|
 */
 .icon {
@@ -29,6 +40,9 @@
 .ico-shop {
   @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-shop.svg');
 }
+.ico-cart {
+  @include background-img ($width: 20, $height: 20, $category: 'common', $img: 'ico-cart.svg');
+}
 
 .ico-accordion-close {
   @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-accordion-close.svg');
@@ -48,14 +62,26 @@
 
 .ico-prev {
   @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-prev.svg');
+  &.white{
+    background-image: url(../img/common/ico-prev-white.svg);
+  }
 }
 
 .ico-next {
   @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-next.svg');
+  &.white{
+    background-image: url(../img/common/ico-next-white.svg);
+  }
 }
 
 .ico-close-sm {
   @include background-img ($width: 20, $height: 20, $category: 'common', $img: 'ico-close-sm.svg');
+}
+
+.ico-close-xs {
+  &.gray{
+    @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-close-xs-gray.svg');
+  }
 }
 
 .ico-nav-prev {
@@ -72,6 +98,10 @@
 
 .ico-arrow-left {
   @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-left.svg');
+}
+
+.ico-arrow-left-white-sm{
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-arrow-left.svg');
 }
 
 .ico-arrow-right {
@@ -115,7 +145,7 @@
 }
 
 .ico-link {
-  @include background-img ($width: 14, $height: 14, $category: 'common', $img: 'ico-link.png');
+  @include background-img ($width: 14, $height: 14, $category: 'common', $img: 'ico-link.svg');
 }
 
 .ico-caution {
@@ -141,3 +171,50 @@
 .ico-sns-line {
   @include background-img ($width: 44, $height: 44, $category: 'common', $img: 'ico-sns-line.svg');
 }
+
+.ico-plus-sm {
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-plus-sm.svg');
+}
+
+.ico-plus-sm-gray {
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-plus-sm-gray.svg');
+}
+
+.ico-plus-md {
+  @include background-img ($width: 16, $height: 16, $category: 'common', $img: 'ico-plus-md.svg');
+}
+
+.ico-minus-sm {
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-minus-sm.svg');
+}
+
+.ico-minus-sm-white {
+  @include background-img ($width: 12, $height: 12, $category: 'common', $img: 'ico-minus-sm-white.svg');
+}
+
+.ico-minus-md {
+  @include background-img ($width: 16, $height: 16, $category: 'common', $img: 'ico-minus-md.svg');
+}
+
+.ico-youtube {
+  @include background-img ($width: 20, $height: 20, $category: 'story', $img: 'ico-youtube.svg');
+}
+
+.ico-alert-circle {
+  @include background-img ($width: 15, $height: 15, $category: 'common', $img: 'ico-alert-circle.svg');
+}
+
+.ico-lock {
+  @include background-img ($width: 13, $height: 16, $category: 'common', $img: 'ico-lock.svg');
+}
+.ico-check-blue {
+  @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-check-blue.svg');
+}
+.ico-star {
+  @include background-img ($width: 42, $height: 40, $category: 'common', $img: 'ico-star-gray.svg');
+  &.active{
+    @include background-img ($width: 42, $height: 40, $category: 'common', $img: 'ico-star-yellow.svg');
+  }
+}
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="container">
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="completeAlert" tabindex="-1" role="dialog" aria-labelledby="completeAlert"
+     aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered alert-popup" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">완료</h5>
+            </div>
+            <div class="modal-body">
+                등록이 완료되었습니다.
+            </div>
+            <div class="modal-footer">
+                <a href="#" type="button" class="btn one" data-dismiss="modal">확인</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--페이지 보여주기 위한 show 실행 (생략가능)-->
+<script>
+    $('#completeAlert').modal('show')
+</script>
+
+</body>
+</html>
