@@ -2,10 +2,11 @@
 |----------------------------------|
  v.0.1 선미 : 최초 작업 -- 2021.12.14
  v.0.2 주연 : vw 적용 -- 2021.12.14
+ v.0.3 선미 : badge-sm , badge-lg 추가-- 2021.12.29
 |----------------------------------|
 */
 .badge {
-  padding: vw(6) vw(10);
+  padding: vw(6) vw(9);
   border-radius: vw(12.5);
   font-size: vw(13);
   color: $gray-fff;
@@ -44,6 +45,15 @@
   &.badge-lg{
     padding:vw(12) vw(18);
     border-radius: vw(21);
+    font-size: vw(13);
+    line-height: vw(18);
+  }
+
+  &.badge-sm{
+    padding: vw(2) vw(8);
+    border-radius: vw(12.5);
+    font-size: vw(12);
+    line-height: vw(18);
   }
 }
 

@@ -80,7 +80,7 @@ data.guide = {
 data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
-     /*   {
+      /*  {
             stateClass: 'waiting',
             url: '스킨멘토링_서브메인',
             category: 'mentoring',

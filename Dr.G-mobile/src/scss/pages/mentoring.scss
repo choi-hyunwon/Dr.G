@@ -28,8 +28,6 @@
         padding: vw(20);
         .badge{
           margin-bottom: vw(3.5);
-          font-size: vw(12);
-          padding: vw(5) vw(10);
         }
         .question{
           font-size: vw(15);
@@ -115,8 +113,6 @@
           }
           .badge{
             margin-bottom: vw(3.5);
-            font-size: vw(12);
-            padding: vw(5) vw(10);
           }
           .question{
             font-size: vw(15);
@@ -424,9 +420,56 @@
     }
     .process-wrap{
       background-color: #34a6f9;
+      .h2-title{
+        color: $gray-fff;
+      }
     }
     .answer-wrap{
       background-color: #edf8ff;
+      .answer_box{
+        white-space: nowrap;
+        overflow-x: auto;
+        margin:0 vw(-24);
+        .item{
+          background-color: $gray-fff;
+          border-radius: vw(16);
+          padding: vw(24) vw(24) vw(32);
+          width: vw(220);
+          margin-right: vw(16);
+          display: inline-block;
+          &:first-of-type{
+            margin-left: vw(24);
+          }
+          &:last-of-type{
+            margin-right: vw(24);
+          }
+
+          >.img{
+            width: vw(80);
+            height: vw(80);
+            border-right: vw(40);
+            margin: 0 auto;
+            margin-bottom: vw(16);
+          }
+          .type{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .badge{
+              font-size: vw(12);
+            }
+          }
+          .area{
+            p{
+              padding-top: vw(12);
+              color: $gray-800;
+              @include ellipsis(3)
+            }
+          }
+
+        }
+
+      }
     }
     .voc-wrap{
       background-color: $yellow;
