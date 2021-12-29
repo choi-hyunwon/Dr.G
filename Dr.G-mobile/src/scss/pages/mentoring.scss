@@ -131,10 +131,8 @@
           }
         }
       }
-
     }
   }
-
   .area-desc{
     .complete{
         padding-bottom: 16px;
@@ -142,7 +140,6 @@
           margin-bottom: vw(12);
           position: relative;
           display: inline-block;
-
           img{
             &:first-of-type{
               width:vw(104);
@@ -229,9 +226,7 @@
         }
       }
     }
-
   }
-
   .solution-details{
     .section-color{
       padding: vw(48) vw(0) vw(94);
@@ -387,7 +382,6 @@
       >span{
         letter-spacing: -0.02em;
         color: $gray-800;
-
       }
     }
     .more{
@@ -396,12 +390,181 @@
         color: $gray-800;
         margin-bottom: vw(16);
       }
-
-
     }
-
-
   }
 
+  &.mentoring-sub-main{
+    .section-tab{
+      .tab{
+        ul{
+          li{
+
+          }
+        }
+      }
+      .tab-content{
+        padding: 0;
+        .tab-pane{
+          .content{
+            padding: vw(50) vw(24) vw(76);
+            >.h2-title{
+              text-align: center;
+              margin-bottom: vw(32);
+            }
+          }
+
+        }
+
+      }
+    }
+
+    /*tab-content*/
+    .about-wrap{
+      background-color: #edf8ff;
+    }
+    .process-wrap{
+      background-color: #34a6f9;
+    }
+    .answer-wrap{
+      background-color: #edf8ff;
+    }
+    .voc-wrap{
+      background-color: $yellow;
+      .review_box{
+        .item{
+          padding: vw(20);
+          margin-bottom: vw(16);
+          background-color: $gray-fff;
+          border-radius: vw(16);
+          .info-area{
+            font-size: 0;
+            margin-bottom: vw(6);
+            .img{
+              width: vw(32);
+              height: vw(32);
+              display: inline-block;
+              vertical-align: middle;
+              img{
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .username{
+              vertical-align: middle;
+              display: inline-block;
+              margin-left: vw(8);
+              font-size: vw(13);
+              color: $gray-600;
+              line-height: vw(18);
+              font-family: "Poppins-Medium",sans-serif;
+            }
+          }
+          .content-area{
+            margin-bottom: vw(12);
+            font-size: vw(15);
+            color: $gray-800;
+            line-height: vw(22);
+            @include ellipsis(2)
+          }
+          .star-area{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .score{
+              span{
+                width: vw(16);
+                height: vw(15);
+                display: inline-block;
+                &.on{
+                  background: url("../img/mentoring/ico-star-blue.svg") no-repeat 0 0;
+                  background-size: 100% auto;
+                }
+                &.off{
+                  background: url("../img/mentoring/ico-star-gray.svg") no-repeat 0 0;
+
+                }
+              }
+            }
+            .date{
+              font-size: vw(13);
+              color: $gray-600;
+              font-family: "Poppins-Regular",sans-serif;
+
+            }
+          }
+          &.active{
+            .content-area{
+              display: inline-block;
+              overflow:unset;
+            }
+          }
+          &:last-of-type{
+            margin-bottom: vw(48);
+          }
+        }
+      }
+    }
+    .faq-wrap{
+      background-color: $gray-fff;
+      .faq_box{
+        .item{
+          border-radius: vw(16);
+          margin-bottom: vw(10);
+          padding: vw(17) vw(20) vw(19) vw(45);
+          background: $gray-200 url("../img/mentoring/ico-Q.svg") no-repeat left vw(20) top vw(22);
+          .title{
+            display: flex;
+            justify-content: space-between;
+            font-size: vw(15);
+            line-height: vw(22);
+            color: $gray-800;
+            font-weight: 500;
+            span{ width: calc(100% - #{vw(28)});}
+            i{ margin-top: vw(6);}
+          }
+          .solution{
+            padding-top: vw(14);
+            font-size: vw(13);
+            line-height: vw(18);
+            display: none;
+          }
+          &.active{
+            background: $blue url("../img/mentoring/ico-Q-white.svg") no-repeat left vw(20) top vw(22);
+            .title{
+              color: $gray-fff;
+              .ico-plus-sm-gray{
+                background: url("../img/common/ico-minus-sm-white.svg") no-repeat 0 0;
+              }
+            }
+            .solution{
+              color: $gray-fff;
+            }
+          }
+          &:last-of-type{
+            margin-bottom: vw(48);
+          }
+        }
+      }
+    }
+
+    /*후기전체보기*/
+    &.voc{
+      .header-details{
+        background-color: $yellow;
+      }
+      .body-details{
+        .voc-wrap{
+          padding: vw(20) vw(24);
+          .h2-title{
+            margin-bottom: vw(24);
+            font-size: vw(22);
+            line-height: vw(33);
+
+          }
+        }
+      }
+    }
+
+  }
 
 }
