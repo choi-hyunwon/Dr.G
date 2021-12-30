@@ -6,6 +6,7 @@
  v.0.4 태윤 : .full-popup 추가 , footer에 네비게이션있는 모달 추가 -- 2021.12.17
  v.0.5 태윤 : 1:1 스킨멘토링 관련 팝업 추가 // 모달팝업 버튼 수정으로 인한 변경 -- 2021.12.24
  v.0.6 태윤 : 1:1 스킨멘토링_내역 칼러값 변경으로 인한 추가  -- 2021.12.28
+ v.0.7 태윤 : .toast-dim background-color opacity 50%로 변경 -- 2021.12.30
 |----------------------------------|
 */
 
@@ -243,7 +244,7 @@
   height: 100%;
   overflow: hidden;
   outline: 0;
-  background-color: rgba(33, 37, 41, 0.3);
+  background-color: rgba(33, 37, 41, 0.5);
 
   &.show {
     display: block;
