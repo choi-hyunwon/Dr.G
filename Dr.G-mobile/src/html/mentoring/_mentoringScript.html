@@ -52,6 +52,7 @@
         // console.log(idx)
 
         let processSwiper = new Swiper('.process-swiper', {
+            loop:true,
             pagination: {
                 el: ".process-pagination",
             },
@@ -78,7 +79,6 @@
         let box = $('.faq_box')
         let item = $('.faq_box .item')
         let solution = $('.solution')
-        let wrap = $('.faq-wrap')
         item.on('click', function () {
           if (!$(this).hasClass('active')) {
               $(this).siblings().removeClass('active')
@@ -90,7 +90,7 @@
               $(this).find(solution).slideUp(200);
           }
         })
-        wrap.click(function(e) { /*외부클릭시 닫힘처리*/
+        $('body').click(function(e) { /*외부클릭시 닫힘처리*/
             if(!box.has(e.target).length){
                 item.removeClass('active');
                 item.find('.solution').slideUp(200);
