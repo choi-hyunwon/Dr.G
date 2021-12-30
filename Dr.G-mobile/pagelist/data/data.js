@@ -346,6 +346,12 @@ data.AI = {
         },
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_Step1_촬영하기',
+            category: 'AI',
+            page: 'Ai피부분석_Step1_촬영하기'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기',
             category: 'AI',
             page: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기'
