@@ -46,6 +46,24 @@
 
 /*|--------------s 서브메인----------------------------|*/
 
+
+        /*서브메인 process*/
+        // let processItem = $('.mentoring-sub-main .slide-tab ul .item').eq(0)
+        // console.log(idx)
+
+        let processSwiper = new Swiper('.process-swiper', {
+            pagination: {
+                el: ".process-pagination",
+            },
+        });
+        processSwiper.on('transitionEnd', function() {
+            let idx = processSwiper.realIndex + 1
+            console.log(idx);
+            $('.step-box .step').removeClass('active')
+            $('.step-box .step').eq(idx).addClass('active')
+        });
+
+
         /*서브메인 voc*/
         $('.voc .review_box .item').on('click', function () {
             if (!$(this).hasClass('active')) {
