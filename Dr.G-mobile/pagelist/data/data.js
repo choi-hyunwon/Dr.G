@@ -374,5 +374,11 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_Step2-2_답변완료'
         },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Loading',
+            category: 'AI',
+            page: 'Ai피부분석_Loading'
+        },
     ]
 }

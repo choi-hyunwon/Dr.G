@@ -614,7 +614,31 @@
     }
   }
 
-  /* 피부분석 step 1 */
+  /* 로딩 */
+  .loading {
+    height: calc(100vh - #{vw(60)});
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: vw(60);
+
+    .img {
+      display: block;
+      width: vw(148);
+      height: vw(148);
+      margin: 0 auto vw(4);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .font-h6 {
+      color: $gray-700;
+    }
+  }
 }
 
 @keyframes scanAni {
