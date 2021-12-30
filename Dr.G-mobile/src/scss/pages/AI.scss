@@ -436,7 +436,7 @@
 
     .question-box {
       background-color: $gray-200;
-      padding: vw(24);
+      padding: vw(24) vw(24) vw(76);
 
       .question-head {
         .question {
@@ -476,6 +476,7 @@
           + .question {
             &:last-child {
               border-bottom: 0;
+              padding-bottom: 0;
             }
           }
         }
