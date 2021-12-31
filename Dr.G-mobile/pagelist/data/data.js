@@ -364,6 +364,12 @@ data.AI = {
         },
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_Step2',
+            category: 'AI',
+            page: 'Ai피부분석_Step2'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_Step2-1_답변_상태_예시_화면',
             category: 'AI',
             page: 'Ai피부분석_Step2-1_답변_상태_예시_화면'
