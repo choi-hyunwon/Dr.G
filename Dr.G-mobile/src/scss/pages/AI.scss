@@ -618,7 +618,127 @@
   /* 피부분석 결과 */
   .result {
     .heading {
+      background: linear-gradient(to bottom, $primary calc(100% - #{vw(50)}), #fff vw(50));
+      //background-color: $primary;
+      padding: vw(80) vw(24) 0;
+      margin-bottom: vw(56);
 
+      > .font-body-1 {
+        text-align: center;
+        color: #D5F4EF;
+        margin-bottom: vw(12);
+      }
+
+      .skin-type {
+        margin: 0 0 vw(12);
+
+        .icon {
+          display: block;
+          width: vw(88);
+          height: vw(88);
+          margin: 0 auto;
+        }
+      }
+
+      .skin-type-info {
+        margin-bottom: vw(24);
+
+        .title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: vw(12);
+          color: #fff;
+
+          > .font-h2 {
+            margin-right: vw(4);
+          }
+        }
+
+        > .font-body-2 {
+          color: #D5F4EF;
+          text-align: center;
+        }
+      }
+
+      .skin-type-detail {
+        background: #FFFFFF;
+        box-shadow: 0 vw(4) vw(12) rgba(34, 34, 34, 0.08);
+        border-radius: vw(16);
+        padding: vw(24) vw(32);
+
+        > .font-h6 {
+          margin-bottom: vw(50);
+        }
+
+        > .font-body-2 {
+          text-align: center;
+        }
+
+        .bar-box {
+          text-align: center;
+          margin-bottom: vw(11);
+
+          .bar {
+            position: relative;
+            width: 100%;
+            height: vw(16);
+            background: linear-gradient(245deg, #F95B51 0%, #BB8DD0 52.08%, #44BCFF 100%);
+            border-radius: vw(18);
+            border: vw(2) solid $gray-200;
+
+            .line-wrap {
+              position: absolute;
+              display: flex;
+              width: 100%;
+              height: vw(12);
+              left: 0;
+              top: 0;
+
+              .line {
+                width: 20%;
+                height: vw(12);
+                border-right: vw(1) solid rgba(238, 238, 238, .5);
+              }
+            }
+
+            .percent {
+              position: absolute;
+
+              .badge-tooltip {
+                position: absolute;
+                bottom: vw(8);
+                height: vw(26);
+                line-height: vw(26);
+                padding: 0 vw(8);
+                white-space: nowrap;
+                background: $blue;
+                border-radius: vw(100);
+                font-weight: bold;
+                font-size: vw(13);
+                color: #FFFFFF;
+                transform: translateX(-50%);
+                z-index: 1;
+
+                &.
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  width: vw(9);
+                  height: vw(9);
+                  bottom: vw(-2.5);
+                  background-color: $blue;
+                  border-radius: vw(2);
+                  left: 50%;
+                  transform: translateX(-50%) rotate(-135deg);
+                  //@include background-img ($width: 9, $height: 8, $category: 'AI', $img: 'ico-tooltip-tip-blue.png');
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
