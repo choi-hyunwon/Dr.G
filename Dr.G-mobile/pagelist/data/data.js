@@ -340,12 +340,6 @@ data.AI = {
         },
         {
             stateClass: 'complete',
-            url: 'Ai피부분석_step1-1앱설치안내',
-            category: 'AI',
-            page: 'Ai피부분석_step1-1앱설치안내'
-        },
-        {
-            stateClass: 'complete',
             url: 'Ai피부분석_Step1_촬영하기',
             category: 'AI',
             page: 'Ai피부분석_Step1_촬영하기'
@@ -358,9 +352,15 @@ data.AI = {
         },
         {
             stateClass: 'complete',
-            url: 'Ai피부분석_step1_촬영하기_경고메세지팝업',
+            url: 'Ai피부분석_Step1_촬영하기_경고메세지팝업',
             category: 'AI',
-            page: 'Ai피부분석_step1_촬영하기_경고메세지팝업'
+            page: 'Ai피부분석_Step1_촬영하기_경고메세지팝업'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step1-1앱설치안내',
+            category: 'AI',
+            page: 'Ai피부분석_Step1-1앱설치안내'
         },
         {
             stateClass: 'complete',
