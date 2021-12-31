@@ -435,23 +435,49 @@
                             </div>
                             <div class="swiper-slide page page2">
                                 <div class="page-round">
-                                    <ul class="process_box">
-                                        <li class="item item01">
-                                            <p class="faq"><span class="font-poppins-semiBold">Q1.</span> <span>운동을 하나요?</span></p>
-                                            <span class="font-poppins-semiBold button button-yes on">Yes</span>
-                                            <span class="font-poppins-semiBold button button-no on">No</span>
-                                        </li>
-                                        <li class="item item-sm item02">
-                                            <p class="faq"><span class="font-poppins-semiBold">Q2.</span> <span>스트레스가 있나요?</span></p>
-                                            <span class="font-poppins-semiBold button button-yes on">Yes</span>
-                                            <span class="font-poppins-semiBold button button-no on">No</span>
-                                        </li>
-                                        <li class="item item-sm item03">
-                                            <p class="faq"><span class="font-poppins-semiBold">Q3.</span> <span>수면의 질은 좋은가요?</span></p>
-                                            <span class="font-poppins-semiBold button button-yes on">Yes</span>
-                                            <span class="font-poppins-semiBold button button-no on">No</span>
-                                        </li>
-                                    </ul>
+                                    <div class="worry_box">
+                                        <div class="worry">
+                                            <div class="img"><img src="../../img/mentoring/img-pimple.svg" alt="여드름이미지"></div>
+                                            <p class="typing-txt">자꾸 여드름이 올라와요</p>
+                                            <p class="typing"></p>
+                                        </div>
+                                        <div class="button"><span class="disabled">피부고민 전송</span></div>
+
+
+                                        <script>
+                                            var typingBool = false;
+                                            var typingIdx=0;
+
+                                            // 타이핑될 텍스트를 가져온다
+                                            var typingTxt = $(".typing-txt").text();
+
+                                            typingTxt=typingTxt.split(""); // 한글자씩 자른다.
+
+                                            if(typingBool==false){
+                                                // 타이핑이 진행되지 않았다면
+                                                typingBool=true;
+                                                var tyInt = setInterval(typing,100); // 반복동작
+                                            }
+
+                                            function typing(){
+                                                if(typingIdx<typingTxt.length){
+                                                    // 타이핑될 텍스트 길이만큼 반복
+                                                    $(".typing").append(typingTxt[typingIdx]);
+                                                    // 한글자씩 이어준다.
+                                                    typingIdx++;
+                                                } else{
+                                                    //끝나면 반복종료
+                                                    clearInterval(tyInt);
+                                                }
+                                            }
+
+                                        </script>
+
+
+
+
+
+                                    </div>
                                 </div>
                                 <div class="info-box">
                                     <p class="color-blue font-poppins-semiBold">STEP 2</p>
@@ -498,7 +524,7 @@
                     <p class="font-h2 font-bold h2-title">지금 <span class="num">586</span>분께서<br><span class="color-blue">스킨 멘토의 답변</span>을<br>기다리고 있어요</p>
                     <ul class="answer_box">
                         <li class="item">
-                            <div class="img"><img src="../../img/mentoring/img-skin-type.svg" alt="피부유형 타입"></div>
+                            <div class="skin_icon"><i class="icon icon-DN-m"></i></div>
                             <div class="type">
                                 <p class="font-body-1 font-bold">수부민건</p>
                                 <span class="badge badge-sm badge-blue">답변대기</span>
@@ -508,7 +534,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <div class="img"><img src="../../img/mentoring/img-skin-type.svg" alt="피부유형 타입"></div>
+                            <div class="skin_icon"><i class="icon icon-DN-p"></i></div>
                             <div class="type">
                                 <p class="font-body-1 font-bold">수부민건</p>
                                 <span class="badge badge-sm badge-gray">답변완료</span>
@@ -518,7 +544,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <div class="img"><img src="../../img/mentoring/img-skin-type.svg" alt="피부유형 타입"></div>
+                            <div class="skin_icon"><i class="icon icon-DS-m"></i></div>
                             <div class="type">
                                 <p class="font-body-1 font-bold">수부민건</p>
                                 <span class="badge badge-sm badge-blue">답변대기</span>
@@ -528,7 +554,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <div class="img"><img src="../../img/mentoring/img-skin-type.svg" alt="피부유형 타입"></div>
+                            <div class="skin_icon"><i class="icon icon-DS-p"></i></div>
                             <div class="type">
                                 <p class="font-body-1 font-bold">수부민건</p>
                                 <span class="badge badge-sm badge-gray">답변완료</span>
@@ -538,7 +564,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <div class="img"><img src="../../img/mentoring/img-skin-type.svg" alt="피부유형 타입"></div>
+                            <div class="skin_icon"><i class="icon icon-ON-m"></i></div>
                             <div class="type">
                                 <p class="font-body-1 font-bold">수부민건</p>
                                 <span class="badge badge-sm badge-blue">답변대기</span>
@@ -548,7 +574,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <div class="img"><img src="../../img/mentoring/img-skin-type.svg" alt="피부유형 타입"></div>
+                            <div class="skin_icon"><i class="icon icon-ON-p"></i></div>
                             <div class="type">
                                 <p class="font-body-1 font-bold">수부민건</p>
                                 <span class="badge badge-sm badge-gray">답변완료</span>
@@ -558,7 +584,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <div class="img"><img src="../../img/mentoring/img-skin-type.svg" alt="피부유형 타입"></div>
+                            <div class="skin_icon"><i class="icon icon-OS-m"></i></div>
                             <div class="type">
                                 <p class="font-body-1 font-bold">수부민건</p>
                                 <span class="badge badge-sm badge-blue">답변대기</span>
@@ -568,7 +594,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <div class="img"><img src="../../img/mentoring/img-skin-type.svg" alt="피부유형 타입"></div>
+                            <div class="skin_icon"><i class="icon icon-OS-p"></i></div>
                             <div class="type">
                                 <p class="font-body-1 font-bold">수부민건</p>
                                 <span class="badge badge-sm badge-gray">답변완료</span>
@@ -578,7 +604,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <div class="img"><img src="../../img/mentoring/img-skin-type.svg" alt="피부유형 타입"></div>
+                            <div class="skin_icon"><i class="icon icon-DN-m"></i></div>
                             <div class="type">
                                 <p class="font-body-1 font-bold">수부민건</p>
                                 <span class="badge badge-sm badge-blue">답변대기</span>
@@ -588,7 +614,7 @@
                             </div>
                         </li>
                         <li class="item">
-                            <div class="img"><img src="../../img/mentoring/img-skin-type.svg" alt="피부유형 타입"></div>
+                            <div class="skin_icon"><i class="icon icon-DN-p"></i></div>
                             <div class="type">
                                 <p class="font-body-1 font-bold">수부민건</p>
                                 <span class="badge badge-sm badge-gray">답변완료</span>
@@ -607,10 +633,14 @@
                 <div class="content">
                     <p class="font-h2 font-bold h2-title">1:1 스킨멘토링을<br>경험한 분들의 <span class="color-blue">진짜 후기</span>를<br>확인하세요.</p>
                     <ul class="review_box">
+
+                        <!--
+                        아이콘 종류
+                        icon-DN-m / icon-DN-p / icon-DS-m / icon-DS-p / icon-ON-m / icon-ON-p / icon-OS-m /icon-OS-p
+                        -->
                         <li class="item">
                             <div class="info-area">
-                                <span class="img"><img src="../../img/common/img-comment-info-basic.svg"
-                                                       alt="사용자 프로필사진"></span>
+                                <span class="img"><i class="icon icon-ON-m"></i></span>
                                 <span class="username font-poppins-medium">kimkim08</span>
                             </div>
                             <div class="content-area">
@@ -634,8 +664,7 @@
                         </li>
                         <li class="item">
                             <div class="info-area">
-                                <span class="img"><img src="../../img/common/img-comment-info-basic.svg"
-                                                       alt="사용자 프로필사진"></span>
+                                <span class="img"><i class="icon icon-OS-p"></i></span>
                                 <span class="username font-poppins-medium">kimkim08</span>
                             </div>
                             <div class="content-area">
@@ -659,8 +688,7 @@
                         </li>
                         <li class="item">
                             <div class="info-area">
-                                <span class="img"><img src="../../img/common/img-comment-info-basic.svg"
-                                                       alt="사용자 프로필사진"></span>
+                                <span class="img"><i class="icon icon-DS-m"></i></span>
                                 <span class="username font-poppins-medium">kimkim08</span>
                             </div>
                             <div class="content-area">
@@ -684,8 +712,7 @@
                         </li>
                         <li class="item">
                             <div class="info-area">
-                                <span class="img"><img src="../../img/common/img-comment-info-basic.svg"
-                                                       alt="사용자 프로필사진"></span>
+                                <span class="img"><i class="icon icon-DS-p"></i></span>
                                 <span class="username font-poppins-medium">kimkim08</span>
                             </div>
                             <div class="content-area">
