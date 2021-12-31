@@ -388,13 +388,32 @@
           margin-bottom: vw(25);
         }
 
-        .grade-star-area {
-          margin: 0 vw(38) vw(24);
-
-          li {
+        .star-box {
+          .star {
+            display: inline-block;
+            width: 42px;
+            height: 40px;
             cursor: pointer;
+            &.star_left {
+              background: url('../img/common/ico-star-gray.svg') no-repeat 21px 0;
+              background-size: 42px;
+              margin-right: -2px;
+              margin-left: -12px;
+            }
+
+            &.star_right {
+              background: url('../img/common/ico-star-gray.svg') no-repeat -21px 0;
+              background-size: 42px;
+              margin-left: -2px;
+              margin-right: -12px;
+            }
+
+            &.on {
+              background-image: url('../img/common/ico-star-yellow.svg');
+            }
           }
         }
+
 
         .circle-list-area {
 
@@ -691,6 +710,7 @@
   }
 
 }
+
 
 
 

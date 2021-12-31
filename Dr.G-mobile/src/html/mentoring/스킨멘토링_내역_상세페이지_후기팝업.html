@@ -14,18 +14,25 @@
                 <a href="#" class="_toast-popup-close-title icon ico-close-sm"></a>
             </div>
             <div class="toast-body">
-                <ul class="grade-star-area">
-                    <li class="icon ico-star ico-star-r"></li>
-                    <li class="icon ico-star ico-star-l"></li>
-                    <li class="icon ico-star ico-star-r"></li>
-                    <li class="icon ico-star ico-star-l"></li>
-                    <li class="icon ico-star ico-star-r"></li>
-                    <li class="icon ico-star ico-star-l"></li>
-                    <li class="icon ico-star ico-star-r"></li>
-                    <li class="icon ico-star ico-star-l"></li>
-                    <li class="icon ico-star ico-star-r"></li>
-                    <li class="icon ico-star ico-star-l"></li>
-                </ul>
+                <div class="grade-area d-flex align-items-center justify-content-center">
+                    <div class="star-box">
+                        <span class="star star_left"></span>
+                        <span class="star star_right"></span>
+
+                        <span class="star star_left"></span>
+                        <span class="star star_right"></span>
+
+                        <span class="star star_left"></span>
+                        <span class="star star_right"></span>
+
+                        <span class="star star_left"></span>
+                        <span class="star star_right"></span>
+
+                        <span class="star star_left"></span>
+                        <span class="star star_right"></span>
+                    </div>
+                </div>
+
                 <textarea></textarea>
                 <ul class="circle-list-area">
                     <li><p>후기 작성 시 <span>적립금 500원</span> 지급(월 1회)</p></li>
@@ -55,10 +62,12 @@
 
 <!--grade script-->
 <script>
-    $('.grade-star-area .icon').click(function () {
-        $(this).parent().children('li').removeClass('active');
-        $(this).addClass('active').prevAll('li').addClass('active');
-        return false;
+    $(".star").on('click', function () {
+        var idx = $(this).index();
+        $(".star").removeClass("on");
+        for (var i = 0; i <= idx; i++) {
+            $(".star").eq(i).addClass("on");
+        }
     });
 </script>
 

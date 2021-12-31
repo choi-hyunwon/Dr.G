@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="star-box">
+        <span class="star star_left"></span>
+        <span class="star star_right"></span>
+
+        <span class="star star_left"></span>
+        <span class="star star_right"></span>
+
+        <span class="star star_left"></span>
+        <span class="star star_right"></span>
+
+        <span class="star star_left"></span>
+        <span class="star star_right"></span>
+
+        <span class="star star_left"></span>
+        <span class="star star_right"></span>
+    </div>
+
+    <style>
+        .star{
+            display:inline-block;
+            width: 42px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .star_left{
+            background: url('../../img/common/ico-star-gray.svg') no-repeat 21px 0;
+            background-size: 42px;
+            margin-right: -3px;
+            margin-left: -15px;
+        }
+        .star_right{
+            background:  url('../../img/common/ico-star-gray.svg') no-repeat -21px 0;
+            background-size: 42px;
+            margin-left: -3px;
+            margin-right: -15px;
+        }
+        .star.on{
+            background-image: url('../../img/common/ico-star-yellow.svg');
+        }
+    </style>
+
+
+
+</div>
+
+<script>
+
+</script>
+</body>
+</html>
