@@ -77,6 +77,72 @@ data.guide = {
     ]
 }
 
+data.AI = {
+    title: 'AI피부분석',
+    list: [
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step1-1',
+            category: 'AI',
+            page: 'Ai피부분석_Step1-1'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step1_촬영하기',
+            category: 'AI',
+            page: 'Ai피부분석_Step1_촬영하기'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기',
+            category: 'AI',
+            page: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step1-1앱설치안내',
+            category: 'AI',
+            page: 'Ai피부분석_Step1-1앱설치안내'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step2',
+            category: 'AI',
+            page: 'Ai피부분석_Step2'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step2-1_답변_상태_예시_화면',
+            category: 'AI',
+            page: 'Ai피부분석_Step2-1_답변_상태_예시_화면'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step2-2',
+            category: 'AI',
+            page: 'Ai피부분석_Step2-2'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step2-2_답변완료',
+            category: 'AI',
+            page: 'Ai피부분석_Step2-2_답변완료'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Loading',
+            category: 'AI',
+            page: 'Ai피부분석_Loading'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_Step1_촬영하기_경고메세지팝업',
+            category: 'AI',
+            page: 'Ai피부분석_Step1_촬영하기_경고메세지팝업'
+        },
+    ]
+}
+
 data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
@@ -167,6 +233,8 @@ data.mentoring = {
     ]
 }
 
+/*1:1 성분분석*/
+
 data.suggestion = {
     title: '고객제안',
     list: [
@@ -193,30 +261,6 @@ data.suggestion = {
             url: '고객제안_의견남기기_비회원_로그인알림',
             category: 'suggestion',
             page: '고객제안_의견남기기_비회원_로그인알림'
-        },
-        {
-            stateClass: 'complete',
-            url: '고객제안_나의제안내역_상세보기_얼럿팝업',
-            category: 'suggestion',
-            page: '고객제안_나의제안내역_상세보기_얼럿팝업'
-        },
-        {
-            stateClass: 'complete',
-            url: '고객제안_나의제안내역-비회원_얼럿팝업',
-            category: 'suggestion',
-            page: '고객제안_나의제안내역-비회원_얼럿팝업'
-        },
-        {
-            stateClass: 'complete',
-            url: '고객제안_의견남기기_유형선택',
-            category: 'suggestion',
-            page: '고객제안_의견남기기_유형선택'
-        },
-        {
-            stateClass: 'complete',
-            url: '고객제안_의견남기기_얼럿팝업',
-            category: 'suggestion',
-            page: '고객제안_의견남기기_얼럿팝업'
         },
         {
             stateClass: 'complete',
@@ -247,7 +291,68 @@ data.suggestion = {
             url: '고객제안_나의제안내역_상세보기_수정하기실행',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기_수정하기실행'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_나의제안내역_상세보기_얼럿팝업',
+            category: 'suggestion',
+            page: '고객제안_나의제안내역_상세보기_얼럿팝업'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_나의제안내역-비회원_얼럿팝업',
+            category: 'suggestion',
+            page: '고객제안_나의제안내역-비회원_얼럿팝업'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_의견남기기_유형선택',
+            category: 'suggestion',
+            page: '고객제안_의견남기기_유형선택'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_의견남기기_얼럿팝업',
+            category: 'suggestion',
+            page: '고객제안_의견남기기_얼럿팝업'
         }
+    ]
+}
+
+data.freesample = {
+    title: '무료샘플신청',
+    list: [
+        {
+            stateClass: 'complete',
+            url: '무료샘플신청_서브메인',
+            category: 'freesample',
+            page: '무료샘플신청_서브메인'
+        },
+        {
+            stateClass: 'complete',
+            url: '무료샘플신청_무료샘플신청팝업',
+            category: 'freesample',
+            page: '무료샘플신청_무료샘플신청팝업'
+        },
+        {
+            stateClass: 'complete',
+            url: '무료샘플신청_나의신청내역',
+            category: 'freesample',
+            page: '무료샘플신청_나의신청내역'
+        },
+
+        {
+            stateClass: 'complete',
+            url: '무료샘플신청_무료샘플신청팝업_수정팝업',
+            category: 'freesample',
+            page: '무료샘플신청_무료샘플신청팝업_수정팝업'
+        },
+        {
+            stateClass: 'complete',
+            url: '무료샘플신청_무료샘플신청팝업_솔드아웃',
+            category: 'freesample',
+            page: '무료샘플신청_무료샘플신청팝업_솔드아웃'
+        },
     ]
 }
 
@@ -274,6 +379,12 @@ data.story = {
         },
         {
             stateClass: 'complete',
+            url: '닥터지스토리_Dr.Ann_영상_내가쓴댓글보기',
+            category: 'story',
+            page: '닥터지스토리_Dr.Ann_영상_내가쓴댓글보기'
+        },
+        {
+            stateClass: 'complete',
             url: '닥터지스토리_스킨리포트_리스트',
             category: 'story',
             page: '닥터지스토리_스킨리포트_리스트'
@@ -283,114 +394,12 @@ data.story = {
             url: '닥터지스토리_스킨리포트_상세페이지',
             category: 'story',
             page: '닥터지스토리_스킨리포트_상세페이지'
-        },
-        {
-            stateClass: 'complete',
-            url: '닥터지스토리_Dr.Ann_영상_내가쓴댓글보기',
-            category: 'story',
-            page: '닥터지스토리_Dr.Ann_영상_내가쓴댓글보기'
-        },
+        }
     ]
 }
 
-data.freesample = {
-    title: '무료샘플신청',
-    list: [
-        {
-            stateClass: 'complete',
-            url: '무료샘플신청_서브메인',
-            category: 'freesample',
-            page: '무료샘플신청_서브메인'
-        },
-        {
-            stateClass: 'complete',
-            url: '무료샘플신청_나의신청내역',
-            category: 'freesample',
-            page: '무료샘플신청_나의신청내역'
-        },
-        {
-            stateClass: 'complete',
-            url: '무료샘플신청_무료샘플신청팝업',
-            category: 'freesample',
-            page: '무료샘플신청_무료샘플신청팝업'
-        },
-        {
-            stateClass: 'complete',
-            url: '무료샘플신청_무료샘플신청팝업_수정팝업',
-            category: 'freesample',
-            page: '무료샘플신청_무료샘플신청팝업_수정팝업'
-        },
-        {
-            stateClass: 'complete',
-            url: '무료샘플신청_무료샘플신청팝업_솔드아웃',
-            category: 'freesample',
-            page: '무료샘플신청_무료샘플신청팝업_솔드아웃'
-        },
-    ]
-}
+/*브랜드 소개*/
 
-data.AI = {
-    title: 'AI피부분석',
-    list: [
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_Step1-1',
-            category: 'AI',
-            page: 'Ai피부분석_Step1-1'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_Step1_촬영하기',
-            category: 'AI',
-            page: 'Ai피부분석_Step1_촬영하기'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기',
-            category: 'AI',
-            page: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_Step1_촬영하기_경고메세지팝업',
-            category: 'AI',
-            page: 'Ai피부분석_Step1_촬영하기_경고메세지팝업'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_Step1-1앱설치안내',
-            category: 'AI',
-            page: 'Ai피부분석_Step1-1앱설치안내'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_Step2',
-            category: 'AI',
-            page: 'Ai피부분석_Step2'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_Step2-1_답변_상태_예시_화면',
-            category: 'AI',
-            page: 'Ai피부분석_Step2-1_답변_상태_예시_화면'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_Step2-2',
-            category: 'AI',
-            page: 'Ai피부분석_Step2-2'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_Step2-2_답변완료',
-            category: 'AI',
-            page: 'Ai피부분석_Step2-2_답변완료'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_Loading',
-            category: 'AI',
-            page: 'Ai피부분석_Loading'
-        },
-    ]
-}
+
+
+
