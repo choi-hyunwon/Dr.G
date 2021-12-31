@@ -15,11 +15,16 @@
             </div>
             <div class="toast-body">
                 <ul class="grade-star-area">
-                    <li class="icon ico-star"></li>
-                    <li class="icon ico-star"></li>
-                    <li class="icon ico-star"></li>
-                    <li class="icon ico-star"></li>
-                    <li class="icon ico-star"></li>
+                    <li class="icon ico-star ico-star-r"></li>
+                    <li class="icon ico-star ico-star-l"></li>
+                    <li class="icon ico-star ico-star-r"></li>
+                    <li class="icon ico-star ico-star-l"></li>
+                    <li class="icon ico-star ico-star-r"></li>
+                    <li class="icon ico-star ico-star-l"></li>
+                    <li class="icon ico-star ico-star-r"></li>
+                    <li class="icon ico-star ico-star-l"></li>
+                    <li class="icon ico-star ico-star-r"></li>
+                    <li class="icon ico-star ico-star-l"></li>
                 </ul>
                 <textarea></textarea>
                 <ul class="circle-list-area">
@@ -50,7 +55,7 @@
 
 <!--grade script-->
 <script>
-    $('.grade-star-area .icon').click(function(){
+    $('.grade-star-area .icon').click(function () {
         $(this).parent().children('li').removeClass('active');
         $(this).addClass('active').prevAll('li').addClass('active');
         return false;

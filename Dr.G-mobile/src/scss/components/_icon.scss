@@ -225,6 +225,13 @@
 
   &.active {
     @include background-img($width: 42, $height: 40, $category: 'common', $img: 'ico-star-yellow.svg');
+    &.ico-star-l{
+      @include background-img($img: 'ico-halfstar-left.svg');
+    }
+    &.ico-star-r{
+      @include background-img($img: 'ico-halfstar-left.svg');
+      transform: scaleX(-1);
+    }
   }
 }
 
