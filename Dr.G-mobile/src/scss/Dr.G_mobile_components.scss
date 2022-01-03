@@ -3,6 +3,8 @@
   Dr.G Components - v0.1.2 / 12.31
 |---------------------------------------|
 */
+// config
+@import "components/config";
 
 // library
 @import "lib/bootstrap";
@@ -16,7 +18,6 @@
 @import "components/variables";
 
 // component
-@import "components/config";
 @import "components/reboot";
 @import "components/typography";
 @import "components/color";

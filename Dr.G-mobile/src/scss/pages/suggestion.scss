@@ -130,6 +130,10 @@
     .font-h1 {
       margin-bottom: vw(12);
     }
+
+    .font-h6 {
+      color: $gray-700;
+    }
   }
 
   .opinion {
@@ -156,7 +160,7 @@
       margin-bottom: vw(16);
       padding: vw(20);
       background-color: #fff;
-      border-radius: vw(20);
+      border-radius: vw(16);
 
       .badge-box {
         margin-bottom: vw(8);
@@ -303,8 +307,9 @@
       padding-left: vw(25);
 
       .font-h2 {
-        max-width: vw(269);
-        font-family: $poppins-semiBold;
+        .num {
+          font-family: $poppins-semiBold;
+        }
       }
     }
 
@@ -539,6 +544,3 @@
     }
   }
 }
-
-
-
