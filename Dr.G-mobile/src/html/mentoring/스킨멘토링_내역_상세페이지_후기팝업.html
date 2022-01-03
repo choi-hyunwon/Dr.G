@@ -14,13 +14,25 @@
                 <a href="#" class="_toast-popup-close-title icon ico-close-sm"></a>
             </div>
             <div class="toast-body">
-                <ul class="grade-star-area">
-                    <li class="icon ico-star"></li>
-                    <li class="icon ico-star"></li>
-                    <li class="icon ico-star"></li>
-                    <li class="icon ico-star"></li>
-                    <li class="icon ico-star"></li>
-                </ul>
+                <div class="star-point-area">
+                    <div class="star-box">
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
+
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
+
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
+
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
+
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
+                    </div>
+                </div>
+
                 <textarea></textarea>
                 <ul class="circle-list-area">
                     <li><p>후기 작성 시 <span>적립금 500원</span> 지급(월 1회)</p></li>
@@ -50,10 +62,12 @@
 
 <!--grade script-->
 <script>
-    $('.grade-star-area .icon').click(function(){
-        $(this).parent().children('li').removeClass('active');
-        $(this).addClass('active').prevAll('li').addClass('active');
-        return false;
+    $("._star").on('click', function () {
+        var idx = $(this).index();
+        $("._star").removeClass("on");
+        for (var i = 0; i <= idx; i++) {
+            $("._star").eq(i).addClass("on");
+        }
     });
 </script>
 

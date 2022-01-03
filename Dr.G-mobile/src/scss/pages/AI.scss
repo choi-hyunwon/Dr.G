@@ -36,7 +36,7 @@
     /* 피부분석 step 1 */
     .step-box {
       background-color: $gray-200;
-      padding: 0 vw(24) vw(48);
+      padding: 0 vw(24) vw(76);
 
       .inner {
         padding-top: vw(48);
@@ -44,7 +44,7 @@
         .font-body-1 {
           text-align: center;
           color: $gray-700;
-          margin-bottom: vw(24);
+          margin-bottom: vw(32);
         }
 
         .rolling-txt {
@@ -52,7 +52,6 @@
           align-items: center;
           justify-content: center;
           color: $gray-800;
-          margin-bottom: vw(24);
           font-size: vw(16);
           line-height: vw(24);
 
@@ -66,10 +65,15 @@
               font-size: vw(16);
               line-height: vw(24);
               animation-name: scroller;
+              -webkit-animation-name: scroller;
               animation-duration: 6s;
+              -webkit-animation-duration: 6s;
               animation-iteration-count: infinite;
+              -webkit-animation-iteration-count: infinite;
               animation-timing-function: ease-in-out;
+              -webkit-animation-timing-function: ease-in-out;
               animation-delay: 1s;
+              -webkit-animation-delay: 1s;
               margin-right: vw(4);
             }
           }
@@ -78,7 +82,7 @@
         .img {
           width: vw(180);
           height: vw(180);
-          margin: 0 auto vw(24);
+          margin: 0 auto vw(32);
           border-radius: vw(20);
           overflow: hidden;
 
@@ -105,10 +109,15 @@
             left: 0;
             z-index: 1;
             animation-name: scanAni;
+            -webkit-animation-name: scanAni;
             animation-duration: 4s;
+            -webkit-animation-duration: 4s;
             animation-timing-function: linear;
+            -webkit-animation-timing-function: linear;
             animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
             animation-direction: alternate;
+            -webkit-animation-direction: alternate;
 
             &::after {
               content: '';
@@ -133,7 +142,7 @@
           line-height: vw(22);
           text-align: center;
           text-decoration-line: underline;
-          margin-bottom: vw(24);
+          margin-top: vw(24);
         }
 
         .step {
@@ -218,7 +227,7 @@
 
         .tip {
           text-align: center;
-          padding-top: vw(92);
+          padding-top: vw(98);
           margin-bottom: vw(412);
 
           .badge {
@@ -258,9 +267,19 @@
 
           .btn-wrap {
             .btn-shooter {
-              display: block;
-              @include background-img ($width: 74, $height: 74, $category: 'AI', $img: 'btn-camera.svg');
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: vw(74);
+              height: vw(74);
+              border-radius: 50%;
+              box-shadow: 0 vw(4) vw(4) rgba(34, 34, 34, 0.12);
               margin: 0 auto vw(24);
+              background-color: #2FCAB0;
+
+              .icon-camera {
+                @include background-img ($width: 32, $height: 32, $category: 'AI', $img: 'ico-camera.svg');
+              }
             }
 
             .btn-txt-link {
@@ -291,7 +310,7 @@
           height: vw(2);
           background-color: $gray-300;
           left: 50%;
-          top: vw(26);
+          top: vw(27);
           transform: translateX(-50%);
 
           .bar {
@@ -439,6 +458,7 @@
           border-bottom: vw(1) solid $gray-300;
           padding-bottom: vw(24);
           padding-top: vw(24);
+          //margin-top: vw(24);
 
           .num {
             display: inline-block;
@@ -456,6 +476,11 @@
             vertical-align: top;
             width: calc(100% - #{vw(40)} - #{vw(40)});
             color: $gray-800;
+            font-weight: 500;
+
+            .color-primary {
+              font-weight: bold;
+            }
           }
 
           .btn-delete {
@@ -471,7 +496,7 @@
           + .question {
             &:last-child {
               border-bottom: 0;
-              padding-bottom: 0;
+              //padding-bottom: 0;
             }
           }
         }
@@ -586,6 +611,10 @@
             }
           }
         }
+      }
+
+      &.question-head-only {
+        padding: vw(24) vw(24) vw(52);
       }
     }
 
@@ -758,6 +787,7 @@
     }
     .font-h6 {
       color: $gray-700;
+      font-weight: 500;
     }
   }
 }

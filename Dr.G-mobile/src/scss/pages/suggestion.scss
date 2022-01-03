@@ -135,6 +135,10 @@
     .font-h1 {
       margin-bottom: vw(12);
     }
+
+    .font-h6 {
+      color: $gray-700;
+    }
   }
 
   .opinion {
@@ -161,7 +165,7 @@
       margin-bottom: vw(16);
       padding: vw(20);
       background-color: #fff;
-      border-radius: vw(20);
+      border-radius: vw(16);
 
       .badge-box {
         margin-bottom: vw(8);
@@ -199,12 +203,22 @@
 
           .icon {
             margin-right: vw(2);
+            transform: translateY(vw(-3));
           }
 
           span {
+            display: inline-block;
             font-family: $poppins-semiBold;
             font-size: vw(13);
             color: $gray-700;
+          }
+        }
+
+        &.on {
+          .btn-like {
+            .icon {
+              background-image: url(../img/common/ico-link-foc.svg);
+            }
           }
         }
       }
@@ -308,8 +322,9 @@
       padding-left: vw(25);
 
       .font-h2 {
-        max-width: vw(269);
-        font-family: $poppins-semiBold;
+        .num {
+          font-family: $poppins-semiBold;
+        }
       }
     }
 
@@ -544,6 +559,3 @@
     }
   }
 }
-
-
-

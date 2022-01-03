@@ -35,6 +35,7 @@
             color: $gray-900;
             margin-bottom: vw(4);
           }
+
           padding: vw(0) vw(24) vw(24) vw(24);
           text-align: left;
           color: $gray-800;
@@ -313,7 +314,8 @@
         align-content: center;
         justify-content: space-between;
         border-bottom: 0;
-        &.mb-half{
+
+        &.mb-half {
           margin-bottom: vw(12);
         }
 
@@ -337,6 +339,7 @@
           line-height: vw(24);
           letter-spacing: -0.005em;
           text-align: center;
+          color: $gray-800;
 
         }
 
@@ -346,6 +349,7 @@
           line-height: vw(25);
           letter-spacing: -0.005em;
           text-align: center;
+          color: $gray-800;
         }
 
         .img {
@@ -355,6 +359,7 @@
             margin-bottom: vw(8);
             width: vw(110);
             height: auto;
+
             img {
               width: 100%;
               height: auto;
@@ -385,15 +390,39 @@
           margin-bottom: vw(25);
         }
 
-        .grade-star-area {
-          margin: 0 vw(38) vw(24);
+        .star-point-area {
+          margin-bottom: vw(24);
           display: flex;
-          justify-content: space-between;
+          align-items: center;
+          justify-content: center;
+          .star-box {
+            .star {
+              display: inline-block;
+              width: vw(42);
+              height: vw(40);
+              cursor: pointer;
 
-          li {
-            cursor: pointer;
+              &.star_left {
+                background: url('../img/common/ico-star-gray.svg') no-repeat vw(21) 0;
+                background-size: vw(42);
+                margin-right: vw(-4);
+                margin-left: vw(-18);
+              }
+
+              &.star_right {
+                background: url('../img/common/ico-star-gray.svg') no-repeat vw(-21) 0;
+                background-size: vw(42);
+                margin-right: vw(-18);
+
+              }
+
+              &.on {
+                background-image: url('../img/common/ico-star-yellow.svg');
+              }
+            }
           }
         }
+
 
         .circle-list-area {
 
@@ -450,6 +479,7 @@
           font-weight: 500;
           line-height: vw(22);
           letter-spacing: -0.005em;
+          color: $gray-900;
           text-align: center;
           text-decoration: underline;
         }
@@ -478,13 +508,14 @@
             }
           }
 
-          .queastion{
+          .queastion {
             text-align: center;
             font-size: vw(18);
             font-weight: 700;
             line-height: vw(28);
             letter-spacing: -0.005em;
           }
+
           .desc {
             font-size: vw(13);
             font-weight: 400;
@@ -665,6 +696,7 @@
 
       &.grade {
         padding: vw(24) vw(24) vw(32);
+
         textarea {
           border-radius: vw(12);
           width: 100%;
@@ -688,4 +720,8 @@
   }
 
 }
+
+
+
+
 
