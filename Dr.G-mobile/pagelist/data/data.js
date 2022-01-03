@@ -106,6 +106,12 @@ data.AI = {
         },
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_Step1_피부스캐닝_완료',
+            category: 'AI',
+            page: 'Ai피부분석_Step1_피부스캐닝_완료'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_Step1-1앱설치안내',
             category: 'AI',
             page: 'Ai피부분석_Step1-1앱설치안내'
