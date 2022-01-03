@@ -14,22 +14,22 @@
                 <a href="#" class="_toast-popup-close-title icon ico-close-sm"></a>
             </div>
             <div class="toast-body">
-                <div class="grade-area d-flex align-items-center justify-content-center">
+                <div class="star-point-area">
                     <div class="star-box">
-                        <span class="star star_left"></span>
-                        <span class="star star_right"></span>
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
 
-                        <span class="star star_left"></span>
-                        <span class="star star_right"></span>
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
 
-                        <span class="star star_left"></span>
-                        <span class="star star_right"></span>
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
 
-                        <span class="star star_left"></span>
-                        <span class="star star_right"></span>
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
 
-                        <span class="star star_left"></span>
-                        <span class="star star_right"></span>
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
                     </div>
                 </div>
 
@@ -62,11 +62,11 @@
 
 <!--grade script-->
 <script>
-    $(".star").on('click', function () {
+    $("._star").on('click', function () {
         var idx = $(this).index();
-        $(".star").removeClass("on");
+        $("._star").removeClass("on");
         for (var i = 0; i <= idx; i++) {
-            $(".star").eq(i).addClass("on");
+            $("._star").eq(i).addClass("on");
         }
     });
 </script>

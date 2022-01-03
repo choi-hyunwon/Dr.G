@@ -388,28 +388,35 @@
           margin-bottom: vw(25);
         }
 
-        .star-box {
-          .star {
-            display: inline-block;
-            width: 42px;
-            height: 40px;
-            cursor: pointer;
-            &.star_left {
-              background: url('../img/common/ico-star-gray.svg') no-repeat 21px 0;
-              background-size: 42px;
-              margin-right: -2px;
-              margin-left: -12px;
-            }
+        .star-point-area {
+          margin-bottom: vw(24);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .star-box {
+            .star {
+              display: inline-block;
+              width: vw(42);
+              height: vw(40);
+              cursor: pointer;
 
-            &.star_right {
-              background: url('../img/common/ico-star-gray.svg') no-repeat -21px 0;
-              background-size: 42px;
-              margin-left: -2px;
-              margin-right: -12px;
-            }
+              &.star_left {
+                background: url('../img/common/ico-star-gray.svg') no-repeat vw(21) 0;
+                background-size: vw(42);
+                margin-right: vw(-4);
+                margin-left: vw(-18);
+              }
 
-            &.on {
-              background-image: url('../img/common/ico-star-yellow.svg');
+              &.star_right {
+                background: url('../img/common/ico-star-gray.svg') no-repeat vw(-21) 0;
+                background-size: vw(42);
+                margin-right: vw(-18);
+
+              }
+
+              &.on {
+                background-image: url('../img/common/ico-star-yellow.svg');
+              }
             }
           }
         }
