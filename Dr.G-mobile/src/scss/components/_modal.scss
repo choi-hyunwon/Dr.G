@@ -388,13 +388,39 @@
           margin-bottom: vw(25);
         }
 
-        .grade-star-area {
-          margin: 0 vw(38) vw(24);
+        .star-point-area {
+          margin-bottom: vw(24);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .star-box {
+            .star {
+              display: inline-block;
+              width: vw(42);
+              height: vw(40);
+              cursor: pointer;
 
-          li {
-            cursor: pointer;
+              &.star_left {
+                background: url('../img/common/ico-star-gray.svg') no-repeat vw(21) 0;
+                background-size: vw(42);
+                margin-right: vw(-4);
+                margin-left: vw(-18);
+              }
+
+              &.star_right {
+                background: url('../img/common/ico-star-gray.svg') no-repeat vw(-21) 0;
+                background-size: vw(42);
+                margin-right: vw(-18);
+
+              }
+
+              &.on {
+                background-image: url('../img/common/ico-star-yellow.svg');
+              }
+            }
           }
         }
+
 
         .circle-list-area {
 
@@ -691,6 +717,7 @@
   }
 
 }
+
 
 
 
