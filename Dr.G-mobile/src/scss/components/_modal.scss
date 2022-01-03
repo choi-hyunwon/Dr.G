@@ -398,22 +398,24 @@
           .star-box {
             .star {
               display: inline-block;
-              width: vw(42);
               height: vw(40);
               cursor: pointer;
+              float: left;
 
               &.star_left {
-                background: url('../img/common/ico-star-gray.svg') no-repeat vw(21) 0;
-                background-size: vw(42);
-                margin-right: vw(-4);
-                margin-left: vw(-18);
+                width: vw(21);
+                margin-left: vw(6);
+                background: url('../img/common/ico-star-gray.svg') no-repeat vw(2) 0;
+
+                &:nth-child(1){
+                  margin-left: 0px;
+                }
               }
 
               &.star_right {
-                background: url('../img/common/ico-star-gray.svg') no-repeat vw(-21) 0;
-                background-size: vw(42);
-                margin-right: vw(-18);
-
+                width: vw(21);
+                background: url('../img/common/ico-star-gray.svg') no-repeat vw(2) 0;
+                transform: scaleX(-1);
               }
 
               &.on {
