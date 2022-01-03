@@ -404,7 +404,7 @@
               float: left;
 
               &.star_left {
-                width: 21px;
+                width: vw(21);
                 margin-left: vw(6);
                 background: url('../img/common/ico-star-gray.svg') no-repeat vw(2) 0;
 
@@ -414,7 +414,7 @@
               }
 
               &.star_right {
-                width: 21px;
+                width: vw(21);
                 background: url('../img/common/ico-star-gray.svg') no-repeat vw(2) 0;
                 transform: scaleX(-1);
               }
