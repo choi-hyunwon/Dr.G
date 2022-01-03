@@ -186,6 +186,7 @@
           left: 0;
           bottom: vw(8);
           border-radius: 0 vw(8) 0 0;
+          font-family: $poppins-semiBold;
         }
       }
 
@@ -264,6 +265,7 @@
           border-radius: vw(12);
           overflow: hidden;
           margin-bottom: vw(16);
+          padding-bottom: 0;
         }
 
         .title {
@@ -280,6 +282,11 @@
 
         &:nth-child(2n-1) {
           margin-right: vw(16);
+          padding-right: 0;
+        }
+
+        &:nth-child(2n) {
+          padding-left: 0;
         }
 
         &:nth-child(2n+1) {
@@ -418,6 +425,10 @@
         color: $gray-700;
       }
     }
+
+    .tab {
+      border-bottom: 0;
+    }
   }
 
   .inside-drg-detail {
@@ -484,6 +495,8 @@
 
   /* 닥터지 영상 */
   .drg-video {
+    padding-top: vw(20);
+
     .font-h1 {
       padding: 0 vw(24);
       margin-bottom: vw(24);
