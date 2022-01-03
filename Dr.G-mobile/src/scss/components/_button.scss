@@ -12,6 +12,7 @@
              .btn >.icon{ vertical-align: sub;} 추가'
              .btn 내부 icon , span 간격 추가
              .btn &.btn-icon{버튼 내부 아이콘있는경우 클래스 추가(여백 컨트롤)}-- 2021.12.27
+ v.0.9 선미 : .page-btn-wrap {   font-weight: 500}추가 -- 2022.01.03
 |----------------------------------|
 */
 .btn {
@@ -178,6 +179,7 @@
 .page-btn-wrap {
   display: flex;
   justify-content: space-between;
+  font-weight: 500;
 
   .btn-page {
     i {

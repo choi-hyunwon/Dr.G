@@ -376,7 +376,7 @@
             <!-- e section-color -->
 
             <!-- s section-tab -->
-            <div class="section-tab">
+            <div class="section-tab _section-tab">
                 <div class="tab _tab slide-tab">
                     <ul>
                         <li class="item"><a href="#">ABOUT</a></li>
@@ -386,6 +386,51 @@
                         <li class="item"><a href="#">FAQ</a></li>
                     </ul>
                 </div>
+                <script>
+
+                    let sectionTab = $('._section-tab');
+                    $(window).on("wheel", function (event){
+                        let sectionTabOffset = $('._section-tab').position ().top;
+                        let sectionAbout = $('.section-about').position ().top;
+                        let sectionProcess = $('.section-process').position ().top;
+                        let sectionAnswer = $('.section-answer').position ().top;
+                        let sectionVoc = $('.section-voc').position ().top;
+                        let sectionFaq = $('.section-faq').position ().top;
+
+                        if (event.originalEvent.deltaY < 0) {
+                            // console.log('UP');
+                            // console.log(window.pageYOffset);
+                            if (window.pageYOffset >= sectionTabOffset){
+                                sectionTab.show().addClass('_fixed');
+                                if (window.pageYOffset < sectionAbout){
+                                    sectionTab.show().removeClass('_fixed')
+                                }
+                            }
+
+                        } else {
+                            // console.log('Down');
+                            //console.log(window.scrollY);
+                            if (window.pageYOffset >= sectionAbout){
+                                sectionTab.hide();
+                            }
+                        }
+                    });
+                    $('.slide-tab .item a').on('click',function (){
+                        let idx = $(this).parent().index()
+                        console.log(idx)
+                        let offset = $('.section').eq(idx).offset();
+                        let headHeight = $('.header-white').height() + $('._tab').height()
+
+                        if ($('.header-white').hasClass('header-transparent')){
+                            $('html, body').animate({scrollTop : offset.top},400)
+                        }else {
+                            $('html, body').animate({scrollTop : offset.top - headHeight},400)
+                        }
+
+                    })
+
+                </script>
+
             </div>
             <!-- e section-tab -->
 

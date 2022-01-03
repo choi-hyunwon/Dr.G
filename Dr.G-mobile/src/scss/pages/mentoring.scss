@@ -45,12 +45,22 @@
   }
 
   .section-tab {
+      position: relative;
+      z-index: 10;
+      width:100%;
+      background: #fff;
+      overflow-x: scroll;
+    &._fixed{
+      position:fixed;
+      top:16vw;
+    }
     .font-h4 {
       padding: 0 vw(24);
       margin-bottom: vw(16);
     }
 
     .tab {
+      overflow:unset;
       .item {
         &.active {
           a {
