@@ -198,12 +198,22 @@
 
           .icon {
             margin-right: vw(2);
+            transform: translateY(vw(-3));
           }
 
           span {
+            display: inline-block;
             font-family: $poppins-semiBold;
             font-size: vw(13);
             color: $gray-700;
+          }
+        }
+
+        &.on {
+          .btn-like {
+            .icon {
+              background-image: url(../img/common/ico-link-foc.svg);
+            }
           }
         }
       }
