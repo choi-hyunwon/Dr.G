@@ -398,12 +398,13 @@
           .star-box {
             .star {
               display: inline-block;
+              width: vw(21);
               height: vw(40);
               cursor: pointer;
               float: left;
 
               &.star_left {
-                width: vw(21);
+                width: 21px;
                 margin-left: vw(6);
                 background: url('../img/common/ico-star-gray.svg') no-repeat vw(2) 0;
 
@@ -413,7 +414,7 @@
               }
 
               &.star_right {
-                width: vw(21);
+                width: 21px;
                 background: url('../img/common/ico-star-gray.svg') no-repeat vw(2) 0;
                 transform: scaleX(-1);
               }
