@@ -76,14 +76,14 @@ front.common = (function () {
         })
 
         /*text-change*/
-        $('._toast-popup-open').on('click', function () {
-            let btnText = $(this).find('span').text();
-
-            btnText.text(btnText).css({
-                'color': '#444444',
-                'font-weight': 'bold'
-            });
-        })
+        // $('._toast-popup-open').on('click', function () {
+        //     let btnText = $(this).find('span').text();
+        //
+        //     btnText.text(btnText).css({
+        //         'color': '#444444',
+        //         'font-weight': 'bold'
+        //     });
+        // })
     }
 
     var tab = function () {
