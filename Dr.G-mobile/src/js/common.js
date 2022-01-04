@@ -5,7 +5,7 @@
  v.0.2 태윤 : 모달 관련 스크립트 추가 -- 2021.12.21
  v.0.3 태윤 : 모달 리팩토링 -- 2021.12.22
  v.0.3 태윤 : 모달 관련 현재 주석처리 -- 2021.12.24
- v.0.4 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 완료 -- 2021.01.04
+ v.0.4 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 진행중 -- 2021.01.04
  * --------------------------------------------------------------------------
  */
 
@@ -123,6 +123,21 @@ front.common = (function () {
         popupClose.on('click', function () {
             select.removeClass('show').addClass('hide').css('display', 'none');
         });
+
+        /*외부클릭시 삭제*/
+        $(document).on('click', function (e) {
+            console.log(e.target);
+
+            let toastPopup = $('.toast-popup');
+
+            if (toastPopup.has(e.target).length === 0) {
+                $('._toast-dim-title').addClass('hide');
+                setTimeout(() => {
+                    $('._toast-dim-title').removeClass('fade show').css('display', 'none');
+                }, 400);
+
+            }
+        })
 
     }
 
