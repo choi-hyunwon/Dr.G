@@ -41,13 +41,63 @@
 
 
 
-
-
-
 /*|--------------s 서브메인----------------------------|*/
+
+        /*tab*/
+        let sectionTab = $('._section-tab');
+        $(window).on("wheel", function (event){
+            let sectionTabOffset = $('._section-tab').position ().top;
+            let sectionAbout = $('.section-about').position ().top;
+            let sectionProcess = $('.section-process').position ().top;
+            let sectionAnswer = $('.section-answer').position ().top;
+            let sectionVoc = $('.section-voc').position ().top;
+            let sectionFaq = $('.section-faq').position ().top;
+
+            if (event.originalEvent.deltaY < 0) {
+                // console.log('UP');
+                // console.log(window.pageYOffset);
+                if (window.pageYOffset >= sectionTabOffset){
+                    sectionTab.show().addClass('fixed');
+                    if (window.pageYOffset < sectionAbout){
+                        sectionTab.show().removeClass('fixed')
+                    }
+                }
+
+            } else {
+                // console.log('Down');
+                //console.log(window.scrollY);
+                if (window.pageYOffset >= sectionAbout){
+                    sectionTab.hide();
+                }
+            }
+        });
+        $('.slide-tab .item a').on('click',function (){
+            let idx = $(this).parent().index()
+            console.log(idx)
+            let offset = $('.section').eq(idx).offset();
+            let headHeight = $('.header-white').height() + $('._tab').height()
+
+            if ($('.header-white').hasClass('header-transparent')){
+                $('html, body').animate({scrollTop : offset.top},400)
+            }else {
+                $('html, body').animate({scrollTop : offset.top - headHeight},400)
+            }
+        })
+
+
+
+        /*서브메인 About*/
+        if ($('._underline').hasClass('aos-animate') === true) {
+            $(this).find('span').addClass('underscore');
+
+        } else {
+            $(this).find('span').removeClass('underscore');
+        }
+
 
 
         /*서브메인 process*/
+
         // let processItem = $('.mentoring-sub-main .slide-tab ul .item').eq(0)
         // console.log(idx)
 
@@ -64,8 +114,36 @@
             $('.step-box .step').eq(idx).addClass('active')
         });
 
+            var typingBool = false;
+            var typingIdx=0;
+
+            // 타이핑될 텍스트를 가져온다
+            var typingTxt = $(".typing-txt").text();
+
+            typingTxt=typingTxt.split(""); // 한글자씩 자른다.
+
+            if(typingBool==false){
+            // 타이핑이 진행되지 않았다면
+            typingBool=true;
+            var tyInt = setInterval(typing,100); // 반복동작
+        }
+
+            function typing(){
+            if(typingIdx<typingTxt.length){
+            // 타이핑될 텍스트 길이만큼 반복
+            $(".typing").append(typingTxt[typingIdx]);
+            // 한글자씩 이어준다.
+            typingIdx++;
+        } else{
+            //끝나면 반복종료
+            clearInterval(tyInt);
+        }
+        }
+
+
 
         /*서브메인 voc*/
+
         $('.voc .review_box .item').on('click', function () {
             if (!$(this).hasClass('active')) {
                 $(this).addClass('active').slideDown();
@@ -74,6 +152,8 @@
                 $(this).removeClass('active');
             }
         })
+
+
 
         /*서브메인 faq*/
         let box = $('.faq_box')
@@ -99,5 +179,4 @@
 
 /*|--------------e 서브메인----------------------------|*/
     });
-
 </script>

@@ -4,8 +4,8 @@
  v.0.1 선미 : tab 추가 -- 2021.12.13
  v.0.2 태윤 : 모달 관련 스크립트 추가 -- 2021.12.21
  v.0.3 태윤 : 모달 리팩토링 -- 2021.12.22
- v.0.3 태윤 : 모달 관련 현재 주석처리 -- 2021.12.24
  v.0.4 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 진행중 -- 2021.01.04
+ v.0.5 선미 : ani(스크롤애니메이션) 추가-- 2022.01.03
  * --------------------------------------------------------------------------
  */
 
@@ -20,7 +20,8 @@ front.common = (function () {
         this.commonHandler();
         this.tab();
         this.onClickModal();
-        // this.introScroll();
+        this.introScroll();
+         this.ani();
     }
 
     var a = function () {
@@ -141,14 +142,21 @@ front.common = (function () {
 
     }
 
+    /*-----s 스크롤 애니메이션------*/
+    var ani = function (){
+        AOS.init();
+    }
+    /*-----e 스크롤 애니메이션------*/
+
+
     return {
         a: a,
         commonHandler: commonHandler,
         tab: tab,
         init: init,
         onClickModal: onClickModal,
-        introScroll: introScroll
-
+        introScroll: introScroll,
+        ani: ani,
     }
 })();
 
