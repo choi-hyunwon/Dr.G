@@ -57,6 +57,22 @@
                 $('._toast-dim-title').removeClass('fade show').css('display', 'none');
             }, 400);
         });
+
+        /*외부클릭시 삭제*/
+        $(document).on('click', function (e) {
+            console.log(e.target);
+
+            let toastPopup = $('.toast-popup');
+
+            if (toastPopup.has(e.target).length === 0) {
+                $('._toast-dim-title').addClass('hide');
+                setTimeout(() => {
+                    $('._toast-dim-title').removeClass('fade show').css('display', 'none');
+                }, 400);
+
+            }
+        })
+
     });
 </script>
 
