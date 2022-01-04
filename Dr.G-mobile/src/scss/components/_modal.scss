@@ -339,6 +339,7 @@
           line-height: vw(24);
           letter-spacing: -0.005em;
           text-align: center;
+          color: $gray-800;
 
         }
 
@@ -348,6 +349,7 @@
           line-height: vw(25);
           letter-spacing: -0.005em;
           text-align: center;
+          color: $gray-800;
         }
 
         .img {
@@ -395,22 +397,26 @@
           justify-content: center;
           .star-box {
             .star {
+              float: left;
               display: inline-block;
-              width: vw(42);
+              width: vw(21);
               height: vw(40);
               cursor: pointer;
 
               &.star_left {
-                background: url('../img/common/ico-star-gray.svg') no-repeat vw(21) 0;
+                background: url('../img/common/ico-star-gray.svg') no-repeat 0.066667vw 0;
                 background-size: vw(42);
-                margin-right: vw(-4);
-                margin-left: vw(-18);
+                margin-left: vw(6);
+                &:nth-child(1){
+                  margin-left: 0;
+                }
               }
 
               &.star_right {
-                background: url('../img/common/ico-star-gray.svg') no-repeat vw(-21) 0;
+                background: url('../img/common/ico-star-gray.svg') no-repeat -0.066667vw 0;
+                transform: scaleX(-1);
                 background-size: vw(42);
-                margin-right: vw(-18);
+
 
               }
 
@@ -477,6 +483,7 @@
           font-weight: 500;
           line-height: vw(22);
           letter-spacing: -0.005em;
+          color: $gray-900;
           text-align: center;
           text-decoration: underline;
         }

@@ -164,7 +164,7 @@ data.AI = {
 data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
-      /*  {
+        {
             stateClass: 'waiting',
             url: '스킨멘토링_서브메인',
             category: 'mentoring',
@@ -175,7 +175,7 @@ data.mentoring = {
             url: '스킨멘토링_서브메인_피부분석_후기전체보기',
             category: 'mentoring',
             page: '스킨멘토링_서브메인_피부분석_후기전체보기'
-        },*/
+        },
         {
             stateClass: 'complete',
             url: '스킨멘토링_스킨멘토링내역_목록',
@@ -218,12 +218,12 @@ data.mentoring = {
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP4'
         },
-      /*  {
+        {
             stateClass: 'complete',
             url: '스킨멘토링_내역_상세페이지_후기팝업',
             category: 'mentoring',
             page: '스킨멘토링_내역_상세페이지_후기팝업'
-        },*/
+        },
         {
             stateClass: 'complete',
             url: '스킨멘토링_내역_기본정보안내_팝업',

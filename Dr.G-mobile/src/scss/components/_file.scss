@@ -1,6 +1,7 @@
 /*
 |----------------------------------|
  v.0.1 선미 : 최초 작업 -- 2021.12.22
+ v.0.2 선미 : 첨부파일명 보기,수정하기 분리 / img (png -> svg로 변경) -- 2022.01.03
 |----------------------------------|
 */
 
@@ -23,7 +24,7 @@
     width: vw(72);
     height: vw(72);
     border-radius: vw(12);
-    background : $gray-400 url("../img/common/icon-camera.png") no-repeat center top vw(14);
+    background : $gray-400 url("../img/common/icon-camera.svg") no-repeat center top vw(14);
     background-size: vw(28) vw(28);
     display: inline-block;
     vertical-align: middle;
@@ -31,6 +32,7 @@
     margin-left: vw(24);
     input[type=file]{
       height: 100%;
+      margin-bottom: 0;
     }
     .num{
       font-size: vw(13);
@@ -60,7 +62,7 @@
           border-radius: vw(12);
         }
         .delete-upload{
-          background: url("../img/common/icon-cancel.png") no-repeat 0 0;
+          background: url("../img/common/icon-cancel.svg") no-repeat 0 0;
           background-size: 100% auto;
           width: vw(20);
           height: vw(20);
@@ -73,11 +75,14 @@
       }
     }
   }
+
+  /*첨부파일명 - 수정하기*/
   +.file-list{
   .file_name{
     padding-top: vw(8);
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0;
     .text{
       word-break: break-all;
       font-size: vw(15);
@@ -92,6 +97,9 @@
 
     &:first-of-type{
       padding-top: vw(24);
+    }
+    &:last-of-type{
+      margin-bottom: vw(32);
     }
   }
 }
@@ -121,7 +129,7 @@
   }
 }
 
-/*첨부파일명*/
+/*첨부파일명 - 보기*/
 .file-list{
   >p{
     font-weight: bold;

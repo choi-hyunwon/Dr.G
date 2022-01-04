@@ -48,8 +48,8 @@
 .divider {
   width: 100%;
   height: vw(1);
-  background-color: $gray-300;
   margin: vw(25) 0 vw(25);
+  border-color: $gray-300;
 }
 
 
@@ -64,6 +64,11 @@
   margin-bottom: vw(48);
   input{
     margin-bottom: vw(8);
+  }
+  .input-group{
+    textarea{
+      margin-bottom: vw(12);
+    }
   }
 }
 .section-privacy{
@@ -85,7 +90,7 @@
   }
   .input-box{
     input[type=password]{
-      margin-bottom: vw(14);
+      margin-bottom: vw(32);
     }
     input[type=text]{
       margin-bottom: vw(8);
@@ -142,7 +147,7 @@
     }
 
     .section-input {
-      margin-bottom: vw(14);
+      margin-bottom: vw(32);
     }
 
     .section-privacy {

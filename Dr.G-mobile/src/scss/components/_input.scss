@@ -9,6 +9,7 @@
  v.0.7 선미 : form-control 색상 $gray-800 추가 -- 2021.12.20
  v.0.8 태윤 : input &:disable 속성값 추가
  v.0.9 선미 : checkbox label 높이값 제거 / 체크박스 blue ,violet 버전 추가 -- 2021.12.27
+ v.0.10 선미 :  img (png -> svg로 변경) -- 2022.01.03
  |--------------------------------------------------------------------|
 */
 input[type="number"]::-webkit-outer-spin-button,
@@ -128,7 +129,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .custom-control-input:checked ~ .custom-control-label::after {
-    background: url("../img/common/check.png") no-repeat center center;
+    background: url("../img/common/check.svg") no-repeat center center;
     background-size: 66.666% auto;
   }
 
@@ -138,7 +139,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .custom-control-input[disabled] ~ .custom-control-label::after, .custom-control-input:disabled ~ .custom-control-label::after {
-    background: url("../img/common/check-disabled.png") no-repeat center center;
+    background: url("../img/common/check-disabled.svg") no-repeat center center;
     background-size: 66.666% auto;
   }
 
@@ -169,12 +170,12 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 
     .custom-control-input:checked ~ .custom-control-label::after {
-      background: url("../img/common/check-sm.png") no-repeat center center;
+      background: url("../img/common/check-sm.svg") no-repeat center center;
       background-size: 70% auto;
     }
 
     .custom-control-input[disabled] ~ .custom-control-label::after, .custom-control-input:disabled ~ .custom-control-label::after {
-      background: url("../img/common/check-disabled-sm.png") no-repeat center center;
+      background: url("../img/common/check-disabled-sm.svg") no-repeat center center;
       background-size: 70% auto;
     }
   }
@@ -226,7 +227,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .custom-control-input:checked ~ .custom-control-label::after {
-    background: url("../img/common/radio.png") no-repeat center center;
+    background: url("../img/common/radio.svg") no-repeat center center;
     background-size: 50% auto;
   }
 
@@ -236,7 +237,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .custom-control-input[disabled] ~ .custom-control-label::after, .custom-control-input:disabled ~ .custom-control-label::after {
-    background: url("../img/common/radio-disabled.png") no-repeat center center;
+    background: url("../img/common/radio-disabled.svg") no-repeat center center;
     background-size: 50% auto;
   }
 
@@ -264,12 +265,12 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 
     .custom-control-input:checked ~ .custom-control-label::after {
-      background: url("../img/common/radio-sm.png") no-repeat center center;
+      background: url("../img/common/radio-sm.svg") no-repeat center center;
       background-size: 50% auto;
     }
 
     .custom-control-input[disabled] ~ .custom-control-label::after, .custom-control-input:disabled ~ .custom-control-label::after {
-      background: url("../img/common/radio-disabled-sm.png") no-repeat center center;
+      background: url("../img/common/radio-disabled-sm.svg") no-repeat center center;
       background-size: 50% auto;
     }
   }
