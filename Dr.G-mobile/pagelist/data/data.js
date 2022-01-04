@@ -124,6 +124,12 @@ data.AI = {
         },
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_비회원_정보입력',
+            category: 'AI',
+            page: 'Ai피부분석_비회원_정보입력'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_Step2-1_답변_상태_예시_화면',
             category: 'AI',
             page: 'Ai피부분석_Step2-1_답변_상태_예시_화면'

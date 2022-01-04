@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="AI-wrap">
+            <div class="form-info">
+                <div class="font-h3 font-bold">
+                    테스트 시작 전<br/>
+                    <span class="color-primary">기본 정보</span>를 입력해주세요.
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="nickname">닉네임을 입력해주세요.</label>
+                        <input type="text" id="nickname" class="form-control" placeholder="닉네임 최소 4자 ~ 8자 이내. 영문">
+                    </div>
+                    <div class="form-group">
+                        <label>성별을 선택해주세요.</label>
+                        <div class="gender">
+                            <ul class="clearfix _select">
+                                <li class="item"><a href="#">남성</a></li>
+                                <li class="item on"><a href="#">여성</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>연령대를 선택해주세요.</label>
+                        <div class="age">
+                            <ul class="clearfix _select">
+                                <li class="item on"><a href="#">10대</a></li>
+                                <li class="item"><a href="#">20대</a></li>
+                                <li class="item"><a href="#">30대</a></li>
+                                <li class="item"><a href="#">40대</a></li>
+                                <li class="item"><a href="#">50대</a></li>
+                                <li class="item"><a href="#">60대</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-details bg-dark">
+                <div class="page-btn-wrap btn-next">
+                    <a href="#" class="btn-page">
+                        <span class="font-body-1">다음</span><i class="icon ico-next white"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+        @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+<script>
+    $('._select .item a').on('click',function (){
+        $(this).parent().addClass('on').siblings().removeClass('on')
+    })
+</script>
+</body>
+</html>
