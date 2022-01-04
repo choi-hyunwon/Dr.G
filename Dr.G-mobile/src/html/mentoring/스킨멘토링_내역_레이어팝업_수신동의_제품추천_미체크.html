@@ -19,19 +19,6 @@
         </div>
     </div>
 </div>
-<!--toastPopupScript-->
-<script>
-    $(document).ready(function () {
-        $('._toast-popup-open-no-title').on('click', function () {
-            $('._toast-dim-no-title').removeClass('hide').addClass('fade show').css('display', 'block');
-        });
-        $('._toast-dim-close-title').on('click', function () {
-            $('._toast-dim-no-title').addClass('hide');
-            setTimeout(() => {
-                $('._toast-dim-no-title').removeClass('fade show').css('display', 'none');
-            }, 400);
-        });
-    });
-</script>
+
 </body>
 </html>

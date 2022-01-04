@@ -27,17 +27,3 @@
         </div>
     </div>
 </div>
-<!--타이틀 o 닫기 x script-->
-<script>
-    $(document).ready(function () {
-        $('._toast-popup-title-noclose').on('click', function () {
-            $('._toast-dim-title-close').removeClass('hide').addClass('fade show').css('display', 'block');
-        });
-        $('._toast-popup-noclose-title').on('click', function () {
-            $('._toast-dim-title-close').addClass('hide');
-            setTimeout(() => {
-                $('._toast-dim-title-close').removeClass('fade show').css('display', 'none');
-            }, 400);
-        });
-    });
-</script>

@@ -76,14 +76,15 @@ front.common = (function () {
         })
 
         /*text-change*/
-        // $('._toast-popup-open').on('click', function () {
-        //     let btnText = $(this).find('span').text();
-        //
-        //     btnText.text(btnText).css({
-        //         'color': '#444444',
-        //         'font-weight': 'bold'
-        //     });
-        // })
+        $('._toast-popup-open').on('click', function () {
+            let btnText = $(this).find('span');
+
+
+            btnText.text(textValue).css({
+                'color': '#444444',
+                'font-weight': 'bold'
+            });
+        })
     }
 
     var tab = function () {
@@ -126,10 +127,7 @@ front.common = (function () {
 
         /*외부클릭시 삭제*/
         $(document).on('click', function (e) {
-            console.log(e.target);
-
             let toastPopup = $('.toast-popup');
-
             if (toastPopup.has(e.target).length === 0) {
                 $('._toast-dim-title').addClass('hide');
                 setTimeout(() => {
