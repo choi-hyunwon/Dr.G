@@ -13,10 +13,13 @@
             <div class="drg-video">
                 <div class="font-h1 font-bold"><span class="font-poppins-semiBold">Dr.Ahn</span> 영상</div>
                 <div class="video-box">
-                    <iframe class="video" src="https://www.youtube.com/embed/bSIk6ILoA7g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<!--                    <video class="video" autoplay="autoplay" muted="muted">-->
-<!--                        <source src="../../img/@temp/sample.mp4" type="video/webm">-->
-<!--                    </video>-->
+                    <iframe class="video" src="https://www.youtube.com/embed/bSIk6ILoA7g" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    <!--                    <video class="video" autoplay="autoplay" muted="muted">-->
+                    <!--                        <source src="../../img/@temp/sample.mp4" type="video/webm">-->
+                    <!--                    </video>-->
                 </div>
                 <div class="video-info">
                     <div class="font-h4 font-bold">선크림 실내에서도? 숫자가 크면 좋다? 자외선차단의 모든것!</div>
@@ -26,7 +29,8 @@
                             <a href="#" class="btn-sns-facebook"><i class="icon ico-sns-facebook"></i></a>
                             <a href="#" class="btn-sns-line"><i class="icon ico-sns-line"></i></a>
                         </span>
-                        <a href="https://www.youtube.com/channel/UCZmpX6UQcfDiIXvKG3G55Zg" class="btn  btn-border btn-youtube btn-icon"><i class="icon ico-youtube"></i><span>구독</span></a>
+                        <a href="https://www.youtube.com/channel/UCZmpX6UQcfDiIXvKG3G55Zg"
+                           class="btn  btn-border btn-youtube btn-icon"><i class="icon ico-youtube"></i><span>구독</span></a>
                     </div>
                 </div>
                 <div class="comment-box">
@@ -41,7 +45,7 @@
                     </div>
                     <div class="text-area">
                             <textarea title="textarea" class="form-control"
- placeholder="고민 채택 시, 마일리지 5,000점 증정!
+                                      placeholder="고민 채택 시, 마일리지 5,000점 증정!
 닥터안이 직접 솔루션을 드립니다.
 자세한 피부고민 상담은 1:1 스킨 멘토링을
 이용해주세요!"></textarea>
@@ -345,4 +349,33 @@
         <div class="popup-footer"></div>
     </div>
 </div>
+
+<!--풀페이지팝업 script-->
+<script>
+    $(document).ready(function () {
+        $('._toast-popup-open.full').on('click', function () {
+            let select = $('._full-popup');
+            select.removeClass('hide').addClass('show');
+        });
+        $('._toast-popup-close.full').on('click', function () {
+            let select = $('._full-popup');
+            select.removeClass('show').addClass('hide');
+        });
+    });
+    $(document).ready(function () {
+        var lastScroll = 0;
+        $('._full-popup > .popup-content').scroll(function () {
+            var st = $(this).scrollTop();
+            // console.log(st);
+            if (st === 0) {
+                // console.log('Down');
+                $('._popup-header').removeClass('header-white');
+            } else {
+                // console.log('Up');
+                $('._popup-header').addClass('header-white');
+            }
+            lastScroll = st;
+        });
+    });
+</script>
 </html>
