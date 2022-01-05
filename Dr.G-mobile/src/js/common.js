@@ -23,7 +23,7 @@ front.common = (function () {
         this.tab();
         this.onClickModal();
         this.introScroll();
-         this.ani();
+        this.ani();
     }
 
     var a = function () {
@@ -77,17 +77,6 @@ front.common = (function () {
             }
 
         })
-
-        /*text-change*/
-        // $('._toast-popup-open').on('click', function () {
-        //     let btnText = $(this).find('span');
-        //
-        //
-        //     btnText.text(textValue).css({
-        //         'color': '#444444',
-        //         'font-weight': 'bold'
-        //     });
-        // })
     }
 
     var tab = function () {
@@ -136,14 +125,14 @@ front.common = (function () {
         $('.toast-dim').mouseup(function (e) {
             let toastPopup = $('.toast-popup');
             if (toastPopup.has(e.target).length === 0) {
-                $('.toast-dim').css('display','none');
+                $('.toast-dim').css('display', 'none');
             }
         })
 
     }
 
     /*-----s 스크롤 애니메이션------*/
-    var ani = function (){
+    var ani = function () {
         AOS.init();
     }
     /*-----e 스크롤 애니메이션------*/
@@ -163,3 +152,11 @@ front.common = (function () {
 $(function () {
     front.common.init();
 });
+
+function showPopup() {
+    $('.toast-dim').addClass('show');
+}
+
+function hidePopup() {
+    $('.toast-dim').removeClass('show');
+}

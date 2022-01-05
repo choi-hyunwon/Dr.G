@@ -29,7 +29,10 @@
                     <div class="skin-type-info">
                         <div class="title">
                             <span class="font-h2 font-bold">건지형</span>
-                            <a class="btn-tooltip" href="#"><i class="icon ico-alert-circle-w"></i></a>
+                            <a class="btn-tooltip" href="#">
+                                <i class="icon ico-alert-circle-w"></i>
+                                <span class="alert-tooltip">수분 부족형 민감 건성</span>
+                            </a>
                         </div>
                         <div class="font-body-2 font-poppins">Oily, Non-Sensitive, Hydrated</div>
                     </div>
@@ -39,15 +42,26 @@
                             민감성 고민이 자주 나타나는 <span class="font-bold">수분 부족형 민감 지성 피부</span>입니다.
                         </div>
                         <!--
-                            0 ~ 5%일 경우 / .percent에 left-0 클래스 추가
-                            5 ~ 10%일 경우 / .percent에 left-1 클래스 추가
-                            90% ~ 95%일 경우 / .percent에 right-0 클래스 추가
-                            95% ~ 100%일 경우 / .percent에 right-1 클래스 추가
+                            ** 아래 script 참고
+                                0 ~ 5%일 경우 / .percent에 left-0 클래스 추가
+                                5 ~ 10%일 경우 / .percent에 left-1 클래스 추가
+                                90% ~ 95%일 경우 / .percent에 right-0 클래스 추가
+                                95% ~ 100%일 경우 / .percent에 right-1 클래스 추가
+                        -->
+                        <!--
+                            ** 개발할 경우 추가 **
+                                0 ~ 20%일 경우 / .badge-tooltip에 color-1 클래스 추가
+                                20% ~ 40%일 경우 / .badge-tooltip에 color-2 클래스 추가
+                                40% ~ 60%일 경우 / .badge-tooltip에 color-3 클래스 추가
+                                60% ~ 80%일 경우 / .badge-tooltip에 color-4 클래스 추가
+                                80% ~ 100%일 경우 / .badge-tooltip에 color-5 클래스 추가
                         -->
                         <div class="bar-box">
                             <div class="bar">
                                 <div class="percent" data-percent="1">
-                                    <span class="badge-tooltip">상위1%</span>
+                                    <span class="badge-tooltip color-1">상위1%
+                                      <svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.59957 4.5C3.21467 5.16667 2.25241 5.16667 1.86751 4.5L0.135466 1.5C-0.249434 0.833333 0.231694 0 1.00149 0H4.46559C5.23539 0 5.71652 0.833333 5.33162 1.5L3.59957 4.5Z" fill="#D5F4EF"/></svg>
+                                    </span>
                                 </div>
                                 <div class="line-wrap">
                                     <span class="line"></span>
@@ -60,7 +74,9 @@
                         <div class="bar-box">
                             <div class="bar">
                                 <div class="percent" data-percent="10">
-                                    <span class="badge-tooltip">상위10%</span>
+                                    <span class="badge-tooltip color-1">상위10%
+                                      <svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.59957 4.5C3.21467 5.16667 2.25241 5.16667 1.86751 4.5L0.135466 1.5C-0.249434 0.833333 0.231694 0 1.00149 0H4.46559C5.23539 0 5.71652 0.833333 5.33162 1.5L3.59957 4.5Z" fill="#D5F4EF"/></svg>
+                                    </span>
                                 </div>
                                 <div class="line-wrap">
                                     <span class="line"></span>
@@ -72,8 +88,10 @@
                         </div>
                         <div class="bar-box">
                             <div class="bar">
-                                <div class="percent" data-percent="15">
-                                    <span class="badge-tooltip">상위15%</span>
+                                <div class="percent" data-percent="22">
+                                    <span class="badge-tooltip color-2">상위22%
+                                      <svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.59957 4.5C3.21467 5.16667 2.25241 5.16667 1.86751 4.5L0.135466 1.5C-0.249434 0.833333 0.231694 0 1.00149 0H4.46559C5.23539 0 5.71652 0.833333 5.33162 1.5L3.59957 4.5Z" fill="#D5F4EF"/></svg>
+                                    </span>
                                 </div>
                                 <div class="line-wrap">
                                     <span class="line"></span>
@@ -86,7 +104,24 @@
                         <div class="bar-box">
                             <div class="bar">
                                 <div class="percent" data-percent="50">
-                                    <span class="badge-tooltip">상위50%</span>
+                                    <span class="badge-tooltip color-3">상위50%
+                                      <svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.59957 4.5C3.21467 5.16667 2.25241 5.16667 1.86751 4.5L0.135466 1.5C-0.249434 0.833333 0.231694 0 1.00149 0H4.46559C5.23539 0 5.71652 0.833333 5.33162 1.5L3.59957 4.5Z" fill="#D5F4EF"/></svg>
+                                    </span>
+                                </div>
+                                <div class="line-wrap">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar-box">
+                            <div class="bar">
+                                <div class="percent" data-percent="70">
+                                    <span class="badge-tooltip color-4">상위70%
+                                      <svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.59957 4.5C3.21467 5.16667 2.25241 5.16667 1.86751 4.5L0.135466 1.5C-0.249434 0.833333 0.231694 0 1.00149 0H4.46559C5.23539 0 5.71652 0.833333 5.33162 1.5L3.59957 4.5Z" fill="#D5F4EF"/></svg>
+                                    </span>
                                 </div>
                                 <div class="line-wrap">
                                     <span class="line"></span>
@@ -99,7 +134,9 @@
                         <div class="bar-box">
                             <div class="bar">
                                 <div class="percent" data-percent="80">
-                                    <span class="badge-tooltip">상위80%</span>
+                                    <span class="badge-tooltip color-5">상위80%
+                                      <svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.59957 4.5C3.21467 5.16667 2.25241 5.16667 1.86751 4.5L0.135466 1.5C-0.249434 0.833333 0.231694 0 1.00149 0H4.46559C5.23539 0 5.71652 0.833333 5.33162 1.5L3.59957 4.5Z" fill="#D5F4EF"/></svg>
+                                    </span>
                                 </div>
                                 <div class="line-wrap">
                                     <span class="line"></span>
@@ -112,7 +149,9 @@
                         <div class="bar-box">
                             <div class="bar">
                                 <div class="percent" data-percent="90">
-                                    <span class="badge-tooltip">상위90%</span>
+                                    <span class="badge-tooltip color-5">상위90%
+                                      <svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.59957 4.5C3.21467 5.16667 2.25241 5.16667 1.86751 4.5L0.135466 1.5C-0.249434 0.833333 0.231694 0 1.00149 0H4.46559C5.23539 0 5.71652 0.833333 5.33162 1.5L3.59957 4.5Z" fill="#D5F4EF"/></svg>
+                                    </span>
                                 </div>
                                 <div class="line-wrap">
                                     <span class="line"></span>
@@ -125,7 +164,9 @@
                         <div class="bar-box">
                             <div class="bar">
                                 <div class="percent right-1" data-percent="100">
-                                    <span class="badge-tooltip">상위100%</span>
+                                    <span class="badge-tooltip color-5">상위100%
+                                      <svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.59957 4.5C3.21467 5.16667 2.25241 5.16667 1.86751 4.5L0.135466 1.5C-0.249434 0.833333 0.231694 0 1.00149 0H4.46559C5.23539 0 5.71652 0.833333 5.33162 1.5L3.59957 4.5Z" fill="#D5F4EF"/></svg>
+                                    </span>
                                 </div>
                                 <div class="line-wrap">
                                     <span class="line"></span>
@@ -138,7 +179,9 @@
                         <div class="bar-box">
                             <div class="bar">
                                 <div class="percent left-0" data-percent="1">
-                                     <span class="badge-tooltip">상위 1%, 상위권 달성을 축하합니다!</span>
+                                     <span class="badge-tooltip color-1">상위 1%, 상위권 달성을 축하합니다!
+                                      <svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.59957 4.5C3.21467 5.16667 2.25241 5.16667 1.86751 4.5L0.135466 1.5C-0.249434 0.833333 0.231694 0 1.00149 0H4.46559C5.23539 0 5.71652 0.833333 5.33162 1.5L3.59957 4.5Z" fill="#D5F4EF"/></svg>
+                                    </span>
                                 </div>
                                 <div class="line-wrap">
                                     <span class="line"></span>
@@ -151,7 +194,9 @@
                         <div class="bar-box">
                             <div class="bar">
                                 <div class="percent right-1" data-percent="100">
-                                    <span class="badge-tooltip">상위 100%, 상위권 달성을 축하합니다!</span>
+                                    <span class="badge-tooltip color-5">상위 100%, 상위권 달성을 축하합니다!
+                                      <svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.59957 4.5C3.21467 5.16667 2.25241 5.16667 1.86751 4.5L0.135466 1.5C-0.249434 0.833333 0.231694 0 1.00149 0H4.46559C5.23539 0 5.71652 0.833333 5.33162 1.5L3.59957 4.5Z" fill="#D5F4EF"/></svg>
+                                    </span>
                                 </div>
                                 <div class="line-wrap">
                                     <span class="line"></span>
@@ -173,7 +218,6 @@
                 <i class="icon ico-skin-type-4"></i>
                 <i class="icon ico-skin-type-5"></i>
                 <i class="icon ico-skin-type-6"></i>
-                <i class="icon ico-skin-type-7"></i>
             </div>
             <div class="on">
                 <i class="icon ico-skin-type-1"></i>
@@ -182,7 +226,152 @@
                 <i class="icon ico-skin-type-4"></i>
                 <i class="icon ico-skin-type-5"></i>
                 <i class="icon ico-skin-type-6"></i>
-                <i class="icon ico-skin-type-7"></i>
+            </div>
+            <div class="result">
+                <div class="analysis-result">
+                    <div class="bar-chart-box">
+                        <div class="bar-chart _barChart">
+                            <div class="item">
+                                <div class="info">
+                                    <div class="score on">
+                                        <i class="icon ico-skin-type-1"></i>
+                                        <span class="txt">수분 <em class="num">88</em>점</span>
+                                    </div>
+                                    <!-- 증가할 경우 : up 클래스 추가 / 감소할 경우 : down 클래스 추가 -->
+                                    <div class="state up">22</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="gradient"></div>
+                                    <div class="pos" data-score="88">
+                                        <span class="pin"></span>
+                                        <span class="txt">매우 좋음</span>
+                                    </div>
+                                    <div class="line-wrap">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <div class="score on">
+                                        <i class="icon ico-skin-type-2"></i>
+                                        <span class="txt">유분 <em class="num">100</em>점 </span>
+                                    </div>
+                                    <!-- 증가할 경우 : up 클래스 추가 / 감소할 경우 : down 클래스 추가 -->
+                                    <div class="state up">22</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="gradient"></div>
+                                    <div class="pos" data-score="100">
+                                        <span class="pin"></span>
+                                        <span class="txt">매우 좋음</span>
+                                    </div>
+                                    <div class="line-wrap">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <div class="score on">
+                                        <i class="icon ico-skin-type-3"></i>
+                                        <span class="txt">민감 <em class="num">30</em>점 </span>
+                                    </div>
+                                    <!-- 증가할 경우 : up 클래스 추가 / 감소할 경우 : down 클래스 추가 -->
+                                    <div class="state down">42</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="gradient"></div>
+                                    <div class="pos" data-score="30">
+                                        <span class="pin"></span>
+                                        <span class="txt">부족</span>
+                                    </div>
+                                    <div class="line-wrap">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <div class="score on">
+                                        <i class="icon ico-skin-type-4"></i>
+                                        <span class="txt">색소 <span class="num">50</span>점 </span>
+                                    </div>
+                                    <!-- 증가할 경우 : up 클래스 추가 / 감소할 경우 : down 클래스 추가 -->
+                                    <div class="state down">28</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="gradient"></div>
+                                    <div class="pos" data-score="50">
+                                        <span class="pin"></span>
+                                        <span class="txt">보통</span>
+                                    </div>
+                                    <div class="line-wrap">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <div class="score on">
+                                        <i class="icon ico-skin-type-5"></i>
+                                        <span class="txt">주름 <em class="num">70</em>점 </span>
+                                    </div>
+                                    <!-- 증가할 경우 : up 클래스 추가 / 감소할 경우 : down 클래스 추가 -->
+                                    <div class="state up">42</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="gradient"></div>
+                                    <div class="pos" data-score="70">
+                                        <span class="pin"></span>
+                                        <span class="txt">좋음</span>
+                                    </div>
+                                    <div class="line-wrap">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <div class="score on">
+                                        <i class="icon ico-skin-type-6"></i>
+                                        <span class="txt">모공 <em class="num">20</em>점 </span>
+                                    </div>
+                                    <!-- 증가할 경우 : up 클래스 추가 / 감소할 경우 : down 클래스 추가 -->
+                                    <div class="state down">28</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="gradient"></div>
+                                    <div class="pos" data-score="20">
+                                        <span class="pin"></span>
+                                        <span class="txt">매우 나쁨</span>
+                                    </div>
+                                    <div class="line-wrap">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -194,6 +383,7 @@
 </div>
 <script>
     $(document).ready(function (){
+        /* 상단 - bar graph */
         var $percent = $('.percent');
         $percent.each(function (){
             let data = $(this).data('percent');
@@ -210,6 +400,32 @@
             }
             else if (95 < data && data <= 100) {
                 $(this).addClass('right-1')
+            }
+        })
+
+        /* 상단 - tooltip */
+        $('._tooltip').on('click',function (){
+            $(this).children('.alert-tooltip').css('display','inline-block');
+
+            setTimeout(function (){
+                $('._tooltip').children('.alert-tooltip').css('display','none');
+            },5000)
+        })
+
+        /* 피부 상태 그래프 */
+        var $score = $('._barChart .bar .pos');
+        $score.each(function () {
+            let data = $(this).data('score');
+            let numDate = 100 - Number(data)
+            $(this).css('left', data + '%')
+            $(this).siblings('.gradient').css({
+                'mask-image' : 'linear-gradient(to left, transparent ' + numDate + '%, black '+ numDate +'%)',
+                '-webkit-mask-image' : 'linear-gradient(to left, transparent ' + numDate + '%, black '+ numDate +'%)'
+            })
+            if (0 < data && data <= 5) {
+                $(this).addClass('align-left')
+            } else if (95 < data && data <= 100) {
+                $(this).addClass('align-right')
             }
         })
     })
