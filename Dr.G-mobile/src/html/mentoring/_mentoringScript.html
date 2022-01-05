@@ -1,4 +1,3 @@
-<script src="../../js/common.js"></script>
 <script>
     $(document).ready(function () {
         /*step1*/
@@ -47,9 +46,10 @@
         /*tab*/
         let sectionTab = $('._section-tab');
         let lastScroll = 0;
-        $(window).scroll(function (event){
+        //$(window).scroll(function (event){
+        $('.mentoring-sub-main').scroll(function (event){
             let st = $(this).scrollTop();
-            console.log(st);
+            //console.log(st);
             let sectionTabOffset = $('._section-tab').position ().top;
             let sectionAbout = $('.section-about').position ().top;
             let sectionProcess = $('.section-process').position ().top;

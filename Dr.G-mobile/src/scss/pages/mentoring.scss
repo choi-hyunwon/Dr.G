@@ -514,6 +514,8 @@
           p{
             margin-bottom: vw(12);
             color: $gray-700;
+            font-size: vw(16);
+
 
             &:last-of-type{
               margin-bottom: 0;
@@ -528,18 +530,19 @@
                     clear: both;
                     display: inline-block;
                     position: absolute;
-                    border-bottom: 5px solid $yellow;
+                    border-bottom: vw(7) solid $yellow;
                     bottom: 0;
-                    left: -2px;
+                    left: vw(-3);
                     z-index: -1;
                     animation: line 0.3s 1.5s forwards ease-in-out;
+                    border-radius: vw(2.5);
                   }
                   @keyframes line {
                     from{
                       width: 0;
                     }
                     to{
-                      width: 70px;
+                      width: vw(70);
                     }
 
                   }
