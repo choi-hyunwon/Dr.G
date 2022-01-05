@@ -188,6 +188,12 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_추천_팝업'
         },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_비회원_팝업_2',
+            category: 'AI',
+            page: 'Ai피부분석_비회원_팝업_2'
+        },
     ]
 }
 
