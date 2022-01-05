@@ -1,9 +1,10 @@
 /*
-|----------------------------------|
+|--------------------------------------------------------------------|
  v.0.1 선미 : 최초 작업 -- 2021.12.14
  v.0.2 주연 : vw 적용 -- 2021.12.14
  v.0.3 선미 : badge-sm , badge-lg 추가-- 2021.12.29
-|----------------------------------|
+ v.0.4 주연 : badge-md -- 2022.01.05
+|--------------------------------------------------------------------|
 */
 .badge {
   padding: vw(6) vw(9);
@@ -34,22 +35,29 @@
 
   &.badge-yellow {
     background-color: $yellow;
-    color: $gray-800 ;
+    color: $gray-800;
   }
 
   &.badge-lightgray {
     background-color: $gray-300;
-    color: $gray-800 ;
+    color: $gray-800;
   }
 
-  &.badge-lg{
-    padding:vw(12) vw(18);
+  &.badge-lg {
+    padding: vw(12) vw(18);
     border-radius: vw(21);
     font-size: vw(13);
     line-height: vw(18);
   }
 
-  &.badge-sm{
+  &.badge-md {
+    padding: vw(8) vw(16);
+    border-radius: vw(100);
+    font-size: vw(13);
+    line-height: vw(18);
+  }
+
+  &.badge-sm {
     padding: vw(2) vw(8);
     border-radius: vw(12.5);
     font-size: vw(12);
