@@ -127,11 +127,12 @@ front.common = (function () {
 
         /*외부클릭시 삭제*/
         $(document).on('click', function (e) {
-            let toastPopup = $('.toast-popup');
+            let toastPopup = $('._toast-popup');
             if (toastPopup.has(e.target).length === 0) {
-                $('._toast-dim-title').addClass('hide');
+                console.log(e);
+                $('._toast-popup').addClass('hide');
                 setTimeout(() => {
-                    $('._toast-dim-title').removeClass('fade show').css('display', 'none');
+                    $('._toast-popup').removeClass('fade show').css('display', 'none');
                 }, 400);
 
             }
