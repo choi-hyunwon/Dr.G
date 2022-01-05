@@ -122,14 +122,16 @@ front.common = (function () {
             select.eq(idx).removeClass('hide').addClass('fade show').css('display', 'block');
         });
         popupClose.on('click', function () {
-            select.removeClass('show').addClass('hide').css('display', 'none');
+            select.removeClass('show').addClass('hide');
+            setTimeout(() => {
+                $('._toast-popup').removeClass('fade show').css('display', 'none');
+            }, 400);
         });
 
         /*외부클릭시 삭제*/
         $(document).on('click', function (e) {
-            let toastPopup = $('._toast-popup');
+            let toastPopup = $('.toast-popup');
             if (toastPopup.has(e.target).length === 0) {
-                console.log(e);
                 $('._toast-popup').addClass('hide');
                 setTimeout(() => {
                     $('._toast-popup').removeClass('fade show').css('display', 'none');
