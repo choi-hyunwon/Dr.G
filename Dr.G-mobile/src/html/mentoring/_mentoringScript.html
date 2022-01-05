@@ -47,35 +47,38 @@
         let sectionTab = $('._section-tab');
         let lastScroll = 0;
         //$(window).scroll(function (event){
-        $('.mentoring-sub-main').scroll(function (event){
-            let st = $(this).scrollTop();
-            //console.log(st);
-            let sectionTabOffset = $('._section-tab').position ().top;
-            let sectionAbout = $('.section-about').position ().top;
-            let sectionProcess = $('.section-process').position ().top;
-            let sectionAnswer = $('.section-answer').position ().top;
-            let sectionVoc = $('.section-voc').position ().top;
-            let sectionFaq = $('.section-faq').position ().top;
+        $(window).scroll(function (){
+             if($('.container').find('._sub-main').length){
+                let st = $(this).scrollTop();
+                console.log(st);
+                let sectionTabOffset = $('._section-tab').position ().top;
+                let sectionAbout = $('.section-about').position ().top;
+                let sectionProcess = $('.section-process').position ().top;
+                let sectionAnswer = $('.section-answer').position ().top;
+                let sectionVoc = $('.section-voc').position ().top;
+                let sectionFaq = $('.section-faq').position ().top;
 
-            if (st > lastScroll){
-                //Replace this with your function call for downward-scrolling
-                //console.log("DOWN");
-                if (window.pageYOffset >= sectionAbout) {
-                    sectionTab.hide();
-                }
-            }
-            else {
-                //Replace this with your function call for upward-scrolling
-               //console.log("UP");
-                if (window.pageYOffset >= sectionTabOffset) {
-                    sectionTab.show().addClass('fixed');
-                    if (window.pageYOffset < sectionAbout) {
-                        sectionTab.show().removeClass('fixed')
+                if (st > lastScroll){
+                    //Replace this with your function call for downward-scrolling
+                    //console.log("DOWN");
+                    if (window.pageYOffset >= sectionAbout) {
+                        sectionTab.hide();
                     }
                 }
-            }
-            //Updates scroll position
-            lastScroll = st;
+                else {
+                    //Replace this with your function call for upward-scrolling
+                    //console.log("UP");
+                    if (window.pageYOffset >= sectionTabOffset) {
+                        sectionTab.show().addClass('fixed');
+                        if (window.pageYOffset < sectionAbout) {
+                            sectionTab.show().removeClass('fixed')
+                        }
+                    }
+                }
+                //Updates scroll position
+                lastScroll = st;
+             }
+
         });
         // /*tab*/
         // let sectionTab = $('._section-tab');

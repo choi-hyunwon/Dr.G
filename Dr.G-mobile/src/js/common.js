@@ -8,6 +8,7 @@
  v.0.4 선미 : ani(스크롤애니메이션) 추가-- 2022.01.03
  v.0.5 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 진행중 -- 2021.01.04
  v.0.6 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 완료 (텍스트변경제외) -- 2022.01.05
+ v.0.7 선미 : headerDetails 추가 --2022.01.06
  * --------------------------------------------------------------------------
  */
 
@@ -23,7 +24,8 @@ front.common = (function () {
         this.tab();
         this.onClickModal();
         this.introScroll();
-         this.ani();
+        this.ani();
+        this.headerDetails();
     }
 
     var a = function () {
@@ -142,11 +144,36 @@ front.common = (function () {
 
     }
 
+    var headerDetails = function () {
+        let detailsScroll = 0;
+        $(window).scroll(function (event) {
+            if ($('.container').find('._static').length == false) {
+                let st = $(this).scrollTop();
+                if (st >= detailsScroll) {
+                    console.log("DOWN");
+                    $('.header-details').hide()
+
+                } else {
+                    console.log("UP");
+                    $('.header-details').show().addClass('fixed')
+                    if (window.pageYOffset == 0) {
+                        $('.header-details').removeClass('fixed')
+                    }
+                }
+                //Updates scroll position
+                detailsScroll = st;
+            }
+        });
+    }
+
+
     /*-----s 스크롤 애니메이션------*/
     var ani = function (){
         AOS.init();
     }
     /*-----e 스크롤 애니메이션------*/
+
+
 
 
     return {
@@ -157,6 +184,7 @@ front.common = (function () {
         onClickModal: onClickModal,
         introScroll: introScroll,
         ani: ani,
+        headerDetails: headerDetails
     }
 })();
 

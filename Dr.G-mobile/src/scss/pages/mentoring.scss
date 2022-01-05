@@ -639,6 +639,75 @@
 
         .process-swiper {
           position: relative;
+          .swiper-wrapper{
+            .swiper-slide{
+              &.page1{}
+              &.page2{}
+              &.page3{
+
+                .current-skin-box{
+                  background-color: $gray-fff;
+                  border-radius: vw(20);
+                  width: vw(268);
+                  margin: 0 auto;
+                  padding: vw(22) vw(20);
+                  display: flex;
+                  align-items: center;
+                  text-align: left;
+                  .skin_icon{
+                    display: inline-block;
+                    margin-right: vw(13);
+                    .icon{
+                      width: vw(58);
+                      height: vw(58);
+                    }
+                  }
+                  .type{
+                    display: inline-block;
+                    width: calc(100% - #{vw(71)});
+                    .title{
+                      font-size: vw(16);
+                      line-height: vw(18);
+                    }
+                    .desc{
+                      color: $gray-500;
+                      font-size: vw(10);
+                      line-height: vw(18);
+                      margin-bottom: vw(10);
+                    }
+                  }
+                  .bar {
+                    position: relative;
+                    width: 100%;
+                    height: vw(8);
+                    background: linear-gradient(90deg, #70D5F0 0%, #28D6B8 50.79%);
+                    border-radius: vw(7);
+
+                    .line-wrap {
+                      position: absolute;
+                      display: flex;
+                      width: 100%;
+                      height: vw(8);
+                      left: 0;
+                      top: 0;
+
+                      .line {
+                        width: 20%;
+                        border-right: vw(1) solid rgba(238, 238, 238, .5);
+                      }
+                    }
+                  }
+                }
+                .answer-box{
+                  background-color: #7684ff;
+                  text-align: left;
+
+
+                }
+              }
+            }
+          }
+
 
           .process-pagination {
             position: absolute;
