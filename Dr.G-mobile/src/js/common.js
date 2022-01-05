@@ -150,11 +150,11 @@ front.common = (function () {
             if ($('.container').find('._static').length == false) {
                 let st = $(this).scrollTop();
                 if (st >= detailsScroll) {
-                    console.log("DOWN");
+                   // console.log("DOWN");
                     $('.header-details').hide()
 
                 } else {
-                    console.log("UP");
+                   // console.log("UP");
                     $('.header-details').show().addClass('fixed')
                     if (window.pageYOffset == 0) {
                         $('.header-details').removeClass('fixed')
