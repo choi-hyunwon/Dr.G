@@ -106,6 +106,12 @@ data.AI = {
         },
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_Step1_피부스캐닝_완료',
+            category: 'AI',
+            page: 'Ai피부분석_Step1_피부스캐닝_완료'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_Step1-1앱설치안내',
             category: 'AI',
             page: 'Ai피부분석_Step1-1앱설치안내'
@@ -115,6 +121,12 @@ data.AI = {
             url: 'Ai피부분석_Step2',
             category: 'AI',
             page: 'Ai피부분석_Step2'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_비회원_정보입력',
+            category: 'AI',
+            page: 'Ai피부분석_비회원_정보입력'
         },
         {
             stateClass: 'complete',
@@ -206,12 +218,12 @@ data.mentoring = {
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP4'
         },
-      /*  {
+        {
             stateClass: 'complete',
             url: '스킨멘토링_내역_상세페이지_후기팝업',
             category: 'mentoring',
             page: '스킨멘토링_내역_상세페이지_후기팝업'
-        },*/
+        },
         {
             stateClass: 'complete',
             url: '스킨멘토링_내역_기본정보안내_팝업',
