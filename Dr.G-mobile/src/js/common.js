@@ -58,7 +58,7 @@ front.common = (function () {
 
         /*modal-select-close*/
         $('._toast-popup .select-list > .list').on('click', function () {
-            let Popup = $(this).parents('._toast-popup');
+            let Popup = $(this).parents('.toast-dim');
 
             function hidePopup() {
                 Popup.addClass('hide');
@@ -79,15 +79,15 @@ front.common = (function () {
         })
 
         /*text-change*/
-        $('._toast-popup-open').on('click', function () {
-            let btnText = $(this).find('span');
-
-
-            btnText.text(textValue).css({
-                'color': '#444444',
-                'font-weight': 'bold'
-            });
-        })
+        // $('._toast-popup-open').on('click', function () {
+        //     let btnText = $(this).find('span');
+        //
+        //
+        //     btnText.text(textValue).css({
+        //         'color': '#444444',
+        //         'font-weight': 'bold'
+        //     });
+        // })
     }
 
     var tab = function () {
@@ -118,11 +118,12 @@ front.common = (function () {
     var onClickModal = function OnclickModal() {
         let popupOpen = $('._toast-popup-open');
         let popupClose = $('._toast-popup-close');
-        let select = $('._toast-popup');
+        let select = $('.toast-dim');
 
         popupOpen.on('click', function () {
             const idx = popupOpen.index(this);
             select.eq(idx).removeClass('hide').addClass('fade show').css('display', 'block');
+
         });
         popupClose.on('click', function () {
             select.removeClass('show').addClass('hide');
@@ -132,14 +133,10 @@ front.common = (function () {
         });
 
         /*외부클릭시 삭제*/
-        $(document).on('click', function (e) {
+        $('.toast-dim').mouseup(function (e) {
             let toastPopup = $('.toast-popup');
             if (toastPopup.has(e.target).length === 0) {
-                $('._toast-popup').addClass('hide');
-                setTimeout(() => {
-                    $('._toast-popup').removeClass('fade show').css('display', 'none');
-                }, 400);
-
+                $('.toast-dim').css('display','none');
             }
         })
 

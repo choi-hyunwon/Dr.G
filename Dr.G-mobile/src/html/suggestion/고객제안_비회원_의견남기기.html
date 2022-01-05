@@ -123,8 +123,8 @@
 </div>
 
 <!--텍스트 modal-->
-<div class="toast-dim _toast-popup text">
-    <div class="toast-popup">
+<div class="toast-dim">
+    <div class="toast-popup _toast-popup text">
         <div class="toast-content no-title type">
             <div class="toast-body mb-0">
                 <ul class="select-list">
@@ -150,9 +150,29 @@
     </div>
 </div>
 
+<!--텍스트변경 스크립트-->
+<script>
+    $(document).ready(function () {
+        let list = $('._toast-popup.text .select-list > .list');
+        list.on("click", function (e) {
+            let textValue = $(this).find('span').text();
+            function ChangeText() {
+                $('._toast-popup-open.text').find('span').text(textValue).css({
+                    'color': '#444444',
+                    'font-weight': 'bold'
+                });
+            }
+            list.removeClass("active");
+            $(this).addClass("active");
+            ChangeText();
+        });
+    });
+</script>
+
+
 <!--age Modal -->
-<div class="toast-dim _toast-popup age">
-    <div class="toast-popup">
+<div class="toast-dim">
+    <div class="toast-popup _toast-popup age">
         <div class="toast-content no-title type">
             <div class="toast-body mb-0">
                 <ul class="select-list">
@@ -173,6 +193,25 @@
         </div>
     </div>
 </div>
+
+<!--텍스트변경 스크립트-->
+<script>
+    $(document).ready(function () {
+        let list = $('._toast-popup.age .select-list > .list');
+        list.on("click", function (e) {
+            let textValue = $(this).find('span').text();
+            function ChangeText() {
+                $('._toast-popup-open.age').find('span').text(textValue).css({
+                    'color': '#444444',
+                    'font-weight': 'bold'
+                });
+            }
+            list.removeClass("active");
+            $(this).addClass("active");
+            ChangeText();
+        });
+    });
+</script>
 
 </body>
 </html>
