@@ -5,36 +5,23 @@
 <div class="wrap">
 
 </div>
-<div class="toast-dim _toast-dim-title fade show">
+<div class="toast-dim _toast-popup fade show">
     <div class="toast-popup">
         <div class="toast-content">
             <div class="toast-header">
                 <p class="title">앱 설치 안내</p>
-                <a href="#" class="_toast-popup-close-title icon ico-close-sm"></a>
+                <a href="#" class="_toast-popup-close icon ico-close-sm"></a>
             </div>
             <div class="toast-body">
                 <p class="desc">꾸주한 피부 관리가 필요하시다면<br>
                     닥터지 앱 설치후 Ai 피부분석을 실행해보세요.</p>
             </div>
             <div class="toast-footer">
-                <a href="#" class="btn btn-lg btn-secondary _toast-popup-close-title">닥터지 앱 설치하기</a>
+                <a href="#" class="btn btn-lg btn-secondary _toast-popup-close">닥터지 앱 설치하기</a>
                 <a class="text-btn">모바일 웹으로 계속하기</a>
             </div>
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function () {
-        $('._toast-popup-open-title').click(function () {
-            $('._toast-dim-title').removeClass('hide').addClass('fade show').css('display', 'block');
-        });
-        $('._toast-popup-close-title').click(function () {
-            $('._toast-dim-title').addClass('hide');
-            setTimeout(() => {
-                $('._toast-dim-title').removeClass('fade show').css('display', 'none');
-            }, 400);
-        });
-    });
-</script>
 </body>
 </html>

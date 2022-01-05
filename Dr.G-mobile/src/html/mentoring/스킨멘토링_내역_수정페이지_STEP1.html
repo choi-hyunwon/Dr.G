@@ -128,39 +128,7 @@
         </div>
     </div>
 </div>
-<!--age script-->
-<script>
-    $(document).ready(function () {
-        $('._toast-popup-open.age').click(function () {
-            let select = $('._toast-popup.age')
-            select.removeClass('hide').addClass('fade show').css('display', 'block');
-        });
-    });
-    $(document).ready(function () {
-        let list = $('._toast-popup.age .select-list > .list');
-        function hidePopup() {
-            $('._toast-popup.age').addClass('hide');
-            setTimeout(() => {
-                $('._toast-popup.age').removeClass('fade show').css('display', 'none');
-            }, 400);
-        }
-        list.on("click", function (e) {
-            let textValue = $(this).find('span').text();
 
-            function ChangeText() {
-                $('._toast-popup-open.age').find('span').text(textValue).css({
-                    'color': '#444444',
-                    'font-weight': 'bold'
-                });
-            }
-
-            list.removeClass("active");
-            $(this).addClass("active");
-            hidePopup();
-            ChangeText();
-        });
-    });
-</script>
 
 
 @@include('./_mentoringScript.html')

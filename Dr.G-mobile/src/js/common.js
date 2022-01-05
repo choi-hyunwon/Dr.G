@@ -5,6 +5,9 @@
  v.0.2 태윤 : 모달 관련 스크립트 추가 -- 2021.12.21
  v.0.3 태윤 : 모달 리팩토링 -- 2021.12.22
  v.0.3 태윤 : 모달 관련 현재 주석처리 -- 2021.12.24
+ v.0.4 선미 : ani(스크롤애니메이션) 추가-- 2022.01.03
+ v.0.5 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 진행중 -- 2021.01.04
+ v.0.6 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 완료 (텍스트변경제외) -- 2022.01.05
  * --------------------------------------------------------------------------
  */
 
@@ -18,8 +21,9 @@ front.common = (function () {
         this.a();
         this.commonHandler();
         this.tab();
-        // this.popup();
-        // this.introScroll();
+        this.onClickModal();
+        this.introScroll();
+         this.ani();
     }
 
     var a = function () {
@@ -52,41 +56,38 @@ front.common = (function () {
             });
         })
 
-        /* modal-select */
-        // $('._toast-popup .select-list > .list').on('click', function (e) {
-        //     let textValueParent = $(this).parents('._toast-popup');
-        //     let textValueSelectPopup = $(this).parents('.select-popup').children('._toast-popup-open');
-        //     let textValue = $(this).find('span').text();
-        //
-        //
-        //     function hidePopup() {
-        //         textValueParent.addClass('hide');
-        //         setTimeout(() => {
-        //             textValueParent.removeClass('fade show').css('display', 'none');
-        //         }, 400);
-        //         /*클릭시 텍스트 변경*/
-        //     }
-        //
-        //     function ChangeText() {
-        //         textValueSelectPopup.find('span').text(textValue).css({
-        //             'color': '#444444',
-        //             'font-weight': 'bold'
-        //         });
-        //     }
-        //
-        //     if ($('._toast-popup .select-list > .list').hasClass("active")) {
-        //         $(this).siblings().removeClass("active");
-        //         $(this).addClass("active");
-        //         hidePopup();
-        //         ChangeText();
-        //     } else {
-        //         $(this).addClass("active")
-        //         hidePopup();
-        //         ChangeText();
-        //     }
-        //
-        //
-        // })
+        /*modal-select-close*/
+        $('._toast-popup .select-list > .list').on('click', function () {
+            let Popup = $(this).parents('._toast-popup');
+
+            function hidePopup() {
+                Popup.addClass('hide');
+                setTimeout(() => {
+                    Popup.removeClass('fade show').css('display', 'none');
+                }, 400);
+            }
+
+            if ($('._toast-popup .select-list > .list').hasClass("active")) {
+                $(this).siblings().removeClass("active");
+                $(this).addClass("active");
+                hidePopup();
+            } else {
+                $(this).addClass("active")
+                hidePopup();
+            }
+
+        })
+
+        /*text-change*/
+        $('._toast-popup-open').on('click', function () {
+            let btnText = $(this).find('span');
+
+
+            btnText.text(textValue).css({
+                'color': '#444444',
+                'font-weight': 'bold'
+            });
+        })
     }
 
     var tab = function () {
@@ -101,60 +102,64 @@ front.common = (function () {
         })
     }
 
-    // var introScroll = function introScroll() {
-    //     var lastScroll = 0;
-    //     $('._full-popup > .popup-content').scroll(function () {
-    //         var st = $(this).scrollTop();
-    //         // console.log(st);
-    //         if (st === 0) {
-    //             // console.log('Down');
-    //             $('._popup-header').removeClass('header-white');
-    //         } else {
-    //             // console.log('Up');
-    //             $('._popup-header').addClass('header-white');
-    //         }
-    //         lastScroll = st;
-    //     });
-    // }
-    //
-    // var popup = function popup() {
-    //     let popupOpen = $('._toast-popup-open');
-    //     let popupClose = $('._toast-popup-close');
-    //     popupOpen.on('click', function () {
-    //             if ($(this).hasClass('text') === true) {
-    //                 let select = $('._toast-popup.text')
-    //                 select.removeClass('hide').addClass('fade show').css('display', 'block');
-    //             }
-    //             else if ($(this).hasClass('age') === true) {
-    //                 let select = $('._toast-popup.age')
-    //                 select.removeClass('hide').addClass('fade show').css('display', 'block');
-    //             }
-    //             else if ($(this).hasClass('full') === true) {
-    //                 let select = $('._full-popup');
-    //                 select.removeClass('hide').addClass('show');
-    //             }
-    //         })
-    //     popupClose.on('click',function(){
-    //         if ($(this).hasClass('text') === true) {
-    //             let select = $('._toast-popup.text')
-    //             select.removeClass('show').addClass('hide').css('display', 'none');
-    //         }
-    //         else if ($(this).hasClass('age') === true) {
-    //             let select = $('._toast-popup.age')
-    //             select.removeClass('show').addClass('hide').css('display', 'none');
-    //         }
-    //         else if ($(this).hasClass('full') === true) {
-    //             let select = $('._full-popup');
-    //             select.removeClass('show').addClass('hide');
-    //         }
-    //     })
-    // }
+    var introScroll = function introScroll() {
+        var lastScroll = 0;
+        $('._full-popup > .popup-content').scroll(function () {
+            var st = $(this).scrollTop();
+            if (st === 0) {
+                $('._popup-header').removeClass('header-white');
+            } else {
+                $('._popup-header').addClass('header-white');
+            }
+            lastScroll = st;
+        });
+    }
+
+    var onClickModal = function OnclickModal() {
+        let popupOpen = $('._toast-popup-open');
+        let popupClose = $('._toast-popup-close');
+        let select = $('._toast-popup');
+
+        popupOpen.on('click', function () {
+            const idx = popupOpen.index(this);
+            select.eq(idx).removeClass('hide').addClass('fade show').css('display', 'block');
+        });
+        popupClose.on('click', function () {
+            select.removeClass('show').addClass('hide');
+            setTimeout(() => {
+                $('._toast-popup').removeClass('fade show').css('display', 'none');
+            }, 400);
+        });
+
+        /*외부클릭시 삭제*/
+        $(document).on('click', function (e) {
+            let toastPopup = $('.toast-popup');
+            if (toastPopup.has(e.target).length === 0) {
+                $('._toast-popup').addClass('hide');
+                setTimeout(() => {
+                    $('._toast-popup').removeClass('fade show').css('display', 'none');
+                }, 400);
+
+            }
+        })
+
+    }
+
+    /*-----s 스크롤 애니메이션------*/
+    var ani = function (){
+        AOS.init();
+    }
+    /*-----e 스크롤 애니메이션------*/
+
 
     return {
         a: a,
         commonHandler: commonHandler,
         tab: tab,
         init: init,
+        onClickModal: onClickModal,
+        introScroll: introScroll,
+        ani: ani,
     }
 })();
 

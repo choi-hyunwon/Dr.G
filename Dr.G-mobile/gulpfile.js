@@ -36,6 +36,7 @@ function copyLibJs() {
         'src/js/lib/jquery.sticky.js',
         'src/js/lib/swiper.js',
         'src/js/lib/masonry.js',
+        'src/js/lib/aos.js',
     ];
 
     return gulp.src(sourceLib)

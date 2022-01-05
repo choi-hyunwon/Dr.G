@@ -149,39 +149,6 @@
         </div>
     </div>
 </div>
-<!--텍스트변경팝업 Script-->
-<script>
-    $(document).ready(function () {
-        $('._toast-popup-open.text').click(function () {
-            let select = $('._toast-popup.text')
-            select.removeClass('hide').addClass('fade show').css('display', 'block');
-        });
-    });
-    $(document).ready(function () {
-        let list = $('._toast-popup.text .select-list > .list');
-        function hidePopup() {
-            $('._toast-popup.text').addClass('hide');
-            setTimeout(() => {
-                $('._toast-popup.text').removeClass('fade show').css('display', 'none');
-            }, 400);
-        }
-        list.on("click", function (e) {
-            let textValue = $(this).find('span').text();
-
-            function ChangeText() {
-                $('._toast-popup-open.text').find('span').text(textValue).css({
-                    'color': '#444444',
-                    'font-weight': 'bold'
-                });
-            }
-
-            list.removeClass("active");
-            $(this).addClass("active");
-            hidePopup();
-            ChangeText();
-        });
-    });
-</script>
 
 <!--age Modal -->
 <div class="toast-dim _toast-popup age">
@@ -207,38 +174,5 @@
     </div>
 </div>
 
-<!--age변경팝업 Script-->
-<script>
-    $(document).ready(function () {
-        $('._toast-popup-open.age').click(function () {
-            let select = $('._toast-popup.age')
-            select.removeClass('hide').addClass('fade show').css('display', 'block');
-        });
-    });
-    $(document).ready(function () {
-        let list = $('._toast-popup.age .select-list > .list');
-        function hidePopup() {
-            $('._toast-popup.age').addClass('hide');
-            setTimeout(() => {
-                $('._toast-popup.age').removeClass('fade show').css('display', 'none');
-            }, 400);
-        }
-        list.on("click", function (e) {
-            let textValue = $(this).find('span').text();
-
-            function ChangeText() {
-                $('._toast-popup-open.age').find('span').text(textValue).css({
-                    'color': '#444444',
-                    'font-weight': 'bold'
-                });
-            }
-
-            list.removeClass("active");
-            $(this).addClass("active");
-            hidePopup();
-            ChangeText();
-        });
-    });
-</script>
 </body>
 </html>
