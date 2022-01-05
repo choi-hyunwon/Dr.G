@@ -4,6 +4,8 @@
  v.0.1 선미 : tab 추가 -- 2021.12.13
  v.0.2 태윤 : 모달 관련 스크립트 추가 -- 2021.12.21
  v.0.3 태윤 : 모달 리팩토링 -- 2021.12.22
+ v.0.3 태윤 : 모달 관련 현재 주석처리 -- 2021.12.24
+ v.0.4 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 완료 (텍스트변경제외) -- 2022.01.05
  v.0.4 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 진행중 -- 2021.01.04
  v.0.5 선미 : ani(스크롤애니메이션) 추가-- 2022.01.03
  * --------------------------------------------------------------------------
@@ -77,14 +79,15 @@ front.common = (function () {
         })
 
         /*text-change*/
-        // $('._toast-popup-open').on('click', function () {
-        //     let btnText = $(this).find('span').text();
-        //
-        //     btnText.text(btnText).css({
-        //         'color': '#444444',
-        //         'font-weight': 'bold'
-        //     });
-        // })
+        $('._toast-popup-open').on('click', function () {
+            let btnText = $(this).find('span');
+
+
+            btnText.text(textValue).css({
+                'color': '#444444',
+                'font-weight': 'bold'
+            });
+        })
     }
 
     var tab = function () {
@@ -122,19 +125,19 @@ front.common = (function () {
             select.eq(idx).removeClass('hide').addClass('fade show').css('display', 'block');
         });
         popupClose.on('click', function () {
-            select.removeClass('show').addClass('hide').css('display', 'none');
+            select.removeClass('show').addClass('hide');
+            setTimeout(() => {
+                $('._toast-popup').removeClass('fade show').css('display', 'none');
+            }, 400);
         });
 
         /*외부클릭시 삭제*/
         $(document).on('click', function (e) {
-            console.log(e.target);
-
             let toastPopup = $('.toast-popup');
-
             if (toastPopup.has(e.target).length === 0) {
-                $('._toast-dim-title').addClass('hide');
+                $('._toast-popup').addClass('hide');
                 setTimeout(() => {
-                    $('._toast-dim-title').removeClass('fade show').css('display', 'none');
+                    $('._toast-popup').removeClass('fade show').css('display', 'none');
                 }, 400);
 
             }
