@@ -242,7 +242,7 @@ data.AI = {
 data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
-      /*  {
+    /*    {
             stateClass: 'waiting',
             url: '스킨멘토링_서브메인',
             category: 'mentoring',
@@ -494,7 +494,17 @@ data.story = {
     ]
 }
 
-/*브랜드 소개*/
+data.brand = {
+    title: '브랜드 소개',
+    list: [
+        {
+            stateClass: 'waiting',
+            url: '브랜드소개_고객을위한_서비스',
+            category: 'brand',
+            page: '브랜드소개_고객을위한_서비스'
+        },
+    ]
+}
 
 
 

@@ -5,7 +5,9 @@
  v.0.3 주연 : vw 적용 -- 2021.12.14
  v.0.4 주연 : header-detail 추가 -- 2021.12.17
  v.0.5 태윤 : header > .bg-primary .header-slogan 추가 -- 2021.12.20
- v.0.6 선미 : bg-primary / header-slogan 불필요 css 제거
+ v.0.6 선미 : bg-primary / header-slogan 불필요 css 제거 -- 2021.12.28
+ v.0.7 선미 : header-white {z-index: 5-> 20 } 변경 -- 2021.01.05
+ v.0.8 선미 : header-details >  fixed 추가 -- 2021.01.06
 |----------------------------------------------------------------------|
 */
 
@@ -18,7 +20,7 @@ a {
 
 /* header */
 .sticky-wrapper {
-  background-color: #fff;
+  background-color:$gray-fff;
 }
 
 .header {
@@ -29,18 +31,9 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0 vw(20);
-  background-color: #fff;
+  background-color: $gray-fff;
   z-index: 5 !important;
 
-/*
-12.28 header-white 추가로인한 불필요 css 제거
- &.bg-primary{
-    background-color:$primary !important;
-  }
-  &.header-slogan{
-    padding: 0px vw(24);
-  }
-  */
   .brand-logo {
     a {
       display: block;
@@ -69,8 +62,8 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0 vw(20);
-  background-color: #fff;
-  z-index: 5 !important;
+  background-color: $gray-fff;
+  z-index: 20 !important;
   &.header-slogan{
     padding: 0px vw(24);
   }
@@ -113,6 +106,7 @@ a {
 
 .header-details {
   position: relative;
+  width:100%;
   height: vw(60);
   display: flex;
   justify-content: flex-end;
@@ -126,6 +120,11 @@ a {
     left: vw(17);
     top: 50%;
     transform: translateY(-50%);
+  }
+  &.fixed{
+    position: fixed;
+    background-color: $gray-fff;
+    z-index: 20 !important;
   }
 }
 
@@ -162,7 +161,7 @@ a {
     letter-spacing: normal;
 
     .info {
-      color: #fff;
+      color:$gray-fff;
       font-size: vw(14);
 
       .num {
@@ -248,7 +247,7 @@ a {
 
     .title {
       margin-top: vw(11);
-      color: #ffffff;
+      color: $gray-fff;
       font-size: vw(14);
       font-weight: bold;
       font-stretch: normal;
@@ -331,7 +330,7 @@ a {
           font-stretch: normal;
           letter-spacing: normal;
           text-align: left;
-          color: #fff;
+          color: $gray-fff;
           margin-bottom: vw(17);
 
           &:after {
@@ -342,7 +341,7 @@ a {
             position: absolute;
             bottom: vw(-1);
             left: 0;
-            background: #fff;
+            background: $gray-fff;
           }
 
           .arrow-right {

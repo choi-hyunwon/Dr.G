@@ -5,21 +5,23 @@
 
 
 <script>
-    $(window).on("wheel", function (event){
-        if (event.originalEvent.deltaY < 0) {
-            // console.log('UP');
-            // console.log(window.pageYOffset);
+    let headScroll = 0;
+    $(window).scroll(function (event) {
+        let st = $(this).scrollTop();
+        if (st > headScroll) {
+            //console.log("DOWN");
+            if (window.pageYOffset > 60){
+                $('.header-white').hide()
+            }
+        } else {
+            //console.log("UP");
             if (window.pageYOffset > 60){
                 $('.header-white ').show().removeClass('header-transparent')
             } else {
                 $('.header-white ').show().addClass('header-transparent')
             }
-        } else {
-            // console.log('Down');
-           //console.log(window.scrollY);
-            if (window.pageYOffset > 60){
-                $('.header-white').hide()
-            }
         }
+        //Updates scroll position
+        headScroll = st;
     });
 </script>
