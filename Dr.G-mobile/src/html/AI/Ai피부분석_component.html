@@ -4,12 +4,76 @@
 <body>
 <div class="wrap">
     <!-- s header -->
-    @@include('../../html/include/common/header-white.html')
+<!--    @@include('../../html/include/common/header-white.html')-->
     <!-- e header -->
 
     <!-- s contents -->
     <div class="container">
         <div class="AI-wrap">
+            <!-- 답변 상태 -->
+            <div class="intro">
+                <div class="step-list-sticky">
+                    <div class="step-list">
+                        <div class="progress">
+                            <span class="bar" style="width: 30%;"></span>
+                        </div>
+                        <ul>
+                            <li class="step step-1 active">
+                                <span class="icon"></span>
+                                <span class="desc">피부 점검</span>
+                            </li>
+                            <li class="step step-2 disabled">
+                                <span class="icon"></span>
+                                <span class="desc">과거력 확인</span>
+                            </li>
+                            <li class="step step-3 disabled">
+                                <span class="icon"></span>
+                                <span class="desc">완료</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="step-list">
+                        <div class="progress">
+                            <span class="bar" style="width: 50%;"></span>
+                        </div>
+                        <ul>
+                            <li class="step step-1 completed">
+                                <span class="icon"></span>
+                                <span class="desc">피부 점검</span>
+                            </li>
+                            <li class="step step-2 active">
+                                <span class="icon"></span>
+                                <span class="desc">과거력 확인</span>
+                            </li>
+                            <li class="step step-3 disabled">
+                                <span class="icon"></span>
+                                <span class="desc">완료</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="step-list">
+                        <div class="progress">
+                            <span class="bar" style="width: 100%;"></span>
+                        </div>
+                        <ul>
+                            <li class="step step-1 completed">
+                                <span class="icon"></span>
+                                <span class="desc">피부 점검</span>
+                            </li>
+                            <li class="step step-2 completed">
+                                <span class="icon"></span>
+                                <span class="desc">과거력 확인</span>
+                            </li>
+                            <li class="step step-3 active">
+                                <span class="icon"></span>
+                                <span class="desc">완료</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 분석 결과 -->
             <div class="result">
                 <div class="heading">
                     <div class="font-body-1 font-bold">조수인님의 피부타입은?</div>
@@ -210,6 +274,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 아이콘 -->
             <div>
                 <a class="btn-skin-type" href="#"><i class="icon ico-skin-type-1"></i></a>
                 <i class="icon ico-skin-type-1"></i>
@@ -218,7 +284,9 @@
                 <i class="icon ico-skin-type-4"></i>
                 <i class="icon ico-skin-type-5"></i>
                 <i class="icon ico-skin-type-6"></i>
+                <i class="icon ico-calendar"></i>
             </div>
+            <!-- 아이콘 / 활성화 -->
             <div class="on">
                 <i class="icon ico-skin-type-1"></i>
                 <i class="icon ico-skin-type-2"></i>
@@ -227,6 +295,8 @@
                 <i class="icon ico-skin-type-5"></i>
                 <i class="icon ico-skin-type-6"></i>
             </div>
+
+            <!-- 분석 결과 -->
             <div class="result">
                 <div class="analysis-result">
                     <div class="bar-chart-box">
@@ -378,7 +448,7 @@
     <!-- e contents -->
 
     <!-- s footer -->
-    @@include('../../html/include/common/footer.html')
+<!--    @@include('../../html/include/common/footer.html')-->
     <!-- e footer -->
 </div>
 <script>

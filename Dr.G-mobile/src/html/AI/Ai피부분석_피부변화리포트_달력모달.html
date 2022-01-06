@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="AI-wrap">
+    <div class="input-range-calendar">
+        <input title="기간선택" class="form-control _calendarInput" value="2022-01-05 ~ 2022-01-21"/>
+        <a class="btn-calendar _showCal" href="#"><i class="icon ico-calendar"></i></a>
+    </div>
+</div>
+<div class="calendar-modal show fade" style="display:block;">
+    <div class="calendar-container _calendarModal">
+        <a href="#" class="btn-close _btnClose"><i class="icon ico-close-sm"></i></a>
+    </div>
+</div>
+<script>
+    $triggerBtn = $('._showCal');
+    $closeBtn = $('._btnClose');
+    $calendalInput = $('._calendarInput');
+    $calendarModal = $('.calendar-modal');
+
+    // https://longbill.github.io/jquery-date-range-picker/
+    $triggerBtn.dateRangePicker({
+        inline: true,
+        container: '._calendarModal',
+        format: 'YYYY-MM-DD',
+        alwaysOpen: true,
+        singleMonth: true,
+        separator: " ~ ",
+        showTopbar: false,
+        language: "en",
+    })
+        .bind('datepicker-change', (e,data) => {
+            console.log(data.value)
+            $calendalInput.val(data.value);
+            hideCalendarModal()
+        })
+
+    $triggerBtn.on('click',function (){
+        showCalendarModal()
+    })
+
+    $closeBtn.on('click',function (){
+        hideCalendarModal()
+    })
+
+    $calendarModal.on('mouseup',function(e) {
+        if ($(this).has(e.target).length === 0) {
+            hideCalendarModal()
+        }
+    })
+
+    function hideCalendarModal() {
+        $calendarModal.addClass('hide');
+        setTimeout(() => {
+            $calendarModal.removeClass('fade show hide').css('display', 'none');
+        }, 400);
+    }
+
+    function showCalendarModal() {
+        $calendarModal.addClass('show fade').css('display', 'block');
+    }
+</script>
+</body>
+</html>

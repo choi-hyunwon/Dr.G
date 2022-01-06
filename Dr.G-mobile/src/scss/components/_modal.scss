@@ -341,6 +341,10 @@
           letter-spacing: -0.005em;
           text-align: center;
           color: $gray-800;
+
+          &.next-desc {
+            margin-bottom: vw(11) !important;
+          }
         }
 
         .desc {
@@ -546,7 +550,7 @@
             }
           }
 
-          .queastion {
+          .question {
             text-align: center;
             font-size: vw(18);
             font-weight: 700;
