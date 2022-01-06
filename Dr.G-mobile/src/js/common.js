@@ -115,9 +115,9 @@ front.common = (function () {
 
         });
         popupClose.on('click', function () {
-            select.removeClass('show').addClass('hide');
+            select.addClass('hide');
             setTimeout(() => {
-                $('._toast-popup').removeClass('fade show').css('display', 'none');
+                select.removeClass('fade show').css('display', 'none');
             }, 400);
         });
 
@@ -154,9 +154,10 @@ $(function () {
 });
 
 function showPopup() {
-    $('.toast-dim').addClass('show');
+    $('.toast-dim').addClass('show fade').css('display', 'block');
 }
 
+
 function hidePopup() {
-    $('.toast-dim').removeClass('show');
+    $('.toast-dim').removeClass('show fade').css('display','none');
 }

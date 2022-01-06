@@ -200,6 +200,24 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_비회원_팝업_2'
         },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_비회원_개인정보활용_동의',
+            category: 'AI',
+            page: 'Ai피부분석_비회원_개인정보활용_동의'
+        },
+        {
+            stateClass: 'complete',
+            url: 'AI피부분석_개인정보활용_동의',
+            category: 'AI',
+            page: 'AI피부분석_개인정보활용_동의'
+        },
+        {
+            stateClass: 'complete',
+            url: 'AI피부분석_개인정보_수집및이용동의',
+            category: 'AI',
+            page: 'AI피부분석_개인정보_수집및이용동의'
+        },
     ]
 }
 
