@@ -37,6 +37,8 @@ function copyLibJs() {
         'src/js/lib/swiper.js',
         'src/js/lib/masonry.js',
         'src/js/lib/aos.js',
+        'src/js/lib/moment.js',
+        'src/js/lib/jquery.daterangepicker.js',
     ];
 
     return gulp.src(sourceLib)

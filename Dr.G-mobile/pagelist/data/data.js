@@ -184,9 +184,15 @@ data.AI = {
         // },
         {
             stateClass: 'complete',
-            url: 'Ai피부분석_추천_팝업',
+            url: 'Ai피부분석_결과_추천_팝업',
             category: 'AI',
             page: 'Ai피부분석_추천_팝업'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_비회원_팝업_1',
+            category: 'AI',
+            page: 'Ai피부분석_비회원_팝업_1'
         },
         {
             stateClass: 'complete',
