@@ -20,6 +20,7 @@
  v.0.18 선미 : ico-plus-sm-gray, ico-minus-sm-white 추가 -- 2021.12.28
  v.0.19 주연 : 피부 타입 별 이미지 / ico-alert-circle-w 추가 -- 2021.12.30
  v.0.20 태윤 : ico-star > .active시 ico-star-yellow 제거 -- 2021.01.03
+ v.0.21 선미 : ico-plus-lg, ico-plus-round추가 -- 2021.01.06
 |----------------------------------|
 */
 .icon {
@@ -183,6 +184,14 @@
 
 .ico-plus-sm-gray {
   @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-plus-sm-gray.svg');
+}
+
+.ico-plus-round {
+  @include background-img($width: 26, $height: 26, $category: 'common', $img: 'ico-plus-round.svg');
+}
+
+.ico-plus-lg {
+  @include background-img($width: 20, $height: 20, $category: 'common', $img: 'ico-plus-lg.svg');
 }
 
 .ico-plus-md {
