@@ -130,15 +130,14 @@
         });
         processSwiper.on('transitionEnd', function() {
             let idx = processSwiper.realIndex + 1
-            console.log(idx);
+            //console.log(idx);
             $('.step-box .step').removeClass('active')
             $('.step-box .step').eq(idx).addClass('active')
         });
 
 
 
-
-        let page1Sswipe = new Swiper('.page1-swiper', {
+        let page1Swipe = new Swiper('.page1-swiper', {
             direction: "vertical",
             loop:true,
             loopAdditionalSlides: 1, //마지막장에서 첫장 슬라이드 끊김현상 제어
@@ -147,19 +146,20 @@
                 delay: 100000
             },
             //touchRatio: 0,//드래그 금지
-        });
-/*
+            on: {
+                slideChange: function () {
+                    let activeIndex = this.activeIndex;
+                    let realIndex = this.slides.eq(activeIndex).attr('data-swiper-slide-index');
+                    console.log(realIndex)
 
-        $('.page1-swiper').on("change", '.swiper-slide', function () {
-            if ($(this).hasClass('swiper-slide-active')) {
-                $(this).find('item').removeClass('item-sm')
-
-
-            } else {
-
+                    // $('.page1-swiper .swiper-slide').addClass('item-sm');
+                    // $('.page1-swiper .swiper-slide').eq(realIndex).find('item').removeClass('item-sm');
+                }
             }
+
         });
-*/
+
+
 
         var typingBool = false;
         var typingIdx = 0;
@@ -187,10 +187,7 @@
 
 
 
-
-
         /*서브메인 voc*/
-
         $('.voc .review_box .item').on('click', function () {
             if (!$(this).hasClass('active')) {
                 $(this).addClass('active').slideDown();
@@ -199,7 +196,6 @@
                 $(this).removeClass('active');
             }
         })
-
 
 
         /*서브메인 faq*/
