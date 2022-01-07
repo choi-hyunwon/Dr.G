@@ -755,7 +755,7 @@
             position: relative;
             width: 100%;
             height: vw(16);
-            background: linear-gradient(245deg, #47BDFF 0%, #FFE665 100%);
+            background: linear-gradient(90deg, #47BDFF 0%, #FFE665 100%);
             //background: linear-gradient(245deg, #F95B51 0%, #BB8DD0 52.08%, #44BCFF 100%);
             border-radius: vw(18);
             border: vw(2) solid $gray-200;
@@ -793,7 +793,7 @@
                 transform: translateX(-50%);
                 z-index: 1;
 
-                &.color-1 {
+                &.color-5 {
                   background-color: #F8E46B;
                   color: $gray-800;
 
@@ -804,7 +804,7 @@
                   }
                 }
 
-                &.color-2 {
+                &.color-4 {
                   background-color: #C9DD91;
                   color: $gray-800;
 
@@ -825,7 +825,7 @@
                   }
                 }
 
-                &.color-4 {
+                &.color-2 {
                   background-color: #75CBD6;
 
                   svg {
@@ -835,7 +835,7 @@
                   }
                 }
 
-                &.color-5 {
+                &.color-1 {
                   background-color: #50BFF8;
 
                   svg {
@@ -940,7 +940,7 @@
         margin-bottom: vw(24);
 
         ul {
-          width: calc((#{vw(52)} + #{vw(24)}) * 6);
+          width: calc((#{vw(52)} + #{vw(24)}) * 7);
         }
 
         li {
@@ -1756,10 +1756,14 @@
   }
 
   .ico-skin-type-4 {
-    @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-5-nor.svg');
+    @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-4-nor.svg');
   }
 
   .ico-skin-type-5 {
+    @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-5-nor.svg');
+  }
+
+  .ico-skin-type-6 {
     @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-6-nor.svg');
   }
 
@@ -1825,10 +1829,14 @@
     }
 
     .ico-skin-type-4 {
-      background-image: url(../img/AI/skin-type-5-foc.svg);
+      background-image: url(../img/AI/skin-type-4-foc.svg);
     }
 
     .ico-skin-type-5 {
+      background-image: url(../img/AI/skin-type-5-foc.svg);
+    }
+
+    .ico-skin-type-6 {
       background-image: url(../img/AI/skin-type-6-foc.svg);
     }
 
