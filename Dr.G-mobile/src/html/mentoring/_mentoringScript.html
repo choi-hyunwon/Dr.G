@@ -137,14 +137,15 @@
 
 
 
-        let page1Swipe = new Swiper('.page1-swiper', {
+       /* let page1Swipe = new Swiper('.page1-swiper', {
             direction: "vertical",
             loop:true,
             loopAdditionalSlides: 1, //마지막장에서 첫장 슬라이드 끊김현상 제어
-            autoplayDisableOnInteraction: false,
+            //autoplayDisableOnInteraction: false,
             autoplay: {
-                delay: 100000
+                delay: 1000
             },
+
             //touchRatio: 0,//드래그 금지
             on: {
                 slideChange: function () {
@@ -156,8 +157,15 @@
                     // $('.page1-swiper .swiper-slide').eq(realIndex).find('item').removeClass('item-sm');
                 }
             }
+        });*/
 
-        });
+/*
+        var carouselExample = document.querySelector('#carouselExample')
+        var carousel = new bootstrap.Carousel(carouselExample, {
+            interval: 2000,
+            wrap: false
+        })
+*/
 
 
 
