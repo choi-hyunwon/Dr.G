@@ -1,5 +1,5 @@
 /*
-|----------------------------------|
+|--------------------------------------------------------------------|
  v.0.1 주연 : 최초 작업 -- 2021.11.30
  v.0.2 선미 : 버튼 사이즈별 폰트사이즈 변경 -- 2021.12.10
  v.0.3 선미 : btn focus ->  box-shadow 제거 -- 2021.12.13
@@ -13,7 +13,8 @@
              .btn 내부 icon , span 간격 추가
              .btn &.btn-icon{버튼 내부 아이콘있는경우 클래스 추가(여백 컨트롤)}-- 2021.12.27
  v.0.9 선미 : .page-btn-wrap {   font-weight: 500}추가 -- 2022.01.03
-|----------------------------------|
+ v.0.10 주연 : .btn-light / .btn-md 추가 -- 2022.01.07
+|--------------------------------------------------------------------|
 */
 .btn {
   display: inline-block;
@@ -83,6 +84,23 @@
 
     &:active {
       background-color: $gray-800  !important;
+    }
+  }
+
+  &.btn-light {
+    background-color: $gray-300;
+    border-color: $gray-300;
+    color: $gray-800;
+
+    &:focus, &:hover {
+      background-color: $gray-300;
+      border-color: $gray-300;
+      color: $gray-800;
+    }
+
+    &:active {
+      background-color: $gray-300  !important;
+      border-color: $gray-300  !important;
     }
   }
 
@@ -156,6 +174,13 @@
     height: vw(32);
     line-height: vw(30);
     font-size: vw(13);
+  }
+
+  &.btn-md {
+    //min-width: vw(113);
+    height: vw(44);
+    line-height: vw(42);
+    font-size: vw(15);
   }
 
   &.btn-lg {

@@ -30,9 +30,15 @@
         showTopbar: false,
         language: "en",
     })
+        .bind('datepicker-first-date-selected', function(event, obj)
+        {
+            // console.log(obj);
+            $('.calendar-container').removeClass('done')
+        })
         .bind('datepicker-change', (e,data) => {
-            console.log(data.value)
+            // console.log(data.date1, data.date2, data.value)
             $calendalInput.val(data.value);
+            $('.calendar-container').addClass('done')
             hideCalendarModal()
         })
 

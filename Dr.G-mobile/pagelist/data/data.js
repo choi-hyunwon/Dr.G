@@ -183,17 +183,17 @@ data.AI = {
             page: 'Ai피부분석_Loading'
         },
         // {
-        //     stateClass: 'working',
+        //     stateClass: 'complete',
         //     url: 'Ai피부분석_결과_분석',
         //     category: 'AI',
         //     page: 'Ai피부분석_결과_분석'
         // },
-        // {
-        //     stateClass: 'working',
-        //     url: 'Ai피부분석_결과_솔루션',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_결과_솔루션'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_결과_솔루션',
+            category: 'AI',
+            page: 'Ai피부분석_결과_솔루션'
+        },
         // {
         //     stateClass: 'complete',
         //     url: 'Ai피부분석_결과_추천',

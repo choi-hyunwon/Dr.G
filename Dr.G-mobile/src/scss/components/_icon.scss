@@ -1,5 +1,5 @@
 /*
-|----------------------------------|
+|--------------------------------------------------------------------|
  v.0.1 주연 : 최초 작업 -- 2021.11.30
  v.0.2 태윤 : .icon-close-sm 추가 -- 2021.12.10
  v.0.3 태윤 : .icon-check-green 추가 -- 2021.12.13
@@ -21,7 +21,8 @@
  v.0.19 주연 : 피부 타입 별 이미지 / ico-alert-circle-w 추가 -- 2021.12.30
  v.0.20 태윤 : ico-star > .active시 ico-star-yellow 제거 -- 2021.01.03
  v.0.21 선미 : ico-plus-lg, ico-plus-round추가 -- 2021.01.06
-|----------------------------------|
+ v.0.22 선미 : 다운로드/공유하기 아이콘 추가 -- 2021.01.08
+|--------------------------------------------------------------------|
 */
 .icon {
   display: inline-block;
@@ -266,3 +267,11 @@
   @include background-img($width: 200, $height: 200, $category: 'common/skinType', $img: 'OS+.png');
 }
 
+
+.ico-download {
+  @include background-img($width: 24, $height: 24, $category: 'AI', $img: 'ico-download.svg');
+}
+
+.ico-share {
+  @include background-img($width: 24, $height: 24, $category: 'AI', $img: 'ico-share.svg');
+}
