@@ -118,6 +118,12 @@ data.AI = {
         },
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_개인정보_수집_및_활용동의',
+            category: 'AI',
+            page: 'Ai피부분석_개인정보_수집_및_활용동의'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_Step1-1',
             category: 'AI',
             page: 'Ai피부분석_Step1-1'
@@ -194,12 +200,18 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_결과_솔루션'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_결과_추천',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_결과_추천'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_결과_솔루션_공유하기_팝업',
+            category: 'AI',
+            page: 'Ai피부분석_결과_솔루션_공유하기_팝업'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_결과_추천',
+            category: 'AI',
+            page: 'Ai피부분석_결과_추천'
+        },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_결과_추천_팝업',

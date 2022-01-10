@@ -9,6 +9,7 @@
  v.0.7 태윤 : .toast-dim background-color opacity 50%로 변경 -- 2021.12.30
  v.0.8 태윤 : .alert-popup html 구조변경으로 인한 css 수정 -- 2021.12.30
  v.0.9 주연 : 코드 정리  -- 2022.01.05
+ v.0.10 주연 : 영문 오탈자 수정 / 공유하기 팝업 스타일 추가  -- 2022.01.10
 |--------------------------------------------------------------------|
 */
 
@@ -304,7 +305,7 @@
       width: 100%;
       position: absolute;
       background-color: $gray-fff;
-      padding: vw(32);
+      padding: vw(24) vw(24) vw(32);
       border-radius: vw(20) vw(20) 0 0;
       bottom: vw(-300);
 
@@ -399,7 +400,7 @@
             position: relative;
             margin-bottom: vw(4);
             &:nth-last-of-type(1){
-              margin-bottom: 0px;
+              margin-bottom: 0;
             }
             .view-content {
               position: absolute;
@@ -466,7 +467,6 @@
           }
         }
 
-
         .circle-list-area {
 
           > li {
@@ -504,6 +504,16 @@
             }
           }
         }
+
+        .sns-share-wrap {
+          display: flex;
+          justify-content: center;
+          padding-top: vw(8);
+
+          a + a {
+            margin-left: vw(16);
+          }
+        }
       }
 
       .toast-footer {
@@ -526,7 +536,6 @@
           text-decoration: underline;
         }
       }
-
 
       &.title {
         .toast-body {
@@ -605,6 +614,10 @@
       }
 
       &.no-title {
+        .toast-body {
+          padding-top: vw(8);
+        }
+
         &.un-check {
           .toast-body {
             .desc {
@@ -630,6 +643,7 @@
             .select-list {
               display: flex;
               flex-direction: column;
+              padding-top: vw(8);
 
               .list {
                 display: flex;

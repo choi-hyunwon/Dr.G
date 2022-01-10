@@ -208,10 +208,21 @@
                 </div>
                 <div class="form-row">
                     <div class="form-col">
+                        <div class="label">사용제품</div>
+                        <div class="label label-sm">클렌징/필링</div>
+                        <input type="text" title="brandName" class="form-control" placeholder="브랜드명과 제품명을 입력해주세요.">
+                        <div class="label label-sm">보습케어</div>
+                        <input type="text" title="brandName" class="form-control" placeholder="브랜드명과 제품명을 입력해주세요.">
+                        <div class="label label-sm">자외선 케어</div>
+                        <input type="text" title="brandName" class="form-control" placeholder="브랜드명과 제품명을 입력해주세요.">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col">
                         <div class="label">기타</div>
                         <div class="form-text-area">
-                            <textarea title="textarea" maxlength="500" onkeyup="countChar(this,'_val')" class="form-control form-control-lg" placeholder="내용을 입력하세요."></textarea>
-                            <span class="count"><em class="_val">0</em>/500</span>
+                            <textarea title="textarea" maxlength="50" onkeyup="countChar(this,'_val')" class="form-control form-control-sm" placeholder="내용을 입력하세요."></textarea>
+                            <span class="count"><em class="_val">0</em>/50</span>
                         </div>
                     </div>
                 </div>
@@ -237,13 +248,16 @@
                     <span class="star star-right _star"></span>
                 </div>
             </div>
-            <div class="form-text-area">
-                                            <textarea title="textarea" maxlength="500" onkeyup="countChar(this,'_val')" class="form-control form-control-lg" placeholder="좋았던 점, 개선할 점 등 진솔한 후기를
+            <div class="form-text-area"><textarea title="textarea" maxlength="500" onkeyup="countChar(this,'_val')" class="form-control form-control-lg" placeholder="좋았던 점, 개선할 점 등 진솔한 후기를
 남겨주세요"></textarea>
                 <span class="count"><em class="_val">0</em>/500</span>
             </div>
             <div class="btn-wrap">
                 <a href="#" class="btn btn-lg">등록하기</a>
+            </div>
+            <div class="btn-wrap">
+                <a href="#" class="btn btn-black btn-border-black btn-icon"><span>수정</span><i class="icon ico-edit"></i></a>
+                <a href="#" class="btn btn-black btn-border-black btn-icon"><span>삭제</span><i class="icon ico-delete"></i></a>
             </div>
         </div>
         <div class="diary-section">
