@@ -172,31 +172,39 @@
 
   .area-desc {
     .complete {
-      padding-bottom: 16px;
-
-      .img {
-        margin-bottom: vw(12);
+      .img-box{
         position: relative;
-        display: inline-block;
+        margin-bottom: vw(24);
+        .img{
+          display: inline-block;
+          img{
+            width: 100%;
+            height: auto;
+          }
 
-        img {
-          &:first-of-type {
+          &.mentor-img{
             width: vw(104);
             height: vw(120);
           }
-
-          &:last-of-type {
-            width: vw(73);
-            height: vw(66);
+          &.bubble-img{
             position: absolute;
-            right: vw(-45);
+            right: vw(73);
+            width: vw(57);
+            height: vw(50);
+            z-index: 1;
+          }
+          &.shadow-img{
+            position: absolute;
+            right: vw(73);
+            width: vw(63);
+            height: vw(56);
           }
         }
-
         .dot {
           position: absolute;
-          right: vw(-25);
-          top: vw(15);
+          right: vw(87);
+          top: vw(10);
+          z-index: 2;
 
           span {
             display: inline-block;
@@ -236,9 +244,11 @@
         }
       }
 
-      .font-h4 {
+      .font-body-1 {
         color: $gray-800;
-        margin-bottom: vw(24);
+        &.font-bold{
+          margin-bottom: vw(12);
+        }
       }
 
       .font-body-2 {
