@@ -11,8 +11,10 @@
  v.0.9 선미 : checkbox label 높이값 제거 / 체크박스 blue ,violet 버전 추가 -- 2021.12.27
  v.0.10 선미 : img (png -> svg로 변경) -- 2022.01.03
  v.0.11 주연 : .form-control-sm 추가 -- 2022.01.10
+ v.0.12 선미 : textarea {font-weight: 400; color: #666666;}추가 -- 2022.01.11
  |--------------------------------------------------------------------|
 */
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -352,6 +354,8 @@ textarea.form-control {
   line-height: vw(22);
   height: vw(160);
   resize: none;
+  font-weight: 400;
+  color: #666666;
 
   &:disabled {
     //border: vw(1) solid $line-e9e9e9;

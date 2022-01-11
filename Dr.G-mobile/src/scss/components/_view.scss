@@ -14,7 +14,7 @@
   .body-details{
 
     .area-title{
-      padding: vw(20) vw(25) vw(32);
+      padding: vw(20) vw(30) vw(32);
       text-align: center;
       border-bottom:1px solid $gray-900;
       .badge-box{
@@ -36,10 +36,14 @@
         .like{
           margin-right: vw(8);
           position: relative;
+          .icon{
+            width: vw(14);
+            height: vw(14);
+          }
           .num{
             font-weight: 600;
             color: $gray-700;
-            margin-left: vw(2);
+            vertical-align: middle;
           }
           &:after{
             content: '';
@@ -57,6 +61,14 @@
           font-weight: 400;
           color: $gray-600;
           margin-left: vw(8);
+        }
+
+        &.on {
+          .like {
+            .icon {
+              background-image: url(../img/common/ico-link-foc.svg);
+            }
+          }
         }
 
         .desc{
@@ -298,6 +310,9 @@
       }
       &.sns{
         padding: vw(48) 0 vw(32);
+        .more{
+          margin-bottom: vw(48);
+        }
         >a{
           margin-right: vw(8);
           &:last-of-type{
@@ -339,6 +354,10 @@
       margin: 0 auto;
       background-color: $gray-fff;
       font-size:0;
+   /*   &.fixed{
+        position:fixed;
+        top:16vw;
+      }*/
 
       .step{
         display: inline-block;
@@ -419,13 +438,22 @@
             &.value{ /*실제 그래프*/
               z-index: 1;
               border-color: $blue;
-              transform:rotateZ(100deg);
-              animation: chartAni4 1s 0.5s ;
+              transform:rotateZ(-240deg);
+              animation: chartAni4 1s;
+            }
+          }
+
+          &.full{
+            .value{
+              z-index: 1;
+              border-color: $blue;
+              transform:rotateZ(0deg);
+              animation:unset;
             }
           }
         }
         @keyframes chartAni4{
-          0%{transform: rotateZ(180deg);}
+          0%{transform: rotateZ(-180deg);}
         }
 
         &.active{
