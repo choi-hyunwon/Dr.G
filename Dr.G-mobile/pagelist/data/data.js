@@ -366,12 +366,6 @@ data.suggestion = {
         },
         {
             stateClass: 'complete',
-            url: '고객제안_의견남기기_비회원_로그인알림',
-            category: 'suggestion',
-            page: '고객제안_의견남기기_비회원_로그인알림'
-        },
-        {
-            stateClass: 'complete',
             url: '고객제안_비회원_의견남기기',
             category: 'suggestion',
             page: '고객제안_비회원_의견남기기'
@@ -381,6 +375,12 @@ data.suggestion = {
             url: '고객제안_개선사례_조회',
             category: 'suggestion',
             page: '고객제안_개선사례_조회'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_제품이등록되지않은경우',
+            category: 'suggestion',
+            page: '고객제안_제품이등록되지않은경우'
         },
         {
             stateClass: 'complete',
@@ -399,6 +399,12 @@ data.suggestion = {
             url: '고객제안_나의제안내역_상세보기_수정하기실행',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기_수정하기실행'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_의견남기기_비회원_로그인알림',
+            category: 'suggestion',
+            page: '고객제안_의견남기기_비회원_로그인알림'
         },
         {
             stateClass: 'complete',

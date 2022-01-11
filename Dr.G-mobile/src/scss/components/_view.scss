@@ -14,7 +14,7 @@
   .body-details{
 
     .area-title{
-      padding: vw(20) vw(25) vw(32);
+      padding: vw(20) vw(30) vw(32);
       text-align: center;
       border-bottom:1px solid $gray-900;
       .badge-box{
@@ -310,6 +310,9 @@
       }
       &.sns{
         padding: vw(48) 0 vw(32);
+        .more{
+          margin-bottom: vw(48);
+        }
         >a{
           margin-right: vw(8);
           &:last-of-type{
