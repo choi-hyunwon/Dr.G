@@ -354,6 +354,10 @@
       margin: 0 auto;
       background-color: $gray-fff;
       font-size:0;
+   /*   &.fixed{
+        position:fixed;
+        top:16vw;
+      }*/
 
       .step{
         display: inline-block;
