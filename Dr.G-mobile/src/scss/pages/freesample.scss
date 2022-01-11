@@ -29,7 +29,6 @@
         font-size: vw(16);
         font-weight: 700;
         line-height: vw(24);
-        letter-spacing: -0.005em;
         color: $yellow;
       }
     }
@@ -67,10 +66,10 @@
       .list {
         display: flex;
         align-items: center;
-        padding: vw(25) vw(17);
+        padding: vw(25) vw(16);
         margin-bottom: vw(12);
         border-radius: vw(12);
-        background-size: vw(80) vw(68);
+        background-size: vw(80) vw(80);
         background-position: calc(100% - #{vw(16)}) center;
         background-repeat: no-repeat;
 
@@ -80,6 +79,7 @@
 
           .num {
             color: #4EAB9A;
+            padding-left: vw(12);
           }
 
           .text {
@@ -116,25 +116,22 @@
             .title {
               color: #648E17;
             }
-
           }
         }
 
         &:nth-last-of-type(1) {
-          margin-bottom: 0px;
+          margin-bottom: 0;
         }
 
         .num {
+          width: vw(50);
+          text-align: left;
           opacity: 0.3;
-          align-items: center;
-          justify-content: center;
-          flex: vw(44) 0 0;
-          display: flex;
           font-family: $poppins-semiBold;
           font-weight: 600;
           font-size: vw(48);
           line-height: vw(72);
-          margin-right: vw(16);
+          padding-left: vw(7);
         }
 
         .text {
@@ -142,18 +139,15 @@
             font-size: vw(18);
             font-weight: 700;
             line-height: vw(28);
-            letter-spacing: -0.005em;
             margin-bottom: vw(4);
           }
 
           .desc {
             font-size: vw(15);
-            font-weight: 400;
             line-height: vw(22);
-            letter-spacing: -0.005em;
+            color: $gray-800;
           }
         }
-
       }
     }
   }
@@ -166,14 +160,12 @@
       font-size: vw(28);
       font-weight: 700;
       line-height: vw(39);
-      letter-spacing: -0.005em;
       color: $gray-900;
       margin-bottom: vw(32);
-
     }
 
     .step-list {
-      padding: 0px vw(24);
+      padding: 0 vw(24);
       display: flex;
       justify-content: space-between;
       margin-bottom: vw(48);
@@ -186,7 +178,18 @@
             span {
               color: $gray-600;
             }
+          }
 
+          .title {
+            color: $gray-800;
+          }
+
+          .ico-skin-scan-off {
+            background-image: url(../img/freesample/ico-skin-scan-on.svg);
+          }
+
+          .ico-phone-application-off {
+            background-image: url(../img/freesample/ico-phone-application-on.svg);
           }
         }
 
@@ -196,16 +199,15 @@
           font-size: vw(18);
           font-style: normal;
           line-height: vw(28);
-          letter-spacing: -0.005em;
           text-align: center;
           margin-bottom: vw(8);
+          color: $gray-500;
         }
 
         .desc {
           font-size: vw(16);
           font-weight: 500;
           line-height: vw(24);
-          letter-spacing: -0.005em;
           text-align: center;
           color: $gray-500;
 
@@ -260,14 +262,14 @@
 
   .precautions-section {
     background-color: $gray-200;
-    padding: 0px vw(24) vw(76);
+    padding: 0 vw(24) vw(76);
 
     .title {
       display: inline-block;
       font-size: vw(15);
       font-weight: 700;
       line-height: vw(22);
-      letter-spacing: -0.005em;
+
       color: $gray-800;
       margin-bottom: vw(12);
 
@@ -276,8 +278,6 @@
         margin-right: vw(4.5);
       }
     }
-
-
   }
 
   .myapplication-section {
@@ -300,7 +300,6 @@
       font-size: vw(16);
       font-weight: 400;
       line-height: vw(24);
-      letter-spacing: -0.005em;
       color: $gray-700;
     }
   }
@@ -317,12 +316,10 @@
           color: $gray-800;
 
           > span {
-            color: $gray-500;
+            color: $gray-600;
           }
         }
       }
-
-
     }
 
 
@@ -339,7 +336,7 @@
       font-style: normal;
       font-weight: 700;
       line-height: vw(33);
-      letter-spacing: -0.005em;
+
       text-align: left;
       margin-bottom: vw(12);
 
@@ -353,7 +350,7 @@
       font-size: vw(15);
       font-weight: 400;
       line-height: vw(22);
-      letter-spacing: -0.005em;
+
     }
   }
 
@@ -366,7 +363,6 @@
       font-size: vw(16);
       font-weight: 700;
       line-height: vw(24);
-      letter-spacing: -0.005em;
       margin-bottom: vw(12);
 
     }
@@ -391,24 +387,21 @@
 
           input {
             margin-right: vw(8);
-            width: calc(100% - #{vw(103)});
+            width: calc(100% - #{vw(103)} - #{vw(8)});
           }
 
           .btn {
-
             width: vw(103);
+            height: vw(60);
             border-radius: vw(12);
-            padding: vw(0) vw(0);
-            /*button.scss 변경으로 인한 background-color 추가 - 선미*/
+            padding: 0;
             background-color: $gray-fff;
 
             span {
               font-size: vw(15);
               font-style: normal;
               font-weight: 700;
-              letter-spacing: -0.005em;
               text-align: center;
-
               color: $gray-800;
             }
           }
@@ -417,25 +410,25 @@
     }
 
     .caption {
-      color: $gray-600;
+      color: $gray-700;
       font-size: vw(13);
       font-weight: 400;
       line-height: vw(18);
-      letter-spacing: -0.005em;
 
-      .span {
+      a {
         color: $gray-800;
-        font-style: normal;
         font-weight: 500;
       }
     }
 
     .info-list {
+      overflow: hidden;
+
       .list {
         margin-bottom: vw(16);
 
         &:nth-last-of-type(1) {
-          margin-bottom: 0px;
+          margin-bottom: 0;
         }
 
         .custom-control {
@@ -445,8 +438,9 @@
             font-size: vw(15);
             font-weight: 700;
             line-height: vw(19);
-            letter-spacing: -0.005em;
             color: $gray-900;
+            display: inline;
+            vertical-align: top;
           }
         }
 
@@ -469,16 +463,17 @@
             margin-left: vw(10);
 
             > p {
-              margin-bottom: vw(6);
+              margin-bottom: vw(4);
               color: $gray-800;
               font-size: vw(13);
               font-weight: 500;
               line-height: vw(18);
-              letter-spacing: -0.005em;
             }
 
             .dot-list {
               &.title {
+                margin-bottom: 0;
+
                 .list {
                   display: flex;
                 }
@@ -489,7 +484,6 @@
                   font-weight: 500;
                   line-height: vw(16);
                   color: $primary;
-
                   flex: vw(18) 0 0;
 
                   i {
@@ -499,15 +493,14 @@
               }
 
               .list {
-                padding: 0px;
+                padding: 0;
                 margin-bottom: vw(2);
 
                 > p {
-                  padding-left: 0px;
+                  padding-left: 0;
                   font-size: vw(12);
                   font-weight: 400;
                   line-height: vw(16);
-                  letter-spacing: -0.005em;
                 }
               }
 
@@ -520,37 +513,38 @@
 
         &.sold-out {
           pointer-events: none;
+
           .custom-control {
             position: relative;
+
             &:after {
+              content: '품절';
+              display: inline-block;
+              vertical-align: top;
               font-weight: 500;
               margin-left: vw(4);
-              position: absolute;
               text-align: center;
               font-size: vw(12);
               line-height: vw(20);
               border-radius: vw(6);
               color: $gray-fff;
               background-color: #EF4C57;
-              content: '품절';
-              display: inline-block;
-              letter-spacing:-0.005em;
               width: vw(39);
               height: vw(22);
               border: 1px solid #EF4C57;
             }
+
             .custom-control-label {
-              opacity: 0.5;
+              color: $gray-600;
             }
           }
-          .text-area{
+
+          .option-area {
             opacity: 0.5;
           }
         }
       }
-
     }
-
   }
 
   .privacy-agree-section {
@@ -558,7 +552,7 @@
     background-color: $gray-200;
 
     .privacy-agree {
-      padding: vw(24) 0px vw(48);
+      padding: vw(24) 0 vw(48);
       border-top: 1px solid $gray-300;
 
       .dot-list {
@@ -570,7 +564,6 @@
           font-size: vw(12);
           font-weight: 400;
           line-height: vw(16);
-          letter-spacing: -0.005em;
         }
       }
 
@@ -578,24 +571,31 @@
         font-size: vw(13);
         font-weight: 400;
         line-height: vw(20);
-        letter-spacing: -0.005em;
         margin-bottom: vw(13);
+
+        .custom-control-label {
+          .gray {
+            color: $gray-800;
+          }
+        }
 
         a {
           text-decoration: underline;
+          font-weight: 500;
         }
       }
-
     }
 
     .btn-wrap {
       display: flex;
       align-items: center;
+
       .btn {
         width: vw(160);
         max-width: vw(160);
         margin: 0 auto;
-        +.btn{
+
+        + .btn {
           margin-left: vw(7);
         }
       }
@@ -604,22 +604,20 @@
 
 
   /*component*/
-
   .dot-list {
     .list {
       position: relative;
       margin-bottom: vw(8);
 
       &:nth-last-of-type(1) {
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
 
       > p {
-        color: $gray-600;
+        color: $gray-700;
         font-size: vw(13);
         font-weight: 400;
         line-height: vw(18);
-        letter-spacing: -0.005em;
         padding-left: vw(8);
       }
 
@@ -648,7 +646,7 @@
       }
 
       &:nth-last-of-type(1) {
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
 
       .list-header {
@@ -661,7 +659,7 @@
           font-size: vw(15);
           font-weight: 600;
           line-height: vw(22);
-          letter-spacing: -0.005em;
+
           color: $gray-900;
 
           span {
@@ -684,7 +682,6 @@
             font-style: normal;
             font-weight: 700;
             line-height: vw(18);
-            letter-spacing: -0.005em;
             margin-right: vw(6);
             color: $gray-700;
           }
@@ -696,9 +693,8 @@
             font-size: vw(13);
             font-weight: 400;
             line-height: vw(18);
-            letter-spacing: -0.005em;
-          }
 
+          }
         }
       }
 

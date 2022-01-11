@@ -60,7 +60,7 @@
                 <div class="step-list">
                     <div class="step active">
                         <p class="title">STEP1</p>
-                        <i class="icon ico-skin-scan-on"></i>
+                        <i class="icon ico-skin-scan-off"></i>
                         <p class="desc">
                             AI 분석으로 <br>피부 상태를 확인
                         </p>
@@ -80,7 +80,7 @@
                         </p>
                     </div>
                 </div>
-                <a href="#" class="btn btn-block"><span>무료 샘플 신청하기</span></a>
+                <a href="#" class="btn btn-xl btn-block"><span>무료 샘플 신청하기</span></a>
             </section>
             <!--이렇게 신청 하세요 e-->
 
@@ -97,35 +97,6 @@
                 </ul>
             </section>
             <!--무료 샘플 신청 주의사항 e-->
-
-            <!--무료 샘플 신청 주의사항 스크립트 s-->
-            <script>
-
-                (function introScroll() {
-                    let scrollTopAction = $('.application-section').offset().top
-                    let step = $('.application-section > .step-list > .step')
-                    $(this).scroll(function () {
-                        var scrollTop = $(this).scrollTop()+150;
-                        // console.log(st);
-                        if (scrollTop > scrollTopAction) {
-                            setTimeout(() => {
-                                    $(step).eq(0).removeClass('active');
-                                    $(step).eq(0).children('.ico-skin-scan-on')
-                                        .removeClass('ico-skin-scan-on')
-                                        .addClass('ico-skin-scan-off')
-                                    $(step).eq(1).addClass('active');
-                                    $(step).eq(1).children('.ico-phone-application-off')
-                                        .removeClass('ico-phone-application-off')
-                                        .addClass('ico-phone-application-on')
-                                }
-                                );
-                        }
-                    });
-                }());
-
-
-            </script>
-            <!--무료 샘플 신청 주의사항 스크립트 e-->
         </div>
     </div>
     <!-- e contents -->
@@ -136,5 +107,28 @@
 
 
 </div>
+<script>
+    $(document).ready(function (){
+        setInterval(function (){
+            let step = $('.application-section > .step-list > .step')
+            secondStep(step)
+
+            setTimeout(function (){
+                let step = $('.application-section > .step-list > .step')
+                firstStep(step)
+            },3000)
+        },6000)
+    })
+
+    function firstStep(step) {
+        step.eq(0).addClass('active');
+        step.eq(1).removeClass('active');
+    }
+
+    function secondStep(step) {
+        step.eq(1).addClass('active');
+        step.eq(0).removeClass('active');
+    }
+</script>
 </body>
 </html>
