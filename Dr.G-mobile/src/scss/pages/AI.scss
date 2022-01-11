@@ -2265,26 +2265,32 @@
             top: vw(109);
             left: vw(58);
           }
+
           &.pos-2 {
             top: vw(47);
             left: vw(152);
           }
+
           &.pos-3 {
             top: vw(194);
             left: vw(254);
           }
+
           &.pos-4 {
             top: vw(239);
             left: vw(14);
           }
+
           &.pos-5 {
             top: vw(10);
             left: vw(14);
           }
+
           &.pos-6 {
             top: vw(10);
             left: vw(201);
           }
+
           &.pos-7 {
             top: vw(122);
             left: vw(225);
@@ -2310,6 +2316,7 @@
         margin-bottom: vw(48);
 
         .item {
+          position: relative;
           display: flex;
           flex-direction: column;
           width: 100%;
@@ -2317,9 +2324,83 @@
           background-color: #fff;
           padding: vw(24);
 
+          .btn-cancel {
+            display: inline-block;
+            position: absolute;
+            right: vw(12);
+            top: vw(12);
+            vertical-align: middle;
+            width: vw(24);
+            height: vw(24);
+            background-image: url(../img/AI/ico-btn-x.svg);
+            background-size: cover;
+          }
+
+          &.disabled {
+            .date {
+              color: $gray-600;
+            }
+          }
+
+          .user-product {
+            position: relative;
+            margin-top: vw(20);
+            padding-top: vw(20);
+            padding-bottom: vw(8);
+
+            .font-body-2 {
+              margin-bottom: vw(12);
+            }
+
+            .label {
+              font-weight: 500;
+              font-size: vw(12);
+              line-height: vw(16);
+              margin-bottom: vw(4);
+              color: $gray-500;
+            }
+
+            .name {
+              font-size: vw(12);
+              line-height: vw(16);
+              color: $gray-800;
+              margin-bottom: vw(12);
+            }
+
+            &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 1px;
+              background-repeat: repeat-x;
+              background-image: url(../img/AI/bg-line.svg);
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 1px;
+              background-repeat: repeat-x;
+              background-image: url(../img/AI/bg-line.svg);
+            }
+          }
+
+          .txt {
+            font-size: vw(13);
+            line-height: vw(18);
+            color: $gray-700;
+            padding-top: vw(20);
+          }
+
           + .item {
             margin-top: vw(12);
           }
+
           .date {
             font-family: $poppins-semiBold;
             font-weight: 600;
@@ -2328,6 +2409,7 @@
             color: $gray-800;
             margin-bottom: vw(8);
           }
+
           ul {
             display: flex;
             align-items: center;
@@ -2337,6 +2419,35 @@
                 margin-left: vw(24);
               }
             }
+          }
+        }
+      }
+
+      .empty {
+        background-color: #fff;
+        padding: vw(76) 0;
+        border-radius: vw(16);
+        text-align: center;
+        margin-bottom: vw(24);
+
+        .img {
+          width: vw(62);
+          height: auto;
+          margin: 0 auto vw(16);
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .desc {
+          font-size: vw(16);
+          line-height: vw(25);
+          color: $gray-800;
+
+          .color-light-gray {
+            color: $gray-500;
           }
         }
       }
@@ -2457,6 +2568,46 @@
 
   .ico-diary-10-off {
     @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-10-off.svg');
+  }
+
+  .ico-diary-1-on {
+    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-1-on.svg');
+  }
+
+  .ico-diary-2-on {
+    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-2-on.svg');
+  }
+
+  .ico-diary-3-on {
+    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-3-on.svg');
+  }
+
+  .ico-diary-4-on {
+    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-4-on.svg');
+  }
+
+  .ico-diary-5-on {
+    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-5-on.svg');
+  }
+
+  .ico-diary-6-on {
+    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-6-on.svg');
+  }
+
+  .ico-diary-7-on {
+    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-7-on.svg');
+  }
+
+  .ico-diary-8-on {
+    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-8-on.svg');
+  }
+
+  .ico-diary-9-on {
+    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-9-on.svg');
+  }
+
+  .ico-diary-10-on {
+    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-10-on.svg');
   }
 
   .ico-calendar {
