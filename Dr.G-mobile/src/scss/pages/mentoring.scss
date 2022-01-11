@@ -39,6 +39,7 @@
           font-size: vw(13);
           line-height: vw(18);
           color: $gray-600;
+          font-family: Poppins , sans-serif;
         }
       }
     }
@@ -162,6 +163,7 @@
             font-size: vw(13);
             line-height: vw(18);
             color: $gray-600;
+            font-family: Poppins, sans-serif;
           }
         }
       }
@@ -347,12 +349,14 @@
         > p {
           padding: vw(12) vw(24);
           color: $gray-fff;
+          font-size: vw(16);
 
           span {
             &.num {
               text-transform: uppercase;
               padding-right: vw(12);
               position: relative;
+              font-family: Poppins, sans-serif;
 
               &:after {
                 content: '';
