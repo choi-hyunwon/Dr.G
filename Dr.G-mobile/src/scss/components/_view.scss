@@ -434,13 +434,22 @@
             &.value{ /*실제 그래프*/
               z-index: 1;
               border-color: $blue;
-              transform:rotateZ(100deg);
-              animation: chartAni4 1s 0.5s ;
+              transform:rotateZ(-240deg);
+              animation: chartAni4 1s;
+            }
+          }
+
+          &.full{
+            .value{
+              z-index: 1;
+              border-color: $blue;
+              transform:rotateZ(0deg);
+              animation:unset;
             }
           }
         }
         @keyframes chartAni4{
-          0%{transform: rotateZ(180deg);}
+          0%{transform: rotateZ(-180deg);}
         }
 
         &.active{
