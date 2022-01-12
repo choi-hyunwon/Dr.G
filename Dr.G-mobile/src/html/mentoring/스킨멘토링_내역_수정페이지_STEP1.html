@@ -15,7 +15,7 @@
                     <div class="step col-3 active">
                         <span class="tit">기본정보</span>
                         <div class="icon"></div>
-                        <ul class="smile-graph">
+                        <ul class="smile-graph full">
                             <li class="value"></li>
                         </ul>
                     </div>
@@ -36,14 +36,14 @@
                     <div class="step col-3">
                         <span class="tit">완료</span>
                         <div class="icon"></div>
-                        <ul class="smile-graph">
+                        <ul class="smile-graph full">
                             <li class="value"></li>
                         </ul>
                     </div>
                 </div>
                 <!--
-                .smile-graph > .value {transform: rotateZ(100deg)}로 그래프값 조절
-                (180deg - 기본-> 0 deg 가까울수록 그래프가채워짐)
+                .smile-graph > .value {transform: rotateZ(-180deg)}로 그래프값 조절
+                (-180deg - 기본-> -360 deg 가까울수록 그래프가채워짐)
                 -->
 
                 <div class="area-desc">
@@ -52,7 +52,7 @@
                     </div>
                     <div class="asking">
                         <p class="font-h6 font-bold">저의 피부타입은</p>
-                        <input type="text" title="피부타입 입력" class="form-control" placeholder="OS-수부민지형" disabled>
+                        <input type="text" title="피부타입 입력" class="form-control" value="OS-수부민지형" disabled>
 
                         <p class="font-h6 font-bold">연령대는</p>
                         <div class="select-popup">
@@ -128,25 +128,6 @@
         </div>
     </div>
 </div>
-
-<!--텍스트변경 스크립트-->
-<script>
-    $(document).ready(function () {
-        let list = $('._toast-popup.age .select-list > .list');
-        list.on("click", function (e) {
-            let textValue = $(this).find('span').text();
-            function ChangeText() {
-                $('._toast-popup-open.age').find('span').text(textValue).css({
-                    'color': '#444444',
-                    'font-weight': 'bold'
-                });
-            }
-            list.removeClass("active");
-            $(this).addClass("active");
-            ChangeText();
-        });
-    });
-</script>
 
 
 

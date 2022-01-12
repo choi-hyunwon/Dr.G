@@ -22,6 +22,7 @@
  v.0.20 태윤 : ico-star > .active시 ico-star-yellow 제거 -- 2021.01.03
  v.0.21 선미 : ico-plus-lg, ico-plus-round추가 -- 2021.01.06
  v.0.22 선미 : 다운로드/공유하기 아이콘 추가 -- 2021.01.08
+ v.0.23 태윤 : ico-arrow-down-sm 추가
 |--------------------------------------------------------------------|
 */
 .icon {
@@ -125,6 +126,9 @@
 
 .ico-arrow-down {
   @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-down.svg');
+  &-sm{
+    @include background-img($width: 20, $height: 20, $category: 'common', $img: 'ico-arrow-down-sm.svg');
+  }
 }
 
 .ico-delete {
