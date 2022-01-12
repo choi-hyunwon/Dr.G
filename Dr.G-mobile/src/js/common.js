@@ -9,6 +9,7 @@
  v.0.5 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 진행중 -- 2021.01.04
  v.0.6 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 완료 (텍스트변경제외) -- 2022.01.05
  v.0.7 선미 : headerDetails 추가 --2022.01.06
+ v.0.8 태윤 : text-change-text & text-change-age 추가 -- 2022.01.12
  * --------------------------------------------------------------------------
  */
 
@@ -79,6 +80,50 @@ front.common = (function () {
             }
 
         })
+
+        /*text-change-text*/
+        $(document).ready(function () {
+            let list = $('._toast-popup.text .select-list > .list');
+            list.on("click", function (e) {
+                let textValue = $(this).find('span').text();
+
+                function ChangeText() {
+                    $('._toast-popup-open.text').find('span').text(textValue).css({
+                        'color': '#444444',
+                        'font-weight': 'bold'
+                    });
+                    $('._toast-popup-open.text').css({
+                        'background-image': 'url(../../img/common/ico-arrow-down-sm.svg)'
+                    })
+                }
+
+                list.removeClass("active");
+                $(this).addClass("active");
+                ChangeText();
+            });
+        });
+
+        /*text-change-age*/
+        $(document).ready(function () {
+            let list = $('._toast-popup.age .select-list > .list');
+            list.on("click", function (e) {
+                let textValue = $(this).find('span').text();
+
+                function ChangeText() {
+                    $('._toast-popup-open.age').find('span').text(textValue).css({
+                        'color': '#444444',
+                        'font-weight': 'bold'
+                    });
+                    $('._toast-popup-open.age').css({
+                        'background-image': 'url(../../img/common/ico-arrow-down-sm.svg)'
+                    });
+                }
+
+                list.removeClass("active");
+                $(this).addClass("active");
+                ChangeText();
+            });
+        });
     }
 
     var tab = function () {
@@ -139,11 +184,11 @@ front.common = (function () {
             if ($('.container').find('._static').length == false) {
                 let st = $(this).scrollTop();
                 if (st >= detailsScroll) {
-                   // console.log("DOWN");
+                    // console.log("DOWN");
                     $('.header-details').hide()
 
                 } else {
-                   // console.log("UP");
+                    // console.log("UP");
                     $('.header-details').show().addClass('fixed')
                     if (window.pageYOffset == 0) {
                         $('.header-details').removeClass('fixed')
@@ -161,8 +206,6 @@ front.common = (function () {
         AOS.init();
     }
     /*-----e 스크롤 애니메이션------*/
-
-
 
 
     return {
@@ -187,5 +230,5 @@ function showPopup() {
 
 
 function hidePopup() {
-    $('.toast-dim').removeClass('show fade').css('display','none');
+    $('.toast-dim').removeClass('show fade').css('display', 'none');
 }
