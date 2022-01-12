@@ -23,6 +23,7 @@
  v.0.21 선미 : ico-plus-lg, ico-plus-round추가 -- 2021.01.06
  v.0.22 선미 : 다운로드/공유하기 아이콘 추가 -- 2021.01.08
  v.0.23 태윤 : ico-arrow-down-sm 추가
+ v.0.24 선미 : .ico-ai 추가
 |--------------------------------------------------------------------|
 */
 .icon {
@@ -41,9 +42,8 @@
     background-image: url(../img/common/ico-alert-white.svg);
   }
 }
-
 .ico-shop {
-  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-shop.svg');
+  @include background-img($width: 28, $height: 28, $category: 'common', $img: 'ico-shop.png');
 }
 
 .ico-cart {
@@ -278,4 +278,8 @@
 
 .ico-share {
   @include background-img($width: 24, $height: 24, $category: 'AI', $img: 'ico-share.svg');
+}
+
+.ico-ai{
+  @include background-img($width: 28, $height: 21, $category: 'common', $img: 'ico-ai.png');
 }

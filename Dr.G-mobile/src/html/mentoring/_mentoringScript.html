@@ -114,7 +114,6 @@
              }
         });
 
-
         $('.slide-tab .item a').on('click',function (){
             let idx = $(this).parent().index()
             console.log(idx)
@@ -135,14 +134,13 @@
 
         // let processItem = $('.mentoring-sub-main .slide-tab ul .item').eq(0)
         // console.log(idx)
-
         let processSwiper = new Swiper('.process-swiper', {
-            loop:true,
+            loop: true,
             pagination: {
                 el: ".process-pagination",
             },
-            on:{
-                slideChange: function (){
+    /*        on: {
+                slideChange: function () {
                     if ($('.page2').hasClass('swiper-slide-active')) {
                         console.log('a')
                         let typingBool = false;
@@ -162,59 +160,52 @@
                                 $(".typing").append(typingTxt[typingIdx]);
                                 // 한글자씩 이어준다.
                                 typingIdx++;
-                            }else{
+                            } else {
                                 //끝나면 반복종료
                                 clearInterval(tyInt);
                             }
                         }
-                    }else {
+                    } else {
                         $(".typing").empty();
                     }
                 }
-            }
+            }*/
         });
-        processSwiper.on('transitionEnd', function() {
+        processSwiper.on('transitionEnd', function () {
             let idx = processSwiper.realIndex + 1
             //console.log(idx);
             $('.step-box .step').removeClass('active')
             $('.step-box .step').eq(idx).addClass('active')
         });
 
+        /* let page1Swipe = new Swiper('.page1-swiper', {
+             direction: "vertical",
+             loop:true,
+             loopAdditionalSlides: 1, //마지막장에서 첫장 슬라이드 끊김현상 제어
+             //autoplayDisableOnInteraction: false,
+             autoplay: {
+                 delay: 1000
+             },
 
+             //touchRatio: 0,//드래그 금지
+             on: {
+                 slideChange: function () {
+                     let activeIndex = this.activeIndex;
+                     let realIndex = this.slides.eq(activeIndex).attr('data-swiper-slide-index');
+                     console.log(realIndex)
 
-       /* let page1Swipe = new Swiper('.page1-swiper', {
-            direction: "vertical",
-            loop:true,
-            loopAdditionalSlides: 1, //마지막장에서 첫장 슬라이드 끊김현상 제어
-            //autoplayDisableOnInteraction: false,
-            autoplay: {
-                delay: 1000
-            },
-
-            //touchRatio: 0,//드래그 금지
-            on: {
-                slideChange: function () {
-                    let activeIndex = this.activeIndex;
-                    let realIndex = this.slides.eq(activeIndex).attr('data-swiper-slide-index');
-                    console.log(realIndex)
-
-                    // $('.page1-swiper .swiper-slide').addClass('item-sm');
-                    // $('.page1-swiper .swiper-slide').eq(realIndex).find('item').removeClass('item-sm');
-                }
-            }
-        });*/
-
-/*
-        var carouselExample = document.querySelector('#carouselExample')
-        var carousel = new bootstrap.Carousel(carouselExample, {
-            interval: 2000,
-            wrap: false
-        })
-*/
-
-
-
-
+                     // $('.page1-swiper .swiper-slide').addClass('item-sm');
+                     // $('.page1-swiper .swiper-slide').eq(realIndex).find('item').removeClass('item-sm');
+                 }
+             }
+         });*/
+        /*
+                var carouselExample = document.querySelector('#carouselExample')
+                var carousel = new bootstrap.Carousel(carouselExample, {
+                    interval: 2000,
+                    wrap: false
+                })
+        */
 
 
 
@@ -229,7 +220,6 @@
                 $(this).removeClass('active');
             }
         })
-
 
         /*서브메인 faq*/
         let box = $('.faq_box')

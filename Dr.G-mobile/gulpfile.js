@@ -39,6 +39,8 @@ function copyLibJs() {
         'src/js/lib/aos.js',
         'src/js/lib/moment.js',
         'src/js/lib/jquery.daterangepicker.js',
+        'src/js/lib/jquery-ui.min.js',
+        'src/js/lib/jquery.ui.touch-punch.min.js',
     ];
 
     return gulp.src(sourceLib)

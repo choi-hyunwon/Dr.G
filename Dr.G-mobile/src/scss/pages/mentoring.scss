@@ -517,6 +517,183 @@
         }
 
       }
+    .section-color{
+      color: $gray-fff;
+      text-align: center;
+      margin-bottom: 0;
+      padding-bottom: vw(68);
+      position: relative;
+      .text-box{
+        .font-h1{
+          margin-bottom: vw(8);
+        }
+      }
+      .img-box{
+        position: relative;
+        padding-top: vw(120);
+        overflow: hidden;
+        margin-bottom: vw(32);
+        .img{
+          margin: 0 auto;
+          img{
+            width: 100%;
+            height: auto;
+          }
+          &.img-mentor{
+            width: vw(143);
+            height: vw(198);
+            position: absolute;
+            left: 50%;
+            top: vw(300);
+            transform: translateX(-50%);
+            animation: mentor 1s 1s forwards;
+          }
+          @keyframes mentor{
+            100% {top:vw(32)}
+          }
+        }
+        .smile-graph {
+          margin: 0 auto;
+          padding: 0;
+          list-style-type: none;
+          overflow: hidden;
+          position: relative;
+          width: vw(260);
+          height: vw(130);
+          &::before { /*배경*/
+            position: absolute;
+            content: '';
+            width: inherit;
+            height: inherit;
+            border: vw(37) solid $blue;
+            border-top: none;
+            top: 0;
+            left: 0;
+          }
+          li { /*li기준점*/
+            position: absolute;
+            z-index: 11;
+            top: 0;
+            left: 0;
+            border: vw(37) solid;
+            width: inherit;
+            height: inherit;
+            border-top: none;
+            border-bottom-left-radius: vw(130);
+            border-bottom-right-radius: vw(130);
+            transform-origin: 50% 0;
+            &.value{ /*실제 그래프*/
+              z-index: 1;
+              border-color: #ffe444;
+              animation: chartAni 1s 0.5s forwards;
+              transform: rotateZ(-180deg)
+            }
+          }
+        }
+        @keyframes chartAni{
+         100% {transform:rotateZ(-360deg);}
+        }
+      }
+      .total-box{
+        margin-bottom: vw(24);
+        p{
+          &.total{
+            .num{
+              font-weight: 600;
+              padding: 0;
+              font-family: Poppins, sans-serif;
+            }
+            .unit{
+              font-weight: 700;
+            }
+          }
+
+        }
+      }
+      .btn-box{
+        padding: 0 vw(24);
+        margin-bottom: vw(86);
+      }
+      .more-box{
+        position: absolute;
+        bottom: 0;
+        height: vw(68);
+        width: 100%;
+        .more{
+          background-color: $gray-fff;
+          height: 100%;
+          box-shadow: 0 vw(-2) vw(4) rgba(34, 34, 34, 0.06);
+          >a{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+            padding-bottom: vw(10);
+            &:focus{
+              color: $gray-900;
+            }
+            span{
+              font-size: vw(13);
+              font-weight: 500;
+              display: block;
+            }
+            .icon{
+              &.ico-ai{
+                margin-bottom: vw(5);
+              }
+              &.ico-shop{
+                width: vw(28);
+                height: vw(28);
+                margin-bottom: vw(3);
+              }
+            }
+          }
+        }
+        .round{
+          position: absolute;
+          top: vw(-24);
+          left: 50%;
+          transform: translateX(-50%);
+          border: vw(3) solid $gray-fff;
+          width: vw(68);
+          height: vw(68);
+          border-radius: 100%;
+          background: linear-gradient(180deg, #313464 0%, #11143A 100%);
+          color:$gray-fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          >img{
+            width: vw(39);
+            height: vw(20);
+          }
+        }
+        &:before{
+          content: '';
+          display: inline-block;
+          position: absolute;
+          background: url("../img/mentoring/ico-arrow-bottom-white-lg.svg") no-repeat center center;
+          width: vw(24);
+          height: vw(24);
+          top:vw(-68);
+          left:50%;
+          transform: translateX(-50%);
+        }
+      }
+      .btn-chatbot{
+        position: absolute;
+        z-index: 5;
+        right: vw(24);
+        bottom: vw(84);
+        width: vw(48);
+        height: vw(48);
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
 
       .section-about {
         background-color: #edf8ff;
@@ -815,7 +992,7 @@
                   margin: 0 vw(53.5) vw(18);
                   background-color: $gray-fff;
                   border-radius: vw(20);
-                  box-shadow: 0px 12px 8px rgba(34, 34, 34, 0.08);
+                  box-shadow: 0 vw(12) vw(8) rgba(34, 34, 34, 0.08);
                   width: vw(268);
                   padding: vw(22) vw(20);
                   display: flex;
