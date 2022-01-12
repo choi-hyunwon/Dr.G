@@ -25,25 +25,25 @@
         })
 
         /*stap 공통*/
-     /*   let stepScroll = 0;
+        let stepScroll = 0;
         $(window).scroll(function (event) {
-            if ($('.container').find('.step-heading').length == false) {
+            if ($('.container').find('.step-heading').length) {
                 let st = $(this).scrollTop();
                 if (st >= stepScroll) {
-                    // console.log("DOWN");
+                     //console.log("DOWN");
                     $('.step-heading').hide()
 
                 } else {
-                    // console.log("UP");
+                     //console.log("UP");
                     $('.step-heading').show().addClass('fixed')
-                    if (window.pageYOffset > 60) {
+                    if (window.pageYOffset <= 0) {
                         $('.step-heading').removeClass('fixed')
                     }
                 }
                 //Updates scroll position
                 stepScroll = st;
             }
-        });*/
+        });
 
         /*답변 대기, 답변 완료*/
         $('.unfold-box .title').on('click', function () {
@@ -141,6 +141,37 @@
             pagination: {
                 el: ".process-pagination",
             },
+            on:{
+                slideChange: function (){
+                    if ($('.page2').hasClass('swiper-slide-active')) {
+                        console.log('a')
+                        let typingBool = false;
+                        let typingIdx = 0;
+                        let typingTxt = $(".typing-txt").text(); // 타이핑될 텍스트
+                        typingTxt = typingTxt.split(""); // 한글자씩 자른다.
+
+                        if (typingBool == false) {
+                            // 타이핑이 진행되지 않았다면
+                            typingBool = true;
+                            let tyInt = setInterval(typing, 100); // 반복동작
+                        }
+
+                        function typing() {
+                            if (typingIdx < typingTxt.length) {
+                                // 타이핑될 텍스트 길이만큼 반복
+                                $(".typing").append(typingTxt[typingIdx]);
+                                // 한글자씩 이어준다.
+                                typingIdx++;
+                            }else{
+                                //끝나면 반복종료
+                                clearInterval(tyInt);
+                            }
+                        }
+                    }else {
+                        $(".typing").empty();
+                    }
+                }
+            }
         });
         processSwiper.on('transitionEnd', function() {
             let idx = processSwiper.realIndex + 1
@@ -183,28 +214,8 @@
 
 
 
-        var typingBool = false;
-        var typingIdx = 0;
-        var typingTxt = $(".typing-txt").text(); // 타이핑될 텍스트
-        typingTxt = typingTxt.split(""); // 한글자씩 자른다.
 
-        if (typingBool == false) {
-            // 타이핑이 진행되지 않았다면
-            typingBool = true;
-            var tyInt = setInterval(typing, 100); // 반복동작
-        }
 
-        function typing() {
-            if (typingIdx < typingTxt.length) {
-                // 타이핑될 텍스트 길이만큼 반복
-                $(".typing").append(typingTxt[typingIdx]);
-                // 한글자씩 이어준다.
-                typingIdx++;
-            } else {
-                //끝나면 반복종료
-                clearInterval(tyInt);
-            }
-        }
 
 
 
