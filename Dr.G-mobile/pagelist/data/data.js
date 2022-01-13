@@ -341,7 +341,17 @@ data.mentoring = {
     ]
 }
 
-/*1:1 성분분석*/
+data.analysis = {
+    title: '1:1 성분분석',
+    list: [
+        {
+            stateClass: 'waiting',
+            url: '1',
+            category: 'analysis',
+            page: '제품명 입력 검색 7'
+        },
+    ]
+}
 
 data.suggestion = {
     title: '고객제안',
