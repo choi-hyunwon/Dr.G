@@ -12,6 +12,7 @@
  v.0.10 주연 : 영문 오탈자 수정 / 공유하기 팝업 스타일 추가  -- 2022.01.10
  v.0.12 태윤 : 모달 주석처리 완료  -- 2022.01.13
  v.0.13 선미 :  .toast-body {margin 제거} .toast-footer {padding-top: vw(32) 추가  &.no-padding{ 클래스 추가 } -- 2022.01.13
+ v.0.14 선미 :  색상값 공통화 작업 -- 2022.01.13
 |--------------------------------------------------------------------|
 */
 
@@ -325,9 +326,9 @@
         justify-content: space-between;
         border-bottom: 0;
 
-    /*    &.mb-half {
+        &.mb-half {
           margin-bottom: vw(12);
-        }*/
+        }
 
         .title {
           font-size: vw(20);
@@ -522,17 +523,46 @@
           }
         }
 
-        /*1:1 성분분석*/
+        /* 1:1 성분분석 */
         &.analysis-box{
           margin-bottom: 0;
           .search-group{
             padding-top: vw(32);
-            .desc{
-              color: $gray-500;
-              font-weight: 500;
-              font-size: vw(16);
+            ul{
+              &.list{
+                font-size: vw(13);
+                color: $gray-700;
+                li{
+                  margin-bottom: vw(20);
+                  &:last-of-type{
+                    margin-bottom: 0;
+                  }
+                }
+              }
+              &.desc{
+                color: $gray-500;
+                font-weight: 500;
+                font-size: vw(16);
+                &.notice{
+                  p{
+                    &:first-of-type{
+                      color: $gray-800;
+                      font-weight: 500;
+                      font-size: vw(16);
+                    }
+                  }
+                }
+              }
             }
 
+          }
+        }
+
+        /* 고객제안 */
+        &.suggestion-box{
+          .input-box{
+            padding-top: vw(24);
+            margin-bottom: vw(24);
           }
         }
 

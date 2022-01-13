@@ -278,6 +278,7 @@
         top: vw(174);
         transition: 1.2s;
         transform: translateX(910%);
+        z-index: 3;
 
         .img {
           width: vw(210);
@@ -481,11 +482,10 @@
   .register-box {
     text-align: center;
     background-color: $gray-200;
-    padding: vw(2) vw(20) vw(28);
+    padding: vw(50) vw(24);
 
     .box {
       position: relative;
-      padding: vw(48) 0;
 
       &:last-child {
         &::after {
@@ -495,7 +495,6 @@
 
       .input-box {
         margin-bottom: vw(24);
-
         input {
           width: 100%;
         }
@@ -517,15 +516,21 @@
     }
 
     .font-h4 {
-      margin-bottom: vw(8);
+      margin-bottom: vw(24);
       color: $gray-800;
     }
-
-    .font-body-1 {
-      margin-bottom: vw(24);
-      color: $gray-700;
+    .btn-wrap {
+      .text-btn{
+        font-weight: 500;
+        color: $gray-800;
+        font-size: vw(13);
+        padding-top: vw(24);
+        text-decoration: underline;
+      }
     }
   }
+
+  /*---------*/
 
   .caution-box {
     padding: vw(48) vw(20) 0;
