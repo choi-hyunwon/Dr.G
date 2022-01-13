@@ -350,6 +350,12 @@ data.analysis = {
             category: 'analysis',
             page: '제품명 입력 검색 7'
         },
+        {
+            stateClass: 'waiting',
+            url: '2',
+            category: 'analysis',
+            page: '제품명 입력 검색 2'
+        },
     ]
 }
 

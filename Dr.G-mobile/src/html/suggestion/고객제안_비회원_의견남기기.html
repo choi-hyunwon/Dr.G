@@ -122,62 +122,9 @@
     @@include('../../html/include/common/footer.html')
 </div>
 
-<!--텍스트 modal-->
-<div class="toast-dim">
-    <div class="toast-popup _toast-popup text">
-        <div class="toast-content no-title type">
-            <div class="toast-body mb-0">
-                <ul class="select-list">
-                    <li class="list"><span class="text">제품</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span class="text">Ai 피부분석</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span class="text">서비스</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span class="text">홈페이지</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span class="text">모바일</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span class="text">프로모션(이벤트)</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span class="text">주문 및 배송</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span class="text">기타</span><i
-                            class="icon ico-check-green"></i></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-<!--age Modal -->
-<div class="toast-dim">
-    <div class="toast-popup _toast-popup age">
-        <div class="toast-content no-title type">
-            <div class="toast-body mb-0">
-                <ul class="select-list">
-                    <li class="list"><span>10대</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span>20대</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span>30대</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span>40대</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span>50대</span><i
-                            class="icon ico-check-green"></i></li>
-                    <li class="list"><span>60대</span><i
-                            class="icon ico-check-green"></i></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-
+<!-- modal-->
+@@include('./select-popup-type.html')
+@@include('./select-popup-age.html')
 
 </body>
 </html>

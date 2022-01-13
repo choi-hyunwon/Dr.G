@@ -93,12 +93,12 @@
                     <div class="opinion">
                         <div class="section-input">
                             <input type="text" title="검색" class="form-control" placeholder="제목을 입력해주세요">
-                            <select title="select" class="custom-select">
-                                <option selected disabled>유형을 선택하세요.</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                            <div class="select-popup">
+                                <!-- Button trigger modal -->
+                                <a href="#" class="btn-select _toast-popup-open text">
+                                    <span class="text">유형을 선택하세요.</span>
+                                </a>
+                            </div>
                             <div class="input-group">
                                 <textarea title="textarea" class="form-control form-control-lg" placeholder="불편함을 느꼈거나 바라는 점이 있다면 들려주세요."></textarea>
                             </div>
@@ -280,5 +280,8 @@
     <!-- e footer -->
 </div>
 @@include('./_subMainScript.html')
+
+<!-- modal-->
+@@include('./select-popup-type.html')
 </body>
 </html>

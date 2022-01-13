@@ -325,9 +325,9 @@
         justify-content: space-between;
         border-bottom: 0;
 
-        &.mb-half {
+    /*    &.mb-half {
           margin-bottom: vw(12);
-        }
+        }*/
 
         .title {
           font-size: vw(20);
@@ -384,8 +384,9 @@
         }
 
         span {
-          color: $blue;
-          font-weight: 700;
+        //  color: $blue;
+        //  color: red;
+       //   font-weight: 700;
         }
 
         .text-btn {
@@ -506,7 +507,6 @@
               span {
                 font-weight: 500;
                 color: $gray-600;
-
               }
             }
           }
@@ -521,6 +521,21 @@
             margin-left: vw(16);
           }
         }
+
+        /*1:1 성분분석*/
+        &.analysis-box{
+          margin-bottom: 0;
+          .search-group{
+            padding-top: vw(32);
+            .desc{
+              color: $gray-500;
+              font-weight: 500;
+              font-size: vw(16);
+            }
+
+          }
+        }
+
       }
 
       .toast-footer {
@@ -562,13 +577,13 @@
             text-align: left;
             margin-bottom: vw(6);
 
-            span {
+         /*   span {
               color: $primary;
 
               &.color-blue {
                 color: $blue;
               }
-            }
+            }*/
           }
 
           .question {
@@ -577,6 +592,7 @@
             font-weight: 700;
             line-height: vw(28);
             letter-spacing: -0.005em;
+            color: $gray-800;
           }
 
           .desc {
@@ -641,13 +657,13 @@
           .main-title {
             margin-bottom: 0;
 
-            span {
+       /*     span {
               color: $primary;
             }
 
             .color-blue {
               color: $blue !important;
-            }
+            }*/
           }
         }
 
@@ -671,11 +687,15 @@
 
                 &.active {
                   span {
-                    color: $primary;
                     font-weight: 700;
-
+                    &.primary{
+                      color: $primary;
+                    }
                     &.blue {
                       color: $blue;
+                    }
+                    &.violet{
+                      color: $violet;
                     }
                   }
 
@@ -730,10 +750,10 @@
             padding: 0 vw(20);
             margin-bottom: vw(12);
 
-            span {
+          /*  span {
               color: $primary;
               font-weight: 700;
-            }
+            }*/
 
             + .agree-area-list {
               padding-top: vw(20);
