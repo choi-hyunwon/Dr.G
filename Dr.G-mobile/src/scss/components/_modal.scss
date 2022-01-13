@@ -11,6 +11,7 @@
  v.0.9 주연 : 코드 정리  -- 2022.01.05
  v.0.10 주연 : 영문 오탈자 수정 / 공유하기 팝업 스타일 추가  -- 2022.01.10
  v.0.12 태윤 : 모달 주석처리 완료  -- 2022.01.13
+ v.0.13 선미 :  .toast-body {margin 제거} .toast-footer {padding-top: vw(32) 추가  &.no-padding{ 클래스 추가 } -- 2022.01.13
 |--------------------------------------------------------------------|
 */
 
@@ -340,7 +341,6 @@
 
       .toast-body {
         padding: 0;
-        margin-bottom: vw(32);
 
         .main-title {
           font-size: vw(16);
@@ -524,6 +524,10 @@
       }
 
       .toast-footer {
+        padding-top: vw(32);
+        &.no-padding{
+          padding: 0;
+        }
         .btn {
           width: 100%;
 
@@ -630,12 +634,12 @@
         &.un-check {
           .toast-body {
             .desc {
-              margin-bottom: vw(12);
+       //      margin-bottom: vw(12);
             }
           }
 
           .main-title {
-            margin-bottom: vw(32);
+            margin-bottom: 0;
 
             span {
               color: $primary;
@@ -703,7 +707,7 @@
         }
 
         .desc {
-          margin-bottom: vw(32);
+      //    margin-bottom: vw(32);
         }
       }
 
