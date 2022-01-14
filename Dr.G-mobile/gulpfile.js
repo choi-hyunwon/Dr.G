@@ -41,7 +41,8 @@ function copyLibJs() {
         'src/js/lib/jquery.daterangepicker.js',
         'src/js/lib/jquery-ui.min.js',
         'src/js/lib/jquery.ui.touch-punch.min.js',
-        //'src/js/lib/anime.js',
+        'src/js/lib/anime.js',
+        'src/js/lib/Tocca.js',
     ];
 
     return gulp.src(sourceLib)
