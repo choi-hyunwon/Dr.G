@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="AI-wrap analysis-wrap"> <!--AI-wrap 기본 / 예외사항만 analysis-wrap-->
+            <div class="intro">
+                <div class="heading">
+                    <div class="font-body-2 font-poppins-semiBold">STEP 1</div>
+                    <div class="font-h3 font-bold">제품 촬영을 시작합니다. </div>
+                </div>
+                <div class="step-box">
+                    <div class="inner">
+                        <div class="scan-img">
+                            <img src="../../img/analysis/img-sample-scan.png" alt="사진 확인">
+                        </div>
+                        <div class="font-body-1">이 <span class="color-violet">사진을 사용</span>하시겠어요?</div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn btn-xl btn-block btn-violet">이 사진으로 분석하기</a>
+                        </div>
+                        <div class="text-link">다시 촬영하기</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+</body>
+</html>
