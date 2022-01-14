@@ -526,6 +526,8 @@
         /* 1:1 성분분석 */
         &.analysis-box{
           margin-bottom: 0;
+
+          /*제품명 입력검색*/
           .search-group{
             padding-top: vw(32);
             ul{
@@ -555,6 +557,58 @@
               }
             }
 
+          }
+
+          /*제품명 확인*/
+          .product-name{
+            background-color: $gray-200;
+            padding: vw(18);
+            text-align: center;
+            font-weight: bold;
+            border-radius: vw(12);
+            margin-bottom: vw(24);
+            + .font-h6 {
+              color: $gray-800;
+            }
+          }
+
+          /*촬영 가이드*/
+          .img{
+            &.img-guide{
+              width: vw(145);
+              height: vw(145);
+              border-radius: vw(20);
+              overflow:hidden;
+              img{
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+          .check-point{
+            .title{
+              padding-left: vw(20);
+              position: relative;
+              font-weight: 600;
+              font-size: vw(13);
+              margin-bottom: vw(8);
+              &:before{
+                content: '';
+                display: inline-block;
+                clear: both;
+                background: url("../img/common/ico-alert-circle.svg");
+                width: vw(18);
+                height: vw(18);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+            .list{
+              color: $gray-700;
+              font-size: 15px;
+            }
           }
         }
 
