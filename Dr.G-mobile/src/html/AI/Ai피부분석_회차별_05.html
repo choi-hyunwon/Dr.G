@@ -3,7 +3,7 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
-    <div class="line-chart-box">
+    <div class="line-chart-wrap">
         <div class="line-chart">
             <div class="line-chart-inner">
                 <svg preserveAspectRatio="none" viewBox="0 0 375 200">
@@ -33,21 +33,6 @@
                          5. 다음 데이터가 있는 경우, .item에 .item-new 클래스 추가
                  -->
                 <div class="chart-info">
-                    <!-- s 이전 구간 -->
-                    <div class="item item-old">
-                        <input type="range" title="range" min="0" max="100" />
-                        <div class="percentage"></div>
-                        <!--
-                            데이터 값이 0 ~ 20인 경우,
-                            line-box에 top 클래스 추가
-                        -->
-                        <div class="line-box">
-                            <div class="tooltip-box"><a href="#">0</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
-                        </div>
-                    </div>
-                    <!-- e 이전 구간 -->
-
                     <!-- s 현재 구간 -->
                     <div class="item item-top item-last">
                         <input type="range" title="range" min="0" max="100" />
@@ -73,22 +58,11 @@
                         <input type="range" title="range" min="0" max="100" />
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">100</a></div>
+                            <div class="tooltip-box"><a href="#">67</a></div>
                             <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
                         </div>
                     </div>
                     <!-- s 현재 구간 -->
-
-                    <!-- s 다음 구간 -->
-                    <div class="item item-new">
-                        <input type="range" title="range" min="0" max="100" />
-                        <div class="percentage"></div>
-                        <div class="line-box top">
-                            <div class="tooltip-box"><a href="#">0</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
-                        </div>
-                    </div>
-                    <!-- e 다음 구간 -->
                 </div>
                 <div class="x-axis">
                     <ul>
@@ -109,16 +83,8 @@
     // data
     var data = [
         {
-            "date": null,
-            "value": null,
-        },
-        {
             "date": "2021-09-01",
             "value": 0,
-        },
-        {
-            "date": null,
-            "value": null,
         },
         {
             "date": null,
@@ -150,8 +116,6 @@
 
         let ranges = {
             range1: null,
-            // range2: null,
-            // range3: null,
         };
 
         let points = {
@@ -161,9 +125,9 @@
                 y: 0
             },
             point1: {
-                x: 88,
+                x: 87,
                 y: 0
-            }
+            },
         };
 
 
@@ -208,9 +172,11 @@
         }
 
         function getInterpolatedLine() {
-            return 'M {0},{1}'.format(
+            return 'M {0},{1} L {2},{3}'.format(
                 // M
                 points.begin.x, points.begin.y,
+                // L
+                points.point1.x, points.point1.y,
             )
         }
 

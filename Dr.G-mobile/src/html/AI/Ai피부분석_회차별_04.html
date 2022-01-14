@@ -3,7 +3,7 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
-    <div class="line-chart-box">
+    <div class="line-chart-wrap">
         <div class="line-chart">
             <div class="line-chart-inner">
                 <svg preserveAspectRatio="none" viewBox="0 0 375 200">
@@ -61,33 +61,33 @@
                             <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
                         </div>
                     </div>
-                    <div class="item item-empty">
-                        <input type="range" title="range" min="0" max="100" />
-                        <div class="percentage"></div>
-                        <div class="line-box">
-                            <div class="tooltip-box"><a href="#">67</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
-                        </div>
-                    </div>
-                    <div class="item item-empty">
-                        <input type="range" title="range" min="0" max="100" />
-                        <div class="percentage"></div>
-                        <div class="line-box">
-                            <div class="tooltip-box"><a href="#">100</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
-                        </div>
-                    </div>
+<!--                    <div class="item item-empty">-->
+<!--                        <input type="range" title="range" min="0" max="100" />-->
+<!--                        <div class="percentage"></div>-->
+<!--                        <div class="line-box">-->
+<!--                            <div class="tooltip-box"><a href="#">67</a></div>-->
+<!--                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="item item-empty">-->
+<!--                        <input type="range" title="range" min="0" max="100" />-->
+<!--                        <div class="percentage"></div>-->
+<!--                        <div class="line-box">-->
+<!--                            <div class="tooltip-box"><a href="#">100</a></div>-->
+<!--                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <!-- s 현재 구간 -->
 
                     <!-- s 다음 구간 -->
-                    <div class="item item-new">
-                        <input type="range" title="range" min="0" max="100" />
-                        <div class="percentage"></div>
-                        <div class="line-box top">
-                            <div class="tooltip-box"><a href="#">0</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
-                        </div>
-                    </div>
+<!--                    <div class="item item-new">-->
+<!--                        <input type="range" title="range" min="0" max="100" />-->
+<!--                        <div class="percentage"></div>-->
+<!--                        <div class="line-box top">-->
+<!--                            <div class="tooltip-box"><a href="#">0</a></div>-->
+<!--                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <!-- e 다음 구간 -->
                 </div>
                 <div class="x-axis">
@@ -116,18 +116,18 @@
             "date": "2021-09-01",
             "value": 0,
         },
-        {
-            "date": null,
-            "value": null,
-        },
-        {
-            "date": null,
-            "value": null,
-        },
-        {
-            "date": null,
-            "value": null,
-        },
+        // {
+        //     "date": null,
+        //     "value": null,
+        // },
+        // {
+        //     "date": null,
+        //     "value": null,
+        // },
+        // {
+        //     "date": null,
+        //     "value": null,
+        // },
     ];
 
     // String formatter
@@ -151,7 +151,6 @@
         let ranges = {
             range1: null,
             range2: null,
-            // range3: null,
         };
 
         let points = {
