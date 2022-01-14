@@ -81,7 +81,9 @@
         });
 
         /* 솔루션 슬라이더 팝업 */
-        var swiper = new Swiper("._solutionSlider", {
+        new Swiper("._solutionSlider", {
+            observer: true,
+            observeParents: true,
             spaceBetween: 30,
             centeredSlides: true,
             pagination: {
