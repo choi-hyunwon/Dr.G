@@ -5,14 +5,13 @@
 */
 
 
-/*고객제안 , 스킨멘토링*/
+/*고객제안 , 스킨멘토링 , 성분분석*/
 .view-details{
   .header-details{
     /*layout.scss*/
 
   }
   .body-details{
-
     .area-title{
       padding: vw(20) vw(30) vw(32);
       text-align: center;
@@ -508,6 +507,105 @@
       }
 
     }
+
+    /*성분분석 - 질문&답*/
+    .question-box {
+          background-color: $gray-200;
+          padding: vw(48) vw(24) 0;
+          .info{
+            margin-bottom: vw(48);
+            .sub-desc{
+              padding-top: vw(12);
+              color:$gray-600;
+            }
+          }
+
+          .question-item {
+            margin-bottom: vw(48);
+            &:first-child {
+              padding-top: 0;
+            }
+
+            .question {
+              padding-bottom: vw(12);
+
+              .num {
+                display: inline-block;
+                vertical-align: middle;
+                font-family: $poppins-semiBold;
+                font-style: normal;
+                font-weight: 600;
+                font-size: vw(18);
+                line-height: vw(28);
+                color: $gray-600;
+                margin-right: vw(8);
+              }
+
+              .font-h5 {
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: bold;
+                color: $gray-800;
+              }
+            }
+
+            .answer {
+              position: relative;
+              ul {
+                li {
+                  display: block;
+                  width: 100%;
+                  background: #FFFFFF;
+                  padding: vw(14) vw(32);
+                  border-radius: vw(100);
+                  color: $gray-700;
+                  font-size: vw(15);
+                  line-height: vw(22);
+
+                  a {
+                    color: $gray-700;
+                    display: block;
+
+                    &:hover {
+                      color: $gray-700;
+                    }
+                  }
+
+                  + li {
+                    margin-top: vw(10);
+                  }
+                }
+              }
+              .delete{
+                display: none;
+              }
+              &.complete{
+                ul{
+                  li{
+                    background: $violet;
+                    a{
+                      color: $gray-fff;
+                    }
+                  }
+                }
+                .delete{
+                  display: block;
+                  padding: 0 vw(10);
+                  position: absolute;
+                  right: vw(22);
+                  top: 50%;
+                  transform: translateY(-50%);
+                  .btn-delete{
+                    width: vw(12);
+                    height: vw(12);
+                    display: inline-block;
+                  }
+                }
+              }
+            }
+          }
+        }
+
   }
   .footer-details{
     border-top: 1px solid $gray-400;
@@ -522,6 +620,10 @@
         /*오른쪽 정렬일 경우 (기본은 space-between)*/
         &.btn-next{
           justify-content: flex-end;
+        }
+        /*가운데 정렬일 경우 (기본은 space-between)*/
+        &.btn-center{
+          justify-content: center;
         }
       }
     }

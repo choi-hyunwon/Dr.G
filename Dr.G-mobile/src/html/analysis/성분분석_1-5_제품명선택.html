@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="AI-wrap analysis-wrap"> <!--AI-wrap 기본 / 예외사항만 analysis-wrap-->
+            <div class="intro">
+                <div class="heading">
+                    <div class="font-h3 font-bold">제품명 확인</div>
+                    <p class="font-body-1 select-desc">인식된 텍스트 영역 중에서 브랜드명, 제품명에 해당하는 영역을 모두 선택해주세요.</p>
+                </div>
+                <div class="step-box bg-fff">
+                    <div class="inner">
+                        <div class="scan-img">
+                            <img src="../../img/analysis/img-sample-scan.png" alt="사진 확인">
+                        </div>
+                        <div class="font-body-1 text">
+                            제품명이 인식되지 않는다면?<br>
+                            촬영 가이드를 확인하세요. <a href="#">촬영 가이드 확인</a>
+                        </div>
+                        <div class="bedge-wrap">
+                            <span class="badge badge-lg badge-lightgray">닥터지</span>
+                            <span class="badge badge-lg badge-lightgray">그린 마일드 업</span>
+                            <span class="badge badge-lg badge-lightgray">인바디</span>
+                            <span class="badge badge-lg badge-lightgray">선 에센스</span>
+                            <span class="badge badge-lg badge-lightgray">스킨케어</span>
+                            <span class="badge badge-lg badge-lightgray">아이</span>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn btn-xl btn-block btn-violet">선택 완료</a>
+                        </div>
+                        <div class="text-link">다시 촬영하기</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+</body>
+</html>

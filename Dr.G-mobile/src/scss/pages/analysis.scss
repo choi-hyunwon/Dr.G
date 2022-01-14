@@ -1,0 +1,127 @@
+/*AI-wrap 기본 / 예외사항만 analysis-wrap*/
+.analysis-wrap{
+  .intro{
+    .heading{
+      .select-desc{
+        color: $gray-600;
+        padding-top: vw(8);
+        word-break: keep-all;
+      }
+    }
+
+    /* 성분분석 step */
+    .step-box{
+      .inner{
+        font-size: 0;
+        .img{
+          margin-bottom: vw(24);
+        }
+        .step{
+          display: inline-block;
+          &.step-3{
+            margin-bottom: vw(32);
+            ul{
+              font-size: 0;
+              .item{
+                display: inline-block;
+                width: vw(101);
+                padding: vw(20) vw(4);
+                height: unset;
+                text-align: center;
+                &:nth-of-type(1){
+                  margin: 0;
+                  .ico-step-1 {
+                    @include background-img($width: 48, $height: 48, $category: 'analysis', $img: 'ico-step-1.svg');
+                  }
+                }
+                &:nth-of-type(2){
+                  margin: 0 vw(12);
+                  .ico-step-2 {
+                    @include background-img($width: 48, $height: 48, $category: 'analysis', $img: 'ico-step-2.svg');
+                  }
+                }
+                &:nth-of-type(3){
+                  margin: 0;
+                  .ico-step-3 {
+                    @include background-img($width: 48, $height: 48, $category: 'analysis', $img: 'ico-step-3.svg');
+                  }
+                }
+                .ico-step{
+                  display: block;
+                  margin: 0 auto vw(8)
+                }
+                span{
+                  font-size: vw(13);
+                }
+              }
+            }
+          }
+        }
+        .rolling-txt{
+          &.fixed{
+            font-weight: 500;
+          }
+        }
+      }
+      &.bg-fff{
+        background-color: $gray-fff;
+        .inner{
+          padding: 0;
+          .text{
+            text-align: left;
+            color: $gray-700;
+            margin-bottom: vw(32);
+            >a{
+              text-decoration: underline;
+              font-weight: 500;
+              color: $gray-700;
+              &:focus,&:active{
+                color: $gray-700;
+              }
+            }
+          }
+          .bedge-wrap{
+            margin-bottom: vw(20);
+            .badge{
+              margin: 0 vw(8) vw(12) 0;
+            }
+          }
+        }
+      }
+    }
+
+    /* 촬영하기 */
+    .shooting-box{
+      .input-search{
+        position: relative;
+        top: vw(80);
+        z-index: 1;
+        width: calc(100% - #{vw(48)});
+        margin: 0 auto;
+      }
+      .forward{
+        .tip{
+          margin-top: vw(128);
+          padding-top: vw(24);
+          margin-bottom: vw(382);
+        }
+        .frame{
+          top: 0;
+        }
+        .box{
+          .btn-wrap{
+            .btn-shooter{
+              background: $violet;
+              .icon-camera {
+                @include background-img($width: 32, $height: 32, $category: 'analysis', $img: 'ico-camera.svg');
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+

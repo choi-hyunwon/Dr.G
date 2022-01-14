@@ -23,7 +23,8 @@
  v.0.21 선미 : ico-plus-lg, ico-plus-round추가 -- 2021.01.06
  v.0.22 선미 : 다운로드/공유하기 아이콘 추가 -- 2021.01.08
  v.0.23 태윤 : ico-arrow-down-sm 추가
- v.0.24 선미 : .ico-ai 추가
+ v.0.24 선미 : .ico-ai 추가 --2021.01.13
+ v.0.25 선미 : .ico-close-xs -> white 추가 --2021.01.14
 |--------------------------------------------------------------------|
 */
 .icon {
@@ -89,6 +90,9 @@
 .ico-close-xs {
   &.gray {
     @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-close-xs-gray.svg');
+  }
+  &.white{
+    @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-close-xs-white.svg');
   }
 }
 

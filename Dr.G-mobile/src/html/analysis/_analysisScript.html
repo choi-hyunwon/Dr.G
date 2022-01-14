@@ -1,0 +1,25 @@
+<script>
+    $(document).ready(function () {
+
+        // 질문 클릭 시
+        let answer =  $('.answer')
+        let list = $(this).find('li');
+
+         answer.each(function (){
+            list.on('click',function (){
+                $(this).siblings().hide()
+                $(this).parents('.answer').addClass('complete')
+            })
+
+            $('.delete').on('click',function (){
+                $(this).parent().removeClass('complete')
+                $(this).parent().find('li').show()
+            })
+        })
+        if(answer.hasClass('complete')){
+            list.hide();
+        } else {
+            list.show()
+        }
+    });
+</script>
