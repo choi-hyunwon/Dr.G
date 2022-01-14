@@ -59,7 +59,7 @@ front.common = (function () {
             });
         })
 
-        /*modal-select-close*/
+        /* modal-select-close */
         $('._toast-popup .select-list > .list').on('click', function () {
             let Popup = $(this).parents('.toast-dim');
 
@@ -81,7 +81,7 @@ front.common = (function () {
 
         })
 
-        /*text-change-text*/
+        /* text-change-text */
         $(document).ready(function () {
             let list = $('._toast-popup.text .select-list > .list');
             list.on("click", function (e) {
@@ -103,7 +103,7 @@ front.common = (function () {
             });
         });
 
-        /*text-change-age*/
+        /* text-change-age */
         $(document).ready(function () {
             let list = $('._toast-popup.age .select-list > .list');
             list.on("click", function (e) {
@@ -124,6 +124,14 @@ front.common = (function () {
                 ChangeText();
             });
         });
+
+        /* vh 이슈 수정 */
+        let vh = window.innerHeight * 0.01
+        document.documentElement.style.setProperty('--vh', `${vh}px`)
+        window.addEventListener('resize', () => {
+            let vh = window.innerHeight * 0.01
+            document.documentElement.style.setProperty('--vh', `${vh}px`)
+        })
     }
 
     var tab = function () {

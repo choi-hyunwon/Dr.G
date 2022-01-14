@@ -55,34 +55,38 @@
           margin-bottom: vw(24);
         }
 
-        .rolling-txt {
+        .rolling-txt-box {
           display: flex;
-          align-items: center;
           justify-content: center;
+
+          .fixed-txt {
+            color: $gray-800;
+            font-size: vw(16);
+            font-weight: 500;
+            line-height: vw(24);
+            height: vw(24);
+          }
+        }
+
+        .rolling-txt {
           color: $gray-800;
           font-size: vw(16);
+          font-weight: 500;
           line-height: vw(24);
+          height: vw(24);
+          margin-right: vw(4);
+          margin-left: 0;
+
+          .swiper-slide {
+            height: vw(24);
+          }
 
           .rolling {
-            height: vw(24);
-            overflow: hidden;
-
             span {
               display: block;
               text-align: right;
               font-size: vw(16);
               line-height: vw(24);
-              animation-name: scroller;
-              -webkit-animation-name: scroller;
-              animation-duration: 6s;
-              -webkit-animation-duration: 6s;
-              animation-iteration-count: infinite;
-              -webkit-animation-iteration-count: infinite;
-              animation-timing-function: ease-in-out;
-              -webkit-animation-timing-function: ease-in-out;
-              animation-delay: 1s;
-              -webkit-animation-delay: 1s;
-              margin-right: vw(4);
             }
           }
         }
@@ -271,6 +275,7 @@
           .font-h6 {
             color: #fff;
             margin-bottom: vw(16);
+            font-weight: 500;
           }
 
           .btn-wrap {
@@ -1039,6 +1044,14 @@
     }
 
     .analysis-result {
+      .tab {
+        .item {
+          a {
+            font-family: $font;
+          }
+        }
+      }
+
       /* 분석 */
       .admin-area {
         background-color: $gray-200;
@@ -1178,6 +1191,7 @@
                   border-radius: 50%;
                   background-color: #fff;
                   border: vw(2) solid $gray-800;
+                  z-index: 1;
                 }
 
                 .txt {
@@ -1757,12 +1771,14 @@
   /* 로딩 */
   .loading {
     height: calc(100vh - #{vw(60)});
+    height: calc((var(--vh, 1vh) * 100) - #{vw(60)});
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding-bottom: vw(60);
+    overflow: hidden;
 
     .img {
       display: block;
@@ -1779,6 +1795,10 @@
     .font-h6 {
       color: $gray-700;
       font-weight: 500;
+
+      .color-primary {
+        font-weight: bold;
+      }
     }
   }
 
@@ -1882,6 +1902,7 @@
 
             a {
               color: #fff;
+              font-weight: 500;
             }
           }
         }
@@ -1903,8 +1924,10 @@
 
   /* 최하단 네비게이션 */
   .footer-details {
-    border-top: vw(1) solid $gray-400;
+    position: relative;
+    //border-top: vw(1) solid $gray-400;
     padding: vw(32) vw(20) vw(48);
+    z-index: 5;
 
     &.bg-dark {
       background-color: $gray-800 !important;

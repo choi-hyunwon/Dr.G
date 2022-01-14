@@ -1,64 +1,251 @@
-.AI-wrap {
-  .chart-box {
-    height: vw(366);
-    background-color: $gray-200;
+$slider-thumb-size: #{vw(20)};
+$slider-height: #{vw(200)};
+$slider-width: #{vw(100)};
 
-    .chart {
-      width: 100%;
-      height: 200px;
-      //resize: both;
-      //font-family: $poppins-semiBold;
-    }
+.line-chart-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include background-img ($width: 375, $height: 338, $category: 'AI', $img: 'bg-line-chart.svg');
 
-    .number {
-      display: inline-block;
-      font-family: $poppins-semiBold;
-      font-size: 15px;
-      color: #fff;
-      transform: translateY(-2px);
-    }
+  .line-chart {
+    position: relative;
+    display: block;
+    padding-top: vw(59);
 
-    text {
-      white-space: break-spaces;
-      font-family: $font;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 16px;
-      color: $gray-800;
+    .line-chart-inner {
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      svg {
+        z-index: 1;
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: vw(375);
+        height: vw(200);
+        fill: none;
+        stroke-width: 6;
+
+        .line {
+          stroke: #F7ED7D;
+        }
+      }
+
+      .chart-info {
+        position: relative;
+        z-index: 5;
+
+        .item {
+          display: inline-block;
+          width: $slider-width;
+          position: relative;
+          height: vw(200);
+
+          input {
+            display: none;
+          }
+
+          &.item-last {
+            .line-box {
+              .tooltip-box {
+                background-color: $blue;
+
+                &::after {
+                  @include background-img ($width: 7, $height: 5, $category: 'AI', $img: 'ico-chart-polygon-blue.svg');
+                }
+              }
+
+              &::before {
+                background-color: $blue;
+              }
+            }
+          }
+
+          &.item-empty {
+            .line-box {
+              display: none;
+            }
+          }
+
+          &.item-top {
+            .line-box {
+              .tooltip-box {
+                bottom: vw(48);
+              }
+
+              .label-box {
+                bottom: vw(10);
+              }
+            }
+          }
+
+          &.item-old, &.item-new {
+            display: none;
+          }
+
+          .line-box {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: vw(35);
+            height: vw(85);
+            text-align: center;
+            z-index: 2;
+
+            // bullet
+            &::before {
+              content: '';
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              bottom: vw(-6);
+              width: vw(12);
+              height: vw(12);
+              background: $gray-500;
+              border: vw(4) solid #FFFFFF;
+              box-sizing: border-box;
+              box-shadow: 0 vw(2.66667) vw(2.66667) rgba(34, 34, 34, 0.06);
+              border-radius: 50%;
+            }
+
+            // tooltip
+            .tooltip-box {
+              position: absolute;
+              display: inline-block;
+              bottom: vw(14);
+              left: 50%;
+              transform: translateX(-50%);
+              height: vw(30);
+              padding: 0 vw(8);
+              background-color: $gray-600;
+              box-shadow: vw(4) vw(8) vw(12) rgba(34, 34, 34, 0.12);
+              border-radius: vw(100);
+              font-family: $poppins-semiBold;
+              color: #fff;
+              text-align: center;
+              font-size: vw(15);
+              line-height: vw(32);
+
+              a {
+                color: #fff;
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: vw(28);
+                @include background-img ($width: 6, $height: 5, $category: 'AI', $img: 'ico-chart-polygon.svg');
+              }
+            }
+
+            // type label
+            .label-box {
+              position: absolute;
+              display: inline-block;
+              text-align: center;
+              min-width: vw(33);
+              bottom: vw(-38);
+              left: 50%;
+              transform: translateX(-50%);
+              font-weight: 500;
+              font-size: vw(12);
+              line-height: vw(16);
+              color: $gray-800;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+
+      .x-axis {
+        position: absolute;
+        width: 100%;
+        height: vw(18);
+        left: 0;
+        bottom: vw(-30);
+        padding: 0 vw(35);
+
+        ul {
+          display: flex;
+          width: 100%;
+          justify-content: flex-start;
+
+          li {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: $slider-width;
+            height: 100%;
+            font-family: $poppins-medium;
+            font-style: normal;
+            font-weight: 500;
+            font-size: vw(13);
+            line-height: vw(18);
+            text-align: center;
+            color: $gray-600;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .chart-nav {
+        position: absolute;
+        width: 100%;
+        height: vw(18);
+        bottom: vw(-33.5);
+        left: 0;
+
+        .btn-nav {
+          position: absolute;
+          display: block;
+          width: vw(12);
+          height: vw(12);
+          top: 0;
+
+          &.left {
+            left: vw(21);
+          }
+
+          &.right {
+            right: vw(21);
+          }
+
+          &.disabled {
+            cursor: default;
+
+            .icon {
+              background-image: url(../img/AI/ico-chart-nav-disabled.svg);
+            }
+
+            &.left {
+              .icon {
+                transform: rotate(180deg);
+              }
+            }
+          }
+
+          .icon {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+
+          .ico-chart-nav-right {
+            @include background-img ($width: 12, $height: 12, $category: 'AI', $img: 'ico-chart-nav-right.svg');
+          }
+
+          .ico-chart-nav-left {
+            @include background-img ($width: 12, $height: 12, $category: 'AI', $img: 'ico-chart-nav-left.svg');
+          }
+        }
+      }
     }
   }
 }
-
-.chartScroll {
-  overflow-x: auto;
-}
-
-//.scaleable-wrapper {
-//  padding: 20px;
-//  resize: both;
-//  position: relative;
-//  background: #666;
-//  height: 500px;
-//}
-
-g[role="tooltip"] {
-  foreignObject {
-  }
-  > g {
-    fill: #BBBBBB;
-    fill-opacity: 1;
-    stroke: none;
-    stroke-width: 0;
-  }
-}
-
-.ui-resizable-se {
-  width: 10px;
-  height: 10px;
-  background: orange;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
