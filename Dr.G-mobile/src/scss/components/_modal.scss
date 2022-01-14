@@ -10,10 +10,14 @@
  v.0.8 태윤 : .alert-popup html 구조변경으로 인한 css 수정 -- 2021.12.30
  v.0.9 주연 : 코드 정리  -- 2022.01.05
  v.0.10 주연 : 영문 오탈자 수정 / 공유하기 팝업 스타일 추가  -- 2022.01.10
+ v.0.12 태윤 : 모달 주석처리 완료  -- 2022.01.13
+ v.0.13 선미 :  .toast-body {margin 제거} .toast-footer {padding-top: vw(32) 추가  &.no-padding{ 클래스 추가 } -- 2022.01.13
+ v.0.14 선미 :  색상값 공통화 작업 -- 2022.01.13
 |--------------------------------------------------------------------|
 */
 
 
+/*부트스트랩-모달*/
 .modal {
   word-break: keep-all;
 
@@ -70,7 +74,7 @@
               color: $gray-900;
               border-left: vw(1) solid $gray-300;
             }
-
+            /*버튼 한개일시*/
             &.one {
               width: 100%;
               color: $gray-900;
@@ -93,6 +97,7 @@
   }
 }
 
+/*풀 페이지 팝업*/
 .full-popup {
   z-index: 1050;
   display: none;
@@ -237,6 +242,7 @@
   }
 }
 
+/*슬라이드 팝업*/
 .toast-dim {
   position: fixed;
   top: 0;
@@ -249,6 +255,7 @@
   outline: 0;
   background-color: rgba(33, 37, 41, 0.5);
 
+  /*슬라이드 팝업 열릴때 애니메이션*/
   &.show {
     display: block;
 
@@ -271,6 +278,7 @@
     }
   }
 
+  /*슬라이드 팝업 닫힐때 애니메이션*/
   &.hide {
     display: none;
 
@@ -293,6 +301,7 @@
     }
   }
 
+  /*슬라이드 팝업 default값*/
   .toast-popup {
     z-index: 1050;
     position: relative;
@@ -333,7 +342,6 @@
 
       .toast-body {
         padding: 0;
-        margin-bottom: vw(32);
 
         .main-title {
           font-size: vw(16);
@@ -377,8 +385,9 @@
         }
 
         span {
-          color: $blue;
-          font-weight: 700;
+        //  color: $blue;
+        //  color: red;
+       //   font-weight: 700;
         }
 
         .text-btn {
@@ -499,7 +508,6 @@
               span {
                 font-weight: 500;
                 color: $gray-600;
-
               }
             }
           }
@@ -514,9 +522,57 @@
             margin-left: vw(16);
           }
         }
+
+        /* 1:1 성분분석 */
+        &.analysis-box{
+          margin-bottom: 0;
+          .search-group{
+            padding-top: vw(32);
+            ul{
+              &.list{
+                font-size: vw(13);
+                color: $gray-700;
+                li{
+                  margin-bottom: vw(20);
+                  &:last-of-type{
+                    margin-bottom: 0;
+                  }
+                }
+              }
+              &.desc{
+                color: $gray-500;
+                font-weight: 500;
+                font-size: vw(16);
+                &.notice{
+                  p{
+                    &:first-of-type{
+                      color: $gray-800;
+                      font-weight: 500;
+                      font-size: vw(16);
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+        }
+
+        /* 고객제안 */
+        &.suggestion-box{
+          .input-box{
+            padding-top: vw(24);
+            margin-bottom: vw(24);
+          }
+        }
+
       }
 
       .toast-footer {
+        padding-top: vw(32);
+        &.no-padding{
+          padding: 0;
+        }
         .btn {
           width: 100%;
 
@@ -537,6 +593,7 @@
         }
       }
 
+      /*슬라이드 - 제목있음*/
       &.title {
         .toast-body {
           &.bg-doctor {
@@ -550,13 +607,13 @@
             text-align: left;
             margin-bottom: vw(6);
 
-            span {
+         /*   span {
               color: $primary;
 
               &.color-blue {
                 color: $blue;
               }
-            }
+            }*/
           }
 
           .question {
@@ -565,6 +622,7 @@
             font-weight: 700;
             line-height: vw(28);
             letter-spacing: -0.005em;
+            color: $gray-800;
           }
 
           .desc {
@@ -613,6 +671,7 @@
         }
       }
 
+      /*슬라이드 - 제목없음*/
       &.no-title {
         .toast-body {
           padding-top: vw(8);
@@ -621,20 +680,20 @@
         &.un-check {
           .toast-body {
             .desc {
-              margin-bottom: vw(12);
+       //      margin-bottom: vw(12);
             }
           }
 
           .main-title {
-            margin-bottom: vw(32);
+            margin-bottom: 0;
 
-            span {
+       /*     span {
               color: $primary;
             }
 
             .color-blue {
               color: $blue !important;
-            }
+            }*/
           }
         }
 
@@ -658,11 +717,15 @@
 
                 &.active {
                   span {
-                    color: $primary;
                     font-weight: 700;
-
+                    &.primary{
+                      color: $primary;
+                    }
                     &.blue {
                       color: $blue;
+                    }
+                    &.violet{
+                      color: $violet;
                     }
                   }
 
@@ -694,10 +757,11 @@
         }
 
         .desc {
-          margin-bottom: vw(32);
+      //    margin-bottom: vw(32);
         }
       }
 
+      /*슬라이드 - 네비게이션*/
       &.navi {
         padding: 0;
 
@@ -716,10 +780,10 @@
             padding: 0 vw(20);
             margin-bottom: vw(12);
 
-            span {
+          /*  span {
               color: $primary;
               font-weight: 700;
-            }
+            }*/
 
             + .agree-area-list {
               padding-top: vw(20);
@@ -753,6 +817,7 @@
         }
       }
 
+      /*슬라이드 - 평점*/
       &.grade {
         padding: vw(24) vw(24) vw(32);
 

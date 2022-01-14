@@ -14,6 +14,7 @@
              .btn &.btn-icon{버튼 내부 아이콘있는경우 클래스 추가(여백 컨트롤)}-- 2021.12.27
  v.0.9 선미 : .page-btn-wrap {   font-weight: 500}추가 -- 2022.01.03
  v.0.10 주연 : .btn-light / .btn-md 추가 -- 2022.01.07
+ v.0.11 선미 : .btn-violet 추가 -- 2022.01.13
 |--------------------------------------------------------------------|
 */
 .btn {
@@ -161,6 +162,22 @@
 
     &:active {
       background-color: $blue !important;
+    }
+  }
+
+  &.btn-violet {
+    background-color: $violet;
+    border-color: $violet;
+    color: $gray-fff;
+
+    &:focus, &:hover {
+      background-color: $violet;
+      border-color: $violet;
+      color: $gray-fff;
+    }
+
+    &:active {
+      background-color: $violet !important;
     }
   }
 

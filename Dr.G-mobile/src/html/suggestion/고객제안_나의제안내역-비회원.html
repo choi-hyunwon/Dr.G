@@ -93,12 +93,12 @@
                     <div class="opinion">
                         <div class="section-input">
                             <input type="text" title="검색" class="form-control" placeholder="제목을 입력해주세요">
-                            <select title="select" class="custom-select">
-                                <option selected disabled>유형을 선택하세요.</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                            <div class="select-popup">
+                                <!-- Button trigger modal -->
+                                <a href="#" class="btn-select _toast-popup-open text">
+                                    <span class="text">유형을 선택하세요.</span>
+                                </a>
+                            </div>
                             <div class="input-group">
                                 <textarea title="textarea" class="form-control form-control-lg" placeholder="불편함을 느꼈거나 바라는 점이 있다면 들려주세요."></textarea>
                             </div>
@@ -235,11 +235,16 @@
                     <div class="register-box">
                         <div class="box">
                             <div class="img"><img src="../../img/suggestion/img-lock.svg" alt=""></div>
-                            <div class="font-h4 font-bold">로그인 없이 제안 의견을 <br/>작성하셨나요?</div>
-                            <div class="font-body-1">나의 제안내역을 확인하시려면 <br/>로그인을 해주세요.</div>
-                            <div class="btn-wrap"><a href="#" class="btn btn-lg btn-black">로그인 하기</a></div>
+                            <div class="font-h4 font-bold">나의 제안내역을 확인하시려면<br>로그인을 해주세요.</div>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-lg btn-black">로그인 하기</a>
+                                <div class="text-btn">
+                                    <a href="#">비회원으로 작성하셨나요?</a>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="box">
+                <!--        <div class="box">
                             <div class="img"><img src="../../img/suggestion/img-lock2.svg" alt=""></div>
                             <div class="font-h4 font-bold">비회원으로 제안 의견을<br/>등록하셨나요?</div>
                             <div class="font-body-1">의견 작성 시 입력하신 휴대폰 번호와<br/>비밀번호 4자리를 입력해주세요.</div>
@@ -254,7 +259,7 @@
                                 <input type="text" title="검색" class="form-control" maxlength="4" placeholder="비밀번호를 4자리를 입력해주세요.">
                             </div>
                             <div class="btn-wrap"><a href="#" class="btn btn-lg btn-primary">확인</a></div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <!-- s 나의 제안 내역 컨텐츠 -->
@@ -280,5 +285,8 @@
     <!-- e footer -->
 </div>
 @@include('./_subMainScript.html')
+
+<!-- modal-->
+@@include('./select-popup-type.html')
 </body>
 </html>
