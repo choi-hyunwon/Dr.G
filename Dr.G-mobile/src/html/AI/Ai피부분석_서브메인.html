@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="showcase-wrap">
+            <div class="showcase carousel">
+                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/ON+.png"></div>
+                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/ON-.png"></div>
+                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/DN+.png"></div>
+                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/DN-.png"></div>
+                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/DS+.png"></div>
+                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/DS-.png"></div>
+                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/OS+.png"></div>
+                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/OS-.png"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // https://www.jqueryscript.net/slider/3D-Cover-Flow-Style-Image-Carousel-Plugin-with-jQuery-Cloud-9-Carousel.html
+    $(function () {
+        var showcase = $(".showcase")
+        showcase.Cloud9Carousel({
+            xOrigin: null,
+            yOrigin: 80,
+            xRadius: 230,
+            yRadius: 120,
+            autoPlay: true,
+            bringToFront: true,
+            onLoaded: function () {
+                showcase.css('visibility', 'visible')
+                showcase.css('display', 'none')
+                showcase.fadeIn(1500)
+            },
+            farScale: 0.5,
+            speed: 4,
+            frontItemClass:null,
+            itemClass: 'item',
+        })
+        showcase.data("carousel").itemsRotated();
+        showcase.data("carousel").floatIndex();
+    })
+</script>
+<style>
+    /*.item {*/
+    /*    width: 160px;*/
+    /*    height: 160px;*/
+    /*}*/
+
+    /*img {*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*}*/
+
+    /*#showcase {*/
+    /*    width: 100%;*/
+    /*    height: 460px;*/
+    /*}*/
+
+    #showcase img {
+        cursor: pointer;
+    }
+</style>
+</body>
+</html>

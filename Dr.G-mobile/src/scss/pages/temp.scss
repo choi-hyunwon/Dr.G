@@ -4,7 +4,7 @@ $slider-width: #{vw(100)};
   position: relative;
   display: flex;
   flex-direction: column;
-  @include background-img ($width: 375, $height: 338, $category: 'AI', $img: 'bg-line-chart.svg');
+  @include background-img($width: 375, $height: 338, $category: 'AI', $img: 'bg-line-chart.svg');
 
   .line-chart {
     position: relative;
@@ -51,7 +51,7 @@ $slider-width: #{vw(100)};
                 background-color: $blue;
 
                 &::after {
-                  @include background-img ($width: 7, $height: 5, $category: 'AI', $img: 'ico-chart-polygon-blue.svg');
+                  @include background-img($width: 7, $height: 5, $category: 'AI', $img: 'ico-chart-polygon-blue.svg');
                 }
               }
 
@@ -102,7 +102,7 @@ $slider-width: #{vw(100)};
               width: vw(12);
               height: vw(12);
               background: $gray-500;
-              border: vw(4) solid #FFFFFF;
+              border: vw(4) solid #ffffff;
               box-sizing: border-box;
               box-shadow: 0 vw(2.66667) vw(2.66667) rgba(34, 34, 34, 0.06);
               border-radius: 50%;
@@ -136,7 +136,7 @@ $slider-width: #{vw(100)};
                 left: 50%;
                 transform: translateX(-50%);
                 top: vw(28);
-                @include background-img ($width: 6, $height: 5, $category: 'AI', $img: 'ico-chart-polygon.svg');
+                @include background-img($width: 6, $height: 5, $category: 'AI', $img: 'ico-chart-polygon.svg');
               }
             }
 
@@ -249,18 +249,19 @@ $slider-width: #{vw(100)};
           }
 
           .ico-chart-nav-right {
-            @include background-img ($width: 12, $height: 12, $category: 'AI', $img: 'ico-chart-nav-right.svg');
+            @include background-img($width: 12, $height: 12, $category: 'AI', $img: 'ico-chart-nav-right.svg');
           }
 
           .ico-chart-nav-left {
-            @include background-img ($width: 12, $height: 12, $category: 'AI', $img: 'ico-chart-nav-left.svg');
+            @include background-img($width: 12, $height: 12, $category: 'AI', $img: 'ico-chart-nav-left.svg');
           }
         }
       }
     }
   }
+
   &.season {
-    @include background-img ($width: 375, $height: 404, $category: 'AI', $img: 'bg-line-chart-season.svg');
+    @include background-img($width: 375, $height: 404, $category: 'AI', $img: 'bg-line-chart-season.svg');
 
     .line-chart {
       .line-chart-inner {
@@ -298,5 +299,34 @@ $slider-width: #{vw(100)};
         }
       }
     }
+  }
+}
+
+
+
+
+.showcase-wrap {
+  position: relative;
+  width: vw(375);
+  height: vw(400);
+  overflow: hidden;
+
+  .showcase {
+    position: absolute;
+    width: vw(439);
+    height: vw(346);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.cloud9-item {
+  width: vw(160);
+  height: vw(160);
+
+  img {
+    width: 100%;
+    height: 100%;
   }
 }
