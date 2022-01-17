@@ -55,9 +55,8 @@
 <!--grade script-->
 <script>
     $("._star").on('click', function () {
-        var idx = $(this).index();
-        console.log($(this).index());
         $("._star").removeClass("on");
+        var idx = $(this).index();
         for (var i = 0; i <= idx; i++) {
             $("._star").eq(i).addClass("on");
         }
