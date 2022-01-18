@@ -1832,6 +1832,15 @@
         text-align: center;
       }
     }
+
+    .btn-wrap {
+      position: absolute;
+      bottom: vw(32);
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 vw(24);
+    }
   }
 
   /* 비회원 정보입력 */
@@ -1903,6 +1912,10 @@
             a {
               color: #fff;
               font-weight: 500;
+
+              .font-poppins {
+                font-family: $poppins-medium;
+              }
             }
           }
         }

@@ -602,6 +602,12 @@ data.story = {
             url: '닥터지스토리_스킨리포트_상세페이지',
             category: 'story',
             page: '닥터지스토리_스킨리포트_상세페이지'
+        },
+        {
+            stateClass: 'complete',
+            url: '닥터지스토리_뷰티클래스',
+            category: 'story',
+            page: '닥터지스토리_뷰티클래스'
         }
     ]
 }

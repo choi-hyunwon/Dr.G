@@ -74,5 +74,26 @@
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
+<script>
+    let stepScroll = 0;
+    let tab = $('._tab');
+
+    $(window).scroll(function () {
+        if (tab.length) {
+            let st = $(this).scrollTop();
+            if (st >= stepScroll) {
+                //console.log("DOWN");
+            } else {
+                //console.log("UP");
+                tab.show().addClass('fixed')
+                if (window.pageYOffset <= 0) {
+                    tab.removeClass('fixed')
+                }
+            }
+            //Updates scroll position
+            stepScroll = st;
+        }
+    });
+</script>
 </body>
 </html>

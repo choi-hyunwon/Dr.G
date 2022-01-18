@@ -189,22 +189,23 @@ front.common = (function () {
     var headerDetails = function () {
         let detailsScroll = 0;
         $(window).scroll(function (event) {
-            if ($('.container').find('._static').length == false) {
-                let st = $(this).scrollTop();
-                if (st >= detailsScroll) {
-                    // console.log("DOWN");
-                    $('.header-details').hide()
+            let st = $(this).scrollTop();
 
-                } else {
-                    // console.log("UP");
-                    $('.header-details').show().addClass('fixed')
-                    if (window.pageYOffset == 0) {
-                        $('.header-details').removeClass('fixed')
-                    }
+            if (st > detailsScroll) {
+                //console.log("DOWN");
+                if (window.pageYOffset > 60){
+                    // $('.header').hide()
                 }
-                //Updates scroll position
-                detailsScroll = st;
+            } else {
+                //console.log("UP");
+                if (window.pageYOffset > 60){
+                    $('.header-details').addClass('fixed')
+                } else {
+                    $('.header-details').removeClass('fixed')
+                }
             }
+            //Updates scroll position
+            detailsScroll = st;
         });
     }
 
