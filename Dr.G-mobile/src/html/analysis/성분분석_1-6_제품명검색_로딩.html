@@ -19,6 +19,9 @@
                     <div class="inner">
                         <div class="scan-img">
                             <img src="../../img/analysis/img-sample-scan.png" alt="사진 확인">
+                            <!--스캔 텍스트 영역 / 선택전 빨강색(selection) 선택후 파란색(+active)-->
+                            <span class="selection" style="top: 10px; left: 10px;"></span>
+                            <span class="selection active" style="  top: 20px; left: 20px;"></span>
                         </div>
                         <div class="font-body-1 text">
                             제품명이 인식되지 않는다면?<br>
@@ -41,12 +44,12 @@
             </div>
             <div class="scanning-completed">
                 <div class="content">
-                    <div class="img"><img src="../../img/AI/img-check.svg" alt="완료"></div>
-                    <div class="font-h5 font-bold">
-                        더욱 <span class="color-primary">정밀한 분석</span>을 위해<br>
-                        설문이 진행됩니다.
+                    <div class="smile-graph">
+                        <span class="value"></span>
                     </div>
                 </div>
+              <!--  .smile-graph > .value {transform: rotateZ(-180deg)}로 그래프값 조절
+                (-180deg - 기본-> -360 deg 가까울수록 그래프가채워짐)-->
             </div>
         </div>
     </div>
