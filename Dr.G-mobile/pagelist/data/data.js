@@ -358,60 +358,6 @@ data.analysis = {
         },
         {
             stateClass: 'waiting',
-            url: '성분분석_1-3_사진확인',
-            category: 'analysis',
-            page: '성분분석_1-3_사진확인'
-        },
-        {
-            stateClass: 'waiting',
-            url: '성분분석_1-5_제품명선택',
-            category: 'analysis',
-            page: '성분분석_1-5_제품명선택'
-        },
-        {
-            stateClass: 'waiting',
-            url: '성분분석_1-5_제품명선택2',
-            category: 'analysis',
-            page: '성분분석_1-5_제품명선택2'
-        },
-        {
-            stateClass: 'waiting',
-            url: '성분분석_1-5_촬영가이드',
-            category: 'analysis',
-            page: '성분분석_1-5_촬영가이드'
-        },
-        {
-            stateClass: 'waiting',
-            url: '성분분석_1-5_제품명확인_안내메세지',
-            category: 'analysis',
-            page: '성분분석_1-5_제품명확인_안내메세지'
-        },
-        {
-            stateClass: 'waiting',
-            url: '성분분석_헤어제품_첫검색',
-            category: 'analysis',
-            page: '성분분석_헤어제품_첫검색'
-        },
-        {
-            stateClass: 'waiting',
-            url: '성분분석_Loading',
-            category: 'analysis',
-            page: '성분분석_Loading'
-        },
-        {
-            stateClass: 'waiting',
-            url: '성분분석_1-6_제품명검색_확인',
-            category: 'analysis',
-            page: '성분분석_1-6_제품명검색_확인'
-        },
-        {
-            stateClass: 'waiting',
-            url: '성분분석_1-6_제품명검색_확인_제품이없는경우 ',
-            category: 'analysis',
-            page: '성분분석_1-6_제품명검색_확인_제품이없는경우 '
-        },
-        {
-            stateClass: 'waiting',
             url: '성분분석_1-2_제품명입력_검색_1',
             category: 'analysis',
             page: '성분분석_1-2_제품명입력_검색_1'
@@ -430,9 +376,111 @@ data.analysis = {
         },
         {
             stateClass: 'waiting',
+            url: '성분분석_1-3_사진확인',
+            category: 'analysis',
+            page: '성분분석_1-3_사진확인'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_1-4_제품스캔',
+            category: 'analysis',
+            page: '성분분석_1-4_제품스캔'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_1-5_제품명선택',
+            category: 'analysis',
+            page: '성분분석_1-5_제품명선택'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_1-5_촬영가이드',
+            category: 'analysis',
+            page: '성분분석_1-5_촬영가이드'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_1-5_제품명확인_안내메세지',
+            category: 'analysis',
+            page: '성분분석_1-5_제품명확인_안내메세지'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_1-5_제품명확인_안내메세지2',
+            category: 'analysis',
+            page: '성분분석_1-5_제품명확인_안내메세지2'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_1-6_제품명검색_로딩',
+            category: 'analysis',
+            page: '성분분석_1-6_제품명검색_로딩'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_1-6_제품명검색_확인',
+            category: 'analysis',
+            page: '성분분석_1-6_제품명검색_확인'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_1-6_제품명검색_확인_제품이없는경우',
+            category: 'analysis',
+            page: '성분분석_1-6_제품명검색_확인_제품이없는경우'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_1-6_제품등록제안',
+            category: 'analysis',
+            page: '성분분석_1-6_제품등록제안'
+        },
+        {
+            stateClass: 'waiting',
             url: '성분분석_1-6_제품등록완료',
             category: 'analysis',
             page: ':성분분석_1-6_제품등록완료'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_Loading',
+            category: 'analysis',
+            page: '성분분석_Loading'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_헤어제품_첫검색',
+            category: 'analysis',
+            page: '성분분석_헤어제품_첫검색'
+        },
+        {
+            stateClass: 'working',
+            url: '성분분석_분석결과_상세_스킨케어',
+            category: 'analysis',
+            page: '성분분석_분석결과_상세_스킨케어'
+        },
+        {
+            stateClass: 'working',
+            url: '성분분석_분석결과_상세_헤어제품',
+            category: 'analysis',
+            page: '성분분석_분석결과_상세_헤어제품'
+        },
+        {
+            stateClass: 'working',
+            url: '성분분석_분석결과_상세_일치율팝업',
+            category: 'analysis',
+            page: '성분분석_분석결과_상세_일치율팝업'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_수정요청_입력란',
+            category: 'analysis',
+            page: '성분분석_수정요청_입력란'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_수정요청_입력란_완료팝업',
+            category: 'analysis',
+            page: '성분분석_수정요청_입력란_완료팝업'
         },
     ]
 }

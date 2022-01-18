@@ -25,6 +25,7 @@
  v.0.23 태윤 : ico-arrow-down-sm 추가
  v.0.24 선미 : .ico-ai 추가 --2021.01.13
  v.0.25 선미 : .ico-close-xs -> white 추가 --2021.01.14
+ v.0.26 선미 : .ico-check-violet 추가 --2021.01.18
 |--------------------------------------------------------------------|
 */
 .icon {
@@ -155,6 +156,14 @@
   @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-check-green.png');
 }
 
+.ico-check-blue {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-check-blue.svg');
+}
+
+.ico-check-violet {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-check-violet.png');
+}
+
 .ico-heart {
   @include background-img($width: 14, $height: 14, $category: 'common', $img: 'ico-heart.svg');
 }
@@ -233,10 +242,6 @@
 
 .ico-lock {
   @include background-img($width: 13, $height: 16, $category: 'common', $img: 'ico-lock.svg');
-}
-
-.ico-check-blue {
-  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-check-blue.svg');
 }
 
 .ico-star {
