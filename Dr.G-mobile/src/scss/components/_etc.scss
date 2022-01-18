@@ -3,6 +3,7 @@
  v.0.1 주연 : 최초 작업 -- 2021.12.14
  v.0.2 주연 : vw 적용 -- 2021.12.14
  v.0.3 주연 : body.scrOff 추가 -- 2022.01.07
+ v.0.4 선미 : body.scrOff > touch-action 추가 -- 2022.01.18
 |--------------------------------------------------------------------|
 */
 .list-with-dot {
@@ -33,5 +34,6 @@
 }
 
 body.scrOff {
-  overflow: hidden;
+  overflow:hidden !important;
+  touch-action:none;
 }

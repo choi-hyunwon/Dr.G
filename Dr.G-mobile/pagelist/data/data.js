@@ -370,6 +370,12 @@ data.analysis = {
         },
         {
             stateClass: 'waiting',
+            url: '성분분석_1-5_제품명선택2',
+            category: 'analysis',
+            page: '성분분석_1-5_제품명선택2'
+        },
+        {
+            stateClass: 'waiting',
             url: '성분분석_1-5_촬영가이드',
             category: 'analysis',
             page: '성분분석_1-5_촬영가이드'
