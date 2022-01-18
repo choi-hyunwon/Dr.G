@@ -439,19 +439,19 @@
             &.value{ /*실제 그래프*/
               z-index: 1;
               border-color: $blue;
-              transform:rotateZ(-240deg);
+              transform:rotateZ(-360deg);
               animation: chartAni4 1s;
             }
           }
 
-          &.full{
+      /*    &.full{
             .value{
               z-index: 1;
               border-color: $blue;
               transform:rotateZ(0deg);
               animation:unset;
             }
-          }
+          }*/
         }
         @keyframes chartAni4{
           0%{transform: rotateZ(-180deg);}
