@@ -3,30 +3,76 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
+    <!-- s header -->
+    <!--    @@include('../../html/include/common/header.html')-->
+    <!-- e header -->
+
+    <!-- s contents -->
     <div class="container">
-        <div class="showcase-wrap">
-            <div class="showcase carousel">
-                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/ON+.png"></div>
-                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/ON-.png"></div>
-                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/DN+.png"></div>
-                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/DN-.png"></div>
-                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/DS+.png"></div>
-                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/DS-.png"></div>
-                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/OS+.png"></div>
-                <div class="item cloud9-item"><img class="reflected" src="../../img/common/skinType/OS-.png"></div>
+        <div class="AI-wrap">
+            <div class="sub-main">
+                <div class="tab _tab">
+                    <ul>
+                        <li class="item active"><a href="#">WHAT</a></li>
+                        <li class="item"><a href="#">HOW</a></li>
+                        <li class="item"><a href="#">STORY</a></li>
+                        <li class="item"><a href="#">WHY</a></li>
+                        <li class="item"><a href="#">PROCESS</a></li>
+                        <li class="item"><a href="#">REVIEW</a></li>
+                        <li class="item"><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="section-wrap">
+                    <div class="section">
+                        <div class="heading">
+                            <div class="font-h2 font-bold" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">나는 <span class="color-primary">어떤 피부 유형</span>일까?</div>
+                            <div class="font-h6" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+                                바른 피부 관리를 위해서는 <span class="font-bold">피부를 바르게<br/>
+                    아는 것이 중요</span>해요.<br/>
+                                닥터지가 제안하는 8가지 피부 유형을<br/>
+                                선택해 확인해보세요.
+                            </div>
+                        </div>
+                        <div class="showcase-wrap">
+                            <div class="showcase carousel _showCase">
+                                <div class="item item-1"><img src="../../img/common/skinType/OS+.png"><span class="dim"></span></div>
+                                <div class="item item-2"><img src="../../img/common/skinType/OS-.png"><span class="dim"></span></div>
+                                <div class="item item-3"><img src="../../img/common/skinType/ON+.png"><span class="dim"></span></div>
+                                <div class="item item-4"><img src="../../img/common/skinType/ON-.png"><span class="dim"></span></div>
+                                <div class="item item-5"><img src="../../img/common/skinType/DS-.png"><span class="dim"></span></div>
+                                <div class="item item-6"><img src="../../img/common/skinType/DS+.png"><span class="dim"></span></div>
+                                <div class="item item-7"><img src="../../img/common/skinType/DN+.png"><span class="dim"></span></div>
+                                <div class="item item-8"><img src="../../img/common/skinType/DN-.png"><span class="dim"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section" style="height: 600px; background-color: red;">HOW</div>
+                    <div class="section" style="height: 600px; background-color: pink;">STORY</div>
+                    <div class="section" style="height: 600px; background-color: orange;">WHY</div>
+                    <div class="section" style="height: 600px; background-color: blue;">PROCESS</div>
+                    <div class="section" style="height: 600px; background-color: violet;">REVIEW</div>
+                    <div class="section" style="height: 600px; background-color: gold;">FAQ</div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
 </div>
+
 <script>
-    // https://www.jqueryscript.net/slider/3D-Cover-Flow-Style-Image-Carousel-Plugin-with-jQuery-Cloud-9-Carousel.html
-    $(function () {
-        var showcase = $(".showcase")
+    $(document).ready(function () {
+        // circle slider
+        // https://www.jqueryscript.net/slider/3D-Cover-Flow-Style-Image-Carousel-Plugin-with-jQuery-Cloud-9-Carousel.html
+        let showcase = $("._showCase")
         showcase.Cloud9Carousel({
             xOrigin: null,
-            yOrigin: 80,
-            xRadius: 230,
-            yRadius: 120,
+            yOrigin: 53,
+            xRadius: 250,
+            yRadius: 130,
             autoPlay: true,
             bringToFront: true,
             onLoaded: function () {
@@ -34,34 +80,51 @@
                 showcase.css('display', 'none')
                 showcase.fadeIn(1500)
             },
-            farScale: 0.5,
+            farScale: 0.4,
             speed: 4,
-            frontItemClass:null,
+            frontItemClass: 'front',
             itemClass: 'item',
         })
-        showcase.data("carousel").itemsRotated();
-        showcase.data("carousel").floatIndex();
+
+        // tab
+        let sectionTab = $('._tab');
+        let section = $('.section');
+        let tab = $('._tab .item');
+        let tabProcess = tab.eq(4).offset().left;
+        let tabReview = tab.eq(5).offset().left;
+        let tabFaq = tab.eq(6).offset().left;
+        let headerHeight = sectionTab.height();
+        let lastScroll = 0;
+        console.log(tabProcess)
+
+        $(window).scroll(function () {
+            let st = $(this).scrollTop();
+
+            if(st > headerHeight) {
+                sectionTab.addClass('fixed')
+            } else {
+                sectionTab.removeClass('fixed');
+            }
+
+            lastScroll = st;
+
+            section.each(function (idx) {
+                if (st > $(this).offset().top - headerHeight - 100) {
+                    tab.eq(idx).addClass('active').siblings().removeClass('active')
+                    section.eq(idx).addClass('active').siblings().removeClass('active')
+                }
+            });
+        });
+
+        tab.find('a').on('click', function () {
+            let idx = $(this).parent().index();
+            let offset = section.eq(idx).offset();
+            let thisOffset = $(this).parent(idx).offset().left;
+
+            $('html, body').animate({scrollTop: offset.top - headerHeight}, 400);
+            $('._tab').animate({scrollLeft: thisOffset}, 400)
+        })
     })
 </script>
-<style>
-    /*.item {*/
-    /*    width: 160px;*/
-    /*    height: 160px;*/
-    /*}*/
-
-    /*img {*/
-    /*    width: 100%;*/
-    /*    height: 100%;*/
-    /*}*/
-
-    /*#showcase {*/
-    /*    width: 100%;*/
-    /*    height: 460px;*/
-    /*}*/
-
-    #showcase img {
-        cursor: pointer;
-    }
-</style>
 </body>
 </html>

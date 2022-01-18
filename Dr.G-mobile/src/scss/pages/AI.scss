@@ -2537,6 +2537,49 @@
     }
   }
 
+  /* 서브메인 */
+  .sub-main {
+    .tab {
+      overflow-x: auto;
+      padding: 0 vw(24);
+
+      ul {
+        white-space: nowrap;
+
+        .item {
+          float: none;
+          display: inline-block;
+
+          &:last-child {
+            padding-right: vw(24);
+          }
+        }
+      }
+
+      &.fixed {
+        position: fixed;
+        background-color: #fff;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 5;
+      }
+    }
+
+    .heading {
+      text-align: center;
+      padding-top: vw(76);
+
+      .font-h2 {
+        margin-bottom: vw(24);
+      }
+
+      .font-h6 {
+        color: $gray-700;
+      }
+    }
+  }
+
   /* 아이콘 */
   .ico-skin-type-1 {
     @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-1-nor.svg');
@@ -2718,6 +2761,183 @@
     .ico-diary-10-off {
       @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-10-on.svg');
     }
+  }
+}
+
+/* circle slider */
+.showcase-wrap {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-top: vw(60);
+  margin-bottom: vw(102);
+
+  .showcase {
+    position: absolute;
+    width: 1000%;
+    height: 400px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: top;
+
+    .item {
+      position: relative;
+      width: 160px;
+      height: 160px;
+
+      img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+
+      &.item-1 {
+        .dim {
+          background: #FC9C25;
+        }
+
+        &::after {
+          background: #F3D0A2;
+        }
+      }
+
+      &.item-2 {
+        .dim {
+          background: #7A99CE;
+        }
+
+        &::after {
+          background: #B7CCEF;
+        }
+      }
+
+      &.item-3 {
+        .dim {
+          background: #FFCC30;
+        }
+
+        &::after {
+          background: #EFDA98;
+        }
+      }
+
+      &.item-4 {
+        .dim {
+          background: #35B2D8;
+        }
+
+        &::after {
+          background: #B3DEEB;
+        }
+      }
+
+      &.item-5 {
+        .dim {
+          background: #FF96C8;
+        }
+
+        &::after {
+          background: #F1C0D7;
+        }
+      }
+
+      &.item-6 {
+        .dim {
+          background: #6FD279;
+        }
+
+        &::after {
+          background: #B7EFBD;
+        }
+      }
+
+      &.item-7 {
+        .dim {
+          background: #F78381;
+        }
+
+        &::after {
+          background: #FABCBC;
+        }
+      }
+
+      &.item-8 {
+        .dim {
+          background: #5FE0CC;
+        }
+
+        &::after {
+          background: #9DE9DC;
+        }
+      }
+
+      .dim {
+        display: block;
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        left: 0;
+        bottom: -6px;
+        opacity: 0.3;
+        border-radius: 50%;
+        filter: blur(16px);
+        z-index: 1;
+      }
+
+      &.front {
+        &::after {
+          width: 80px;
+          height: 8px;
+          opacity: 0.4;
+          //filter: blur(6px);
+        }
+      }
+
+      &::after {
+        content: '';
+        width: 60px;
+        position: absolute;
+        height: 5px;
+        bottom: -24px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.4;
+        border-radius: 50%;
+        filter: blur(3px);
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .showcase-wrap {
+    //height: 400px;
+    //overflow: hidden;
+    margin-top: vw(104);
+    transform: scale(1.4);
+
+    //.showcase {
+    //  position: absolute;
+    //  width: 1000%;
+    //  height: 400px;
+    //  top: 0;
+    //  left: 50%;
+    //  transform: translateX(-50%);
+    //
+    //  .item {
+    //    position: relative;
+    //    width: 160px;
+    //    height: 160px;
+    //
+    //    img {
+    //      width: 100%;
+    //      height: 100%;
+    //    }
+    //  }
+    //}
   }
 }
 
@@ -3114,7 +3334,6 @@
     opacity: 0;
   }
 }
-
 
 .animation-box {
   height: 88px;
