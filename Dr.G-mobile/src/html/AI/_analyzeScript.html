@@ -31,9 +31,27 @@
             $(this).parent().addClass('on').siblings().removeClass('on')
         })
 
-        /* 버튼 탭 */
+        /* 차트 버튼 클릭 이벤트 */
         $('._btnTab a').on('click',function (){
-            $(this).addClass('on').siblings().removeClass('on')
+            $(this).addClass('on').siblings().removeClass('on');
+            var idx = $(this).index()
+            var chartContent = $('._chartContent')
+
+            chartContent.children().eq(idx).css({
+                'z-index' : '1',
+                'opacity' : '1'
+            }).siblings().css({
+                'z-index' : '-1',
+                'opacity' : '0'
+            });
+
+            if(idx===0) {
+                chartContent.addClass('roundChart').removeClass('seasonChart')
+            } else {
+                chartContent.addClass('seasonChart').removeClass('roundChart')
+            }
+
+            lineDrawing()
         })
 
         /* 피부 상태 그래프 */
@@ -111,3 +129,5 @@
         }
     }
 </script>
+<!-- chart script -->
+@@include('_chartScript.html')

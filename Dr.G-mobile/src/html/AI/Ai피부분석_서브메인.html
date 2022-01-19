@@ -4,26 +4,37 @@
 <body>
 <div class="wrap">
     <!-- s header -->
-        @@include('../../html/include/common/header.html')
+    @@include('../../html/include/common/header-white.html')
     <!-- e header -->
 
     <!-- s contents -->
     <div class="container">
         <div class="AI-wrap">
             <div class="sub-main">
+                <div class="main-visual">
+                    <div class="img"><img src="../../img/@temp/AI/sample-visual.png" alt=""></div>
+                    <div class="more-box">
+                        <div class="more row">
+                            <a href="#" class="ai-btn col-6"><i class="icon ico-ai"></i><span>피부분석</span></a>
+                            <a href="#" class="shop-btn col-6"><i class="icon ico-shop"></i><i class="icon ico-shop2"></i><span>쇼핑몰</span></a>
+                        </div>
+                        <a href="#" class="round"><img src="../../img/common/logo-white.svg" alt="닥터지 로고"></a>
+                    </div>
+                    <a href="#" id="chatbot" class="btn-chatbot"><img src="../../img/common/btn-chatbot.png" alt="chatbot"></a>
+                </div>
                 <div class="tab _scrollTabWrap">
                     <ul class="_scrollTab">
-                        <li class="item"><a class="active" href="#section1">WHAT</a></li>
-                        <li class="item"><a href="#section2">HOW</a></li>
-                        <li class="item"><a href="#section3">STORY</a></li>
-                        <li class="item"><a href="#section4">WHY</a></li>
-                        <li class="item"><a href="#section5">PROCESS</a></li>
-                        <li class="item"><a href="#section6">REVIEW</a></li>
-                        <li class="item"><a href="#section7">FAQ</a></li>
+                        <li class="item"><a href="#">WHAT</a></li>
+                        <li class="item"><a href="#">HOW</a></li>
+                        <li class="item"><a href="#">STORY</a></li>
+                        <li class="item"><a href="#">WHY</a></li>
+                        <li class="item"><a href="#">PROCESS</a></li>
+                        <li class="item"><a href="#">REVIEW</a></li>
+                        <li class="item"><a href="#">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="section-wrap">
-                    <div class="section" id="section1">
+                    <div class="section _sectionWhat">
                         <div class="what">
                             <div class="heading">
                                 <div class="font-h2 font-bold" data-aos="fade-up" data-aos-duration="700"
@@ -37,6 +48,7 @@
                                 </div>
                             </div>
                             <div class="showcase-wrap">
+                                <div class="logo"><img src="../../img/AI/img-inner-logo.svg" alt="Dr.G"></div>
                                 <div class="showcase carousel _showCase">
                                     <div class="item item-1 _showCaseItem" onclick="showCase(0)"><img src="../../img/common/skinType/OS+.png"><span class="dim"></span><span class="shadow"></span></div>
                                     <div class="item item-2 _showCaseItem" onclick="showCase(7)"><img src="../../img/common/skinType/OS-.png"><span class="dim"></span><span class="shadow"></span></div>
@@ -50,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section" id="section2">
+                    <div class="section _sectionHow">
                         <div class="how">
                             <div class="title">
                                 피부 건강<br/>
@@ -105,129 +117,69 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section" id="section3" style="height: 600px; background-color: pink;">STORY</div>
-                    <div class="section" id="section4" style="height: 600px; background-color: orange;">WHY</div>
-                    <div class="section" id="section5" style="height: 600px; background-color: blue;">PROCESS</div>
-                    <div class="section" id="section6" style="height: 600px; background-color: violet;">REVIEW</div>
-                    <div class="section" id="section7" style="height: 600px; background-color: gold;">FAQ</div>
+                    <div class="section _sectionStory" style="height: 600px; background-color: pink;">STORY</div>
+                    <div class="section _sectionWhy" style="height: 600px; background-color: orange;">WHY</div>
+                    <div class="section _sectionProcess" style="height: 600px; background-color: blue;">PROCESS</div>
+                    <div class="section _sectionReview" style="height: 600px; background-color: violet;">REVIEW</div>
+                    <div class="section _sectionFAQ" style="height: 600px; background-color: gold;">FAQ</div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
 </div>
-<!-- e contents -->
-<!-- s footer -->
-@@include('../../html/include/common/footer.html')
-<!-- e footer -->
+<!-- s modal -->
+<!--
+    ** 타입 별 스타일 값 포함한 클래스 명 **
+    OS+ / .OS-p
+    OS- / .OS-m
+    ON+ / .ON-p
+    ON- / .ON-m
+    DS+ / .DS-p
+    DS- / .DS-m
+    DN+ / .DN-p
+    DN- / .DN-m
+-->
+<div class="skin-type-modal OS-p  _skinTypeModal">
+    <div class="modal-content">
+        <div class="content">
+            <a href="#" class="btn-close _btnClose"><span class="sr-only">닫기</span></a>
+            <div class="circle">
+                <svg width="375" height="489" viewBox="0 0 375 489" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M469 282C469 437.744 342.744 564 187 564C31.2557 564 -95 437.744 -95 282C-95 126.256 31.2557 0 187 0C342.744 0 469 126.256 469 282Z" fill="#FFEFDB"/>
+                    <path d="M0 449H375V581H0V449Z" fill="#FFEFDB"/>
+                </svg>
+            </div>
+            <div class="skin-type-img"> <i class="icon icon-skin-type"></i><span class="shadow"></span></div>
+            <div class="text-box">
+                <div class="font-h3 font-bold">민지형(민감 지성)</div>
+                <div class="font-body-2 font-poppins-medium">Oily, Sensitive, Hydrated</div>
+                <div class="font-h6">
+                    번들거림과 함께 여드름, 홍조, 알레르기 등<br/>
+                    민감성 피부 고민이 두드러지는<br/>
+                    <span class="font-bold">민감 지성 피부</span>입니다.
+                </div>
+            </div>
+            <div class="tab-box _tabBox">
+                <ul>
+                    <li class="on"><a href="#">OS+</a></li>
+                    <li><a href="#">OS-</a></li>
+                    <li><a href="#">ON+</a></li>
+                    <li><a href="#">ON-</a></li>
+                    <li><a href="#">DS+</a></li>
+                    <li><a href="#">DS-</a></li>
+                    <li><a href="#">DN+</a></li>
+                    <li><a href="#">DN-</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-
-<script>
-    $(document).ready(function () {
-        // circle slider
-        // https://www.jqueryscript.net/slider/3D-Cover-Flow-Style-Image-Carousel-Plugin-with-jQuery-Cloud-9-Carousel.html
-        let showcase = $("._showCase")
-        showcase.Cloud9Carousel({
-            xOrigin: null,
-            yOrigin: 53,
-            xRadius: 260,
-            yRadius: 130,
-            autoPlay: true,
-            bringToFront: true,
-            onLoaded: function () {
-                showcase.css('visibility', 'visible')
-                showcase.css('display', 'none')
-                showcase.fadeIn(1500)
-            },
-            farScale: 0.4,
-            speed: 4,
-            autoPlayDelay: 2000,
-            frontItemClass: 'front',
-            itemClass: '_showCaseItem',
-        })
-
-        // tab
-        // var didScroll;
-        // var lastScrollTop = 0;
-        // var delta = 5;
-        // let headerHeight = $('._header-sticky').height();
-        // let sectionTab = $('._scrollTabWrap');
-        // var tabHeight = sectionTab.outerHeight();
-        //
-        // $(window).scroll(function(event){
-        //     didScroll = true;
-        // });
-        //
-        // setInterval(function() {
-        //     if (didScroll) {
-        //         hasScrolled();
-        //         didScroll = false;
-        //     }
-        // }, 250);
-        //
-        // function hasScrolled() {
-        //     var st = $(this).scrollTop();
-        //
-        //     if(Math.abs(lastScrollTop - st) <= delta)
-        //         return;
-        //
-        //     if (st > lastScrollTop && st > tabHeight){
-        //         // 스크롤을 내렸을 때
-        //         sectionTab.addClass('fixed').css('top', 0 + 'px')
-        //     } else {
-        //         // 스크롤을 올렸을 때
-        //         if(st + $(window).height() < $(document).height()) {
-        //             sectionTab.addClass('fixed').css('top', tabHeight + 'px')
-        //         }
-        //     }
-        //
-        //     lastScrollTop = st;
-        // }
-
-        update_nav_menu_position = function () {
-            let $active_nav_item = $('._scrollTabWrap').find('a.active'),
-                $scroll_elem = $('._scrollTab'),
-                left_pos, right_limit, active_elem_left_pos, active_elem_right_pos, scroll_pos, new_scroll_pos;
-
-            if (!$active_nav_item.length) {
-                return false;
-            }
-
-            left_pos = $scroll_elem.offset().left;
-            right_limit = $scroll_elem.width() + left_pos;
-            active_elem_left_pos = $active_nav_item.offset().left;
-            active_elem_right_pos = $active_nav_item.width() + active_elem_left_pos;
-            scroll_pos = $scroll_elem.scrollLeft();
-
-            if (active_elem_left_pos > left_pos && active_elem_right_pos < (right_limit - 50)) {
-                return true;
-            } else {
-                new_scroll_pos = (left_pos + right_limit) / 2;
-                new_scroll_pos = active_elem_left_pos - new_scroll_pos;
-                new_scroll_pos = scroll_pos + new_scroll_pos;
-                $scroll_elem.scrollLeft(new_scroll_pos);
-            }
-        }
-
-        const navbar = document.querySelector('._scrollTabWrap');
-        const scrollspy = new VanillaScrollspy(navbar,2000);
-        scrollspy.init();
-
-        // how slider
-        new Swiper("._howSlider", {
-            spaceBetween: 24,
-            centeredSlides: true,
-            effect: 'fade',
-            pagination: {
-                el: "._sliderPagination",
-                clickable: true,
-            },
-        });
-    })
-
-    function showCase(val) {
-        $("._showCase").data("carousel").go( val );
-        // console.log(val)
-    }
-</script>
+<!-- s modal -->
+@@include('_subMainScript.html')
 </body>
 </html>

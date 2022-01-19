@@ -88,6 +88,54 @@ data.AI = {
         },
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_서브메인_OS+',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인_OS+'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_서브메인_OS-',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인_OS-'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_서브메인_ON+',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인_ON+'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_서브메인_ON-',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인_ON-'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_서브메인_DS+',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인_DS+'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_서브메인_DS-',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인_DS-'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_서브메인_DN+',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인_DN+'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_서브메인_DN-',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인_DN-'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_비회원_정보입력',
             category: 'AI',
             page: 'Ai피부분석_비회원_정보입력'
@@ -140,12 +188,12 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_Step2_답변완료'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_결과_분석',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_결과_분석'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_결과_분석',
+            category: 'AI',
+            page: 'Ai피부분석_결과_분석'
+        },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_결과_솔루션',
@@ -158,12 +206,18 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_결과_추천'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_피부변화리포트',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_피부변화리포트'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_피부변화리포트',
+            category: 'AI',
+            page: 'Ai피부분석_피부변화리포트'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_피부변화리포트_로딩중',
+            category: 'AI',
+            page: 'Ai피부분석_피부변화리포트_로딩중'
+        },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_결과_비회원',

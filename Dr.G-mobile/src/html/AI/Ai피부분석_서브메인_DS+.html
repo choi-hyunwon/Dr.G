@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body class="scrOff">
+<!-- s modal -->
+<!--
+    ** 타입 별 스타일 값 포함한 클래스 명 **
+    OS+ / .OS-p
+    OS- / .OS-m
+    ON+ / .ON-p
+    ON- / .ON-m
+    DS+ / .DS-p
+    DS- / .DS-m
+    DN+ / .DN-p
+    DN- / .DN-m
+-->
+<div class="skin-type-modal DS-p show _skinTypeModal" style="display:block;">
+    <div class="modal-content">
+        <div class="content">
+            <a href="#" class="btn-close _btnClose"><span class="sr-only">닫기</span></a>
+            <div class="circle">
+                <svg width="375" height="489" viewBox="0 0 375 489" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M469 282C469 437.744 342.744 564 187 564C31.2557 564 -95 437.744 -95 282C-95 126.256 31.2557 0 187 0C342.744 0 469 126.256 469 282Z" fill="#FFEFDB"/>
+                    <path d="M0 449H375V581H0V449Z" fill="#FFEFDB"/>
+                </svg>
+            </div>
+            <div class="skin-type-img"> <i class="icon icon-skin-type"></i><span class="shadow"></span></div>
+            <div class="text-box">
+                <div class="font-h3 font-bold">민건형(민감 건성)</div>
+                <div class="font-body-2 font-poppins-medium">Dry, Sensitive, Hydrated</div>
+                <div class="font-h6">
+                    유수분 밸런스가 좋은 편이나 여드름, 홍조,<br/>
+                    알레르기 등 민감성 피부 고민이 나타나는<br/>
+                    <span class="font-bold">민감 건성 피부</span>입니다.
+                </div>
+            </div>
+            <div class="tab-box">
+                <ul>
+                    <li><a href="#">OS+</a></li>
+                    <li><a href="#">OS-</a></li>
+                    <li><a href="#">ON+</a></li>
+                    <li><a href="#">ON-</a></li>
+                    <li class="on"><a href="#">DS+</a></li>
+                    <li><a href="#">DS-</a></li>
+                    <li><a href="#">DN+</a></li>
+                    <li><a href="#">DN-</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- s modal -->
+@@include('_subMainScript.html')
+</body>
+</html>

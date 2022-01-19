@@ -1,0 +1,165 @@
+<script>
+    // chatbot
+    $('#chatbot').draggable({
+        containment : 'parent',
+        axis: 'y',
+        drag: function() {
+            var offset = $(this).offset();
+            var yPos = offset.top;
+            console.log('y :', yPos)
+        }
+    });
+
+    // circle slider
+    // https://www.jqueryscript.net/slider/3D-Cover-Flow-Style-Image-Carousel-Plugin-with-jQuery-Cloud-9-Carousel.html
+    let showcase = $("._showCase")
+    showcase.Cloud9Carousel({
+        xOrigin: null,
+        yOrigin: 53,
+        xRadius: 260,
+        yRadius: 130,
+        autoPlay: true,
+        bringToFront: true,
+        onLoaded: function () {
+            showcase.css('visibility', 'visible')
+            showcase.css('display', 'none')
+            showcase.fadeIn(1500)
+        },
+        farScale: 0.4,
+        speed: 4,
+        autoPlayDelay: 2000,
+        frontItemClass: 'front',
+        itemClass: '_showCaseItem',
+    })
+
+    function showCase(val) {
+        $("._showCase").data("carousel").go(val);
+    }
+
+    function setShowcase() {
+        let showcase = $("._showCase")
+        showcase.Cloud9Carousel({
+            xOrigin: null,
+            yOrigin: 53,
+            xRadius: 260,
+            yRadius: 130,
+            autoPlay: true,
+            bringToFront: true,
+            farScale: 0.4,
+            speed: 4,
+            autoPlayDelay: 2000,
+            frontItemClass: 'front',
+            itemClass: '_showCaseItem',
+        })
+    }
+
+    // tab
+    var scrollTab = $('._scrollTab');
+    var sectionTab = $('._scrollTabWrap');
+    var sectionWrap = $('.section-wrap');
+    var lastScroll = 0;
+
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        var tabStartPos = sectionTab.position ().top;
+        var sectionStartPos = sectionWrap.position ().top;
+        var headerHeight = $('.header-white').outerHeight();
+        var sectionProcess = $('._sectionProcess').position ().top;
+        var sectionReview = $('._sectionReview').position ().top;
+        var sectionFAQ = $('._sectionFAQ').position ().top;
+        var offset = 200;
+
+        if (st > lastScroll){
+            //console.log("DOWN");
+            if (window.pageYOffset >= sectionStartPos) {
+                sectionTab.show().addClass('fixed').css('top', 0 + 'px');
+            }
+        }
+        else {
+            //console.log("UP");
+            if (window.pageYOffset >= tabStartPos) {
+                sectionTab.show().addClass('fixed').css('top', headerHeight + 'px');
+                if (window.pageYOffset < sectionStartPos) {
+                    sectionTab.show().removeClass('fixed')
+                }
+            }
+        }
+
+        lastScroll = st;
+
+        if (lastScroll > sectionProcess - offset && lastScroll < sectionReview - offset){
+            scrollTab.scrollLeft(100);
+        } else if (lastScroll > sectionReview - offset && lastScroll < sectionFAQ - offset){
+            scrollTab.scrollLeft(200);
+        } else if (lastScroll > sectionFAQ - offset){
+            scrollTab.scrollLeft(300);
+        } else {
+            scrollTab.scrollLeft(0);
+        }
+
+        let section = $('.section')
+        let tab = $('._scrollTab .item')
+        section.each(function( index ) {
+            if ( st > $(this).offset().top - offset){
+                tab.eq(index).addClass('active').siblings().removeClass('active')
+            }
+        });
+    });
+
+    // how slider
+    new Swiper("._howSlider", {
+        spaceBetween: 24,
+        centeredSlides: true,
+        effect: 'fade',
+        pagination: {
+            el: "._sliderPagination",
+            clickable: true,
+        },
+    });
+
+    // modal
+    $triggerBtn = $('._showCaseItem');
+    $closeBtn = $('._btnClose');
+    $skinTypeModal = $('._skinTypeModal');
+
+    $triggerBtn.on('click', function () {
+        showSkinTypeModal()
+        $('._sectionWhat').find('.font-h6 ').css('visibility','hidden')
+    })
+
+    $('._tabBox li a').on('click',function (){
+        $(this).parent().addClass('on').siblings().removeClass('on')
+    })
+
+    $closeBtn.on('click', function () {
+        hideSkinTypeModal()
+        setShowcase()
+        $('._sectionWhat').find('.font-h6 ').css('visibility','visible')
+    })
+
+    $skinTypeModal.on('click', function (e) {
+        if ($(this).has(e.target).length === 0) {
+            hideSkinTypeModal()
+        }
+    })
+
+    function hideSkinTypeModal() {
+        // modal
+        $skinTypeModal.addClass('hide');
+        // body scroll
+        $('body').removeClass('scrOff')
+        // setTimeout(() => {
+            $skinTypeModal.removeClass('show hide').css('display', 'none');
+        // }, 400);
+        setShowcase()
+    }
+
+    function showSkinTypeModal() {
+        // modal
+        $skinTypeModal.addClass('show fade').css('display', 'block');
+        // circle slider
+        $('._showCase').data("carousel").deactivate();
+        // body scroll
+        $('body').addClass('scrOff')
+    }
+</script>

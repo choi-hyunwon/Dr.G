@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body class="scrOff">
+<!-- s modal -->
+<!--
+    ** 타입 별 스타일 값 포함한 클래스 명 **
+    OS+ / .OS-p
+    OS- / .OS-m
+    ON+ / .ON-p
+    ON- / .ON-m
+    DS+ / .DS-p
+    DS- / .DS-m
+    DN+ / .DN-p
+    DN- / .DN-m
+-->
+<div class="skin-type-modal ON-m _skinTypeModal show" style="display:block;">
+    <div class="modal-content">
+        <div class="content">
+            <a href="#" class="btn-close _btnClose"><span class="sr-only">닫기</span></a>
+            <div class="circle">
+                <svg width="375" height="489" viewBox="0 0 375 489" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M469 282C469 437.744 342.744 564 187 564C31.2557 564 -95 437.744 -95 282C-95 126.256 31.2557 0 187 0C342.744 0 469 126.256 469 282Z" fill="#FFEFDB"/>
+                    <path d="M0 449H375V581H0V449Z" fill="#FFEFDB"/>
+                </svg>
+            </div>
+            <div class="skin-type-img"> <i class="icon icon-skin-type"></i><span class="shadow"></span></div>
+            <div class="text-box">
+                <div class="font-h3 font-bold">수부지형(수분 부족형 지성)</div>
+                <div class="font-body-2 font-poppins-medium">Oily, Non-Sensitive, Dehydrated</div>
+                <div class="font-h6">
+                    과다한 피지와 수분 부족으로<br/>
+                    속땅김을 느끼며 민감해지기 쉬운<br/>
+                    <span class="font-bold">수분 부족형 지성 피부</span>입니다.
+                </div>
+            </div>
+            <div class="tab-box">
+                <ul>
+                    <li><a href="#">OS+</a></li>
+                    <li><a href="#">OS-</a></li>
+                    <li><a href="#">ON+</a></li>
+                    <li class="on"><a href="#">ON-</a></li>
+                    <li><a href="#">DS+</a></li>
+                    <li><a href="#">DS-</a></li>
+                    <li><a href="#">DN+</a></li>
+                    <li><a href="#">DN-</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- s modal -->
+@@include('_subMainScript.html')
+</body>
+</html>
