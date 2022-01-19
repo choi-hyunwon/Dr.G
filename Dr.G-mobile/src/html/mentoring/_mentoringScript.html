@@ -64,18 +64,6 @@
 
 /*|--------------s 서브메인----------------------------|*/
 
-        /*visual*/
-        $('#chatbot').draggable({
-            containment : 'parent',
-            drag: function() {
-                var offset = $(this).offset();
-                var xPos = offset.left;
-                var yPos = offset.top;
-                console.log('x :', xPos)
-                console.log('y :', yPos)
-            }
-        });
-
         /*tab*/
         let sectionTab = $('._section-tab');
         let lastScroll = 0;
