@@ -5,7 +5,7 @@
 */
 
 
-/*고객제안 , 스킨멘토링 , 성분분석*/
+/*고객제안 , 스킨멘토링*/
 .view-details{
   .header-details{
     /*layout.scss*/
@@ -38,6 +38,7 @@
           .icon{
             width: vw(14);
             height: vw(14);
+            margin-bottom: vw(3);
           }
           .num{
             font-weight: 600;
@@ -55,11 +56,13 @@
             top: 50%;
             transform: translateY(-50%);
           }
+          +.date{
+            margin-left: vw(8);
+          }
         }
         .date{
           font-weight: 400;
           color: $gray-600;
-          margin-left: vw(8);
         }
 
         &.on {
@@ -245,6 +248,7 @@
       .list{
         display: none;
         padding-top: vw(56);
+        padding-bottom: vw(48);
         >li{
           margin-bottom: vw(32);
           &:first-of-type{
@@ -318,6 +322,9 @@
             margin-right: 0;
           }
         }
+      }
+      &.btn-wrap-xl{
+        padding: vw(48) 0;
       }
     }
 
@@ -507,106 +514,8 @@
       }
 
     }
-
-    /*성분분석 - 질문&답*/
-    .question-box {
-          background-color: $gray-200;
-          padding: vw(48) vw(24) 0;
-          .info{
-            margin-bottom: vw(48);
-            .sub-desc{
-              padding-top: vw(12);
-              color:$gray-600;
-            }
-          }
-
-          .question-item {
-            margin-bottom: vw(48);
-            &:first-child {
-              padding-top: 0;
-            }
-
-            .question {
-              padding-bottom: vw(12);
-
-              .num {
-                display: inline-block;
-                vertical-align: middle;
-                font-family: $poppins-semiBold;
-                font-style: normal;
-                font-weight: 600;
-                font-size: vw(18);
-                line-height: vw(28);
-                color: $gray-600;
-                margin-right: vw(8);
-              }
-
-              .font-h5 {
-                display: inline-block;
-                vertical-align: middle;
-                font-weight: bold;
-                color: $gray-800;
-              }
-            }
-
-            .answer {
-              position: relative;
-              ul {
-                li {
-                  display: block;
-                  width: 100%;
-                  background: #FFFFFF;
-                  padding: vw(14) vw(32);
-                  border-radius: vw(100);
-                  color: $gray-700;
-                  font-size: vw(15);
-                  line-height: vw(22);
-
-                  a {
-                    color: $gray-700;
-                    display: block;
-
-                    &:hover {
-                      color: $gray-700;
-                    }
-                  }
-
-                  + li {
-                    margin-top: vw(10);
-                  }
-                }
-              }
-              .delete{
-                display: none;
-              }
-              &.complete{
-                ul{
-                  li{
-                    background: $violet;
-                    a{
-                      color: $gray-fff;
-                    }
-                  }
-                }
-                .delete{
-                  display: block;
-                  padding: 0 vw(10);
-                  position: absolute;
-                  right: vw(22);
-                  top: 50%;
-                  transform: translateY(-50%);
-                  .btn-delete{
-                    width: vw(12);
-                    height: vw(12);
-                    display: inline-block;
-                  }
-                }
-              }
-            }
-          }
-        }
-
   }
+
   .footer-details{
     border-top: 1px solid $gray-400;
     padding: vw(32) vw(20) vw(48);
@@ -625,6 +534,217 @@
         &.btn-center{
           justify-content: center;
         }
+      }
+    }
+  }
+
+  /* 성분분석 */
+  .analysis-wrap{
+    /* 등록제안,수정요청입력란 */
+    .heading{
+      padding: vw(20) vw(24);
+      .font-h3{
+        margin-bottom: vw(8);
+      }
+      .font-body-1{
+        color: $gray-700;
+      }
+    }
+
+    /* 질문 & 답 */
+    .question-box {
+      background-color: $gray-200;
+      padding: vw(48) vw(24);
+      .info{
+        margin-bottom: vw(48);
+        .sub-desc{
+          padding-top: vw(12);
+          color:$gray-600;
+        }
+      }
+
+      .question-item {
+        margin-bottom: vw(48);
+        &:first-of-type {
+          padding-top: 0;
+        }
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+
+        .question {
+          padding-bottom: vw(12);
+
+          .num {
+            display: inline-block;
+            vertical-align: middle;
+            font-family: $poppins-semiBold;
+            font-style: normal;
+            font-weight: 600;
+            font-size: vw(18);
+            line-height: vw(28);
+            color: $gray-600;
+            margin-right: vw(8);
+          }
+
+          .font-h5 {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: bold;
+            color: $gray-800;
+          }
+        }
+
+        .answer {
+          position: relative;
+          ul {
+            li {
+              display: block;
+              width: 100%;
+              background: #FFFFFF;
+              padding: vw(14) vw(32);
+              border-radius: vw(100);
+              color: $gray-700;
+              font-size: vw(15);
+              line-height: vw(22);
+
+              a {
+                color: $gray-700;
+                display: block;
+
+                &:hover {
+                  color: $gray-700;
+                }
+              }
+
+              + li {
+                margin-top: vw(10);
+              }
+            }
+          }
+          .delete{
+            display: none;
+          }
+          &.complete{
+            ul{
+              li{
+                background: $violet;
+                a{
+                  color: $gray-fff;
+                }
+              }
+            }
+            .delete{
+              display: block;
+              padding: 0 vw(10);
+              position: absolute;
+              right: vw(22);
+              top: 50%;
+              transform: translateY(-50%);
+              .btn-delete{
+                width: vw(12);
+                height: vw(12);
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    /* 제품등록제안 */
+    .full-img {
+      width: vw(375);
+      height: vw(400);
+      color: $primary;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .propose-box{
+      .form-control + .select-popup{
+        margin-top: vw(8);
+      }
+      .caution-area{
+        padding-top: vw(32);
+        .title{
+          margin-bottom: vw(12);
+          .ico-caution{
+            margin-right: vw(4.5);
+          }
+
+        }
+      }
+      .divider{
+        margin-bottom: vw(24);
+      }
+      .check-area{
+        label{
+          a{
+            font-weight: 500;
+            text-decoration: underline;
+            &:focus{
+              color: $gray-900;
+            }
+          }
+        }
+        .list-with-dot{
+          li{
+            font-size: vw(12);
+            margin-bottom: 0;
+            padding-left: vw(7);
+          }
+        }
+
+      }
+    }
+
+    /* 수정요청 입력 */
+    .product-area{
+      margin-bottom: vw(48);
+      >.img-cosmetics{
+        width: vw(78);
+        height: vw(66);
+        margin: 0 auto vw(16);
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .product-name{
+        color: $gray-800;
+        text-align: center;
+        span{
+          color: $gray-600;
+          font-size: vw(13);
+          display: block;
+          font-weight: normal;
+        }
+      }
+    }
+    .write-area{
+      .sub-title{
+        color: $gray-800;
+        margin-bottom: vw(12);
+      }
+      .badge-box{
+        font-size: 0;
+        margin-bottom: vw(24);
+        .badge{
+          margin-right: vw(10);
+          &:last-of-type{
+            margin-right: 0;
+          }
+          &.active{
+            background-color: $yellow;
+            font-weight: bold;
+          }
+        }
+      }
+      textarea{
+        margin-bottom: vw(32);
       }
     }
   }
