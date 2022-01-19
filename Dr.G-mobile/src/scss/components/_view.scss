@@ -544,11 +544,12 @@
     .heading{
       padding: vw(20) vw(24);
       .font-h3{
-        margin-bottom: vw(8);
+        +.font-body-1{
+          color: $gray-700;
+          padding-top: vw(8);
+        }
       }
-      .font-body-1{
-        color: $gray-700;
-      }
+
     }
 
     /* 질문 & 답 */
@@ -747,5 +748,73 @@
         margin-bottom: vw(32);
       }
     }
+
+    /* 일치율팝업*/
+    .match-rate{
+      padding-bottom: vw(48);
+      .table-box{
+        text-align: center;
+        margin-bottom: vw(48);
+        thead{
+          color:$gray-800;
+          th{
+            vertical-align: middle;
+            padding: vw(16);
+            width: 50%;
+            border-top: vw(1) solid $gray-900;
+            border-bottom: vw(1) solid $gray-400
+          }
+        }
+        tbody{
+          tr{
+            &:last-of-type{
+              th, td{
+                border-bottom: vw(1) solid $gray-400
+              }
+            }
+          }
+          th, td{
+            border-bottom: 1px solid $gray-300;
+            color: $gray-700;
+            font-weight: normal;
+            font-size: vw(15);
+
+          }
+        }
+
+      }
+      .sub-title{
+        color: $gray-800;
+        margin-bottom: vw(12);
+      }
+      .method-box{
+        border-radius: vw(16);
+        display: flex;
+        padding: vw(24);
+        justify-content: space-between;
+        align-items: center;
+        background: $gray-fff url("../img/analysis/ico-minus.png") no-repeat center center;
+        background-size: vw(28) vw(28);
+        .area{
+          display: inline-block;
+          text-align: center;
+          font-size: 0;
+
+          &.good-area{}
+          &.caution-area{}
+          .tit{
+            display: block;
+            margin-bottom: vw(4);
+            font-size: vw(15);
+            +span{
+              color: $gray-700;
+              font-size: vw(13);
+            }
+          }
+        }
+      }
+
+    }
+
   }
 }

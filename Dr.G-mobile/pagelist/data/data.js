@@ -254,12 +254,12 @@ data.AI = {
 data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
-      /*  {
+        {
             stateClass: 'waiting',
             url: '스킨멘토링_서브메인',
             category: 'mentoring',
             page: '스킨멘토링_서브메인'
-        },*/
+        },
         {
             stateClass: 'complete',
             url: '스킨멘토링_서브메인_피부분석_후기전체보기',
@@ -320,12 +320,12 @@ data.mentoring = {
             category: 'mentoring',
             page: '스킨멘토링_내역_기본정보안내_팝업'
         },
-       /* {
+        {
             stateClass: 'complete',
             url: '스킨멘토링_내역_레이어팝업_수신동의_미체크',
             category: 'mentoring',
             page: '스킨멘토링_내역_레이어팝업_수신동의_미체크'
-        },*/
+        },
         {
             stateClass: 'complete',
             url: '스킨멘토링_내역_레이어팝업_제품추천_미체크',
@@ -465,7 +465,7 @@ data.analysis = {
             page: '성분분석_분석결과_상세_헤어제품'
         },
         {
-            stateClass: 'working',
+            stateClass: 'waiting',
             url: '성분분석_분석결과_상세_일치율팝업',
             category: 'analysis',
             page: '성분분석_분석결과_상세_일치율팝업'
