@@ -4,14 +4,14 @@
 <body>
 <div class="wrap">
     <!-- s header -->
-    <!--    @@include('../../html/include/common/header.html')-->
+        @@include('../../html/include/common/header.html')
     <!-- e header -->
 
     <!-- s contents -->
     <div class="container">
         <div class="AI-wrap">
             <div class="sub-main">
-                <div class="tab _tabScroll">
+                <div class="tab _scrollTabWrap">
                     <ul class="_scrollTab">
                         <li class="item"><a class="active" href="#section1">WHAT</a></li>
                         <li class="item"><a href="#section2">HOW</a></li>
@@ -38,14 +38,14 @@
                             </div>
                             <div class="showcase-wrap">
                                 <div class="showcase carousel _showCase">
-                                    <div class="item item-1"><img src="../../img/common/skinType/OS+.png"><span class="dim"></span><span class="shadow"></span></div>
-                                    <div class="item item-2"><img src="../../img/common/skinType/OS-.png"><span class="dim"></span><span class="shadow"></span></div>
-                                    <div class="item item-3"><img src="../../img/common/skinType/ON+.png"><span class="dim"></span><span class="shadow"></span></div>
-                                    <div class="item item-4"><img src="../../img/common/skinType/ON-.png"><span class="dim"></span><span class="shadow"></span></div>
-                                    <div class="item item-5"><img src="../../img/common/skinType/DS-.png"><span class="dim"></span><span class="shadow"></span></div>
-                                    <div class="item item-6"><img src="../../img/common/skinType/DS+.png"><span class="dim"></span><span class="shadow"></span></div>
-                                    <div class="item item-7"><img src="../../img/common/skinType/DN+.png"><span class="dim"></span><span class="shadow"></span></div>
-                                    <div class="item item-8"><img src="../../img/common/skinType/DN-.png"><span class="dim"></span><span class="shadow"></span></div>
+                                    <div class="item item-1 _showCaseItem" onclick="showCase(0)"><img src="../../img/common/skinType/OS+.png"><span class="dim"></span><span class="shadow"></span></div>
+                                    <div class="item item-2 _showCaseItem" onclick="showCase(7)"><img src="../../img/common/skinType/OS-.png"><span class="dim"></span><span class="shadow"></span></div>
+                                    <div class="item item-3 _showCaseItem" onclick="showCase(6)"><img src="../../img/common/skinType/ON+.png"><span class="dim"></span><span class="shadow"></span></div>
+                                    <div class="item item-4 _showCaseItem" onclick="showCase(5)"><img src="../../img/common/skinType/ON-.png"><span class="dim"></span><span class="shadow"></span></div>
+                                    <div class="item item-5 _showCaseItem" onclick="showCase(4)"><img src="../../img/common/skinType/DS-.png"><span class="dim"></span><span class="shadow"></span></div>
+                                    <div class="item item-6 _showCaseItem" onclick="showCase(3)"><img src="../../img/common/skinType/DS+.png"><span class="dim"></span><span class="shadow"></span></div>
+                                    <div class="item item-7 _showCaseItem" onclick="showCase(2)"><img src="../../img/common/skinType/DN+.png"><span class="dim"></span><span class="shadow"></span></div>
+                                    <div class="item item-8 _showCaseItem" onclick="showCase(1)"><img src="../../img/common/skinType/DN-.png"><span class="dim"></span><span class="shadow"></span></div>
                                 </div>
                             </div>
                         </div>
@@ -86,8 +86,8 @@
                                                 <div class="img">
                                                     <img src="../../img/AI/img-skin-spot.png" alt="나의 피부 고민">
                                                     <span class="spot spot-1"><img src="../../img/AI/img-spot-1.png" alt="수분"></span>
-                                                    <span class="spot spot-2" data-aos="fade" data-aos-duration="700" data-aos-delay="400"><img src="../../img/AI/img-spot-2.png" alt="여드름"></span>
-                                                    <span class="spot spot-3" data-aos="fade" data-aos-duration="700" data-aos-delay="800"><img src="../../img/AI/img-spot-3.png" alt="모공"></span>
+                                                    <span class="spot spot-2"><img src="../../img/AI/img-spot-2.png" alt="여드름"></span>
+                                                    <span class="spot spot-3"><img src="../../img/AI/img-spot-3.png" alt="모공"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -104,7 +104,6 @@
                                 <div class="slider-pagination _sliderPagination"></div>
                             </div>
                         </div>
-                        </div>
                     </div>
                     <div class="section" id="section3" style="height: 600px; background-color: pink;">STORY</div>
                     <div class="section" id="section4" style="height: 600px; background-color: orange;">WHY</div>
@@ -115,11 +114,11 @@
             </div>
         </div>
     </div>
-    <!-- e contents -->
-
-    <!-- s footer -->
-    @@include('../../html/include/common/footer.html')
-    <!-- e footer -->
+</div>
+<!-- e contents -->
+<!-- s footer -->
+@@include('../../html/include/common/footer.html')
+<!-- e footer -->
 </div>
 
 <script>
@@ -130,7 +129,7 @@
         showcase.Cloud9Carousel({
             xOrigin: null,
             yOrigin: 53,
-            xRadius: 250,
+            xRadius: 260,
             yRadius: 130,
             autoPlay: true,
             bringToFront: true,
@@ -143,14 +142,49 @@
             speed: 4,
             autoPlayDelay: 2000,
             frontItemClass: 'front',
-            itemClass: 'item',
+            itemClass: '_showCaseItem',
         })
 
         // tab
-        $('._tabScroll').sticky({topSpacing: 0})
+        // var didScroll;
+        // var lastScrollTop = 0;
+        // var delta = 5;
+        // let headerHeight = $('._header-sticky').height();
+        // let sectionTab = $('._scrollTabWrap');
+        // var tabHeight = sectionTab.outerHeight();
+        //
+        // $(window).scroll(function(event){
+        //     didScroll = true;
+        // });
+        //
+        // setInterval(function() {
+        //     if (didScroll) {
+        //         hasScrolled();
+        //         didScroll = false;
+        //     }
+        // }, 250);
+        //
+        // function hasScrolled() {
+        //     var st = $(this).scrollTop();
+        //
+        //     if(Math.abs(lastScrollTop - st) <= delta)
+        //         return;
+        //
+        //     if (st > lastScrollTop && st > tabHeight){
+        //         // 스크롤을 내렸을 때
+        //         sectionTab.addClass('fixed').css('top', 0 + 'px')
+        //     } else {
+        //         // 스크롤을 올렸을 때
+        //         if(st + $(window).height() < $(document).height()) {
+        //             sectionTab.addClass('fixed').css('top', tabHeight + 'px')
+        //         }
+        //     }
+        //
+        //     lastScrollTop = st;
+        // }
 
         update_nav_menu_position = function () {
-            let $active_nav_item = $('._tabScroll').find('a.active'),
+            let $active_nav_item = $('._scrollTabWrap').find('a.active'),
                 $scroll_elem = $('._scrollTab'),
                 left_pos, right_limit, active_elem_left_pos, active_elem_right_pos, scroll_pos, new_scroll_pos;
 
@@ -174,15 +208,15 @@
             }
         }
 
-        const navbar = document.querySelector('._tabScroll');
-        const scrollspy = new VanillaScrollspy(navbar);
+        const navbar = document.querySelector('._scrollTabWrap');
+        const scrollspy = new VanillaScrollspy(navbar,2000);
         scrollspy.init();
 
-        // slider
+        // how slider
         new Swiper("._howSlider", {
             spaceBetween: 24,
             centeredSlides: true,
-            effect : 'fade',
+            effect: 'fade',
             pagination: {
                 el: "._sliderPagination",
                 clickable: true,
@@ -190,21 +224,9 @@
         });
     })
 
-    function showCase() {
-        let showcase = $("._showCase")
-        showcase.Cloud9Carousel({
-            xOrigin: null,
-            yOrigin: 53,
-            xRadius: 250,
-            yRadius: 130,
-            autoPlay: true,
-            bringToFront: true,
-            farScale: 0.4,
-            speed: 4,
-            autoPlayDelay: 2000,
-            frontItemClass: 'front',
-            itemClass: 'item',
-        })
+    function showCase(val) {
+        $("._showCase").data("carousel").go( val );
+        // console.log(val)
     }
 </script>
 </body>

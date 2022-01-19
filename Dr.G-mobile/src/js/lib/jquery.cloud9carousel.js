@@ -105,8 +105,8 @@
   }
 
   var time = !window.performance || !window.performance.now ?
-    function() { return +new Date() } :
-    function() { return performance.now() };
+      function() { return +new Date() } :
+      function() { return performance.now() };
 
   //
   // Detect requestAnimationFrame() support
@@ -170,9 +170,9 @@
       var scale = farScale + ((1-farScale) * (sin+1) * 0.5);
 
       item.moveTo(
-        this.xOrigin + (scale * ((Math.cos(rotation) * this.xRadius) - (item.fullWidth * 0.5))),
-        this.yOrigin + (scale * sin * this.yRadius),
-        scale
+          this.xOrigin + (scale * ((Math.cos(rotation) * this.xRadius) - (item.fullWidth * 0.5))),
+          this.yOrigin + (scale * sin * this.yRadius),
+          scale
       );
 
       return item;
@@ -224,8 +224,8 @@
       this.lastTime = time();
 
       this.timer = this.smooth && cancelFrame ?
-        requestFrame( self.playFrame ) :
-        setTimeout( self.playFrame, 1000 / this.fps );
+          requestFrame( self.playFrame ) :
+          setTimeout( self.playFrame, 1000 / this.fps );
     }
 
     this.itemsRotated = function() {
@@ -295,8 +295,8 @@
 
     this.autoPlay = function() {
       this.autoPlayTimer = setInterval(
-        function() { self.go( self.autoPlayAmount ) },
-        this.autoPlayDelay
+          function() { self.go( self.autoPlayAmount ) },
+          this.autoPlayDelay
       );
     }
 

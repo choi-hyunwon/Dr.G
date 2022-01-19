@@ -5,23 +5,65 @@
 
 
 <script>
-    let headScroll = 0;
-    $(window).scroll(function (event) {
-        let st = $(this).scrollTop();
-        if (st > headScroll) {
-            //console.log("DOWN");
-            if (window.pageYOffset > 60){
-                $('.header').hide()
-            }
+    // let headScroll = 0;
+    // let headerHeight = $('._header-sticky').height();
+    //
+    // $(window).scroll(function (event) {
+    //     let st = $(this).scrollTop();
+    //     if (st > headScroll) {
+    //         //console.log("DOWN");
+    //         if (window.pageYOffset > headerHeight){
+    //             $('.header').hide()
+    //         }
+    //     } else {
+    //         //console.log("UP");
+    //         if (window.pageYOffset > headerHeight){
+    //             $('.header').show().removeClass('_header-sticky')
+    //         } else {
+    //             $('.header').show().addClass('_header-sticky')
+    //         }
+    //     }
+    //     headScroll = st;
+    // });
+
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    let header = $('._header-sticky');
+    let sectionTab = $('._scrollTabWrap');
+    let headerHeight = header.outerHeight();
+    var tabHeight = sectionTab.outerHeight();
+
+    console.log(headerHeight)
+
+    $(window).scroll(function(){
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+        if (st > lastScrollTop && st > headerHeight){
+            // 스크롤을 내렸을 때
+            header.hide();
+            sectionTab.addClass('fixed').css('top', tabHeight + 'px')
         } else {
-            //console.log("UP");
-            if (window.pageYOffset > 60){
-                $('.header').show().removeClass('_header-sticky')
-            } else {
-                $('.header').show().addClass('_header-sticky')
+            // 스크롤을 올렸을 때
+            if(st + $(window).height() < $(document).height()) {
+                header.show();
+                sectionTab.addClass('fixed').css('top', 0 + 'px')
             }
         }
-        //Updates scroll position
-        headScroll = st;
-    });
+        lastScrollTop = st;
+    }
 </script>
