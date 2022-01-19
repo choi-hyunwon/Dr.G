@@ -38,6 +38,7 @@
           .icon{
             width: vw(14);
             height: vw(14);
+            margin-bottom: vw(3);
           }
           .num{
             font-weight: 600;
@@ -55,11 +56,13 @@
             top: 50%;
             transform: translateY(-50%);
           }
+          +.date{
+            margin-left: vw(8);
+          }
         }
         .date{
           font-weight: 400;
           color: $gray-600;
-          margin-left: vw(8);
         }
 
         &.on {
@@ -245,6 +248,7 @@
       .list{
         display: none;
         padding-top: vw(56);
+        padding-bottom: vw(48);
         >li{
           margin-bottom: vw(32);
           &:first-of-type{
@@ -550,7 +554,7 @@
     /* 질문 & 답 */
     .question-box {
       background-color: $gray-200;
-      padding: vw(48) vw(24) 0;
+      padding: vw(48) vw(24);
       .info{
         margin-bottom: vw(48);
         .sub-desc{
@@ -561,8 +565,11 @@
 
       .question-item {
         margin-bottom: vw(48);
-        &:first-child {
+        &:first-of-type {
           padding-top: 0;
+        }
+        &:last-of-type{
+          margin-bottom: 0;
         }
 
         .question {

@@ -376,7 +376,7 @@
                 background-color: $gray-fff;
                 position: absolute;
                 right: vw(6);
-                top: 25%;
+                top: vw(1.5);
                 opacity: 0.3;
               }
             }
@@ -398,6 +398,9 @@
             overflow-x: scroll;
             font-size: 0;
             margin: 0 vw(-24) vw(24);
+            &::-webkit-scrollbar {
+              display: none;
+            }
 
             .item {
               margin-right: vw(16);
