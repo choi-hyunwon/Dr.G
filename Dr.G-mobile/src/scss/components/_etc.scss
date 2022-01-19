@@ -4,6 +4,7 @@
  v.0.2 주연 : vw 적용 -- 2021.12.14
  v.0.3 주연 : body.scrOff 추가 -- 2022.01.07
  v.0.4 선미 : body.scrOff > touch-action 추가 -- 2022.01.18
+ v.0.5 선미 : sub-main > more-box, btn-chatbot 추가 -- 2022.01.19
 |--------------------------------------------------------------------|
 */
 .list-with-dot {
@@ -37,3 +38,88 @@ body.scrOff {
   overflow:hidden !important;
   touch-action:none;
 }
+
+.sub-main{
+  .more-box{
+    position: absolute;
+    bottom: 0;
+    height: vw(68);
+    width: 100%;
+    .more{
+      background-color: $gray-fff;
+      height: 100%;
+      box-shadow: 0 vw(-2) vw(4) rgba(34, 34, 34, 0.06);
+      >a{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding-bottom: vw(10);
+        &:focus, &:active, &:hover{
+          color: $gray-900;
+        }
+        span{
+          font-size: vw(13);
+          font-weight: 500;
+          display: block;
+        }
+        .icon{
+          &.ico-ai{
+            margin-bottom: vw(5);
+          }
+          &.ico-shop{
+            width: vw(28);
+            height: vw(28);
+            margin-bottom: vw(3);
+          }
+        }
+      }
+    }
+    .round{
+      position: absolute;
+      top: vw(-24);
+      left: 50%;
+      transform: translateX(-50%);
+      border: vw(3) solid $gray-fff;
+      width: vw(68);
+      height: vw(68);
+      border-radius: 100%;
+      background: linear-gradient(180deg, #313464 0%, #11143A 100%);
+      color:$gray-fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      >img{
+        width: vw(39);
+        height: vw(20);
+      }
+    }
+    &:before{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      background: url("../img/mentoring/ico-arrow-bottom-white-lg.svg") no-repeat center center;
+      width: vw(24);
+      height: vw(24);
+      top:vw(-68);
+      left:50%;
+      transform: translateX(-50%);
+    }
+  }
+  .btn-chatbot{
+    position: absolute;
+    z-index: 5;
+    right: vw(24);
+    bottom: vw(84);
+    width: vw(48);
+    height: vw(48);
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+
