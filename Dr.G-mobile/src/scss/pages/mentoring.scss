@@ -65,6 +65,9 @@
     &.fixed{
       position:fixed;
       top:16vw;
+      &.top_0{
+        top:0
+      }
     }
     .font-h4 {
       padding: 0 vw(24);
