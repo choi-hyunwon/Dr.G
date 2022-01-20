@@ -1153,11 +1153,27 @@
       .section-voc {
         background-color: $yellow;
         position: relative;
-        .content{
-          padding-bottom: vw(96);
+
+        .review-wrap{
+          overflow: hidden;
+          height: vw(660);
+
         }
 
         .review_box {
+          animation: up 15s infinite linear ;
+
+          // Keyframes
+          @keyframes up {
+            0% {
+              transform: translateY(0)
+            }
+            100% {
+              transform: translateY(-60%)
+            }
+          }
+
+
           .item {
             padding: vw(20);
             margin-bottom: vw(16);
@@ -1238,9 +1254,10 @@
         }
         .btn-wrap{
           position: absolute;
-          bottom: vw(96);
+          bottom: 0;
           left: 50%;
           transform: translateX(-50%);
+          padding-bottom:  vw(96);
           &:before{
             content: '';
             display: inline-block;
@@ -1331,7 +1348,14 @@
               margin-bottom: vw(24);
               font-size: vw(22);
               line-height: vw(33);
-
+            }
+            .review_box{
+              animation: unset;
+              .item{
+                &:last-of-type{
+                  margin-bottom: 0;
+                }
+              }
             }
             .btn-wrap{
               padding: 0;
