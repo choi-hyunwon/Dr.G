@@ -367,6 +367,9 @@
         top:16vw;
         width: 100%;
         z-index: 3;
+        &.top_0{
+          top: 0;
+        }
       }
 
       .step{
@@ -659,7 +662,7 @@
     /* 제품등록제안 */
     .full-img {
       width: vw(375);
-      height: vw(400);
+      height: vw(375);
       color: $primary;
       img {
         width: 100%;
@@ -694,6 +697,7 @@
           }
         }
         .list-with-dot{
+          padding-top: vw(8);
           li{
             font-size: vw(12);
             margin-bottom: 0;
@@ -764,7 +768,8 @@
             padding: vw(16);
             width: 50%;
             border-top: vw(1) solid $gray-900;
-            border-bottom: vw(1) solid $gray-400
+            border-bottom: vw(1) solid $gray-400;
+            font-size: vw(16);
           }
         }
         tbody{

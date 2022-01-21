@@ -15,6 +15,7 @@
  v.0.9 선미 : .page-btn-wrap {   font-weight: 500}추가 -- 2022.01.03
  v.0.10 주연 : .btn-light / .btn-md 추가 -- 2022.01.07
  v.0.11 선미 : .btn-violet 추가 -- 2022.01.13
+ v.0.12 선미 : .btn-violet-light 추가 -- 2022.01.21
 |--------------------------------------------------------------------|
 */
 .btn {
@@ -178,6 +179,22 @@
 
     &:active {
       background-color: $violet !important;
+    }
+  }
+
+  &.btn-violet-light {
+    background-color: #e7eaff;
+    border-color:  #e7eaff;
+    color: $gray-800;
+
+    &:focus, &:hover {
+      background-color:  #e7eaff;
+      border-color: #e7eaff;
+      color: $gray-800;
+    }
+
+    &:active {
+      background-color:  #e7eaff !important;
     }
   }
 
