@@ -225,7 +225,7 @@
 
         $(window).scroll(function () {
             var st = $(this).scrollTop();
-            if (st === 0) {
+            if (st < 1) {
                 // console.log('Up');
                 $('.heading').removeClass('scrolling');
                 $('.step-list-sticky').removeClass('scrolling');

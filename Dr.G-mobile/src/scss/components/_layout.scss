@@ -8,7 +8,7 @@
  v.0.6 선미 : bg-primary / header-slogan 불필요 css 제거 -- 2021.12.28
  v.0.7 선미 : header-white {z-index: 5-> 20 } 변경 -- 2021.01.05
  v.0.8 선미 : header-details >  fixed 추가 -- 2021.01.06
- v.0.9 주연 : header-details 수정 -- 2022.01.21
+ v.0.9 주연 : header / header-details 수정 -- 2022.01.21
 |----------------------------------------------------------------------|
 */
 
@@ -21,7 +21,7 @@ a {
 
 /* header */
 .sticky-wrapper {
-  background-color:$gray-fff;
+  background-color: $gray-fff;
 }
 
 .header {
@@ -52,6 +52,26 @@ a {
       display: block;
     }
   }
+
+  &.scroll-up {
+    position: fixed;
+    left: 0;
+    top: vw(-60);
+
+    + .container {
+      padding-top: vw(60) !important;
+    }
+  }
+
+  &.scroll-down {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    + .container {
+      padding-top: vw(60) !important;
+    }
+  }
 }
 
 
@@ -65,9 +85,11 @@ a {
   padding: 0 vw(20);
   background-color: $gray-fff;
   z-index: 20 !important;
-  &.header-slogan{
+
+  &.header-slogan {
     padding: 0px vw(24);
   }
+
   .brand-logo {
     a {
       display: block;
@@ -84,19 +106,20 @@ a {
     }
   }
 
-
-  &.header-transparent{
+  &.header-transparent {
     background-color: transparent;
     position: absolute;
+
     .brand-logo {
       a {
         background: url("../img/common/logo-white.svg") no-repeat 0 0;
         background-size: 100% auto;
       }
     }
+
     .btn-alert {
       a {
-        i{
+        i {
           background: url("../img/common/ico-alert-white.svg") no-repeat 0 0;
           background-size: 100% auto;
         }
@@ -106,13 +129,10 @@ a {
 }
 
 .header-details {
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: 20;
   //transition: top 0.2s ease-in-out;
-  //position: relative;
-  width:100%;
+  position: relative;
+  width: 100%;
   height: vw(60);
   display: flex;
   justify-content: flex-end;
@@ -129,18 +149,50 @@ a {
     transform: translateY(-50%);
   }
 
-  &.fixed{
-    position: fixed;
-    background-color: $gray-fff;
-    z-index: 20 !important;
+  + .body-details {
+    padding-top: 0;
   }
 
-  &.nav-up {
+  &.scroll-up {
+    position: fixed;
+    left: 0;
     top: vw(-60);
+
+    + .body-details {
+      padding-top: vw(60);
+    }
+
+    + .container {
+      .freesample-application-section {
+        padding: vw(80) vw(24) vw(24);
+      }
+
+      .skin-report-detail {
+        padding-top: vw(60);
+      }
+    }
+  }
+
+  &.scroll-down {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    + .body-details {
+      padding-top: vw(60);
+    }
+
+    + .container {
+      .freesample-application-section {
+        padding: vw(80) vw(24) vw(24);
+      }
+
+      .skin-report-detail {
+        padding-top: vw(60);
+      }
+    }
   }
 }
-
-
 
 /* layout */
 .wrap {
@@ -173,7 +225,7 @@ a {
     letter-spacing: normal;
 
     .info {
-      color:$gray-fff;
+      color: $gray-fff;
       font-size: vw(14);
 
       .num {

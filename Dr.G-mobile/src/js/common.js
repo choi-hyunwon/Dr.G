@@ -10,9 +10,9 @@
  v.0.6 태윤 : 모달 관련 현재 주석해제 및 모달 공통화 완료 (텍스트변경제외) -- 2022.01.05
  v.0.7 선미 : headerDetails 추가 --2022.01.06
  v.0.8 태윤 : text-change-text & text-change-age 추가 -- 2022.01.12
+ v.0.9 주연 : header-detail / header 수정 및 추가 -- 2022.01.21
  * --------------------------------------------------------------------------
  */
-
 var front = front || {};
 
 front.common = front.common || {};
@@ -26,6 +26,7 @@ front.common = (function () {
         this.onClickModal();
         this.introScroll();
         this.ani();
+        this.header();
         this.headerDetails();
     }
 
@@ -36,9 +37,6 @@ front.common = (function () {
     }
 
     var commonHandler = function () {
-        /* header */
-        $('._header-sticky').sticky({topSpacing: 0})
-
         /* select */
         $('.custom-select').each(function () {
             $(this).on('change', function () {
@@ -183,19 +181,21 @@ front.common = (function () {
                 $('.toast-dim').css('display', 'none');
             }
         })
-
     }
 
     var headerDetails = function () {
-        if ($('.container').find('._static').length == false) {
-            if($('.container').find('.step-heading').length == false) {
-                var didScroll;
-                var lastScrollTop = 0;
-                var delta = 5;
-                var headerDetail = $('.header-details');
-                var headerDetailHeight = headerDetail.outerHeight();
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var headerDetail = $('.header-details');
+        var headerDetailHeight = headerDetail.outerHeight();
+        var stepHeading = $('.step-heading');
+        var uppperPartHeight = headerDetail.outerHeight() + stepHeading.outerHeight();
 
-                $(window).scroll(function(event){
+        if ($('.container').find('._static').length == false) {
+            /* normal case*/
+            if($('.container').find('.step-heading').length == false) {
+                $(window).scroll(function(){
                     didScroll = true;
                 });
 
@@ -204,97 +204,191 @@ front.common = (function () {
                         hasScrolled();
                         didScroll = false;
                     }
-                }, 250);
+                }, 10);
 
                 function hasScrolled() {
                     var st = $(this).scrollTop();
 
-                    // Make scroll more than delta
                     if(Math.abs(lastScrollTop - st) <= delta)
                         return;
 
-                    // If scrolled down and past the navbar, add class .nav-up.
-                    if (st > lastScrollTop && st > headerDetailHeight){
+                    if (st > lastScrollTop){
                         // Scroll Down
-                        headerDetail.removeClass('nav-down').addClass('nav-up');
+                        if (st > lastScrollTop) {
+                            if(st > headerDetailHeight) {
+                                headerDetail.removeClass('scroll-down').addClass('scroll-up');
+                            }
+                        }
                     } else {
                         // Scroll Up
                         if(st + $(window).height() < $(document).height()) {
-                            headerDetail.removeClass('nav-up').addClass('nav-down');
+                            if(st < delta) {
+                                headerDetail.removeClass('scroll-down');
+                            } else {
+                                headerDetail.removeClass('scroll-up').addClass('scroll-down');
+                            }
                         }
                     }
                     lastScrollTop = st;
                 }
             }
+            /* 스킨멘토링 step이랑 있을 경우 */
            else {
-                console.log('todo!')
+                $(window).scroll(function(){
+                    didScroll = true;
+                });
+
+                setInterval(function() {
+                    if (didScroll) {
+                        hasScrolled();
+                        didScroll = false;
+                    }
+                }, 10);
+
+                function hasScrolled() {
+                    var st = $(this).scrollTop();
+
+                    if(Math.abs(lastScrollTop - st) <= delta)
+                        return;
+
+                    if (st > lastScrollTop){
+                        // Scroll Down
+                        if (st > lastScrollTop) {
+                            if(st > uppperPartHeight) {
+                                headerDetail.removeClass('scroll-down').addClass('scroll-up');
+                                stepHeading.removeClass('scroll-down').addClass('scroll-up');
+                            }
+                        }
+                    } else {
+                        // Scroll Up
+                        if(st + $(window).height() < $(document).height()) {
+                            if(st < delta) {
+                                headerDetail.removeClass('scroll-down');
+                                stepHeading.removeClass('scroll-down');
+                            } else {
+                                headerDetail.removeClass('scroll-up').addClass('scroll-down');
+                                stepHeading.removeClass('scroll-up').addClass('scroll-down');
+                            }
+                        }
+                    }
+                    lastScrollTop = st;
+                }
             }
         }
-
-        // let detailsScroll = 0;
-        // $(window).scroll(function () {
-        // });
-        // if ($('.container').find('._static').length == false) {
-        //     console.log('1')
-        //     var didScroll;
-        //     var lastScrollTop = 0;
-        //     var delta = 5;
-        //     var detailHeader = $('.header-details');
-        //     var headerHeight = detailHeader.outerHeight();
-        //
-        //     $(window).scroll(function(){
-        //         didScroll = true;
-        //     });
-        //
-        //     setInterval(function() {
-        //         if (didScroll) {
-        //             hasScrolled();
-        //             didScroll = false;
-        //         }
-        //     }, 250);
-        //
-        //     function hasScrolled() {
-        //         var st = $(this).scrollTop();
-        //
-        //         if(Math.abs(lastScrollTop - st) <= delta)
-        //             return;
-        //
-        //         if (st > lastScrollTop && st > headerHeight){
-        //             // 스크롤을 내렸을 때
-        //             console.log('1')
-        //             detailHeader.hide();
-        //         } else {
-        //             // 스크롤을 올렸을 때
-        //             console.log('2')
-        //             detailHeader.show();
-        //         }
-        //         lastScrollTop = st;
-        //     }
-        //
-        //     // let st = $(this).scrollTop();
-        //     // if (st >= detailsScroll) {
-        //     //     // console.log("DOWN");
-        //     //     // $('.header-details').hide()
-        //     //
-        //     // } else {
-        //     //     // console.log("UP");
-        //     //     $('.header-details').show().addClass('fixed')
-        //     //     if (window.pageYOffset == 0) {
-        //     //         $('.header-details').removeClass('fixed')
-        //     //     }
-        //     // }
-        //     // //Updates scroll position
-        //     // detailsScroll = st;
-        // }
     }
 
+    var header = function () {
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var header = $('._header-sticky');
+        var headerWhite = $('.header-white');
+        var headerHeight = header.outerHeight();
+        // var stepHeading = $('.step-heading');
+        // var uppperPartHeight = headerDetail.outerHeight() + stepHeading.outerHeight();
 
-    /*-----s 스크롤 애니메이션------*/
+        /* normal */
+        if($('._header-sticky').length) {
+            $(window).scroll(function(){
+                didScroll = true;
+            });
+
+            setInterval(function() {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 10);
+
+            function hasScrolled() {
+                var st = $(this).scrollTop();
+
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+
+                if (st > lastScrollTop){
+                    // Scroll Down
+                    if (st > lastScrollTop) {
+                        if($('.inside-drg').find('._tab').length) {
+                            var tabScrollPos = $('._tab').offset().top + $('._tab').outerHeight();
+                            if(st > tabScrollPos) {
+                                header.removeClass('scroll-down').addClass('scroll-up');
+                                $('._tab').addClass('fixed').css('top','0')
+                            }
+                        } else {
+                            if(st > headerHeight) {
+                                header.removeClass('scroll-down').addClass('scroll-up');
+                            }
+                        }
+                    }
+                } else {
+                    // Scroll Up
+                    if (st + $(window).height() < $(document).height()) {
+                        if ($('.inside-drg').find('._tab').length) {
+                            var tabContentOffset = $('.tab-content').offset().top;
+                            if (tabContentOffset > st) {
+                                $('._tab').removeClass('fixed').css('top', 'auto')
+                            } else {
+                                $('._tab').addClass('fixed').css('top', headerHeight + 'px')
+                            }
+                            if(st < delta) {
+                                header.removeClass('scroll-down');
+                            } else {
+                                header.removeClass('scroll-up').addClass('scroll-down');
+                            }
+                        } else {
+                            if(st < delta) {
+                                header.removeClass('scroll-down');
+                            } else {
+                                header.removeClass('scroll-up').addClass('scroll-down');
+                            }
+                        }
+                    }
+                }
+                lastScrollTop = st;
+            }
+        }
+        /* white header 경우 */
+        if($('.header-white').length) {
+            $(window).scroll(function(){
+                didScroll = true;
+            });
+
+            setInterval(function() {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 10);
+
+            function hasScrolled() {
+                var st = $(this).scrollTop();
+
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+
+                if (st > lastScrollTop){
+                    // Scroll Down
+                    // if (st > lastScrollTop) {
+                    // }
+                } else {
+                    // Scroll Up
+                    if(st + $(window).height() < $(document).height()) {
+                        if(st < delta) {
+                            headerWhite.addClass('header-transparent');
+                        } else {
+                            headerWhite.removeClass('header-transparent');
+                        }
+                    }
+                }
+                lastScrollTop = st;
+            }
+        }
+    }
+
     var ani = function () {
         AOS.init();
     }
-    /*-----e 스크롤 애니메이션------*/
-
 
     return {
         a: a,
@@ -304,6 +398,7 @@ front.common = (function () {
         onClickModal: onClickModal,
         introScroll: introScroll,
         ani: ani,
+        header: header,
         headerDetails: headerDetails
     }
 })();
@@ -315,7 +410,6 @@ $(function () {
 function showPopup() {
     $('.toast-dim').addClass('show fade').css('display', 'block');
 }
-
 
 function hidePopup() {
     $('.toast-dim').removeClass('show fade').css('display', 'none');

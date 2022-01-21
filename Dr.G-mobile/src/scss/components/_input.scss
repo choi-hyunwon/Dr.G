@@ -396,14 +396,15 @@ textarea.form-control {
   }
 
   &.input-search-list {
+    padding-bottom: vw(13);
+    border-bottom: vw(2) solid $gray-900;
+
     .form-control {
-      height: vw(39);
-      border-left: 0;
-      border-right: 0;
-      border-top: 0;
+      height: vw(24);
+      line-height: vw(24);
       border-radius: 0;
-      border-bottom: vw(2) solid $gray-900;
-      padding: 0 vw(25) vw(13) 0;
+      padding: 0 vw(25) 0 0;
+      border: 0;
     }
 
     .btn-search {
