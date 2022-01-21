@@ -25,25 +25,25 @@
         })
 
         /*stap 공통*/
-        let stepScroll = 0;
-        $(window).scroll(function (event) {
-            if ($('.container').find('.step-heading').length) {
-                let st = $(this).scrollTop();
-                if (st > stepScroll) {
-                     //console.log("DOWN");
-                    $('.step-heading').addClass('fixed').addClass('top_0');
-
-                } else {
-                     //console.log("UP");
-                    $('.step-heading').addClass('fixed').removeClass('top_0');
-                    if (window.pageYOffset <= 0) {
-                        $('.step-heading').removeClass('fixed')
-                    }
-                }
-                //Updates scroll position
-                stepScroll = st;
-            }
-        });
+        // let stepScroll = 0;
+        // $(window).scroll(function (event) {
+        //     if ($('.container').find('.step-heading').length) {
+        //         let st = $(this).scrollTop();
+        //         if (st > stepScroll) {
+        //              //console.log("DOWN");
+        //             $('.step-heading').addClass('fixed').addClass('top_0');
+        //
+        //         } else {
+        //              //console.log("UP");
+        //             $('.step-heading').addClass('fixed').removeClass('top_0');
+        //             if (window.pageYOffset <= 0) {
+        //                 $('.step-heading').removeClass('fixed')
+        //             }
+        //         }
+        //         //Updates scroll position
+        //         stepScroll = st;
+        //     }
+        // });
 
         /*답변 대기, 답변 완료*/
         $('.unfold-box .title').on('click', function () {
