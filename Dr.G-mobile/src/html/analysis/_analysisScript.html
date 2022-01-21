@@ -29,5 +29,44 @@
             $(this).addClass('active')
         })
 
+
+        /*분석결과 상세 (스킨케어,헤어제품)*/
+        /*- 제품버전 보기-*/
+        let product = $('.section-product')
+        let productIcon = $('.section-product .name .btn_more .icon')
+        let btnFold = $('.section-product .desc .btn-wrap .btn-fold')
+        let btnView = $('.section-product .view .btn-view')
+
+        btnView.on('click',function (){
+            product.addClass('open')
+            productIcon.removeClass('ico-plus-xs')
+            productIcon.addClass('ico-minus-xs')
+        })
+        btnFold.on('click',function (){
+            product.removeClass('open')
+            productIcon.removeClass('ico-minus-xs')
+            productIcon.addClass('ico-plus-xs')
+        })
+
+        /*- 매칭된 성분 확인 -*/
+     /*   let ingredient = $('.section-ingredient')
+        let descBox = $('.section-ingredient .desc-box')
+        let subTitle = $('.section-ingredient .desc-box .sub-title')
+        let ingredientIcon = $('.section-ingredient .desc-box .sub-title .icon')
+        let mixing = $('.section-ingredient .desc-box .mixing')
+        let btnMore = $('.section-ingredient .desc-box .btn-more')
+
+        console.log(mixing.find('li').length)
+
+        subTitle.on('click',function (){
+            $(this).toggleClass('open')
+            $(this).siblings().toggleClass('open')
+        })
+        btnMore.on('click',function (){
+            $(this).parent('more')
+            $(this).siblings().toggleClass('open')
+        })
+*/
+
     });
 </script>

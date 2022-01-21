@@ -1342,7 +1342,7 @@
         .body-details {
           background-color: $yellow;
           .section-voc {
-            padding: vw(20) vw(24) vw(76);
+            padding: vw(20) vw(24) vw(152);
 
             .h2-title {
               margin-bottom: vw(24);
@@ -1359,6 +1359,11 @@
             }
             .btn-wrap{
               padding: 0;
+              background-color: unset;
+              bottom: vw(48);
+              &:before{
+                display: none;
+              }
             }
           }
         }
