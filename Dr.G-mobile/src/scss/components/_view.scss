@@ -365,6 +365,9 @@
         top:16vw;
         width: 100%;
         z-index: 3;
+        &.top_0{
+          top: 0;
+        }
       }
 
       .step{
@@ -692,6 +695,7 @@
           }
         }
         .list-with-dot{
+          padding-top: vw(8);
           li{
             font-size: vw(12);
             margin-bottom: 0;

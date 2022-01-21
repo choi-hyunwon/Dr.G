@@ -138,6 +138,414 @@
     }
   }
 
+  /*분석결과 상세 (스킨케어,헤어제품)*/
+  .section-color{
+    background: url("../img/analysis/bg_care.png") no-repeat center center;
+    width: vw(375);
+    height: vw(597);
+    background-size: contain;
+    padding: vw(80) vw(24);
+    margin-bottom: vw(37);
+    .font-h2{
+      text-align: center;
+      color: $gray-fff;
+      margin-bottom: vw(32);
+      .point{
+        color: $yellow;
+      }
+    }
+    .font-body-2{
+      text-align: center;
+      .alert{
+        position: relative;
+        padding: 0 0 0 vw(24);
+        font-weight: 500;
+        color: $gray-fff;
+        opacity: 0.7;
+        &:before{
+          content: '';
+          display: inline-block;
+          width: vw(20);
+          height: vw(20);
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background: url("../img/analysis/ico-alert-circle.png") no-repeat center center;
+          background-size: contain;
+        }
+      }
+    }
+    .floating-box{
+      width: vw(280);
+      height: vw(280);
+      filter: drop-shadow(0px 8px 16px rgba(34, 34, 34, 0.06));
+      position: relative;
+      bottom: vw(-37);
+      border-radius: vw(16);
+      overflow: hidden;
+      margin: 0 auto;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+
+  /*  .gauge-gradient{
+      .gauge {
+        height: 107px;
+        width: 214px;
+        //overflow: hidden;
+        position: relative;
+        text-align: center;
+        //// display: flex;
+        // align-items: flex-end;
+        //  justify-content: center;
+        transform-origin: 50% 0;
+
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+         // border: 10px solid ;
+          // border-image: linear-gradient(#EA8181 -0.18%, #ECDA7C 34.22%, #47D55E 68.09%, #2DAFF9 99.88%);
+
+           border:10px solid transparent; !*2*!
+          background:linear-gradient(90deg,red,blue) border-box; !*3*!
+       !*   -webkit-mask: !*4*!
+                  linear-gradient(#fff 0 0) padding-box,
+                  linear-gradient(#fff 0 0);*!
+          -webkit-mask: !*4*!
+                  linear-gradient(#fff 0 0) padding-box,
+                  linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor; !*5'*!
+          mask-composite: exclude; !*5*!
+          border-radius: 50%;
+          height: 214px;
+          width: 214px;
+          //  border-bottom-color: #fff;
+          //  border-right-color:#5562E7;
+          transform:  rotate(0deg);
+        }
+      }
+    }*/
+  /*  .gauge-gradient{
+        margin: 0 auto;
+        padding: 0;
+        list-style-type: none;
+        overflow: hidden;
+        position: relative;
+        width: vw(214);
+        height: vw(214);
+        &::before { !*배경*!
+          position: absolute;
+          content: '';
+          width: inherit;
+          height: inherit;
+          border: vw(10) solid $gray-300;
+          border-radius: 50%;
+          top: 0;
+          left: 0;
+        }
+        span { !*span 기준점*!
+          position: absolute;
+          z-index: 11;
+          top: 0;
+          left: 0;
+          border: vw(10) solid;
+          width: inherit;
+          height: inherit;
+          border-radius: 50%;
+          transform-origin: bottom left;
+          &.gauge{ !*실제 그래프*!
+            z-index: 1;
+            border-color: linear-gradient(180deg, #EA8181 -0.18%, #ECDA7C 34.22%, #47D55E 68.09%, #2DAFF9 99.88%);
+            animation: smileGraph 1s 0.5s ;
+            transform:rotateZ(-360deg);
+          }
+        }
+      @keyframes smileGraph{
+        0%{transform: rotateZ(-180deg);}
+      }
+    }*/
+/*    .gauge-gradient{
+      background: url("../img/analysis/2.png") no-repeat center center;
+      background-size: contain;
+      width: 213.5px;
+      height: 107px;
+     // overflow: hidden;
+      .gauge{
+        background: url("../img/analysis/1.png") no-repeat center center;
+        background-size: contain;
+        width: 213.5px;
+        height: 107px;
+        display: inline-block;
+        transform: rotate(0deg);
+        transform-origin: 50% 100%;
+        &.active{
+          transition: transform 3s;
+          transform: rotate(0deg);
+        }
+      }
+
+    }*/
+  }
+  .section-product{
+    padding: vw(32) vw(24) vw(48);
+    .name{
+      text-align: center;
+      margin-bottom: vw(32);
+      .font-h4{
+        margin-bottom: vw(16);
+      }
+      .btn_more{
+        padding-left: vw(16);
+        padding-right: vw(16);
+        .icon{
+          vertical-align: unset;
+        }
+      }
+    }
+    .desc{
+      .sub-title{
+        color: $gray-800;
+        margin-bottom: vw(8);
+      }
+      .ingredient{
+        color: $gray-600;
+        @include ellipsis(3);
+        margin-bottom: vw(12);
+      }
+      .btn-wrap{
+        font-size: vw(13);
+        font-weight: 500;
+        height: vw(18);
+        display: none;
+        .btn-fold{
+          text-decoration: underline;
+          color: $gray-700;
+          float: left;
+        }
+        .btn-edit{
+          float: right;
+        }
+      }
+      .view{
+        .btn-view{
+          font-size: vw(13);
+          font-weight: 500;
+          text-decoration: underline;
+          color: $gray-700;
+        }
+      }
+    }
+    &.open{
+      .desc{
+        .ingredient{
+          -webkit-line-clamp: unset;
+        }
+        .btn-wrap{
+          display: block;
+        }
+        .view{
+          display: none;
+        }
+      }
+    }
+    .btn-sns-wrap{
+      text-align: center;
+      font-size: 0;
+      margin-bottom: vw(32);
+      .btn-sns-inner{
+        a{
+          display: inline-block;
+          margin-right: vw(12);
+          &:last-of-type{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .keyword{
+      border: 1px solid $gray-400;
+      border-radius: vw(16);
+      position: relative;
+      width: 100%;
+      padding: vw(24) vw(24);
+      background-color: $gray-fff;
+      margin-top: vw(76);
+      color: $gray-800;
+      text-align: center;
+      &:before{
+        content: '';
+        clear: both;
+        display: inline-block;
+        position: absolute;
+        z-index: -1;
+        background-color: #F5F5F5;
+        border-radius: vw(16);
+        width: vw(311);
+        height: 100%;
+        bottom:vw(-4);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .font-h6{
+        margin-bottom: vw(12);
+      }
+      .badge-box{
+        font-size: 0;
+        .badge{
+          font-size: vw(13);
+          font-weight: 700;
+          margin-right: vw(10);
+          &:last-of-type{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .section-ingredient{
+    background-color: #f0f2ff;
+    padding: vw(76) vw(24);
+    >.title{
+      margin-bottom: vw(32);
+      .font-h2{
+        margin-bottom: vw(12);
+      }
+      .font-h6{
+        color: $gray-700;
+      }
+    }
+    >.list{
+      margin-bottom: vw(34);
+      display: flex;
+      justify-content: center;
+      li{
+        border-right: 1px solid rgba(34,34,34,0.05);
+        text-align: center;
+        font-size: vw(15);
+        font-weight: 700;
+        color: $gray-800;
+        >span{
+          display: block;
+        }
+        .icon{
+          width: vw(80);
+          height: vw(80);
+          &.ico-elasticity{
+            background: url("../img/analysis/ico-elasticity.png") no-repeat center center / contain;
+          }
+          &.ico-whitening{
+            background: url("../img/analysis/ico-whitening.png") no-repeat center center / contain;
+          }
+          &.ico-sensitivity{
+            background: url("../img/analysis/ico-sensitivity.png") no-repeat center center / contain;
+          }
+          &.ico-intelligence{
+            background: url("../img/analysis/ico-intelligence.png") no-repeat center center / contain;
+          }
+          &.ico-moisturizing{
+            background: url("../img/analysis/ico-moisturizing.png") no-repeat center center / contain;
+          }
+        }
+        &:last-of-type{
+          border-right: none;
+        }
+
+      }
+    }
+    >.desc-box{
+      background-color: $gray-fff;
+      border-radius: vw(16);
+      padding: vw(16) vw(20) 0;
+
+      >li {
+        >.sub-title {
+          position: relative;
+          font-size: vw(15);
+          font-weight: 700;
+          padding-bottom: vw(16);
+          span{
+            font-weight: 600;
+          }
+          .icon {
+            position: absolute;
+            right: 0;
+            top: vw(5);
+          }
+          &.open{
+            color: $violet;
+            .icon{
+              background: url("../img/analysis/ico-minus-sm.svg") no-repeat center center / contain;
+              width: vw(12);
+              height: vw(12);
+            }
+
+
+          }
+        }
+        .mixing{
+          display: none;
+          height: vw(480);
+          &.open{
+            display: block;
+          }
+          &.more{
+            overflow-y: auto;
+
+            &::-webkit-scrollbar{
+              display: none;
+              width: 0;
+              height: 0;
+              background: transparent;
+              -webkit-appearance: none;
+            }
+          }
+
+          >li{
+            padding: vw(16) 0;
+            border-top: 1px solid rgba(34,34,34,0.05);
+            font-weight: bold;
+            color: $gray-700;
+
+            .name{
+              font-size: vw(12);
+              color: $gray-800;
+            }
+            .color-violet{
+              margin-bottom: vw(8);
+            }
+            .mix{
+              font-size: vw(12);
+            }
+            .desc{
+              font-weight: normal;
+              @include ellipsis(2)
+            }
+            .btn-more{
+              font-weight: 500;
+              display: block;
+              text-align: center;
+              text-decoration: underline;
+              font-size: vw(13);
+            }
+
+          }
+
+        }
+
+
+      }
+
+    }
+
+
+  }
+
 
 
   .dim{
