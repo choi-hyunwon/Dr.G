@@ -44,6 +44,7 @@ function copyLibJs() {
         'src/js/lib/anime.js',
         'src/js/lib/Tocca.js',
         'src/js/lib/jquery.cloud9carousel.js',
+        'src/js/lib/jquery.waypoints.js',
     ];
 
     return gulp.src(sourceLib)

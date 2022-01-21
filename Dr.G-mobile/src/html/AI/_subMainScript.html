@@ -1,16 +1,16 @@
 <script>
     // chatbot
     $('#chatbot').draggable({
-        containment : 'parent',
+        containment: 'parent',
         axis: 'y',
-        drag: function() {
+        drag: function () {
             var offset = $(this).offset();
             var yPos = offset.top;
             console.log('y :', yPos)
         }
     });
 
-    // circle slider
+    // bubble slider
     // https://www.jqueryscript.net/slider/3D-Cover-Flow-Style-Image-Carousel-Plugin-with-jQuery-Cloud-9-Carousel.html
     let showcase = $("._showCase")
     showcase.Cloud9Carousel({
@@ -57,25 +57,25 @@
     var scrollTab = $('._scrollTab');
     var sectionTab = $('._scrollTabWrap');
     var sectionWrap = $('.section-wrap');
+    var tabHeight = scrollTab.outerHeight();
     var lastScroll = 0;
 
     $(window).scroll(function () {
         var st = $(this).scrollTop();
-        var tabStartPos = sectionTab.position ().top;
-        var sectionStartPos = sectionWrap.position ().top;
+        var tabStartPos = sectionTab.position().top;
+        var sectionStartPos = sectionWrap.position().top;
         var headerHeight = $('.header-white').outerHeight();
-        var sectionProcess = $('._sectionProcess').position ().top;
-        var sectionReview = $('._sectionReview').position ().top;
-        var sectionFAQ = $('._sectionFAQ').position ().top;
+        var sectionProcess = $('._sectionProcess').position().top;
+        var sectionReview = $('._sectionReview').position().top;
+        var sectionFAQ = $('._sectionFAQ').position().top;
         var offset = 200;
 
-        if (st > lastScroll){
+        if (st > lastScroll) {
             //console.log("DOWN");
             if (window.pageYOffset >= sectionStartPos) {
                 sectionTab.show().addClass('fixed').css('top', 0 + 'px');
             }
-        }
-        else {
+        } else {
             //console.log("UP");
             if (window.pageYOffset >= tabStartPos) {
                 sectionTab.show().addClass('fixed').css('top', headerHeight + 'px');
@@ -87,11 +87,11 @@
 
         lastScroll = st;
 
-        if (lastScroll > sectionProcess - offset && lastScroll < sectionReview - offset){
+        if (lastScroll > sectionProcess - offset && lastScroll < sectionReview - offset) {
             scrollTab.scrollLeft(100);
-        } else if (lastScroll > sectionReview - offset && lastScroll < sectionFAQ - offset){
+        } else if (lastScroll > sectionReview - offset && lastScroll < sectionFAQ - offset) {
             scrollTab.scrollLeft(200);
-        } else if (lastScroll > sectionFAQ - offset){
+        } else if (lastScroll > sectionFAQ - offset) {
             scrollTab.scrollLeft(300);
         } else {
             scrollTab.scrollLeft(0);
@@ -99,42 +99,194 @@
 
         let section = $('.section')
         let tab = $('._scrollTab .item')
-        section.each(function( index ) {
-            if ( st > $(this).offset().top - offset){
+        section.each(function (index) {
+            if (st > $(this).offset().top - offset) {
                 tab.eq(index).addClass('active').siblings().removeClass('active')
             }
         });
     });
 
-    // how slider
-    new Swiper("._howSlider", {
+    $("._scrollTab a[href^='#']").on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $(this.hash).offset().top - tabHeight }, 300);
+    });
+
+    /* ---------- s how section animation ---------- */
+    var howSlider = new Swiper("._howSlider", {
         spaceBetween: 24,
         centeredSlides: true,
         effect: 'fade',
         pagination: {
-            el: "._sliderPagination",
+            el: "._howSlider + ._sliderPagination",
             clickable: true,
         },
     });
 
-    // modal
+    var $score = $('._barChart .bar .pos');
+
+    $score.each(function () {
+        let data = $(this).data('score');
+        let numDate = 100 - Number(data);
+        // $(this).css('left', data + '%')
+        $(this).siblings('.gradient').css({
+            'mask-image': 'linear-gradient(to left, transparent ' + numDate + '%, black ' + numDate + '%)',
+            '-webkit-mask-image': 'linear-gradient(to left, transparent ' + numDate + '%, black ' + numDate + '%)'
+        })
+        if (0 < data && data <= 5) {
+            $(this).addClass('align-left')
+        } else if (95 < data && data <= 100) {
+            $(this).addClass('align-right')
+        }
+    })
+
+    function countDown(from, to, idx) {
+        var start = from;
+        var countDown = setInterval(function () {
+            var mask = $('._barChart').find('.item').eq(idx).find('.mask');
+            var number = --start;
+            mask.css('width', number + '%');
+            if (start === to) {
+                clearInterval(countDown);
+            }
+        }, 10);
+    }
+
+    function countUp(from, to, idx) {
+        var start = from;
+        var countUp = setInterval(function () {
+            var mask = $('._barChart').find('.item').eq(idx).find('.pos');
+            var number = ++start;
+            mask.css('left', number + '%');
+            if (start === to) {
+                clearInterval(countUp);
+            }
+        }, 10);
+    }
+
+    new Waypoint({
+        element: document.querySelector('._howSlider'),
+        handler: function (direction) {
+            countDown(100, 12, 0)
+            countUp(0, 88, 0)
+            setTimeout(function () {
+                countDown(100, 0, 1)
+                countUp(0, 100, 1)
+            }, 300)
+        },
+        offset: "50%"
+    })
+
+    howSlider.on('slideChange', function () {
+
+        if(howSlider.realIndex === 2) {
+            setInterval(function (){
+                var badge = $('._badgeTab .badge')
+                var content = $('._badgeTabContent .content-item')
+                secondStep(badge, content)
+
+                setTimeout(function (){
+                    var badge = $('._badgeTab .badge')
+                    var content = $('._badgeTabContent .content-item')
+                    firstStep(badge, content)
+                },1500)
+            },3000)
+        }
+    });
+
+    function firstStep(step,content) {
+        step.eq(0).addClass('on');
+        content.eq(0).addClass('on');
+        step.eq(1).removeClass('on');
+        content.eq(1).removeClass('on');
+    }
+
+    function secondStep(step,content) {
+        step.eq(1).addClass('on');
+        content.eq(1).addClass('on');
+        step.eq(0).removeClass('on');
+        content.eq(0).removeClass('on');
+    }
+    /* ---------- e how section animation ---------- */
+
+    /* ---------- s story section animation ---------- */
+    var storySlider = new Swiper("._storySlider", {
+        spaceBetween: 48,
+        centeredSlides: true,
+        effect: 'fade',
+        pagination: {
+            el: "._storySlider + ._sliderPagination",
+            clickable: true,
+        },
+    });
+    /* ---------- e story section animation ---------- */
+
+    /* ---------- s why section animation ---------- */
+    var whySlider = new Swiper("._whySlider", {
+        spaceBetween: 48,
+        centeredSlides: true,
+        effect: 'fade',
+        pagination: {
+            el: "._whySlider + ._sliderPagination",
+            clickable: true,
+        },
+    });
+    /* ---------- e why section animation ---------- */
+
+    /* ---------- s process section animation ---------- */
+    var processSlider = new Swiper("._processSlider", {
+        spaceBetween: 48,
+        centeredSlides: true,
+        effect: 'fade',
+        pagination: {
+            el: "._processSlider + ._sliderPagination",
+            clickable: true,
+        },
+    });
+    /* ---------- e why section animation ---------- */
+
+    /* ---------- e faq section animation ---------- */
+    let box = $('._faqBox')
+    let item = $('._faqBox .item')
+    let solution = $('._faqBox .solution')
+
+    item.on('click', function () {
+        if (!$(this).hasClass('active')) {
+            $(this).siblings().removeClass('active')
+            $(this).siblings().find(solution).slideUp(200);
+            $(this).addClass('active');
+            $(this).find(solution).slideDown(200);
+        } else {
+            $(this).removeClass('active');
+            $(this).find(solution).slideUp(200);
+        }
+    })
+
+    $('body').click(function (e) {
+        if (!box.has(e.target).length) {
+            item.removeClass('active');
+            solution.slideUp(200);
+        }
+    });
+    /* ---------- e faq section animation ---------- */
+
+    /* ---------- s modal animation ---------- */
     $triggerBtn = $('._showCaseItem');
     $closeBtn = $('._btnClose');
     $skinTypeModal = $('._skinTypeModal');
 
     $triggerBtn.on('click', function () {
         showSkinTypeModal()
-        $('._sectionWhat').find('.font-h6 ').css('visibility','hidden')
+        $('._sectionWhat').find('.font-h6 ').css('visibility', 'hidden')
     })
 
-    $('._tabBox li a').on('click',function (){
+    $('._tabBox li a').on('click', function () {
         $(this).parent().addClass('on').siblings().removeClass('on')
     })
 
     $closeBtn.on('click', function () {
         hideSkinTypeModal()
         setShowcase()
-        $('._sectionWhat').find('.font-h6 ').css('visibility','visible')
+        $('._sectionWhat').find('.font-h6 ').css('visibility', 'visible')
     })
 
     $skinTypeModal.on('click', function (e) {
@@ -149,7 +301,7 @@
         // body scroll
         $('body').removeClass('scrOff')
         // setTimeout(() => {
-            $skinTypeModal.removeClass('show hide').css('display', 'none');
+        $skinTypeModal.removeClass('show hide').css('display', 'none');
         // }, 400);
         setShowcase()
     }
@@ -162,4 +314,5 @@
         // body scroll
         $('body').addClass('scrOff')
     }
+    /* ---------- e modal animation ---------- */
 </script>

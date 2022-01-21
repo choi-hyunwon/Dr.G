@@ -136,6 +136,12 @@ data.AI = {
         },
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_서브메인_후기전체보기',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인_후기전체보기'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_비회원_정보입력',
             category: 'AI',
             page: 'Ai피부분석_비회원_정보입력'
