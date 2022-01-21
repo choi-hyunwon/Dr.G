@@ -187,25 +187,101 @@ front.common = (function () {
     }
 
     var headerDetails = function () {
-        let detailsScroll = 0;
-        $(window).scroll(function (event) {
-            if ($('.container').find('._static').length == false) {
-                let st = $(this).scrollTop();
-                if (st >= detailsScroll) {
-                    // console.log("DOWN");
-                    // $('.header-details').hide()
+        if ($('.container').find('._static').length == false) {
+            // Hide header on scroll down
+            var didScroll;
+            var lastScrollTop = 0;
+            var delta = 5;
+            var headerDetail = $('.header-details');
+            var headerDetailHeight = headerDetail.outerHeight();
 
+            $(window).scroll(function(event){
+                didScroll = true;
+            });
+
+            setInterval(function() {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 250);
+
+            function hasScrolled() {
+                var st = $(this).scrollTop();
+
+                // Make scroll more than delta
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+
+                // If scrolled down and past the navbar, add class .nav-up.
+                if (st > lastScrollTop && st > headerDetailHeight){
+                    // Scroll Down
+                    headerDetail.removeClass('nav-down').addClass('nav-up');
                 } else {
-                    // console.log("UP");
-                    $('.header-details').show().addClass('fixed')
-                    if (window.pageYOffset == 0) {
-                        $('.header-details').removeClass('fixed')
+                    // Scroll Up
+                    if(st + $(window).height() < $(document).height()) {
+                        headerDetail.removeClass('nav-up').addClass('nav-down');
                     }
                 }
-                //Updates scroll position
-                detailsScroll = st;
+                lastScrollTop = st;
             }
-        });
+        }
+
+        // let detailsScroll = 0;
+        // $(window).scroll(function () {
+        // });
+        // if ($('.container').find('._static').length == false) {
+        //     console.log('1')
+        //     var didScroll;
+        //     var lastScrollTop = 0;
+        //     var delta = 5;
+        //     var detailHeader = $('.header-details');
+        //     var headerHeight = detailHeader.outerHeight();
+        //
+        //     $(window).scroll(function(){
+        //         didScroll = true;
+        //     });
+        //
+        //     setInterval(function() {
+        //         if (didScroll) {
+        //             hasScrolled();
+        //             didScroll = false;
+        //         }
+        //     }, 250);
+        //
+        //     function hasScrolled() {
+        //         var st = $(this).scrollTop();
+        //
+        //         if(Math.abs(lastScrollTop - st) <= delta)
+        //             return;
+        //
+        //         if (st > lastScrollTop && st > headerHeight){
+        //             // 스크롤을 내렸을 때
+        //             console.log('1')
+        //             detailHeader.hide();
+        //         } else {
+        //             // 스크롤을 올렸을 때
+        //             console.log('2')
+        //             detailHeader.show();
+        //         }
+        //         lastScrollTop = st;
+        //     }
+        //
+        //     // let st = $(this).scrollTop();
+        //     // if (st >= detailsScroll) {
+        //     //     // console.log("DOWN");
+        //     //     // $('.header-details').hide()
+        //     //
+        //     // } else {
+        //     //     // console.log("UP");
+        //     //     $('.header-details').show().addClass('fixed')
+        //     //     if (window.pageYOffset == 0) {
+        //     //         $('.header-details').removeClass('fixed')
+        //     //     }
+        //     // }
+        //     // //Updates scroll position
+        //     // detailsScroll = st;
+        // }
     }
 
 

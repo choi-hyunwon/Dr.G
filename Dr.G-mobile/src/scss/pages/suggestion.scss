@@ -231,6 +231,7 @@
 
   .suggestion-slider {
     position: relative;
+    background-color: $primary;
 
     .swiper-slide {
       position: relative;
@@ -249,9 +250,11 @@
       }
 
       .text-box {
+        position: relative;
         color: #fff;
         transition: 1s;
         transform: translateX(90%);
+        z-index: 4;
 
         .font-body-2 {
           margin-bottom: vw(6);
@@ -268,7 +271,7 @@
         }
 
         .font-body-1 {
-          width: vw(150);
+          width: vw(152);
         }
       }
 
@@ -295,9 +298,16 @@
     .smile-motif {
       position: absolute;
       top: vw(263);
+      width: vw(276);
+      height: vw(180);
       right: 0;
       z-index: 2;
-      @include background-img($width: 276, $height: 180, $category: 'suggestion', $img: 'img-smile-motif.svg');
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+      //@include background-img($width: 276, $height: 180, $category: 'suggestion', $img: 'img-smile-motif.svg');
     }
 
     .swiper-pagination-bullets {

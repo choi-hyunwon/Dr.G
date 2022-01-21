@@ -13,6 +13,7 @@
     top: 0;
     left: 0;
     z-index: 2;
+    background-color: transparent;
   }
 
   /* 피부분석 step */
@@ -3256,10 +3257,11 @@
 
                     .scan-line {
                       position: absolute;
-                      width: vw(184);
-                      height: vw(2);
-                      background-color: $yellow;
-                      border-radius: vw(89);
+                      @include background-img ($width: 184, $height: 67, $category: 'AI', $img: 'img-scan-line.svg');
+                      //width: vw(184);
+                      //height: vw(2);
+                      //background-color: $yellow;
+                      //border-radius: vw(89);
                       left: 50%;
                       transform: translateX(-50%);
                       z-index: 1;
@@ -3274,16 +3276,16 @@
                       animation-direction: alternate;
                       -webkit-animation-direction: alternate;
 
-                      &::after {
-                        content: '';
-                        position: absolute;
-                        top: vw(3);
-                        left: 0;
-                        width: 100%;
-                        height: vw(69);
-                        background: linear-gradient(180deg, #ddbc0f 0%, rgba(221, 188, 15, 0) 100%);
-                        opacity: .5;
-                      }
+                      //&::after {
+                      //  content: '';
+                      //  position: absolute;
+                      //  top: vw(3);
+                      //  left: 0;
+                      //  width: 100%;
+                      //  height: vw(69);
+                      //  background: linear-gradient(180deg, #ddbc0f 0%, rgba(221, 188, 15, 0) 100%);
+                      //  opacity: .5;
+                      //}
                     }
                   }
                 }
