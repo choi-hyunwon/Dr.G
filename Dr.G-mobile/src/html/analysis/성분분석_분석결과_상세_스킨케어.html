@@ -13,21 +13,30 @@
             <!-- s section-color -->
             <div class="section-color">
                 <p class="font-h2 font-bold">내 <span class="point">피부유형</span>과 얼마나<br>일치하는지 확인하세요.</p>
-               <!-- <div class="gauge-gradient">
-                    <div class="gauge">
-                        2/8
-                    </div>
-                </div>-->
                  <div class="gauge-gradient">
-                  <span class="gauge">
-
-                  </span>
+                     <div id="progress" class="process">
+                         <svg viewbox="0 0 100 58">
+                             <linearGradient id="gradient">
+                                 <stop offset="0%" stop-color="#EA8181"/>
+                                 <stop offset="35%" stop-color="#ECDA7C"/>
+                                 <stop offset="70%" stop-color="#47D45E"/>
+                                 <stop offset="100%" stop-color="#2DAFF9"/>
+                             </linearGradient>
+                             <path class="bg" d="M 50,50 m -47,0 a 47,47 0 1 1 94,0" fill='none' />
+                             <path class="numerical" d="M 50,50 m -47,0 a 47,47 0 1 1 94,0"  fill='none'/>
+                         </svg>
+                         <p class="font-poppins percent"><span class="counter">0</span><span class="unit">%</span></p>
+                         <div class="dot-box">
+                             <span class="dot dot1"></span>
+                             <span class="dot dot2"></span>
+                             <span class="dot dot3"></span>
+                         </div>
+                     </div>
               </div>
 
                 <p class="font-body-2"><span class="alert">일치율의 기준이 궁금하신가요?</span></p>
                 <div class="floating-box">
                     <img src="../../img/analysis/img-sample-3.png" alt="제품이미지">
-
                 </div>
             </div>
             <!-- e section-color -->
@@ -79,7 +88,7 @@
                     <p class="font-h2 font-bold">왜 좋을까요?</p>
                     <p class="font-h6">피부 고민과 매칭된 성분을 확인하세요.</p>
                 </div>
-                <ul class="list row">
+                <ul class="title-list row">
                     <li class="col-4">
                         <span>민감성</span>
                         <i class="icon ico-sensitivity"></i>
@@ -101,9 +110,97 @@
                         <i class="icon ico-intelligence"></i>
                     </li>-->
                 </ul>
-                <ul class="desc-box">
-                    <li>
-                        <p class="sub-title">민감성 (<span class="font-poppins">10</span>)<i class="icon ico-plus-sm-gray"></i></p>
+                <ul class="ingredient-box">
+                    <li class="info-list">
+                        <p class="sub-title open">민감성 (<span class="font-poppins">10</span>)<i class="icon ico-plus-sm-gray"></i></p>
+                        <ul class="mixing open">
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-more">더보기</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="info-list">
+                        <p class="sub-title">2 (<span class="font-poppins">10</span>)<i class="icon ico-plus-sm-gray"></i></p>
+                        <ul class="mixing">
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-more">더보기</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="info-list">
+                        <p class="sub-title">3 (<span class="font-poppins">10</span>)<i class="icon ico-plus-sm-gray"></i></p>
                         <ul class="mixing">
                             <li>
                                 <p class="name">성분명</p>
@@ -149,7 +246,25 @@
                 </ul>
 
             </div>
+
             <!-- e section-ingredient -->
+
+            <!-- s section-ingredient / no-matching -->
+            <div class="section-ingredient no-matching">
+                <div class="title">
+                    <p class="font-h2 font-bold">왜 좋을까요?</p>
+                    <p class="font-h6">피부 고민과 매칭된 성분을 확인하세요.</p>
+                </div>
+
+                <ul class="desc-box">
+                    <li>
+                        <p>아쉽게도 매칭된 성분이<br>발견되지 않았어요</p>
+
+                    </li>
+                </ul>
+
+            </div>
+            <!-- e section-ingredient / no-matching -->
 
 
 
