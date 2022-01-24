@@ -45,7 +45,7 @@ body.scrOff {
   width: 100%;
   bottom: 0;
   left: 0;
-  z-index: 10;
+  z-index: 20;
 
   .more-box {
     position: absolute;
@@ -144,9 +144,41 @@ body.scrOff {
   width: vw(48);
   height: vw(48);
   z-index: 5;
+  cursor: pointer;
 
   img {
     width: 100%;
     height: auto;
+  }
+
+  .tip {
+    display: none;
+    position: absolute;
+    padding: vw(8) vw(12);
+    font-size: vw(12);
+    line-height: vw(16);
+    letter-spacing: -0.005em;
+    color: $gray-800;
+    background-color: #D5F4EF;
+    box-shadow: 0 vw(2) vw(1) rgba(34, 34, 34, 0.04);
+    border-radius: vw(12);
+    white-space: nowrap;
+    right: vw(56);
+    bottom: 0;
+
+    .btn-chatbot-close {
+      position: absolute;
+      top: vw(-8);
+      left: vw(-12);
+      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-chatbot-close.svg');
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: vw(3);
+      right: vw(-5);
+      @include background-img($width: 10, $height: 7, $category: 'common', $img: 'ico-chatbot-tip.svg');
+    }
   }
 }
