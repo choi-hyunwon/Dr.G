@@ -52,7 +52,7 @@
         > .font-body-1 {
           text-align: center;
           color: $gray-700;
-          font-weight: 400;
+          font-weight: 500;
           margin-bottom: vw(24);
         }
 
@@ -951,7 +951,7 @@
         margin-bottom: vw(24);
 
         ul {
-          width: calc((#{vw(52)} + #{vw(24)}) * 7);
+          width: calc((#{vw(52)} + #{vw(24)}) * 6);
         }
 
         li {
@@ -2059,6 +2059,14 @@
           padding: 0;
           -webkit-animation: scrollUp .8s ease-in-out 1;
           animation: scrollUp .8s ease-in-out 1;
+          animation-name: scrollUp;
+          -webkit-animation-name: scrollUp;
+          animation-delay: .8s;
+          -webkit-animation-delay: .8s;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-iteration-count: 1;
+          -webkit-animation-iteration-count: 1;
         }
 
         li {

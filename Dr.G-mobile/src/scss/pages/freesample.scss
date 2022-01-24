@@ -329,7 +329,8 @@
   }
 
   .freesample-application-section {
-    padding: vw(80) vw(24) vw(24);
+    //padding: vw(80) vw(24) vw(24);
+    padding: vw(20) vw(24) vw(24);
 
     .title {
       font-size: vw(22);
@@ -437,10 +438,17 @@
           .custom-control-label {
             font-size: vw(15);
             font-weight: 700;
-            line-height: vw(24);
+            line-height: vw(20);
             color: $gray-900;
             display: inline;
-            vertical-align: top;
+
+            &::before {
+              top: vw(2);
+            }
+
+            &::after  {
+              top: vw(2);
+            }
           }
         }
 

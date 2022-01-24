@@ -2,26 +2,3 @@
     <div class="brand-logo"><a href="#"></a></div>
     <div class="btn-alert"><a href="#"><i class="icon ico-alert"></i></a></div>
 </div>
-
-
-<script>
-    let headScroll = 0;
-    $(window).scroll(function (event) {
-        let st = $(this).scrollTop();
-        if (st > headScroll) {
-            //console.log("DOWN");
-            if (window.pageYOffset > 60){
-                $('.header-white').hide()
-            }
-        } else {
-            //console.log("UP");
-            if (window.pageYOffset > 60){
-                $('.header-white ').show().removeClass('header-transparent')
-            } else {
-                $('.header-white ').show().addClass('header-transparent')
-            }
-        }
-        //Updates scroll position
-        headScroll = st;
-    });
-</script>

@@ -88,6 +88,12 @@ data.AI = {
         },
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_회차별+계절별',
+            category: 'AI',
+            page: 'Ai피부분석_회차별+계절별'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_서브메인_OS+',
             category: 'AI',
             page: 'Ai피부분석_서브메인_OS+'

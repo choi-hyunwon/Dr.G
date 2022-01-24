@@ -1,68 +1,75 @@
 /*
 |----------------------------------------------------------------------|
  v.0.1 선미 : 최초 작업 -- 2021.12.16
- v.0.2 주연 : body-details / padding-top: vw(60); 추가  -- 2022.01.21
+ v.0.2 주연 : .step-heading 수정  -- 2022.01.21
 |----------------------------------------------------------------------|
 */
 
-
 /*고객제안 , 스킨멘토링*/
-.view-details{
-  .header-details{
+.view-details {
+  .header-details {
     /*layout.scss*/
-
   }
-  .body-details{
-    padding-top: vw(60);
-    .area-title{
+
+  .body-details {
+    .area-title {
       padding: vw(20) vw(30) vw(32);
       text-align: center;
-      border-bottom:1px solid $gray-900;
-      .badge-box{
+      border-bottom: 1px solid $gray-900;
+
+      .badge-box {
         margin-bottom: vw(8);
       }
-      .title{
+
+      .title {
         font-size: vw(28);
         line-height: vw(39);
         color: #222222;
         font-weight: 700;
         margin-bottom: vw(12);
       }
-      .info-line{
+
+      .info-line {
         letter-spacing: 0;
         font-size: vw(13);
         display: flex;
         align-items: center;
         justify-content: center;
-        .like{
+
+        .like {
           margin-right: vw(8);
           position: relative;
-          .icon{
+
+          .icon {
             width: vw(14);
             height: vw(14);
             margin-bottom: vw(3);
           }
-          .num{
+
+          .num {
             font-weight: 600;
             color: $gray-700;
             vertical-align: middle;
           }
-          &:after{
+
+          &:after {
             content: '';
             display: inline-block;
             position: absolute;
-            width:vw(1);
+            width: vw(1);
             height: vw(10);
             background-color: $gray-400;
             right: vw(-8);
             top: 50%;
             transform: translateY(-50%);
           }
-          +.date{
+
+          + .date {
             margin-left: vw(8);
           }
         }
-        .date{
+
+        .date {
           font-weight: 400;
           color: $gray-600;
         }
@@ -75,57 +82,67 @@
           }
         }
 
-        .desc{
+        .desc {
           color: $gray-700;
           font-size: vw(15);
         }
       }
     }
-    .area-desc{
+
+    .area-desc {
       padding: vw(48) vw(24) 0;
-      >.text{
+
+      > .text {
         word-break: keep-all;
         color: $gray-700;
         letter-spacing: 0;
         font-size: vw(16);
-        .more{
+
+        .more {
           text-decoration: underline;
           font-weight: 500;
           color: $gray-500;
           font-size: vw(15);
         }
       }
-      .divider{
+
+      .divider {
         margin: vw(32) 0;
       }
-      .product-box{
+
+      .product-box {
         margin-top: vw(48);
         background: $primary-light;
         border-radius: vw(16);
         padding: vw(12) vw(60) vw(12) vw(12);
         display: flex;
         align-items: center;
-        >img{
+
+        > img {
           width: vw(76);
           height: vw(76);
           border-radius: vw(10);
         }
-        .text{
+
+        .text {
           padding-left: vw(16);
           font-weight: 700;
-          .name{
+
+          .name {
             font-size: vw(15);
             line-height: vw(22);
             color: $gray-800;
             margin-bottom: vw(8);
             display: inline-block;
           }
-          .more{
+
+          .more {
             display: block;
             color: $primary;
             font-size: vw(12);
             line-height: vw(18);
-            .ico-arrow-green-right{
+
+            .ico-arrow-green-right {
               margin-left: vw(2);
             }
           }
@@ -135,49 +152,58 @@
       }
 
       /*질문 title 영역*/
-      .guidance{
+      .guidance {
         margin-bottom: vw(32);
-        .sub-desc{
+
+        .sub-desc {
           padding-top: vw(12);
           color: $gray-600;
         }
       }
+
       /*질문 영역*/
-      .asking{
+      .asking {
         padding-bottom: vw(48);
-        .font-h6{
+
+        .font-h6 {
           color: $gray-800;
           margin-bottom: vw(12);
           padding-top: vw(32);
-          &:first-of-type{
+
+          &:first-of-type {
             padding-top: 0;
           }
         }
-        .select-popup{
+
+        .select-popup {
           margin-bottom: 0;
         }
-        .badge-box{
-          .badge{
+
+        .badge-box {
+          .badge {
             margin-right: vw(6);
             margin-bottom: vw(12);
             background-color: $gray-300;
             color: $gray-800;
-            &.active{
+
+            &.active {
               background-color: $yellow;
               font-weight: bold;
             }
           }
         }
-        .font_right{
+
+        .font_right {
           text-align: right;
           padding-top: vw(20);
           font-weight: bold;
           font-size: vw(18);
           color: $gray-800;
         }
-        .question-box{
-          .habit{
-            li{
+
+        .question-box {
+          .habit {
+            li {
               background-color: $gray-fff;
               border-radius: vw(16);
               font-size: vw(16);
@@ -185,18 +211,25 @@
               font-weight: 700;
               margin-bottom: vw(16);
               padding: vw(20);
-              &:last-of-type{margin-bottom: 0}
-              >p{
+
+              &:last-of-type {
+                margin-bottom: 0
+              }
+
+              > p {
                 margin-bottom: vw(16);
-                .num{
+
+                .num {
                   color: $gray-600;
                   margin-right: vw(4);
                 }
               }
-              >div{
+
+              > div {
                 display: flex;
                 justify-content: space-between;
-                .btn{
+
+                .btn {
                   width: 50%;
                   background-color: transparent;
                   border: 1px solid #dddddd;
@@ -204,14 +237,17 @@
                   font-weight: 500;
                   padding: 0;
                   margin-right: vw(8);
-                  &:last-of-type{
+
+                  &:last-of-type {
                     margin-right: 0;
                   }
-                  &:active{
-                    background-color: transparent!important;
+
+                  &:active {
+                    background-color: transparent !important;
                   }
-                  &.active{
-                    background-color: $blue!important;
+
+                  &.active {
+                    background-color: $blue !important;
                     color: $gray-fff;
                     border: unset;
                     font-weight: 700;
@@ -222,44 +258,53 @@
             }
           }
         }
-        >textarea{
+
+        > textarea {
           margin-bottom: vw(12);
         }
       }
     }
 
     /*생활습관 펼쳐보기*/
-    .unfold-box{
+    .unfold-box {
       margin-top: vw(48);
-      border-top:1px solid $gray-400;
+      border-top: 1px solid $gray-400;
       padding: vw(32) vw(24) 0;
-      &._unfold{
+
+      &._unfold {
         background-color: $gray-200;
         border-top: none;
       }
-      >.title{
+
+      > .title {
         text-align: center;
         font-weight: 700;
         font-size: vw(15);
         color: $gray-800;
-        span{
+
+        span {
           vertical-align: middle;
           margin-right: vw(6);
         }
       }
-      .list{
+
+      .list {
         display: none;
         padding-top: vw(56);
         padding-bottom: vw(48);
-        >li{
+
+        > li {
           margin-bottom: vw(32);
-          &:first-of-type{
+
+          &:first-of-type {
             margin-bottom: vw(22);
           }
-          &:last-of-type{
-          margin-bottom: 0;
-         }
-          .sub-title{
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          .sub-title {
             color: $gray-800;
             font-size: vw(16);
             line-height: vw(24);
@@ -267,31 +312,39 @@
             margin-bottom: vw(12);
           }
 
-          .badge-box{
-            .badge{
+          .badge-box {
+            .badge {
               font-weight: 700;
               margin-right: vw(6);
               margin-bottom: vw(10);
-              &:last-of-type{
+
+              &:last-of-type {
                 margin-right: 0;
               }
             }
           }
-          .habit{
+
+          .habit {
             background-color: $gray-fff;
             border-radius: vw(12);
             padding: vw(20);
-            li{
+
+            li {
               font-size: vw(15);
               color: $gray-800;
               font-weight: 500;
               margin-bottom: vw(8);
-              &:last-of-type{margin-bottom: 0}
-              .num{
+
+              &:last-of-type {
+                margin-bottom: 0
+              }
+
+              .num {
                 color: $gray-600;
                 margin-right: vw(4);
               }
-              .answer{
+
+              .answer {
                 color: $blue;
                 font-weight: 700;
                 margin-left: vw(4);
@@ -301,84 +354,112 @@
         }
 
 
-
       }
     }
 
-    .btn-wrap{
+    .btn-wrap {
       text-align: center;
       padding: vw(32) 0;
-      .btn{
-        +.btn{
+
+      .btn {
+        + .btn {
           margin-left: vw(4);
         }
       }
-      &.sns{
+
+      &.sns {
         padding: vw(48) 0 vw(32);
-        .more{
+
+        .more {
           margin-bottom: vw(48);
         }
-        >a{
+
+        > a {
           margin-right: vw(8);
-          &:last-of-type{
+
+          &:last-of-type {
             margin-right: 0;
           }
         }
       }
-      &.btn-wrap-xl{
+
+      &.btn-wrap-xl {
         padding: vw(48) 0;
       }
     }
 
     /*답변완료*/
-    .answer-wrap{
+    .answer-wrap {
       background-color: #f8f8f8;
       padding: vw(32) vw(57) vw(32) vw(24);
       margin-top: vw(32);
-      .badge{
+
+      .badge {
         margin-bottom: vw(8);
       }
-      .text{
-        color:$gray-800;
+
+      .text {
+        color: $gray-800;
         font-size: vw(16);
       }
     }
 
     /*수정하기*/
-    .edit-wrap{
+    .edit-wrap {
       padding: vw(20) vw(24) vw(48);
-      input{
+
+      input {
         margin-bottom: vw(8);
       }
-      .section-input{
+
+      .section-input {
         margin-bottom: vw(12);
       }
-      .btn-wrap{padding: 0}
+
+      .btn-wrap {
+        padding: 0
+      }
     }
 
     /*step*/
-    .step-heading{
+    .step-heading {
+      width: 100%;
       padding: vw(20) vw(15) vw(32);
       margin: 0 auto;
       background-color: $gray-fff;
-      font-size:0;
-      &.fixed{
-        position:fixed;
-        top:16vw;
-        width: 100%;
-        z-index: 3;
-        &.top_0{
-          top: 0;
+      font-size: 0;
+      z-index: 20;
+
+      + .area-desc {
+        padding: vw(48) vw(24) 0;
+      }
+
+      &.scroll-up {
+        position: fixed;
+        top: vw(-139);
+
+        + .area-desc {
+          padding: vw(187) vw(24) 0;
         }
       }
 
-      .step{
+      &.scroll-down {
+        position: fixed;
+        top: vw(60);
+
+        + .area-desc {
+          padding: vw(187) vw(24) 0;
+        }
+      }
+
+      .step {
         display: inline-block;
         position: relative;
         text-align: center;
         vertical-align: middle;
-        padding:0;
-        &:before{
+        padding: 0;
+
+        &:before {
           content: '..';
           display: inline-block;
           color: $gray-400;
@@ -387,7 +468,8 @@
           right: vw(-6);
           top: vw(35);
         }
-        .tit{
+
+        .tit {
           font-size: vw(13);
           line-height: vw(18);
           font-weight: 400;
@@ -396,47 +478,63 @@
           margin-bottom: vw(13);
 
         }
-        .icon{
+
+        .icon {
           width: vw(56);
           height: vw(56);
         }
-        &:nth-of-type(1){
-          .icon{background: url("../img/mentoring/ico-step1.svg") no-repeat center center / 100% 100%;}
+
+        &:nth-of-type(1) {
+          .icon {
+            background: url("../img/mentoring/ico-step1.svg") no-repeat center center / 100% 100%;
+          }
         }
-        &:nth-of-type(2){
-          .icon{background: url("../img/mentoring/ico-step2.svg") no-repeat center center / 100% 100%;}
+
+        &:nth-of-type(2) {
+          .icon {
+            background: url("../img/mentoring/ico-step2.svg") no-repeat center center / 100% 100%;
+          }
         }
-        &:nth-of-type(3){
-          .icon{background: url("../img/mentoring/ico-step3.svg") no-repeat center center / 100% 100%;}
+
+        &:nth-of-type(3) {
+          .icon {
+            background: url("../img/mentoring/ico-step3.svg") no-repeat center center / 100% 100%;
+          }
         }
-        &:nth-of-type(4){
-          .icon {background: url("../img/mentoring/ico-step4.svg") no-repeat center center / 100% 100%;}
-          &:before{
+
+        &:nth-of-type(4) {
+          .icon {
+            background: url("../img/mentoring/ico-step4.svg") no-repeat center center / 100% 100%;
+          }
+
+          &:before {
             display: none;
           }
         }
 
         .smile-graph {
           display: none;
-          margin: 0 auto ;
+          margin: 0 auto;
           padding: 0;
           list-style-type: none;
           overflow: hidden;
           position: relative;
           width: vw(64);
           height: vw(32);
+
           &::before { /*배경*/
             position: absolute;
             content: '';
             width: inherit;
             height: inherit;
-            border: vw(10) solid #E9F7FF;
+            border: vw(10) solid #e9f7ff;
             border-top: none;
             border-bottom-left-radius: vw(32);
             border-bottom-right-radius: vw(32);
             top: 0;
             left: 0;
           }
+
           li { /*li기준점*/
             position: absolute;
             top: 0;
@@ -448,34 +546,39 @@
             border-bottom-left-radius: vw(32);
             border-bottom-right-radius: vw(32);
             transform-origin: 50% 0;
-            &.value{ /*실제 그래프*/
+
+            &.value { /*실제 그래프*/
               z-index: 1;
               border-color: $blue;
-              transform:rotateZ(-360deg);
+              transform: rotateZ(-360deg);
               animation: chartAni4 1s;
             }
           }
 
-      /*    &.full{
-            .value{
-              z-index: 1;
-              border-color: $blue;
-              transform:rotateZ(0deg);
-              animation:unset;
-            }
-          }*/
-        }
-        @keyframes chartAni4{
-          0%{transform: rotateZ(-180deg);}
+          /*    &.full{
+                .value{
+                  z-index: 1;
+                  border-color: $blue;
+                  transform:rotateZ(0deg);
+                  animation:unset;
+                }
+              }*/
         }
 
-        &.active{
-          .tit{
+        @keyframes chartAni4 {
+          0% {
+            transform: rotateZ(-180deg);
+          }
+        }
+
+        &.active {
+          .tit {
             font-weight: 700;
             color: $gray-900;
             margin-bottom: vw(37);
           }
-          .icon{
+
+          .icon {
             width: vw(44);
             height: vw(44);
             position: absolute;
@@ -483,27 +586,42 @@
             left: 50%;
             transform: translateX(-50%);
           }
-          &:nth-of-type(1){
-            .icon{background: url("../img/mentoring/ico-step1-active.svg") no-repeat center center / 100% 100%;}
+
+          &:nth-of-type(1) {
+            .icon {
+              background: url("../img/mentoring/ico-step1-active.svg") no-repeat center center / 100% 100%;
+            }
           }
-          &:nth-of-type(2){
-            .icon{background: url("../img/mentoring/ico-step2-active.svg") no-repeat center center / 100% 100%;}
+
+          &:nth-of-type(2) {
+            .icon {
+              background: url("../img/mentoring/ico-step2-active.svg") no-repeat center center / 100% 100%;
+            }
           }
-          &:nth-of-type(3){
-            .icon{background: url("../img/mentoring/ico-step3-active.svg") no-repeat center center / 100% 100%;}
+
+          &:nth-of-type(3) {
+            .icon {
+              background: url("../img/mentoring/ico-step3-active.svg") no-repeat center center / 100% 100%;
+            }
           }
-          &:nth-of-type(4){
-            .icon{background: url("../img/mentoring/ico-step4-active.svg") no-repeat center center / 100% 100%;}
+
+          &:nth-of-type(4) {
+            .icon {
+              background: url("../img/mentoring/ico-step4-active.svg") no-repeat center center / 100% 100%;
+            }
           }
-          .smile-graph{display: block}
+
+          .smile-graph {
+            display: block
+          }
         }
       }
 
     }
 
     /*이용약관 펼쳐보기*/
-    .terms{
-      .title{
+    .terms {
+      .title {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -513,7 +631,8 @@
         border-top: 1px solid $gray-400;
         font-size: vw(16);
       }
-      .list-with-dot{
+
+      .list-with-dot {
         padding: vw(32) vw(23);
         display: none;
       }
@@ -521,22 +640,26 @@
     }
   }
 
-  .footer-details{
+  .footer-details {
     border-top: 1px solid $gray-400;
     padding: vw(32) vw(20) vw(48);
-    &.bg-dark{
-      background-color: $gray-800!important;
+
+    &.bg-dark {
+      background-color: $gray-800 !important;
       padding: vw(20);
-      .page-btn-wrap{
-        a{
+
+      .page-btn-wrap {
+        a {
           color: $gray-fff;
         }
+
         /*오른쪽 정렬일 경우 (기본은 space-between)*/
-        &.btn-next{
+        &.btn-next {
           justify-content: flex-end;
         }
+
         /*가운데 정렬일 경우 (기본은 space-between)*/
-        &.btn-center{
+        &.btn-center {
           justify-content: center;
         }
       }
@@ -544,12 +667,13 @@
   }
 
   /* 성분분석 */
-  .analysis-wrap{
+  .analysis-wrap {
     /* 등록제안,수정요청입력란 */
-    .heading{
+    .heading {
       padding: vw(20) vw(24);
-      .font-h3{
-        +.font-body-1{
+
+      .font-h3 {
+        + .font-body-1 {
           color: $gray-700;
           padding-top: vw(8);
         }
@@ -561,20 +685,24 @@
     .question-box {
       background-color: $gray-200;
       padding: vw(48) vw(24);
-      .info{
+
+      .info {
         margin-bottom: vw(48);
-        .sub-desc{
+
+        .sub-desc {
           padding-top: vw(12);
-          color:$gray-600;
+          color: $gray-600;
         }
       }
 
       .question-item {
         margin-bottom: vw(48);
+
         &:first-of-type {
           padding-top: 0;
         }
-        &:last-of-type{
+
+        &:last-of-type {
           margin-bottom: 0;
         }
 
@@ -603,11 +731,12 @@
 
         .answer {
           position: relative;
+
           ul {
             li {
               display: block;
               width: 100%;
-              background: #FFFFFF;
+              background: #ffffff;
               padding: vw(14) vw(32);
               border-radius: vw(100);
               color: $gray-700;
@@ -628,26 +757,31 @@
               }
             }
           }
-          .delete{
+
+          .delete {
             display: none;
           }
-          &.complete{
-            ul{
-              li{
+
+          &.complete {
+            ul {
+              li {
                 background: $violet;
-                a{
+
+                a {
                   color: $gray-fff;
                 }
               }
             }
-            .delete{
+
+            .delete {
               display: block;
               padding: 0 vw(10);
               position: absolute;
               right: vw(22);
               top: 50%;
               transform: translateY(-50%);
-              .btn-delete{
+
+              .btn-delete {
                 width: vw(12);
                 height: vw(12);
                 display: inline-block;
@@ -664,41 +798,51 @@
       width: vw(375);
       height: vw(375);
       color: $primary;
+
       img {
         width: 100%;
         height: auto;
       }
     }
-    .propose-box{
-      .form-control + .select-popup{
+
+    .propose-box {
+      .form-control + .select-popup {
         margin-top: vw(8);
       }
-      .caution-area{
+
+      .caution-area {
         padding-top: vw(32);
-        .title{
+
+        .title {
           margin-bottom: vw(12);
-          .ico-caution{
+
+          .ico-caution {
             margin-right: vw(4.5);
           }
 
         }
       }
-      .divider{
+
+      .divider {
         margin-bottom: vw(24);
       }
-      .check-area{
-        label{
-          a{
+
+      .check-area {
+        label {
+          a {
             font-weight: 500;
             text-decoration: underline;
-            &:focus{
+
+            &:focus {
               color: $gray-900;
             }
           }
         }
-        .list-with-dot{
+
+        .list-with-dot {
           padding-top: vw(8);
-          li{
+
+          li {
             font-size: vw(12);
             margin-bottom: 0;
             padding-left: vw(7);
@@ -709,21 +853,25 @@
     }
 
     /* 수정요청 입력 */
-    .product-area{
+    .product-area {
       margin-bottom: vw(48);
-      >.img-cosmetics{
+
+      > .img-cosmetics {
         width: vw(78);
         height: vw(66);
         margin: 0 auto vw(16);
-        img{
+
+        img {
           width: 100%;
           height: auto;
         }
       }
-      .product-name{
+
+      .product-name {
         color: $gray-800;
         text-align: center;
-        span{
+
+        span {
           color: $gray-600;
           font-size: vw(13);
           display: block;
@@ -731,39 +879,48 @@
         }
       }
     }
-    .write-area{
-      .sub-title{
+
+    .write-area {
+      .sub-title {
         color: $gray-800;
         margin-bottom: vw(12);
       }
-      .badge-box{
+
+      .badge-box {
         font-size: 0;
         margin-bottom: vw(24);
-        .badge{
+
+        .badge {
           margin-right: vw(10);
-          &:last-of-type{
+
+          &:last-of-type {
             margin-right: 0;
           }
-          &.active{
+
+          &.active {
             background-color: $yellow;
             font-weight: bold;
           }
         }
       }
-      textarea{
+
+      textarea {
         margin-bottom: vw(32);
       }
     }
 
     /* 일치율팝업*/
-    .match-rate{
+    .match-rate {
       padding-bottom: vw(48);
-      .table-box{
+
+      .table-box {
         text-align: center;
         margin-bottom: vw(48);
-        thead{
-          color:$gray-800;
-          th{
+
+        thead {
+          color: $gray-800;
+
+          th {
             vertical-align: middle;
             padding: vw(16);
             width: 50%;
@@ -772,15 +929,17 @@
             font-size: vw(16);
           }
         }
-        tbody{
-          tr{
-            &:last-of-type{
-              th, td{
+
+        tbody {
+          tr {
+            &:last-of-type {
+              th, td {
                 border-bottom: vw(1) solid $gray-400
               }
             }
           }
-          th, td{
+
+          th, td {
             border-bottom: 1px solid $gray-300;
             color: $gray-700;
             font-weight: normal;
@@ -790,11 +949,13 @@
         }
 
       }
-      .sub-title{
+
+      .sub-title {
         color: $gray-800;
         margin-bottom: vw(12);
       }
-      .method-box{
+
+      .method-box {
         border-radius: vw(16);
         display: flex;
         padding: vw(24);
@@ -802,18 +963,24 @@
         align-items: center;
         background: $gray-fff url("../img/analysis/ico-minus.png") no-repeat center center;
         background-size: vw(28) vw(28);
-        .area{
+
+        .area {
           display: inline-block;
           text-align: center;
           font-size: 0;
 
-          &.good-area{}
-          &.caution-area{}
-          .tit{
+          &.good-area {
+          }
+
+          &.caution-area {
+          }
+
+          .tit {
             display: block;
             margin-bottom: vw(4);
             font-size: vw(15);
-            +span{
+
+            + span {
               color: $gray-700;
               font-size: vw(13);
             }

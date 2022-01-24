@@ -2,26 +2,3 @@
     <div class="brand-logo"><a href="#"><img src="../../img/common/logo-black.svg" alt="Dr.G"></a></div>
     <div class="btn-alert"><a href="#"><i class="icon ico-alert"></i></a></div>
 </div>
-
-
-<script>
-    let headScroll = 0;
-    $(window).scroll(function (event) {
-        let st = $(this).scrollTop();
-        if (st > headScroll) {
-            //console.log("DOWN");
-            if (window.pageYOffset > 60){
-                $('.header').hide()
-            }
-        } else {
-            //console.log("UP");
-            if (window.pageYOffset > 60){
-                $('.header').show().removeClass('_header-sticky')
-            } else {
-                $('.header').show().addClass('_header-sticky')
-            }
-        }
-        //Updates scroll position
-        headScroll = st;
-    });
-</script>

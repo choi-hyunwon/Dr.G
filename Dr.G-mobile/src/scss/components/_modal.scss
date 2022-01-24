@@ -69,6 +69,11 @@
             height: auto;
             color: $gray-600;
 
+            &:focus,&:active {
+              background-color: $gray-fff !important;
+              color: $gray-900 !important;
+            }
+
             + .btn {
               font-weight: 700;
               color: $gray-900;

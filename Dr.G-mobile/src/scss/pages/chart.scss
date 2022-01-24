@@ -32,14 +32,20 @@ $slider-width: #{vw(100)};
       .chart-info {
         position: relative;
         width: 100%;
+        height: vw(205);
         z-index: 5;
-        padding-left: vw(32);
+        padding-left: vw(36);
 
         .item {
           display: inline-block;
           width: $slider-width;
           position: relative;
           height: vw(200);
+          margin-right: -2px;
+
+          &:first-child {
+            margin-right: 0;
+          }
 
           input {
             display: none;
@@ -271,6 +277,10 @@ $slider-width: #{vw(100)};
           .item {
             width: vw(66);
             margin-right: vw(15);
+
+            &:first-child {
+              margin-right: vw(15);
+            }
 
             &:last-child {
               margin-right: 0;
