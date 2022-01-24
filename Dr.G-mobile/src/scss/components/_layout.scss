@@ -180,8 +180,12 @@ a {
     }
   }
 
+  &.scroll-down {
+    top: 0;
+  }
+
   &.scroll-up {
-    top: vw(0);
+    top: 0;
   }
 }
 

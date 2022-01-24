@@ -29,6 +29,7 @@ front.common = (function () {
         this.ani();
         this.header();
         this.headerDetails();
+        this.floatBottom();
     }
 
     var a = function () {
@@ -417,10 +418,56 @@ front.common = (function () {
                     // Scroll Up
                     if(st + $(window).height() < $(document).height()) {
                         if(st < delta) {
-                            mainHeader.addClass('header-transparent').removeClass('scroll-up','scroll-down');
+                            mainHeader.addClass('header-transparent').removeClass('scroll-up');
+                            mainHeader.removeClass('scroll-down');
                         } else {
                             mainHeader.removeClass('header-transparent','scroll-down').addClass('scroll-up');
                         }
+                    }
+                }
+                lastScrollTop = st;
+            }
+        }
+    }
+
+    var floatBottom = function () {
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var target = $('._floatBottom');
+
+        if(target.length) {
+            $(window).scroll(function(){
+                didScroll = true;
+            });
+
+            setInterval(function() {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 10);
+
+            function hasScrolled() {
+                var st = $(this).scrollTop();
+
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+
+                if (st > lastScrollTop){
+                    // Scroll Down
+                    if (st > lastScrollTop) {
+                        console.log('1')
+                        target.addClass('hide').removeClass('show');
+                    }
+                } else {
+                    // Scroll Up
+                    if (st + $(window).height() < $(document).height()) {
+                        console.log('2')
+                        target.addClass('show').removeClass('hide');
+                        // if(st < delta) {
+                        // } else {
+                        // }
                     }
                 }
                 lastScrollTop = st;
@@ -441,7 +488,8 @@ front.common = (function () {
         introScroll: introScroll,
         ani: ani,
         header: header,
-        headerDetails: headerDetails
+        headerDetails: headerDetails,
+        floatBottom: floatBottom
     }
 })();
 

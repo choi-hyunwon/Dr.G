@@ -136,4 +136,13 @@
       }
     }
   }
+
+  /* 최하단 버튼 */
+  .float-bottom {
+    .more-box {
+      &::before {
+        content: none;
+      }
+    }
+  }
 }

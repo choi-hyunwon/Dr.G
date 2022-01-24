@@ -22,12 +22,11 @@
 
         /* 하단 버튼 */
         $('#chatbot').draggable({
-            containment : 'parent',
-            drag: function() {
+            containment: 'parent',
+            axis: 'y',
+            drag: function () {
                 var offset = $(this).offset();
-                var xPos = offset.left;
                 var yPos = offset.top;
-                console.log('x :', xPos)
                 console.log('y :', yPos)
             }
         });
