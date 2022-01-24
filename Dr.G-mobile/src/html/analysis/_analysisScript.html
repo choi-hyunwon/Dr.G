@@ -1,72 +1,109 @@
 <script>
-    $(document).ready(function () {
+  $(document).ready(function () {
 
-        // 질문 클릭 시
-        let answer = $('.answer')
-        let list = $(this).find('li');
-        answer.each(function () {
-            list.on('click', function () {
-                $(this).siblings().hide()
-                $(this).parents('.answer').addClass('complete')
-            })
+    // 질문 클릭 시
+    let answer = $('.answer')
+    let list = $(this).find('li');
+    answer.each(function () {
+      list.on('click', function () {
+        $(this).siblings().hide()
+        $(this).parents('.answer').addClass('complete')
+      })
 
-            $('.delete').on('click', function () {
-                $(this).parent().removeClass('complete')
-                $(this).parent().find('li').show()
-            })
-        })
-        if (answer.hasClass('complete')) {
-            list.hide();
+      $('.delete').on('click', function () {
+        $(this).parent().removeClass('complete')
+        $(this).parent().find('li').show()
+      })
+    })
+    if (answer.hasClass('complete')) {
+      list.hide();
+    } else {
+      list.show()
+    }
+
+
+    /*수정요청입력란*/
+    let badge = $('.write-area .badge-box .badge')
+    badge.on('click', function () {
+      $(this).siblings().removeClass('active')
+      $(this).addClass('active')
+    })
+
+
+    /*분석결과 상세 (스킨케어,헤어제품)*/
+
+    /*gauge bar*/
+    let progress = 0.5
+    $('#progress').find('.numerical').animate({'stroke-dashoffset': 150 * progress}, 1000)
+
+    /*gauge number*/
+    let counterUp = setInterval(function () {
+      let text = $('.percent .counter');
+      let gaugeText = text.html();
+      let counter = parseInt(gaugeText);
+
+      if (counter !== 50) {
+        text.html(counter + 1);
+      } else {
+        clearInterval(counterUp);
+      }
+    }, 20);
+
+
+    /*- 제품버전 보기-*/
+    let product = $('.section-product')
+    let productIcon = $('.section-product .name .btn_more .icon')
+    let btnFold = $('.section-product .desc .btn-wrap .btn-fold')
+    let btnView = $('.section-product .view .btn-view')
+
+    btnView.on('click', function () {
+      product.addClass('open')
+      productIcon.removeClass('ico-plus-xs')
+      productIcon.addClass('ico-minus-xs')
+    })
+    btnFold.on('click', function () {
+      product.removeClass('open')
+      productIcon.removeClass('ico-minus-xs')
+      productIcon.addClass('ico-plus-xs')
+    })
+
+    /*- 매칭된 성분 확인 -*/
+    let infoList = $('.ingredient-box .info-list')
+    let subTitle = $('.ingredient-box .sub-title')
+    let btnMore = $('.ingredient-box .mixing li .btn-more')
+
+    infoList.each(function () {
+      $(this).find('li').slice(3).hide().last().show();
+
+      subTitle.on('click', function () {
+        $(this).parent().children().toggleClass('open')
+        $(this).next().removeClass('more').find('li').slice(3).hide().last().show().find('.btn-more').text('더보기');
+      })
+      btnMore.on('click', function () {
+        if ($(this).parents('.mixing').hasClass('more')) {
+          $(this).text('더보기'); //닫혀있는 상태 (3개)
+          $(this).parents('.mixing').removeClass('more').find('li').slice(3).hide().last().show();
         } else {
-            list.show()
+          $(this).text('닫기');  //더보기 상태 (3개 이상)
+          $(this).parents('.mixing').addClass('more').find('li').show();
         }
+      })
+    })
 
 
-        /*수정요청입력란*/
-        let badge = $('.write-area .badge-box .badge')
-        badge.on('click', function () {
-            $(this).siblings().removeClass('active')
-            $(this).addClass('active')
-        })
+  });
 
 
-        /*분석결과 상세 (스킨케어,헤어제품)*/
-        /*- 제품버전 보기-*/
-        let product = $('.section-product')
-        let productIcon = $('.section-product .name .btn_more .icon')
-        let btnFold = $('.section-product .desc .btn-wrap .btn-fold')
-        let btnView = $('.section-product .view .btn-view')
 
-        btnView.on('click',function (){
-            product.addClass('open')
-            productIcon.removeClass('ico-plus-xs')
-            productIcon.addClass('ico-minus-xs')
-        })
-        btnFold.on('click',function (){
-            product.removeClass('open')
-            productIcon.removeClass('ico-minus-xs')
-            productIcon.addClass('ico-plus-xs')
-        })
 
-        /*- 매칭된 성분 확인 -*/
-     /*   let ingredient = $('.section-ingredient')
-        let descBox = $('.section-ingredient .desc-box')
-        let subTitle = $('.section-ingredient .desc-box .sub-title')
-        let ingredientIcon = $('.section-ingredient .desc-box .sub-title .icon')
-        let mixing = $('.section-ingredient .desc-box .mixing')
-        let btnMore = $('.section-ingredient .desc-box .btn-more')
 
-        console.log(mixing.find('li').length)
 
-        subTitle.on('click',function (){
-            $(this).toggleClass('open')
-            $(this).siblings().toggleClass('open')
-        })
-        btnMore.on('click',function (){
-            $(this).parent('more')
-            $(this).siblings().toggleClass('open')
-        })
-*/
 
-    });
-</script>
+
+
+
+
+
+
+
+  </script>
