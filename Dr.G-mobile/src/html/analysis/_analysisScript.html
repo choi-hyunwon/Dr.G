@@ -68,9 +68,9 @@
     })
 
     /*- 매칭된 성분 확인 -*/
-    let infoList = $('.ingredient-box .info-list')
-    let subTitle = $('.ingredient-box .sub-title')
-    let btnMore = $('.ingredient-box .mixing li .btn-more')
+    let infoList = $('._why .info-list')
+    let subTitle = $('._why .sub-title')
+    let btnMore = $('._why .mixing li .btn-more')
 
     infoList.each(function () {
       $(this).find('li').slice(3).hide().last().show();
@@ -89,6 +89,51 @@
         }
       })
     })
+
+    let infoList2 = $('._know .info-list')
+    let subTitle2 = $('._know .sub-title')
+    let btnMore2 = $('._know .mixing li .btn-more')
+
+    infoList2.each(function () {
+      $(this).find('li').slice(3).hide().last().show();
+
+      subTitle2.on('click', function () {
+        $(this).parent().children().toggleClass('open')
+        $(this).next().removeClass('more').find('li').slice(3).hide().last().show().find('.btn-more').text('더보기');
+      })
+      btnMore2.on('click', function () {
+        if ($(this).parents('.mixing').hasClass('more')) {
+          $(this).text('더보기'); //닫혀있는 상태 (3개)
+          $(this).parents('.mixing').removeClass('more').find('li').slice(3).hide().last().show();
+        } else {
+          $(this).text('닫기');  //더보기 상태 (3개 이상)
+          $(this).parents('.mixing').addClass('more').find('li').show();
+        }
+      })
+    })
+
+    /*faq*/
+    /*서브메인 faq*/
+    let faqList = $('.faq-list')
+    let item = $('.faq-list .item')
+    let solution = $('.solution')
+    item.on('click', function () {
+      if (!$(this).hasClass('active')) {
+        $(this).siblings().removeClass('active')
+        $(this).siblings().find(solution).slideUp(200);
+        $(this).addClass('active');
+        $(this).find(solution).slideDown(200);
+      } else {
+        $(this).removeClass('active');
+        $(this).find(solution).slideUp(200);
+      }
+    })
+    $('body').click(function(e) { /*외부클릭시 닫힘처리*/
+      if(!faqList.has(e.target).length){
+        item.removeClass('active');
+        item.find('.solution').slideUp(200);
+      }
+    });
 
 
   });
