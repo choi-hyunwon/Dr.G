@@ -77,6 +77,18 @@ data.guide = {
     ]
 }
 
+data.main = {
+    title: 'Main',
+    list: [
+        {
+            stateClass: 'working',
+            url: 'Main',
+            category: 'Main',
+            page: 'Main'
+        },
+    ]
+}
+
 data.AI = {
     title: 'AI피부분석',
     list: [

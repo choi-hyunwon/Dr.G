@@ -11,6 +11,7 @@
  v.0.7 선미 : headerDetails 추가 --2022.01.06
  v.0.8 태윤 : text-change-text & text-change-age 추가 -- 2022.01.12
  v.0.9 주연 : header-detail / header 수정 및 추가 -- 2022.01.21
+ v.0.10 주연 : main header 추가 -- 2022.01.24
  * --------------------------------------------------------------------------
  */
 var front = front || {};
@@ -28,6 +29,7 @@ front.common = (function () {
         this.ani();
         this.header();
         this.headerDetails();
+        this.floatBottom();
     }
 
     var a = function () {
@@ -284,8 +286,6 @@ front.common = (function () {
         var header = $('._header-sticky');
         var headerWhite = $('.header-white');
         var headerHeight = header.outerHeight();
-        // var stepHeading = $('.step-heading');
-        // var uppperPartHeight = headerDetail.outerHeight() + stepHeading.outerHeight();
 
         /* normal */
         if($('._header-sticky').length) {
@@ -348,6 +348,7 @@ front.common = (function () {
                 lastScrollTop = st;
             }
         }
+
         /* white header 경우 */
         if($('.header-white').length) {
             $(window).scroll(function(){
@@ -384,6 +385,94 @@ front.common = (function () {
                 lastScrollTop = st;
             }
         }
+
+        /* main header 경우 */
+        if($('.header-main').length) {
+            $(window).scroll(function(){
+                didScroll = true;
+            });
+
+            setInterval(function() {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 10);
+
+            var mainHeader = $('.header-main');
+            var mainHeaderHeight = $('.header-main').outerHeight();
+            var bannerHeight = $('._mainBanner').outerHeight();
+
+            function hasScrolled() {
+                var st = $(this).scrollTop();
+
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+
+                if (st > lastScrollTop){
+                    // Scroll Down
+                    if(st > mainHeaderHeight + bannerHeight) {
+                        mainHeader.removeClass('scroll-up').addClass('scroll-down');
+                    }
+                } else {
+                    // Scroll Up
+                    if(st + $(window).height() < $(document).height()) {
+                        if(st < delta) {
+                            mainHeader.addClass('header-transparent').removeClass('scroll-up');
+                            mainHeader.removeClass('scroll-down');
+                        } else {
+                            mainHeader.removeClass('header-transparent','scroll-down').addClass('scroll-up');
+                        }
+                    }
+                }
+                lastScrollTop = st;
+            }
+        }
+    }
+
+    var floatBottom = function () {
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var target = $('._floatBottom');
+
+        if(target.length) {
+            $(window).scroll(function(){
+                didScroll = true;
+            });
+
+            setInterval(function() {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 10);
+
+            function hasScrolled() {
+                var st = $(this).scrollTop();
+
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+
+                if (st > lastScrollTop){
+                    // Scroll Down
+                    if (st > lastScrollTop) {
+                        console.log('1')
+                        target.addClass('hide').removeClass('show');
+                    }
+                } else {
+                    // Scroll Up
+                    if (st + $(window).height() < $(document).height()) {
+                        console.log('2')
+                        target.addClass('show').removeClass('hide');
+                        // if(st < delta) {
+                        // } else {
+                        // }
+                    }
+                }
+                lastScrollTop = st;
+            }
+        }
     }
 
     var ani = function () {
@@ -399,7 +488,8 @@ front.common = (function () {
         introScroll: introScroll,
         ani: ani,
         header: header,
-        headerDetails: headerDetails
+        headerDetails: headerDetails,
+        floatBottom: floatBottom
     }
 })();
 

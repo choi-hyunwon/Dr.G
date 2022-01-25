@@ -1,0 +1,66 @@
+<script>
+    function updSwiperNumericPagination() {
+        var slidesQuantity = $('._bannerSlider .swiper-slide').length
+        this.el.querySelector('._bannerSliderNum').innerHTML = '<span class="count">' + (this.realIndex + 1) + '</span>/<span class="total">' + slidesQuantity + '</span>';
+    }
+
+    $(document).ready(function (){
+        /* 메인 슬라이더 */
+        new Swiper("._bannerSlider", {
+            spaceBetween: 24,
+            centeredSlides: true,
+            effect: 'fade',
+            pagination: {
+                el: "._bannerSlider + ._sliderPagination",
+                clickable: true,
+            },
+            on: {
+                init: updSwiperNumericPagination,
+                slideChange: updSwiperNumericPagination
+            }
+        });
+
+        /* 하단 버튼 */
+        var chatbot = $('#chatbot');
+        chatbot.draggable({
+            containment: 'parent',
+            axis: 'y',
+            drag: function () {
+                var offset = $(this).offset();
+                var yPos = offset.top;
+                console.log('y :', yPos)
+            }
+        });
+
+        chatbot.find('img').on('click',function (){
+            $(this).siblings('.tip').show();
+        })
+
+        $('._chatClose').on('click',function (){
+            chatbot.children('.tip').hide();
+        })
+
+
+        /* 고객제안 슬라이더 */
+        new Swiper("._suggestionSlider", {
+            effect: 'fade',
+            pagination: {
+                el: "._suggestionPagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
+                },
+            }
+        });
+
+        /* 제안 리스트 너비 */
+        var sum = 0;
+        var listItem = $('._suggestionList .item');
+
+        listItem.each(function () {
+            sum = sum + $(this).outerWidth(true);
+        });
+
+        $('._suggestionList .list').css('width', sum + 10 * 100 / 375 +  'px');
+    })
+</script>
