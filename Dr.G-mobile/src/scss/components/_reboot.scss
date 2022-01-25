@@ -57,6 +57,8 @@ a {
   &:hover, &:focus {
     text-decoration: none;
     color: inherit;
+    outline: none;
+    box-shadow: none;
   }
 }
 
@@ -410,7 +412,7 @@ p {
   padding: 0;
   margin: -1px;
   border: 0;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
 }
 
 em, i {

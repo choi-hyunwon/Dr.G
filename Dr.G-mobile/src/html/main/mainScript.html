@@ -40,7 +40,6 @@
             chatbot.children('.tip').hide();
         })
 
-
         /* 고객제안 슬라이더 */
         new Swiper("._suggestionSlider", {
             effect: 'fade',
@@ -62,5 +61,20 @@
         });
 
         $('._suggestionList .list').css('width', sum + 10 * 100 / 375 +  'px');
+
+        /* 배너 모달 */
+        var modal = $('._bannerModal');
+        var modalOpen = $('._bannerModalOpen');
+        var modalClose = $('._bannerModalClose');
+
+        modalOpen.on('click', function () {
+            modal.removeClass('hide').addClass('show');
+            $('body').addClass('scrOff')
+        });
+
+        modalClose.on('click', function () {
+            modal.removeClass('show').addClass('hide');
+            $('body').removeClass('scrOff')
+        });
     })
 </script>

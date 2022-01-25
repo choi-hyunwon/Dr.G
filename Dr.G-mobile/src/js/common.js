@@ -132,6 +132,80 @@ front.common = (function () {
             let vh = window.innerHeight * 0.01
             document.documentElement.style.setProperty('--vh', `${vh}px`)
         })
+
+        /* 알림 팝업 */
+        var noticePopup = $('._noticePopup');
+        var noticePopupOpen = $('._noticePopupOpen');
+        var noticePopupClose = $('._noticePopupClose');
+        var noticePopupHeader = $('._popup-header');
+
+        noticePopupOpen.on('click', function () {
+            noticePopup.removeClass('hide').addClass('show');
+            $('body').addClass('scrOff');
+        });
+
+        noticePopupClose.on('click', function () {
+            noticePopup.removeClass('show').addClass('hide');
+            $('body').removeClass('scrOff');
+        });
+
+        var lastScroll = 0;
+
+        noticePopupHeader.find('.popup-content').scroll(function () {
+            var st = $(this).scrollTop();
+
+            if (st < 5) {
+                noticePopupHeader.removeClass('header-white');
+            } else {
+                noticePopupHeader.addClass('header-white');
+            }
+            lastScroll = st;
+        });
+
+        /* gnb show */
+        $('._gnbShow').on('click',function (){
+            $('._gnb').modal('show')
+        })
+
+        /* gnb menu */
+        $(document).ready(function (){
+            var gnbSet = {
+                click: function (target, speed) {
+                    var _self = this, $target = $(target);
+                    _self.speed = speed || 300;
+                    $target.each(function () {
+                        if (findChildren($(this))) {
+                            return;
+                        }
+                    });
+
+                    function findChildren(obj) {
+                        return obj.find('> ul').length > 0;
+                    }
+
+                    $target.on('click', 'a', function (e) {
+                        e.stopPropagation();
+                        var $this = $(this), $depthTarget = $this.next(), $siblings = $this.parent().siblings();
+                        $this.parent('li').find('ul li').removeClass('on');
+                        $siblings.removeClass('on');
+                        $siblings.find('ul').slideUp(250);
+                        if ($depthTarget.css('display') == 'none') {
+                            _self.activeOn($this);
+                            $depthTarget.slideDown(_self.speed);
+                        } else {
+                            $depthTarget.slideUp(_self.speed);
+                            _self.activeOff($this);
+                        }
+                    })
+                }, activeOff: function ($target) {
+                    $target.parent().removeClass('on');
+                }, activeOn: function ($target) {
+                    $target.parent().addClass('on');
+                }
+            };
+
+            gnbSet.click('#menu li', 300)
+        })
     }
 
     var tab = function () {

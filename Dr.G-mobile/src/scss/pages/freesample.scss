@@ -423,7 +423,11 @@
     }
 
     .info-list {
-      overflow: hidden;
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
 
       .list {
         margin-bottom: vw(16);
@@ -441,6 +445,7 @@
             line-height: vw(20);
             color: $gray-900;
             display: inline;
+            padding-top: vw(3);
 
             &::before {
               top: vw(2);
@@ -602,7 +607,7 @@
       justify-content: center;
 
       .btn {
-        max-width: vw(160);
+        min-width: vw(160);
 
         + .btn {
           margin-left: vw(7);

@@ -19,7 +19,7 @@
             </div>
             <div class="swiper-pagination">
                 <span class="swiper-counter _bannerSliderNum"></span>
-                <a class="btn-more" href="#"><i class="icon ico-plus"></i></a>
+                <a class="btn-more _bannerModalOpen" href="#"><i class="icon ico-plus"></i></a>
             </div>
         </div>
     </div>
@@ -193,34 +193,36 @@
             <!-- s 닥터지스토리 -->
 
             <!-- s 제안 -->
-            <div class="suggestion _suggestionList">
+            <div class="suggestion">
                 <div class="heading"><i class="icon ico-bulb"></i><span>닥터지에게 제안해주세요</span></div>
-                <ul class="list">
-                    <li class="item">
-                        <a href="#">
-                            <span class="title">이 제품을<br/>만들어주세요!</span>
-                            <span class="img"><img src="../../img/main/ico-suggestion-1.svg" alt="이 제품을 만들어주세요!"></span>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="#">
-                            <span class="title">이런 서비스는<br/>없나요?</span>
-                            <span class="img"><img src="../../img/main/ico-suggestion-2.svg" alt="이런 서비스는 없나요?"></span>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="#">
-                            <span class="title">이런 패키지는<br/>어떨까요?</span>
-                            <span class="img"><img src="../../img/main/ico-suggestion-3.svg" alt="이런 패키지는 어떨까요?"></span>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="#">
-                            <span class="title">이런건 좀<br/>바꿔주세요.</span>
-                            <span class="img"><img src="../../img/main/ico-suggestion-4.svg" alt="이 제품을 만들어주세요!"></span>
-                        </a>
-                    </li>
-                </ul>
+                <div class="suggestion-list _suggestionList">
+                    <ul class="list">
+                        <li class="item">
+                            <a href="#">
+                                <span class="title">이 제품을<br/>만들어주세요!</span>
+                                <span class="img"><img src="../../img/main/ico-suggestion-1.svg" alt="이 제품을 만들어주세요!"></span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <span class="title">이런 서비스는<br/>없나요?</span>
+                                <span class="img"><img src="../../img/main/ico-suggestion-2.svg" alt="이런 서비스는 없나요?"></span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <span class="title">이런 패키지는<br/>어떨까요?</span>
+                                <span class="img"><img src="../../img/main/ico-suggestion-3.svg" alt="이런 패키지는 어떨까요?"></span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <span class="title">이런건 좀<br/>바꿔주세요.</span>
+                                <span class="img"><img src="../../img/main/ico-suggestion-4.svg" alt="이 제품을 만들어주세요!"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <!-- s 제안 -->
         </div>
@@ -231,6 +233,46 @@
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
+<div class="full-popup banner-popup _bannerModal">
+    <div class="popup-content">
+        <a class="btn-banner-close _bannerModalClose" href="#"><i class="icon ico-banner-close"></i></a>
+        <div class="banner-list">
+            <ul>
+                <li class="item">
+                    <a href="#">
+                        <span class="img"><img src="../../img/@temp/img-banner-1.png" alt="병풀 바이옴 수분 크림"></span>
+                        <span class="text-area">
+                            <em class="font-1">유투버도 PICK한</em>
+                            <em class="font-2">병풀 바이옴<br/>수분 크림</em>
+                            <em class="font-3">#병풀바이옴<br/>#100%비건포뮬라</em>
+                        </span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <span class="img"><img src="../../img/@temp/img-banner-2.png" alt="병풀 바이옴 수분 크림"></span>
+                        <span class="text-area">
+                            <em class="font-1">Dr.G 스킨리포트 #2</em>
+                            <em class="font-2">수부지 인사이트</em>
+                            <em class="font-3">번들거리는 동시에 땅기는<br/>수부지피부, 아니신가요?</em>
+                        </span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <span class="img"><img src="../../img/@temp/img-banner-3.png" alt="병풀 바이옴 수분 크림"></span>
+                        <span class="text-area">
+                            <em class="font-1">Dr.G X 한림화상재단</em>
+                            <em class="font-2">피부 건강<br/>나눔 챌린지</em>
+                            <em class="font-3">피부 건강을 확인하고<br/>기부에 동참해보세요!</em>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+@@include('../../html/include/common/notice.html')
 @@include('./mainScript.html')
 </body>
 </html>

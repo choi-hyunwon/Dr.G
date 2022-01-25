@@ -306,6 +306,13 @@
             background-color: #fff;
             padding: 0;
 
+            .img-box {
+              .img {
+                width: vw(212);
+                height: vw(270);
+              }
+            }
+
             .bg-gradient {
               position: absolute;
               left: 0;
@@ -399,7 +406,6 @@
 
   /* 제안 */
   .suggestion {
-    overflow-x: auto;
     padding-left: vw(25);
     margin-bottom: vw(76);
 
@@ -418,6 +424,10 @@
         font-size: vw(20);
         letter-spacing: -0.02em;
       }
+    }
+
+    .suggestion-list {
+      overflow-x: auto;
     }
 
     .list {
