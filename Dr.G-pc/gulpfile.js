@@ -107,7 +107,7 @@ function watch() {
 // server
 function server() {
     browserSync.init({
-        port: 2022,
+        port: 2023,
         server: {
             baseDir: "./",
             index: "src/index.html"
