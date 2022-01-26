@@ -690,16 +690,19 @@
 
       .skin-type-info {
         margin-bottom: vw(24);
+        text-align: center;
 
         .title {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: vw(12);
+          position: relative;
+          display: inline-block;
+          text-align: center;
+          //align-items: center;
+          //justify-content: center;
+          margin-bottom: vw(3);
           color: #fff;
 
           > .font-h2 {
-            margin-right: vw(4);
+            //margin-right: vw(4);
           }
         }
 
@@ -709,7 +712,10 @@
         }
 
         .btn-tooltip {
-          position: relative;
+          position: absolute;
+          right: vw(-26);
+          top: 50%;
+          transform: translateY(-50%);
 
           .alert-tooltip {
             position: absolute;
@@ -1062,10 +1068,11 @@
           margin-bottom: vw(32);
         }
 
-        //.font-h6 {
-        //  color: $gray-800;
-        //  margin-bottom: vw(32);
-        //}
+        .font-h6 {
+          margin-top: vw(-20);
+          color: $gray-800;
+          margin-bottom: vw(32);
+        }
 
         .video-box {
           width: vw(327);
@@ -1127,6 +1134,7 @@
                 font-size: vw(12);
                 text-align: right;
                 color: $gray-800;
+                transform: translateY(vw(2));
 
                 &::after {
                   content: '';
@@ -1456,6 +1464,7 @@
             justify-content: center;
             width: vw(123);
             padding: 0;
+            font-weight: 500;
 
             + .btn {
               margin-left: vw(12);
@@ -1485,6 +1494,7 @@
 
             .badge {
               color: $gray-600;
+              font-weight: bold;
 
               &.active {
                 background-color: $yellow;
@@ -1582,6 +1592,7 @@
               padding: vw(6) vw(16);
               line-height: vw(20);
               border-radius: vw(100);
+              font-weight: bold;
             }
           }
 
@@ -1641,6 +1652,7 @@
                     &.label-sm {
                       font-weight: normal;
                       font-size: vw(13);
+                      font-weight: 500;
                       line-height: vw(18);
                       margin-bottom: vw(12);
                     }
@@ -1937,10 +1949,10 @@
 
             a {
               color: #fff;
-              font-weight: 500;
+              font-weight: bold;
 
               .font-poppins {
-                font-family: $poppins-medium;
+                font-family: $poppins-semiBold;
               }
             }
           }

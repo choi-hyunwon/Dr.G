@@ -289,14 +289,14 @@ front.common = (function () {
                         return;
 
                     if (st > lastScrollTop){
-                        // Scroll Down
+                        // Scroll Up
                         if (st > lastScrollTop) {
                             if(st > headerDetailHeight) {
                                 headerDetail.removeClass('scroll-down').addClass('scroll-up');
                             }
                         }
                     } else {
-                        // Scroll Up
+                        // Scroll Down
                         if(st + $(window).height() < $(document).height()) {
                             if(st < delta) {
                                 headerDetail.removeClass('scroll-down');
@@ -328,7 +328,7 @@ front.common = (function () {
                         return;
 
                     if (st > lastScrollTop){
-                        // Scroll Down
+                        // Scroll Up
                         if (st > lastScrollTop) {
                             if(st > uppperPartHeight) {
                                 headerDetail.removeClass('scroll-down').addClass('scroll-up');
@@ -336,7 +336,7 @@ front.common = (function () {
                             }
                         }
                     } else {
-                        // Scroll Up
+                        // Scroll Down
                         if(st + $(window).height() < $(document).height()) {
                             if(st < delta) {
                                 headerDetail.removeClass('scroll-down');
@@ -531,13 +531,13 @@ front.common = (function () {
                 if (st > lastScrollTop){
                     // Scroll Down
                     if (st > lastScrollTop) {
-                        console.log('1')
+                        // console.log('1')
                         target.addClass('hide').removeClass('show');
                     }
                 } else {
                     // Scroll Up
                     if (st + $(window).height() < $(document).height()) {
-                        console.log('2')
+                        // console.log('2')
                         target.addClass('show').removeClass('hide');
                         // if(st < delta) {
                         // } else {

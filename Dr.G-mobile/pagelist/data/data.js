@@ -110,18 +110,18 @@ data.main = {
 data.AI = {
     title: 'AI피부분석',
     list: [
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_component',
-            category: 'AI',
-            page: 'AI피부분석 component'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_회차별+계절별',
-            category: 'AI',
-            page: 'Ai피부분석_회차별+계절별'
-        },
+        // {
+        //     stateClass: 'complete',
+        //     url: 'Ai피부분석_component',
+        //     category: 'AI',
+        //     page: 'AI피부분석 component'
+        // },
+        // {
+        //     stateClass: 'complete',
+        //     url: 'Ai피부분석_회차별+계절별',
+        //     category: 'AI',
+        //     page: 'Ai피부분석_회차별+계절별'
+        // },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_서브메인_OS+',

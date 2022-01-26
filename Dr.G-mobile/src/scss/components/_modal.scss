@@ -901,6 +901,14 @@
           }
         }
       }
+
+      &.no-title.un-check {
+        .desc {
+          + .main-title {
+            margin-top: vw(12);
+          }
+        }
+      }
     }
   }
 }

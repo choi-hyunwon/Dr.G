@@ -259,7 +259,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 100vh;
+      height: 100%;
       pointer-events: auto;
       background-color: #fff;
       background-clip: padding-box;
@@ -954,7 +954,7 @@
         line-height: vw(22);
         color: $gray-800;
         margin-bottom: vw(12);
-        @include ellipsis(2);
+        //@include ellipsis(2);
       }
       .bottom {
         display: flex;

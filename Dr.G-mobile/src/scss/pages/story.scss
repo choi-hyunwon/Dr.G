@@ -243,6 +243,7 @@
 
       .font-h6 {
         color: $gray-800;
+        font-weight: 500;
         line-height: vw(24);
 
         span {
@@ -859,5 +860,14 @@
         }
       }
     }
+  }
+}
+
+/* 내가 쓴 댓글 보기 팝업 */
+.full-popup.reply-popup {
+  .popup-content {
+    padding-bottom: vw(48);
+    height: 100%;
+    overflow-y: scroll;
   }
 }
