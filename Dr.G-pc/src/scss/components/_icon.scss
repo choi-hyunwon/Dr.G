@@ -1,0 +1,312 @@
+/*
+|--------------------------------------------------------------------|
+ v.0.1 주연 : 최초 작업 -- 2021.11.30
+ v.0.2 태윤 : .icon-close-sm 추가 -- 2021.12.10
+ v.0.3 태윤 : .icon-check-green 추가 -- 2021.12.13
+ v.0.4 주연 : .ico-like / .ico-bookmark / .ico-caution 추가 -- 2021.12.13
+ v.0.5 선미 : .ico-heart 추가 / ico-delete, ico-edit 사이즈 축소-- 2021.12.14
+ v.0.6 주연 : vw 적용 -- 2021.12.14
+ v.0.7 선미 : ico-arrow-green-right, ico-sns-kakao, ico-sns-facebook, ico-sns-line 추가 -- 2021.12.15
+ v.0.8 선미 : ico-plus / ico-minus 추가 -- 2021.12.16
+ v.0.9 태윤 : ico-comment-info-doctor, ico-comment-info-basic 추가 -- 2021.12.17
+ v.0.10 태윤 : ico-prev , icon-next  &.white 추가 -- 2021.12.17
+ v.0.11 선미 : ico-plus -> ico-plus-sm 변경 , ico-minus -> ico-minus-sm 변경 ,ico-minus-md 추가 ,ico-plus-md 추가 -- 2021.12.21
+ v.0.12 선미 : ico-link 추가 / ico-close-xs &.gray 추가-- 2021.12.22
+ v.0.13 태윤 : ico-alert-circle 추가 -- 2021.12.21
+ v.0.14 주연 : ico-lock 추가 -- 2021.12.27
+ v.0.15 선미 : ico-cart 추가 -- 2021.12.27
+ v.0.16 태윤 : ico-check-blue 추가 -- 2021.12.28
+ v.0.17 태윤 : ico-star > .active시 ico-star-yellow 추가 -- 2021.12.28
+ v.0.18 선미 : ico-plus-sm-gray, ico-minus-sm-white 추가 -- 2021.12.28
+ v.0.19 주연 : 피부 타입 별 이미지 / ico-alert-circle-w 추가 -- 2021.12.30
+ v.0.20 태윤 : ico-star > .active시 ico-star-yellow 제거 -- 2021.01.03
+ v.0.21 선미 : ico-plus-lg, ico-plus-round추가 -- 2021.01.06
+ v.0.22 선미 : 다운로드/공유하기 아이콘 추가 -- 2021.01.08
+ v.0.23 태윤 : ico-arrow-down-sm 추가
+ v.0.24 선미 : .ico-ai 추가 --2021.01.13
+ v.0.25 선미 : .ico-close-xs -> white 추가 --2021.01.14
+ v.0.26 선미 : .ico-check-violet 추가 --2021.01.18
+ v.0.27 선미 : .ico-minus-xs ,ico-plus-xs, ico-edit2 추가 --2021.01.21
+ v.0.28 주연 : .ico-banner-close 추가 --2021.01.25
+|--------------------------------------------------------------------|
+*/
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-indent: -999em;
+  overflow: hidden;
+}
+
+.ico-alert {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-alert.svg');
+
+  &.white {
+    background-image: url(../img/common/ico-alert-white.svg);
+  }
+}
+.ico-shop {
+  @include background-img($width: 28, $height: 28, $category: 'common', $img: 'ico-shop.png');
+}
+
+.ico-cart {
+  @include background-img($width: 20, $height: 20, $category: 'common', $img: 'ico-cart.svg');
+}
+
+.ico-accordion-close {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-accordion-close.svg');
+}
+
+.ico-accordion-open {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-accordion-open.svg');
+}
+
+.ico-close {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-close.svg');
+
+  &.white {
+    background-image: url(../img/common/ico-close-white.svg);
+  }
+}
+
+.ico-prev {
+  @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-prev.svg');
+
+  &.white {
+    background-image: url(../img/common/ico-prev-white.svg);
+  }
+}
+
+.ico-next {
+  @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-next.svg');
+
+  &.white {
+    background-image: url(../img/common/ico-next-white.svg);
+  }
+}
+
+.ico-close-sm {
+  @include background-img($width: 20, $height: 20, $category: 'common', $img: 'ico-close-sm.svg');
+}
+
+.ico-close-xs {
+  &.gray {
+    @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-close-xs-gray.svg');
+  }
+  &.white{
+    @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-close-xs-white.svg');
+  }
+}
+
+.ico-nav-prev {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-nav-prev.svg');
+}
+
+.ico-nav-next {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-nav-next.svg');
+}
+
+.ico-search {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-search.svg');
+}
+
+.ico-arrow-left {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-left.svg');
+}
+
+.ico-arrow-left-white-sm {
+  @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-arrow-left.svg');
+}
+
+.ico-arrow-right {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-right.svg');
+}
+
+.ico-arrow-green-right {
+  @include background-img($width: 8, $height: 8, $category: 'common', $img: 'ico-arrow-green-right.svg');
+}
+
+.ico-arrow-up {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-up.svg');
+}
+
+.ico-arrow-down {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-down.svg');
+  &-sm{
+    @include background-img($width: 20, $height: 20, $category: 'common', $img: 'ico-arrow-down-sm.svg');
+  }
+}
+
+.ico-delete {
+  @include background-img($width: 20, $height: 20, $category: 'common', $img: 'ico-delete.svg');
+}
+
+.ico-edit {
+  @include background-img($width: 20, $height: 20, $category: 'common', $img: 'ico-edit.svg');
+}
+.ico-edit2 {
+  @include background-img($width: 20, $height: 20, $category: 'common', $img: 'ico-edit2.svg');
+}
+
+.ico-like {
+  @include background-img($width: 18, $height: 18, $category: 'common', $img: 'ico-link-nor.svg');
+}
+
+.ico-bookmark {
+  @include background-img($width: 18, $height: 18, $category: 'common', $img: 'ico-bookmark.svg');
+}
+
+.ico-check-green {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-check-green.png');
+}
+
+.ico-check-blue {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-check-blue.svg');
+}
+
+.ico-check-violet {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-check-violet.png');
+}
+
+.ico-heart {
+  @include background-img($width: 14, $height: 14, $category: 'common', $img: 'ico-heart.svg');
+}
+
+.ico-link {
+  @include background-img($width: 14, $height: 14, $category: 'common', $img: 'ico-link.svg');
+}
+
+.ico-caution {
+  @include background-img($width: 18, $height: 18, $category: 'common', $img: 'ico-caution.svg');
+}
+
+.ico-check-black {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-check-black.svg');
+}
+
+.ico-check-white {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-check-white.svg');
+}
+
+.ico-sns-kakao {
+  @include background-img($width: 44, $height: 44, $category: 'common', $img: 'ico-sns-kakao.svg');
+}
+
+.ico-sns-facebook {
+  @include background-img($width: 44, $height: 44, $category: 'common', $img: 'ico-sns-facebook.svg');
+}
+
+.ico-sns-line {
+  @include background-img($width: 44, $height: 44, $category: 'common', $img: 'ico-sns-line.svg');
+}
+
+.ico-plus-sm {
+  @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-plus-sm.svg');
+}
+
+.ico-plus-xs {
+  @include background-img($width: 10, $height: 10, $category: 'common', $img: 'ico-plus-sm.svg');
+}
+
+.ico-plus-sm-gray {
+  @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-plus-sm-gray.svg');
+}
+
+.ico-plus-round {
+  @include background-img($width: 26, $height: 26, $category: 'common', $img: 'ico-plus-round.svg');
+}
+
+.ico-plus-lg {
+  @include background-img($width: 20, $height: 20, $category: 'common', $img: 'ico-plus-lg.svg');
+}
+
+.ico-plus-md {
+  @include background-img($width: 16, $height: 16, $category: 'common', $img: 'ico-plus-md.svg');
+}
+
+.ico-minus-sm {
+  @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-minus-sm.svg');
+}
+
+.ico-minus-sm-white {
+  @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-minus-sm-white.svg');
+}
+
+.ico-minus-xs {
+  @include background-img($width: 10, $height: 10, $category: 'common', $img: 'ico-minus-sm.svg');
+}
+
+.ico-minus-md {
+  @include background-img($width: 16, $height: 16, $category: 'common', $img: 'ico-minus-md.svg');
+}
+
+.ico-youtube {
+  @include background-img($width: 20, $height: 20, $category: 'story', $img: 'ico-youtube.svg');
+}
+
+.ico-alert-circle {
+  @include background-img($width: 15, $height: 15, $category: 'common', $img: 'ico-alert-circle.svg');
+}
+
+.ico-alert-circle-w {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-alert-circle-w.svg');
+}
+
+.ico-lock {
+  @include background-img($width: 13, $height: 16, $category: 'common', $img: 'ico-lock.svg');
+}
+
+.ico-star {
+  @include background-img($width: 42, $height: 40, $category: 'common', $img: 'ico-star-gray.svg');
+}
+
+.icon-DN-m {
+  @include background-img($width: 200, $height: 200, $category: 'common/skinType', $img: 'DN-.png');
+}
+
+.icon-DN-p {
+  @include background-img($width: 200, $height: 200, $category: 'common/skinType', $img: 'DN+.png');
+}
+
+.icon-DS-m {
+  @include background-img($width: 200, $height: 200, $category: 'common/skinType', $img: 'DS-.png');
+}
+
+.icon-DS-p {
+  @include background-img($width: 200, $height: 200, $category: 'common/skinType', $img: 'DS+.png');
+}
+
+.icon-ON-m {
+  @include background-img($width: 200, $height: 200, $category: 'common/skinType', $img: 'ON-.png');
+}
+
+.icon-ON-p {
+  @include background-img($width: 200, $height: 200, $category: 'common/skinType', $img: 'ON+.png');
+}
+
+.icon-OS-m {
+  @include background-img($width: 200, $height: 200, $category: 'common/skinType', $img: 'OS-.png');
+}
+
+.icon-OS-p {
+  @include background-img($width: 200, $height: 200, $category: 'common/skinType', $img: 'OS+.png');
+}
+
+
+.ico-download {
+  @include background-img($width: 24, $height: 24, $category: 'AI', $img: 'ico-download.svg');
+}
+
+.ico-share {
+  @include background-img($width: 24, $height: 24, $category: 'AI', $img: 'ico-share.svg');
+}
+
+.ico-ai{
+  @include background-img($width: 28, $height: 21, $category: 'common', $img: 'ico-ai.png');
+}
+
+
+.ico-banner-close {
+  @include background-img($width: 38, $height: 38, $category: 'common', $img: 'ico-banner-close.svg');
+}

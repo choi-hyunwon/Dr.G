@@ -1,0 +1,260 @@
+/*
+|--------------------------------------------------------------------|
+ v.0.1 주연 : 최초 작업 -- 2021.11.30
+ v.0.2 선미 : 버튼 사이즈별 폰트사이즈 변경 -- 2021.12.10
+ v.0.3 선미 : btn focus ->  box-shadow 제거 -- 2021.12.13
+ v.0.4 주연 : vw 적용 -- 2021.12.14
+ v.0.5 주연 : border case 추가 -- 2021.12.17
+ v.0.6 선미 : focus, active (box-shadow: none!important;) 추가 -- 2021.12.20
+ v.0.7 선미 : btn-blue 추가 -- 2021.12.22
+ v.0.8 선미 : &.btn-border-black  &:focus, &:hover { background-color: #fff-> transparent 변경}
+             .btn >span{ vertical-align: baseline;} 추가
+             .btn >.icon{ vertical-align: sub;} 추가'
+             .btn 내부 icon , span 간격 추가
+             .btn &.btn-icon{버튼 내부 아이콘있는경우 클래스 추가(여백 컨트롤)}-- 2021.12.27
+ v.0.9 선미 : .page-btn-wrap {   font-weight: 500}추가 -- 2022.01.03
+ v.0.10 주연 : .btn-light / .btn-md 추가 -- 2022.01.07
+ v.0.11 선미 : .btn-violet 추가 -- 2022.01.13
+ v.0.12 선미 : .btn-violet-light 추가 -- 2022.01.21
+|--------------------------------------------------------------------|
+*/
+.btn {
+  display: inline-block;
+  min-width: auto;
+  height: vw(48);
+  line-height: vw(46);
+  padding: 0 vw(40);
+  background-color: $primary;
+  border-color: $primary;
+  border-radius: vw(100);
+  font-weight: bold;
+  font-size: vw(15);
+  color: $gray-fff;
+  >span{
+    vertical-align: baseline;
+    +.icon{
+      margin-left: vw(4);
+    }
+  }
+  .icon{
+    +span{
+      margin-left: vw(4);
+    }
+  }
+  >.icon{
+    vertical-align: sub;
+  }
+  &.btn-icon{
+    padding: 0 vw(20);
+  }
+
+  &:focus, &:hover {
+    background-color: $primary;
+    color: $gray-fff;
+    box-shadow: none!important;
+  }
+
+  &:active {
+    background-color: $primary !important;
+    box-shadow: none!important;
+  }
+
+  &.btn-border {
+    background-color: #fff;
+    color: $primary;
+
+    &:focus, &:hover {
+      background-color: #fff !important;
+      color: $primary;
+    }
+
+    &:active {
+      background-color: #fff  !important;
+    }
+  }
+
+  &.btn-black {
+    background-color: $gray-800;
+    border-color: $gray-800;
+    color: #fff;
+
+    &:focus, &:hover {
+      background-color: $gray-800;
+      border-color: $gray-800;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: $gray-800  !important;
+    }
+  }
+
+  &.btn-light {
+    background-color: $gray-300;
+    border-color: $gray-300;
+    color: $gray-800;
+
+    &:focus, &:hover {
+      background-color: $gray-300;
+      border-color: $gray-300;
+      color: $gray-800;
+    }
+
+    &:active {
+      background-color: $gray-300  !important;
+      border-color: $gray-300  !important;
+    }
+  }
+
+  &.btn-border-black {
+    background-color: transparent;
+    color: $gray-800;
+
+    &:focus, &:hover {
+      background-color: transparent;
+      color: $gray-800;
+    }
+
+    &:active {
+      background-color: transparent  !important;
+    }
+  }
+
+  &.btn-white {
+    background-color: $gray-fff;
+    border-color: $gray-fff;
+    color: $gray-800;
+
+    &:focus, &:hover {
+      background-color: $gray-fff;
+      border-color: $gray-fff;
+      color: $gray-800;
+    }
+
+    &:active {
+      background-color: $gray-fff  !important;
+    }
+  }
+
+  &.btn-border-white {
+    background-color: transparent;
+    color: #fff;
+
+    &:focus, &:hover {
+      background-color: transparent;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: transparent  !important;
+    }
+  }
+
+  &.btn-blue {
+    background-color: $blue;
+    border-color: $blue;
+    color: $gray-fff;
+
+    &:focus, &:hover {
+      background-color: $blue;
+      border-color: $blue;
+      color: $gray-fff;
+    }
+
+    &:active {
+      background-color: $blue !important;
+    }
+  }
+
+  &.btn-violet {
+    background-color: $violet;
+    border-color: $violet;
+    color: $gray-fff;
+
+    &:focus, &:hover {
+      background-color: $violet;
+      border-color: $violet;
+      color: $gray-fff;
+    }
+
+    &:active {
+      background-color: $violet !important;
+    }
+  }
+
+  &.btn-violet-light {
+    background-color: #e7eaff;
+    border-color:  #e7eaff;
+    color: $gray-800;
+
+    &:focus, &:hover {
+      background-color:  #e7eaff;
+      border-color: #e7eaff;
+      color: $gray-800;
+    }
+
+    &:active {
+      background-color:  #e7eaff !important;
+    }
+  }
+
+  &.disabled {
+    background-color: $gray-400;
+    border-color: $gray-400;
+  }
+
+  &.btn-sm {
+    //min-width: vw(113);
+    height: vw(32);
+    line-height: vw(30);
+    font-size: vw(13);
+  }
+
+  &.btn-md {
+    //min-width: vw(113);
+    height: vw(44);
+    line-height: vw(42);
+    font-size: vw(15);
+  }
+
+  &.btn-lg {
+    //min-width: vw(179);
+    height: vw(56);
+    line-height: vw(54);
+    font-size: vw(16);
+    padding: 0 vw(36);
+  }
+
+  &.btn-xl {
+    height: vw(62);
+    line-height: vw(60);
+    font-size: vw(16);
+  }
+
+  &.btn-block{
+    width: 100%;
+  }
+}
+
+.page-btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+
+  .btn-page {
+    i {
+      + span {
+        margin-left: vw(6);
+      }
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+
+      + i {
+        margin-left: vw(6);
+      }
+    }
+  }
+}

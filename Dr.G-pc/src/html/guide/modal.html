@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="guide popup">
+            <p class="title font-h2">슬라이드팝업</p>
+            <div class="box">
+                <a href="#" class="btn _toast-popup-open">
+                    button
+                </a>
+            </div>
+            <p class="title font-h2">풀페이지_팝업</p>
+            <div class="box">
+                <a href="#" class="btn _toast-popup-open full">
+                    <span>button</span>
+                </a>
+            </div>
+            <p class="title font-h2">alert (버튼 1개)</p>
+            <div class="box text-center">
+                <button type="button" class="btn" data-toggle="modal" data-target="#alertPopupType2">
+                    button
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="alertPopupType2" tabindex="-1" role="dialog"
+                     aria-labelledby="alertPopupType2" aria-hidden="true">
+                    <div class="modal-dialog modal-sm modal-dialog-centered alert-popup" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                            </div>
+                            <div class="modal-body">
+                                <p class="title">로그인</p>
+                                로그인 후 이용가능합니다.<br>
+                                로그인 페이지로 이동 하시겠습니까?
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" type="button" class="btn one" data-dismiss="modal">확인</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="title font-h2">alert (버튼 2개)</p>
+            <div class="box text-center">
+                <button type="button" class="btn" data-toggle="modal" data-target="#alertPopupType1">
+                    button
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="alertPopupType1" tabindex="-1" role="dialog"
+                     aria-labelledby="ModalCenterTitleOneButton" aria-hidden="true">
+                    <div class="modal-dialog modal-sm alert-popup modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            </div>
+                            <div class="modal-body">
+                                <h5 class="title" id="ModalCenterTitleOneButton">로그인</h5>
+                                로그인 후 이용가능합니다.<br>
+                                로그인 페이지로 이동 하시겠습니까?
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" type="button" class="btn btn-close" data-dismiss="modal">취소</a>
+                                <a href="#" type="button" class="btn">확인</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal -->
+            </div>
+
+        </div>
+        @@include('../../html/include/common/footer.html')
+    </div>
+</div>
+<div class="toast-dim">
+    <div class="toast-popup _toast-popup-open">
+        <div class="toast-content title">
+            <div class="toast-header">
+                <p class="title">댓글 작성하기</p>
+                <a href="#" class="_toast-popup-close icon ico-close-sm"></a>
+            </div>
+            <div class="toast-body bg-doctor">
+                <p class="main-title">여러분의 <span>피부고민</span>을 들려주세요.</p>
+                <p class="desc">작성한 댓글은 다음 편 영상 제작 시<br>참고 예정입니다. </p>
+                <textarea placeholder="고민 채택 시, 마일리지 5,000점 증정!&#10닥터안이 직접 솔루션을 드립니다."></textarea>
+                <p class="caption">자세한 피부고민 상담은 1:1 스킨 멘토링을 이용해주세요!</p>
+            </div>
+            <div class="toast-footer">
+                <a href="#" class="btn btn-lg btn-secondary _toast-popup-close">댓글 작성하기</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="full-popup _full-popup">
+    <div class="popup-content">
+        <div class="popup-header _popup-header">
+            <p class="title font-h3">내가 쓴 댓글 보기</p>
+            <i class="icon ico-close _toast-popup-close full"></i>
+        </div>
+        <div class="popup-body">
+            <div class="story-wrap">
+                <ul class="comment-list">
+                    <li class="item">
+                        <div class="info-area">
+                            <div class="img">
+                                <img src="../../img/common/img-comment-info-basic.svg">
+                            </div>
+                            <span class="username">kimkim08</span>
+                            <span class="nickname">수부민건</span>
+                        </div>
+                        <div class="content">
+                            <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍
+                                발라보세요!</p>
+                        </div>
+                        <div class="date">
+                            <span>21-10-12</span>
+                        </div>
+                    </li>
+                    <li class="item manager">
+                        <div class="info-area">
+                            <div class="img">
+                                <img src="../../img/common/img-comment-info-doctor.png">
+                            </div>
+                            <span class="nickname">수부민건</span>
+                        </div>
+                        <div class="content">
+                            <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍
+                                발라보세요!</p>
+                        </div>
+                        <div class="date">
+                            <span>21-10-12</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="info-area">
+                            <div class="img">
+                                <img src="../../img/common/img-comment-info-basic.svg">
+                            </div>
+                            <span class="username">kimkim08</span>
+                            <span class="nickname">수부민건</span>
+                        </div>
+                        <div class="content">
+                            <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍
+                                발라보세요!</p>
+                        </div>
+                        <div class="date">
+                            <span>21-10-12</span>
+                        </div>
+                    </li>
+                    <li class="item manager">
+                        <div class="info-area">
+                            <div class="img">
+                                <img src="../../img/common/img-comment-info-doctor.png">
+                            </div>
+                            <span class="nickname">수부민건</span>
+                        </div>
+                        <div class="content">
+                            <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍
+                                발라보세요!</p>
+                        </div>
+                        <div class="date">
+                            <span>21-10-12</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="info-area">
+                            <div class="img">
+                                <img src="../../img/common/img-comment-info-doctor.png">
+                            </div>
+                            <span class="username">kimkim08</span>
+                            <span class="nickname">수부민건</span>
+                        </div>
+                        <div class="content">
+                            <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍
+                                발라보세요!</p>
+                        </div>
+                        <div class="date">
+                            <span>21-10-12</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="info-area">
+                            <div class="img">
+                                <img src="../../img/common/img-comment-info-basic.svg">
+                            </div>
+                            <span class="username">kimkim08</span>
+                            <span class="nickname">수부민건</span>
+                        </div>
+                        <div class="content">
+                            <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍
+                                발라보세요!</p>
+                        </div>
+                        <div class="date">
+                            <span>21-10-12</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="info-area">
+                            <div class="img">
+                                <img src="../../img/common/img-comment-info-basic.svg">
+                            </div>
+                            <span class="username">kimkim08</span>
+                            <span class="nickname">수부민건</span>
+                        </div>
+                        <div class="content">
+                            <p>광고보고 구매했는데 키엘 수분크림 보다 가성비 좋은듯~ 밤에 듬뿍 바르고 자면 수분팩 효과 볼수 있네용~ 밤에 듬뿍 듬뿍
+                                발라보세요!</p>
+                        </div>
+                        <div class="date">
+                            <span>21-10-12</span>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="popup-footer"></div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('._toast-popup-open.full').on('click', function () {
+            let select = $('._full-popup');
+            select.removeClass('hide').addClass('show');
+        });
+        $('._toast-popup-close.full').on('click', function () {
+            let select = $('._full-popup');
+            select.removeClass('show').addClass('hide');
+        });
+    });
+    $(document).ready(function () {
+        var lastScroll = 0;
+        $('._full-popup > .popup-content').scroll(function () {
+            var st = $(this).scrollTop();
+            // console.log(st);
+            if (st === 0) {
+                // console.log('Down');
+                $('._popup-header').removeClass('header-white');
+            } else {
+                // console.log('Up');
+                $('._popup-header').addClass('header-white');
+            }
+            lastScroll = st;
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/*
+|---------------------------------------|
+  Dr.G Components - v0.1.5 / 01.24
+|---------------------------------------|
+*/
+// config
+@import "components/config";
+
+// library
+@import "lib/bootstrap";
+@import "lib/swiper";
+@import "lib/aos";
+@import "lib/daterangepicker";
+
+// fonts
+@import "fonts/NotoSansKR";
+@import "fonts/Poppins";
+
+// variables
+@import "components/variables";
+
+// component
+@import "components/reboot";
+@import "components/typography";
+@import "components/color";
+@import "components/layout";
+@import "components/button";
+@import "components/input";
+@import "components/pagination";
+@import "components/icon";
+@import "components/tabs";
+@import "components/table";
+@import "components/modal";
+@import "components/loading";
+@import "components/badge";
+@import "components/etc";
+@import "components/view";
+@import "components/file";
+
+// guide
+@import "components/guide";
+

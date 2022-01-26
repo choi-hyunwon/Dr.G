@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header-detail.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="story-wrap">
+            <div class="skin-report-detail">
+                <div class="heading">
+                    <div class="font-h2 font-bold">트러블 생활 백서</div>
+                    <div class="date">2020.08.12</div>
+                </div>
+                <div class="editor-area"><img src="../../img/@temp/area-editor.png" alt=""></div>
+                <div class="sns-wrap">
+                    <a href="#" class="btn-sns-kakao"><i class="icon ico-sns-kakao"></i></a>
+                    <a href="#" class="btn-sns-facebook"><i class="icon ico-sns-facebook"></i></a>
+                    <a href="#" class="btn-sns-line"><i class="icon ico-sns-line"></i></a>
+                </div>
+                <div class="list-wrap">
+                    <div class="font-h4 font-bold">이런 스킨리포트는 어떠세요?</div>
+                    <div class="list _listScroll">
+                        @@include('./_listSkinReport.html')
+                    </div>
+                    <div class="btn-wrap">
+                        <div class="btn btn-lg btn-black">더보기</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+    <!-- s footer -->
+<!--    @@include('../../html/include/common/footer.html')-->
+    <!-- e footer -->
+</div>
+<script>
+    $(document).ready(function () {
+        var sum = 0;
+        var listItem = $('._listScroll .item');
+
+        listItem.each(function () {
+            sum = sum + $(this).outerWidth(true);
+        });
+
+        $('._listScroll ul').css('width', sum + 24 * 100 / 375 +  'px');
+    })
+
+    //  .item가 1개 추가 될 경우 => (172 * 100 / 375)vw = 45.8666vw가 $('._listScroll ul')에 더해져야함
+</script>
+</body>
+</html>

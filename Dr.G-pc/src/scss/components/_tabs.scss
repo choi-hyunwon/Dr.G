@@ -1,0 +1,85 @@
+/*
+|----------------------------------|
+ v.0.1 주연 : 최초 작업 -- 2021.11.30
+ v.0.2 선미 : tab(width: 100vw -> 100% 변경) -- 2021.12.07
+ v.0.3 선미 : tab(color -> $primary 변경) -- 2021.12.07
+ v.0.4 선미 : tab-content 추가 -- 2021.12.13
+ v.0.5 주연 : vw 적용 -- 2021.12.14
+ v.0.6 선미 : .tab > .item  padding-right: vw(28)-> vw(40) 변경,  tab (padding -> padding-left 변경-- 2021.12.17
+ v.0.7 선미 : .tab {border-bottom: 1px solid $gray-300 추가} ,슬라이드 버전 탭추가 (.slide-tab)-- 2021.12.28
+|----------------------------------|
+*/
+.tab {
+  width: 100%;
+  height: vw(50);
+  background-color: $gray-fff;
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-weight: 700;
+  padding-left: vw(25);
+  border-bottom: 1px solid $gray-300;
+
+  .item {
+    float: left;
+    height: vw(50);
+    padding-right: vw(40);
+    &:last-of-type{
+      padding-right: 0;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      line-height: vw(50);
+      font-family: $poppins-semiBold;
+      color: $gray-600;
+      font-size: vw(15);
+    }
+
+    &.active {
+      a {
+        color: $primary;
+
+        &::after {
+          content: '';
+          width: 100%;
+          height: vw(2);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $primary;
+        }
+      }
+    }
+  }
+
+
+  &.slide-tab{
+    padding-left: 0;
+    ul{
+      white-space: nowrap;
+      li{
+        display: inline-block;
+        float: unset;
+        &:first-of-type{
+          margin-left: vw(24);
+        }
+        &:last-of-type{
+          margin-right: vw(24);
+        }
+      }
+    }
+  }
+
+
+}
+
+.tab-content {
+  .tab-pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

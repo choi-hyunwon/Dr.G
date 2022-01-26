@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header-detail-with-back.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="story-wrap">
+            <div class="story-heading-img" style="background-image: url(../../img/@temp/story-sample-1.png)">
+                <div class="flag drg">
+                    <div class="title">
+                        찐팬이<br/>
+                        닥터지에게<br/>
+                        주는 의미
+                    </div>
+                    <div class="category">Dr.G’s CUT</div>
+                    <div class="tag">#닥터지 #찐팬서포터즈</div>
+                    <div class="smile"></div>
+                </div>
+                <div class="flag user">
+                    <div class="title">
+                        편견을 깨는<br/>
+                        보통 사람들
+                    </div>
+                    <div class="category">User’s CUT</div>
+                    <div class="tag">#스킨케어 #레시피<br/>
+                        #자기관리</div>
+                    <div class="smile"></div>
+                </div>
+            </div>
+            <div class="inside-drg-detail">
+                <div class="editor-area"><img src="../../img/@temp/area-editor.png" alt="관련 제품 알아보기"></div>
+                <div class="more-product">
+                    <div class="font-h4 font-bold">관련 제품 알아보기</div>
+                    <div class="list list-scroll _listScroll">
+                        <ul class="clearfix">
+                            <li class="item">
+                                <a href="#">
+                                    <span class="img">
+                                        <img src="../../img/@temp/img-product-1.png" alt="우리 모두가 편리할 권리">
+                                    </span>
+                                    <span class="title">레드 블레미쉬 클리어 수딩 크림 70ml</span>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <span class="img">
+                                        <img src="../../img/@temp/img-product-2.png" alt="우리 모두가 편리할 권리">
+                                    </span>
+                                    <span class="title">레드 블레미쉬 클리어 수딩 액티브 에센스 80ml</span>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <span class="img">
+                                        <img src="../../img/@temp/img-product-1.png" alt="우리 모두가 편리할 권리">
+                                    </span>
+                                    <span class="title">레드 블레미쉬 클리어 수딩 크림 70ml</span>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <span class="img">
+                                        <img src="../../img/@temp/img-product-2.png" alt="우리 모두가 편리할 권리">
+                                    </span>
+                                    <span class="title">레드 블레미쉬 클리어 수딩 크림 70ml</span>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <span class="img">
+                                        <img src="../../img/@temp/img-product-1.png" alt="우리 모두가 편리할 권리">
+                                    </span>
+                                    <span class="title">레드 블레미쉬 클리어 수딩 크림 70ml</span>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <span class="img">
+                                        <img src="../../img/@temp/img-product-2.png" alt="우리 모두가 편리할 권리">
+                                    </span>
+                                    <span class="title">레드 블레미쉬 클리어 수딩 크림 70ml</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-sns-wrap">
+                        <div class="btn-sns-inner">
+                            <a href="#" class="btn-sns-kakao"><i class="icon ico-sns-kakao"></i></a>
+                            <a href="#" class="btn-sns-facebook"><i class="icon ico-sns-facebook"></i></a>
+                            <a href="#" class="btn-sns-line"><i class="icon ico-sns-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-list-wrap">
+                    <div class="font-h4 font-bold">더 많은 정보를 알아보세요</div>
+                    <div class="list">
+                        @@include('./_list.html')
+                        <div class="btn-wrap">
+                            <div class="btn btn-lg btn-black">더보기</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+<!--    @@include('../../html/include/common/footer.html')-->
+    <!-- e footer -->
+</div>
+<script>
+    $(document).ready(function () {
+        var sum = 0;
+        var listItem = $('._listScroll .item');
+
+        listItem.each(function () {
+            sum = sum + $(this).outerWidth(true);
+        });
+
+        $('._listScroll ul').css('width', sum + 24 * 100 / 375 +  'px');
+    })
+</script>
+</body>
+</html>

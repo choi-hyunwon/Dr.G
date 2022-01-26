@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="container"></div>
+</div>
+<div class="toast-dim">
+    <div class="toast-popup _toast-popup">
+        <div class="toast-content">
+            <div class="toast-header">
+                <p class="title">비회원 나의 제안내역 확인하기</p>
+            </div>
+            <div class="toast-body suggestion-box">
+                <div class="register-box">
+                    <div class="box text-center">
+                        <div class="img"><img src="../../img/suggestion/img-lock2.svg" alt=""></div>
+                        <div class="desc">의견 작성 시 입력하신 휴대폰 번호와<br/>비밀번호 4자리를 입력해주세요.</div>
+                        <div class="input-box">
+                            <input type="text" title="검색" class="form-control" maxlength="11"
+                                   placeholder="휴대폰 번호 Ex) 01022334455">
+                            <input type="password" title="검색" class="form-control" maxlength="4"
+                                   placeholder="비밀번호를 4자리를 입력해주세요.">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="toast-footer no-padding">
+                <a href="#" class="btn  btn-lg btn-primary _toast-popup-close">확인</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    showPopup();
+    // hidePopup();
+</script>

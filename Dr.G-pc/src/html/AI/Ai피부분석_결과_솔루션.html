@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header-white.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="AI-wrap">
+            <div class="result">
+                <div class="heading">
+                    <div class="font-body-1 font-bold">조수인님의 피부타입은?</div>
+                    <div class="skin-type">
+                        <!--
+                            <i class="icon icon-DN-m"></i>
+                            <i class="icon icon-DN-p"></i>
+                            <i class="icon icon-DS-m"></i>
+                            <i class="icon icon-DS-p"></i>
+                            <i class="icon icon-ON-m"></i>
+                            <i class="icon icon-ON-p"></i>
+                            <i class="icon icon-OS-m"></i>
+                            <i class="icon icon-OS-p"></i>
+                        -->
+                        <i class="icon icon-ON-p"></i>
+                    </div>
+                    <div class="skin-type-info">
+                        <div class="title">
+                            <span class="font-h2 font-bold">건지형</span>
+                            <a class="btn-tooltip _tooltip" href="#">
+                                <i class="icon ico-alert-circle-w"></i>
+                                <span class="alert-tooltip">수분 부족형 민감 건성</span>
+                            </a>
+                        </div>
+                        <div class="font-body-2 font-poppins">Oily, Non-Sensitive, Hydrated</div>
+                    </div>
+                    <div class="skin-type-detail">
+                        <div class="font-h6">
+                            피지로 인한 번들거림과 수분 부족,<br/>
+                            민감성 고민이 자주 나타나는 <span class="font-bold">수분 부족형 민감 지성 피부</span>입니다.
+                        </div>
+                        <div class="bar-box">
+                            <div class="bar">
+                                <div class="percent left-0" data-percent="1">
+                                     <span class="badge-tooltip color-1">상위권 달성을 축하합니다!
+                                      <svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.59957 4.5C3.21467 5.16667 2.25241 5.16667 1.86751 4.5L0.135466 1.5C-0.249434 0.833333 0.231694 0 1.00149 0H4.46559C5.23539 0 5.71652 0.833333 5.33162 1.5L3.59957 4.5Z" fill="#D5F4EF"/></svg>
+                                    </span>
+                                </div>
+                                <div class="line-wrap">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="font-body-2">같은 연령대 중 <span class="color-primary">상위 1%</span>입니다.</div>
+                    </div>
+                </div>
+                <div class="analysis">
+                    <div class="desc-area">
+                        <div class="font-h2 font-bold">
+                            조수인님은<br/>
+                            어떤 <span class="color-primary">피부고민</span>을 가지고<br/>
+                            있을까요?
+                        </div>
+                        <div class="font-h6">Ai가 분석한 나의 피부 상태를 확인하세요.</div>
+                        <div class="font-body-2">(촬영 환경에 따라 <span class="font-bold">인식의 차이가 발생</span>할 수 있습니다.)</div>
+                    </div>
+                    <div class="skin-type-list">
+                        <ul class="clearfix">
+                            <li class="on"><a href="#"><span class="type"><i
+                                    class="icon ico-skin-type-1"></i></span><span class="font-body-2">수분</span></a></li>
+                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-2"></i></span><span
+                                    class="font-body-2">유분</span></a></li>
+                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-3"></i></span><span
+                                    class="font-body-2">민감</span></a></li>
+                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-4"></i></span><span
+                                    class="font-body-2">색소</span></a></li>
+                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-5"></i></span><span
+                                    class="font-body-2">주름</span></a></li>
+                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-6"></i></span><span
+                                    class="font-body-2">모공</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="img-wrap">
+                        <div class="img">
+                            <img src="../../img/AI/sample-img-2.png" alt="조수인">
+                        </div>
+                    </div>
+                    <div class="keyword">
+                        <div class="font-h5 font-bold">조수인님의 피부고민 키워드</div>
+                        <ul class="clearfix">
+                            <li>민감</li>
+                            <li>유분과다</li>
+                            <li>여드름성 피부</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="analysis-result">
+                    <div class="tab _tab slide-tab">
+                        <ul>
+                            <li class="item"><a href="#">분석</a></li>
+                            <li class="item active"><a href="#">솔루션</a></li>
+                            <li class="item"><a href="#">추천</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <!-- s 분석 -->
+                        <div class="tab-pane">
+<!--                            @@include('_analyze.html')-->
+                        </div>
+                        <!-- e 분석 -->
+
+                        <!-- s 솔루션 -->
+                        <div class="tab-pane active">
+                            @@include('_solution.html')
+                        </div>
+                        <!-- e 솔루션 -->
+
+                        <!-- s 추천 -->
+                        <div class="tab-pane">
+<!--                            @@include('_recommendation.html')-->
+                        </div>
+                        <!-- e 추천 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+@@include('_analyzeScript.html')
+</body>
+</html>

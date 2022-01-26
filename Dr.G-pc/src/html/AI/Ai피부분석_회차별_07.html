@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="line-chart-wrap">
+        <div class="line-chart">
+            <div class="line-chart-inner">
+                <svg preserveAspectRatio="none" viewBox="0 0 375 200">
+                    <defs>
+                        <linearGradient id="Gradient" gradientTransform="rotate(90)">
+                            <stop style="stop-color:#2DAFF9" offset="0%"></stop>
+                            <stop style="stop-color:#35BBCA" offset="10%"></stop>
+                            <stop style="stop-color:#6BD665" offset="20%"></stop>
+                            <stop style="stop-color:#45D26D" offset="30%"></stop>
+                            <stop style="stop-color:#6BD665" offset="40%"></stop>
+                            <stop style="stop-color:#9ED86E" offset="50%"></stop>
+                            <stop style="stop-color:#CFDA77" offset="60%"></stop>
+                            <stop style="stop-color:#ECD17D" offset="70%"></stop>
+                            <stop style="stop-color:#ECB67F" offset="80%"></stop>
+                            <stop style="stop-color:#EB9C80" offset="90%"></stop>
+                            <stop style="stop-color:#EA8181" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path style="stroke:url(#Gradient)" d="" class="line"></path>
+                </svg>
+                <!--
+                         1. 현재 구간에서 마지막 요소, .item에 item-last 클래스 추가
+                         2. 데이터 값이 0 ~ 20인 경우, .item에 top 클래스 추가
+                         3. 이전 데이터가 없는 경우, .item에 .item-old 클래스 추가
+                         4. 다음 데이터가 있는 경우, .item에 .item-new 클래스 추가
+                 -->
+                <div class="chart-info">
+                    <!-- s 현재 구간 -->
+                    <div class="item item-top">
+                        <input type="range" title="range" min="0" max="100" />
+                        <div class="percentage"></div>
+                        <div class="line-box">
+                            <div class="tooltip-box"><a href="#">0</a></div>
+                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <input type="range" title="range" min="0" max="100" />
+                        <div class="percentage"></div>
+                        <div class="line-box">
+                            <div class="tooltip-box"><a href="#">67</a></div>
+                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                        </div>
+                    </div>
+                    <div class="item item-last">
+                        <input type="range" title="range" min="0" max="100" />
+                        <div class="percentage"></div>
+                        <div class="line-box">
+                            <div class="tooltip-box"><a href="#">100</a></div>
+                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                        </div>
+                    </div>
+                    <!-- s 현재 구간 -->
+                </div>
+                <div class="x-axis">
+                    <ul>
+                        <li>2021-09-01</li>
+                        <li>2021-10-01</li>
+                        <li>2021-11-01</li>
+                    </ul>
+                </div>
+                <div class="chart-nav">
+                    <a href="#" class="btn-nav left"><i class="icon ico-chart-nav-right"></i></a>
+                    <a href="#" class="btn-nav right disabled"><i class="icon ico-chart-nav-left"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // data
+    var data = [
+        {
+            "date": "2021-09-01",
+            "value": 0,
+        },
+        {
+            "date": "2021-10-01",
+            "value": 67,
+        },
+        {
+            "date": "2021-11-01",
+            "value": 100,
+        },
+    ];
+
+    // String formatter
+    if (!String.prototype.format) {
+        String.prototype.format = function() {
+            var args = arguments;
+            return this.replace(/{(\d+)}/g, function(match, number) {
+                return typeof args[number] != 'undefined' ? args[number] : match;
+            });
+        };
+    }
+
+    let app = (() => {
+        const $svgLine = document.querySelector('svg .line');
+        const sliderHeight = 200;
+        const svgViewBoxHeight = 200;
+        const svgViewBoxThumbLimit = svgViewBoxHeight / sliderHeight;
+        const svgViewBoxGraphMax = svgViewBoxHeight - svgViewBoxThumbLimit;
+        const svgViewBoxGraphMin = svgViewBoxThumbLimit;
+
+        let ranges = {
+            range1: null,
+            range2: null,
+            range3: null,
+        };
+
+        let points = {
+            // 1번 점
+            begin: {
+                x: 87,
+                y: 0
+            },
+            point1: {
+                x: 87,
+                y: 0
+            },
+            control1: {
+                x: 130,
+                y: 0
+            },
+            control2: {
+                x: 130,
+                y: 0
+            },
+            // 2번 점
+            point2: {
+                x: 187,
+                y: 0
+            },
+            control3: {
+                x: 230,
+                y: 0
+            },
+            // 3번 점
+            point3: {
+                x: 287,
+                y: 0
+            },
+        };
+
+        function mapDataRange(value) {
+            return (((value - 0) * (svgViewBoxGraphMax - svgViewBoxGraphMin)) / svgViewBoxHeight) + svgViewBoxGraphMin;
+        }
+
+        function updateSlider($element) {
+            if ($element) {
+
+                let rangeIndex = $element.getAttribute('data-slider-index'),
+                    range = ranges[rangeIndex],
+                    value = $element.value;
+
+                if (range === value) {
+                    return;
+                }
+
+                ranges[rangeIndex] = value;
+
+                let parent = $element.parentElement,
+                    $tootip = parent.querySelector('.line-box'),
+                    $bar = parent.querySelector('.percentage'),
+                    pct = value * (sliderHeight / sliderHeight)
+
+                $tootip.style.bottom = `${pct}%`;
+                $bar.style.height = `${pct}%`;
+
+                renderSliderGraph();
+            }
+        }
+
+        function updatePoints() {
+            points.point1.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges.range1) / 100) | 0;
+            points.point2.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges.range2) / 100) | 0;
+            points.point3.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges.range3) / 100) | 0;
+            // points.point4.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges.range4) / 100) | 0;
+
+            const max = svgViewBoxGraphMax;
+            const min = svgViewBoxGraphMin;
+
+            points.point1.y = mapDataRange(points.point1.y);
+            points.point2.y = mapDataRange(points.point2.y);
+            points.point3.y = mapDataRange(points.point3.y);
+            // points.point4.y = mapDataRange(points.point4.y);
+
+            points.begin.y = points.point1.y;
+            points.control1.y = points.point1.y;
+            points.control2.y = points.point2.y;
+            points.control3.y = points.point3.y;
+            // points.control4.y = points.point4.y;
+        }
+
+        function getInterpolatedLine() {
+            return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13}'.format(
+                // M
+                points.begin.x, points.begin.y,
+                // L
+                points.point1.x, points.point1.y,
+                // C
+                points.control1.x, points.control1.y,
+                points.control2.x, points.control2.y,
+                points.point2.x, points.point2.y,
+                // S
+                points.control3.x, points.control3.y,
+                points.point3.x, points.point3.y,
+                // S
+                // points.control4.x, points.control4.y,
+                // points.point4.x, points.point4.y,
+            )
+        }
+
+        function renderSliderGraph() {
+            updatePoints();
+            $svgLine.setAttribute('d', getInterpolatedLine());
+        }
+
+        function updateChart() {
+            const inputs = app.inputs;
+            inputs.forEach((input, index) => {input.value = data[index].value | 0});
+            inputs.forEach(input => app.updateSlider(input));
+        }
+
+        return {
+            inputs: [].slice.call(document.querySelectorAll('.line-chart-inner input')),
+            updateSlider,
+            updateChart,
+        };
+    })();
+
+    (function initLineChart() {
+        const inputs = app.inputs;
+        let index = 1;
+        inputs.forEach(input => input.setAttribute('data-slider-index', 'range' + index++));
+        inputs.forEach(input => input.value = 50);
+        inputs.forEach(input => app.updateSlider(input));
+        app.updateChart();
+    })();
+
+    /** -------------------------- line animation --------------------------- **/
+    anime({
+        targets: 'path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutCubic',
+        duration: 2000,
+    });
+
+    function lineDrawing() {
+        anime({
+            targets: 'path',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutCubic',
+            duration: 2000,
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="container"></div>
+</div>
+
+<div class="toast-dim">
+    <div class="toast-popup _toast-popup">
+        <div class="toast-content navi">
+            <div class="toast-header">
+                <p class="title">개인정보 수집 및 이용 동의</p>
+                <a href="#" class="_toast-popup-close icon ico-close-sm"></a>
+            </div>
+            <div class="toast-body">
+                <p class="desc">닥터지는 사진 촬영 후 피부 분석 결과를<br>
+                    제공해 드립니다.<Br>
+                    닥터지 Ai 피부분석을 통한 <span class="color-primary font-bold">개인정보 수집 및<br> 이용</span> 내용에 동의 하십니까?</p>
+                <div class="agree-area-list">
+                    <div class="agree-area">
+                        <div class="custom-control custom-checkbox checkbox-sm">
+                            <input type="checkbox" class="custom-control-input" id="notice1">
+                            <label class="custom-control-label" for="notice1">(필수) 개인정보 수집 및 이용 동의</label>
+                        </div>
+                        <span class="view-content"><a href="#">내용보기</a></span>
+                    </div>
+                    <div class="agree-area">
+                        <div class="custom-control custom-checkbox checkbox-sm">
+                            <input type="checkbox" class="custom-control-input" id="notice2">
+                            <label class="custom-control-label" for="notice2">(필수) 이용약관</label>
+                        </div>
+                        <span class="view-content"><a href="#">내용보기</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="toast-footer no-padding">
+                <div class="page-btn-wrap clearfix">
+                    <a href="#" class="btn-page btn-next"><span class="font-body-1">다음</span><i
+                            class="icon ico-next white"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    showPopup();
+    // hidePopup();
+</script>

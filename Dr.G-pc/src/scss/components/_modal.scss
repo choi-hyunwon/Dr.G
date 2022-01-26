@@ -1,0 +1,919 @@
+/*
+|--------------------------------------------------------------------|
+ v.0.1 태윤 : 최초 작업 -- 2021.12.09
+ v.0.2 태윤 : modal-footer > .btn css속성 제거 (클래스로 버튼 색상 제어)
+ v.0.3 주연 : vw 적용 -- 2021.12.14
+ v.0.4 태윤 : .full-popup 추가 , footer에 네비게이션있는 모달 추가 -- 2021.12.17
+ v.0.5 태윤 : 1:1 스킨멘토링 관련 팝업 추가 // 모달팝업 버튼 수정으로 인한 변경 -- 2021.12.24
+ v.0.6 태윤 : 1:1 스킨멘토링_내역 칼러값 변경으로 인한 추가  -- 2021.12.28
+ v.0.7 태윤 : .toast-dim background-color opacity 50%로 변경 -- 2021.12.30
+ v.0.8 태윤 : .alert-popup html 구조변경으로 인한 css 수정 -- 2021.12.30
+ v.0.9 주연 : 코드 정리  -- 2022.01.05
+ v.0.10 주연 : 영문 오탈자 수정 / 공유하기 팝업 스타일 추가  -- 2022.01.10
+ v.0.12 태윤 : 모달 주석처리 완료  -- 2022.01.13
+ v.0.13 선미 :  .toast-body {margin 제거} .toast-footer {padding-top: vw(32) 추가  &.no-padding{ 클래스 추가 } -- 2022.01.13
+ v.0.14 선미 :  색상값 공통화 작업 -- 2022.01.13
+|--------------------------------------------------------------------|
+*/
+
+
+/*부트스트랩-모달*/
+.modal {
+  word-break: keep-all;
+
+  .modal-dialog {
+    &.alert-popup {
+      .modal-content {
+        border-radius: vw(12);
+        overflow: hidden;
+
+        .modal-header {
+          padding: vw(24) vw(24) 0 vw(24);
+          border-bottom: none;
+        }
+
+        .modal-body {
+          padding: vw(0) vw(24) vw(24) vw(24);
+          text-align: left;
+          color: $gray-800;
+          font-size: vw(15);
+          line-height: vw(22);
+          font-weight: 400;
+
+          .title {
+            font-size: vw(16);
+            line-height: vw(24);
+            letter-spacing: -0.005em;
+            font-weight: 700;
+            color: $gray-900;
+            margin-bottom: vw(4);
+          }
+        }
+
+        .modal-footer {
+          display: flex;
+          padding: 0;
+          justify-content: space-between;
+
+          .btn {
+            display: inline-block;
+            line-height: vw(50);
+            background-color: $gray-fff;
+            border-color: $gray-fff;
+            border-radius: 0;
+            font-weight: 400;
+            font-size: vw(13);
+            padding: 0;
+            margin: 0;
+            width: 50%;
+            height: auto;
+            color: $gray-600;
+
+            &:focus,&:active {
+              background-color: $gray-fff !important;
+              color: $gray-900 !important;
+            }
+
+            + .btn {
+              font-weight: 700;
+              color: $gray-900;
+              border-left: vw(1) solid $gray-300;
+            }
+            /*버튼 한개일시*/
+            &.one {
+              width: 100%;
+              color: $gray-900;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+
+    &.modal-sm {
+      width: vw(300);
+      max-width: vw(300);
+      margin: 0 auto;
+    }
+  }
+
+  .btn {
+    outline: none;
+  }
+}
+
+/*풀 페이지 팝업*/
+.full-popup {
+  z-index: 1050;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $gray-200;
+
+  &.show {
+    display: block;
+  }
+
+  .popup-content {
+    padding: vw(0) vw(24);
+    overflow-y: scroll;
+    height: 100vh;
+
+    .popup-header {
+      z-index: 1051;
+      padding: 0 vw(24);
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: vw(60);
+      min-height: vw(60);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        display: block;
+      }
+
+      .title {
+        font-weight: 700;
+      }
+
+      &.header-white {
+        background-color: $gray-fff;
+      }
+    }
+
+    .popup-body {
+      padding-top: vw(80);
+
+      .comment-list {
+        .item {
+          background-color: $gray-fff;
+          border-radius: vw(12);
+          padding: vw(20);
+
+          .connetnt {
+            margin-bottom: vw(10);
+
+            p {
+              font-size: vw(15);
+              line-height: vw(22);
+              font-weight: 400;
+              color: #444;
+            }
+          }
+
+          + .item {
+            margin-top: vw(16);
+          }
+
+          &.manager {
+            margin-top: 0;
+            background-color: #E2F5FF;
+            position: relative;
+
+            .info-area {
+              .icon {
+                + .nickname {
+                  margin-left: 0;
+                }
+              }
+            }
+
+            &:before {
+              content: '';
+              width: vw(20);
+              height: vw(20);
+              position: absolute;
+              top: vw(-18);
+              right: vw(24);
+              background-image: url("../img/common/ico-comment-triaggle.svg");
+              background-size: 100% 100%;
+            }
+          }
+
+          .info-area {
+            margin-bottom: vw(6);
+            display: flex;
+            align-items: center;
+
+            .img {
+              + .nickname {
+                margin-left: 0;
+              }
+            }
+
+            span {
+              font-size: vw(13);
+              line-height: vw(18);
+
+              &.username {
+                padding-right: vw(8);
+                position: relative;
+
+                &:before {
+                  content: '';
+                  position: absolute;
+                  top: vw(4);
+                  right: vw(0);
+                  width: vw(1);
+                  height: vw(10);
+                  background-color: $gray-400;
+                }
+              }
+
+              &.nickname {
+                font-weight: 700;
+                margin-left: vw(8);
+              }
+            }
+          }
+
+          .date {
+            span {
+              font-size: vw(13);
+              line-height: vw(18);
+              color: #888;
+            }
+          }
+        }
+      }
+    }
+
+    .popup-footer {
+      padding: vw(24) 0;
+    }
+  }
+}
+
+/*슬라이드 팝업*/
+.toast-dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(33, 37, 41, 0.5);
+
+  /*슬라이드 팝업 열릴때 애니메이션*/
+  &.show {
+    display: block;
+
+    .toast-popup {
+      .toast-content {
+        bottom: 0;
+
+        @keyframes animateup {
+          from {
+            bottom: vw(-300);
+            opacity: 0;
+          }
+          to {
+            bottom: 0;
+            opacity: 1;
+          }
+        }
+        animation: animateup 0.5s;
+      }
+    }
+  }
+
+  /*슬라이드 팝업 닫힐때 애니메이션*/
+  &.hide {
+    display: none;
+
+    .toast-popup {
+      bottom: 0;
+
+      .toast-content {
+        @keyframes animatedown {
+          from {
+            bottom: 0;
+            opacity: 1;
+          }
+          to {
+            bottom: vw(-300);
+            opacity: 0;
+          }
+        }
+        animation: animatedown 0.5s;
+      }
+    }
+  }
+
+  /*슬라이드 팝업 default값*/
+  .toast-popup {
+    z-index: 1050;
+    position: relative;
+    width: auto;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .toast-content {
+      width: 100%;
+      position: absolute;
+      background-color: $gray-fff;
+      padding: vw(24) vw(24) vw(32);
+      border-radius: vw(20) vw(20) 0 0;
+      bottom: vw(-300);
+
+      .toast-header {
+        margin-bottom: vw(24);
+        padding: 0;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        border-bottom: 0;
+
+        &.mb-half {
+          margin-bottom: vw(12);
+        }
+
+        .title {
+          font-size: vw(20);
+          font-weight: 700;
+          line-height: vw(30);
+          letter-spacing: -0.005em;
+          text-align: left;
+          color: $gray-800;
+        }
+      }
+
+      .toast-body {
+        padding: 0;
+
+        .main-title {
+          font-size: vw(16);
+          font-weight: 700;
+          line-height: vw(24);
+          letter-spacing: -0.005em;
+          text-align: center;
+          color: $gray-800;
+
+          &.next-desc {
+            margin-bottom: vw(11) !important;
+          }
+        }
+
+        .desc {
+          font-size: vw(16);
+          font-weight: 400;
+          line-height: vw(25);
+          letter-spacing: -0.005em;
+          text-align: center;
+          color: $gray-800;
+        }
+
+        .img {
+          margin: 0 auto vw(24);
+
+          &.logo {
+            margin-bottom: vw(8);
+            width: vw(110);
+            height: auto;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+
+            + .main-title {
+              font-weight: 400;
+            }
+          }
+        }
+
+        span {
+        //  color: $blue;
+        //  color: red;
+       //   font-weight: 700;
+        }
+
+        .text-btn {
+          display: block;
+          font-size: vw(15);
+          font-weight: 500;
+          line-height: vw(22);
+          letter-spacing: -0.005em;
+          text-align: center;
+          text-decoration: underline;
+        }
+
+        .agree-area-list {
+          padding: 0 vw(20);
+          margin-bottom: vw(32);
+          text-align: left;
+
+          .agree-area {
+            position: relative;
+            margin-bottom: vw(4);
+            &:nth-last-of-type(1){
+              margin-bottom: 0;
+            }
+            .view-content {
+              position: absolute;
+              top: vw(1);
+              margin-left: vw(4);
+            }
+          }
+
+          .custom-control-label {
+            color: $gray-800;
+
+            &:before {
+
+            }
+
+            &:after {
+
+            }
+          }
+
+          .view-content {
+            font-weight: 500;
+            font-size: vw(13);
+            line-height: vw(18);
+            text-decoration: underline;
+            color: $gray-800;
+          }
+        }
+
+        .star-point-area {
+          margin-bottom: vw(24);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .star-box {
+            .star {
+              float: left;
+              display: inline-block;
+              width: vw(21);
+              height: vw(40);
+              cursor: pointer;
+
+              &.star_left {
+                background: url('../img/common/ico-star-gray.svg') no-repeat 0.066667vw 0;
+                background-size: vw(42);
+                margin-left: vw(6);
+
+                &:nth-child(1) {
+                  margin-left: 0;
+                }
+              }
+
+              &.star_right {
+                background: url('../img/common/ico-star-gray.svg') no-repeat -0.066667vw 0;
+                transform: scaleX(-1);
+                background-size: vw(42);
+              }
+
+              &.on {
+                background-image: url('../img/common/ico-star-yellow.svg');
+              }
+            }
+          }
+        }
+
+        .circle-list-area {
+
+          > li {
+            position: relative;
+            margin-bottom: vw(4);
+
+            &:before {
+              background-color: $gray-600;
+              width: vw(3);
+              height: vw(3);
+              border-radius: 50%;
+              content: '';
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+            &:nth-last-of-type(1) {
+              margin-bottom: 0;
+            }
+
+            p {
+              font-size: vw(13);
+              line-height: vw(18);
+              letter-spacing: -0.005em;
+              color: $gray-500;
+              font-weight: 400;
+              padding-left: vw(9);
+
+              span {
+                font-weight: 500;
+                color: $gray-600;
+              }
+            }
+          }
+        }
+
+        .sns-share-wrap {
+          display: flex;
+          justify-content: center;
+          padding-top: vw(8);
+
+          a + a {
+            margin-left: vw(16);
+          }
+        }
+
+        /* 1:1 성분분석 */
+        &.analysis-box{
+          margin-bottom: 0;
+
+          /*제품명 입력검색*/
+          .search-group{
+            padding-top: vw(32);
+            ul{
+              &.list{
+                font-size: vw(13);
+                color: $gray-700;
+                li{
+                  margin-bottom: vw(20);
+                  &:last-of-type{
+                    margin-bottom: 0;
+                  }
+                }
+              }
+              &.desc{
+                color: $gray-500;
+                font-weight: 500;
+                font-size: vw(16);
+                &.notice{
+                  p{
+                    &:first-of-type{
+                      color: $gray-800;
+                      font-weight: 500;
+                      font-size: vw(16);
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+
+          /*제품명 확인*/
+          .product-name{
+            background-color: $gray-200;
+            padding: vw(18);
+            text-align: center;
+            font-weight: bold;
+            border-radius: vw(12);
+            margin-bottom: vw(24);
+            + .font-h6 {
+              color: $gray-800;
+            }
+          }
+
+          /*촬영 가이드*/
+          .img{
+            &.img-guide{
+              width: vw(145);
+              height: vw(145);
+              border-radius: vw(20);
+              overflow:hidden;
+              img{
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+          .check-point{
+            .title{
+              padding-left: vw(20);
+              position: relative;
+              font-weight: 600;
+              font-size: vw(13);
+              margin-bottom: vw(8);
+              &:before{
+                content: '';
+                display: inline-block;
+                clear: both;
+                background: url("../img/common/ico-alert-circle.svg") no-repeat center center;
+                background-size: 100% auto;
+                width: vw(18);
+                height: vw(18);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+            .list{
+              color: $gray-700;
+              font-size: vw(15);
+            }
+          }
+        }
+
+        /* 고객제안 */
+        &.suggestion-box{
+          .input-box{
+            padding-top: vw(24);
+            margin-bottom: vw(24);
+          }
+        }
+
+      }
+
+      .toast-footer {
+        padding-top: vw(32);
+        &.no-padding{
+          padding: 0;
+        }
+        .btn {
+          width: 100%;
+
+          + .text-btn {
+            padding-top: vw(24)
+          }
+        }
+
+        .text-btn {
+          display: block;
+          font-size: vw(15);
+          font-weight: 500;
+          line-height: vw(22);
+          letter-spacing: -0.005em;
+          color: $gray-900;
+          text-align: center;
+          text-decoration: underline;
+        }
+      }
+
+      /*슬라이드 - 제목있음*/
+      &.title {
+        .toast-body {
+          &.bg-doctor {
+            background-position: 100% 0;
+            background-repeat: no-repeat;
+            background-size: vw(115) vw(120);
+            background-image: url("../img/common/img-doctorAnn.png");
+          }
+
+          .main-title {
+            text-align: left;
+            margin-bottom: vw(6);
+
+         /*   span {
+              color: $primary;
+
+              &.color-blue {
+                color: $blue;
+              }
+            }*/
+          }
+
+          .question {
+            text-align: center;
+            font-size: vw(18);
+            font-weight: 700;
+            line-height: vw(28);
+            letter-spacing: -0.005em;
+            color: $gray-800;
+          }
+
+          .desc {
+            font-size: vw(13);
+            font-weight: 400;
+            line-height: vw(18);
+            letter-spacing: -0.005em;
+            text-align: left;
+            color: #666;
+            margin-bottom: vw(24);
+          }
+
+          textarea {
+            border-radius: vw(12);
+            width: 100%;
+            border: vw(1) solid #eee;
+            min-height: vw(160);
+            resize: none;
+            padding: vw(20);
+            margin-bottom: vw(12);
+
+            &::placeholder {
+              font-size: vw(15);
+              font-style: normal;
+              font-weight: 400;
+              line-height: vw(22);
+              letter-spacing: -0.005em;
+              text-align: left;
+              color: #bbb;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .caption {
+            font-size: vw(13);
+            font-style: normal;
+            font-weight: 500;
+            line-height: vw(18);
+            letter-spacing: -0.005em;
+            text-align: left;
+            color: $gray-600;
+          }
+        }
+      }
+
+      /*슬라이드 - 제목없음*/
+      &.no-title {
+        .toast-body {
+          padding-top: vw(8);
+        }
+
+        &.un-check {
+          .toast-body {
+            .desc {
+       //      margin-bottom: vw(12);
+            }
+          }
+
+          .main-title {
+            margin-bottom: 0;
+
+       /*     span {
+              color: $primary;
+            }
+
+            .color-blue {
+              color: $blue !important;
+            }*/
+          }
+        }
+
+        &.type {
+          .toast-body {
+            .select-list {
+              display: flex;
+              flex-direction: column;
+              padding-top: vw(8);
+
+              .list {
+                display: flex;
+                justify-content: space-between;
+                align-content: center;
+                margin-bottom: vw(28);
+                cursor: pointer;
+
+                .icon {
+                  display: none;
+                }
+
+                &.active {
+                  span {
+                    font-weight: 700;
+                    &.primary{
+                      color: $primary;
+                    }
+                    &.blue {
+                      color: $blue;
+                    }
+                    &.violet{
+                      color: $violet;
+                    }
+                  }
+
+                  .icon {
+                    display: block;
+                  }
+                }
+
+                &:nth-last-of-type(1) {
+                  margin-bottom: 0;
+                }
+
+                span {
+                  font-family: Noto Sans KR;
+                  font-size: vw(16);
+                  font-weight: 400;
+                  line-height: vw(24);
+                  letter-spacing: -0.005em;
+                  text-align: left;
+                  color: $gray-800;
+                }
+              }
+            }
+          }
+        }
+
+        .main-title {
+          margin-bottom: vw(12);
+        }
+
+        .desc {
+      //    margin-bottom: vw(32);
+        }
+      }
+
+      /*슬라이드 - 네비게이션*/
+      &.navi {
+        padding: 0;
+
+        .toast-header {
+          border-radius: vw(20) vw(20) 0 0;
+          padding: vw(24) vw(24) 0;
+          margin-bottom: vw(36);
+        }
+
+        .toast-body {
+          margin: 0 auto;
+          text-align: center;
+
+          .desc {
+            word-break: keep-all;
+            padding: 0 vw(20);
+            margin-bottom: vw(12);
+
+          /*  span {
+              color: $primary;
+              font-weight: 700;
+            }*/
+
+            + .agree-area-list {
+              padding-top: vw(20);
+            }
+          }
+
+          .text-btn {
+            margin-bottom: vw(32);
+          }
+        }
+
+        .toast-footer {
+          background-color: $gray-800;
+
+          .page-btn-wrap {
+            display: block;
+            padding: vw(20) vw(25);
+
+            .btn-page {
+              color: $gray-fff;
+
+              &.btn-prev {
+                float: left;
+              }
+
+              &.btn-next {
+                float: right;
+              }
+            }
+          }
+        }
+      }
+
+      /*슬라이드 - 평점*/
+      &.grade {
+        padding: vw(24) vw(24) vw(32);
+
+        textarea {
+          border-radius: vw(12);
+          width: 100%;
+          border: vw(1) solid $gray-600;
+          min-height: vw(200);
+          resize: none;
+          padding: vw(20);
+          margin-bottom: vw(12);
+          color: $gray-700;
+          letter-spacing: -0.005em;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      &.no-title.un-check {
+        .desc {
+          + .main-title {
+            margin-top: vw(12);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

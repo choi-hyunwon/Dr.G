@@ -1,0 +1,96 @@
+.brand-wrap{
+  .section-intro{
+    .heading{
+      padding: vw(20) vw(24) vw(24);
+    }
+    .img{
+      width: vw(375);
+      height: vw(350);
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .section-area{
+    padding-top: vw(28); /*상위 이미지 svg 사이즈 이상으로 인하여 padding-top -20px*/
+    padding-bottom: vw(28);
+    .box{
+      margin:0 vw(24) vw(48);
+      .title{
+        margin-bottom: vw(12);
+        color: $gray-800;
+      }
+      .desc{
+        color: $gray-700;
+        + .desc{
+          padding-top: vw(16);
+        }
+      }
+      .btn-wrap{
+        padding-top: vw(32);
+      }
+      .text-wrap{
+        padding: vw(32) vw(20) vw(48);
+        background-color: $gray-200;
+      }
+
+      &.bg-box{
+        .img{
+          width: vw(327);
+          height: vw(256);
+          img{
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+
+  }
+  .section-quarter{
+    ul{
+      font-size: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      li{
+        font-size: vw(16);
+        width: 50%;
+        height: vw(150);
+        a{
+          display: block;
+          height: 100%;
+          padding: vw(30);
+          position: relative;
+          span{
+            display: block;
+          }
+          .icon{
+            position: absolute;
+            bottom: vw(30);
+          }
+        }
+        &:nth-of-type(1){
+          background: url(../img/brand/bg-quarter1.svg) no-repeat 0 0;
+          background-size: 100% auto;
+        }
+        &:nth-of-type(2){
+          background: url(../img/brand/bg-quarter2.svg) no-repeat 0 0;
+          background-size: 100% auto;
+        }
+        &:nth-of-type(3){
+          background: url(../img/brand/bg-quarter3.svg) no-repeat 0 0;
+          background-size: 100% auto;
+        }
+        &:nth-of-type(4){
+          background: url(../img/brand/bg-quarter4.svg) no-repeat 0 0;
+          background-size: 100% auto;
+        }
+
+      }
+
+    }
+  }
+}

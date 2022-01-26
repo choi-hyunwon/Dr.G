@@ -1,0 +1,35 @@
+/*
+|----------------------------------|
+ v.0.1 주연 : 최초 작업 -- 2021.11.30
+ v.0.2 주연 : vw 함수 추가 -- 2021.12.14
+|----------------------------------|
+*/
+@mixin ellipsis($line: 1) {
+  overflow: hidden;
+
+  @if $line==1 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  @else {
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin background-img ($width: 100px, $height: 100px, $category: 'common', $img: 'temp.svg'){
+  $url : "../img/";
+  width: #{($width * 100) / 375}vw;
+  height: #{($height * 100) / 375}vw;
+  background-image: url($url + $category + "/" + $img);
+  background-size: cover;
+}
+
+@function vw($px) {
+  $result: 1;
+  $result: ($px * 100) / 375;
+  @return #{($result)}vw;
+}

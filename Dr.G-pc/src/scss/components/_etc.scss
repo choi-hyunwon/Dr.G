@@ -1,0 +1,455 @@
+/*
+|--------------------------------------------------------------------|
+ v.0.1 주연 : 최초 작업 -- 2021.12.14
+ v.0.2 주연 : vw 적용 -- 2021.12.14
+ v.0.3 주연 : body.scrOff 추가 -- 2022.01.07
+ v.0.4 선미 : body.scrOff > touch-action 추가 -- 2022.01.18
+ v.0.5 선미 : sub-main > more-box, btn-chatbot 추가 -- 2022.01.19
+ v.0.6 주연 : more-box, btn-chatbot 수정 -- 2022.01.24
+|--------------------------------------------------------------------|
+*/
+.list-with-dot {
+  li {
+    position: relative;
+    font-size: vw(13);
+    line-height: vw(18);
+    letter-spacing: vw(-0.05);
+    color: $gray-600;
+    padding-left: vw(13);
+    margin-bottom: vw(8);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: vw(3);
+      height: vw(3);
+      left: 0;
+      top: vw(8);
+      background-color: $gray-600;
+      border-radius: 50%;
+    }
+  }
+}
+
+body.scrOff {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+.page-dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(34, 34, 34, .5);
+  z-index: 21;
+}
+
+.float-bottom {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 22;
+
+  .more-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: vw(68);
+    width: 100%;
+
+    .more {
+      background-color: $gray-fff;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 vw(-2) vw(4) rgba(34, 34, 34, 0.06);
+      margin-right: 0;
+      margin-left: 0;
+
+      > a {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding-bottom: vw(10);
+
+        &:focus, &:active, &:hover {
+          color: $gray-900;
+        }
+
+        span {
+          font-size: vw(13);
+          font-weight: 500;
+          display: block;
+        }
+
+        .icon {
+          &.ico-ai {
+            margin-bottom: vw(5);
+          }
+
+          &.ico-shop {
+            width: vw(28);
+            height: vw(28);
+            margin-bottom: vw(3);
+          }
+        }
+      }
+    }
+
+    .round {
+      position: absolute;
+      top: vw(-24);
+      left: 50%;
+      transform: translateX(-50%);
+      border: vw(3) solid $gray-fff;
+      width: vw(68);
+      height: vw(68);
+      border-radius: 100%;
+      background: linear-gradient(180deg, #313464 0%, #11143A 100%);
+      color: $gray-fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 1s;
+
+      > img {
+        opacity: 1;
+        width: vw(39);
+        height: vw(20);
+      }
+
+      &.open {
+        img {
+          opacity: 0;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-menu-close.svg');
+        }
+      }
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      background: url("../img/mentoring/ico-arrow-bottom-white-lg.svg") no-repeat center center;
+      width: vw(24);
+      height: vw(24);
+      top: vw(-68);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &.show {
+    display: block;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  .menu-box {
+    display: none;
+    position: absolute;
+    bottom: vw(110);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+    z-index: 3;
+
+    .smile-graph {
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      width: vw(305);
+      height: vw(152);
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: inherit;
+        height: inherit;
+        border: vw(81) solid transparent;
+        border-top: none;
+        top: 0;
+        left: 0;
+      }
+
+      .line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: vw(80) solid $blue;
+        border-top: none;
+        width: inherit;
+        height: inherit;
+        border-bottom-left-radius: vw(152);
+        border-bottom-right-radius: vw(152);
+        transform-origin: 50% 0;
+        z-index: 1;
+        transform: rotateZ(-180deg)
+      }
+    }
+
+    &.open {
+      display: block;
+      opacity: 1;
+
+      .smile-graph {
+        .line {
+          animation: chartAni 1s 0.5s forwards;
+        }
+      }
+    }
+
+    @keyframes smileGraphAni {
+      100% {
+        transform: rotateZ(-360deg);
+      }
+    }
+  }
+
+  .menu-link-box {
+    display: none;
+    position: absolute;
+    bottom: vw(110);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity .3s;
+    transition-delay: 1s;
+    z-index: 4;
+
+    .menu-link-inner {
+      position: relative;
+      width: vw(305);
+      height: vw(152);
+
+      .item {
+        position: absolute;
+
+        &.item-1 {
+          position: absolute;
+          width: vw(48);
+          left: vw(28);
+          top: vw(18);
+        }
+
+        &.item-2 {
+          position: absolute;
+          width: vw(60);
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: vw(20);
+        }
+
+        &.item-3 {
+          position: absolute;
+          width: vw(48);
+          right: vw(28);
+          top: vw(18);
+        }
+
+        a {
+          display: flex;
+          height: vw(46);
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          span {
+            display: block;
+            white-space: nowrap;
+            font-weight: bold;
+            font-size: vw(13);
+            line-height: vw(18);
+            text-align: center;
+            color: #fff;
+          }
+        }
+        .ico-menu-1 {
+          @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-menu-1.svg');
+        }
+
+        .ico-menu-2 {
+          @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-menu-2.svg');
+        }
+
+        .ico-menu-3 {
+          @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-menu-3.svg');
+        }
+      }
+    }
+
+    &.open {
+      display: block;
+      animation-name: menuLinkAni;
+      animation-delay: 1.3s;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes menuLinkAni {
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  .menu-drg-img {
+    display: none;
+    position: absolute;
+    width: vw(305);
+    height: vw(259);
+    bottom: vw(110);
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-radius: 0 0 vw(152) vw(152);
+    z-index: 2;
+
+    img {
+      position: absolute;
+      left: 50%;
+      opacity: 0;
+      bottom: vw(-110);
+      transform: translateX(-50%);
+      width: vw(259);
+      height: auto;
+    }
+
+    @keyframes drgAni {
+      100% {
+        opacity: 1;
+        bottom: vw(-20);
+        transform: translateX(-50%);
+      }
+    }
+
+    &.open {
+      display: block;
+
+      img {
+        animation-name: drgAni;
+        animation-delay: 1.3s;
+        animation-duration: .6s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  .menu-drg-txt {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    bottom: vw(130);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: vw(11) vw(29) vw(13);
+    text-align: center;
+    background-color: rgba(255,255,255,.95);
+    border-radius: vw(30);
+    animation-name: drgTxtAni;
+    animation-delay: 1.3s;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: vw(-9);
+      left: 50%;
+      transform: translateX(-50%);
+      @include background-img ($width: 12, $height: 10, $category: 'common', $img: 'ico-menu-tooltip.svg');
+    }
+
+    .txt {
+      display: block;
+      font-size: vw(13);
+      line-height: vw(18);
+      font-weight: 500;
+      color: $gray-800;
+    }
+
+    @keyframes drgTxtAni {
+      100% {
+        opacity: 1;
+        bottom: vw(332);
+      }
+    }
+
+    &.open {
+      display: block;
+
+      img {
+        animation-name: drgTxtAni;
+        animation-delay: 1.3s;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+.btn-chatbot {
+  position: absolute;
+  right: vw(24);
+  bottom: vw(132);
+  width: vw(48);
+  height: vw(48);
+  z-index: 5;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .tip {
+    display: none;
+    position: absolute;
+    padding: vw(8) vw(12);
+    font-size: vw(12);
+    line-height: vw(16);
+    letter-spacing: -0.005em;
+    color: $gray-800;
+    background-color: #D5F4EF;
+    box-shadow: 0 vw(2) vw(1) rgba(34, 34, 34, 0.04);
+    border-radius: vw(12);
+    white-space: nowrap;
+    right: vw(56);
+    bottom: 0;
+
+    .btn-chatbot-close {
+      position: absolute;
+      top: vw(-8);
+      left: vw(-12);
+      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-chatbot-close.svg');
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: vw(3);
+      right: vw(-5);
+      @include background-img($width: 10, $height: 7, $category: 'common', $img: 'ico-chatbot-tip.svg');
+    }
+  }
+}

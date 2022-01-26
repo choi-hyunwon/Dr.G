@@ -1,0 +1,43 @@
+<script>
+    $(document).ready(function () {
+        // slider
+        // https://swiperjs.com/swiper-api
+        new Swiper(".suggestion-slider", {
+            effect: 'fade',
+            pagination: {
+                el: ".swiper-pagination",
+            }
+        });
+
+        // masonry layout
+        // https://masonry.desandro.com/options.html
+        let subjectList = $('._subjectList').masonry({
+            itemSelector: '._subjectList .item',
+            columnWidth: '._subjectList .sizer',
+            percentPosition: true
+        });
+
+        $('._tab a').on('click', function () {
+            subjectList.masonry('layout');
+        });
+
+        // filter tab click event
+        $('._filterTab a').on('click', function () {
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+
+        // like button click event
+        $('._likeBtn').on('click', function () {
+            let number = Number($(this).children('.num').text())
+
+            if ($(this).parent().hasClass('on')) {
+                $(this).parent().removeClass('on')
+                $(this).children('.num').text(number - 1)
+            } else {
+                $(this).parent().addClass('on')
+                $(this).children('.num').text(number + 1)
+            }
+        })
+
+    })
+</script>
