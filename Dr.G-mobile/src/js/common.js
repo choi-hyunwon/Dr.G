@@ -547,6 +547,28 @@ front.common = (function () {
                 lastScrollTop = st;
             }
         }
+
+        $('._openMenu').on('click',function (){
+            // 열려있으면
+            if($(this).hasClass('open')) {
+                $(this).removeClass('open');
+                $('.menu-box').removeClass('open').hide();
+                $('.menu-drg-img').removeClass('open').hide();
+                $('.menu-drg-txt').removeClass('open').hide();
+                $('.menu-link-box').removeClass('open').hide();
+                $('body').removeClass('scrOff')
+                $('.page-dim').hide()
+            } else {
+                // 닫혀있으면
+                $(this).addClass('open');
+                $('.menu-box').show().addClass('open')
+                $('.menu-drg-img').show().addClass('open')
+                $('.menu-drg-txt').show().addClass('open')
+                $('.menu-link-box').show().addClass('open')
+                $('body').addClass('scrOff')
+                $('.page-dim').show()
+            }
+        })
     }
 
     var ani = function () {

@@ -259,6 +259,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
+      min-height: 100vh;
       height: 100%;
       pointer-events: auto;
       background-color: #fff;
@@ -268,7 +269,7 @@
       outline: 0;
 
       .gnb-header {
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         display: flex;
@@ -312,7 +313,7 @@
 
       .gnb-body {
         overflow-y: auto;
-        padding-top: vw(80);
+        padding-top: vw(60);
         padding-bottom: vw(48);
 
         > ul {

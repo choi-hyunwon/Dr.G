@@ -2641,17 +2641,56 @@
       bottom: vw(66);
     }
 
-    /* 서브메인 섹션 별 */
-    .main-visual {
+    /* visual */
+    .visual {
       position: relative;
+      width: 100%;
+      height: vw(681);
+      background-color: $primary;
 
-      .img {
+      .editor-area {
         width: 100%;
-        height: auto;
+        height: vw(290);
 
         img {
           width: 100%;
           height: auto;
+        }
+      }
+
+      .heading-area {
+        text-align: center;
+        color: #fff;
+        padding-top: vw(80);
+
+        .font-h1 {
+          margin-bottom: vw(8);
+        }
+
+        .font-h5 {
+          margin-bottom: vw(7);
+        }
+      }
+
+      .counting-area {
+        text-align: center;
+        color: #fff;
+        padding: 0 vw(23);
+
+        .font-h6 {
+          margin-bottom: vw(20);
+        }
+      }
+
+      .chatbot-area {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - #{vw(80)} - #{vw(60)});
+        top: vw(60);
+
+        .btn-chatbot {
+          bottom: 0;
+          right: vw(15);
         }
       }
     }
