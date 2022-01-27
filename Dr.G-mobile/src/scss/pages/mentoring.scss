@@ -787,7 +787,7 @@
               }
 
               &.page1 {
-                .process_box {
+                /*.process_box {
                   .carousel{
                     .carousel-inner{border: 1px solid red;
                       .carousel-item {
@@ -871,6 +871,91 @@
                       }
                     }
                   }
+                }*/
+                .process_box {
+                  .item {
+                    background: $gray-fff;
+                    padding: vw(19) vw(24);
+                    border-radius: vw(16);
+                    font-size: 0;
+                    display: inline-block;
+                    margin: 0 auto vw(16);
+                    // animation: fadeOut 3s 1s;
+                    box-shadow: 0 vw(12) vw(8) rgba(34, 34, 34, 0.08);
+                    width: vw(294);
+                    height: vw(106);
+                    .faq {
+                      font-size: vw(15);
+                      font-weight: 600;
+                      margin-bottom: vw(12);
+                      text-align: left;
+                    }
+                    .button {
+                      font-size: vw(13);
+                      line-height: vw(20);
+                      border-radius: vw(16);
+                      padding: vw(6) 0;
+                      color: $gray-500;
+                      width: vw(120);
+                      margin: 0 vw(3);
+                      border: 1px solid $gray-400;
+                      display: inline-block;
+
+                      &.button-yes {
+                        margin-left: vw(0);
+                      }
+
+                      &.button-no {
+                        margin-right: vw(0);
+                      }
+
+                      &.on {
+                        &.button-yes {
+                          background: $blue;
+                          border: 1px solid $blue;
+                          color: $gray-fff;
+                        }
+
+                        &.button-no {
+                          background: #ffe444;
+                          border: 1px solid #ffe444;
+                          color: $gray-800;
+                        }
+                      }
+                    }
+
+                    + .item-sm {
+                      opacity: 0.7;
+                      + .item-sm {
+                        opacity: 0.45;
+                      }
+                    }
+
+                    &.item-sm {
+                      padding: vw(13) vw(16);
+                      width: vw(226);
+                      height: vw(80) !important;
+                      margin-bottom: vw(8);
+                      .faq {
+                        font-size: vw(13);
+                        margin-bottom: vw(10);
+                        opacity: 0.7;
+                      }
+                      .button {
+                        font-size: vw(11);
+                        border-radius: vw(13);
+                        padding: vw(3) 0;
+                        font-weight: 600;
+                        width: vw(90);
+                        border: 1px solid $gray-400 !important;
+
+                        &.on {
+                          background: $gray-fff;
+                          color: $gray-500;
+                        }
+                      }
+                    }
+                  }
                 }
               }
               &.page2 {
@@ -897,13 +982,13 @@
                     }
 
                     .typing-txt{
-                      display: none;
+                    //  display: none;
                     }
-                    .typing {
-                      /*position: absolute;*/
+                  /*  .typing {
+                      !*position: absolute;*!
                       display: inline-block;
                       font-size: vw(16);
-                    }
+                    }*/
                   }
                   .button{
                     background: $yellow;
