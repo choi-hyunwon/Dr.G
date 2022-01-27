@@ -35,7 +35,6 @@
     /*gauge bar*/
     let progress = 0.5
     $('#progress').find('.numerical').animate({'stroke-dashoffset': 150 * progress}, 1000)
-
     /*gauge number*/
     let counterUp = setInterval(function () {
       let text = $('.percent .counter');
@@ -48,6 +47,7 @@
         clearInterval(counterUp);
       }
     }, 20);
+
 
     /*- 제품버전 보기-*/
     let name = $('.section-product .name')
@@ -68,78 +68,44 @@
     })
 
 
+
     /*--- s 매칭된 성분 확인 ---*/
 
-    /*왜 좋을까요?*/
-    let infoList = $('._why .info-list')
-    let subTitle = $('._why .sub-title')
-    let btnMore = $('._why .mixing li .btn-more')
+    let infoList = $('._know .info-list')
+    let subTitle = $('._know .sub-title')
+    let mixing = $('._know .mixing')
+    let mixingLi = $('._know .mixing li')
+    let btnMore = $('._know .mixing li .btn-more')
 
-    infoList.each(function () {
-      $(this).find('li').slice(3).hide().last().show();
+    $(function (){
+      infoList.find('.mixing li:not(:last)').hide();
 
-      subTitle.on('click', function () {
-        $(this).parent().children().toggleClass('open')
-        $(this).next().removeClass('more').find('li').slice(3).hide().last().show().find('.btn-more').text('더보기');
-      })
-      btnMore.on('click', function () {
-        if ($(this).parents('.mixing').hasClass('more')) {
-          $(this).text('더보기'); //닫혀있는 상태 (3개)
-          $(this).parents('.mixing').removeClass('more').find('li').slice(3).hide().last().show();
-        } else {
-          $(this).text('닫기');  //더보기 상태 (3개 이상)
-          $(this).parents('.mixing').addClass('more').find('li').show();
-        }
-      })
+      if(infoList.hasClass('open')){
+        $(this).find(mixingLi).slice(0, 3).show();
+        $(this).next('.mixing').children(btnMore).text('더보기')
+      }
     })
 
-    /*이런 성분도 좋아요*/
-    let infoList2 = $('._know .info-list')
-    let subTitle2 = $('._know .sub-title')
-    let btnMore2 = $('._know .mixing li .btn-more')
-
-    infoList2.each(function () {
-      $(this).find('li').slice(3).hide().last().show();
-
-      subTitle2.on('click', function () {
-        $(this).parent().children().toggleClass('open')
-        $(this).next().removeClass('more').find('li').slice(3).hide().last().show().find('.btn-more').text('더보기');
-      })
-      btnMore2.on('click', function () {
-        if ($(this).parents('.mixing').hasClass('more')) {
-          $(this).text('더보기'); //닫혀있는 상태 (3개)
-          $(this).parents('.mixing').removeClass('more').find('li').slice(3).hide().last().show();
-        } else {
-          $(this).text('닫기');  //더보기 상태 (3개 이상)
-          $(this).parents('.mixing').addClass('more').find('li').show();
-        }
-      })
+    subTitle.on('click', function () {
+      $(this).parent().toggleClass('open')
+      $(this).next().removeClass('more').find('li').slice(3).hide().last().show().find('.btn-more').text('더보기');
+      $(this).next().removeClass('more').find('li').slice(0, 3).show();
     })
 
-    /*주의성분, 꼭 체크하세요!*/
-    let infoList3 = $('._check .info-list')
-    let subTitle3 = $('._check .sub-title')
-    let btnMore3 = $('._check .mixing li .btn-more')
-
-    infoList3.each(function () {
-      $(this).find('li').slice(3).hide().last().show();
-
-      subTitle3.on('click', function () {
-        $(this).parent().children().toggleClass('open')
-        $(this).next().removeClass('more').find('li').slice(3).hide().last().show().find('.btn-more').text('더보기');
-      })
-      btnMore3.on('click', function () {
-        if ($(this).parents('.mixing').hasClass('more')) {
-          $(this).text('더보기'); //닫혀있는 상태 (3개)
-          $(this).parents('.mixing').removeClass('more').find('li').slice(3).hide().last().show();
-        } else {
-          $(this).text('닫기');  //더보기 상태 (3개 이상)
-          $(this).parents('.mixing').addClass('more').find('li').show();
-        }
-      })
+    btnMore.on('click', function () {
+      if ($(this).parents('.mixing').hasClass('more')) {
+        $(this).text('더보기'); //닫혀있는 상태 (3개)
+        $(this).parents('.mixing').removeClass('more').find('li:not(:last)').hide();
+        $(this).parents('.mixing').removeClass('more').find('li').slice(0, 3).show();
+      } else {
+        $(this).text('닫기');  //더보기 상태 (3개 이상)
+        $(this).parents('.mixing').addClass('more').find('li').show();
+      }
     })
 
     /*--- e 매칭된 성분 확인 ---*/
+
+
 
     /*faq*/
     let faqList = $('.faq-list')
@@ -165,18 +131,4 @@
 
 /*-------------e 분석결과 상세 (스킨케어,헤어제품)-----------------*/
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </script>

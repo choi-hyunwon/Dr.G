@@ -558,24 +558,10 @@
               top: 50%;
               transform: translateY(-50%);
             }
-            &.open{
-              color: $violet;
-              .icon{
-                background: url("../img/analysis/ico-minus-sm.svg") no-repeat center center / contain;
-                width: vw(12);
-                height: vw(12);
-              }
-
-
-            }
           }
           .mixing{
             display: none;
             padding: 0 vw(20);
-            &.open{
-              display: block;
-              overflow-y: auto;
-            }
             &.more{
               overflow-y: auto;
               height: vw(480);
@@ -615,6 +601,21 @@
               }
             }
           }
+
+          &.open {
+            > .sub-title {
+              color: $violet;
+              .icon {
+                background: url("../img/analysis/ico-minus-sm.svg") no-repeat center center / contain;
+                width: vw(12);
+                height: vw(12);
+              }
+            }
+            .mixing {
+              display: block;
+              overflow-y: auto;
+            }
+          }
         }
       }
       &.no-matching{
@@ -631,12 +632,13 @@
         >.ingredient-box{
           .info-list{
             background-color: $gray-200;
-            .open{
+            &.open{
               background: rgba(231, 234, 255, 0.5);
             }
           }
         }
       }
+
     }
     &.section-past{
       padding-bottom: 0;
@@ -765,6 +767,11 @@
           }
         }
       }
+    }
+
+    +.divider{ /* section 외부 라인 */
+      width: calc(100% - #{vw(48)});
+      margin: 0 auto;
     }
   }
 
