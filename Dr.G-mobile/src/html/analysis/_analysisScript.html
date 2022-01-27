@@ -21,7 +21,6 @@
       list.show()
     }
 
-
     /*수정요청입력란*/
     let badge = $('.write-area .badge-box .badge')
     badge.on('click', function () {
@@ -30,7 +29,8 @@
     })
 
 
-    /*분석결과 상세 (스킨케어,헤어제품)*/
+
+/*-------------s 분석결과 상세 (스킨케어,헤어제품)-----------------*/
 
     /*gauge bar*/
     let progress = 0.5
@@ -49,25 +49,28 @@
       }
     }, 20);
 
-
     /*- 제품버전 보기-*/
+    let name = $('.section-product .name')
+    let btnVersion = $('.section-product .name .btn_version')
+    btnVersion.on('click', function () {
+      name.toggleClass('show')
+    })
+
+    /*전성분 보기*/
     let product = $('.section-product')
-    let productIcon = $('.section-product .name .btn_more .icon')
     let btnFold = $('.section-product .desc .btn-wrap .btn-fold')
     let btnView = $('.section-product .view .btn-view')
-
     btnView.on('click', function () {
       product.addClass('open')
-      productIcon.removeClass('ico-plus-xs')
-      productIcon.addClass('ico-minus-xs')
     })
     btnFold.on('click', function () {
       product.removeClass('open')
-      productIcon.removeClass('ico-minus-xs')
-      productIcon.addClass('ico-plus-xs')
     })
 
-    /*- 매칭된 성분 확인 -*/
+
+    /*--- s 매칭된 성분 확인 ---*/
+
+    /*왜 좋을까요?*/
     let infoList = $('._why .info-list')
     let subTitle = $('._why .sub-title')
     let btnMore = $('._why .mixing li .btn-more')
@@ -90,6 +93,7 @@
       })
     })
 
+    /*이런 성분도 좋아요*/
     let infoList2 = $('._know .info-list')
     let subTitle2 = $('._know .sub-title')
     let btnMore2 = $('._know .mixing li .btn-more')
@@ -112,8 +116,32 @@
       })
     })
 
+    /*주의성분, 꼭 체크하세요!*/
+    let infoList3 = $('._check .info-list')
+    let subTitle3 = $('._check .sub-title')
+    let btnMore3 = $('._check .mixing li .btn-more')
+
+    infoList3.each(function () {
+      $(this).find('li').slice(3).hide().last().show();
+
+      subTitle3.on('click', function () {
+        $(this).parent().children().toggleClass('open')
+        $(this).next().removeClass('more').find('li').slice(3).hide().last().show().find('.btn-more').text('더보기');
+      })
+      btnMore3.on('click', function () {
+        if ($(this).parents('.mixing').hasClass('more')) {
+          $(this).text('더보기'); //닫혀있는 상태 (3개)
+          $(this).parents('.mixing').removeClass('more').find('li').slice(3).hide().last().show();
+        } else {
+          $(this).text('닫기');  //더보기 상태 (3개 이상)
+          $(this).parents('.mixing').addClass('more').find('li').show();
+        }
+      })
+    })
+
+    /*--- e 매칭된 성분 확인 ---*/
+
     /*faq*/
-    /*서브메인 faq*/
     let faqList = $('.faq-list')
     let item = $('.faq-list .item')
     let solution = $('.solution')
@@ -135,7 +163,7 @@
       }
     });
 
-
+/*-------------e 분석결과 상세 (스킨케어,헤어제품)-----------------*/
   });
 
 

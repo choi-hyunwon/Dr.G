@@ -526,9 +526,21 @@ data.analysis = {
         },
         {
             stateClass: 'working',
+            url: '성분분석_분석결과_상세_스킨케어2',
+            category: 'analysis',
+            page: '성분분석_분석결과_상세_스킨케어2'
+        },
+        {
+            stateClass: 'working',
             url: '성분분석_분석결과_상세_헤어제품',
             category: 'analysis',
             page: '성분분석_분석결과_상세_헤어제품'
+        },
+        {
+            stateClass: 'working',
+            url: '성분분석_분석결과_상세_헤어제품2',
+            category: 'analysis',
+            page: '성분분석_분석결과_상세_헤어제품2'
         },
         {
             stateClass: 'complete',

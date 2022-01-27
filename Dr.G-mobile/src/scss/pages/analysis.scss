@@ -148,6 +148,13 @@
         padding-top: vw(12);
         color: $gray-700;
       }
+      .desc{
+        font-size: vw(13);
+        color: $gray-600;
+        display: inline-block;
+        line-height: vw(18);
+        padding-top: vw(2);
+      }
     }
     &.section-color{
       background: url("../img/analysis/bg_care.png") no-repeat center center;
@@ -283,32 +290,22 @@
           height: auto;
         }
       }
+      &.product-default-img{ /*샘플이미지일 경우 배경이 달라짐*/
+        background: url("../img/analysis/bg_care_default.png") no-repeat center center;
+        height: vw(568);
+        background-size: contain;
+        margin-bottom: vw(30);
+        .gauge-gradient{
+          +.font-body-2{
+            margin-bottom: vw(30);
+          }
+        }
+        .floating-box{
+          width: vw(234);
+          height: vw(235);
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      }
     }
     &.section-product{
       padding: vw(32) vw(24) vw(48);
@@ -318,11 +315,42 @@
         .font-h4{
           margin-bottom: vw(16);
         }
-        .btn_more{
+        .btn_version{
           padding-left: vw(16);
           padding-right: vw(16);
           .icon{
             vertical-align: unset;
+          }
+        }
+        .version_box{
+          background-color: #E7EAFF;
+          padding: vw(32) vw(20) vw(24);
+          text-align: left;
+          position: relative;
+          top: vw(-16);
+          z-index: -1;
+          border-radius: vw(12);
+          display: none;
+          li{
+            font-size: vw(13);
+            color: $gray-800;
+            margin-bottom: vw(8);
+            &:last-of-type{
+              margin-bottom: 0;
+            }
+
+          }
+        }
+
+        &.show{
+          margin-bottom: vw(16);
+          .btn_version{
+            .icon{
+              @include background-img($width: 10, $height: 10, $category: 'common', $img: 'ico-minus-sm.svg')
+            }
+          }
+          .version_box{
+            display: block;
           }
         }
       }
@@ -464,7 +492,6 @@
               +.number{
                 background-color:  #FDE149;
                 color: #444;
-
               }
             }
             &.ico-pimple{
@@ -480,6 +507,12 @@
                 background-color:  #F88F2E;
                 color: #fff;
               }
+            }
+            &.ico-hair-loss{
+              background: url("../img/analysis/ico-hair-loss.png") no-repeat center center / contain;
+            }
+            &.ico-hair-strengthening{
+              background: url("../img/analysis/ico-hair-strengthening.png") no-repeat center center / contain;
             }
             /*주의성분 아이콘 숫자*/
             +.number{

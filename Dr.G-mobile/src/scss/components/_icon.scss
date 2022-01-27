@@ -30,13 +30,13 @@
 |--------------------------------------------------------------------|
 */
 .icon {
-  display: inline-block;
-  vertical-align: middle;
-  background-repeat: no-repeat;
-  background-position: center center;
-  text-indent: -999em;
-  overflow: hidden;
-}
+   display: inline-block;
+   vertical-align: middle;
+   background-repeat: no-repeat;
+   background-position: center center;
+   text-indent: -999em;
+   overflow: hidden;
+ }
 
 .ico-alert {
   @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-alert.svg');
