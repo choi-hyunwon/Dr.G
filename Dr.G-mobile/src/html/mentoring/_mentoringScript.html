@@ -24,7 +24,7 @@
             }
         })
 
-        /*stap 공통*/
+        /*step 공통*/
         // let stepScroll = 0;
         // $(window).scroll(function (event) {
         //     if ($('.container').find('.step-heading').length) {
@@ -60,15 +60,48 @@
             }
         })
 
+        /*목록 tab*/
+        let questionTab = $('._question-tab');
+        let lastScroll = 0;
+        $(window).scroll(function (){
+            if($('.container').find('._question-wrap').length){
+                let st = $(this).scrollTop();
+                let tabOffset = questionTab.offset().top
+                let contentOffset = $('.tab-content').offset().top
+
+                if (st > lastScroll){
+                    //console.log("DOWN");
+                    if (st == 0){
+                        questionTab.removeClass('tab-fixed')
+                    }
+                    if (st > tabOffset){
+                        questionTab.addClass('tab-fixed')
+                        questionTab.addClass('top_0')
+                    }
+                }
+                else {
+                    //console.log("UP");
+                    if (st <= contentOffset){
+                        questionTab.removeClass('tab-fixed')
+                    }else {
+                        questionTab.addClass('tab-fixed')
+                        questionTab.removeClass('top_0')
+                    }
+                }
+                //Updates scroll position
+                lastScroll = st;
+            }
+        });
+
 
 
 /*|--------------s 서브메인----------------------------|*/
 
         /*tab*/
         let sectionTab = $('._section-tab');
-        let lastScroll = 0;
+       // let lastScroll = 0;
         $(window).scroll(function (){
-             if($('.container').find('._sub-main').length){
+            if($('.container').find('._sub-main').length){
                 let st = $(this).scrollTop();
                 //console.log(st);
                 let sectionTabOffset = $('._section-tab').position ().top;
@@ -125,6 +158,7 @@
                 $('html, body').animate({scrollTop : offset.top},400)
             }
         })
+
 
 
 
