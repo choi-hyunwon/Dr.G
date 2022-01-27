@@ -1,8 +1,7 @@
 /*
-|----------------------------------|
- v.0.1 주연 : 최초 작업 -- 2021.11.2
- v.0.2 주연 : vw 적용 -- 2021.12.14
-|----------------------------------|
+|--------------------------------------------------------------------|
+ v.0.1 주연 : 최초 작업 -- 2022.01.27
+|--------------------------------------------------------------------|
 */
 .font-medium {
   font-weight: 500;
@@ -29,41 +28,54 @@
 }
 
 .font-h1 {
-  font-size: vw(32);
-  line-height: vw(44);
+  font-size: 52px;
+  line-height: 64px;
+  letter-spacing: -0.01em;
 }
 
 .font-h2 {
-  font-size: vw(28);
-  line-height: vw(39);
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -0.01em;
 }
 
 .font-h3 {
-  font-size: vw(22);
-  line-height: vw(33);
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: -0.01em;
 }
 
 .font-h4 {
-  font-size: vw(20);
-  line-height: vw(30);
+  font-size: 24px;
+  line-height: 35px;
 }
 
 .font-h5 {
-  font-size: vw(18);
-  line-height: vw(28);
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .font-h6 {
-  font-size: vw(16);
-  line-height: vw(25);
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .font-body-1 {
-  font-size: vw(15);
-  line-height: vw(22);
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .font-body-2 {
-  font-size: vw(13);
-  line-height: vw(18);
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.font-sm-1 {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.font-sm-2 {
+  font-size: 12px;
+  line-height: 16px;
 }

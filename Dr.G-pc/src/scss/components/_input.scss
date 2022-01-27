@@ -1,20 +1,8 @@
 /*
 |--------------------------------------------------------------------|
- v.0.1 주연 : 최초 작업 -- 2021.11.30
- v.0.2 선미 : 불필요 css 제거 및 checkbox,radio 추가 -- 2021.12.07
- v.0.3 주연 : input / select / textarea -- 2021.12.09
- v.0.4 선미 : select 화살표제거 -- 2021.12.10
- v.0.5 선미 : select 화살표 재추가 -- 2021.12.13
- v.0.6 주연 : vw 적용 -- 2021.12.14
- v.0.7 선미 : form-control 색상 $gray-800 추가 -- 2021.12.20
- v.0.8 태윤 : input &:disable 속성값 추가
- v.0.9 선미 : checkbox label 높이값 제거 / 체크박스 blue ,violet 버전 추가 -- 2021.12.27
- v.0.10 선미 : img (png -> svg로 변경) -- 2022.01.03
- v.0.11 주연 : .form-control-sm 추가 -- 2022.01.10
- v.0.12 선미 : textarea {font-weight: 400; color: #666666;}추가 -- 2022.01.11
- |--------------------------------------------------------------------|
+ v.0.1 주연 : 최초 작업 -- 2022.01.27
+|--------------------------------------------------------------------|
 */
-
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -48,8 +36,8 @@ input[type="number"]::-webkit-inner-spin-button {
   .custom-control-label::before {
     background-color: $gray-500;
     border-color: $gray-500;
-    width: 10.6666666667vw;
-    height: 6.4vw;
+    width: 40px;
+    height: 24px;
     border-radius: vw(100);
     left: vw(-40);
     top: 0;
@@ -82,7 +70,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /* checkbox */
 .custom-checkbox {
   display: inline-block;
-  padding-left: 6.4vw;
+  //padding-left: 6.4vw;
 
   .custom-control-input {
     width: vw(24);
@@ -99,7 +87,7 @@ input[type="number"]::-webkit-inner-spin-button {
     height: vw(24);
     border-radius: vw(6);
     top: 0;
-    left: -6.4vw;
+    //left: -6.4vw;
     border: vw(2) solid #dddddd;
   }
 
@@ -107,7 +95,7 @@ input[type="number"]::-webkit-inner-spin-button {
     width: vw(24);
     height: vw(24);
     top: 0;
-    left: -6.4vw;
+    //left: -6.4vw;
   }
 
   .custom-control-input:focus ~ .custom-control-label::before {
@@ -149,7 +137,9 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   &.checkbox-sm {
-    padding-left: 5.3333vw;
+    //padding-left: 5.3333vw;
+    line-height: vw(20);
+    min-height: vw(20);
 
     .custom-control-input {
       width: vw(20);
@@ -167,13 +157,13 @@ input[type="number"]::-webkit-inner-spin-button {
       width: vw(20);
       height: vw(20);
       border-radius: vw(4);
-      left: -5.3333vw;
+      //left: -5.3333vw;
     }
 
     .custom-control-label::after {
       width: vw(20);
       height: vw(20);
-      left: -5.3333vw;
+      //left: -5.3333vw;
     }
 
     .custom-control-input:checked ~ .custom-control-label::after {
@@ -191,7 +181,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /* radio */
 .custom-radio {
   display: inline-block;
-  padding-left: 6.4vw;
+  //padding-left: 6.4vw;
 
   .custom-control-input {
     width: vw(24);
@@ -201,8 +191,8 @@ input[type="number"]::-webkit-inner-spin-button {
   .custom-control-label {
     color: $gray-700;
     width: 100%;
-    height: 6.4vw;
-    line-height: 6.4vw;
+    //height: 6.4vw;
+    //line-height: 6.4vw;
     padding-left: vw(8);
     font-size: vw(16);
   }
@@ -212,14 +202,14 @@ input[type="number"]::-webkit-inner-spin-button {
     width: vw(24);
     height: vw(24);
     top: 0;
-    left: -6.4vw;
+    //left: -6.4vw;
   }
 
   .custom-control-label::after {
     width: vw(24);
     height: vw(24);
     top: 0;
-    left: -6.4vw;
+    //left: -6.4vw;
   }
 
   .custom-control-input:focus ~ .custom-control-label::before {

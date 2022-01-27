@@ -32,12 +32,12 @@ data.guide = {
             category: 'guide',
             page: 'INPUT'
         },
-        {
-            stateClass: 'complete',
-            url: 'loading',
-            category: 'guide',
-            page: 'loading'
-        },
+        // {
+        //     stateClass: 'complete',
+        //     url: 'loading',
+        //     category: 'guide',
+        //     page: 'loading'
+        // },
         {
             stateClass: 'complete',
             url: 'tab',

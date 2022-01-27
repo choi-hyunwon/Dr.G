@@ -209,14 +209,19 @@ front.common = (function () {
     }
 
     var tab = function () {
-        $('._tab .item a').on('click', function () {
-            let idx = $(this).parent().index()
-            let tabItem = $('._tab .item')
-            let tabPane = $('._tab').siblings('.tab-content').children('.tab-pane')
-            tabItem.removeClass('active')
-            tabItem.eq(idx).addClass('active')
-            tabPane.removeClass('active')
-            tabPane.eq(idx).addClass('active')
+        $('._tab').each(function (){
+            var tabItem = $(this).children().children('.item');
+            var tabItemLink = tabItem.find('a');
+            var pane = $(this).siblings('.tab-content');
+            var paneItem = pane.children('.tab-pane');
+
+            tabItemLink.on('click', function () {
+                var idx = $(this).parent().index();
+                tabItem.removeClass('active')
+                tabItem.eq(idx).addClass('active')
+                paneItem.removeClass('active')
+                paneItem.eq(idx).addClass('active')
+            })
         })
     }
 
@@ -236,25 +241,20 @@ front.common = (function () {
     var onClickModal = function OnclickModal() {
         let popupOpen = $('._toast-popup-open');
         let popupClose = $('._toast-popup-close');
-        let select = $('.toast-dim');
+        let toastPopup = $('.toast-dim');
 
         popupOpen.on('click', function () {
-            const idx = popupOpen.index(this);
-            select.eq(idx).removeClass('hide').addClass('fade show').css('display', 'block');
-
+            showPopup()
         });
         popupClose.on('click', function () {
-            select.addClass('hide');
-            setTimeout(() => {
-                select.removeClass('fade show').css('display', 'none');
-            }, 400);
+            hidePopup()
         });
 
         /*외부클릭시 삭제*/
-        $('.toast-dim').mouseup(function (e) {
+        toastPopup.mouseup(function (e) {
             let toastPopup = $('.toast-popup');
             if (toastPopup.has(e.target).length === 0) {
-                $('.toast-dim').css('display', 'none');
+                hidePopup()
             }
         })
     }
@@ -594,9 +594,35 @@ $(function () {
 });
 
 function showPopup() {
-    $('.toast-dim').addClass('show fade').css('display', 'block');
+    var toastPopup = $('.toast-dim');
+    var popupOpen = $('._toast-popup-open');
+    var idx = popupOpen.index(this);
+    var toastBackDrop = $('.toast-backdrop');
+
+    toastPopup.eq(idx).removeClass('hide').css('display', 'block');
+    popupOpen.parent().after(`<div class="toast-backdrop"></div>`);
+
+    setTimeout(function (){
+        var toastPopup = $('.toast-dim');
+        var toastBackDrop = $('.toast-backdrop');
+
+        toastBackDrop.addClass('show')
+        toastPopup.eq(idx).removeClass('hide').addClass('show')
+    },300)
 }
 
 function hidePopup() {
-    $('.toast-dim').removeClass('show fade').css('display', 'none');
+    var toastPopup = $('.toast-dim');
+    var toastBackDrop = $('.toast-backdrop');
+
+    toastPopup.removeClass('show').addClass('hide');
+    toastBackDrop.removeClass('show').addClass('hide');
+
+    setTimeout(function (){
+        var toastPopup = $('.toast-dim');
+        var toastBackDrop = $('.toast-backdrop');
+
+        toastPopup.css('display', 'none');
+        toastBackDrop.remove();
+    },300)
 }

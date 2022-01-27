@@ -1,27 +1,18 @@
 /*
 |--------------------------------------------------------------------|
- v.0.1 태윤 : 최초 작업 -- 2021.12.09
- v.0.2 태윤 : modal-footer > .btn css속성 제거 (클래스로 버튼 색상 제어)
- v.0.3 주연 : vw 적용 -- 2021.12.14
- v.0.4 태윤 : .full-popup 추가 , footer에 네비게이션있는 모달 추가 -- 2021.12.17
- v.0.5 태윤 : 1:1 스킨멘토링 관련 팝업 추가 // 모달팝업 버튼 수정으로 인한 변경 -- 2021.12.24
- v.0.6 태윤 : 1:1 스킨멘토링_내역 칼러값 변경으로 인한 추가  -- 2021.12.28
- v.0.7 태윤 : .toast-dim background-color opacity 50%로 변경 -- 2021.12.30
- v.0.8 태윤 : .alert-popup html 구조변경으로 인한 css 수정 -- 2021.12.30
- v.0.9 주연 : 코드 정리  -- 2022.01.05
- v.0.10 주연 : 영문 오탈자 수정 / 공유하기 팝업 스타일 추가  -- 2022.01.10
- v.0.12 태윤 : 모달 주석처리 완료  -- 2022.01.13
- v.0.13 선미 :  .toast-body {margin 제거} .toast-footer {padding-top: vw(32) 추가  &.no-padding{ 클래스 추가 } -- 2022.01.13
- v.0.14 선미 :  색상값 공통화 작업 -- 2022.01.13
+ v.0.1 주연 : 최초 작업 -- 2022.01.27
 |--------------------------------------------------------------------|
 */
 
-
-/*부트스트랩-모달*/
+/* alert */
 .modal {
   word-break: keep-all;
 
   .modal-dialog {
+    .modal-content {
+      border: 0;
+    }
+
     &.alert-popup {
       .modal-content {
         border-radius: vw(12);
@@ -62,14 +53,14 @@
             border-color: $gray-fff;
             border-radius: 0;
             font-weight: 400;
-            font-size: vw(13);
+            font-size: vw(15);
             padding: 0;
             margin: 0;
             width: 50%;
             height: auto;
             color: $gray-600;
 
-            &:focus,&:active {
+            &:focus, &:active {
               background-color: $gray-fff !important;
               color: $gray-900 !important;
             }
@@ -79,6 +70,7 @@
               color: $gray-900;
               border-left: vw(1) solid $gray-300;
             }
+
             /*버튼 한개일시*/
             &.one {
               width: 100%;
@@ -102,7 +94,7 @@
   }
 }
 
-/*풀 페이지 팝업*/
+/* 풀 페이지 팝업 */
 .full-popup {
   z-index: 1050;
   display: none;
@@ -251,81 +243,68 @@
   }
 }
 
-/*슬라이드 팝업*/
-.toast-dim {
+/* 슬라이드 팝업 */
+.toast-backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1050;
-  display: none;
+  z-index: 1040;
   width: 100%;
   height: 100%;
   overflow: hidden;
   outline: 0;
-  background-color: rgba(33, 37, 41, 0.5);
+  background-color: rgba(34, 34, 34, .2);
+  opacity: 0;
+  transition: opacity 0.15s linear;
 
-  /*슬라이드 팝업 열릴때 애니메이션*/
   &.show {
-    display: block;
-
-    .toast-popup {
-      .toast-content {
-        bottom: 0;
-
-        @keyframes animateup {
-          from {
-            bottom: vw(-300);
-            opacity: 0;
-          }
-          to {
-            bottom: 0;
-            opacity: 1;
-          }
-        }
-        animation: animateup 0.5s;
-      }
-    }
+    opacity: 1;
   }
 
-  /*슬라이드 팝업 닫힐때 애니메이션*/
   &.hide {
-    display: none;
+    opacity: 0;
+  }
+}
 
-    .toast-popup {
-      bottom: 0;
+/* custom popup */
+.toast-dim {
+  display: none;
+  opacity: 0;
+  z-index: 1050;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
-      .toast-content {
-        @keyframes animatedown {
-          from {
-            bottom: 0;
-            opacity: 1;
-          }
-          to {
-            bottom: vw(-300);
-            opacity: 0;
-          }
-        }
-        animation: animatedown 0.5s;
-      }
-    }
+  &.show {
+    opacity: 1;
   }
 
-  /*슬라이드 팝업 default값*/
+  &.hide {
+    opacity: 0;
+  }
+
   .toast-popup {
-    z-index: 1050;
-    position: relative;
-    width: auto;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    &.toast-popup-lg {
+      .toast-content {
+        max-width: 600px;
+      }
+    }
 
     .toast-content {
       width: 100%;
+      max-width: 400px;
       position: absolute;
       background-color: $gray-fff;
       padding: vw(24) vw(24) vw(32);
-      border-radius: vw(20) vw(20) 0 0;
-      bottom: vw(-300);
+      border-radius: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
       .toast-header {
         margin-bottom: vw(24);
@@ -393,12 +372,6 @@
           }
         }
 
-        span {
-        //  color: $blue;
-        //  color: red;
-       //   font-weight: 700;
-        }
-
         .text-btn {
           display: block;
           font-size: vw(15);
@@ -417,9 +390,11 @@
           .agree-area {
             position: relative;
             margin-bottom: vw(4);
-            &:nth-last-of-type(1){
+
+            &:nth-last-of-type(1) {
               margin-bottom: 0;
             }
+
             .view-content {
               position: absolute;
               top: vw(1);
@@ -429,14 +404,6 @@
 
           .custom-control-label {
             color: $gray-800;
-
-            &:before {
-
-            }
-
-            &:after {
-
-            }
           }
 
           .view-content {
@@ -486,7 +453,6 @@
         }
 
         .circle-list-area {
-
           > li {
             position: relative;
             margin-bottom: vw(4);
@@ -533,30 +499,35 @@
         }
 
         /* 1:1 성분분석 */
-        &.analysis-box{
+        &.analysis-box {
           margin-bottom: 0;
 
-          /*제품명 입력검색*/
-          .search-group{
+          /* 제품명 입력검색 */
+          .search-group {
             padding-top: vw(32);
-            ul{
-              &.list{
+
+            ul {
+              &.list {
                 font-size: vw(13);
                 color: $gray-700;
-                li{
+
+                li {
                   margin-bottom: vw(20);
-                  &:last-of-type{
+
+                  &:last-of-type {
                     margin-bottom: 0;
                   }
                 }
               }
-              &.desc{
+
+              &.desc {
                 color: $gray-500;
                 font-weight: 500;
                 font-size: vw(16);
-                &.notice{
-                  p{
-                    &:first-of-type{
+
+                &.notice {
+                  p {
+                    &:first-of-type {
                       color: $gray-800;
                       font-weight: 500;
                       font-size: vw(16);
@@ -565,43 +536,46 @@
                 }
               }
             }
-
           }
 
-          /*제품명 확인*/
-          .product-name{
+          /* 제품명 확인 */
+          .product-name {
             background-color: $gray-200;
             padding: vw(18);
             text-align: center;
             font-weight: bold;
             border-radius: vw(12);
             margin-bottom: vw(24);
+
             + .font-h6 {
               color: $gray-800;
             }
           }
 
-          /*촬영 가이드*/
-          .img{
-            &.img-guide{
+          /* 촬영 가이드 */
+          .img {
+            &.img-guide {
               width: vw(145);
               height: vw(145);
               border-radius: vw(20);
-              overflow:hidden;
-              img{
+              overflow: hidden;
+
+              img {
                 width: 100%;
                 height: auto;
               }
             }
           }
-          .check-point{
-            .title{
+
+          .check-point {
+            .title {
               padding-left: vw(20);
               position: relative;
               font-weight: 600;
               font-size: vw(13);
               margin-bottom: vw(8);
-              &:before{
+
+              &:before {
                 content: '';
                 display: inline-block;
                 clear: both;
@@ -615,7 +589,8 @@
                 transform: translateY(-50%);
               }
             }
-            .list{
+
+            .list {
               color: $gray-700;
               font-size: vw(15);
             }
@@ -623,8 +598,8 @@
         }
 
         /* 고객제안 */
-        &.suggestion-box{
-          .input-box{
+        &.suggestion-box {
+          .input-box {
             padding-top: vw(24);
             margin-bottom: vw(24);
           }
@@ -634,9 +609,11 @@
 
       .toast-footer {
         padding-top: vw(32);
-        &.no-padding{
+
+        &.no-padding {
           padding: 0;
         }
+
         .btn {
           width: 100%;
 
@@ -670,14 +647,6 @@
           .main-title {
             text-align: left;
             margin-bottom: vw(6);
-
-         /*   span {
-              color: $primary;
-
-              &.color-blue {
-                color: $blue;
-              }
-            }*/
           }
 
           .question {
@@ -742,22 +711,8 @@
         }
 
         &.un-check {
-          .toast-body {
-            .desc {
-       //      margin-bottom: vw(12);
-            }
-          }
-
           .main-title {
             margin-bottom: 0;
-
-       /*     span {
-              color: $primary;
-            }
-
-            .color-blue {
-              color: $blue !important;
-            }*/
           }
         }
 
@@ -782,13 +737,16 @@
                 &.active {
                   span {
                     font-weight: 700;
-                    &.primary{
+
+                    &.primary {
                       color: $primary;
                     }
+
                     &.blue {
                       color: $blue;
                     }
-                    &.violet{
+
+                    &.violet {
                       color: $violet;
                     }
                   }
@@ -803,7 +761,6 @@
                 }
 
                 span {
-                  font-family: Noto Sans KR;
                   font-size: vw(16);
                   font-weight: 400;
                   line-height: vw(24);
@@ -818,10 +775,6 @@
 
         .main-title {
           margin-bottom: vw(12);
-        }
-
-        .desc {
-      //    margin-bottom: vw(32);
         }
       }
 
@@ -843,11 +796,6 @@
             word-break: keep-all;
             padding: 0 vw(20);
             margin-bottom: vw(12);
-
-          /*  span {
-              color: $primary;
-              font-weight: 700;
-            }*/
 
             + .agree-area-list {
               padding-top: vw(20);
@@ -881,7 +829,7 @@
         }
       }
 
-      /*슬라이드 - 평점*/
+      /* 슬라이드 - 평점 */
       &.grade {
         padding: vw(24) vw(24) vw(32);
 
@@ -912,8 +860,3 @@
     }
   }
 }
-
-
-
-
-
