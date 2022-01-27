@@ -68,55 +68,31 @@
 
 /* 닥터지스토리  */
 .story-wrap {
-  /* 공통 */
-  .tab {
-    margin-bottom: vw(48);
-    padding: 0;
-
-    > ul {
-      display: flex;
-      justify-content: center;
-
-      .item {
-        height: vw(54);
-        padding: 0 vw(16);
-
-        a {
-          white-space: nowrap;
-
-          &::after {
-            bottom: vw(4);
-          }
-        }
-      }
-    }
-  }
-
   .input-search-list {
-    margin-bottom: vw(32);
+    width: 360px;
+    margin: 0 auto;
+    margin-bottom: vw(80);
   }
 
   .list {
     .total {
-      font-size: vw(13);
-      line-height: vw(18);
+      font-size: vw(15);
+      line-height: vw(22);
       color: $gray-700;
-      margin-bottom: vw(16);
+      margin-bottom: vw(20);
 
       .num {
         color: $gray-900;
-        font-weight: bold;
-      }
-
-      .unit {
+        font-family: $poppins-semiBold;
         font-weight: bold;
       }
     }
 
     .item {
       float: left;
-      width: 50%;
-      margin-bottom: vw(48);
+      width: 288px;
+      margin-bottom: vw(88);
+      margin-right: 30px;
 
       a {
         display: block;
@@ -146,15 +122,11 @@
         }
       }
 
-      &:nth-child(2n) {
-        padding-left: vw(8);
+      &:nth-child(4n) {
+        margin-right: 0;
       }
 
-      &:nth-child(2n-1) {
-        padding-right: vw(8);
-      }
-
-      &:nth-child(2n+1) {
+      &:nth-child(4n+1) {
         clear: both;
       }
 
@@ -164,10 +136,9 @@
         justify-content: center;
         position: relative;
         width: 100%;
-        height: vw(156);
+        height: vw(288);
         border-radius: vw(16) vw(16) vw(16) 0;
         overflow: hidden;
-        //padding-bottom: vw(8);
         margin-bottom: vw(12);
 
         .img-inner {
@@ -188,7 +159,10 @@
           position: absolute;
           left: 0;
           bottom: 0;
+          height: 25px;
+          line-height: 25px;
           border-radius: 0 vw(8) 0 0;
+          padding: 0 12px;
           font-family: $poppins-semiBold;
         }
       }
@@ -417,10 +391,11 @@
 
   /* 인사이드 닥터지 */
   .inside-drg {
-    padding: vw(20) vw(23) vw(76) vw(24);
+    padding: vw(40) 0 0;
 
     .heading {
-      margin-bottom: vw(24);
+      margin-bottom: vw(80);
+      text-align: center;
 
       .font-h1 {
         margin-bottom: vw(12);
@@ -432,7 +407,7 @@
     }
 
     .tab {
-      border-bottom: 0;
+      margin-bottom: 80px;
 
       &.fixed {
         position: fixed;

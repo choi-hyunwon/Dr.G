@@ -3035,10 +3035,11 @@
               display: flex;
               width: vw(188);
               height: vw(188);
-              background-color: #fff;
+              background-color: transparent;
               border-radius:50%;
               margin: 0 auto vw(20);
               justify-content: center;
+              overflow: hidden;
             }
 
             .item-info {
@@ -3067,18 +3068,21 @@
 
             &.item-1 {
               .item-img {
-                padding-top: vw(20);
+                //padding-top: vw(20);
+
+                .lottie {
+                  background-color: #fff;
+                }
 
                 img {
-                  width: vw(74);
-                  height: auto;
+                  width: 100%;
 
-                  &:nth-child(2) {
-                    position: absolute;
-                    width: vw(19);
-                    top: vw(40);
-                    right: vw(50);
-                  }
+                  //&:nth-child(2) {
+                  //  position: absolute;
+                  //  width: vw(19);
+                  //  top: vw(40);
+                  //  right: vw(50);
+                  //}
                 }
               }
             }
@@ -3086,6 +3090,7 @@
             &.item-2 {
               .item-img {
                 align-items: center;
+                background-color: #fff;
 
                 img {
                   position: relative;
@@ -3107,6 +3112,8 @@
 
             &.item-3 {
               .item-img {
+                background-color: #fff;
+
                 img {
                   position: relative;
                   width: vw(83.5);

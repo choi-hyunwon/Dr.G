@@ -94,6 +94,14 @@
   }
 }
 
+.modal-backdrop {
+  background-color: $gray-900;
+
+  &.show {
+    opacity: .2;
+  }
+}
+
 /* 풀 페이지 팝업 */
 .full-popup {
   z-index: 1050;
