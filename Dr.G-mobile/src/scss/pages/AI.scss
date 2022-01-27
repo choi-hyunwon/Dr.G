@@ -23,6 +23,8 @@
       padding: 0 vw(24);
       margin-bottom: vw(24);
       margin-top: vw(21);
+      opacity: 1;
+      transition: .2s;
 
       .font-body-2 {
         display: inline-block;
@@ -37,7 +39,9 @@
       }
 
       &.scrolling {
-        display: none;
+        opacity: 0;
+        margin-bottom: vw(120);
+        //display: none;
       }
     }
 
@@ -123,8 +127,8 @@
             z-index: 1;
             animation-name: scanAni;
             -webkit-animation-name: scanAni;
-            animation-duration: 4s;
-            -webkit-animation-duration: 4s;
+            animation-duration: 2s;
+            -webkit-animation-duration: 2s;
             animation-timing-function: linear;
             -webkit-animation-timing-function: linear;
             animation-iteration-count: infinite;
@@ -458,6 +462,14 @@
               }
             }
           }
+        }
+      }
+
+      &.hide {
+        display: none;
+
+        &.scrolling {
+          display: block;
         }
       }
     }
@@ -1025,6 +1037,7 @@
 
         .font-h5 {
           margin-bottom: vw(12);
+          color: $gray-800;
         }
 
         ul {
@@ -1234,7 +1247,7 @@
       }
 
       .line-chart-box {
-        padding: vw(76) 0 0;
+        padding: vw(58) 0 0;
 
         > .font-h2 {
           margin-bottom: vw(12);
@@ -1347,7 +1360,7 @@
 
       /* 솔루션 */
       .solution-wrap {
-        padding: vw(48) vw(24) vw(76);
+        padding: vw(76) vw(24);
 
         > .font-h2 {
           margin-bottom: vw(32);
@@ -1476,7 +1489,7 @@
       /* 추천 */
       .recommendation-wrap {
         .product-info-box {
-          padding: vw(48) vw(24) vw(76);
+          padding: vw(76) vw(24);
           background-color: $gray-200;
 
           .font-h2 {
@@ -1503,6 +1516,16 @@
 
               + .badge {
                 margin-left: vw(6);
+              }
+            }
+          }
+
+          .tab-content-sm {
+            .tab-pane {
+              display: none;
+
+              &.active {
+                display: block;
               }
             }
           }
@@ -1613,7 +1636,7 @@
         /* 피부 일기 */
         .skin-diary {
           background-color: $gray-200;
-          padding: vw(76) vw(24) vw(82);
+          padding: vw(76) vw(24);
 
           .diary-section {
             + .diary-section {
@@ -1736,6 +1759,11 @@
 
             .font-h3 {
               margin-bottom: vw(24);
+              color: $gray-800;
+
+              &:first-child {
+                color: $gray-900;
+              }
             }
 
             .star-box {
@@ -2130,6 +2158,14 @@
       .analysis-result {
         .line-chart-box {
           padding: 0;
+
+          .chart-box {
+            height: vw(338);
+
+            .line-chart-wrap {
+              height: vw(338);
+            }
+          }
         }
       }
     }
@@ -2155,6 +2191,7 @@
         margin-bottom: vw(32);
 
         .item {
+          position: relative;
           width: 100%;
           height: vw(358);
 
@@ -2173,6 +2210,44 @@
               top: 0;
               width: 100%;
               height: 100%;
+            }
+          }
+
+          .img-front {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            width: 100%;
+            height: vw(200);
+            border-radius: vw(16) vw(16) 0 0;
+            overflow: hidden;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            padding: 0 vw(20) vw(24);
+
+            .title {
+              display: block;
+              font-weight: bold;
+              font-size: vw(18);
+              line-height: vw(28);
+              text-decoration-line: underline;
+              color: #FFFFFF;
+            }
+
+            .tag {
+              display: inline-block;
+              padding: 0 vw(8);
+              height: vw(24);
+              line-height: vw(24);
+              background-color: $yellow;
+              border-radius: vw(4);
+              font-weight: bold;
+              font-size: vw(12);
+              color: $gray-800;
+              margin-top: 8px;
             }
           }
 
@@ -2246,15 +2321,11 @@
           margin-bottom: vw(8);
         }
 
-        .font-h6 {
-          color: $gray-800;
-          margin-bottom: vw(48);
-        }
-
         .desc {
           font-size: vw(16);
           line-height: vw(24);
-          color: $gray-700;
+          color: $gray-800;
+          margin-bottom: vw(48);
         }
       }
 
@@ -3338,8 +3409,8 @@
                       z-index: 1;
                       animation-name: scanAni;
                       -webkit-animation-name: scanAni;
-                      animation-duration: 4s;
-                      -webkit-animation-duration: 4s;
+                      animation-duration: 2s;
+                      -webkit-animation-duration: 2s;
                       animation-timing-function: linear;
                       -webkit-animation-timing-function: linear;
                       animation-iteration-count: infinite;

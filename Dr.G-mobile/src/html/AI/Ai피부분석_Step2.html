@@ -36,6 +36,27 @@
                         </ul>
                     </div>
                 </div>
+                <div class="step-list-sticky hide _stickStepList">
+                    <div class="step-list">
+                        <div class="progress">
+                            <span class="bar" style="width: 100%;"></span>
+                        </div>
+                        <ul>
+                            <li class="step step-1 completed">
+                                <span class="icon"></span>
+                                <span class="desc">피부 점검</span>
+                            </li>
+                            <li class="step step-2 completed">
+                                <span class="icon"></span>
+                                <span class="desc">과거력 확인</span>
+                            </li>
+                            <li class="step step-3 active">
+                                <span class="icon"></span>
+                                <span class="desc">완료</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="question-box">
                     <div class="question-item completed">
                         <div class="question">
@@ -222,14 +243,12 @@
 
         $(window).scroll(function () {
             var st = $(this).scrollTop();
-            if (st < 1) {
+            if (st < $('.question-box').offset().top) {
                 // console.log('Up');
-                $('.heading').removeClass('scrolling');
-                $('.step-list-sticky').removeClass('scrolling');
+                $('._stickStepList').removeClass('scrolling');
             } else {
                 // console.log('Down');
-                $('.heading').addClass('scrolling');
-                $('.step-list-sticky').addClass('scrolling');
+                $('._stickStepList').addClass('scrolling');
             }
             lastScroll = st;
         });

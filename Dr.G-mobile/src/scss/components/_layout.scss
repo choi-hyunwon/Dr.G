@@ -980,3 +980,13 @@
     }
   }
 }
+
+/* 스크롤 제거 */
+body {
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}

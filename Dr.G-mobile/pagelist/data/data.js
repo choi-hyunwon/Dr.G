@@ -232,22 +232,22 @@ data.AI = {
         },
         {
             stateClass: 'complete',
-            url: 'Ai피부분석_결과_분석',
+            url: 'Ai피부분석_결과',
             category: 'AI',
-            page: 'Ai피부분석_결과_분석'
+            page: 'Ai피부분석_결과'
         },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_결과_솔루션',
-            category: 'AI',
-            page: 'Ai피부분석_결과_솔루션'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_결과_추천',
-            category: 'AI',
-            page: 'Ai피부분석_결과_추천'
-        },
+        // {
+        //     stateClass: 'complete',
+        //     url: 'Ai피부분석_결과_솔루션',
+        //     category: 'AI',
+        //     page: 'Ai피부분석_결과_솔루션'
+        // },
+        // {
+        //     stateClass: 'complete',
+        //     url: 'Ai피부분석_결과_추천',
+        //     category: 'AI',
+        //     page: 'Ai피부분석_결과_추천'
+        // },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_피부변화리포트',
