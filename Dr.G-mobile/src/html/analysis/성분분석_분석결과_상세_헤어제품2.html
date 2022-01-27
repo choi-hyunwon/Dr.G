@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header-white.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="analysis-wrap">
+            <!-- s section-color -->
+            <div class="section section-color product-default-img"> <!-- product-default-img : 샘플이미지일 경우 배경이 달라짐-->
+                <p class="font-h2 font-bold">내 <span class="point">헤어 고민</span>과  얼마나<br>일치하는지 확인하세요.</p>
+                <div class="gauge-gradient">
+                    <div id="progress" class="process">
+                        <svg viewbox="0 0 100 58">
+                            <linearGradient id="gradient">
+                                <stop offset="0%" stop-color="#EA8181"/>
+                                <stop offset="35%" stop-color="#ECDA7C"/>
+                                <stop offset="70%" stop-color="#47D45E"/>
+                                <stop offset="100%" stop-color="#2DAFF9"/>
+                            </linearGradient>
+                            <path class="bg" d="M 50,50 m -47,0 a 47,47 0 1 1 94,0" fill='none' />
+                            <path class="numerical" d="M 50,50 m -47,0 a 47,47 0 1 1 94,0"  fill='none'/>
+                        </svg>
+                        <p class="font-poppins percent"><span class="counter">0</span><span class="unit">%</span></p>
+                        <div class="dot-box">
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                            <span class="dot dot3"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="font-body-2"><span class="alert">일치율의 기준이 궁금하신가요?</span></p>
+                <div class="floating-box">
+                    <img src="../../img/analysis/img-default-product-hair.png" alt="헤어제품 대체이미지">
+                </div>
+            </div>
+            <!-- e section-color -->
+
+            <!-- s section-product -->
+            <div class="section section-product">
+                <div class="name">
+                    <p class="font-h4 font-bold">약산성 레드 블레미쉬 클리어<br>수딩 폼 200ml</p>
+                    <a href="#" class="btn btn-sm btn-violet-light btn_version"><span>제품 버전 보기</span><i class="icon ico-plus-xs"></i></a>
+                    <ul class="version_box">
+                        <li>닥터지 그린 마일드 업 선 50ml</li>
+                        <li>닥터지 그린 마일드 업  50ml</li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <p class="font-body-1 font-bold sub-title">전성분</p>
+                    <span class="font-body-2 ingredient">
+                        정제수, 징크옥사이드, 사이클로헥사실록세인, 부틸옥틸살리실레이트, 프로판다이올, 폴리글리세릴-3폴리다이메틸실록시에틸다이메티콘, 코코-카프릴레이트/카프레이트, 카프릴릴메티콘, 아크릴레이트코폴리머, 폴리글리세릴-4아이소스테아레이트, 다이페닐실록시페닐트라이메티콘, 마그네슘설페이트, 다이스테아다이모늄헥토라이트, 폴리글리세릴-3폴리리시놀리에이트, 트라이에톡시카프릴릴실레인, 솔비탄아이소스테아레이트, C30-45알킬세테아릴다이메티콘크로스폴리머, 솔비탄올리베이트, 라우릴폴리글리세릴-3폴리다이메틸실록시에틸다이메티콘, 토코페롤, 칸데릴라왁스, 폴리하이드록시스테아릭애씨드, 글리세릴카프릴레이트, 카프릴릭/카프릭트라이글리세라이드, 카프릴릴글라이콜, 폴리글리세릴
+                    </span>
+                    <div class="btn-wrap">
+                        <a href="#" class="btn-fold">접기</a>
+                        <a href="#" class="btn-edit"><i class="icon ico-edit2"></i>수정요청</a>
+                    </div>
+                    <div class="view">
+                        <a href="#" class="btn-view">전체보기</a>
+                    </div>
+                </div>
+                <hr class="divider">
+                <div class="btn-sns-wrap">
+                    <div class="btn-sns-inner">
+                        <a href="#" class="btn-sns-kakao"><i class="icon ico-sns-kakao"></i></a>
+                        <a href="#" class="btn-sns-facebook"><i class="icon ico-sns-facebook"></i></a>
+                        <a href="#" class="btn-sns-line"><i class="icon ico-sns-line"></i></a>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-block btn-xl btn-violet"><span>다시 분석하기</span></a>
+
+                <div class="keyword">
+                    <p class="font-h6 font-bold">조수인님의 피부고민 키워드</p>
+                    <div class="badge-box">
+                        <div class="badge badge-lg badge-yellow">민감</div>
+                        <div class="badge badge-lg badge-yellow">유분과다</div>
+                        <div class="badge badge-lg badge-yellow">여드름성 피부</div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- e section-product -->
+
+            <!-- s section-ingredient / no-matching 왜 좋을까요? 매칭된 성분 없음-->
+            <div class="section section-ingredient no-matching">
+                <div class="title">
+                    <p class="font-h2 font-bold">왜 좋을까요?</p>
+                    <p class="font-h6">헤어 고민과 매칭된 성분을 확인하세요.</p>
+                </div>
+
+                <ul class="desc-box">
+                    <li>
+                        <p>아쉽게도 매칭된 성분이<br>발견되지 않았어요</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- e section-ingredient / no-matching 왜 좋을까요? 매칭된 성분 없음-->
+
+            <!-- s section-ingredient 이런 장점도 있어요.. -->
+            <div class="section section-ingredient bg-white">
+                <div class="title">
+                    <p class="font-h2 font-bold">이런 장점도 있어요.</p>
+                    <p class="font-h6">헤어 고민과 매칭되지 않았지만<br>좋은 성분을 알려드려요.</p>
+                </div>
+                <ul class="ingredient-box _know">
+                    <li class="info-list">
+                        <p class="sub-title">두피세정<i class="icon ico-plus-sm-gray"></i></p>
+                        <ul class="mixing">
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-more">더보기</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="info-list">
+                        <p class="sub-title">윤기부여<i class="icon ico-plus-sm-gray"></i></p>
+                        <ul class="mixing">
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <p class="name">성분명</p>
+                                <p class="font-body-1 color-violet">피이지-8</p>
+                                <p class="mix">배합목적</p>
+                                <p class="font-body-1 desc">변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료, 변성제 향료, 피부보습제, 피부보호제, 점도 감소제, 변성제 향료</p>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-more">더보기</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <hr class="divider "/>
+            <!-- e section-ingredient 이런 성분도 좋아요. -->
+
+            <!-- s section-past 지난 분석 -->
+            <div class="section section-past">
+                <div class="title">
+                    <p class="font-h2 font-bold">지난 분석 리스트</p>
+                </div>
+                <ul class="past-list">
+                    <li class="item active">
+                        <a href="#">
+                            <span class="img"><img src="../../img/analysis/img-sample-4.png" alt="제품이미지"></span>
+                            <p class="date">현재 제품</p>
+                            <p class="name">레드 블레미쉬 클리어 수딩 에멀전 레드 블레미쉬 클리어 수딩 에멀전</p>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <span class="img"><img src="../../img/analysis/img-past-product-hair.png" alt="제품 대체 이미지"></span>
+                            <p class="date font-poppins-semiBold">2021.10.21</p>
+                            <p class="name">아이오페 슈퍼바이탈 아이크림 아이오페 슈퍼바이탈 아이크림</p>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <span class="img"><img src="../../img/analysis/img-sample-4.png" alt="제품이미지"></span>
+                            <p class="date font-poppins-semiBold">2021.10.21</p>
+                            <p class="name">레드 블레미쉬 클리어 수딩 에멀전 레드 블레미쉬 클리어 수딩 에멀전</p>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <span class="img"><img src="../../img/analysis/img-past-product-hair.png" alt="제품 대체 이미지"></span>
+                            <p class="date font-poppins-semiBold">2021.10.21</p>
+                            <p class="name">아이오페 슈퍼바이탈 아이크림 아이오페 슈퍼바이탈 아이크림</p>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="divider">
+            </div>
+            <!-- e section-past 지난 분석 -->
+
+            <!-- s section-section-faq 자주묻는 질문 -->
+            <div class="section section-faq">
+                <div class="title">
+                    <p class="font-h2 font-bold">자주 묻는 질문</p>
+                </div>
+                <ul class="faq-list">
+                    <li class="item">
+                        <p class="title"><span>성분 정보 출처는 어디인가요?</span><i class="icon ico-plus-sm-gray"></i></p>
+                        <p class="solution">관리자가 작성한 FAQ의 답변 내용을 출력하는 영역입니다. 관리자가 작성한 FAQ의 답변 내용을 출력하는 영역입니다. 관리자가 작성.</p>
+                    </li>
+                    <li class="item">
+                        <p class="title"><span>성분 분석 매칭은 어떤 기준으로 분석하나요?</span><i class="icon ico-plus-sm-gray"></i></p>
+                        <p class="solution">관리자가 작성한 FAQ의 답변 내용을 출력하는 영역입니다. 관리자가 작성한 FAQ의 답변 내용을 출력하는 영역입니다. 관리자가 작성.</p>
+                    </li>
+                    <li class="item">
+                        <p class="title"><span>제품이 분석되지 않아요.</span><i class="icon ico-plus-sm-gray"></i></p>
+                        <p class="solution">관리자가 작성한 FAQ의 답변 내용을 출력하는 영역입니다. 관리자가 작성한 FAQ의 답변 내용을 출력하는 영역입니다. 관리자가 작성.</p>
+                    </li>
+                    <li class="item">
+                        <p class="title"><span>피부 진단 후 피부 결과에 대해 대면으로 상담 받을 수 있나요?</span><i class="icon ico-plus-sm-gray"></i></p>
+                        <p class="solution">관리자가 작성한 FAQ의 답변 내용을 출력하는 영역입니다. 관리자가 작성한 FAQ의 답변 내용을 출력하는 영역입니다. 관리자가 작성.</p>
+                    </li>
+                    <li class="item">
+                        <p class="title"><span>피부 분석은 하루에 몇 번 가능한가요?</span><i class="icon ico-plus-sm-gray"></i></p>
+                        <p class="solution">관리자가 작성한 FAQ의 답변 내용을 출력하는 영역입니다. 관리자가 작성한 FAQ의 답변 내용을 출력하는 영역입니다. 관리자가 작성.</p>
+                    </li>
+                </ul>
+                <div class="btn-wrap">
+                    <a href="#" class="btn btn-black btn-lg"><span>전체보기</span></a>
+                </div>
+            </div>
+            <!-- e section-section-faq 자주묻는 질문 -->
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+@@include('./_analysisScript.html')
+</body>
+</html>
