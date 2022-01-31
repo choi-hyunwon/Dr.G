@@ -102,23 +102,25 @@
                 </div>
                 <div class="analysis-result">
                     <div class="tab _tab slide-tab">
-                        <ul>
-                            <li class="item active"><a href="#">분석</a></li>
-                            <li class="item"><a href="#">솔루션</a></li>
-                            <li class="item"><a href="#">추천</a></li>
+                        <ul class="_scrollAnalysisTab">
+                            <li class="item active"><a href="#analysis">분석</a></li>
+                            <li class="item"><a href="#solution">솔루션</a></li>
+                            <li class="item"><a href="#recommendation">추천</a></li>
                         </ul>
                     </div>
-                    <!-- s 분석 -->
-                    @@include('_analyze.html')
-                    <!-- e 분석 -->
+                    <div class="_scrollTabWrap">
+                        <!-- s 분석 -->
+                        @@include('_analyze.html')
+                        <!-- e 분석 -->
 
-                    <!-- s 솔루션 -->
-                    @@include('_solution.html')
-                    <!-- e 솔루션 -->
+                        <!-- s 솔루션 -->
+                        @@include('_solution.html')
+                        <!-- e 솔루션 -->
 
-                    <!-- s 추천 -->
-                    @@include('_recommendation.html')
-                    <!-- e 추천 -->
+                        <!-- s 추천 -->
+                        @@include('_recommendation.html')
+                        <!-- e 추천 -->
+                    </div>
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@
             </div>
             <div class="toast-body">
                 <div class="img logo">
-                    <img src="../../img/common/Ai-symbol.gif" alt="Ai심블">
+                    <img id="gif" src="../../img/common/Ai-symbol.gif" alt="Ai심블">
                 </div>
                 <p class="main-title text-center mb-0">
                     로그인 후 닥터지 <span class="color-primary font-bold">Ai 피부분석</span>과 함께<br/>
@@ -28,8 +28,21 @@
     </div>
 </div>
 <script>
-    showPopup();
+    showPopup()
     // hidePopup();
+
+    const gif=document.getElementById('gif');
+
+    function restartGIF(){
+        gif.src=gif.getAttribute('src');
+    }
+
+    function startTimer(){
+        gif.src=gif.getAttribute('src');
+        setTimeout(function(){ restartGIF() }, 50);
+    }
+
+    startTimer()
 </script>
 </body>
 </html>
