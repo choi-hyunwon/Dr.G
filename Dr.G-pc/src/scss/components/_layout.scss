@@ -8,12 +8,15 @@
 .wrap {
   position: relative;
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   overflow: hidden;
 
   .container {
-    max-width: 1240px !important;
+    max-width: 1242px !important;
+    min-width: 1242px;
     padding: 0 !important;
-    min-height: 1354px;
+    //min-height: 1354px;
   }
 }
 
@@ -26,6 +29,7 @@
     display: flex;
     align-items: center;
     max-width: 1242px;
+    min-width: 1242px;
     height: 100%;
     margin: 0 auto;
     padding: 28px 0;
@@ -144,6 +148,7 @@
   padding-left: 60px;
 
   .chatbot {
-    @include background-img ($width: 155, $height: 188, $category: 'common', $img: 'Dr.ann.png');
+    display: block;
+    @include background-img ($width: 159, $height: 188, $category: 'common', $img: 'Dr.ann.png');
   }
 }

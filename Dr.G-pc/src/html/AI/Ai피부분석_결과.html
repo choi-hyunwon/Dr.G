@@ -62,22 +62,28 @@
                 <div class="analysis">
                     <div class="desc-area">
                         <div class="font-h2 font-bold">
-                            닉네임님은<br/>
+                            조수인님은<br/>
                             어떤 <span class="color-primary">피부고민</span>을 가지고<br/>
                             있을까요?
                         </div>
                         <div class="font-h6">Ai가 분석한 나의 피부 상태를 확인하세요.</div>
-                        <div class="font-body-2">(촬영 환경에 따라 <span class="font-bold">인식의 차이가 발생</span>할 수 있습니다.)</div>
+                        <div class="font-body-2">(촬영 환경에 따라 하단의 피부 점수와 차이가 발생할 수<br/>
+                            있습니다.)</div>
                     </div>
                     <div class="skin-type-list">
                         <ul class="clearfix">
-                            <li class="on"><a href="#"><span class="type"><i class="icon ico-skin-type-1"></i></span><span class="font-body-2">수분</span></a></li>
-                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-2"></i></span><span class="font-body-2">유분</span></a></li>
-                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-3"></i></span><span class="font-body-2">민감</span></a></li>
-                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-4"></i></span><span class="font-body-2">여드름</span></a></li>
-                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-5"></i></span><span class="font-body-2">색소</span></a></li>
-                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-6"></i></span><span class="font-body-2">주름</span></a></li>
-                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-7"></i></span><span class="font-body-2">모공</span></a></li>
+                            <li class="on"><a href="#"><span class="type"><i
+                                    class="icon ico-skin-type-1"></i></span><span class="font-body-2">수분</span></a></li>
+                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-2"></i></span><span
+                                    class="font-body-2">유분</span></a></li>
+                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-3"></i></span><span
+                                    class="font-body-2">민감</span></a></li>
+                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-4"></i></span><span
+                                    class="font-body-2">색소</span></a></li>
+                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-5"></i></span><span
+                                    class="font-body-2">주름</span></a></li>
+                            <li><a href="#"><span class="type"><i class="icon ico-skin-type-6"></i></span><span
+                                    class="font-body-2">모공</span></a></li>
                         </ul>
                     </div>
                     <div class="img-wrap">
@@ -99,16 +105,21 @@
                         <ul class="_scrollAnalysisTab">
                             <li class="item active"><a href="#analysis">분석</a></li>
                             <li class="item"><a href="#solution">솔루션</a></li>
+                            <li class="item"><a href="#recommendation">추천</a></li>
                         </ul>
                     </div>
                     <div class="_scrollTabWrap">
                         <!-- s 분석 -->
-                        @@include('_analyzeNoChart.html')
+                        @@include('_analyze.html')
                         <!-- e 분석 -->
 
                         <!-- s 솔루션 -->
                         @@include('_solution.html')
                         <!-- e 솔루션 -->
+
+                        <!-- s 추천 -->
+                        @@include('_recommendation.html')
+                        <!-- e 추천 -->
                     </div>
                 </div>
             </div>

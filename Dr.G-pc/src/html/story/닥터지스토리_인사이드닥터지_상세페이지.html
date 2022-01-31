@@ -4,34 +4,29 @@
 <body>
 <div class="wrap">
     <!-- s header -->
-    @@include('../../html/include/common/header-detail-with-back.html')
+    @@include('../../html/include/common/header.html')
     <!-- e header -->
+
+    <!-- s 레이아웃에 벗어나서 분리함 -->
+    <div class="story-wrap">
+        <div class="story-heading-img" style="background-image: url(../../img/@temp/story-sample-1.png)">
+            <div class="flag drg">
+                <div class="smile"></div>
+            </div>
+            <div class="flag-content drg">
+                <div class="flag-inner">
+                    <div class="category">Dr.G’s CUT</div>
+                    <div class="title">찐팬이 닥터지에게 주는 의미</div>
+                    <div class="tag">#닥터지 #찐팬서포터즈</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e 레이아웃에 벗어나서 분리함 -->
 
     <!-- s contents -->
     <div class="container">
         <div class="story-wrap">
-            <div class="story-heading-img" style="background-image: url(../../img/@temp/story-sample-1.png)">
-                <div class="flag drg">
-                    <div class="title">
-                        찐팬이<br/>
-                        닥터지에게<br/>
-                        주는 의미
-                    </div>
-                    <div class="category">Dr.G’s CUT</div>
-                    <div class="tag">#닥터지 #찐팬서포터즈</div>
-                    <div class="smile"></div>
-                </div>
-                <div class="flag user">
-                    <div class="title">
-                        편견을 깨는<br/>
-                        보통 사람들
-                    </div>
-                    <div class="category">User’s CUT</div>
-                    <div class="tag">#스킨케어 #레시피<br/>
-                        #자기관리</div>
-                    <div class="smile"></div>
-                </div>
-            </div>
             <div class="inside-drg-detail">
                 <div class="editor-area"><img src="../../img/@temp/area-editor.png" alt="관련 제품 알아보기"></div>
                 <div class="more-product">
@@ -109,10 +104,6 @@
         </div>
     </div>
     <!-- e contents -->
-
-    <!-- s footer -->
-<!--    @@include('../../html/include/common/footer.html')-->
-    <!-- e footer -->
 </div>
 <script>
     $(document).ready(function () {

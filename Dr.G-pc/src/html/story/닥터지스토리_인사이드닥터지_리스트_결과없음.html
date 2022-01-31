@@ -43,11 +43,15 @@
                         </div>
                         <div class="list _list">
                             <div class="total">전체 <span class="num">0</span><span class="unit">건</span></div>
+                            <div class="result">검색결과 <span class="font-poppins-semiBold color-primary">0</span>건</div>
                             <div class="empty">
                                 <div class="img"><img src="../../img/story/img-empty.svg" alt="검색결과가 없습니다."></div>
                                 <div class="font-h6">
-                                    검색결과가 없습니다.<br/>
-                                    <span>다시 검색해 주세요.</span>
+                                    검색결과가 없습니다.
+                                </div>
+                                <div class="font-body-1">다시 검색해 주세요.</div>
+                                <div class="btn-wrap">
+                                    <div class="btn btn-lg btn-black">목록으로 이동</div>
                                 </div>
                             </div>
                         </div>
@@ -70,30 +74,14 @@
         </div>
     </div>
     <!-- e contents -->
+
+    <!-- s chatbot -->
+    @@include('../../html/include/common/chatbot.html')
+    <!-- e chatbot -->
+
     <!-- s footer -->
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
-<script>
-    let stepScroll = 0;
-    let tab = $('._tab');
-
-    $(window).scroll(function () {
-        if (tab.length) {
-            let st = $(this).scrollTop();
-            if (st >= stepScroll) {
-                //console.log("DOWN");
-            } else {
-                //console.log("UP");
-                tab.show().addClass('fixed')
-                if (window.pageYOffset <= 0) {
-                    tab.removeClass('fixed')
-                }
-            }
-            //Updates scroll position
-            stepScroll = st;
-        }
-    });
-</script>
 </body>
 </html>

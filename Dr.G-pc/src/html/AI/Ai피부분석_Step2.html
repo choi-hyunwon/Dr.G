@@ -36,6 +36,27 @@
                         </ul>
                     </div>
                 </div>
+                <div class="step-list-sticky hide _stickStepList">
+                    <div class="step-list">
+                        <div class="progress">
+                            <span class="bar" style="width: 100%;"></span>
+                        </div>
+                        <ul>
+                            <li class="step step-1 completed">
+                                <span class="icon"></span>
+                                <span class="desc">피부 점검</span>
+                            </li>
+                            <li class="step step-2 completed">
+                                <span class="icon"></span>
+                                <span class="desc">과거력 확인</span>
+                            </li>
+                            <li class="step step-3 active">
+                                <span class="icon"></span>
+                                <span class="desc">완료</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="question-box">
                     <div class="question-item completed">
                         <div class="question">
@@ -101,6 +122,86 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="question-item">
+                        <div class="question">
+                            <span class="num">Q2.</span>
+                            <span class="font-h6">오후에 내 메이크업 상태는 <em class="color-primary _val">많이 번들거린다.</em></span>
+                            <span class="font-h5">보습제를 바른 이후 내 피부는</span>
+                            <a class="btn-delete" href="#"><span class="sr-only">삭제</span></a>
+                        </div>
+                        <div class="answer">
+                            <ul>
+                                <li><a href="#">별다른 느낌이 없다.</a></li>
+                                <li><a href="#">가끔 땅긴다.</a></li>
+                                <li><a href="#">자꾸 땅긴다.</a></li>
+                                <li><a href="#">항상 땅긴다.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question">
+                            <span class="num">Q2.</span>
+                            <span class="font-h6">최근 한달 간 내 T존의 기름기는 <em class="color-primary _val">많이 번들거린다.</em></span>
+                            <span class="font-h5">최근 한달 간 내 T존의 기름기는</span>
+                            <a class="btn-delete" href="#"><span class="sr-only">삭제</span></a>
+                        </div>
+                        <div class="answer">
+                            <ul>
+                                <li><a href="#">전혀 없다.</a></li>
+                                <li><a href="#">가끔 번들거린다.</a></li>
+                                <li><a href="#">자주 번들거린다.</a></li>
+                                <li><a href="#">항상 번들거린다.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question">
+                            <span class="num">Q2.</span>
+                            <span class="font-h6">오후에 내 메이크업 상태는 <em class="color-primary _val">많이 번들거린다.</em></span>
+                            <span class="font-h5">보습제를 바른 이후 내 피부는</span>
+                            <a class="btn-delete" href="#"><span class="sr-only">삭제</span></a>
+                        </div>
+                        <div class="answer">
+                            <ul>
+                                <li><a href="#">별다른 느낌이 없다.</a></li>
+                                <li><a href="#">가끔 땅긴다.</a></li>
+                                <li><a href="#">자꾸 땅긴다.</a></li>
+                                <li><a href="#">항상 땅긴다.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question">
+                            <span class="num">Q2.</span>
+                            <span class="font-h6">최근 한달 간 내 T존의 기름기는 <em class="color-primary _val">많이 번들거린다.</em></span>
+                            <span class="font-h5">최근 한달 간 내 T존의 기름기는</span>
+                            <a class="btn-delete" href="#"><span class="sr-only">삭제</span></a>
+                        </div>
+                        <div class="answer">
+                            <ul>
+                                <li><a href="#">전혀 없다.</a></li>
+                                <li><a href="#">가끔 번들거린다.</a></li>
+                                <li><a href="#">자주 번들거린다.</a></li>
+                                <li><a href="#">항상 번들거린다.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question">
+                            <span class="num">Q2.</span>
+                            <span class="font-h6">최근 한달 간 내 T존의 기름기는 <em class="color-primary _val">많이 번들거린다.</em></span>
+                            <span class="font-h5">최근 한달 간 내 T존의 기름기는</span>
+                            <a class="btn-delete" href="#"><span class="sr-only">삭제</span></a>
+                        </div>
+                        <div class="answer">
+                            <ul>
+                                <li><a href="#">전혀 없다.</a></li>
+                                <li><a href="#">가끔 번들거린다.</a></li>
+                                <li><a href="#">자주 번들거린다.</a></li>
+                                <li><a href="#">항상 번들거린다.</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="banner">
                     <div class="copyright-box">
@@ -142,14 +243,12 @@
 
         $(window).scroll(function () {
             var st = $(this).scrollTop();
-            if (st < 1) {
+            if (st < $('.question-box').offset().top) {
                 // console.log('Up');
-                $('.heading').removeClass('scrolling');
-                $('.step-list-sticky').removeClass('scrolling');
+                $('._stickStepList').removeClass('scrolling');
             } else {
                 // console.log('Down');
-                $('.heading').addClass('scrolling');
-                $('.step-list-sticky').addClass('scrolling');
+                $('._stickStepList').addClass('scrolling');
             }
             lastScroll = st;
         });
