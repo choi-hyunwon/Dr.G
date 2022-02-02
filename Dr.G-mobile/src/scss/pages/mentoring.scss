@@ -5,7 +5,7 @@
     position: relative;
 
     &.bg-blue {
-      background-color: $blue;
+      background-color: #34A6F9;
     }
 
     .font-h1, .font-h3 {
@@ -584,7 +584,7 @@
             content: '';
             width: inherit;
             height: inherit;
-            border: vw(37) solid $blue;
+            border: vw(37) solid #34A6F9;
             border-top: none;
             top: 0;
             left: 0;

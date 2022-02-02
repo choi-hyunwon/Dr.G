@@ -110,6 +110,18 @@ data.main = {
 data.AI = {
     title: 'AI피부분석',
     list: [
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_서브메인',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_서브메인2',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인2'
+        },
         // {
         //     stateClass: 'complete',
         //     url: 'Ai피부분석_component',

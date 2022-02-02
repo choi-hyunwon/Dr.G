@@ -598,9 +598,10 @@
             .title{
               padding-left: vw(20);
               position: relative;
-              font-weight: 600;
+              font-weight: 700;
               font-size: vw(13);
               margin-bottom: vw(8);
+              color: $gray-800;
               &:before{
                 content: '';
                 display: inline-block;
@@ -627,6 +628,20 @@
           .input-box{
             padding-top: vw(24);
             margin-bottom: vw(24);
+          }
+        }
+
+        /*후기 작성하기*/
+        textarea{
+          +.circle-list-area{
+            li{
+              p{
+                color: $gray-600;
+                span{
+                  color: $gray-700;
+                }
+              }
+            }
           }
         }
 
