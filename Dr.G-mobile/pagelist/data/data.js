@@ -452,12 +452,12 @@ data.mentoring = {
 data.analysis = {
     title: '1:1 성분분석',
     list: [
-          {
+        /*  {
               stateClass: 'working',
               url: '성분분석_서브메인',
               category: 'analysis',
               page: '성분분석_서브메인'
-          },
+          },*/
         {
             stateClass: 'complete',
             url: '성분분석_1-1_사진촬영_안내',
