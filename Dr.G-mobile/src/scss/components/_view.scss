@@ -263,6 +263,32 @@
           margin-bottom: vw(12);
         }
       }
+
+      >.check-area{
+        .custom-checkbox{
+          label{
+            >span{
+              color: $gray-800;
+            }
+            a{
+              text-decoration: underline;
+              font-weight: 500;
+            }
+          }
+        }
+        .list-with-dot{
+          padding-top: vw(8);
+          li{
+            margin-bottom: vw(2);
+            padding-left: vw(7);
+            &:last-of-type{
+              margin-bottom: 0;
+            }
+          }
+
+        }
+
+      }
     }
 
     /*생활습관 펼쳐보기*/
@@ -646,11 +672,12 @@
 
     &.bg-dark {
       background-color: $gray-800 !important;
-      padding: vw(20);
+      padding: vw(19.5);
 
       .page-btn-wrap {
         a {
           color: $gray-fff;
+          line-height: 1;
         }
 
         /*오른쪽 정렬일 경우 (기본은 space-between)*/
@@ -661,6 +688,12 @@
         /*가운데 정렬일 경우 (기본은 space-between)*/
         &.btn-center {
           justify-content: center;
+          a{ /* 예외 : 확인버튼*/
+            font-weight: bold;
+            span{
+              font-size: vw(16);
+            }
+          }
         }
       }
     }
@@ -746,6 +779,7 @@
               a {
                 color: $gray-700;
                 display: block;
+                font-weight: 500;
 
                 &:hover {
                   color: $gray-700;
@@ -763,12 +797,14 @@
           }
 
           &.complete {
+            vertical-align: middle;
             ul {
               li {
                 background: $violet;
 
                 a {
                   color: $gray-fff;
+                  font-weight: 700;
                 }
               }
             }
@@ -778,7 +814,8 @@
               padding: 0 vw(10);
               position: absolute;
               right: vw(22);
-              top: 50%;
+              line-height: 1;
+              top: 45%;
               transform: translateY(-50%);
 
               .btn-delete {
