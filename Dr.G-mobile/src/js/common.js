@@ -163,12 +163,12 @@ front.common = (function () {
         });
 
         /* gnb show */
-        $('._gnbShow').on('click',function (){
+        $('._gnbShow').on('click', function () {
             $('._gnb').modal('show')
         })
 
         /* gnb menu */
-        $(document).ready(function (){
+        $(document).ready(function () {
             var gnbSet = {
                 click: function (target, speed) {
                     var _self = this, $target = $(target);
@@ -270,12 +270,12 @@ front.common = (function () {
 
         if ($('.container').find('._static').length == false) {
             /* normal case*/
-            if($('.container').find('.step-heading').length == false) {
-                $(window).scroll(function(){
+            if ($('.container').find('.step-heading').length == false) {
+                $(window).scroll(function () {
                     didScroll = true;
                 });
 
-                setInterval(function() {
+                setInterval(function () {
                     if (didScroll) {
                         hasScrolled();
                         didScroll = false;
@@ -285,20 +285,20 @@ front.common = (function () {
                 function hasScrolled() {
                     var st = $(this).scrollTop();
 
-                    if(Math.abs(lastScrollTop - st) <= delta)
+                    if (Math.abs(lastScrollTop - st) <= delta)
                         return;
 
-                    if (st > lastScrollTop){
+                    if (st > lastScrollTop) {
                         // Scroll Up
                         if (st > lastScrollTop) {
-                            if(st > headerDetailHeight) {
+                            if (st > headerDetailHeight) {
                                 headerDetail.removeClass('scroll-down').addClass('scroll-up');
                             }
                         }
                     } else {
                         // Scroll Down
-                        if(st + $(window).height() < $(document).height()) {
-                            if(st < delta) {
+                        if (st + $(window).height() < $(document).height()) {
+                            if (st < delta) {
                                 headerDetail.removeClass('scroll-down');
                             } else {
                                 headerDetail.removeClass('scroll-up').addClass('scroll-down');
@@ -309,12 +309,12 @@ front.common = (function () {
                 }
             }
             /* 스킨멘토링 step이랑 있을 경우 */
-           else {
-                $(window).scroll(function(){
+            else {
+                $(window).scroll(function () {
                     didScroll = true;
                 });
 
-                setInterval(function() {
+                setInterval(function () {
                     if (didScroll) {
                         hasScrolled();
                         didScroll = false;
@@ -324,21 +324,21 @@ front.common = (function () {
                 function hasScrolled() {
                     var st = $(this).scrollTop();
 
-                    if(Math.abs(lastScrollTop - st) <= delta)
+                    if (Math.abs(lastScrollTop - st) <= delta)
                         return;
 
-                    if (st > lastScrollTop){
+                    if (st > lastScrollTop) {
                         // Scroll Up
                         if (st > lastScrollTop) {
-                            if(st > uppperPartHeight) {
+                            if (st > uppperPartHeight) {
                                 headerDetail.removeClass('scroll-down').addClass('scroll-up');
                                 stepHeading.removeClass('scroll-down').addClass('scroll-up');
                             }
                         }
                     } else {
                         // Scroll Down
-                        if(st + $(window).height() < $(document).height()) {
-                            if(st < delta) {
+                        if (st + $(window).height() < $(document).height()) {
+                            if (st < delta) {
                                 headerDetail.removeClass('scroll-down');
                                 stepHeading.removeClass('scroll-down');
                             } else {
@@ -362,12 +362,12 @@ front.common = (function () {
         var headerHeight = header.outerHeight();
 
         /* normal */
-        if($('._header-sticky').length) {
-            $(window).scroll(function(){
+        if ($('._header-sticky').length) {
+            $(window).scroll(function () {
                 didScroll = true;
             });
 
-            setInterval(function() {
+            setInterval(function () {
                 if (didScroll) {
                     hasScrolled();
                     didScroll = false;
@@ -377,20 +377,20 @@ front.common = (function () {
             function hasScrolled() {
                 var st = $(this).scrollTop();
 
-                if(Math.abs(lastScrollTop - st) <= delta)
+                if (Math.abs(lastScrollTop - st) <= delta)
                     return;
 
-                if (st > lastScrollTop){
+                if (st > lastScrollTop) {
                     // Scroll Down
                     if (st > lastScrollTop) {
-                        if($('.inside-drg').find('._tab').length) {
+                        if ($('.inside-drg').find('._tab').length) {
                             var tabScrollPos = $('._tab').offset().top + $('._tab').outerHeight();
-                            if(st > tabScrollPos) {
+                            if (st > tabScrollPos) {
                                 header.removeClass('scroll-down').addClass('scroll-up');
-                                $('._tab').addClass('fixed').css('top','0')
+                                $('._tab').addClass('fixed').css('top', '0')
                             }
                         } else {
-                            if(st > headerHeight) {
+                            if (st > headerHeight) {
                                 header.removeClass('scroll-down').addClass('scroll-up');
                             }
                         }
@@ -405,13 +405,13 @@ front.common = (function () {
                             } else {
                                 $('._tab').addClass('fixed').css('top', headerHeight + 'px')
                             }
-                            if(st < delta) {
+                            if (st < delta) {
                                 header.removeClass('scroll-down');
                             } else {
                                 header.removeClass('scroll-up').addClass('scroll-down');
                             }
                         } else {
-                            if(st < delta) {
+                            if (st < delta) {
                                 header.removeClass('scroll-down');
                             } else {
                                 header.removeClass('scroll-up').addClass('scroll-down');
@@ -424,12 +424,12 @@ front.common = (function () {
         }
 
         /* white header 경우 */
-        if($('.header-white').length) {
-            $(window).scroll(function(){
+        if ($('.header-white').length) {
+            $(window).scroll(function () {
                 didScroll = true;
             });
 
-            setInterval(function() {
+            setInterval(function () {
                 if (didScroll) {
                     hasScrolled();
                     didScroll = false;
@@ -439,20 +439,59 @@ front.common = (function () {
             function hasScrolled() {
                 var st = $(this).scrollTop();
 
-                if(Math.abs(lastScrollTop - st) <= delta)
+                if (Math.abs(lastScrollTop - st) <= delta)
                     return;
 
-                if (st > lastScrollTop){
+                if (st > lastScrollTop) {
                     // Scroll Down
-                    // if (st > lastScrollTop) {
-                    // }
+                    if ($('.AI-wrap').find('._scrollTabWrap').length) {
+                        if (st > sectionStartPos) {
+                            sectionTab.show().addClass('fixed').css('top', 0 + 'px');
+                            headerWhite.hide();
+                        }
+                    } else if ($('.AI-wrap').find('._scrollAnalysisTab').length) {
+                        if (st > sectionStartPos) {
+                            sectionTab.show().addClass('fixed').css('top', 0 + 'px');
+                            headerWhite.hide();
+                        }
+                    }
                 } else {
                     // Scroll Up
-                    if(st + $(window).height() < $(document).height()) {
-                        if(st < delta) {
-                            headerWhite.addClass('header-transparent');
+                    if (st + $(window).height() < $(document).height()) {
+                        if ($('.AI-wrap').find('._scrollTabWrap').length) {
+                            // tab
+                            if (st < sectionStartPos) {
+                                sectionTab.removeClass('fixed', 'scroll-down').css('top', 0 + 'px');
+                            } else {
+                                var headerHeight = $('.header-white').outerHeight();
+                                sectionTab.addClass('fixed').css('top', headerHeight + 'px');
+                            }
+                            // header
+                            if (st < delta) {
+                                headerWhite.show().addClass('header-transparent').removeClass('scroll-down');
+                            } else {
+                                headerWhite.show().removeClass('header-transparent', 'scroll-up').addClass('scroll-down');
+                            }
+                        } else if ($('.AI-wrap').find('._scrollAnalysisTab').length) {
+                            // tab
+                            if (st < sectionStartPos) {
+                                sectionTab.removeClass('fixed', 'scroll-down').css('top', 0 + 'px');
+                            } else {
+                                var headerHeight = $('.header-white').outerHeight();
+                                sectionTab.addClass('fixed').css('top', headerHeight + 'px');
+                            }
+                            // header
+                            if (st < delta) {
+                                headerWhite.show().addClass('header-transparent').removeClass('scroll-down');
+                            } else {
+                                headerWhite.show().removeClass('header-transparent', 'scroll-up').addClass('scroll-down');
+                            }
                         } else {
-                            headerWhite.removeClass('header-transparent');
+                            if (st < delta) {
+                                headerWhite.addClass('header-transparent');
+                            } else {
+                                headerWhite.removeClass('header-transparent');
+                            }
                         }
                     }
                 }
@@ -461,12 +500,12 @@ front.common = (function () {
         }
 
         /* main header 경우 */
-        if($('.header-main').length) {
-            $(window).scroll(function(){
+        if ($('.header-main').length) {
+            $(window).scroll(function () {
                 didScroll = true;
             });
 
-            setInterval(function() {
+            setInterval(function () {
                 if (didScroll) {
                     hasScrolled();
                     didScroll = false;
@@ -480,22 +519,22 @@ front.common = (function () {
             function hasScrolled() {
                 var st = $(this).scrollTop();
 
-                if(Math.abs(lastScrollTop - st) <= delta)
+                if (Math.abs(lastScrollTop - st) <= delta)
                     return;
 
-                if (st > lastScrollTop){
+                if (st > lastScrollTop) {
                     // Scroll Down
-                    if(st > mainHeaderHeight + bannerHeight) {
+                    if (st > mainHeaderHeight + bannerHeight) {
                         mainHeader.removeClass('scroll-up').addClass('scroll-down');
                     }
                 } else {
                     // Scroll Up
-                    if(st + $(window).height() < $(document).height()) {
-                        if(st < delta) {
+                    if (st + $(window).height() < $(document).height()) {
+                        if (st < delta) {
                             mainHeader.addClass('header-transparent').removeClass('scroll-up');
                             mainHeader.removeClass('scroll-down');
                         } else {
-                            mainHeader.removeClass('header-transparent','scroll-down').addClass('scroll-up');
+                            mainHeader.removeClass('header-transparent', 'scroll-down').addClass('scroll-up');
                         }
                     }
                 }
@@ -510,12 +549,12 @@ front.common = (function () {
         var delta = 5;
         var target = $('._floatBottom');
 
-        if(target.length) {
-            $(window).scroll(function(){
+        if (target.length) {
+            $(window).scroll(function () {
                 didScroll = true;
             });
 
-            setInterval(function() {
+            setInterval(function () {
                 if (didScroll) {
                     hasScrolled();
                     didScroll = false;
@@ -525,10 +564,10 @@ front.common = (function () {
             function hasScrolled() {
                 var st = $(this).scrollTop();
 
-                if(Math.abs(lastScrollTop - st) <= delta)
+                if (Math.abs(lastScrollTop - st) <= delta)
                     return;
 
-                if (st > lastScrollTop){
+                if (st > lastScrollTop) {
                     // Scroll Down
                     if (st > lastScrollTop) {
                         // console.log('1')
@@ -548,9 +587,9 @@ front.common = (function () {
             }
         }
 
-        $('._openMenu').on('click',function (){
+        $('._openMenu').on('click', function () {
             // 열려있으면
-            if($(this).hasClass('open')) {
+            if ($(this).hasClass('open')) {
                 $(this).removeClass('open');
                 $('.menu-box').removeClass('open').hide();
                 $('.menu-drg-img').removeClass('open').hide();

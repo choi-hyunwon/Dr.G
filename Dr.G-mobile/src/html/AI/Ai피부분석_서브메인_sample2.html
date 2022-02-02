@@ -2,6 +2,8 @@
 <html lang="ko">
 @@include('../../html/include/common/head.html')
 <body>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
 <div class="wrap">
     <!-- s header -->
     @@include('../../html/include/common/header-white.html')
@@ -23,21 +25,18 @@
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="item item-1">
+                                                <a class="btn btn-sm btn-white mb-2 _replay" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" href="#">다시 실행</a>
                                                 <div class="item-img" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
-                                                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                                                    <div class="lottie lazyload">
-                                                        <lottie-player src="../../img/@temp/2time.json" background="transparent" speed="1" autoplay loop></lottie-player>
+                                                    <div class="img-sample">
+                                                        <div class="test-lottie"></div>
                                                     </div>
-<!--                                                    <img src="../../img/@temp/2time.gif" alt="">-->
-<!--                                                    <img src="../../img/AI/ico-story-1.svg" alt="">-->
-<!--                                                    <img src="../../img/AI/ico-story-2.svg" alt="">-->
                                                 </div>
                                                 <div class="item-info" data-aos="fade-up" data-aos-duration="700"
                                                      data-aos-delay="400">
                                                     <div class="font-num"><span class="num font-poppins-semiBold _num">23</span>년
                                                     </div>
                                                     <div class="font-h6 font-bold">피부 건강을 위한 연구개발</div>
-                                                    <div class="font-body-1">바른 피부 관리를 위해 끊임없이<br/>연구해온 닥터지</div>
+                                                    <div class="font-body-1">바른 피부 관리를 위해 끊임없이<br>연구해온 닥터지</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -190,15 +189,21 @@
     </div>
 </div>
 <!-- s modal -->
-@@include('_subMainScript.html' )
+<!--@@include('_subMainScript.html' )-->
 <script>
-    function load(img)
-    {
-        img.fadeOut(0, function() {
-            img.fadeIn(1000);
-        });
-    }
-    $('.lazyload').lazyload({load: load});
+    let iconSkipForward = document.querySelector('.test-lottie');
+
+    let animationSkipForward = bodymovin.loadAnimation({
+        container: iconSkipForward,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/@temp/2time.json"
+    });
+
+    $('._replay').on('click', function() {
+        animationSkipForward.playSegments([0,60], true);
+    });
 </script>
 </body>
 </html>

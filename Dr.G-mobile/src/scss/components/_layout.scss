@@ -118,6 +118,26 @@
       }
     }
   }
+
+  &.scroll-up {
+    position: fixed;
+    left: 0;
+    top: vw(-60);
+
+    + .container {
+      padding-top: vw(60) !important;
+    }
+  }
+
+  &.scroll-down {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    + .container {
+      padding-top: vw(60) !important;
+    }
+  }
 }
 
 .header-main {

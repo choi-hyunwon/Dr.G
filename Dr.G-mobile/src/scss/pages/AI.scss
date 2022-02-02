@@ -1065,10 +1065,16 @@
 
     .analysis-result {
       .tab {
+        z-index: 10;
+
         .item {
           a {
             font-family: $font;
           }
+        }
+
+        &.fixed {
+          position: fixed;
         }
       }
 
@@ -2962,6 +2968,7 @@
                           }
                         }
                       }
+
                       + .item {
                         margin-top: vw(17);
                       }
@@ -3107,7 +3114,7 @@
               width: vw(188);
               height: vw(188);
               background-color: transparent;
-              border-radius:50%;
+              border-radius: 50%;
               margin: 0 auto vw(20);
               justify-content: center;
               overflow: hidden;
@@ -3142,6 +3149,10 @@
                 //padding-top: vw(20);
 
                 .lottie {
+                  background-color: #fff;
+                }
+
+                .img-sample {
                   background-color: #fff;
                 }
 
@@ -3310,7 +3321,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        @include background-img ($width: 375, $height: 592, $category: 'AI', $img: 'bg-progress.svg');
+        @include background-img($width: 375, $height: 592, $category: 'AI', $img: 'bg-progress.svg');
       }
 
       .title {
@@ -3332,7 +3343,7 @@
 
         .step {
           display: none;
-          @include background-img ($width: 175, $height: 70, $category: 'AI', $img: 'img-progress-2.png');
+          @include background-img($width: 175, $height: 70, $category: 'AI', $img: 'img-progress-2.png');
 
           &.on {
             display: block;
@@ -3395,11 +3406,11 @@
                     height: vw(210);
                     left: 50%;
                     top: 50%;
-                    transform: translate(-50%,-50%);
+                    transform: translate(-50%, -50%);
 
                     .scan-line {
                       position: absolute;
-                      @include background-img ($width: 184, $height: 67, $category: 'AI', $img: 'img-scan-line.svg');
+                      @include background-img($width: 184, $height: 67, $category: 'AI', $img: 'img-scan-line.svg');
                       //width: vw(184);
                       //height: vw(2);
                       //background-color: $yellow;
@@ -4992,7 +5003,9 @@
   to {
     opacity: 1;
   }
-} @keyframes fadeOutAni {
+}
+
+@keyframes fadeOutAni {
   from {
     opacity: 1;
   }

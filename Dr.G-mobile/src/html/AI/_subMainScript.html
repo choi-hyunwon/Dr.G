@@ -57,33 +57,17 @@
     var scrollTab = $('._scrollTab');
     var sectionTab = $('._scrollTabWrap');
     var sectionWrap = $('.section-wrap');
+    var tabStartPos = sectionTab.position().top;
+    var sectionStartPos = sectionWrap.position().top;
     var tabHeight = scrollTab.outerHeight();
     var lastScroll = 0;
 
     $(window).scroll(function () {
         var st = $(this).scrollTop();
-        var tabStartPos = sectionTab.position().top;
-        var sectionStartPos = sectionWrap.position().top;
-        var headerHeight = $('.header-white').outerHeight();
         var sectionProcess = $('._sectionProcess').position().top;
         var sectionReview = $('._sectionReview').position().top;
         var sectionFAQ = $('._sectionFAQ').position().top;
         var offset = 200;
-
-        if (st > lastScroll) {
-            //console.log("DOWN");
-            if (window.pageYOffset >= sectionStartPos) {
-                sectionTab.show().addClass('fixed').css('top', 0 + 'px');
-            }
-        } else {
-            //console.log("UP");
-            if (window.pageYOffset >= tabStartPos) {
-                sectionTab.show().addClass('fixed').css('top', headerHeight + 'px');
-                if (window.pageYOffset < sectionStartPos) {
-                    sectionTab.show().removeClass('fixed')
-                }
-            }
-        }
 
         lastScroll = st;
 
