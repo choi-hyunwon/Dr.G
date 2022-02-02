@@ -571,6 +571,15 @@
 
     .list-with-dot {
       padding-left: vw(3);
+      li{
+        a {
+          font-weight: 500;
+          text-decoration: underline;
+          &:active, &:focus {
+            font-weight: 500;
+          }
+        }
+      }
     }
   }
 }
