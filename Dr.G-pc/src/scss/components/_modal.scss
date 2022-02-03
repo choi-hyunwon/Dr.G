@@ -102,6 +102,10 @@
   }
 }
 
+.modal.fade .modal-dialog {
+  transform: none !important;
+}
+
 /* 풀 페이지 팝업 */
 .full-popup {
   z-index: 1050;
@@ -244,15 +248,11 @@
         }
       }
     }
-
-    .popup-footer {
-      padding: vw(24) 0;
-    }
   }
 }
 
 /* 슬라이드 팝업 */
-.toast-backdrop {
+.popup-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -275,11 +275,11 @@
 }
 
 /* custom popup */
-.toast-dim {
+.popup-wrap {
   display: none;
   opacity: 0;
   z-index: 1050;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -296,14 +296,8 @@
     opacity: 0;
   }
 
-  .toast-popup {
-    &.toast-popup-lg {
-      .toast-content {
-        max-width: 600px;
-      }
-    }
-
-    .toast-content {
+  .popup {
+    .popup-content {
       width: 100%;
       max-width: 400px;
       position: absolute;
@@ -314,7 +308,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
 
-      .toast-header {
+      .popup-header {
         margin-bottom: vw(24);
         padding: 0;
         display: flex;
@@ -334,9 +328,14 @@
           text-align: left;
           color: $gray-800;
         }
+
+        .ico-close-sm {
+          width: 24px;
+          height: 24px;
+        }
       }
 
-      .toast-body {
+      .popup-body {
         padding: 0;
 
         .main-title {
@@ -615,8 +614,8 @@
 
       }
 
-      .toast-footer {
-        padding-top: vw(32);
+      .popup-footer {
+        padding-top: vw(24);
 
         &.no-padding {
           padding: 0;
@@ -644,7 +643,7 @@
 
       /*슬라이드 - 제목있음*/
       &.title {
-        .toast-body {
+        .popup-body {
           &.bg-doctor {
             background-position: 100% 0;
             background-repeat: no-repeat;
@@ -714,7 +713,7 @@
 
       /*슬라이드 - 제목없음*/
       &.no-title {
-        .toast-body {
+        .popup-body {
           padding-top: vw(8);
         }
 
@@ -725,7 +724,7 @@
         }
 
         &.type {
-          .toast-body {
+          .popup-body {
             .select-list {
               display: flex;
               flex-direction: column;
@@ -790,13 +789,13 @@
       &.navi {
         padding: 0;
 
-        .toast-header {
+        .popup-header {
           border-radius: vw(20) vw(20) 0 0;
           padding: vw(24) vw(24) 0;
           margin-bottom: vw(36);
         }
 
-        .toast-body {
+        .popup-body {
           margin: 0 auto;
           text-align: center;
 
@@ -815,7 +814,7 @@
           }
         }
 
-        .toast-footer {
+        .popup-footer {
           background-color: $gray-800;
 
           .page-btn-wrap {
@@ -864,6 +863,43 @@
             margin-top: vw(12);
           }
         }
+      }
+    }
+
+    &.popup-require-login {
+      .popup-content {
+        padding: 20px 20px 40px;
+      }
+      .popup-header {
+        justify-content: flex-end;
+        margin-bottom: 16px;
+      }
+
+      .popup-body {
+        text-align: center;
+        padding: 0 10px;
+
+        .img {
+          width: 72px;
+          margin: 0 auto 20px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .font-h5 {
+          margin-bottom: 8px;
+          color: $gray-800;
+        }
+
+        .font-body-1 {
+          color: $gray-700;
+        }
+      }
+
+      .popup-footer {
+        padding: 24px 10px 0;
       }
     }
   }

@@ -761,6 +761,18 @@ data.story = {
         },
         {
             stateClass: 'complete',
+            url: '닥터지스토리_Dr.Ahn영상_리스트_결과없음',
+            category: 'story',
+            page: '닥터지스토리_Dr.Ahn영상_리스트_결과없음'
+        },
+        {
+            stateClass: 'complete',
+            url: '닥터지스토리_Dr.Ahn영상_로그인_팝업',
+            category: 'story',
+            page: '닥터지스토리_Dr.Ahn영상_로그인_팝업'
+        },
+        {
+            stateClass: 'complete',
             url: '닥터지스토리_스킨리포트_리스트',
             category: 'story',
             page: '닥터지스토리_스킨리포트_리스트'

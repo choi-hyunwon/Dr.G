@@ -104,7 +104,7 @@
 /* 닥터지스토리  */
 .story-wrap {
   .input-search-list {
-    width: 100%;
+    width: 360px;
     margin: 0 auto vw(80);
   }
 
@@ -136,7 +136,7 @@
     .item {
       float: left;
       width: 288px;
-      margin-bottom: vw(88);
+      margin-bottom: 60px;
       margin-right: 30px;
 
       a {
@@ -359,6 +359,10 @@
 
       a {
         display: block;
+
+        > .badge{
+          margin-bottom: 2px;
+        }
       }
 
       .img {
@@ -450,6 +454,7 @@
         .img {
           border-radius: 20px 20px 20px 0;
           overflow: hidden;
+          margin-bottom: 16px;
         }
 
         .title {
@@ -459,6 +464,10 @@
           line-height: vw(28);
         }
       }
+    }
+
+    + .btn-wrap {
+      margin-top: 60px;
     }
   }
 
@@ -634,6 +643,7 @@
     .more-product {
       border-top: vw(1) solid $gray-300;
       padding-top: 60px;
+      overflow: hidden;
 
       .font-h4 {
         margin-bottom: vw(30);
@@ -665,6 +675,7 @@
     .detail-list-wrap {
       background-color: #f8f8f8;
       padding: vw(120) 0 vw(240);
+      overflow: hidden;
 
       .font-h4 {
         margin-bottom: vw(30);
@@ -861,6 +872,31 @@
             }
           }
         }
+
+        .empty {
+          text-align: center;
+          padding-top: vw(60);
+          padding-bottom: 60px;
+          border-bottom: 1px solid $gray-300;
+
+          .img {
+            width: vw(45);
+            height: auto;
+            margin: 0 auto vw(20);
+          }
+
+          .font-h6 {
+            color: $gray-800;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 4px;
+          }
+
+          .font-body-1 {
+            color: $gray-500;
+          }
+        }
       }
     }
 
@@ -874,6 +910,7 @@
 
       .input-search {
         margin-bottom: vw(40);
+        width: 100%;
       }
 
       .search-list {
@@ -930,16 +967,16 @@
   /* 스킨 리포트 */
   .skin-report {
     .heading {
-      padding: 0 vw(24);
+      text-align: center;
 
       .font-h1 {
-        padding-top: vw(20);
-        margin-bottom: vw(48);
+        padding-top: vw(40);
+        margin-bottom: vw(80);
       }
     }
 
     .list {
-      padding: 0 vw(24) vw(76);
+      //padding: 0 vw(24) vw(76);
 
       .item {
         border-radius: vw(12);
@@ -949,18 +986,24 @@
 
   .skin-report-detail {
     .heading {
-      padding: vw(21) vw(24) vw(32);
+      width: 900px;
+      margin: 0 auto 60px;
+      padding: vw(40) 0 40px;
       text-align: center;
+      border-bottom: 1px solid $gray-900;
 
       .sub-title {
-        margin-bottom: vw(7);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: vw(8);
 
         .font-h6 {
           display: inline-block;
           vertical-align: middle;
-          line-height: vw(25);
+          font-size: 20px;
+          line-height: vw(30);
           color: $gray-800;
-          margin-right: vw(4);
         }
 
         .badge {
@@ -969,28 +1012,28 @@
           padding: 0 vw(9);
           height: vw(25);
           line-height: vw(25);
+          margin-bottom: 10px;
         }
       }
 
       .font-h2 {
-        padding: 0 vw(8);
-        margin-bottom: vw(12);
+        margin: 0 0 8px;
         @include ellipsis(2);
       }
 
       .date {
         font-family: $poppins-regular;
-        font-size: vw(13);
-        line-height: vw(20);
+        font-size: vw(15);
+        line-height: vw(22);
         text-align: center;
         color: $gray-600;
       }
     }
 
     .editor-area {
-      width: 100%;
+      width: 900px;
       height: auto;
-      margin-bottom: vw(32);
+      margin: 0 auto;
 
       img {
         width: 100%;
@@ -1000,8 +1043,11 @@
 
     .sns-wrap {
       display: flex;
+      width: 900px;
       justify-content: center;
-      margin-bottom: vw(48);
+      padding-top: 60px;
+      margin: 60px auto 120px;
+      border-top: 1px solid $gray-300;
 
       a + a {
         margin-left: vw(12);

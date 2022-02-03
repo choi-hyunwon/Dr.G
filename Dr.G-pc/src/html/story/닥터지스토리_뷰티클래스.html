@@ -4,7 +4,7 @@
 <body>
 <div class="wrap">
     <!-- s header -->
-    @@include('../../html/include/common/header-detail.html')
+    @@include('../../html/include/common/header.html')
     <!-- e header -->
 
     <!-- s contents -->
@@ -15,12 +15,8 @@
                     <div class="sub-title">
                         <div class="font-h6 font-bold">뷰티 클래스</div>
                         <div class="badge badge-primary">모집중</div>
-<!--                        <div class="badge badge-gray">모집완료</div>-->
                     </div>
-                    <div class="font-h2 font-bold">
-                        뷰티클래스 타이틀 영역<br/>
-                        입니다 두줄처리
-                    </div>
+                    <div class="font-h2 font-bold">뷰티클래스 타이틀 영역입니다</div>
                     <div class="date">2020.08.12 ~ 2020.08.12</div>
                 </div>
                 <div class="editor-area"><img src="../../img/@temp/area-editor.png" alt="관련 제품 알아보기"></div>
@@ -29,36 +25,114 @@
                     <a href="#" class="btn-sns-facebook"><i class="icon ico-sns-facebook"></i></a>
                     <a href="#" class="btn-sns-line"><i class="icon ico-sns-line"></i></a>
                 </div>
-                <div class="list-wrap">
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s 1242px 벗어남 / 예외 -->
+    <div class="story-wrap">
+        <div class="inside-drg-detail">
+            <div class="detail-list-wrap">
+                <div class="container">
                     <div class="font-h4 font-bold">지난 뷰티클래스 확인하기</div>
-                    <div class="list _listScroll">
-                        @@include('./_listBeautyClass.html')
-                    </div>
-                    <div class="btn-wrap">
-                        <div class="btn btn-lg btn-black">더보기</div>
+                    <div class="product-list round-type">
+                        <div class="swiper-container _infoList">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <span class="img">
+                                                <span class="img-inner"><img src="../../img/@temp/skinreport-1.png" alt="우리 모두가 편리할 권리"></span>
+                                            </span>
+                                            <span class="badge badge-primary">모집중</span>
+                                            <span class="title">트러블 생활 백서</span>
+                                            <span class="date">2020.08.12</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <span class="img">
+                                                <span class="img-inner"><img src="../../img/@temp/skinreport-2.png" alt="우리 모두가 편리할 권리"></span>
+                                            </span>
+                                            <span class="badge badge-primary">모집중</span>
+                                            <span class="title">수부지 인사이트 #민감편</span>
+                                            <span class="date">2020.08.12</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <span class="img">
+                                                <span class="img-inner"><img src="../../img/@temp/skinreport-1.png" alt="우리 모두가 편리할 권리"></span>
+                                            </span>
+                                            <span class="badge badge-gray">모집완료</span>
+                                            <span class="title">수부지 인사이트</span>
+                                            <span class="date">2020.08.12</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <span class="img">
+                                                <span class="img-inner"><img src="../../img/@temp/skinreport-2.png" alt="우리 모두가 편리할 권리"></span>
+                                            </span>
+                                            <span class="badge badge-gray">모집완료</span>
+                                            <span class="title">건강한 피부를 향한 닥터지 첫 번째 기록</span>
+                                            <span class="date">2020.08.12</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <span class="img">
+                                                <span class="img-inner"><img src="../../img/@temp/skinreport-1.png" alt="우리 모두가 편리할 권리"></span>
+                                            </span>
+                                            <span class="badge badge-gray">모집완료</span>
+                                            <span class="title">트러블 생활 백서</span>
+                                            <span class="date">2020.08.12</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <span class="img">
+                                                <span class="img-inner"><img src="../../img/@temp/skinreport-2.png" alt="우리 모두가 편리할 권리"></span>
+                                            </span>
+                                            <span class="badge badge-gray">모집완료</span>
+                                            <span class="title">수부지 인사이트 #민감편</span>
+                                            <span class="date">2020.08.12</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-navigation">
+                            <a class="btn-prev"><i class="icon ico-nav-prev-gray"></i></a>
+                            <a class="btn-next"><i class="icon ico-nav-next-gray"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- e contents -->
-    <!-- s footer -->
-<!--    @@include('../../html/include/common/footer.html')-->
-    <!-- e footer -->
+    <!-- e 1242px 벗어남 / 예외 -->
 </div>
 <script>
-    $(document).ready(function () {
-        var sum = 0;
-        var listItem = $('._listScroll .item');
-
-        listItem.each(function () {
-            sum = sum + $(this).outerWidth(true);
-        });
-
-        $('._listScroll ul').css('width', sum + 24 * 100 / 375 +  'px');
-    })
-
-    //  .item가 1개 추가 될 경우 => (172 * 100 / 375)vw = 45.8666vw가 $('._listScroll ul')에 더해져야함
+    var infoSlider = new Swiper("._infoList", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '._infoList + .swiper-navigation .btn-next',
+            prevEl: '._infoList + .swiper-navigation .btn-prev',
+        },
+    });
 </script>
 </body>
 </html>

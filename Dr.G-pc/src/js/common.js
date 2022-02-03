@@ -78,11 +78,11 @@ front.common = (function () {
                 let textValue = $(this).find('span').text();
 
                 function ChangeText() {
-                    $('._toast-popup-open.text').find('span').text(textValue).css({
+                    $('._showPopup.text').find('span').text(textValue).css({
                         'color': '#444444',
                         'font-weight': 'bold'
                     });
-                    $('._toast-popup-open.text').css({
+                    $('._showPopup.text').css({
                         'background-image': 'url(../../img/common/ico-arrow-down-sm.svg)'
                     })
                 }
@@ -100,11 +100,11 @@ front.common = (function () {
                 let textValue = $(this).find('span').text();
 
                 function ChangeText() {
-                    $('._toast-popup-open.age').find('span').text(textValue).css({
+                    $('._showPopup.age').find('span').text(textValue).css({
                         'color': '#444444',
                         'font-weight': 'bold'
                     });
-                    $('._toast-popup-open.age').css({
+                    $('._showPopup.age').css({
                         'background-image': 'url(../../img/common/ico-arrow-down-sm.svg)'
                     });
                 }
@@ -114,14 +114,6 @@ front.common = (function () {
                 ChangeText();
             });
         });
-
-        /* vh 이슈 수정 */
-        // let vh = window.innerHeight * 0.01
-        // document.documentElement.style.setProperty('--vh', `${vh}px`)
-        // window.addEventListener('resize', () => {
-        //     let vh = window.innerHeight * 0.01
-        //     document.documentElement.style.setProperty('--vh', `${vh}px`)
-        // })
 
         /* 알림 팝업 */
         var noticePopup = $('._noticePopup');
@@ -151,51 +143,6 @@ front.common = (function () {
             }
             lastScroll = st;
         });
-
-        /* gnb show */
-        // $('._gnbShow').on('click',function (){
-        //     $('._gnb').modal('show')
-        // })
-
-        /* gnb menu */
-        // $(document).ready(function (){
-        //     var gnbSet = {
-        //         click: function (target, speed) {
-        //             var _self = this, $target = $(target);
-        //             _self.speed = speed || 300;
-        //             $target.each(function () {
-        //                 if (findChildren($(this))) {
-        //                     return;
-        //                 }
-        //             });
-        //
-        //             function findChildren(obj) {
-        //                 return obj.find('> ul').length > 0;
-        //             }
-        //
-        //             $target.on('click', 'a', function (e) {
-        //                 e.stopPropagation();
-        //                 var $this = $(this), $depthTarget = $this.next(), $siblings = $this.parent().siblings();
-        //                 $this.parent('li').find('ul li').removeClass('on');
-        //                 $siblings.removeClass('on');
-        //                 $siblings.find('ul').slideUp(250);
-        //                 if ($depthTarget.css('display') == 'none') {
-        //                     _self.activeOn($this);
-        //                     $depthTarget.slideDown(_self.speed);
-        //                 } else {
-        //                     $depthTarget.slideUp(_self.speed);
-        //                     _self.activeOff($this);
-        //                 }
-        //             })
-        //         }, activeOff: function ($target) {
-        //             $target.parent().removeClass('on');
-        //         }, activeOn: function ($target) {
-        //             $target.parent().addClass('on');
-        //         }
-        //     };
-        //
-        //     gnbSet.click('#menu li', 300)
-        // })
     }
 
     var tab = function () {
@@ -216,22 +163,12 @@ front.common = (function () {
     }
 
     var introScroll = function introScroll() {
-        // var lastScroll = 0;
-        // $('._full-popup > .popup-content').scroll(function () {
-        //     var st = $(this).scrollTop();
-        //     if (st === 0) {
-        //         $('._popup-header').removeClass('header-white');
-        //     } else {
-        //         $('._popup-header').addClass('header-white');
-        //     }
-        //     lastScroll = st;
-        // });
     }
 
     var onClickModal = function OnclickModal() {
-        let popupOpen = $('._toast-popup-open');
-        let popupClose = $('._toast-popup-close');
-        let toastPopup = $('.toast-dim');
+        let popupOpen = $('._showPopup');
+        let popupClose = $('._hidePopup');
+        let popup = $('.popup-wrap');
 
         popupOpen.on('click', function () {
             showPopup()
@@ -240,325 +177,22 @@ front.common = (function () {
             hidePopup()
         });
 
-        /*외부클릭시 삭제*/
-        toastPopup.mouseup(function (e) {
-            let toastPopup = $('.toast-popup');
-            if (toastPopup.has(e.target).length === 0) {
+        /* 외부클릭시 삭제 */
+        popup.mouseup(function (e) {
+            let popup = $('.popup');
+            if (popup.has(e.target).length === 0) {
                 hidePopup()
             }
         })
     }
 
     var headerDetails = function () {
-        // var didScroll;
-        // var lastScrollTop = 0;
-        // var delta = 5;
-        // var headerDetail = $('.header-details');
-        // var headerDetailHeight = headerDetail.outerHeight();
-        // var stepHeading = $('.step-heading');
-        // var uppperPartHeight = headerDetail.outerHeight() + stepHeading.outerHeight();
-        //
-        // if ($('.container').find('._static').length == false) {
-        //     /* normal case*/
-        //     if($('.container').find('.step-heading').length == false) {
-        //         $(window).scroll(function(){
-        //             didScroll = true;
-        //         });
-        //
-        //         setInterval(function() {
-        //             if (didScroll) {
-        //                 hasScrolled();
-        //                 didScroll = false;
-        //             }
-        //         }, 10);
-        //
-        //         function hasScrolled() {
-        //             var st = $(this).scrollTop();
-        //
-        //             if(Math.abs(lastScrollTop - st) <= delta)
-        //                 return;
-        //
-        //             if (st > lastScrollTop){
-        //                 // Scroll Up
-        //                 if (st > lastScrollTop) {
-        //                     if(st > headerDetailHeight) {
-        //                         headerDetail.removeClass('scroll-down').addClass('scroll-up');
-        //                     }
-        //                 }
-        //             } else {
-        //                 // Scroll Down
-        //                 if(st + $(window).height() < $(document).height()) {
-        //                     if(st < delta) {
-        //                         headerDetail.removeClass('scroll-down');
-        //                     } else {
-        //                         headerDetail.removeClass('scroll-up').addClass('scroll-down');
-        //                     }
-        //                 }
-        //             }
-        //             lastScrollTop = st;
-        //         }
-        //     }
-        //     /* 스킨멘토링 step이랑 있을 경우 */
-        //    else {
-        //         $(window).scroll(function(){
-        //             didScroll = true;
-        //         });
-        //
-        //         setInterval(function() {
-        //             if (didScroll) {
-        //                 hasScrolled();
-        //                 didScroll = false;
-        //             }
-        //         }, 10);
-        //
-        //         function hasScrolled() {
-        //             var st = $(this).scrollTop();
-        //
-        //             if(Math.abs(lastScrollTop - st) <= delta)
-        //                 return;
-        //
-        //             if (st > lastScrollTop){
-        //                 // Scroll Up
-        //                 if (st > lastScrollTop) {
-        //                     if(st > uppperPartHeight) {
-        //                         headerDetail.removeClass('scroll-down').addClass('scroll-up');
-        //                         stepHeading.removeClass('scroll-down').addClass('scroll-up');
-        //                     }
-        //                 }
-        //             } else {
-        //                 // Scroll Down
-        //                 if(st + $(window).height() < $(document).height()) {
-        //                     if(st < delta) {
-        //                         headerDetail.removeClass('scroll-down');
-        //                         stepHeading.removeClass('scroll-down');
-        //                     } else {
-        //                         headerDetail.removeClass('scroll-up').addClass('scroll-down');
-        //                         stepHeading.removeClass('scroll-up').addClass('scroll-down');
-        //                     }
-        //                 }
-        //             }
-        //             lastScrollTop = st;
-        //         }
-        //     }
-        // }
     }
 
     var header = function () {
-        // var didScroll;
-        // var lastScrollTop = 0;
-        // var delta = 5;
-        // var header = $('._header-sticky');
-        // var headerWhite = $('.header-white');
-        // var headerHeight = header.outerHeight();
-        //
-        // /* normal */
-        // if($('._header-sticky').length) {
-        //     $(window).scroll(function(){
-        //         didScroll = true;
-        //     });
-        //
-        //     setInterval(function() {
-        //         if (didScroll) {
-        //             hasScrolled();
-        //             didScroll = false;
-        //         }
-        //     }, 10);
-        //
-        //     function hasScrolled() {
-        //         var st = $(this).scrollTop();
-        //
-        //         if(Math.abs(lastScrollTop - st) <= delta)
-        //             return;
-        //
-        //         if (st > lastScrollTop){
-        //             // Scroll Down
-        //             if (st > lastScrollTop) {
-        //                 if($('.inside-drg').find('._tab').length) {
-        //                     var tabScrollPos = $('._tab').offset().top + $('._tab').outerHeight();
-        //                     if(st > tabScrollPos) {
-        //                         header.removeClass('scroll-down').addClass('scroll-up');
-        //                         $('._tab').addClass('fixed').css('top','0')
-        //                     }
-        //                 } else {
-        //                     if(st > headerHeight) {
-        //                         header.removeClass('scroll-down').addClass('scroll-up');
-        //                     }
-        //                 }
-        //             }
-        //         } else {
-        //             // Scroll Up
-        //             if (st + $(window).height() < $(document).height()) {
-        //                 if ($('.inside-drg').find('._tab').length) {
-        //                     var tabContentOffset = $('.tab-content').offset().top;
-        //                     if (tabContentOffset > st) {
-        //                         $('._tab').removeClass('fixed').css('top', 'auto')
-        //                     } else {
-        //                         $('._tab').addClass('fixed').css('top', headerHeight + 'px')
-        //                     }
-        //                     if(st < delta) {
-        //                         header.removeClass('scroll-down');
-        //                     } else {
-        //                         header.removeClass('scroll-up').addClass('scroll-down');
-        //                     }
-        //                 } else {
-        //                     if(st < delta) {
-        //                         header.removeClass('scroll-down');
-        //                     } else {
-        //                         header.removeClass('scroll-up').addClass('scroll-down');
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //         lastScrollTop = st;
-        //     }
-        // }
-        //
-        // /* white header 경우 */
-        // if($('.header-white').length) {
-        //     $(window).scroll(function(){
-        //         didScroll = true;
-        //     });
-        //
-        //     setInterval(function() {
-        //         if (didScroll) {
-        //             hasScrolled();
-        //             didScroll = false;
-        //         }
-        //     }, 10);
-        //
-        //     function hasScrolled() {
-        //         var st = $(this).scrollTop();
-        //
-        //         if(Math.abs(lastScrollTop - st) <= delta)
-        //             return;
-        //
-        //         if (st > lastScrollTop){
-        //             // Scroll Down
-        //             // if (st > lastScrollTop) {
-        //             // }
-        //         } else {
-        //             // Scroll Up
-        //             if(st + $(window).height() < $(document).height()) {
-        //                 if(st < delta) {
-        //                     headerWhite.addClass('header-transparent');
-        //                 } else {
-        //                     headerWhite.removeClass('header-transparent');
-        //                 }
-        //             }
-        //         }
-        //         lastScrollTop = st;
-        //     }
-        // }
-        //
-        // /* main header 경우 */
-        // if($('.header-main').length) {
-        //     $(window).scroll(function(){
-        //         didScroll = true;
-        //     });
-        //
-        //     setInterval(function() {
-        //         if (didScroll) {
-        //             hasScrolled();
-        //             didScroll = false;
-        //         }
-        //     }, 10);
-        //
-        //     var mainHeader = $('.header-main');
-        //     var mainHeaderHeight = $('.header-main').outerHeight();
-        //     var bannerHeight = $('._mainBanner').outerHeight();
-        //
-        //     function hasScrolled() {
-        //         var st = $(this).scrollTop();
-        //
-        //         if(Math.abs(lastScrollTop - st) <= delta)
-        //             return;
-        //
-        //         if (st > lastScrollTop){
-        //             // Scroll Down
-        //             if(st > mainHeaderHeight + bannerHeight) {
-        //                 mainHeader.removeClass('scroll-up').addClass('scroll-down');
-        //             }
-        //         } else {
-        //             // Scroll Up
-        //             if(st + $(window).height() < $(document).height()) {
-        //                 if(st < delta) {
-        //                     mainHeader.addClass('header-transparent').removeClass('scroll-up');
-        //                     mainHeader.removeClass('scroll-down');
-        //                 } else {
-        //                     mainHeader.removeClass('header-transparent','scroll-down').addClass('scroll-up');
-        //                 }
-        //             }
-        //         }
-        //         lastScrollTop = st;
-        //     }
-        // }
     }
 
     var floatBottom = function () {
-        // var didScroll;
-        // var lastScrollTop = 0;
-        // var delta = 5;
-        // var target = $('._floatBottom');
-        //
-        // if(target.length) {
-        //     $(window).scroll(function(){
-        //         didScroll = true;
-        //     });
-        //
-        //     setInterval(function() {
-        //         if (didScroll) {
-        //             hasScrolled();
-        //             didScroll = false;
-        //         }
-        //     }, 10);
-        //
-        //     function hasScrolled() {
-        //         var st = $(this).scrollTop();
-        //
-        //         if(Math.abs(lastScrollTop - st) <= delta)
-        //             return;
-        //
-        //         if (st > lastScrollTop){
-        //             // Scroll Down
-        //             if (st > lastScrollTop) {
-        //                 // console.log('1')
-        //                 target.addClass('hide').removeClass('show');
-        //             }
-        //         } else {
-        //             // Scroll Up
-        //             if (st + $(window).height() < $(document).height()) {
-        //                 // console.log('2')
-        //                 target.addClass('show').removeClass('hide');
-        //                 // if(st < delta) {
-        //                 // } else {
-        //                 // }
-        //             }
-        //         }
-        //         lastScrollTop = st;
-        //     }
-        // }
-        //
-        // $('._openMenu').on('click',function (){
-        //     // 열려있으면
-        //     if($(this).hasClass('open')) {
-        //         $(this).removeClass('open');
-        //         $('.menu-box').removeClass('open').hide();
-        //         $('.menu-drg-img').removeClass('open').hide();
-        //         $('.menu-drg-txt').removeClass('open').hide();
-        //         $('.menu-link-box').removeClass('open').hide();
-        //         $('body').removeClass('scrOff')
-        //         $('.page-dim').hide()
-        //     } else {
-        //         // 닫혀있으면
-        //         $(this).addClass('open');
-        //         $('.menu-box').show().addClass('open')
-        //         $('.menu-drg-img').show().addClass('open')
-        //         $('.menu-drg-txt').show().addClass('open')
-        //         $('.menu-link-box').show().addClass('open')
-        //         $('body').addClass('scrOff')
-        //         $('.page-dim').show()
-        //     }
-        // })
     }
 
     var ani = function () {
@@ -584,35 +218,36 @@ $(function () {
 });
 
 function showPopup() {
-    var toastPopup = $('.toast-dim');
-    var popupOpen = $('._toast-popup-open');
-    var idx = popupOpen.index(this);
-    var toastBackDrop = $('.toast-backdrop');
+    var popup = $('.popup-wrap');
+    var btnPopupTrigger = $('._showPopup');
+    var idx = btnPopupTrigger.index(this);
 
-    toastPopup.eq(idx).removeClass('hide').css('display', 'block');
-    popupOpen.parent().after(`<div class="toast-backdrop"></div>`);
+    popup.eq(idx).removeClass('hide').css('display', 'block');
+    btnPopupTrigger.parent().after(`<div class="popup-backdrop"></div>`);
+    $('body').addClass('scrOff')
 
     setTimeout(function (){
-        var toastPopup = $('.toast-dim');
-        var toastBackDrop = $('.toast-backdrop');
+        var popup = $('.popup-wrap');
+        var popupBackDrop = $('.popup-backdrop');
 
-        toastBackDrop.addClass('show')
-        toastPopup.eq(idx).removeClass('hide').addClass('show')
+        popupBackDrop.addClass('show')
+        popup.eq(idx).removeClass('hide').addClass('show')
     },300)
 }
 
 function hidePopup() {
-    var toastPopup = $('.toast-dim');
-    var toastBackDrop = $('.toast-backdrop');
+    var popup = $('.popup-wrap');
+    var popupBackDrop = $('.popup-backdrop');
 
-    toastPopup.removeClass('show').addClass('hide');
-    toastBackDrop.removeClass('show').addClass('hide');
+    popup.addClass('hide').removeClass('show');
+    popupBackDrop.addClass('hide').removeClass('show');
+    $('body').removeClass('scrOff')
 
     setTimeout(function (){
-        var toastPopup = $('.toast-dim');
-        var toastBackDrop = $('.toast-backdrop');
+        var popup = $('.popup-wrap');
+        var popupBackDrop = $('.popup-backdrop');
 
-        toastPopup.css('display', 'none');
-        toastBackDrop.remove();
+        popup.css('display', 'none');
+        popupBackDrop.remove();
     },300)
 }
