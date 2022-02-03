@@ -1364,15 +1364,11 @@
           width: 100%;
 
           /*흘러가기 ㅠㅠ*/
-        /*  height: 200px;
-          background: red;
-          background: -webkit-linear-gradient(transparent, rgba(255,230,101,1) 60%);
-          background: -o-linear-gradient(transparent, rgba(255,230,101,1) 60%);
-          background: -moz-linear-gradient(transparent, rgba(255,230,101,1) 60%);
-          background: linear-gradient(transparent, rgba(255,230,101,1) 60%);*/
-
-
-
+          height: 200px;
+          background: -webkit-linear-gradient(rgba(255,255,255,0), rgba(255,230,101,1) 60%);
+          background: -o-linear-gradient(rgba(255,255,255,0), rgba(255,230,101,1) 60%);
+          background: -moz-linear-gradient(rgba(255,255,255,0), rgba(255,230,101,1) 60%);
+          background: linear-gradient(rgba(255,255,255,0), rgba(255,230,101,1) 60%);
         }
       }
 
