@@ -61,6 +61,7 @@
       line-height: 44px;
       color: #ffffff;
       margin-bottom: vw(8);
+      letter-spacing: -0.02em;
     }
 
     .tag {
@@ -456,29 +457,30 @@
     }
 
     .more-product {
+      border-top: vw(1) solid $gray-300;
+      padding-top: 60px;
+
       .font-h4 {
-        margin-bottom: vw(24);
-        padding-left: vw(24);
+        margin-bottom: vw(30);
+        padding-left: vw(45);
         color: $gray-800;
       }
 
-      .list-scroll {
-        margin-bottom: vw(32);
-
-        ul {
-          width: vw(850);
-
-          .item {
-            &:first-child {
-              margin-left: vw(24);
-            }
-          }
-        }
-      }
+      //.list-scroll {
+      //  margin-bottom: vw(32);
+      //
+      //  ul {
+      //    width: vw(850);
+      //
+      //    .item {
+      //      &:first-child {
+      //        margin-left: vw(24);
+      //      }
+      //    }
+      //  }
+      //}
 
       .btn-sns-wrap {
-        padding-right: vw(24);
-        padding-left: vw(24);
         margin-bottom: vw(48);
 
         .btn-sns-inner {
@@ -495,6 +497,67 @@
           &:last-child {
             margin-right: 0;
           }
+        }
+      }
+    }
+
+    .product-list {
+      position: relative;
+      padding-bottom: 60px;
+
+      .swiper-container {
+        width: 1154px;
+
+        .swiper-slide {
+          width: 266px;
+        }
+      }
+
+      .swiper-navigation {
+        position: absolute;
+        width: 100%;
+        top: 115px;
+        z-index: 1;
+
+        .btn-next, .btn-prev {
+          display: block;
+          position: absolute;
+        }
+
+        .btn-prev {
+          left: -10px;
+        }
+
+        .btn-next {
+          right: -10px;
+        }
+      }
+
+      .item {
+        width: 266px;
+
+        a {
+          display: block;
+        }
+
+        .img {
+          display: block;
+          width: 266px;
+          height: 266px;
+          margin-bottom: 30px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .title {
+          height: 48px;
+          font-size: 16px;
+          line-height: 24px;
+          color: $gray-800;
+          @include ellipsis(2);
         }
       }
     }

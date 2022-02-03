@@ -294,3 +294,11 @@
 .ico-banner-close {
   @include background-img($width: 38, $height: 38, $category: 'common', $img: 'ico-banner-close.svg');
 }
+
+.ico-nav-prev-gray {
+  @include background-img($width: 32, $height: 32, $category: 'common', $img: 'ico-nav-prev-gray.svg');
+}
+
+.ico-nav-next-gray {
+  @include background-img($width: 32, $height: 32, $category: 'common', $img: 'ico-nav-next-gray.svg');
+}

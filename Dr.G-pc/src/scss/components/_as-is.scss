@@ -64,15 +64,13 @@
   font-family: $poppins-semiBold;
 }
 
+.tab__uio__top .tab:first-child.active:before {
+  content: none;
+}
+
 /** ---------------------------------------------
  * # 레이아웃 | 하단
  * ----------------------------------------------
- * 1. 하단 로고 정의
- * 2. 하단 메뉴 정의
- * 3. 회사 정보 정의
- * 4. SNS 메뉴 정의
- * 5. 고객센터 안내 정의
- * 6. 언어변경 정의
 */
 .l__footer {background:#222;line-height:0;font-size:0;position:relative;z-index:40;min-height:340px;}
 .l__footer .footer__in {position:relative;font-size:0px;padding-top:60px;padding-bottom:62px;max-width:1300px;will-change:width;transition:width 0.3s 0s linear;margin-left:auto;margin-right:auto;}
