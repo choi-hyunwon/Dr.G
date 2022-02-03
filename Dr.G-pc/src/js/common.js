@@ -143,11 +143,30 @@ front.common = (function () {
             }
             lastScroll = st;
         });
+
+        /* 상단으로 이동 */
+        var $btn = $('.uio-top-btn'),$win, actClass;
+        if(!$btn.length) return;
+        $win = $(window);
+        actClass = 'show';
+        $win.on('scroll load',function(){
+            var c = $(this).scrollTop();
+            if( c > 100 ) {
+                $btn.addClass('show');
+                TweenMax.to($btn,0.5,{opacity: 1,y: 0});
+            } else {
+                $btn.removeClass('show');
+                TweenMax.to($btn,0.5,{opacity: 0,y: 200});
+            }
+        });
+        $btn.on('click',function(){
+            $('html,body').stop(true, true).animate({scrollTop: 0}, 500);
+        })
     }
 
     var tab = function () {
         $('._tab').each(function (){
-            var tabItem = $(this).children().children('.item');
+            var tabItem = $(this).find('.item');
             var tabItemLink = tabItem.find('a');
             var pane = $(this).siblings('.tab-content');
             var paneItem = pane.children('.tab-pane');
