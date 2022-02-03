@@ -2,8 +2,8 @@
   $(document).ready(function () {
 
     // 질문 클릭 시
-    let answer = $('.answer')
-    let list = $(this).find('li');
+    let answer = $('.question-box .answer')
+    let list = answer.find('li');
     answer.each(function () {
       list.on('click', function () {
         $(this).siblings().hide()
@@ -130,5 +130,187 @@
     });
 
 /*-------------e 분석결과 상세 (스킨케어,헤어제품)-----------------*/
+
+
+    /*서브메인*/
+    /*gauge number*/
+    let mainCounter = setInterval(function () {
+      let text = $('._sub-main .img-box .percent .counter');
+      let gaugeText = text.html();
+      let counter = parseInt(gaugeText);
+
+      if (counter !== 74) {
+        text.html(counter + 1);
+      } else {
+        clearInterval(mainCounter);
+      }
+    }, 20);
+  });
+
+
+  /*tab*/
+  let sectionTab = $('._section-tab');
+   let lastScroll = 0;
+  $(window).scroll(function (){
+    if($('.container').find('._sub-main').length){
+      let st = $(this).scrollTop();
+      //console.log(st);
+      let sectionTabOffset = $('._section-tab').position ().top;
+      let sectionAbout = $('.section-about').position ().top;
+
+      if (st > lastScroll){
+        //console.log("DOWN");
+        if (window.pageYOffset > sectionTabOffset) {
+          // sectionTab.hide();
+          sectionTab.addClass('fixed').addClass('top_0');
+        }
+      }
+      else {
+        //console.log("UP");
+        if (window.pageYOffset >= sectionTabOffset) {
+          sectionTab.addClass('fixed').removeClass('top_0');
+          if (window.pageYOffset < sectionAbout) {
+            sectionTab.removeClass('fixed')
+          }
+        }
+      }
+      //Updates scroll position
+      lastScroll = st;
+
+
+
+      /* 탭활성화 */
+      let section = $('.section')
+      let tab = $('._section-tab .item')
+      section.each(function( index, element ) {
+        // console.log( section.eq(index));
+        if ( st > $(this).offset().top - 350){
+          tab.removeClass('active')
+          tab.eq(index).addClass('active')
+        }
+      });
+
+    }
+  });
+  $('.slide-tab .item a').on('click',function (){
+    let idx = $(this).parent().index()
+    console.log(idx)
+    let offset = $('.section').eq(idx).offset();
+    let headHeight = $('.header-white').height() + $('._tab').height()
+
+    if ($('.header-white').hasClass('header-transparent')){
+      $('html, body').animate({scrollTop : offset.top - headHeight},400)
+    }else {
+      $('html, body').animate({scrollTop : offset.top},400)
+    }
+
+  })
+
+
+
+
+
+
+  /*서브메인 what*/
+  var stepSwiper = new Swiper ('.step-swiper', {
+    loop: true,
+    speed: 800,
+    autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+      delay : 3000,   // 시간 설정
+    },
+    slidesPerView: 3,/*보여지는 갯수*/
+    centeredSlides: true, /*가운데 정렬*/
+   // allowTouchMove: false, /*터치금지*/
+    initialSlide: 1, /*시작 슬라이드*/
+  //  spaceBetween:20
+
+  })
+
+
+  let whatSwiper = new Swiper('.what-swiper', {
+    loop: true,
+    speed : 800,
+    autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+      delay : 3000,   // 시간 설정
+      disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+    },
+    pagination: {
+      el: ".process-pagination",
+    },
+  });
+  whatSwiper.on('transitionEnd', function () {
+    let idx = whatSwiper.realIndex + 1
+    //console.log(idx);
+    $('.step-box .step').removeClass('active')
+    $('.step-box .step').eq(idx).addClass('active')
+  });
+
+
+
+  /*서브메인 process*/
+  let processSwiper = new Swiper('.process-swiper', {
+    loop: true,
+    speed : 800,
+    autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+      delay : 3000,   // 시간 설정
+      disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+    },
+    pagination: {
+      el: ".process-pagination",
+    },
+  });
+  processSwiper.on('transitionEnd', function () {
+    let idx = processSwiper.realIndex + 1
+    let stepLi = $('.analysis-sub-main .step-box li')
+    console.log(idx);
+
+    if (idx == 1){
+      stepLi.removeClass('active check bar')
+      stepLi.eq(0).addClass('active')
+    }else if (idx == 2){
+
+      stepLi.eq(0).removeClass('active')
+      stepLi.eq(1).addClass('active bar')
+      stepLi.eq(2).removeClass('active')
+    }else if(idx == 3){
+      stepLi.eq(0).removeClass('active')
+      stepLi.eq(1).removeClass('active').addClass('check bar')
+      stepLi.eq(2).addClass('active bar')
+    }
+  });
+
+
+
+
+  /*서브메인 voc*/
+  $('.voc .review_box .item').on('click', function () {
+    if (!$(this).hasClass('active')) {
+      $(this).addClass('active').slideDown();
+      $(this).siblings().removeClass('active');
+    } else {
+      $(this).removeClass('active');
+    }
+  })
+
+  /*서브메인 faq*/
+  let box = $('.faq_box')
+  let item = $('.faq_box .item')
+  let solution = $('.solution')
+  item.on('click', function () {
+    if (!$(this).hasClass('active')) {
+      $(this).siblings().removeClass('active')
+      $(this).siblings().find(solution).slideUp(200);
+      $(this).addClass('active');
+      $(this).find(solution).slideDown(200);
+    } else {
+      $(this).removeClass('active');
+      $(this).find(solution).slideUp(200);
+    }
+  })
+  $('body').click(function(e) { /*외부클릭시 닫힘처리*/
+    if(!box.has(e.target).length){
+      item.removeClass('active');
+      item.find('.solution').slideUp(200);
+    }
   });
   </script>
