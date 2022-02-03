@@ -103,6 +103,13 @@
 
 /* 닥터지스토리  */
 .story-wrap {
+  .inner {
+    position: relative;
+    max-width: 1242px;
+    min-width: 1242px;
+    margin: 0 auto;
+  }
+
   .input-search-list {
     width: 360px;
     margin: 0 auto vw(80);
