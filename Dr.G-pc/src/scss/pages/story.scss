@@ -104,9 +104,8 @@
 /* 닥터지스토리  */
 .story-wrap {
   .input-search-list {
-    width: 360px;
-    margin: 0 auto;
-    margin-bottom: vw(80);
+    width: 100%;
+    margin: 0 auto vw(80);
   }
 
   .list {
@@ -677,7 +676,7 @@
 
   /* 닥터지 영상 */
   .drg-video {
-    padding-top: vw(20);
+    padding-top: vw(40);
 
     > .heading {
       margin-bottom: vw(80);
@@ -727,12 +726,14 @@
         padding-bottom: vw(40);
         border-bottom: vw(1) solid $gray-300;
         margin-bottom: vw(40);
+        color: $gray-800;
         //@include ellipsis(2);
       }
 
       .social-btn-wrap {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: vw(80);
 
         .sns-wrap {
@@ -760,7 +761,7 @@
 
         .txt {
           padding-top: 10px;
-          width: calc(100% - 121px - 19px - 167px);
+          width: calc(100% - 121px - 5px - 19px - 167px);
 
           .font-h4 {
             margin-bottom: vw(4);
@@ -778,6 +779,7 @@
           width: vw(121);
           height: auto;
           margin-right: 19px;
+          margin-left: 5px;
 
           img {
             width: 100%;
@@ -810,9 +812,18 @@
             .font-h5 {
               display: inline-block;
               line-height: 30px;
-              color: $gray-800;
+              color: $gray-600;
               margin-right: 4px;
               vertical-align: middle;
+            }
+
+            &.active {
+              .font-h5 {
+                color: $gray-800;
+              }
+              .color-primary {
+                color: $primary;
+              }
             }
 
             .color-primary {
@@ -821,6 +832,8 @@
               font-size: vw(20);
               line-height: 30px;
               vertical-align: middle;
+              color: $gray-600;
+              transform: translateY(1px);
             }
           }
 
@@ -832,6 +845,10 @@
             color: $gray-600;
             font-weight: bold;
             margin-left: 25px;
+
+            &.active {
+              color: $primary;
+            }
 
             &::before {
               content: '';
@@ -848,15 +865,15 @@
     }
 
     .search-box {
-      padding: vw(48) vw(24) vw(78);
-
       .font-h4 {
-        margin-bottom: vw(32);
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: vw(40);
         color: $gray-800;
       }
 
       .input-search {
-        margin-bottom: vw(32);
+        margin-bottom: vw(40);
       }
 
       .search-list {
@@ -867,16 +884,16 @@
 
           a {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             overflow: hidden;
           }
 
           .img {
             //float: left;
             display: block;
-            width: vw(156);
-            height: vw(87);
-            margin-right: vw(16);
+            width: vw(168);
+            height: vw(95);
+            margin-right: vw(20);
 
             img {
               width: 100%;
@@ -888,10 +905,10 @@
             //float: left;
             //display: flex;
             //align-items: center;
-            width: calc(100% - #{vw(156)} - #{vw(16)});
+            width: calc(100% - #{vw(168)} - #{vw(20)});
             //height: vw(66);
             @include ellipsis(3);
-            color: $gray-800;
+            color: $gray-700;
             font-size: vw(15);
             line-height: vw(22);
           }
@@ -903,7 +920,9 @@
       }
 
       .btn-wrap {
-        margin-top: vw(48);
+        margin-top: vw(40);
+        padding-top: 40px;
+        border-top: 1px solid $gray-300;
       }
     }
   }

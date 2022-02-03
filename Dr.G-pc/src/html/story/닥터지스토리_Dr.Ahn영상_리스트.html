@@ -31,7 +31,7 @@
                                     <a href="#" class="btn-sns-facebook"><i class="icon ico-sns-facebook"></i></a>
                                     <a href="#" class="btn-sns-line"><i class="icon ico-sns-line"></i></a>
                                 </span>
-                                <a href="https://www.youtube.com/channel/UCZmpX6UQcfDiIXvKG3G55Zg" class="btn  btn-border btn-youtube btn-icon"><i class="icon ico-youtube"></i><span>구독</span></a>
+                                <a href="https://www.youtube.com/channel/UCZmpX6UQcfDiIXvKG3G55Zg" target="_blank" class="btn btn-border btn-youtube btn-icon"><i class="icon ico-youtube"></i><span>구독</span></a>
                             </div>
                         </div>
                         <div class="comment-box">
@@ -56,8 +56,8 @@
                                 </div>
                             </div>
                             <div class="total-comment">
-                                <div class="heading">
-                                    <div class="total"><span class="font-h5 font-bold">전체댓글 </span><span class="color-primary">50 </span></div>
+                                <div class="heading _fillter">
+                                    <a href="#" class="total active"><span class="font-h5 font-bold">전체댓글 </span><span class="color-primary">50 </span></a>
                                     <a class="link-text" href="#">내가 쓴 댓글 </a>
                                 </div>
                                 <ul class="comment-list">
@@ -258,7 +258,7 @@
                                 </ul>
                             </div>
                             <div class="btn-wrap">
-                                <div class="btn btn-black btn-lg">더보기</div>
+                                <div class="btn btn-black">더보기</div>
                             </div>
                         </div>
                     </div>
@@ -276,5 +276,10 @@
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
+<script>
+    $('._fillter a').on('click',function (){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+</script>
 </body>
 </html>
