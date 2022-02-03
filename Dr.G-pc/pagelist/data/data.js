@@ -743,6 +743,12 @@ data.story = {
         },
         {
             stateClass: 'complete',
+            url: '닥터지스토리_인사이드닥터지_상세페이지2',
+            category: 'story',
+            page: '닥터지스토리_인사이드닥터지_상세페이지2'
+        },
+        {
+            stateClass: 'complete',
             url: '닥터지스토리_Dr.Ahn영상_리스트',
             category: 'story',
             page: '닥터지스토리_Dr.Ahn영상_리스트'
