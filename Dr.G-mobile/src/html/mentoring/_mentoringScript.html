@@ -211,9 +211,10 @@
         });
         processSwiper.on('transitionEnd', function () {
             let idx = processSwiper.realIndex + 1
+            let step =  $('.mentoring-sub-main .step-box .step')
             //console.log(idx);
-            $('.step-box .step').removeClass('active')
-            $('.step-box .step').eq(idx).addClass('active')
+            step.removeClass('active')
+            step.eq(idx).addClass('active')
         });
 
         /* let page1Swipe = new Swiper('.page1-swiper', {
