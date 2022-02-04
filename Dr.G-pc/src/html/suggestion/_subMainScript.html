@@ -11,11 +11,15 @@
 
         // masonry layout
         // https://masonry.desandro.com/options.html
-        let subjectList = $('._subjectList').masonry({
-            itemSelector: '._subjectList .item',
-            columnWidth: '._subjectList .sizer',
-            percentPosition: true
-        });
+        setTimeout(function (){
+            let subjectList = $('._subjectList').masonry({
+                itemSelector: '._subjectList .item',
+                columnWidth: '._subjectList .item',
+                gutter: 30,
+                percentPosition: false,
+                horizontalOrder: true
+            });
+        },100)
 
         $('._tab a').on('click', function () {
             subjectList.masonry('layout');

@@ -674,12 +674,12 @@ data.suggestion = {
             category: 'suggestion',
             page: '고객제안_의견남기기_얼럿팝업'
         },
-        {
-            stateClass: 'complete',
-            url: '고객제안_의견남기기_유형선택',
-            category: 'suggestion',
-            page: '고객제안_의견남기기_유형선택'
-        },
+        // {
+        //     stateClass: 'complete',
+        //     url: '고객제안_의견남기기_유형선택',
+        //     category: 'suggestion',
+        //     page: '고객제안_의견남기기_유형선택'
+        // },
     ]
 }
 

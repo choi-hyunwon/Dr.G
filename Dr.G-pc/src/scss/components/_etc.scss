@@ -1,11 +1,6 @@
 /*
 |--------------------------------------------------------------------|
- v.0.1 주연 : 최초 작업 -- 2021.12.14
- v.0.2 주연 : vw 적용 -- 2021.12.14
- v.0.3 주연 : body.scrOff 추가 -- 2022.01.07
- v.0.4 선미 : body.scrOff > touch-action 추가 -- 2022.01.18
- v.0.5 선미 : sub-main > more-box, btn-chatbot 추가 -- 2022.01.19
- v.0.6 주연 : more-box, btn-chatbot 수정 -- 2022.01.24
+ v.0.1 주연 : 최초 작업 -- 2022.02.04
 |--------------------------------------------------------------------|
 */
 .list-with-dot {
@@ -283,6 +278,7 @@ body.scrOff {
             color: #fff;
           }
         }
+
         .ico-menu-1 {
           @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-menu-1.svg');
         }
@@ -363,7 +359,7 @@ body.scrOff {
     transform: translateX(-50%);
     padding: vw(11) vw(29) vw(13);
     text-align: center;
-    background-color: rgba(255,255,255,.95);
+    background-color: rgba(255, 255, 255, .95);
     border-radius: vw(30);
     animation-name: drgTxtAni;
     animation-delay: 1.3s;
@@ -377,7 +373,7 @@ body.scrOff {
       bottom: vw(-9);
       left: 50%;
       transform: translateX(-50%);
-      @include background-img ($width: 12, $height: 10, $category: 'common', $img: 'ico-menu-tooltip.svg');
+      @include background-img($width: 12, $height: 10, $category: 'common', $img: 'ico-menu-tooltip.svg');
     }
 
     .txt {
@@ -450,6 +446,82 @@ body.scrOff {
       bottom: vw(3);
       right: vw(-5);
       @include background-img($width: 10, $height: 7, $category: 'common', $img: 'ico-chatbot-tip.svg');
+    }
+  }
+}
+
+.s-select-box {
+  position: relative;
+
+  .btn-select {
+    &.selected {
+      font-weight: bold;
+      color: $gray-800;
+      background-image: url(../img/common/ico-select.svg);
+    }
+  }
+
+  .list {
+    display: none;
+    width: 100%;
+    position: absolute;
+    padding: 16px 20px;
+    user-select: none;
+    top: 59px;
+    left: 0;
+    background-color: white;
+    border: 1px solid $gray-900;
+    border-top: 1px solid $gray-300;
+    border-radius: 0 0 12px 12px;
+    z-index: 2;
+  }
+
+  ul {
+    width: 100%;
+    max-height: 175px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-300;
+      border-radius: 100px;
+    }
+
+    li {
+      &.on {
+        a {
+          color: $primary;
+        }
+      }
+
+      + li {
+        margin-top: 14px;
+      }
+
+      a {
+        font-size: 15px;
+        line-height: 22px;
+        color: $gray-700;
+      }
+    }
+  }
+
+  &.down {
+    .list {
+      display: block;
+    }
+
+    .btn-select {
+      border-color: $gray-900;
+      border-radius: 12px 12px 0 0;
+      background-image: url(../img/common/ico-select-up.svg);
     }
   }
 }
