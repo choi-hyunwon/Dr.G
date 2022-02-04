@@ -619,6 +619,11 @@
         }
       }
       &.no-matching{
+        .title{
+          .font-body-2{
+            color: $gray-600;
+          }
+        }
         .desc-box{
           background: url("../img/analysis/img-noMatching.png") no-repeat top center / contain;
           padding-top: vw(88);
