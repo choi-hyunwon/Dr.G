@@ -3300,10 +3300,7 @@
             }
 
             &.item-3 {
-              .item-img {
-                width: vw(327);
-                margin: vw(48) auto vw(64);
-              }
+              padding: vw(85) vw(20) 0 vw(28);
             }
           }
         }
@@ -3311,6 +3308,84 @@
 
       .slider-pagination {
         margin-top: vw(20);
+      }
+
+      .line-chart-wrap {
+        width: 100%;
+        background-image: none;
+        //background-image: url(../img/AI/bg-line-chart-2.svg);
+        height: vw(212);
+        margin-bottom: vw(100);
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          @include background-img ($width: 329, $height: 212, $category: 'AI', $img: 'bg-line-chart-2.svg');
+        }
+
+        .line-chart {
+          padding-top: 0;
+
+          .line-chart-inner {
+            svg {
+              height: vw(210);
+            }
+
+            .chart-info {
+              height: vw(215);
+              padding-left: 0;
+
+              .item {
+                height: vw(210);
+              }
+
+              .item.item-last {
+                .line-box {
+                  .tooltip-box {
+                    background-color: $blue;
+
+                    &::after {
+                      background-image: url("../img/AI/ico-chart-polygon-blue.svg");
+                    }
+                  }
+                }
+              }
+
+              .line-box {
+                .tooltip-box {
+                  font-size: vw(13);
+                  font-family: $poppins-regular;
+                  border-radius: vw(100);
+                  padding: 0 vw(8);
+                  height: vw(26);
+                  line-height: vw(27);
+                  background-color: $gray-700;
+
+                  &::after {
+                    top: vw(24);
+                    background-image: url(../img/AI/ico-chart-polygon-dark.svg);
+                  }
+
+                  a {
+                    cursor: default;
+                  }
+                }
+              }
+            }
+
+            .x-axis {
+              padding: 0 vw(12);
+
+              li {
+                font-size: vw(13);
+                line-height:vw(18);
+                color: $gray-500;
+              }
+            }
+          }
+        }
       }
     }
 
