@@ -1,6 +1,7 @@
 /*
 |--------------------------------------------------------------------|
  v.0.1 주연 : 최초 작업 -- 2022.01.27
+ v.0.2 선미 : alert-popup 여백 수정 -- 2022.02.04
 |--------------------------------------------------------------------|
 */
 
@@ -15,29 +16,33 @@
 
     &.alert-popup {
       .modal-content {
-        border-radius: vw(12);
+        border-radius: 12px;
         overflow: hidden;
 
         .modal-header {
-          padding: vw(24) vw(24) 0 vw(24);
+          padding: 24px 24px 0;
           border-bottom: none;
         }
 
         .modal-body {
-          padding: vw(0) vw(24) vw(24) vw(24);
+          padding: 0 20px 24px;
           text-align: left;
           color: $gray-800;
-          font-size: vw(15);
-          line-height: vw(22);
+          font-size: 15px;
+          line-height: 22px;
           font-weight: 400;
 
           .title {
-            font-size: vw(16);
-            line-height: vw(24);
+            font-size: 16px;
+            line-height: 24px;
             letter-spacing: -0.005em;
             font-weight: 700;
             color: $gray-900;
-            margin-bottom: vw(4);
+            margin-bottom: 4px;
+          }
+          >p{
+            display: inline-block;
+            word-break: break-all;
           }
         }
 

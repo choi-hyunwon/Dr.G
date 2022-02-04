@@ -1,8 +1,6 @@
 /*
 |----------------------------------|
- v.0.1 선미 : 최초 작업 -- 2021.12.22
- v.0.2 선미 : 첨부파일명 보기,수정하기 분리 / img (png -> svg로 변경) -- 2022.01.03
- v.0.3 선미 : 첨부파일 스크롤바 숨김 처리 -- 2022.01.05
+ v.0.1 선미 : 최초 작업 -- 2022.02.04
 |----------------------------------|
 */
 
@@ -77,32 +75,46 @@
 
   /*첨부파일명 - 수정하기*/
   + .file-list {
+     padding: 16px 0 0;
     .file_name {
-      padding-top: vw(8);
-      display: flex;
-      justify-content: space-between;
+      display: inline-block;
+      padding-right: 29px;
+      position: relative;
       margin-bottom: 0;
+      &:after{
+        content: '';
+        clear: both;
+        display: inline-block;
+        position: absolute;
+        right: 12px;
+        width: 1px;
+        height: 14px;
+        top: 6px;
+        background-color: $gray-400;
+      }
+      &:last-of-type{
+        padding-left: 0;
+        &:after{
+          display: none;
+        }
+      }
 
       .text {
+        display: inline-block;
+        vertical-align: middle;
         word-break: break-all;
-        font-size: vw(15);
-        line-height: vw(22);
-        color: $gray-800;
-        font-weight: bold;
+        font-size: 13px;
+        line-height: 18px;
+        color: $gray-700;
+        font-weight: normal;
+        max-width: 412px;
         @include ellipsis(1)
       }
 
       .btn-close {
-        padding-left: vw(20);
+        padding-left: 12px;
       }
 
-      &:first-of-type {
-        padding-top: vw(24);
-      }
-
-      &:last-of-type {
-        margin-bottom: vw(32);
-      }
     }
   }
 }

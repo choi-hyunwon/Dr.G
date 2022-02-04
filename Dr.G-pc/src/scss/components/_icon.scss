@@ -1,6 +1,6 @@
 /*
 |--------------------------------------------------------------------|
- v.0.1 주연 : 최초 작업 -- 2021.11.30
+ v.0.1 선미 : ico-arrow-green-right 추가 및 pc 분리 -- 2022.02.04
 |--------------------------------------------------------------------|
 */
 .icon {
@@ -105,10 +105,6 @@
 
 .ico-arrow-right {
   @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-arrow-right.svg');
-}
-
-.ico-arrow-green-right {
-  @include background-img($width: 8, $height: 8, $category: 'common', $img: 'ico-arrow-green-right.svg');
 }
 
 .ico-arrow-up {
@@ -301,4 +297,11 @@
 
 .ico-nav-next-gray {
   @include background-img($width: 32, $height: 32, $category: 'common', $img: 'ico-nav-next-gray.svg');
+}
+
+
+/*PC*/
+
+.ico-arrow-green-right {
+  @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-arrow-green-right.png');
 }

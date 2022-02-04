@@ -592,6 +592,12 @@ data.suggestion = {
     list: [
         {
             stateClass: 'complete',
+            url: '고객제안_의견남기기',
+            category: 'suggestion',
+            page: '고객제안_의견남기기'
+        },
+        {
+            stateClass: 'complete',
             url: '고객제안_나의제안내역-회원',
             category: 'suggestion',
             page: '고객제안_나의제안내역-회원'
@@ -615,25 +621,19 @@ data.suggestion = {
             page: '고객제안_의견남기기_비회원_로그인알림'
         },
         {
-            stateClass: 'working',
-            url: '고객제안_의견남기기',
-            category: 'suggestion',
-            page: '고객제안_의견남기기'
-        },
-        {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_비회원_의견남기기',
             category: 'suggestion',
             page: '고객제안_비회원_의견남기기'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_개선사례_조회',
             category: 'suggestion',
             page: '고객제안_개선사례_조회'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_제품이등록되지않은경우',
             category: 'suggestion',
             page: '고객제안_제품이등록되지않은경우'
@@ -657,22 +657,34 @@ data.suggestion = {
             page: '고객제안_나의제안내역_상세보기_수정하기실행'
         },
         {
-            stateClass: 'working',
-            url: '고객제안_나의제안내역_상세보기_얼럿팝업',
+            stateClass: 'complete',
+            url: '고객제안_나의제안내역_상세보기_얼럿팝업(삭제)',
             category: 'suggestion',
-            page: '고객제안_나의제안내역_상세보기_얼럿팝업'
+            page: '고객제안_나의제안내역_상세보기_얼럿팝업(삭제)'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
+            url: '고객제안_나의제안내역_상세보기_얼럿팝업(완료)',
+            category: 'suggestion',
+            page: '고객제안_나의제안내역_상세보기_얼럿팝업(완료)'
+        },
+        {
+            stateClass: 'complete',
             url: '고객제안_나의제안내역-비회원_얼럿팝업',
             category: 'suggestion',
             page: '고객제안_나의제안내역-비회원_얼럿팝업'
         },
         {
-            stateClass: 'working',
-            url: '고객제안_의견남기기_얼럿팝업',
+            stateClass: 'complete',
+            url: '고객제안_의견남기기_얼럿팝업(등록완료)',
             category: 'suggestion',
-            page: '고객제안_의견남기기_얼럿팝업'
+            page: '고객제안_의견남기기_얼럿팝업(등록완료)'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_의견남기기_얼럿팝업2(첨부파일갯수초과)',
+            category: 'suggestion',
+            page: '고객제안_의견남기기_얼럿팝업2(첨부파일갯수초과)'
         },
         // {
         //     stateClass: 'complete',

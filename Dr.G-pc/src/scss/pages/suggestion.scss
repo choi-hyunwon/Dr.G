@@ -53,8 +53,8 @@
 /*공통 - 얇은버전*/
 .divider {
   width: 100%;
-  height: vw(1);
-  margin: vw(25) 0 vw(25);
+  height: 1px;
+  margin: 60px 0;
   border-color: $gray-300;
 }
 
@@ -63,6 +63,9 @@
 .opinion {
   background-color: $gray-200;
   padding: 80px 0 120px;
+  .divider{
+    margin: 20px 0 24px;
+  }
 }
 
 .section-input {
@@ -83,32 +86,42 @@
 .section-privacy {
   margin-bottom: 60px;
 
-  .font-h5 {
-    color: $gray-800;
-    margin-bottom: vw(8);
-    font-weight: 700;
-  }
-
-  .font-body-1 {
-    color: $gray-700;
-    margin-bottom: vw(32);
+  >.font-h4{
+    margin-bottom: 30px;
+    padding-top: 36px;
+    >.font-sm-1{
+      color: $gray-600;
+      font-weight: 400;
+    }
   }
 
   .radio-box {
-    margin-bottom: vw(24);
+    margin-bottom:20px;
 
     .custom-radio {
-      margin-right: vw(24);
+      margin-right: 40px;
     }
   }
 
   .input-box {
+    margin-bottom: 20px;
+
+    /*개인정보 입력 부분 예외*/
+    .form-control , .select-popup {
+      width: 304px;
+      display: inline-block;
+      margin: 0 4px 0 0;
+    }
     input[type=password] {
-      margin-bottom: vw(32);
+      margin-right: 0;
     }
 
+
+
+
+
     input[type=text] {
-      margin-bottom: vw(8);
+
     }
   }
 
@@ -191,13 +204,6 @@
 
     .section-input {
       margin-bottom: 20px;
-    }
-
-    .section-privacy {
-      .divider {
-        margin-top: 0;
-        margin-bottom: 24px;
-      }
     }
   }
 
