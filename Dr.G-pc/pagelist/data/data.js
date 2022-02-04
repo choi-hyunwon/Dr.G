@@ -591,7 +591,7 @@ data.suggestion = {
     title: '고객제안',
     list: [
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '고객제안_의견남기기',
             category: 'suggestion',
             page: '고객제안_의견남기기'
@@ -609,37 +609,37 @@ data.suggestion = {
             page: '고객제안_나의제안내역-비회원'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '고객제안_비회원_의견남기기',
             category: 'suggestion',
             page: '고객제안_비회원_의견남기기'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '고객제안_개선사례_조회',
             category: 'suggestion',
             page: '고객제안_개선사례_조회'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '고객제안_제품이등록되지않은경우',
             category: 'suggestion',
             page: '고객제안_제품이등록되지않은경우'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '고객제안_나의제안내역_상세보기_답변대기',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기-답변대기'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '고객제안_나의제안내역_상세보기_답변완료',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기-답변완료'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '고객제안_나의제안내역_상세보기_수정하기실행',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기_수정하기실행'
@@ -657,25 +657,25 @@ data.suggestion = {
             page: '고객제안_의견남기기_비회원_로그인알림'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '고객제안_나의제안내역_상세보기_얼럿팝업',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기_얼럿팝업'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '고객제안_나의제안내역-비회원_얼럿팝업',
             category: 'suggestion',
             page: '고객제안_나의제안내역-비회원_얼럿팝업'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '고객제안_의견남기기_얼럿팝업',
             category: 'suggestion',
             page: '고객제안_의견남기기_얼럿팝업'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '고객제안_의견남기기_유형선택',
             category: 'suggestion',
             page: '고객제안_의견남기기_유형선택'
