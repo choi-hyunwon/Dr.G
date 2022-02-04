@@ -54,6 +54,27 @@
 .l__top__banner,.l__top__tab {position:relative;z-index:13;}
 
 /** ---------------------------------------------
+ * # go to top
+ * ----------------------------------------------*/
+.uio-top-btn,.btn_go_top {position:fixed;z-index:90;width:55px;height:55px;right:73px;bottom:147px;box-shadow:10px 16px 36px 0 rgba(0, 0, 0, 0.05);border:solid 1px #efefef;box-sizing:border-box;background:#fff url('../img/common/uio_top_btn.png') no-repeat 50%;border-radius:27.5px;opacity:0;pointer-events:none;touch-action:none;transform:translateY(-300px);transition:opacity 0.3s 0s linear, transform 0.3s 0s linear;}
+.uio-top-btn.show,.btn_go_top.show {transform:translateY(0px);opacity:1;pointer-events:fill;touch-action:auto;}
+.uio-top-btn > span {position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);font-size:0;}
+@media all and (max-width:1599px) {
+  .uio-top-btn,.btn_go_top {right:40px;}
+}
+@media all and (min-width:1600px) and (max-width:1919px) {
+  .uio-top-btn,.btn_go_top {right:67px;}
+}
+@media all and (min-width:1921px) {
+  .uio-top-btn,.btn_go_top {right:80px;}
+}
+@media all and (min-width:2560px) {
+  .uio-top-btn,.btn_go_top {right:108px;touch-action:none;pointer-events:none;}
+  .uio-top-btn.show,.btn_go_top.show {touch-action:auto;pointer-events:fill;}
+}
+.uio-top-btn {bottom:70px;}
+
+/** ---------------------------------------------
  * # 레이아웃 | 하단
  * ----------------------------------------------
 */

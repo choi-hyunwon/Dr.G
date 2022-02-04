@@ -1,7 +1,8 @@
 /*공통*/
-.select-popup{
+.select-popup {
   margin-bottom: vw(8);
-  .btn-select{
+
+  .btn-select {
     width: 100%;
     height: vw(60);
     line-height: vw(58);
@@ -15,25 +16,30 @@
     display: inline-block;
     background: $gray-fff url(../img/common/ico-select-disabled.svg) right vw(20) center/vw(20) vw(20) no-repeat;
   }
-  .toast-content{
-    padding: vw(24)!important;
-    ul{
-      li{
+
+  .toast-content {
+    padding: vw(24) !important;
+
+    ul {
+      li {
         margin-bottom: vw(12);
 
-        &:last-of-type{
+        &:last-of-type {
           margin-bottom: 0;
         }
-        a{
+
+        a {
           display: block;
           line-height: vw(40);
           letter-spacing: 0;
         }
-        &.active{
+
+        &.active {
           background: url("../img/common/check-primary.png") no-repeat right center;
           background-size: vw(24) vw(24);
           display: block;
-          a{
+
+          a {
             color: $primary;
             font-weight: 700;
           }
@@ -53,84 +59,121 @@
 }
 
 
-
 /*의견남기기*/
 .opinion {
   background-color: $gray-200;
-  padding: vw(48) vw(24) vw(76);
+  padding: 80px 0 120px;
 }
-.section-input{
+
+.section-input {
   letter-spacing: 0;
   margin-bottom: vw(48);
-  input{
+
+  input {
     margin-bottom: vw(8);
   }
-  .input-group{
-    textarea{
-      margin-bottom: vw(12);
+
+  .input-group {
+    textarea {
+      margin-bottom: 20px;
     }
   }
 }
-.section-privacy{
-  margin-bottom: vw(48);
-  .font-h5{
+
+.section-privacy {
+  margin-bottom: 60px;
+
+  .font-h5 {
     color: $gray-800;
     margin-bottom: vw(8);
     font-weight: 700;
   }
-  .font-body-1{
+
+  .font-body-1 {
     color: $gray-700;
     margin-bottom: vw(32);
   }
-  .radio-box{
+
+  .radio-box {
     margin-bottom: vw(24);
-    .custom-radio{
+
+    .custom-radio {
       margin-right: vw(24);
     }
   }
-  .input-box{
-    input[type=password]{
+
+  .input-box {
+    input[type=password] {
       margin-bottom: vw(32);
     }
-    input[type=text]{
+
+    input[type=text] {
       margin-bottom: vw(8);
     }
   }
-  .custom-checkbox{
+
+  .custom-checkbox {
     display: block;
     margin-bottom: vw(6);
-    label{
-      .collection{
+
+    label {
+      .collection {
         color: $gray-600;
-        font-size: vw(12);
+        margin-right: 6px;
+      }
+
+      .all {
+        font-weight: bold;
+        color: $gray-700;
+      }
+
+      a {
+        color: $gray-800;
+        font-weight: 500;
+        text-decoration: underline;
       }
     }
-    &:last-of-type{
+
+    &:last-of-type {
       margin-bottom: 0;
     }
-    a{
-      font-weight: 500;
-      text-decoration: underline;
-    }
-
   }
-  .desc{
+
+  .desc {
     font-size: vw(12);
     line-height: vw(16);
     letter-spacing: vw(-0.5);
     color: $gray-600;
     padding-top: vw(16);
   }
+
+  .box {
+    margin-bottom: 16px;
+  }
+
+  .box-gray {
+    background-color: $gray-300;
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
 }
-.btn-wrap{
+
+.btn-wrap {
   text-align: center;
 }
 
-
 /* 고객제안 메인 */
 .suggestion-wrap {
+  .inner {
+    position: relative;
+    max-width: 1242px;
+    min-width: 1242px;
+    margin: 0 auto;
+  }
+
   .heading-box {
-    padding: vw(20) vw(20) vw(24);
+    padding: 40px 0 80px;
+    text-align: center;
 
     .font-h1 {
       margin-bottom: vw(12);
@@ -147,39 +190,55 @@
     }
 
     .section-input {
-      margin-bottom: vw(32);
+      margin-bottom: 20px;
     }
 
     .section-privacy {
-      .upload-box {
-        padding-bottom: vw(7);
+      .divider {
+        margin-top: 0;
+        margin-bottom: 24px;
       }
     }
   }
 
   .my-opinion-list {
     background-color: $gray-200;
-    padding: vw(48) vw(24) vw(76);
+    padding: vw(48) 0 240px;
 
     .item {
-      margin-bottom: vw(16);
-      padding: vw(20);
+      float: left;
+      width: 288px;
+      margin-bottom: 24px;
+      padding: 24px 20px;
       background-color: #fff;
-      border-radius: vw(16);
+      border-radius: 12px;
+      margin-right: 30px;
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(4n+1) {
+        clear: both;
+      }
 
       .badge-box {
-        margin-bottom: vw(8);
+        margin-bottom: 10px;
+
+        .badge {
+          padding: 5px 10px;
+        }
       }
 
       .cont-box {
-        margin-bottom: vw(13);
+        margin-bottom: 12px;
 
         .cont {
           line-height: vw(22);
           font-size: vw(15);
+          @include ellipsis(2);
 
           .category {
-            display: inline-block;
             font-weight: bold;
             margin-right: vw(2);
           }
@@ -222,22 +281,23 @@
           }
         }
       }
+    }
 
-      &:last-child {
-        margin-bottom: vw(48);
-      }
+    .btn-wrap {
+      padding-top: 36px;
     }
   }
 
   .suggestion-slider {
     position: relative;
     background-color: $primary;
+    overflow: hidden;
 
     .swiper-slide {
       position: relative;
       width: 100%;
-      height: vw(493);
-      padding: vw(48) 0 0 vw(24);
+      height: 400px;
+      padding: 80px 0 0 0;
 
       &.swiper-slide-active {
         .text-box {
@@ -257,35 +317,32 @@
         z-index: 4;
 
         .font-body-2 {
-          margin-bottom: vw(6);
+          margin-bottom: 8px;
         }
 
         .font-h2 {
-          margin-bottom: vw(14);
-          max-width: vw(280);
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
+          margin-bottom: 16px;
+          max-width: 560px;
+          @include ellipsis(2);
         }
 
         .font-body-1 {
-          width: vw(152);
+          width: 560px;
+          @include ellipsis(2);
         }
       }
 
       .img-box {
         position: absolute;
-        right: 0;
-        top: vw(174);
+        right: 170px;
+        top: -23px;
         transition: 1.2s;
         transform: translateX(910%);
         z-index: 3;
 
         .img {
-          width: vw(210);
-          height: vw(234);
+          width: vw(260);
+          height: vw(290);
 
           img {
             width: 100%;
@@ -297,26 +354,42 @@
 
     .smile-motif {
       position: absolute;
-      top: vw(263);
-      width: vw(276);
+      top: 101px;
+      right: 116px;
+      width: vw(360);
       height: vw(180);
-      right: 0;
       z-index: 2;
 
       svg {
         width: 100%;
         height: 100%;
       }
+
       //@include background-img($width: 276, $height: 180, $category: 'suggestion', $img: 'img-smile-motif.svg');
     }
 
+    .swiper-pagination-wrapper {
+      position: absolute;
+      max-width: 1242px;
+      min-width: 1242px;
+      margin: 0 auto;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 96px;
+      z-index: 1;
+    }
+
     .swiper-pagination-bullets {
-      width: 100%;
-      bottom: vw(27);
+      width: auto;
+      //bottom: vw(27);
 
       .swiper-pagination-bullet {
         background: #ffffff;
         opacity: 0.3;
+
+        + .swiper-pagination-bullet {
+          margin-left: 12px;
+        }
 
         &.swiper-pagination-bullet-active {
           opacity: 1;
@@ -326,13 +399,15 @@
   }
 
   .subject-list {
-    padding-top: vw(76);
+    padding-top: 120px;
 
     .list-heading {
-      margin-bottom: vw(32);
-      padding-left: vw(25);
+      margin-bottom: 60px;
 
       .font-h2 {
+        font-size: 32px;
+        line-height: 44px;
+
         .num {
           font-family: $poppins-semiBold;
         }
@@ -340,11 +415,9 @@
     }
 
     .list-body {
-      padding: 0 vw(20);
-
       .nav-tabs {
         border-bottom: 0;
-        margin-bottom: vw(24);
+        margin-bottom: 20px;
         justify-content: flex-end;
 
         .nav-link {
@@ -391,23 +464,21 @@
       }
 
       .sizer, .item {
-        width: 50%;
+        width: 288px;
       }
 
       .item {
-        float: left;
-        padding: 0 vw(5);
-        margin-bottom: vw(12);
-        //width: calc(50% - 5.5);
+        padding: 0;
+        margin-bottom: 24px;
+
+        &:nth-child(4n+1) {
+          margin-right: 0;
+        }
 
         .item-inner {
           background-color: $gray-200;
           border-radius: vw(12);
-          padding: vw(20) vw(16);
-        }
-
-        &:nth-child(2n) {
-          //margin-right: vw(11);
+          padding: 24px 20px;
         }
 
         &.completed {
@@ -457,6 +528,7 @@
         .font-body-1 {
           color: $gray-700;
           margin-bottom: vw(8);
+          min-height: 48px;
         }
 
         .link {
@@ -490,66 +562,63 @@
   }
 
   .register-box {
-    text-align: center;
     background-color: $gray-200;
-    padding: vw(50) vw(24);
+    padding: 80px 0 0;
 
     .box {
       position: relative;
-
-      &:last-child {
-        &::after {
-          content: none;
-        }
-      }
+      text-align: center;
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 60px 106px 30px;
 
       .input-box {
         margin-bottom: vw(24);
+
         input {
           width: 100%;
         }
       }
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: vw(1);
-        background-color: $gray-300;
-      }
     }
 
     .img {
-      margin-bottom: vw(16);
+      width: 74px;
+      margin: 0 auto 20px;
     }
 
     .font-h4 {
-      margin-bottom: vw(24);
+      margin-bottom: 30px;
       color: $gray-800;
+      font-size: 20px;
+      line-height: 30px;
     }
+
     .btn-wrap {
-      .text-btn{
-        font-weight: 500;
-        color: $gray-800;
-        font-size: vw(13);
-        padding-top: vw(24);
-        text-decoration: underline;
+      border-bottom: 1px solid $gray-300;
+      padding-bottom: 40px;
+
+      .btn {
+        padding: 0 50px;
+      }
+    }
+
+    .text-btn {
+      font-weight: 500;
+      font-size: 16px;
+      padding-top: vw(24);
+
+      a {
+        color: $gray-700;
       }
     }
   }
 
-  /*---------*/
-
   .caution-box {
-    padding: vw(48) vw(20) 0;
-    margin-bottom: vw(76);
+    padding: 80px 0 0;
 
     .title {
-      margin-bottom: vw(10);
+      margin-bottom: vw(12);
       line-height: vw(19);
-      padding-left: vw(5);
 
       i, span {
         display: inline-block;
@@ -571,6 +640,12 @@
 
     .list-with-dot {
       padding-left: vw(3);
+
+      a {
+        color: $gray-700;
+        font-weight: 500;
+        text-decoration: underline;
+      }
     }
   }
 }

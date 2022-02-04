@@ -143,11 +143,53 @@ front.common = (function () {
             }
             lastScroll = st;
         });
+
+        /* 상단으로 이동 */
+        var $btn = $('.uio-top-btn'),$win, actClass;
+        if(!$btn.length) return;
+        $win = $(window);
+        actClass = 'show';
+        $win.on('scroll load',function(){
+            var c = $(this).scrollTop();
+            if( c > 100 ) {
+                $btn.addClass('show');
+                TweenMax.to($btn,0.5,{opacity: 1,y: 0});
+            } else {
+                $btn.removeClass('show');
+                TweenMax.to($btn,0.5,{opacity: 0,y: 200});
+            }
+        });
+        $btn.on('click',function(){
+            $('html,body').stop(true, true).animate({scrollTop: 0}, 500);
+        })
+
+        /* select box - 유형선택 */
+        var $body = $('body')
+
+        $('._selectBox .btn-select').on('click',function (e) {
+            // if ($(this).hasClass('disabled')) return;
+            e.stopPropagation();
+            $(this).parent().toggleClass('down');
+        })
+
+        $('._selectBox li a').on('click',function (e) {
+            let text = $(this).text();
+            $(this).parent().addClass('on').siblings().removeClass('on');
+            console.log($(this).parent().parents('.list').parent())
+            $(this).parent().parents('.list').prev('.btn-select').children('.text').text(text);
+            $(this).parent().parents('.list').prev('.btn-select').addClass('selected')
+            $(this).parent().parents('.list').parent().removeClass('down');
+
+        })
+
+        $body.on('click', function(){
+            $('._selectBox').removeClass('down');
+        });
     }
 
     var tab = function () {
         $('._tab').each(function (){
-            var tabItem = $(this).children().children('.item');
+            var tabItem = $(this).find('.item');
             var tabItemLink = tabItem.find('a');
             var pane = $(this).siblings('.tab-content');
             var paneItem = pane.children('.tab-pane');
@@ -223,7 +265,7 @@ function showPopup() {
     var idx = btnPopupTrigger.index(this);
 
     popup.eq(idx).removeClass('hide').css('display', 'block');
-    btnPopupTrigger.parent().after(`<div class="popup-backdrop"></div>`);
+    popup.after(`<div class="popup-backdrop"></div>`);
     $('body').addClass('scrOff')
 
     setTimeout(function (){

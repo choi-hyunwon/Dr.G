@@ -2,36 +2,31 @@
 <html lang="ko">
 @@include('../../html/include/common/head.html')
 <body>
-<div class="wrap">
-    <div class="container"></div>
-</div>
 <div class="popup-wrap">
-    <div class="popup _toast-popup">
+    <div class="popup popup-suggestion-check">
         <div class="popup-content">
             <div class="popup-header">
-                <p class="title">비회원 나의 제안내역 확인하기</p>
+                <a href="#" class="_hidePopup icon ico-close-sm"></a>
             </div>
-            <div class="popup-body suggestion-box">
+            <div class="popup-body">
                 <div class="register-box">
                     <div class="box text-center">
                         <div class="img"><img src="../../img/suggestion/img-lock2.svg" alt=""></div>
+                        <div class="title">비회원 나의 제안내역 확인하기</div>
                         <div class="desc">의견 작성 시 입력하신 휴대폰 번호와<br/>비밀번호 4자리를 입력해주세요.</div>
                         <div class="input-box">
-                            <input type="text" title="검색" class="form-control" maxlength="11"
-                                   placeholder="휴대폰 번호 Ex) 01022334455">
-                            <input type="password" title="검색" class="form-control" maxlength="4"
-                                   placeholder="비밀번호를 4자리를 입력해주세요.">
+                            <input type="text" title="검색" class="form-control" maxlength="11" placeholder="휴대폰 번호 Ex) 01022334455">
+                            <input type="password" title="검색" class="form-control" maxlength="4" placeholder="비밀번호를 4자리를 입력해주세요.">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="popup-footer no-padding">
-                <a href="#" class="btn  btn-lg btn-primary _hidePopup">확인</a>
+                <a href="#" class="btn btn-lg">확인</a>
             </div>
         </div>
     </div>
 </div>
 <script>
     showPopup();
-    // hidePopup();
 </script>
