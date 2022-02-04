@@ -5,7 +5,7 @@
  v.0.3 주연 : body.scrOff 추가 -- 2022.01.07
  v.0.4 선미 : body.scrOff > touch-action 추가 -- 2022.01.18
  v.0.5 선미 : sub-main > more-box, btn-chatbot 추가 -- 2022.01.19
- v.0.6 주연 : more-box, btn-chatbot 수정 -- 2022.01.24
+ v.0.6 주연 : more-box 수정 -- 2022.01.24
 |--------------------------------------------------------------------|
 */
 .list-with-dot {
@@ -404,52 +404,6 @@ body.scrOff {
         animation-duration: .5s;
         animation-fill-mode: forwards;
       }
-    }
-  }
-}
-
-.btn-chatbot {
-  position: absolute;
-  right: vw(24);
-  bottom: vw(132);
-  width: vw(48);
-  height: vw(48);
-  z-index: 5;
-  cursor: pointer;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  .tip {
-    display: none;
-    position: absolute;
-    padding: vw(8) vw(12);
-    font-size: vw(12);
-    line-height: vw(16);
-    letter-spacing: -0.005em;
-    color: $gray-800;
-    background-color: #D5F4EF;
-    box-shadow: 0 vw(2) vw(1) rgba(34, 34, 34, 0.04);
-    border-radius: vw(12);
-    white-space: nowrap;
-    right: vw(56);
-    bottom: 0;
-
-    .btn-chatbot-close {
-      position: absolute;
-      top: vw(-8);
-      left: vw(-12);
-      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-chatbot-close.svg');
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: vw(3);
-      right: vw(-5);
-      @include background-img($width: 10, $height: 7, $category: 'common', $img: 'ico-chatbot-tip.svg');
     }
   }
 }

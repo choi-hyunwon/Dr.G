@@ -160,22 +160,17 @@
         offset: "50%"
     })
 
-    howSlider.on('slideChange', function () {
+    setInterval(function (){
+        var badge = $('._badgeTab .badge')
+        var content = $('._badgeTabContent .content-item')
+        secondStep(badge, content)
 
-        if(howSlider.realIndex === 2) {
-            setInterval(function (){
-                var badge = $('._badgeTab .badge')
-                var content = $('._badgeTabContent .content-item')
-                secondStep(badge, content)
-
-                setTimeout(function (){
-                    var badge = $('._badgeTab .badge')
-                    var content = $('._badgeTabContent .content-item')
-                    firstStep(badge, content)
-                },1500)
-            },3000)
-        }
-    });
+        setTimeout(function (){
+            var badge = $('._badgeTab .badge')
+            var content = $('._badgeTabContent .content-item')
+            firstStep(badge, content)
+        },1500)
+    },3000)
 
     function firstStep(step,content) {
         step.eq(0).addClass('on');
@@ -202,6 +197,65 @@
             clickable: true,
         },
     });
+
+    storySlider.on('slideChange', function () {
+        if(storySlider.realIndex === 0) {
+            $({ val : 10 }).animate({ val : 23 }, {
+                duration: 1000,
+                step: function() {
+                    var num = Math.floor(this.val);
+                    $("._num1").text(num);
+                },
+                complete: function() {
+                    var num = Math.floor(this.val);
+                    $("._num1").text(num);
+                }
+            });
+        } else if(storySlider.realIndex === 1) {
+            $({ val : 30 }).animate({ val : 37 }, {
+                duration: 1000,
+                step: function() {
+                    var num = Math.floor(this.val);
+                    $("._num2").text(num);
+                },
+                complete: function() {
+                    var num = Math.floor(this.val);
+                    $("._num2").text(num);
+                }
+            });
+        } else {
+            $({ val : 0 }).animate({ val : 1.5 }, {
+                duration: 1000,
+                step: function() {
+                    var num = this.val.toFixed(1);
+                    $("._num3").text(num);
+                },
+                complete: function() {
+                    var num = this.val.toFixed(1);
+                    $("._num3").text(num);
+                }
+            });
+        }
+    });
+
+    new Waypoint({
+        element: document.querySelector('._storySlider'),
+        handler: function () {
+            $({ val : 0 }).animate({ val : 23 }, {
+                duration: 1000,
+                delay: 900,
+                step: function() {
+                    var num = Math.floor(this.val);
+                    $("._num1").text(num);
+                },
+                complete: function() {
+                    var num = Math.floor(this.val);
+                    $("._num1").text(num);
+                }
+            });
+        },
+        offset: "50%"
+    })
     /* ---------- e story section animation ---------- */
 
     /* ---------- s why section animation ---------- */
@@ -212,15 +266,33 @@
         pagination: {
             el: "._whySlider + ._sliderPagination",
             clickable: true,
-        },
+        }
     });
+
+    whySlider.on('slideChange', function () {
+        if(whySlider.realIndex === 0) {
+            $('._whySlider .item.item-1').addClass('ani-on')
+        } else if(whySlider.realIndex === 2) {
+            lineDrawing()
+        } else {
+            $('._whySlider .item.item-1').removeClass('ani-on')
+        }
+    });
+
+    new Waypoint({
+        element: document.querySelector('._whySlider'),
+        handler: function (direction) {
+            $('._whySlider .item.item-1').addClass('ani-on')
+        },
+        offset: "70%"
+    })
 
     /* 차트 */
     // data
     var data = [
         {
             "date": "2021-09-01",
-            "value": -10,
+            "value": 0,
         },
         {
             "date": "2021-10-01",
@@ -323,7 +395,6 @@
             points.point1.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges.range1) / 100) | 0;
             points.point2.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges.range2) / 100) | 0;
             points.point3.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges.range3) / 100) | 0;
-            // points.point4.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges.range4) / 100) | 0;
 
             const max = svgViewBoxGraphMax;
             const min = svgViewBoxGraphMin;
@@ -331,13 +402,11 @@
             points.point1.y = mapDataRange(points.point1.y);
             points.point2.y = mapDataRange(points.point2.y);
             points.point3.y = mapDataRange(points.point3.y);
-            // points.point4.y = mapDataRange(points.point4.y);
 
             points.begin.y = points.point1.y;
             points.control1.y = points.point1.y;
             points.control2.y = points.point2.y;
             points.control3.y = points.point3.y;
-            // points.control4.y = points.point4.y;
         }
 
         function getInterpolatedLine() {
@@ -353,9 +422,6 @@
                 // S
                 points.control3.x, points.control3.y,
                 points.point3.x, points.point3.y,
-                // S
-                // points.control4.x, points.control4.y,
-                // points.point4.x, points.point4.y,
             )
         }
 
@@ -385,7 +451,6 @@
         inputs.forEach(input => app.updateSlider(input));
         app.updateChart();
     })();
-
     /** -------------------------- line animation --------------------------- **/
     anime({
         targets: 'path',

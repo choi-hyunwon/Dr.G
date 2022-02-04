@@ -142,17 +142,6 @@
         margin-bottom: vw(24);
       }
     }
-
-    .chatbot-area {
-      position: absolute;
-      width: 100%;
-      height: calc(100vh - #{vw(80)} - #{vw(60)} - #{vw(97)});
-      top: vw(60);
-
-      .btn-chatbot {
-        bottom: 0;
-      }
-    }
   }
 
   /* 성분분석 */

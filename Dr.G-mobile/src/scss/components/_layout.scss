@@ -9,6 +9,7 @@
  v.0.7 선미 : header-white {z-index: 5-> 20 } 변경 -- 2021.01.05
  v.0.8 선미 : header-details >  fixed 추가 -- 2021.01.06
  v.0.10 주연 : gnb menu 추가 -- 2022.01.25
+ v.0.11 주연 : chatbot-area 추가 -- 2022.02.04
 |----------------------------------------------------------------------|
 */
 
@@ -1004,6 +1005,86 @@
 /* 스크롤 제거 */
 body {
   -ms-overflow-style: none;
+}
+
+/* 챗봇 */
+.chatbot-area {
+  position: fixed;
+  width: vw(12.8);
+  height: calc(100vh - #{vw(98)} - #{vw(60)});
+  top: vw(60);
+  right: 0;
+  z-index: 10;
+
+  .btn-chatbot {
+    position: absolute;
+    right: vw(24);
+    top: calc(100vh - 66%);
+    //bottom: vw(132);
+    width: vw(48);
+    height: vw(48);
+    z-index: 5;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .tip {
+      display: none;
+      position: absolute;
+      padding: vw(8) vw(12);
+      font-size: vw(12);
+      line-height: vw(16);
+      letter-spacing: -0.005em;
+      color: $gray-800;
+      background-color: #D5F4EF;
+      box-shadow: 0 vw(2) vw(1) rgba(34, 34, 34, 0.04);
+      border-radius: vw(12);
+      white-space: nowrap;
+      right: vw(56);
+      bottom: 0;
+
+      .btn-chatbot-close {
+        position: absolute;
+        top: vw(-8);
+        left: vw(-12);
+        @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-chatbot-close.svg');
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: vw(3);
+        right: vw(-5);
+        @include background-img($width: 10, $height: 7, $category: 'common', $img: 'ico-chatbot-tip.svg');
+      }
+    }
+  }
+
+  //.btn-chatbot {
+  //  bottom: 0;
+  //}
+
+  &.main {
+    top: vw(141);
+    height: calc(100vh - #{vw(98)} - #{vw(60)} - #{vw(80)});
+
+    &.full {
+      top: 0 !important;
+      height: calc(100vh - #{vw(30)}) !important;
+    }
+
+    &.no-banner {
+      top: vw(60);
+      height: calc(100vh - #{vw(98)} - #{vw(60)});
+    }
+  }
+
+  &.full {
+    height: calc(100vh - #{vw(30)});
+  }
 }
 
 ::-webkit-scrollbar {

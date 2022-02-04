@@ -14,12 +14,6 @@ data.guide = {
             category: 'guide',
             page: 'COLORS'
         },
-        // {
-        //   stateClass: 'complete',
-        //   url: 'grid',
-        //   category: 'guide',
-        //   page: 'grid'
-        // },
         {
             stateClass: 'complete',
             url: 'icons',
@@ -32,12 +26,6 @@ data.guide = {
             category: 'guide',
             page: 'INPUT'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'loading',
-        //     category: 'guide',
-        //     page: 'loading'
-        // },
         {
             stateClass: 'complete',
             url: 'tab',
@@ -82,14 +70,14 @@ data.main = {
     list: [
         {
             stateClass: 'working',
-            url: 'Main',
-            category: 'Main',
-            page: 'Main'
+            url: 'main',
+            category: 'main',
+            page: 'main'
         },
         {
             stateClass: 'complete',
             url: 'banner',
-            category: 'Main',
+            category: 'main',
             page: '배너 펼침'
         },
         {
@@ -111,16 +99,10 @@ data.AI = {
     title: 'AI피부분석',
     list: [
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: 'Ai피부분석_서브메인',
             category: 'AI',
             page: 'Ai피부분석_서브메인'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_서브메인2',
-            category: 'AI',
-            page: 'Ai피부분석_서브메인2'
         },
         // {
         //     stateClass: 'complete',
@@ -182,12 +164,6 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_서브메인_DN-'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_서브메인_후기전체보기',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_서브메인_후기전체보기'
-        // },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_비회원_정보입력',
@@ -362,12 +338,12 @@ data.AI = {
 data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
-      /*  {
+        {
             stateClass: 'working',
             url: '스킨멘토링_서브메인',
             category: 'mentoring',
             page: '스킨멘토링_서브메인'
-        },*/
+        },
         {
             stateClass: 'complete',
             url: '스킨멘토링_서브메인_피부분석_후기전체보기',
@@ -452,12 +428,12 @@ data.mentoring = {
 data.analysis = {
     title: '1:1 성분분석',
     list: [
-         /* {
-              stateClass: 'working',
-              url: '성분분석_서브메인',
-              category: 'analysis',
-              page: '성분분석_서브메인'
-          },*/
+        {
+            stateClass: 'working',
+            url: '성분분석_서브메인',
+            category: 'analysis',
+            page: '성분분석_서브메인'
+        },
         {
             stateClass: 'complete',
             url: '성분분석_1-1_사진촬영_안내',
