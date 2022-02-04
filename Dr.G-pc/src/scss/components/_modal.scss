@@ -603,15 +603,6 @@
             }
           }
         }
-
-        /* 고객제안 */
-        &.suggestion-box {
-          .input-box {
-            padding-top: vw(24);
-            margin-bottom: vw(24);
-          }
-        }
-
       }
 
       .popup-footer {
@@ -625,7 +616,7 @@
           width: 100%;
 
           + .text-btn {
-            padding-top: vw(24)
+            padding-top: 16px;
           }
         }
 
@@ -870,6 +861,7 @@
       .popup-content {
         padding: 20px 20px 40px;
       }
+
       .popup-header {
         justify-content: flex-end;
         margin-bottom: 16px;
@@ -900,6 +892,75 @@
 
       .popup-footer {
         padding: 24px 10px 0;
+      }
+    }
+
+    &.popup-suggestion-login {
+      .popup-content {
+        padding: 40px 30px;
+
+        .popup-body {
+          padding-top: 0;
+
+          .desc {
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    &.popup-suggestion-check {
+      .popup-content {
+        padding: 20px 0 40px;
+      }
+
+      .popup-header {
+        padding: 0 20px;
+        justify-content: flex-end;
+        margin-bottom: 16px;
+      }
+
+      .popup-body {
+        padding: 0 30px;
+
+        .register-box {
+          .img {
+            width: 85px;
+            margin: 0 auto 20px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .title {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 30px;
+            color: $gray-800;
+            margin-bottom: 8px;
+          }
+
+          .desc {
+            color: $gray-700;
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .input-box {
+          margin-bottom: 24px;
+        }
+      }
+
+      .popup-footer {
+        display: flex;
+        justify-content: center;
+
+        .btn {
+          width: auto;
+        }
       }
     }
   }

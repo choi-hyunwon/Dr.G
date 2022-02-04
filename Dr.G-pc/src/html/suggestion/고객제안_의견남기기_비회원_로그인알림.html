@@ -2,31 +2,22 @@
 <html lang="ko">
 @@include('../../html/include/common/head.html')
 <body>
-
-<div class="wrap">
-    <div class="container">
-    </div>
-</div>
 <!-- Modal -->
-<div class="popup-wrap fade show">
-    <div class="popup _toast-popup">
+<div class="popup-wrap">
+    <div class="popup popup-suggestion-login">
         <div class="popup-content no-title un-check">
             <div class="popup-body">
-                <p class="desc">로그인하여 글을 작성해주시면<br>더욱 편리하게 제안 내역을 관리하실 수 있어요.</p>
-                <p class="main-title"><span>로그인</span>하여 글을 작성하시겠어요?</p>
+                <p class="desc"><span class="color-primary font-bold">로그인</span>하여 더욱 편리하게<br/>
+                    글을 작성하시겠어요?</p>
             </div>
             <div class="popup-footer">
-                <a href="#" class="btn btn-lg  _hidePopup">네, 로그인 하여 작성할게요</a>
+                <a href="#" class="btn _hidePopup">네, 로그인 하여 작성할게요</a>
                 <a href="#" class="text-btn _hidePopup">아니오, 비회원으로 작성할게요.</a>
             </div>
         </div>
     </div>
 </div>
-
-<!--페이지 보여주기 위한 show 실행 (생략가능)-->
-<!--
 <script>
-    showPopup();
+    showPopup()
     // hidePopup();
 </script>
--->

@@ -153,6 +153,10 @@
   padding-left: 60px;
   padding-top: 23px;
 
+  &.bg-light-gray {
+    background-color: $gray-200;
+  }
+
   .chatbot {
     display: block;
     @include background-img ($width: 159, $height: 188, $category: 'common', $img: 'Dr.ann.png');

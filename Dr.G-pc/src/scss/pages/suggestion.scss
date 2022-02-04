@@ -562,18 +562,15 @@
   }
 
   .register-box {
-    text-align: center;
     background-color: $gray-200;
-    padding: vw(50) vw(24);
+    padding: 80px 0 0;
 
     .box {
       position: relative;
-
-      &:last-child {
-        &::after {
-          content: none;
-        }
-      }
+      text-align: center;
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 60px 106px 30px;
 
       .input-box {
         margin-bottom: vw(24);
@@ -582,34 +579,36 @@
           width: 100%;
         }
       }
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: vw(1);
-        background-color: $gray-300;
-      }
     }
 
     .img {
-      margin-bottom: vw(16);
+      width: 74px;
+      margin: 0 auto 20px;
     }
 
     .font-h4 {
-      margin-bottom: vw(24);
+      margin-bottom: 30px;
       color: $gray-800;
+      font-size: 20px;
+      line-height: 30px;
     }
 
     .btn-wrap {
-      .text-btn {
-        font-weight: 500;
-        color: $gray-800;
-        font-size: vw(13);
-        padding-top: vw(24);
-        text-decoration: underline;
+      border-bottom: 1px solid $gray-300;
+      padding-bottom: 40px;
+
+      .btn {
+        padding: 0 50px;
+      }
+    }
+
+    .text-btn {
+      font-weight: 500;
+      font-size: 16px;
+      padding-top: vw(24);
+
+      a {
+        color: $gray-700;
       }
     }
   }

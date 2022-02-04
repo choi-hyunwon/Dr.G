@@ -12,7 +12,7 @@
         // masonry layout
         // https://masonry.desandro.com/options.html
         setTimeout(function (){
-            let subjectList = $('._subjectList').masonry({
+            $('._subjectList').masonry({
                 itemSelector: '._subjectList .item',
                 columnWidth: '._subjectList .item',
                 gutter: 30,
@@ -20,6 +20,14 @@
                 horizontalOrder: true
             });
         },100)
+
+        var subjectList = $('._subjectList').masonry({
+            itemSelector: '._subjectList .item',
+            columnWidth: '._subjectList .item',
+            gutter: 30,
+            percentPosition: false,
+            horizontalOrder: true
+        });
 
         $('._tab a').on('click', function () {
             subjectList.masonry('layout');

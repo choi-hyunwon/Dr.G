@@ -265,7 +265,7 @@ function showPopup() {
     var idx = btnPopupTrigger.index(this);
 
     popup.eq(idx).removeClass('hide').css('display', 'block');
-    btnPopupTrigger.parent().after(`<div class="popup-backdrop"></div>`);
+    popup.after(`<div class="popup-backdrop"></div>`);
     $('body').addClass('scrOff')
 
     setTimeout(function (){
