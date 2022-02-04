@@ -591,12 +591,6 @@ data.suggestion = {
     title: '고객제안',
     list: [
         {
-            stateClass: 'working',
-            url: '고객제안_의견남기기',
-            category: 'suggestion',
-            page: '고객제안_의견남기기'
-        },
-        {
             stateClass: 'complete',
             url: '고객제안_나의제안내역-회원',
             category: 'suggestion',
@@ -607,6 +601,24 @@ data.suggestion = {
             url: '고객제안_나의제안내역-비회원',
             category: 'suggestion',
             page: '고객제안_나의제안내역-비회원'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_나의제안내역-비회원_확인하기',
+            category: 'suggestion',
+            page: '고객제안_나의제안내역-비회원_확인하기'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_의견남기기_비회원_로그인알림',
+            category: 'suggestion',
+            page: '고객제안_의견남기기_비회원_로그인알림'
+        },
+        {
+            stateClass: 'working',
+            url: '고객제안_의견남기기',
+            category: 'suggestion',
+            page: '고객제안_의견남기기'
         },
         {
             stateClass: 'working',
@@ -643,18 +655,6 @@ data.suggestion = {
             url: '고객제안_나의제안내역_상세보기_수정하기실행',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기_수정하기실행'
-        },
-        {
-            stateClass: 'complete',
-            url: '고객제안_나의제안내역-비회원_확인하기',
-            category: 'suggestion',
-            page: '고객제안_나의제안내역-비회원_확인하기'
-        },
-        {
-            stateClass: 'complete',
-            url: '고객제안_의견남기기_비회원_로그인알림',
-            category: 'suggestion',
-            page: '고객제안_의견남기기_비회원_로그인알림'
         },
         {
             stateClass: 'working',
