@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+
+    <!-- s contents -->
+    <div class="container view-details">
+        <div class="analysis-wrap">
+            <div class="header-details">
+                <a href="#"><i class="icon ico-close"></i></a>
+            </div>
+            <div class="body-details">
+                <div class="heading">
+                    <p class="font-h3 font-bold">제품 정보 입력</p>
+                    <p class="font-body-1">아직 닥터지에 등록되지 않은 제품의 정보를<br>
+                        알려주세요.</p>
+                </div>
+                <div class="img full-img no-img">
+                    <p>등록하고 싶은 제품의 정보를 입력해주세요.</p>
+                </div>
+                <div class="area-desc bg-gray">
+                    <div class="propose-box">
+                        <input type="text" title="제품명을 입력하세요." class="form-control" placeholder="제품명을 입력하세요.">
+                        <input type="text" title="브랜드명을 입력하세요." class="form-control" placeholder="브랜드명을 입력하세요.">
+                        <div class="select-popup">
+                            <!-- Button trigger modal -->
+                            <a href="#" class="btn-select _toast-popup-open text">
+                                <span class="text">제품 카테고리를 선택하세요.</span>
+                            </a>
+                        </div>
+
+                        <div class="caution-area">
+                            <div class="title font-body-1 font-bold"> <i class="icon ico-caution"></i><span>유의사항</span></div>
+                            <ul class="list-with-dot">
+                                <li>제품 등록은 색조를 제외한 스킨케어 및 헤어 관련 제품에 한정됩니다.</li>
+                                <li>진행 상태는 마이페이지에 등록된 전화번호로 알림이 갑니다.</li>
+                            </ul>
+                        </div>
+                        <hr class="divider"/>
+                        <div class="check-area">
+                            <div class="custom-control custom-checkbox checkbox-sm mb-1">
+                                <input type="checkbox" class="custom-control-input violet" id="consent1">
+                                <label class="custom-control-label" for="consent1">처리 결과를 카카오톡 알림으로 보내주세요.</label>
+                            </div>
+                            <div class="custom-control custom-checkbox checkbox-sm">
+                                <input type="checkbox" class="custom-control-input violet" id="consent2" checked="">
+                                <label class="custom-control-label" for="consent2">(필수) 개인정보 활용동의 <a href="#">자세히 보기</a></label>
+                            </div>
+                            <ul class="list-with-dot">
+                                <li>개인정보 활용 항목 : 성명, 아이디, 휴대폰 번호</li>
+                                <li>개인정보 활용 목적 : 닥터지 회원 식별 및 성분분석 제품 등록, 수정 제안에 대한 결과 알림</li>
+                                <li>개인정보 보유 기간 : 회원 탈퇴 전까지 보유</li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-wrap btn-wrap-xl">
+                            <a href="#" class="btn btn-block btn-xl btn-violet"><span>신청하기</span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+<!--    @@include('../../html/include/common/footer.html')-->
+    <!-- e footer -->
+</div>
+</body>
+</html>
+
+
+
+<!-- modal-->
+<div class="toast-dim">
+    <div class="toast-popup _toast-popup text">
+        <div class="toast-content no-title type">
+            <div class="toast-body mb-0">
+                <ul class="select-list">
+                    <li class="list"><span class="text violet">클렌징</span><i class="icon ico-check-violet"></i></li>
+                    <li class="list"><span class="text violet">필링/스크럽</span><i class="icon ico-check-violet"></i></li>
+                    <li class="list"><span class="text violet">토너/미스트</span><i class="icon ico-check-violet"></i></li>
+                    <li class="list"><span class="text violet">에센스/앰플</span><i class="icon ico-check-violet"></i></li>
+                    <li class="list"><span class="text violet">에멀전</span><i class="icon ico-check-violet"></i></li>
+                    <li class="list"><span class="text violet">크림</span><i class="icon ico-check-violet"></i></li>
+                    <li class="list"><span class="text violet">선 케어</span><i class="icon ico-check-violet"></i></li>
+                    <li class="list"><span class="text violet">마스크/팩</span><i class="icon ico-check-violet"></i></li>
+                    <li class="list"><span class="text violet">바디 케어</span><i class="icon ico-check-violet"></i></li>
+                    <li class="list"><span class="text violet">화장소품</span><i class="icon ico-check-violet"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

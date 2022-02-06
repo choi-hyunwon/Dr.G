@@ -350,86 +350,86 @@ data.AI = {
 data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
-        /*{
+        {
             stateClass: 'working',
             url: '스킨멘토링_서브메인',
             category: 'mentoring',
             page: '스킨멘토링_서브메인'
-        },*/
+        },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_서브메인_피부분석_후기전체보기',
             category: 'mentoring',
             page: '스킨멘토링_서브메인_피부분석_후기전체보기'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_스킨멘토링내역_목록',
             category: 'mentoring',
             page: '스킨멘토링_스킨멘토링내역_목록'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_내역_상세페이지_답변대기상태',
             category: 'mentoring',
             page: '스킨멘토링_내역_상세페이지_답변대기상태'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_내역_상세페이지_답변완료상태',
             category: 'mentoring',
             page: '스킨멘토링_내역_상세페이지_답변완료상태'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_내역_수정페이지_STEP1',
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP1'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_내역_수정페이지_STEP2',
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP2'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_내역_수정페이지_STEP3',
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP3'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_내역_수정페이지_STEP4',
             category: 'mentoring',
             page: '스킨멘토링_내역_수정페이지_STEP4'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_내역_상세페이지_후기팝업',
             category: 'mentoring',
             page: '스킨멘토링_내역_상세페이지_후기팝업'
         },
-        {
+     /*   {
             stateClass: 'complete',
             url: '스킨멘토링_내역_기본정보안내_팝업',
             category: 'mentoring',
             page: '스킨멘토링_내역_기본정보안내_팝업'
-        },
+        },*/
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_내역_레이어팝업_수신동의_미체크',
             category: 'mentoring',
             page: '스킨멘토링_내역_레이어팝업_수신동의_미체크'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_내역_레이어팝업_제품추천_미체크',
             category: 'mentoring',
             page: '스킨멘토링_내역_레이어팝업_제품추천_미체크'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '스킨멘토링_내역_레이어팝업_수신동의_제품추천_미체크',
             category: 'mentoring',
             page: '스킨멘토링_내역_레이어팝업_수신동의_제품추천_미체크'
@@ -592,6 +592,12 @@ data.suggestion = {
     list: [
         {
             stateClass: 'complete',
+            url: '고객제안_의견남기기',
+            category: 'suggestion',
+            page: '고객제안_의견남기기'
+        },
+        {
+            stateClass: 'complete',
             url: '고객제안_나의제안내역-회원',
             category: 'suggestion',
             page: '고객제안_나의제안내역-회원'
@@ -615,64 +621,70 @@ data.suggestion = {
             page: '고객제안_의견남기기_비회원_로그인알림'
         },
         {
-            stateClass: 'working',
-            url: '고객제안_의견남기기',
-            category: 'suggestion',
-            page: '고객제안_의견남기기'
-        },
-        {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_비회원_의견남기기',
             category: 'suggestion',
             page: '고객제안_비회원_의견남기기'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_개선사례_조회',
             category: 'suggestion',
             page: '고객제안_개선사례_조회'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_제품이등록되지않은경우',
             category: 'suggestion',
             page: '고객제안_제품이등록되지않은경우'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_나의제안내역_상세보기_답변대기',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기-답변대기'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_나의제안내역_상세보기_답변완료',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기-답변완료'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_나의제안내역_상세보기_수정하기실행',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기_수정하기실행'
         },
         {
-            stateClass: 'working',
-            url: '고객제안_나의제안내역_상세보기_얼럿팝업',
+            stateClass: 'complete',
+            url: '고객제안_나의제안내역_상세보기_얼럿팝업(삭제)',
             category: 'suggestion',
-            page: '고객제안_나의제안내역_상세보기_얼럿팝업'
+            page: '고객제안_나의제안내역_상세보기_얼럿팝업(삭제)'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
+            url: '고객제안_나의제안내역_상세보기_얼럿팝업(완료)',
+            category: 'suggestion',
+            page: '고객제안_나의제안내역_상세보기_얼럿팝업(완료)'
+        },
+        {
+            stateClass: 'complete',
             url: '고객제안_나의제안내역-비회원_얼럿팝업',
             category: 'suggestion',
             page: '고객제안_나의제안내역-비회원_얼럿팝업'
         },
         {
-            stateClass: 'working',
-            url: '고객제안_의견남기기_얼럿팝업',
+            stateClass: 'complete',
+            url: '고객제안_의견남기기_얼럿팝업(등록완료)',
             category: 'suggestion',
-            page: '고객제안_의견남기기_얼럿팝업'
+            page: '고객제안_의견남기기_얼럿팝업(등록완료)'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_의견남기기_얼럿팝업2(첨부파일갯수초과)',
+            category: 'suggestion',
+            page: '고객제안_의견남기기_얼럿팝업2(첨부파일갯수초과)'
         },
         // {
         //     stateClass: 'complete',

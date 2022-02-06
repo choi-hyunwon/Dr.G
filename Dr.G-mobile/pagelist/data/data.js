@@ -106,6 +106,12 @@ data.AI = {
         },
         // {
         //     stateClass: 'complete',
+        //     url: 'Ai피부분석_서브메인2',
+        //     category: 'AI',
+        //     page: 'Ai피부분석_서브메인2'
+        // },
+        // {
+        //     stateClass: 'complete',
         //     url: 'Ai피부분석_component',
         //     category: 'AI',
         //     page: 'AI피부분석 component'
@@ -523,6 +529,12 @@ data.analysis = {
             url: '성분분석_1-6_제품등록제안',
             category: 'analysis',
             page: '성분분석_1-6_제품등록제안'
+        },
+        {
+            stateClass: 'complete',
+            url: '성분분석_1-6_제품등록제안_제품없을시',
+            category: 'analysis',
+            page: '성분분석_1-6_제품등록제안_제품없을시'
         },
         {
             stateClass: 'complete',
