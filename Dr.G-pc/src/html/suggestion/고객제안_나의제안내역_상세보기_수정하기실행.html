@@ -1,105 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
     <!-- s contents -->
-    <div class="container view-details bg-gray">
-        <div class="header-details">
-            <a href="#"><i class="icon ico-close"></i></a>
-        </div>
-        <div class="body-details">
-            <div class="edit-wrap">
-                <div class="section-input">
-                    <input type="text" title="검색" class="form-control" placeholder="제목을 입력해주세요">
-
-                    <div class="select-popup">
-                        <!-- Button trigger modal -->
-                        <a href="#" class="btn-select _showPopup text">
-                            <span class="text">유형을 선택하세요.</span>
-                        </a>
+    <div class="container-fluid">
+        <div class="suggestion-wrap">
+            <!-- s heading -->
+            <div class="inner">
+                <div class="heading-box">
+                    <div class="font-h1 font-bold">고객제안</div>
+                    <div class="font-h6">
+                        여러분의 관심과 사랑으로
+                        닥터지는 이렇게 변화하고 있어요.
                     </div>
+                </div>
+            </div>
+            <!-- e heading -->
 
-                    <div class="input-group">
-                        <textarea title="textarea" class="form-control form-control-lg" placeholder="불편함을 느꼈거나 바라는 점이 있다면 들려주세요."></textarea>
-                    </div>
-
-                    <div class="upload-box">
-                        <div class="custom-file img-upload">
-                            <input type="file" class="custom-file-input" id="imgFile" accept="image/*">
-                            <p class="num"><span>3</span>/5</p>
+            <!-- s 수정하기 영역 -->
+            <div class="edit-box">
+                <div class="opinion">
+                    <div class="inner">
+                        <div class="section-input">
+                            <input type="text" title="검색" class="form-control" placeholder="제목을 입력해주세요">
+                            <div class="select-popup s-select-box _selectBox">
+                                <a href="#" class="btn-select">
+                                    <span class="text">유형을 선택하세요.</span>
+                                </a>
+                                <div class="list">
+                                    <ul>
+                                        <li><a href="#">제품</a></li>
+                                        <li><a href="#">Ai 피부분석</a></li>
+                                        <li><a href="#">서비스</a></li>
+                                        <li><a href="#">홈페이지</a></li>
+                                        <li><a href="#">모바일</a></li>
+                                        <li><a href="#">프로모션(이벤트)</a></li>
+                                        <li><a href="#">주문 및 배송</a></li>
+                                        <li><a href="#">기타</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <textarea title="textarea" class="form-control form-control-lg"
+                                          placeholder="불편함을 느꼈거나 바라는 점이 있다면 들려주세요."></textarea>
+                            </div>
+                            <div class="upload-box">
+                                <div class="custom-file img-upload">
+                                    <input type="file" class="custom-file-input" id="imgFile" accept="image/*">
+                                    <p class="num"><span>4</span>/5</p>
+                                </div>
+                                <div class="upload-list">
+                                    <ul>
+                                        <li><img src="../../img/@temp/sample01.png" alt="temp img 1">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                        <li><img src="../../img/@temp/sample02.png" alt="temp img 2">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                        <li><img src="../../img/@temp/sample03.png" alt="temp img 3">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                        <li><img src="../../img/@temp/sample04.png" alt="temp img 4">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="file-list">
+                                <p class="file_name">
+                                    <span class="text">KakaoTalk_20211122_143622399.pdf</span>
+                                    <a href="#" class="btn-close"><i class="icon ico-close-xs gray"></i></a>
+                                </p>
+                                <p class="file_name">
+                                    <span class="text">KakaoTalk_20211122_143622399_KakaoTalk_20211122_143622399.pdf</span>
+                                    <a href="#" class="btn-close"><i class="icon ico-close-xs gray"></i></a>
+                                </p>
+                                <p class="file_name">
+                                    <span class="text">KakaoTalk_20211122_143622399.pdf</span>
+                                    <a href="#" class="btn-close"><i class="icon ico-close-xs gray"></i></a>
+                                </p>
+                                <p class="file_name">
+                                    <span class="text">KakaoTalk_20211122_143622399_KakaoTalk_20211122_143622399.pdf</span>
+                                    <a href="#" class="btn-close"><i class="icon ico-close-xs gray"></i></a>
+                                </p>
+                            </div>
                         </div>
-                        <div class="upload-list">
-                            <ul>
-                                <li><img src="../../img/@temp/sample01.png" alt="temp img 1">
-                                    <a href="#" class="delete-upload">삭제</a>
-                                </li>
-                                <li><img src="../../img/@temp/sample02.png" alt="temp img 2">
-                                    <a href="#" class="delete-upload">삭제</a>
-                                </li>
-                                <li><img src="../../img/@temp/sample03.png" alt="temp img 3">
-                                    <a href="#" class="delete-upload">삭제</a>
-                                </li>
-                                <li><img src="../../img/@temp/sample03.png" alt="temp img 3">
-                                    <a href="#" class="delete-upload">삭제</a>
-                                </li>
-                            </ul>
+
+                        <hr class="divider">
+                        <div class="section-privacy">
+                            <div class="box">
+                                <div class="custom-control custom-checkbox checkbox-sm">
+                                    <input type="checkbox" class="custom-control-input" id="alert">
+                                    <label class="custom-control-label" for="alert">답변이 등록되면 카카오톡 알림을 보내주세요.</label>
+                                </div>
+                                <div class="custom-control custom-checkbox checkbox-sm">
+                                    <input type="checkbox" class="custom-control-input" id="selecAll" checked>
+                                    <label class="custom-control-label" for="selecAll"><span
+                                            class="all">전체동의</span></label>
+                                </div>
+                            </div>
+                            <div class="box-gray">
+                                <div class="custom-control custom-checkbox checkbox-sm">
+                                    <input type="checkbox" class="custom-control-input" id="notice">
+                                    <label class="custom-control-label" for="notice">(필수) 개인정보 수집 동의 <span
+                                            class="collection">(수집 항목 : 이름, 휴대폰 번호)</span><a href="#">자세히 보기</a></label>
+                                </div>
+                                <div class="custom-control custom-checkbox checkbox-sm">
+                                    <input type="checkbox" class="custom-control-input" id="consentUse">
+                                    <label class="custom-control-label" for="consentUse">(선택) 개인정보 활용동의 <span
+                                            class="collection">(수집 항목 : 성별, 연령대)</span><a href="#">자세히 보기</a></label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="file-list">
-                        <p class="file_name">
-                            <span class="text">KakaoTalk_20211122_143622399.pdf</span>
-                            <a href="#" class="btn-close"><i class="icon ico-close-xs gray"></i></a>
-                        </p>
-                        <p class="file_name">
-                            <span class="text">KakaoTalk_20211122_143622399_KakaoTalk_20211122_143622399.pdf</span>
-                            <a href="#" class="btn-close"><i class="icon ico-close-xs gray"></i></a>
-                        </p>
-                    </div>
-                </div>
-                <div class="section-privacy">
-
-                    <hr class="divider">
-                    <div class="custom-control custom-checkbox checkbox-sm">
-                        <input type="checkbox" class="custom-control-input" id="notice">
-                        <label class="custom-control-label" for="notice">(필수) 개인정보 수집 동의 <a href="#">자세히 보기</a><br><span class="collection">(수집 항목 : 이름, 휴대폰 번호)</span></label>
-                    </div>
-                    <div class="custom-control custom-checkbox checkbox-sm">
-                        <input type="checkbox" class="custom-control-input" id="consentUse">
-                        <label class="custom-control-label" for="consentUse">(선택) 개인정보 활용동의 <a href="#">자세히 보기</a><br><span class="collection">(수집 항목 : 성별, 연령대)</span></label>
-                    </div>
-                </div>
-                <div class="btn-wrap">
-                    <a href="#" class="btn btn-lg" data-toggle="modal"
-                       data-target="#completePopup"><span>저장하기</span></a>
-                </div>
-
-                <div class="modal fade" id="completePopup" tabindex="-1" role="dialog" aria-labelledby="completePopup"
-                     aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered alert-popup" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">완료</h5>
-                            </div>
-                            <div class="modal-body">
-                                등록이 완료되었습니다.
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#" type="button" class="btn one" data-dismiss="modal">확인</a>
-                            </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn btn-lg"><span>저장하기</span></a>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- e 수정하기 영역 -->
         </div>
     </div>
     <!-- e contents -->
 
     <!-- s footer -->
-<!--    @@include('../../html/include/common/footer.html')-->
+    @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
+@@include('./_subMainScript.html')
 
-<!--modal-->
+<!-- modal-->
 @@include('./select-popup-type.html')
+</body>
+</html>
+
+
+

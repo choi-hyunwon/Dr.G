@@ -80,7 +80,7 @@
       display: inline-block;
       padding-right: 29px;
       position: relative;
-      margin-bottom: 0;
+      //margin-bottom: 0;
       &:after{
         content: '';
         clear: both;
@@ -89,11 +89,11 @@
         right: 12px;
         width: 1px;
         height: 14px;
-        top: 6px;
+        top: 3px;
         background-color: $gray-400;
       }
       &:last-of-type{
-        padding-left: 0;
+        padding-right: 0;
         &:after{
           display: none;
         }
@@ -107,7 +107,7 @@
         line-height: 18px;
         color: $gray-700;
         font-weight: normal;
-        max-width: 412px;
+        max-width: 350px;
         @include ellipsis(1)
       }
 
@@ -158,27 +158,50 @@
 }
 
 /*첨부파일명 - 보기*/
-.file-list {
-  > p {
+.file-title{
+  margin-bottom: 16px;
+  .title {
+    font-size: 13px;
+    line-height: 18px;
+    color: $gray-600;
     font-weight: bold;
-    margin-bottom: vw(12);
-
-    &.title {
-      font-size: vw(13);
-      line-height: vw(18);
-      color: $gray-600;
-
-      .ico-link {
-        margin-right: vw(3);
-      }
-    }
-
-    &.file_name {
-      font-size: vw(15);
-      line-height: vw(22);
-      color: $gray-800;
-      //word-break: break-all;
-      @include ellipsis(1)
+    .ico-link {
+      margin-right: 3px;
     }
   }
 }
+
+.file-list {
+  padding-top: 16px;
+  .file_name {
+    font-size: 13px;
+    line-height: 18px;
+    color: $gray-700;
+    display: inline-block;
+    //word-break: break-all;
+    @include ellipsis(1);
+    position: relative;
+    padding-right: 33px;
+    max-width: 412px;
+    &:after{
+      content: '';
+      clear: both;
+      display: inline-block;
+      position: absolute;
+      right: 12px;
+      width: 1px;
+      height: 16px;
+      top: 2px;
+      background-color: $gray-400;
+    }
+    &:last-of-type{
+      padding-right: 0;
+      &:after{
+        display: none;
+      }
+    }
+  }
+
+}
+
+

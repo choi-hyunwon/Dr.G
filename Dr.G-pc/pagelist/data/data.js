@@ -639,19 +639,19 @@ data.suggestion = {
             page: '고객제안_제품이등록되지않은경우'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_나의제안내역_상세보기_답변대기',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기-답변대기'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_나의제안내역_상세보기_답변완료',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기-답변완료'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '고객제안_나의제안내역_상세보기_수정하기실행',
             category: 'suggestion',
             page: '고객제안_나의제안내역_상세보기_수정하기실행'

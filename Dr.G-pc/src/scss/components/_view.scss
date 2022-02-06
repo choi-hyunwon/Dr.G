@@ -19,6 +19,9 @@
       .badge-box {
         margin-bottom: vw(8);
       }
+      .title{
+        word-break: keep-all;
+      }
 
       .info-line {
         padding-top: 8px;
@@ -76,6 +79,9 @@
 
     .area-desc {
       padding: 60px 0;
+      &.answer_paddng{
+        padding-bottom: 0;
+      }
 
       > .text {
         word-break: keep-all;
@@ -367,11 +373,11 @@
 
     .btn-wrap {
       text-align: center;
-      padding: vw(32) 0;
+      padding: 40px 0 0;
 
       .btn {
         + .btn {
-          margin-left: vw(4);
+          margin-left: 10px;
         }
       }
       &.btn-wrap-xl {
@@ -382,16 +388,16 @@
     /*답변완료*/
     .answer-wrap {
       background-color: #f8f8f8;
-      padding: vw(32) vw(57) vw(32) vw(24);
-      margin-top: vw(32);
+      padding: 40px;
+      margin-top: 40px;
 
       .badge {
-        margin-bottom: vw(8);
+        margin-bottom: 10px;
       }
 
       .text {
         color: $gray-800;
-        font-size: vw(16);
+        font-size: 16px;
       }
     }
 
