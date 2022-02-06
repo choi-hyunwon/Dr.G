@@ -834,11 +834,21 @@
     .full-img {
       width: vw(375);
       height: vw(375);
-      color: $primary;
 
       img {
         width: 100%;
         height: auto;
+      }
+      /*제품이미지 없을시*/
+      &.no-img{
+        background: $gray-200 url("../img/analysis/img-product_input-default.png") no-repeat top vw(70) center / vw(212) vw(212);
+        >p{
+          padding-top: vw(306);
+          text-align: center;
+          color: $gray-700;
+          font-size: vw(15);
+        }
+
       }
     }
 

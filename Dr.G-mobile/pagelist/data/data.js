@@ -550,6 +550,12 @@ data.analysis = {
         },
         {
             stateClass: 'complete',
+            url: '성분분석_1-6_제품등록제안_제품없을시',
+            category: 'analysis',
+            page: '성분분석_1-6_제품등록제안_제품없을시'
+        },
+        {
+            stateClass: 'complete',
             url: '성분분석_1-6_제품등록완료',
             category: 'analysis',
             page: ':성분분석_1-6_제품등록완료'
