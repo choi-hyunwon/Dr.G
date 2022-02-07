@@ -11,19 +11,6 @@
         $(this).addClass('active');
     })
 
-        /*step3*/
-        $('.terms .title').on('click', function () {
-            if (!$(this).hasClass('_title')) {
-                $(this).children().removeClass('ico-plus-md').addClass('ico-minus-md');
-                $(this).addClass('_title');
-                $(this).siblings().slideDown(200);
-            } else {
-                $(this).children().removeClass('ico-minus-md').addClass('ico-plus-md');
-                $(this).removeClass('_title');
-                $(this).siblings().slideUp(200);
-            }
-        })
-
         /*step 공통*/
         // let stepScroll = 0;
         // $(window).scroll(function (event) {

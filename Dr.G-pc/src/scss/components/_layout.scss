@@ -2,6 +2,7 @@
 |--------------------------------------------------------------------|
  v.0.1 주연 : 최초 작업 -- 2022.01.27
  v.0.2 선미 : heading-box 추가  -- 2022.02.07
+ v.0.3 선미 : chatbot-box {position : absolute / 멘토링,성분분석 사용} 추가  -- 2022.02.07
 |--------------------------------------------------------------------|
 */
 
@@ -174,5 +175,17 @@
   .chatbot {
     display: block;
     @include background-img ($width: 159, $height: 188, $category: 'common', $img: 'Dr.ann.png');
+  }
+}
+
+
+/*멘토링 ,성분분석 따로 관리 - 여백 */
+.mentoring-wrap{
+  .chatbot-box {
+    height: 240px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
   }
 }
