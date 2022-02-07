@@ -526,8 +526,8 @@ front.common = (function () {
                     // Scroll Down
                     if (st > mainHeaderHeight + bannerHeight) {
                         mainHeader.removeClass('scroll-up').addClass('header-transparent','scroll-down');
-                        $('._chatBotArea').addClass('full')
-                        console.log('1')
+                        // $('._chatBotArea').addClass('full')
+                        // console.log('1')
                     }
                 } else {
                     // Scroll Up
@@ -535,13 +535,13 @@ front.common = (function () {
                         if (st < delta) {
                             mainHeader.addClass('header-transparent').removeClass('scroll-up');
                             mainHeader.removeClass('scroll-down');
-                            console.log('2')
-                            $('._chatBotArea').removeClass('full')
-                            $('._chatBotArea').removeClass('no-banner')
+                            // console.log('2')
+                            // $('._chatBotArea').removeClass('full')
+                            // $('._chatBotArea').removeClass('no-banner')
                         } else {
-                            console.log('3')
+                            // console.log('3')
                             mainHeader.removeClass('header-transparent', 'scroll-down').addClass('scroll-up');
-                            $('._chatBotArea').removeClass('full').addClass('no-banner')
+                            // $('._chatBotArea').removeClass('full').addClass('no-banner')
                         }
                     }
                 }

@@ -349,7 +349,7 @@
               position: relative;
               display: flex;
               width: 100%;
-              height: vw(62.5);
+              height: vw(63);
               align-items: center;
               font-weight: bold;
               font-size: vw(16);
@@ -462,14 +462,14 @@
 
         .bottom {
           border-top: 1px solid $gray-300;
-          padding-top: vw(8);
-          margin-top: vw(8);
+          //padding-top: vw(8);
+          //margin-top: vw(8);
 
           .item {
             position: relative;
             display: flex;
             width: 100%;
-            height: vw(56.5);
+            height: vw(63);
 
             a {
               width: calc(100% - #{vw(24)});
