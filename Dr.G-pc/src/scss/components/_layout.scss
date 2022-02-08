@@ -11,7 +11,7 @@
 .wrap {
   position: relative;
   width: 100%;
-  max-width: 1920px;
+  //max-width: 1920px;
   min-width: 1242px;
   margin: 0 auto;
   //overflow: hidden;
@@ -45,6 +45,7 @@
 .header {
   width: 100%;
   border-bottom: 1px solid $gray-300;
+
   .inner {
     display: flex;
     align-items: center;
@@ -87,7 +88,7 @@
       display: flex;
       align-items: center;
 
-      .btn-alert , .btn-mypage {
+      .btn-alert, .btn-mypage {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -114,12 +115,25 @@
       }
     }
   }
-  &._scroll{
+
+  &._scroll {
     position: fixed;
     left: 0;
     top: 0;
     z-index: 30;
     background-color: $gray-fff;
+  }
+
+  &.scroll-down {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 30;
+    background-color: $gray-fff;
+
+    + .container {
+      padding-top: 86px !important;
+    }
   }
 }
 
@@ -181,13 +195,13 @@
 
   .chatbot {
     display: block;
-    @include background-img ($width: 159, $height: 188, $category: 'common', $img: 'Dr.ann.png');
+    @include background-img($width: 159, $height: 188, $category: 'common', $img: 'Dr.ann.png');
   }
 }
 
 
 /*멘토링 ,성분분석 따로 관리 - 여백 */
-.mentoring-wrap{
+.mentoring-wrap {
   .chatbot-box {
     height: 240px;
     position: absolute;

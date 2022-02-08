@@ -192,7 +192,7 @@
         height: vw(288);
         border-radius: vw(16) vw(16) vw(16) 0;
         overflow: hidden;
-        margin-bottom: vw(12);
+        margin-bottom: 16px;
 
         .img-inner {
           display: flex;
@@ -258,20 +258,24 @@
 
     .empty {
       text-align: center;
-      padding-top: vw(84);
-      margin-bottom: vw(155);
+      padding-top: 60px;
 
       .img {
-        width: vw(62);
+        width: 45px;
         height: auto;
         margin: 0 auto vw(20);
+
+        img {
+          width: 100%;
+        }
       }
 
       .font-h6 {
         color: $gray-800;
-        font-weight: bold;
+        font-weight: 500;
         font-size: 20px;
         line-height: 30px;
+        margin-bottom: 4px;
       }
 
       .font-body-1 {
@@ -401,6 +405,7 @@
         font-size: 16px;
         line-height: 24px;
         color: $gray-800;
+        font-weight: 500;
         @include ellipsis(2);
       }
 
@@ -431,6 +436,7 @@
       .tag {
         display: block;
         line-height: vw(16);
+        margin-top: 2px;
 
         em {
           display: inline-block;
@@ -558,12 +564,12 @@
       }
 
       &.manager {
-        margin-top: 0;
         background-color: #e2f5ff;
         position: relative;
         border-radius: 16px;
         margin-bottom: 30px;
         padding: 30px;
+        margin-top: -10px;
 
         .info-area {
           .img {
@@ -633,6 +639,10 @@
         left: 0;
         background-color: #fff;
         z-index: 5;
+
+        + .tab-content {
+          padding: 144px 0 0;
+        }
       }
     }
   }
@@ -670,7 +680,7 @@
         }
 
         a {
-          margin-right: vw(12);
+          margin-right: 16px;
 
           &:last-child {
             margin-right: 0;
@@ -811,6 +821,7 @@
 
         .btn-wrap {
           width: 167px;
+          padding-top: 18px;
 
           .btn {
             padding: 0;
@@ -900,6 +911,10 @@
             width: vw(45);
             height: auto;
             margin: 0 auto vw(20);
+
+            img {
+              width: 100%;
+            }
           }
 
           .font-h6 {
@@ -912,6 +927,7 @@
 
           .font-body-1 {
             color: $gray-500;
+            font-weight: 500;
           }
         }
       }
@@ -1067,7 +1083,7 @@
       border-top: 1px solid $gray-300;
 
       a + a {
-        margin-left: vw(12);
+        margin-left: 16px;
       }
     }
 

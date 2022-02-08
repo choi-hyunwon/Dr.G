@@ -445,7 +445,7 @@
             line-height: vw(20);
             color: $gray-900;
             display: inline;
-            padding-top: vw(3);
+            padding-top: vw(2);
 
             &::before {
               top: vw(2);
@@ -546,6 +546,7 @@
               width: vw(39);
               height: vw(22);
               border: 1px solid #EF4C57;
+              transform: translateY(-2px);
             }
 
             .custom-control-label {
@@ -608,6 +609,10 @@
 
       .btn {
         min-width: vw(160);
+
+        &:only-child {
+          min-width: auto;
+        }
 
         + .btn {
           margin-left: vw(7);

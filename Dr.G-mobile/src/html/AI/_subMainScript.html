@@ -96,19 +96,20 @@
     });
 
     /* ---------- s how section animation ---------- */
-    // let iconFace = document.querySelector('._faceAni');
-    //
-    // let animationFace = bodymovin.loadAnimation({
-    //     container: iconFace,
-    //     renderer: 'svg',
-    //     loop: false,
-    //     autoplay: true,
-    //     path: "../../img/@temp/face_280x280.json"
-    // });
+    // animation
+    let iconFace = document.querySelector('._faceAni');
+
+    let animationFace = bodymovin.loadAnimation({
+        container: iconFace,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/@temp/face_280x280.json"
+    });
 
     var howSlider = new Swiper("._howSlider", {
-        spaceBetween: 24,
         autoplay: true,
+        spaceBetween: 24,
         centeredSlides: true,
         effect: 'fade',
         pagination: {
@@ -126,8 +127,7 @@
                 countUp(0, 100, 1)
             }, 300)
         } else if(howSlider.realIndex === 1) {
-            // animation
-            // animationFace.playSegments([0,60], true);
+            animationFace.playSegments([0,100], true);
         } else {
         }
     });
@@ -315,6 +315,16 @@
     /* ---------- e story section animation ---------- */
 
     /* ---------- s why section animation ---------- */
+    let icon6points = document.querySelector('._6points');
+
+    let animation6points = bodymovin.loadAnimation({
+        container: icon6points,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/@temp/6point_279x301.json"
+    });
+
     var whySlider = new Swiper("._whySlider", {
         autoplay: true,
         spaceBetween: 48,
@@ -328,11 +338,14 @@
 
     whySlider.on('slideChange', function () {
         if(whySlider.realIndex === 0) {
-            $('._whySlider .item.item-1').addClass('ani-on')
-        } else if(whySlider.realIndex === 2) {
-            lineDrawing()
+            $('._whySlider .item.item-1').addClass('ani-on');
+        } else if(whySlider.realIndex === 1) {
+            $('._whySlider .item.item-1').removeClass('ani-on');
+
+            // animation
+            animation6points.playSegments([0,160], true);
         } else {
-            $('._whySlider .item.item-1').removeClass('ani-on')
+            lineDrawing()
         }
     });
 
