@@ -4436,9 +4436,9 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: transparent;
   z-index: 1050;
   overflow: hidden;
+  background-color: rgba(34, 34, 34,.2);
 
   &.show {
     display: block;
@@ -4450,35 +4450,45 @@
 
   .modal-content {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    background-color: transparent;
+    width: 600px;
+    height: 678px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    border-radius: 20px;
     border: 0;
-    box-shadow: 0 vw(-6) vw(10) rgba(34, 34, 34, 0.1);
+    overflow: hidden;
 
     .content {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: vw(545);
+      height: 100%;
+
+      > .font-h4 {
+        position: absolute;
+        width: 100%;
+        top: 64px;
+        left: 0;
+        text-align: center;
+      }
 
       .btn-close {
         position: absolute;
         display: block;
-        top: vw(5);
-        right: vw(24);
+        top: 20px;
+        right: 20px;
         z-index: 2;
-        @include background-img($width: 24, $height: 24, $category: 'AI', $img: 'ico-close-gray.svg');
+        @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-close.svg');
       }
 
       .circle {
         position: absolute;
         width: 100%;
         height: 100%;
-        bottom: vw(-30);
+        bottom: -196px;
         left: 0;
         z-index: 0;
 
@@ -4492,7 +4502,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 0;
+        top: 129px;
         width: vw(160);
         height: vw(160);
 
@@ -4520,15 +4530,17 @@
         position: relative;
         z-index: 1;
         text-align: center;
-        padding-top: vw(204);
-        margin-bottom: vw(32);
+        padding-top: 333px;
+        margin-bottom: 48px;
 
         .font-h3 {
+          font-size: 24px;
+          height: 35px;
           margin-bottom: vw(8);
         }
 
         .font-body-2 {
-          margin-bottom: vw(24);
+          margin-bottom: 20px;
         }
 
         .font-h6 {
