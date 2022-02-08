@@ -17,10 +17,11 @@
 
   /*step*/
   .step-heading {
+    background-color: beige;
     width: 616px;
     margin: 0 auto 60px;
     font-size: 0;
-    //z-index: 20;
+    z-index: 20;
 
 /*    + .area-desc {
       padding: vw(48) vw(24) 0;
@@ -461,11 +462,13 @@
       a {
         font-weight: bold;
         line-height: 1;
-        padding: vw(62) 0 vw(20);
-        width: calc(50% - #{vw(15)});
-        display: inline-block;
-        text-align: center;
-        border-radius: vw(12);
+        padding:30px 40px 30px 88px;
+        width: calc(50% - 15px);
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 16px;
+        color: $gray-850;
 
         span {
           vertical-align: middle;
@@ -473,21 +476,19 @@
         }
 
         &.ingredient {
-          color: $gray-900;
           margin-right: 26px;
-          background: #DFE2FF url("../img/mentoring/img-ingredient.svg") no-repeat top vw(23) center;
-          background-size: vw(36) vw(36);
+          background: #DFE2FF url("../img/mentoring/img-ingredient.svg") no-repeat center left 40px;
+          background-size: 36px 36px;
         }
 
         &.inside {
-          color: $gray-800;
-          background: #d5f4ef url("../img/mentoring/img-inside.svg") no-repeat top vw(23) center;
-          background-size: vw(36) vw(36);
-
+          background: #d5f4ef url("../img/mentoring/img-inside.svg") no-repeat center left 40px;
+          background-size: 36px 36px;
         }
       }
     }
   }
+
 
 
 
