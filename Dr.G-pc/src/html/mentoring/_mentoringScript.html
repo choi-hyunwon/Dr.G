@@ -39,13 +39,11 @@
             if (!$(this).hasClass('_title')) {
                 $(this).find('.icon').removeClass('ico-plus-sm').addClass('ico-minus-sm');
                 $(this).addClass('_title');
-                $(this).parent().addClass('_unfold');
-                $(this).siblings().slideDown(200);
+                $('.list-bg').slideDown(200);
             } else {
                 $(this).find('.icon').removeClass('ico-minus-sm').addClass('ico-plus-sm');
                 $(this).removeClass('_title');
-                $(this).parent().removeClass('_unfold');
-                $(this).siblings().slideUp(200);
+                $('.list-bg').slideUp(200);
             }
         })
 

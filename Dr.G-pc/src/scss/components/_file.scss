@@ -4,14 +4,11 @@
 |----------------------------------|
 */
 
-.attach-box {
-  margin: 0 vw(-24);
-}
 
 .upload-box {
   white-space: nowrap;
 
-  .img-upload {
+/*  .img-upload {
     width: vw(60);
     height: vw(60);
     border-radius: vw(8);
@@ -71,7 +68,7 @@
         }
       }
     }
-  }
+  }*/
 
   /*첨부파일명 - 수정하기*/
   + .file-list {
@@ -121,9 +118,10 @@
 
 /*확인화면*/
 .attach-box {
+/*  margin: 0 vw(-24);
   white-space: nowrap;
   overflow-x: scroll;
-  //padding-bottom: vw(48);
+  padding-bottom: vw(48);
   margin: 0 vw(-24);
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -134,25 +132,25 @@
     height: 0;
     background: transparent;
     -webkit-appearance: none;
-  }
+  }*/
 
   li {
     position: relative;
     display: inline-block;
-    margin-left: vw(4);
+    margin-left: 8px;
 
     &:first-of-type {
-      margin-left: vw(24);
+      margin-left: 0;
     }
-
+/*
     &:last-of-type {
       margin-right: vw(24);
-    }
+    }*/
 
     img {
-      width: vw(72);
-      height: vw(72);
-      border-radius: vw(12);
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
     }
   }
 }
