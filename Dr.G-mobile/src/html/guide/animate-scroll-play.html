@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <!-- s section -->
+        <div class="section-wrap">
+            <div class="text text1">
+                <span class="color-violet">스크롤</span>을 내려주세요
+                <div class="mt-4"><i class="icon ico-arrow-down"></i></div>
+            </div>
+
+            <div class="item">
+                <div class="img-sample">
+                    <div class="test-lottie"></div>
+                </div>
+            </div>
+
+            <div class="text text2">
+                <div class="mb-4"><i class="icon ico-arrow-up"></i></div>
+                <span class="color-violet">스크롤</span>을 올려주세요
+            </div>
+        </div>
+        <!-- e section -->
+    </div>
+    <!-- e contents -->
+
+</div>
+
+<!--@@include('_subMainScript.html' )-->
+<script>
+    let iconSkipForward = document.querySelector('.test-lottie');
+
+    let animationSkipForward = bodymovin.loadAnimation({
+        container: iconSkipForward,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/@temp/2time.json"
+    });
+
+
+    let scroll0 = 0;
+    $(window).scroll(function (event) {
+        if ($('.section-wrap').find('.img-sample').length) {
+            let st = $(this).scrollTop();
+            let itemTop = $('.item').offset().top
+
+            if (st > scroll0) {
+                //console.log("DOWN");
+                console.log(st)
+                if ( st > (itemTop - 30)){
+                    animationSkipForward.playSegments([0,60], true);
+                }
+                if ( st > (itemTop + 30)){
+                    animationSkipForward.stop()
+                }
+            } else {
+                //console.log("UP");
+                if ( st < (itemTop + 30)){
+                    animationSkipForward.playSegments([0,60], true);
+                }
+                if ( st < (itemTop - 30)){
+                    animationSkipForward.stop()
+                }
+            }
+            //Updates scroll position
+            scroll0 = st;
+        }
+    });
+</script>
+</body>
+</html>
+
+
+<style>
+    .section-wrap{background: #E7EAFF;}
+    .text{text-align: center;font-weight: bold;font-size: 20px;}
+    .text1{ margin-bottom: 500px; padding-top: 80px;}
+    .text2{ margin-top: 500px;padding-bottom: 100px; }
+    .item{background-color: #6170FF;text-align: center;}
+</style>

@@ -1,6 +1,9 @@
 /*
 |--------------------------------------------------------------------|
  v.0.1 주연 : 최초 작업 -- 2022.01.27
+ v.0.2 선미 : heading-box 추가  -- 2022.02.07
+ v.0.3 선미 : chatbot-box {position : absolute / 멘토링,성분분석 사용} 추가  -- 2022.02.07
+ v.0.4 선미 :  header (_scroll) 추가 -- 2022.02.07
 |--------------------------------------------------------------------|
 */
 
@@ -23,13 +26,25 @@
   .container-fluid {
     padding: 0;
   }
+
+  .heading-box {
+    padding: 40px 0 80px;
+    text-align: center;
+
+    .font-h1 {
+      margin-bottom: vw(12);
+    }
+
+    .font-h6 {
+      color: $gray-700;
+    }
+  }
 }
 
 /* header */
 .header {
   width: 100%;
   border-bottom: 1px solid $gray-300;
-
   .inner {
     display: flex;
     align-items: center;
@@ -99,6 +114,13 @@
       }
     }
   }
+  &._scroll{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 30;
+    background-color: $gray-fff;
+  }
 }
 
 /* location */
@@ -160,5 +182,17 @@
   .chatbot {
     display: block;
     @include background-img ($width: 159, $height: 188, $category: 'common', $img: 'Dr.ann.png');
+  }
+}
+
+
+/*멘토링 ,성분분석 따로 관리 - 여백 */
+.mentoring-wrap{
+  .chatbot-box {
+    height: 240px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
   }
 }

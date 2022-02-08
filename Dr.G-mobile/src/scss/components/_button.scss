@@ -16,6 +16,7 @@
  v.0.10 주연 : .btn-light / .btn-md 추가 -- 2022.01.07
  v.0.11 선미 : .btn-violet 추가 -- 2022.01.13
  v.0.12 선미 : .btn-violet-light 추가 -- 2022.01.21
+ v.0.13 선미 : .btn-primary &:focus, &:active {border-color: $primary;} 추가 -- 2022.02.07
 |--------------------------------------------------------------------|
 */
 .btn {
@@ -70,6 +71,12 @@
 
     &:active {
       background-color: #fff  !important;
+    }
+  }
+
+  &.btn-primary{
+    &:focus, &:active, &:not(:disabled):not(.disabled):active {
+      border-color: $primary;
     }
   }
 

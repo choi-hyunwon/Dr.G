@@ -2,6 +2,7 @@
 |--------------------------------------------------------------------|
  v.0.1 주연 : 최초 작업 -- 2022.02.04
  v.0.2 선미 : select-box 여백 및 border 색상 수정 -- 2022.02.04
+ v.0.3 선미 : s-select-box > .on > a 색상 카테고리별 분류 / divider 추가 -- 2022.02.07
 |--------------------------------------------------------------------|
 */
 .list-with-dot {
@@ -451,6 +452,7 @@ body.scrOff {
   }
 }
 
+
 .s-select-box {
   position: relative;
 
@@ -493,14 +495,7 @@ body.scrOff {
       background-color: $gray-300;
       border-radius: 100px;
     }
-
     li {
-      &.on {
-        a {
-          color: $primary;
-        }
-      }
-
       a {
         padding: 8px 0;
         display: block;
@@ -524,5 +519,43 @@ body.scrOff {
       border-radius: 12px 12px 0 0;
       background-image: url(../img/common/ico-select-up.svg);
     }
+  }
+}
+
+.mentoring-wrap{
+  .s-select-box{
+    ul{
+      li{
+        &.on {
+          a {
+            color: $blue;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.suggestion-wrap{
+  .s-select-box{
+    ul{
+      li{
+        &.on {
+          a {
+            color: $primary;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.divider{
+  margin: 60px 0 40px;
+  &.divider-sm{
+    margin: 20px 0 24px;
   }
 }

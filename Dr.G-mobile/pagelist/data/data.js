@@ -4,6 +4,18 @@ data.guide = {
     list: [
         {
             stateClass: 'complete',
+            url: 'animate-click-play',
+            category: 'guide',
+            page: 'animate-click-play'
+        },
+        {
+            stateClass: 'complete',
+            url: 'animate-scroll-play',
+            category: 'guide',
+            page: 'animate-scroll-play'
+        },
+        {
+            stateClass: 'complete',
             url: 'button',
             category: 'guide',
             page: 'button'
