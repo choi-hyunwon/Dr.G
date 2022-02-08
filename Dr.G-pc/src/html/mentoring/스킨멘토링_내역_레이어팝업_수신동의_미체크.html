@@ -2,24 +2,21 @@
 <html lang="ko">
 @@include('../../html/include/common/head.html')
 <body>
-<div class="wrap">
-</div>
-
-<!-- 타이틀 x-->
-<div class="popup-wrap fade show">
-    <div class="popup _toast-popup">
-        <div class="popup-content no-title un-check">
+<!-- Modal -->
+<div class="popup-wrap">
+    <div class="popup no-header">
+        <div class="popup-content no-header">
             <div class="popup-body">
-              <!--  <p class="desc">답변 알림 미신청 시<br>알림이 발송되지 않습니다.</p> 고객사 요청으로 인해 제거-->
-                <p class="main-title"><span class="color-blue">답변 알림</span>을 신청해 스킨멘토의 답변을<br>빠르게 만나보시겠어요?</p>
+                <p class="desc"><span class="font-bold color-blue">답변 알림</span>을 신청해 스킨 멘토의 답변을<br>빠르게 만나보시겠어요?</p>
             </div>
             <div class="popup-footer">
-                <a href="#" class="btn btn-lg btn-blue _hidePopup">네, 답변 알림을 신청할게요.</a>
+                <a href="#" class="btn btn-block btn-blue _hidePopup">네, 답변 알림을 신청할게요.</a>
                 <a href="#" class="text-btn _hidePopup">아니오, 받지 않겠습니다.</a>
             </div>
         </div>
     </div>
 </div>
-
-</body>
-</html>
+<script>
+    showPopup()
+    // hidePopup();
+</script>

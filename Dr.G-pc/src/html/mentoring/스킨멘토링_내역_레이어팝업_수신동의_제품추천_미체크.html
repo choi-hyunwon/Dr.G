@@ -2,23 +2,21 @@
 <html lang="ko">
 @@include('../../html/include/common/head.html')
 <body>
-<div class="wrap">
-</div>
-<!-- 타이틀 x-->
-<div class="popup-wrap fade show">
-    <div class="popup _toast-popup">
-        <div class="popup-content no-title un-check">
+<!-- Modal -->
+<div class="popup-wrap">
+    <div class="popup no-header">
+        <div class="popup-content no-header">
             <div class="popup-body">
-                <p class="main-title"><span class="color-blue">답변 알림</span>과 <span class="color-blue">제품 추천</span>을<br>신청해
-                    스킨 멘토의 맞춤형 혜택을<br>받으시겠어요?</p>
+                <p class="desc"><span class="font-bold color-blue">답변 알림</span>과 <span class="font-bold color-blue">제품 추천</span>을 신청해<br>스킨 멘토의 맞춤형 혜택을 받으시겠어요?</p>
             </div>
             <div class="popup-footer">
-                <a href="#" class="btn btn-lg btn-blue _hidePopup">네, 받겠습니다.</a>
+                <a href="#" class="btn btn-block btn-blue _hidePopup">네, 받겠습니다.</a>
                 <a href="#" class="text-btn _hidePopup">아니오, 받지 않겠습니다.</a>
             </div>
         </div>
     </div>
 </div>
-
-</body>
-</html>
+<script>
+    showPopup()
+    // hidePopup();
+</script>

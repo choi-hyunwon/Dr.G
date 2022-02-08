@@ -18,17 +18,15 @@
                 let st = $(this).scrollTop();
                 let stepTop = $('.step-heading').offset().top - 80
 
-
                 if (st > stepScroll) {
                      //console.log("DOWN");
                     if (st > stepTop){
-                        $('.inner').addClass('메롱')
+                        $('.inner').addClass('_step-fixed')
                     }
-
                 } else {
                      //console.log("UP");
                     if (st < stepTop){
-                        $('.inner').removeClass('메롱')
+                        $('.inner').removeClass('_step-fixed')
                     }
                 }
                 //Updates scroll position

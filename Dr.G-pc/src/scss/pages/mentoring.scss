@@ -13,11 +13,39 @@
       max-width: 1242px;
       min-width: 1242px;
       margin: 0 auto;
+
+    /*step scroll시*/
+    &.step-inner{
+      .heading-box{
+        padding-bottom: 0;
+      }
+      .step-heading{
+        padding-top: 80px;
+      }
+      &._step-fixed{
+        position: fixed;
+        top: 87px;
+        left: 0;
+        max-width: 100%;
+        width: 100%;
+        z-index: 10;
+        background-color: #FFFFFF;
+        .heading-box{
+          display: none;
+        }
+        .step-heading{
+          height: 192px;
+        }
+        +div{
+          padding-top: 480px;
+        }
+
+      }
+    }
   }
 
   /*step*/
   .step-heading {
-    background-color: beige;
     width: 616px;
     margin: 0 auto 60px;
     font-size: 0;
