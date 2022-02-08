@@ -3,17 +3,17 @@
  v.0.1 주연 : 최초 작업 -- 2022.02.04
  v.0.2 선미 : select-box 여백 및 border 색상 수정 -- 2022.02.04
  v.0.3 선미 : s-select-box > .on > a 색상 카테고리별 분류 / divider 추가 -- 2022.02.07
+ v.0.4 선미 : .list-with-dot 추가 -- 2022.02.08
 |--------------------------------------------------------------------|
 */
 .list-with-dot {
   li {
     position: relative;
-    font-size: vw(13);
-    line-height: vw(18);
-    letter-spacing: vw(-0.05);
+    font-size: 13px;
+    line-height: 18px;
     color: $gray-600;
-    padding-left: vw(13);
-    margin-bottom: vw(8);
+    padding-left: 8px;
+    margin-bottom: 8px;
 
     &:last-child {
       margin-bottom: 0;
@@ -22,10 +22,10 @@
     &::after {
       content: '';
       position: absolute;
-      width: vw(3);
-      height: vw(3);
+      width: 3px;
+      height: 3px;
       left: 0;
-      top: vw(8);
+      top: 9px;
       background-color: $gray-600;
       border-radius: 50%;
     }
