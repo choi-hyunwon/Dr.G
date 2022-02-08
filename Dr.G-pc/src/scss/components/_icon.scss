@@ -1,6 +1,7 @@
 /*
 |--------------------------------------------------------------------|
  v.0.1 선미 : ico-arrow-green-right 추가 및 pc 분리 -- 2022.02.04
+ v.0.2 주연 : sns 아이콘 사이즈 변경 -- 2022.02.08
 |--------------------------------------------------------------------|
 */
 .icon {
@@ -171,18 +172,6 @@
   @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-check-white.svg');
 }
 
-.ico-sns-kakao {
-  @include background-img($width: 44, $height: 44, $category: 'common', $img: 'ico-sns-kakao.svg');
-}
-
-.ico-sns-facebook {
-  @include background-img($width: 44, $height: 44, $category: 'common', $img: 'ico-sns-facebook.svg');
-}
-
-.ico-sns-line {
-  @include background-img($width: 44, $height: 44, $category: 'common', $img: 'ico-sns-line.svg');
-}
-
 .ico-plus-sm {
   @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-plus-sm.svg');
 }
@@ -300,8 +289,19 @@
 }
 
 
-/*PC*/
-
+/* PC */
 .ico-arrow-green-right {
   @include background-img($width: 12, $height: 12, $category: 'common', $img: 'ico-arrow-green-right.png');
+}
+
+.ico-sns-kakao {
+  @include background-img($width: 50, $height: 50, $category: 'common', $img: 'ico-sns-kakao.svg');
+}
+
+.ico-sns-facebook {
+  @include background-img($width: 50, $height: 50, $category: 'common', $img: 'ico-sns-facebook.svg');
+}
+
+.ico-sns-line {
+  @include background-img($width: 50, $height: 50, $category: 'common', $img: 'ico-sns-line.svg');
 }

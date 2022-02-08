@@ -96,14 +96,40 @@
     });
 
     /* ---------- s how section animation ---------- */
+    let iconFace = document.querySelector('._faceAni');
+
+    let animationFace = bodymovin.loadAnimation({
+        container: iconFace,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/@temp/face_280x280.json"
+    });
+
     var howSlider = new Swiper("._howSlider", {
         spaceBetween: 24,
+        autoplay: true,
         centeredSlides: true,
         effect: 'fade',
         pagination: {
             el: "._howSlider + ._sliderPagination",
             clickable: true,
         },
+    });
+
+    howSlider.on('slideChange', function () {
+        if(howSlider.realIndex === 0) {
+            countDown(100, 12, 0)
+            countUp(0, 88, 0)
+            setTimeout(function () {
+                countDown(100, 0, 1)
+                countUp(0, 100, 1)
+            }, 300)
+        } else if(howSlider.realIndex === 1) {
+            // animation
+            animationFace.playSegments([0,60], true);
+        } else {
+        }
     });
 
     var $score = $('._barChart .bar .pos');
@@ -188,7 +214,18 @@
     /* ---------- e how section animation ---------- */
 
     /* ---------- s story section animation ---------- */
+    let iconSkipForward = document.querySelector('.test-lottie');
+
+    let animationSkipForward = bodymovin.loadAnimation({
+        container: iconSkipForward,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/@temp/2time.json"
+    });
+
     var storySlider = new Swiper("._storySlider", {
+        autoplay: true,
         spaceBetween: 48,
         centeredSlides: true,
         effect: 'fade',
@@ -200,6 +237,7 @@
 
     storySlider.on('slideChange', function () {
         if(storySlider.realIndex === 0) {
+            // count
             $({ val : 10 }).animate({ val : 23 }, {
                 duration: 1000,
                 step: function() {
@@ -211,6 +249,10 @@
                     $("._num1").text(num);
                 }
             });
+
+            // animation
+            animationSkipForward.playSegments([0,60], true);
+
         } else if(storySlider.realIndex === 1) {
             $({ val : 30 }).animate({ val : 37 }, {
                 duration: 1000,
@@ -260,6 +302,7 @@
 
     /* ---------- s why section animation ---------- */
     var whySlider = new Swiper("._whySlider", {
+        autoplay: true,
         spaceBetween: 48,
         centeredSlides: true,
         effect: 'fade',
@@ -281,7 +324,7 @@
 
     new Waypoint({
         element: document.querySelector('._whySlider'),
-        handler: function (direction) {
+        handler: function () {
             $('._whySlider .item.item-1').addClass('ani-on')
         },
         offset: "70%"
@@ -471,6 +514,7 @@
 
     /* ---------- s process section animation ---------- */
     var processSlider = new Swiper("._processSlider", {
+        autoplay: true,
         spaceBetween: 48,
         centeredSlides: true,
         effect: 'fade',
@@ -552,5 +596,4 @@
         $('body').addClass('scrOff')
     }
     /* ---------- e modal animation ---------- */
-
 </script>

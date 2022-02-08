@@ -367,7 +367,7 @@
       a {
         display: block;
 
-        > .badge{
+        > .badge {
           margin-bottom: 2px;
         }
       }
@@ -758,6 +758,11 @@
           display: flex;
 
           a {
+            .icon {
+              width: 44px;
+              height: 44px;
+            }
+
             + a {
               margin-left: vw(12);
             }
@@ -817,6 +822,10 @@
         position: relative;
         margin-top: vw(-28);
         z-index: 1;
+
+        textarea {
+          height: 200px;
+        }
       }
 
       .total-comment {
@@ -839,6 +848,7 @@
               .font-h5 {
                 color: $gray-800;
               }
+
               .color-primary {
                 color: $primary;
               }

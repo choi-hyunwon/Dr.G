@@ -2,8 +2,6 @@
 <html lang="ko">
 @@include('../../html/include/common/head.html')
 <body>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
 <div class="wrap">
     <!-- s header -->
     @@include('../../html/include/common/header-white.html')
@@ -190,20 +188,6 @@
 </div>
 <!-- s modal -->
 <!--@@include('_subMainScript.html' )-->
-<script>
-    let iconSkipForward = document.querySelector('.test-lottie');
-
-    let animationSkipForward = bodymovin.loadAnimation({
-        container: iconSkipForward,
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        path: "../../img/@temp/2time.json"
-    });
-
-    $('._replay').on('click', function() {
-        animationSkipForward.playSegments([0,60], true);
-    });
-</script>
+<script></script>
 </body>
 </html>

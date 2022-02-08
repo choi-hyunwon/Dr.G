@@ -2991,7 +2991,7 @@
                   position: relative;
                   width: vw(260);
                   height: auto;
-                  margin: vw(-40) auto 0;
+                  margin: 0 auto 0;
                   z-index: 1;
 
                   img {
@@ -3158,6 +3158,10 @@
                 //padding-top: vw(20);
 
                 .lottie {
+                  background-color: #fff;
+                }
+
+                .test-lottie {
                   background-color: #fff;
                 }
 
