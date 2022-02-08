@@ -179,7 +179,6 @@ front.common = (function () {
             $(this).parent().parents('.list').prev('.btn-select').children('.text').text(text);
             $(this).parent().parents('.list').prev('.btn-select').addClass('selected')
             $(this).parent().parents('.list').parent().removeClass('down');
-
         })
 
         $body.on('click', function(){
@@ -234,6 +233,7 @@ front.common = (function () {
     var header = function () {
         var didScroll;
         var lastScrollTop = 0;
+        var delta = 5;
         var header = $('._header');
 
         /* normal */
@@ -252,11 +252,33 @@ front.common = (function () {
 
                 if (st > lastScrollTop) {
                     // Scroll Down
-                    header.addClass('_scroll')
+                    if ($('.inside-drg').find('._tab').length) {
+                        var tabScrollPos = $('._tab').offset().top + $('._tab').outerHeight();
+                        if (st > tabScrollPos - 64) {
+                            header.addClass('_scroll')
+                            $('._tab').addClass('fixed').css('top', 86 + 'px')
+                        } else {
+                            header.addClass('_scroll')
+                        }
+                    } else {
+                        header.addClass('_scroll')
+                    }
                 } else {
                     // Scroll Up
-                    if (st < 65){
-                        header.removeClass('_scroll')
+                    if ($('.inside-drg').find('._tab').length) {
+                        var tabContentOffset = $('.tab-content').offset().top;
+                        if (tabContentOffset > st) {
+                            $('._tab').removeClass('fixed').css('top', 86 + 'px')
+                        } else {
+                            $('._tab').addClass('fixed').css('top', 86 + 'px')
+                        }
+                        if (st < delta) {
+                            header.removeClass('_scroll')
+                        }
+                    } else {
+                        if (st < 65){
+                            header.removeClass('_scroll')
+                        }
                     }
                 }
                 lastScrollTop = st;

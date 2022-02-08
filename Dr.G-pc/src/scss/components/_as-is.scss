@@ -43,7 +43,7 @@
 /** ---------------------------------------------------------------------------------
 * ## 레이아웃 | 상단탭
 * --------------------------------------------------------------------------------- */
-.l__wrap {min-width:1280px;max-width:2560px;overflow:hidden;margin-left:auto;margin-right:auto;/*margin-top:-100px;will-change:margin-top;transition:margin-top 0.3s 0s linear;*/}
+.l__wrap {min-width:1280px;overflow:hidden;margin-left:auto;margin-right:auto;/*margin-top:-100px;will-change:margin-top;transition:margin-top 0.3s 0s linear;*/}
 .l__wrap.showing {margin-top:0px;}
 .l__wrap.hidebnr .srch_bar_wrap {position:fixed;margin-top:-100px;transition:margin-top 0.3s 0s linear;}
 .l__wrap.fixed_gnb .gnb__wrap .l__gnb {position:fixed;left:0;top:0;animation:eft-slide-bottom 0.1s 0s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;}

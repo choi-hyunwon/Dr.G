@@ -46,7 +46,7 @@ function copyLibJs() {
         'src/js/lib/jquery.cloud9carousel.js',
         'src/js/lib/jquery.waypoints.js',
         'src/js/lib/lazyload.js',
-        'src/js/lib/lottie_svg.js',
+        'src/js/lib/lottie.js',
     ];
 
     return gulp.src(sourceLib)

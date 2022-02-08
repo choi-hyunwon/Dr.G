@@ -96,6 +96,7 @@
     });
 
     /* ---------- s how section animation ---------- */
+    // animation
     let iconFace = document.querySelector('._faceAni');
 
     let animationFace = bodymovin.loadAnimation({
@@ -107,8 +108,8 @@
     });
 
     var howSlider = new Swiper("._howSlider", {
-        spaceBetween: 24,
         autoplay: true,
+        spaceBetween: 24,
         centeredSlides: true,
         effect: 'fade',
         pagination: {
@@ -126,8 +127,7 @@
                 countUp(0, 100, 1)
             }, 300)
         } else if(howSlider.realIndex === 1) {
-            // animation
-            animationFace.playSegments([0,60], true);
+            animationFace.playSegments([0,100], true);
         } else {
         }
     });
@@ -214,14 +214,24 @@
     /* ---------- e how section animation ---------- */
 
     /* ---------- s story section animation ---------- */
-    let iconSkipForward = document.querySelector('.test-lottie');
+    let icon2times = document.querySelector('._2times');
 
-    let animationSkipForward = bodymovin.loadAnimation({
-        container: iconSkipForward,
+    let animation2times = bodymovin.loadAnimation({
+        container: icon2times,
         renderer: 'svg',
         loop: false,
         autoplay: true,
         path: "../../img/@temp/2time.json"
+    });
+
+    let iconGraph = document.querySelector('._graphAni');
+
+    let animationGraph = bodymovin.loadAnimation({
+        container: iconGraph,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/@temp/icon_stick_188x188.json"
     });
 
     var storySlider = new Swiper("._storySlider", {
@@ -251,9 +261,9 @@
             });
 
             // animation
-            animationSkipForward.playSegments([0,60], true);
-
+            animation2times.playSegments([0,60], true);
         } else if(storySlider.realIndex === 1) {
+            // count
             $({ val : 30 }).animate({ val : 37 }, {
                 duration: 1000,
                 step: function() {
@@ -266,6 +276,7 @@
                 }
             });
         } else {
+            // count
             $({ val : 0 }).animate({ val : 1.5 }, {
                 duration: 1000,
                 step: function() {
@@ -277,6 +288,9 @@
                     $("._num3").text(num);
                 }
             });
+
+            // animation
+            animationGraph.playSegments([0,60], true);
         }
     });
 
@@ -301,6 +315,16 @@
     /* ---------- e story section animation ---------- */
 
     /* ---------- s why section animation ---------- */
+    let icon6points = document.querySelector('._6points');
+
+    let animation6points = bodymovin.loadAnimation({
+        container: icon6points,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/@temp/6point_279x301.json"
+    });
+
     var whySlider = new Swiper("._whySlider", {
         autoplay: true,
         spaceBetween: 48,
@@ -314,11 +338,14 @@
 
     whySlider.on('slideChange', function () {
         if(whySlider.realIndex === 0) {
-            $('._whySlider .item.item-1').addClass('ani-on')
-        } else if(whySlider.realIndex === 2) {
-            lineDrawing()
+            $('._whySlider .item.item-1').addClass('ani-on');
+        } else if(whySlider.realIndex === 1) {
+            $('._whySlider .item.item-1').removeClass('ani-on');
+
+            // animation
+            animation6points.playSegments([0,160], true);
         } else {
-            $('._whySlider .item.item-1').removeClass('ani-on')
+            lineDrawing()
         }
     });
 
@@ -496,7 +523,7 @@
     })();
     /** -------------------------- line animation --------------------------- **/
     anime({
-        targets: 'path',
+        targets: '._lineAni',
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutCubic',
         duration: 2000,
@@ -504,7 +531,7 @@
 
     function lineDrawing() {
         anime({
-            targets: 'path',
+            targets: '._lineAni',
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutCubic',
             duration: 2000,

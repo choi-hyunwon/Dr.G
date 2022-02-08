@@ -286,7 +286,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border: vw(1) solid $gray-300;
   font-size: vw(15);
   letter-spacing: -0.005em;
-  font-weight: bold;
+  font-weight: 500;
   border-radius: vw(12);
   color: $gray-800;
 
@@ -372,7 +372,7 @@ textarea.form-control {
 
   .btn-search {
     position: absolute;
-    background-image: url("../img/common/ico-search.svg");
+    background-image: url("../img/common/ico-search.png");
     width: vw(24);
     height: vw(24);
     background-size: cover;
