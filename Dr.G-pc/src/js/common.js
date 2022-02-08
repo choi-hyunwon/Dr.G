@@ -232,6 +232,36 @@ front.common = (function () {
     }
 
     var header = function () {
+        var didScroll;
+        var lastScrollTop = 0;
+        var header = $('._header');
+
+        /* normal */
+        if (header.length) {
+            $(window).scroll(function () {
+                didScroll = true;
+            });
+            setInterval(function () {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 10);
+            function hasScrolled() {
+                var st = $(this).scrollTop();
+
+                if (st > lastScrollTop) {
+                    // Scroll Down
+                    header.addClass('_scroll')
+                } else {
+                    // Scroll Up
+                    if (st < 65){
+                        header.removeClass('_scroll')
+                    }
+                }
+                lastScrollTop = st;
+            }
+        }
     }
 
     var floatBottom = function () {

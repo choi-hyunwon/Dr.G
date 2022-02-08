@@ -11,39 +11,30 @@
         $(this).addClass('active');
     })
 
-        /*step3*/
-        $('.terms .title').on('click', function () {
-            if (!$(this).hasClass('_title')) {
-                $(this).children().removeClass('ico-plus-md').addClass('ico-minus-md');
-                $(this).addClass('_title');
-                $(this).siblings().slideDown(200);
-            } else {
-                $(this).children().removeClass('ico-minus-md').addClass('ico-plus-md');
-                $(this).removeClass('_title');
-                $(this).siblings().slideUp(200);
-            }
-        })
-
         /*step 공통*/
-        // let stepScroll = 0;
-        // $(window).scroll(function (event) {
-        //     if ($('.container').find('.step-heading').length) {
-        //         let st = $(this).scrollTop();
-        //         if (st > stepScroll) {
-        //              //console.log("DOWN");
-        //             $('.step-heading').addClass('fixed').addClass('top_0');
-        //
-        //         } else {
-        //              //console.log("UP");
-        //             $('.step-heading').addClass('fixed').removeClass('top_0');
-        //             if (window.pageYOffset <= 0) {
-        //                 $('.step-heading').removeClass('fixed')
-        //             }
-        //         }
-        //         //Updates scroll position
-        //         stepScroll = st;
-        //     }
-        // });
+        let stepScroll = 0;
+        $(window).scroll(function (event) {
+            if ($('.mentoring-wrap').find('.step-heading').length) {
+                let st = $(this).scrollTop();
+                let stepTop = $('.step-heading').offset().top - 80
+
+
+                if (st > stepScroll) {
+                     //console.log("DOWN");
+                    if (st > stepTop){
+                        $('.inner').addClass('메롱')
+                    }
+
+                } else {
+                     //console.log("UP");
+                    if (st < stepTop){
+                        $('.inner').removeClass('메롱')
+                    }
+                }
+                //Updates scroll position
+                stepScroll = st;
+            }
+        });
 
         /*답변 대기, 답변 완료*/
         $('.unfold-box .title').on('click', function () {

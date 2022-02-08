@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <!-- s section -->
+        <div class="section-wrap">
+            <div class="title">아래 <span class="color-primary">버튼</span>을 클릭하세요</div>
+            <div class="item">
+                <a class="btn btn-primary _replay" href="#">다시 실행</a>
+                <div class="img-sample">
+                    <div class="test-lottie"></div>
+                </div>
+            </div>
+        </div>
+        <!-- e section -->
+    </div>
+    <!-- e contents -->
+
+</div>
+
+<!--@@include('_subMainScript.html' )-->
+<script>
+    let iconSkipForward = document.querySelector('.test-lottie');
+
+    let animationSkipForward = bodymovin.loadAnimation({
+        container: iconSkipForward,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/@temp/2time.json"
+    });
+
+    $('._replay').on('click', function() {
+        animationSkipForward.playSegments([0,60], true);
+    });
+</script>
+</body>
+</html>
+
+
+<style>
+    .section-wrap{
+        background: #d5f4ef;
+        padding-top: 80px;
+    }
+    .title{
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+    .item{
+        text-align: center;
+    }
+</style>
