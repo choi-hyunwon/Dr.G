@@ -96,15 +96,15 @@
     });
 
     /* ---------- s how section animation ---------- */
-    let iconFace = document.querySelector('._faceAni');
-
-    let animationFace = bodymovin.loadAnimation({
-        container: iconFace,
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        path: "../../img/@temp/face_280x280.json"
-    });
+    // let iconFace = document.querySelector('._faceAni');
+    //
+    // let animationFace = bodymovin.loadAnimation({
+    //     container: iconFace,
+    //     renderer: 'svg',
+    //     loop: false,
+    //     autoplay: true,
+    //     path: "../../img/@temp/face_280x280.json"
+    // });
 
     var howSlider = new Swiper("._howSlider", {
         spaceBetween: 24,
@@ -127,7 +127,7 @@
             }, 300)
         } else if(howSlider.realIndex === 1) {
             // animation
-            animationFace.playSegments([0,60], true);
+            // animationFace.playSegments([0,60], true);
         } else {
         }
     });
@@ -214,14 +214,24 @@
     /* ---------- e how section animation ---------- */
 
     /* ---------- s story section animation ---------- */
-    let iconSkipForward = document.querySelector('.test-lottie');
+    let icon2times = document.querySelector('._2times');
 
-    let animationSkipForward = bodymovin.loadAnimation({
-        container: iconSkipForward,
+    let animation2times = bodymovin.loadAnimation({
+        container: icon2times,
         renderer: 'svg',
         loop: false,
         autoplay: true,
         path: "../../img/@temp/2time.json"
+    });
+
+    let iconGraph = document.querySelector('._graphAni');
+
+    let animationGraph = bodymovin.loadAnimation({
+        container: iconGraph,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/@temp/icon_stick_188x188.json"
     });
 
     var storySlider = new Swiper("._storySlider", {
@@ -251,9 +261,9 @@
             });
 
             // animation
-            animationSkipForward.playSegments([0,60], true);
-
+            animation2times.playSegments([0,60], true);
         } else if(storySlider.realIndex === 1) {
+            // count
             $({ val : 30 }).animate({ val : 37 }, {
                 duration: 1000,
                 step: function() {
@@ -266,6 +276,7 @@
                 }
             });
         } else {
+            // count
             $({ val : 0 }).animate({ val : 1.5 }, {
                 duration: 1000,
                 step: function() {
@@ -277,6 +288,9 @@
                     $("._num3").text(num);
                 }
             });
+
+            // animation
+            animationGraph.playSegments([0,60], true);
         }
     });
 
@@ -496,7 +510,7 @@
     })();
     /** -------------------------- line animation --------------------------- **/
     anime({
-        targets: 'path',
+        targets: '._lineAni',
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutCubic',
         duration: 2000,
@@ -504,7 +518,7 @@
 
     function lineDrawing() {
         anime({
-            targets: 'path',
+            targets: '._lineAni',
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutCubic',
             duration: 2000,
