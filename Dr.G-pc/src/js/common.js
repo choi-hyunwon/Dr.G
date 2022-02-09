@@ -260,6 +260,14 @@ front.common = (function () {
                         } else {
                             header.addClass('_scroll')
                         }
+                    } else if ($('._AIResult').find('._tab').length) {
+                        var tabScrollPos = $('._tab').offset().top + $('._tab').outerHeight();
+                        if (st > tabScrollPos - 64) {
+                            header.addClass('_scroll')
+                            $('._tab').addClass('fixed').css('top', 86 + 'px')
+                        } else {
+                            header.addClass('_scroll')
+                        }
                     } else {
                         header.addClass('_scroll')
                     }
@@ -267,6 +275,16 @@ front.common = (function () {
                     // Scroll Up
                     if ($('.inside-drg').find('._tab').length) {
                         var tabContentOffset = $('.tab-content').offset().top;
+                        if (tabContentOffset > st) {
+                            $('._tab').removeClass('fixed').css('top', 86 + 'px')
+                        } else {
+                            $('._tab').addClass('fixed').css('top', 86 + 'px')
+                        }
+                        if (st < delta) {
+                            header.removeClass('_scroll')
+                        }
+                    } else if($('._AIResult').find('._tab').length) {
+                        var tabContentOffset = $('._scrollTabWrap').offset().top;
                         if (tabContentOffset > st) {
                             $('._tab').removeClass('fixed').css('top', 86 + 'px')
                         } else {

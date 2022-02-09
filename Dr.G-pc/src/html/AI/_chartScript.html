@@ -2,32 +2,32 @@
     // data
     var data = [
         {
-            "date": "2021-08-01",
-            "value": 70,
-        },
-        {
             "date": "2021-09-01",
-            "value": 0,
+            "value": 62,
         },
         {
             "date": "2021-10-01",
-            "value": 67,
+            "value": 0,
         },
         {
             "date": "2021-11-01",
-            "value": 100,
+            "value": 60,
         },
         {
             "date": "2021-12-01",
-            "value": 75,
+            "value": 100,
+        },
+        {
+            "date": "2022-01-01",
+            "value": 70,
         },
     ];
 
     var dataSeason = [
-        {
-            "category": "",
-            "value": 70,
-        },
+        // {
+        //     "category": "",
+        //     "value": 70,
+        // },
         {
             "category": "봄",
             "value": 10,
@@ -44,10 +44,10 @@
             "category": "겨울",
             "value": 100,
         },
-        {
-            "category": "",
-            "value": 50,
-        },
+        // {
+        //     "category": "",
+        //     "value": 50,
+        // },
     ];
 
     // String formatter
@@ -63,8 +63,8 @@
     let app = (() => {
         const $svgLine = document.querySelector('._roundChart svg .line');
         const $svgSeasonLine = document.querySelector('._seasonChart svg .line');
-        const sliderHeight = 200;
-        const svgViewBoxHeight = 200;
+        const sliderHeight = 301;
+        const svgViewBoxHeight = 301;
         const svgViewBoxThumbLimit = svgViewBoxHeight / sliderHeight;
         const svgViewBoxGraphMax = svgViewBoxHeight - svgViewBoxThumbLimit;
         const svgViewBoxGraphMin = svgViewBoxThumbLimit;
@@ -82,56 +82,56 @@
             range2: null,
             range3: null,
             range4: null,
-            range5: null,
-            range6: null,
+            // range5: null,
+            // range6: null,
         };
 
         let temp = {
             begin: {
-                x: 0,
+                x: 192,
                 y: 0
             },
             point : [
                 {
-                    x: 0,
+                    x: 192,
                     y: 0
                 },
                 {
-                    x: 87,
+                    x: 400,
                     y: 0
                 },
                 {
-                    x: 187,
+                    x: 618,
                     y: 0
                 },
                 {
-                    x: 287,
+                    x: 835,
                     y: 0
                 },
                 {
-                    x: 387,
+                    x: 1041,
                     y: 0
                 },
             ],
             control : [
                 {
-                    x: 35,
+                    x: 270,
                     y: 0
                 },
                 {
-                    x: 40,
+                    x: 290,
                     y: 0
                 },
                 {
-                    x: 130,
+                    x: 511,
                     y: 0
                 },
                 {
-                    x: 230,
+                    x: 730,
                     y: 0
                 },
                 {
-                    x: 370,
+                    x: 950,
                     y: 0
                 },
             ]
@@ -139,58 +139,50 @@
 
         let tempSeason = {
             begin: {
-                x: 0,
+                x: 286,
                 y: 0
             },
             point : [
                 {
-                    x: 0,
+                    x: 286,
                     y: 0
                 },
                 {
-                    x: 65,
+                    x: 498,
                     y: 0
                 },
                 {
-                    x: 146,
+                    x: 710,
                     y: 0
                 },
                 {
-                    x: 230,
+                    x: 922,
                     y: 0
                 },
                 {
-                    x: 315,
-                    y: 0
-                },
-                {
-                    x: 387,
+                    x: 1238,
                     y: 0
                 },
             ],
             control : [
                 {
-                    x: 20,
+                    x: 300,
                     y: 0
                 },
                 {
-                    x: 36,
+                    x: 392,
                     y: 0
                 },
                 {
-                    x: 109,
+                    x: 604,
                     y: 0
                 },
                 {
-                    x: 188,
+                    x: 816,
                     y: 0
                 },
                 {
-                    x: 273,
-                    y: 0
-                },
-                {
-                    x: 351,
+                    x: 1080,
                     y: 0
                 },
             ]
@@ -297,7 +289,7 @@
         }
 
         function getInterpolatedSeasonLine() {
-            return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13} S {14} {15}, {16} {17} S {18} {19}, {20} {21} S {22} {23}, {24} {25}'.format(
+            return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13} S {14} {15}, {16} {17}'.format(
                 // M
                 tempSeason.begin.x, tempSeason.begin.y,
                 // L
@@ -313,11 +305,11 @@
                 tempSeason.control[3].x, tempSeason.control[3].y,
                 tempSeason.point[3].x, tempSeason.point[3].y,
                 // S
-                tempSeason.control[4].x, tempSeason.point[4].y,
-                tempSeason.point[4].x, tempSeason.point[4].y,
+                // tempSeason.control[4].x, tempSeason.point[4].y,
+                // tempSeason.point[4].x, tempSeason.point[4].y,
                 // S
-                tempSeason.control[5].x, tempSeason.point[5].y,
-                tempSeason.point[5].x, tempSeason.point[5].y,
+                // tempSeason.control[5].x, tempSeason.point[5].y,
+                // tempSeason.point[5].x, tempSeason.point[5].y,
             )
         }
 
@@ -379,6 +371,23 @@
             duration: 2000,
         });
     }
+
+    function firstLineDrawing() {
+        anime({
+            targets: '._roundChart path',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutCubic',
+            duration: 2000,
+        });
+    }
+
+    new Waypoint({
+        element: document.querySelector('._triggerDrawChart'),
+        handler: function () {
+            firstLineDrawing()
+        },
+        offset: "50%"
+    })
 
     /** -------------------------- swipe event --------------------------- **/
     let swipeEl =  $('.line-chart-inner');

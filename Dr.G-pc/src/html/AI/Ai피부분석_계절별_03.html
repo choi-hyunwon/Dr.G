@@ -3,10 +3,10 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
-    <div class="line-chart-wrap season">
+    <div class="line-chart-wrap season _seasonChart">
         <div class="line-chart">
             <div class="line-chart-inner">
-                <svg preserveAspectRatio="none" viewBox="0 0 375 200">
+                <svg preserveAspectRatio="none" viewBox="0 0 1238 301">
                     <defs>
                         <linearGradient id="Gradient" gradientTransform="rotate(90)">
                             <stop style="stop-color:#2DAFF9" offset="0%"></stop>
@@ -27,38 +27,37 @@
                 <!--
                          **
                          1. 현재 구간에서 마지막 요소, .item에 item-last 클래스 추가
-                         2. 데이터 값이 0 ~ 20인 경우, .item에 top 클래스 추가
-                         3. 데이터 값이 없을 경우, .item에 item-empty 클래스 추가
-                         4. 이전 데이터가 없는 경우, .item에 .item-old 클래스 추가
-                         5. 다음 데이터가 있는 경우, .item에 .item-new 클래스 추가
+                         2. 데이터 값이 없을 경우, .item에 item-empty 클래스 추가
+                         3. 이전 데이터가 없는 경우, .item에 .item-old 클래스 추가
+                         4. 다음 데이터가 있는 경우, .item에 .item-new 클래스 추가
                  -->
                 <div class="chart-info">
                     <!-- s 이전 구간 -->
-<!--                    <div class="item item-old">-->
-<!--                        <div class="percentage"></div>-->
-<!--                        <div class="line-box">-->
-<!--                            <div class="tooltip-box"><a href="#">70</a></div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="item item-old">-->
+                    <!--                        <div class="percentage"></div>-->
+                    <!--                        <div class="line-box">-->
+                    <!--                            <div class="tooltip-box"><a href="#">70</a></div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
                     <!-- e 이전 구간 -->
 
                     <!-- s 현재 구간 -->
                     <div class="item">
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">10</a></div>
+                            <div class="tooltip-box"><a href="#" onclick="console.log('10 클릭')">10</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">35</a></div>
+                            <div class="tooltip-box"><a href="#" onclick="console.log('35 클릭')">35</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">67</a></div>
+                            <div class="tooltip-box"><a href="#" onclick="console.log('67 클릭')">67</a></div>
                         </div>
                     </div>
                     <div class="item item-last">
@@ -70,12 +69,12 @@
                     <!-- s 현재 구간 -->
 
                     <!-- s 다음 구간 -->
-                    <div class="item item-new">
-                        <div class="percentage"></div>
-                        <div class="line-box top">
-                            <div class="tooltip-box"><a href="#">50</a></div>
-                        </div>
-                    </div>
+<!--                    <div class="item item-new">-->
+<!--                        <div class="percentage"></div>-->
+<!--                        <div class="line-box top">-->
+<!--                            <div class="tooltip-box"><a href="#">50</a></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <!-- e 다음 구간 -->
                 </div>
                 <div class="x-axis">
@@ -98,10 +97,6 @@
 <script>
     // data
     var data = [
-        // {
-        //     "category": "",
-        //     "value": 70,
-        // },
         {
             "category": "봄",
             "value": 10,
@@ -118,10 +113,6 @@
             "category": "겨울",
             "value": 100,
         },
-        {
-            "category": "",
-            "value": 50,
-        },
     ];
 
     // String formatter
@@ -136,8 +127,8 @@
 
     let app = (() => {
         const $svgLine = document.querySelector('svg .line');
-        const sliderHeight = 200;
-        const svgViewBoxHeight = 200;
+        const sliderHeight = 301;
+        const svgViewBoxHeight = 301;
         const svgViewBoxThumbLimit = svgViewBoxHeight / sliderHeight;
         const svgViewBoxGraphMax = svgViewBoxHeight - svgViewBoxThumbLimit;
         const svgViewBoxGraphMin = svgViewBoxThumbLimit;
@@ -147,59 +138,61 @@
             range2: null,
             range3: null,
             range4: null,
-            range5: null,
+            // range5: null,
+            // range6: null,
         };
 
         let temp = {
             begin: {
-                x: 65,
+                x: 286,
                 y: 0
             },
             point : [
                 {
-                    x: 65,
+                    x: 286,
                     y: 0
                 },
                 {
-                    x: 146,
+                    x: 498,
                     y: 0
                 },
                 {
-                    x: 230,
+                    x: 710,
                     y: 0
                 },
                 {
-                    x: 315,
+                    x: 922,
                     y: 0
                 },
                 {
-                    x: 387,
+                    x: 1238,
                     y: 0
                 },
             ],
             control : [
                 {
-                    x: 65,
+                    x: 300,
                     y: 0
                 },
                 {
-                    x: 105,
+                    x: 392,
                     y: 0
                 },
                 {
-                    x: 188,
+                    x: 604,
                     y: 0
                 },
                 {
-                    x: 273,
+                    x: 816,
                     y: 0
                 },
                 {
-                    x: 351,
+                    x: 1080,
                     y: 0
                 },
             ]
         };
+
 
         function mapDataRange(value) {
             return (((value - 0) * (svgViewBoxGraphMax - svgViewBoxGraphMin)) / svgViewBoxHeight) + svgViewBoxGraphMin;
@@ -243,7 +236,7 @@
         }
 
         function getInterpolatedLine() {
-            return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13} S {14} {15}, {16} {17} S {18} {19}, {20} {21}'.format(
+            return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13} S {14} {15}, {16} {17}'.format(
                 // M
                 temp.begin.x, temp.begin.y,
                 // L
@@ -259,8 +252,8 @@
                 temp.control[3].x, temp.control[3].y,
                 temp.point[3].x, temp.point[3].y,
                 // S
-                temp.control[4].x, temp.point[4].y,
-                temp.point[4].x, temp.point[4].y,
+                // temp.control[4].x, temp.point[4].y,
+                // temp.point[4].x, temp.point[4].y,
                 // S
                 // temp.control[5].x, temp.point[5].y,
                 // temp.point[5].x, temp.point[5].y,

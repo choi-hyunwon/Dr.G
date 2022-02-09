@@ -6,6 +6,13 @@
 
 /* AI 피부분석 */
 .AI-wrap {
+  .inner {
+    position: relative;
+    max-width: 1242px;
+    min-width: 1242px;
+    margin: 0 auto;
+  }
+
   .header-details {
     position: absolute;
     width: 100%;
@@ -678,44 +685,40 @@
   /* 피부분석 결과 */
   .result {
     .heading {
-      background: linear-gradient(to bottom, $primary calc(100% - #{vw(50)}), #fff vw(50));
+      background: linear-gradient(to bottom, $primary calc(100% - #{vw(83)}), #fff vw(83));
       //background-color: $primary;
-      padding: vw(80) vw(24) 0;
-      margin-bottom: vw(56);
+      padding: vw(80) 0 0;
+      margin-bottom: 80px;
 
-      > .font-body-1 {
+      .inner > .font-body-1 {
         text-align: center;
         color: #d5f4ef;
-        margin-bottom: vw(12);
+        font-size: 22px;
+        line-height: 33px;
+        margin-bottom: 16px;
       }
 
       .skin-type {
-        margin: 0 0 vw(12);
+        margin: 0 0 32px;
 
         .icon {
           display: block;
-          width: vw(88);
-          height: vw(88);
+          width: 180px;
+          height: 180px;
           margin: 0 auto;
         }
       }
 
       .skin-type-info {
-        margin-bottom: vw(24);
+        margin-bottom: 42px;
         text-align: center;
 
         .title {
           position: relative;
           display: inline-block;
           text-align: center;
-          //align-items: center;
-          //justify-content: center;
-          margin-bottom: vw(3);
+          margin-bottom: 8px;
           color: #fff;
-
-          > .font-h2 {
-            //margin-right: vw(4);
-          }
         }
 
         > .font-body-2 {
@@ -725,9 +728,14 @@
 
         .btn-tooltip {
           position: absolute;
-          right: vw(-26);
+          right: -34px;
           top: 50%;
           transform: translateY(-50%);
+
+          .ico-alert-circle-w {
+            width: 32px;
+            height: 32px;
+          }
 
           .alert-tooltip {
             position: absolute;
@@ -759,17 +767,45 @@
       }
 
       .skin-type-detail {
+        display: flex;
+        align-items: center;
+        width: 878px;
+        height: 178px;
         background: #ffffff;
         box-shadow: 0 vw(4) vw(12) rgba(34, 34, 34, 0.08);
         border-radius: vw(16);
-        padding: vw(24) vw(32);
+        padding: 30px;
+        margin: 0 auto;
 
         > .font-h6 {
-          margin-bottom: vw(50);
+          width: 50%;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          padding-right: 30px;
         }
 
-        > .font-body-2 {
+        .bar-box-wrap {
+          position: relative;
+          width: 50%;
+          padding-left: 30px;
+          padding-top: 37px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            width: 1px;
+            height: 118px;
+            background-color: $gray-300;
+          }
+        }
+
+        .font-body-2 {
           text-align: center;
+          font-size: 16px;
+          line-height: 24px;
 
           .color-primary {
             font-weight: bold;
@@ -778,7 +814,7 @@
 
         .bar-box {
           text-align: center;
-          margin-bottom: vw(11);
+          margin-bottom: 16px;
 
           .bar {
             position: relative;
@@ -810,14 +846,14 @@
               .badge-tooltip {
                 position: absolute;
                 bottom: vw(8);
-                height: vw(26);
-                line-height: vw(26);
+                height: 30px;
+                line-height: 30px;
                 padding: 0 vw(8);
                 white-space: nowrap;
                 background: #5eb2f5;
                 border-radius: vw(100);
                 font-weight: bold;
-                font-size: vw(13);
+                font-size: 15px;
                 color: #ffffff;
                 transform: translateX(-50%);
                 z-index: 1;
@@ -894,7 +930,7 @@
                   left: 0;
 
                   svg {
-                    left: auto;
+                    left: 18px;
                   }
                 }
               }
@@ -932,7 +968,7 @@
 
                   svg {
                     left: auto;
-                    right: vw(8);
+                    right: 18px;
                   }
                 }
               }
@@ -944,53 +980,58 @@
 
     .analysis {
       .desc-area {
-        padding: 0 vw(24);
+        text-align: center;
         margin-bottom: vw(32);
 
         .font-h2 {
           margin-bottom: vw(12);
+          font-size: 32px;
+          height: 44px;
         }
 
         .font-h6 {
           color: $gray-700;
-          margin-bottom: vw(2);
-        }
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 60px;
 
-        .font-body-2 {
-          color: $gray-600;
+          span {
+            color: $gray-600;
+          }
         }
       }
 
       .skin-type-list {
-        padding-left: vw(24);
-        height: vw(74);
-        overflow-x: auto;
-        overflow-y: hidden;
-        margin-bottom: vw(24);
+        margin-bottom: 40px;
 
         ul {
-          width: calc((#{vw(52)} + #{vw(24)}) * 6);
+          display: flex;
+          justify-content: center;
         }
 
         li {
           float: left;
-          margin-right: vw(24);
+          margin-right: 32px;
+
+          &:last-child {
+            margin-right: 0;
+          }
 
           a {
             display: flex;
             flex-direction: column;
-            width: vw(52);
+            width: 72px;
             align-items: center;
 
             .type {
               display: flex;
               align-items: center;
               justify-content: center;
-              width: vw(52);
-              height: vw(52);
+              width: 72px;
+              height: 72px;
               border-radius: 50%;
               background-color: $gray-200;
-              margin-bottom: vw(4);
+              margin-bottom: 8px;
             }
 
             .font-body-2 {
@@ -1015,14 +1056,12 @@
       }
 
       .img-wrap {
-        padding: 0 vw(24);
-
         .img {
           background: #d5dade;
           border-radius: vw(20);
-          width: vw(325);
-          height: vw(325);
-          margin: 0 auto vw(24);
+          width: 348px;
+          height: 348px;
+          margin: 0 auto 40px;
 
           img {
             width: 100%;
@@ -1032,15 +1071,25 @@
       }
 
       .keyword {
-        padding: 0 vw(24);
-        margin-bottom: vw(54);
+        background: #FFFFFF;
+        border: 1px solid $gray-400;
+        border-radius: 16px;
+        padding: vw(24);
+        margin-bottom: 126px;
+        text-align: center;
+        box-shadow: 0 6px 0 0 #f5f5f5;
 
         .font-h5 {
-          margin-bottom: vw(12);
+          margin-bottom: 16px;
+          font-size: 16px;
+          height: 24px;
           color: $gray-800;
         }
 
         ul {
+          display: flex;
+          justify-content: center;
+
           li {
             float: left;
             display: inline-block;
@@ -1075,16 +1124,23 @@
 
         &.fixed {
           position: fixed;
+
+          + .tab-conainer {
+            padding-top: 64px;
+          }
         }
       }
 
       /* 분석 */
       .admin-area {
         background-color: $gray-200;
-        padding: vw(42) vw(24) vw(76);
+        padding: 80px 0;
+        text-align: center;
 
         .font-h3 {
-          margin-bottom: vw(32);
+          font-size: 28px;
+          height: 39px;
+          margin-bottom: 40px;
         }
 
         .font-h6 {
@@ -1094,8 +1150,8 @@
         }
 
         .video-box {
-          width: vw(327);
-          height: vw(183);
+          width: 760px;
+          height: 452.32px;
           margin: 0 auto;
           border-radius: vw(16);
           overflow: hidden;
@@ -1108,16 +1164,24 @@
       }
 
       .bar-chart-box {
-        padding: vw(76) vw(24) vw(76);
+        padding: 80px 0;
 
         .font-h2 {
-          margin-bottom: vw(47);
+          margin-bottom: 60px;
+          font-size: 32px;
+          line-height: 44px;
         }
 
         .bar-chart {
+          overflow: hidden;
+
           .item {
-            + .item {
-              margin-top: vw(34);
+            float: left;
+            width: calc(50% - 21px);
+            margin-bottom: 64px;
+
+            &:nth-child(2n-1) {
+              margin-right: 42px;
             }
 
             .info {
@@ -1131,16 +1195,18 @@
                 align-items: center;
 
                 .icon {
-                  margin-right: vw(4);
+                  margin-right: 11px;
+                  width: 36px;
+                  height: 36px;
                 }
 
                 .txt {
                   font-weight: bold;
-                  font-size: vw(15);
+                  font-size: 16px;
                   color: $gray-800;
 
                   .num {
-                    font-size: vw(20);
+                    font-size: 22px;
                     font-family: $poppins-semiBold;
                   }
                 }
@@ -1150,7 +1216,7 @@
                 display: flex;
                 align-items: center;
                 font-family: $poppins-semiBold;
-                font-size: vw(12);
+                font-size: 15px;
                 text-align: right;
                 color: $gray-800;
                 transform: translateY(vw(2));
@@ -1164,7 +1230,7 @@
 
                 &.up {
                   &::after {
-                    @include background-img($width: 12, $height: 12, $category: 'AI', $img: 'ico-up-black.svg');
+                    @include background-img($width: 16, $height: 16, $category: 'AI', $img: 'ico-up-black.svg');
                   }
                 }
 
@@ -1172,7 +1238,7 @@
                   color: $error;
 
                   &::after {
-                    @include background-img($width: 12, $height: 12, $category: 'AI', $img: 'ico-down.svg');
+                    @include background-img($width: 16, $height: 16, $category: 'AI', $img: 'ico-down.svg');
                   }
                 }
               }
@@ -1181,9 +1247,9 @@
             .bar {
               position: relative;
               width: 100%;
-              height: vw(16);
+              height: 20px;
               background: $gray-200;
-              border-radius: vw(18);
+              border-radius: 20px;
               border: vw(2) solid $gray-200;
 
               .gradient {
@@ -1214,22 +1280,22 @@
 
                 .pin {
                   position: absolute;
-                  width: vw(18);
-                  height: vw(18);
+                  width: 22px;
+                  height: 22px;
                   border-radius: 50%;
                   background-color: #fff;
-                  border: vw(2) solid $gray-800;
+                  border: 2.5px solid $gray-800;
                   z-index: 1;
                 }
 
                 .txt {
                   position: absolute;
                   text-align: center;
-                  font-size: vw(12);
-                  line-height: vw(16);
+                  font-size: 15px;
+                  line-height: 22px;
                   color: $gray-600;
                   white-space: nowrap;
-                  padding-top: vw(20);
+                  padding-top: 34px;
                 }
               }
 
@@ -1237,50 +1303,56 @@
                 position: absolute;
                 display: flex;
                 width: 100%;
-                height: vw(12);
+                height: 16px;
                 left: 0;
                 top: 0;
 
                 .line {
                   width: 20%;
-                  height: vw(12);
+                  height: 16px;
                   border-right: vw(1) solid rgba(238, 238, 238, .5);
                 }
               }
             }
           }
         }
+
+        .btn-wrap {
+          padding-top: 29px;
+          border-bottom: 1px solid $gray-300;
+          padding-bottom: 60px;
+        }
       }
 
       .line-chart-box {
-        padding: vw(58) 0 0;
-
-        > .font-h2 {
+        .font-h2 {
           margin-bottom: vw(12);
-          padding: 0 vw(24);
+          font-size: 32px;
+          line-height: 44px;
         }
 
-        > .font-h6 {
+        .font-h6 {
           color: $gray-700;
-          margin-bottom: vw(32);
-          padding: 0 vw(24);
+          margin-bottom: 60px;
+          font-size: 16px;
+          line-height: 24px;
         }
 
         .btn-tab {
           display: flex;
           justify-content: center;
-          margin-bottom: vw(24);
-          padding: 0 vw(24);
+          margin-bottom: 40px;
 
           .btn {
             display: inline-block;
-            min-width: auto;
-            padding: 0 vw(16);
-            height: vw(34);
-            line-height: vw(32);
+            min-width: 122px;
+            padding: 0;
+            height: 48px;
+            line-height: 48px;
             background-color: $gray-300;
             color: $gray-600;
             border-color: $gray-300;
+            font-size: 15px;
 
             &:focus, &:active {
               background-color: $gray-300 !important;
@@ -1311,20 +1383,19 @@
           width: 100%;
 
           &.roundChart {
-            height: vw(366);
+            height: 503px;
           }
 
           &.seasonChart {
-            height: vw(404);
+            height: 537px;
           }
 
           .line-chart-wrap {
             position: absolute;
             width: 100%;
-            height: vw(366);
 
             &.season {
-              height: vw(404);
+              //height: vw(404);
               z-index: -1;
               opacity: 0;
             }
@@ -1366,75 +1437,105 @@
 
       /* 솔루션 */
       .solution-wrap {
-        padding: vw(76) vw(24);
+        padding: 120px 0;
 
-        > .font-h2 {
-          margin-bottom: vw(32);
+        .font-h2 {
+          font-size: 32px;
+          line-height: 44px;
+          margin-bottom: 60px;
         }
 
-        .numbering {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-bottom: vw(16);
+        //.numbering {
+        //  display: flex;
+        //  justify-content: center;
+        //  align-items: center;
+        //  margin-bottom: vw(16);
+        //
+        //  .swiper-pagination-bullet {
+        //    width: auto;
+        //    height: auto;
+        //    opacity: 1 !important;
+        //    background-color: transparent;
+        //    font-family: $poppins-semiBold;
+        //    font-style: normal;
+        //    font-weight: 600;
+        //    font-size: vw(15);
+        //    line-height: vw(22);
+        //    color: rgba(34, 34, 34, .3);
+        //
+        //    &.swiper-pagination-bullet-active {
+        //      color: $primary;
+        //    }
+        //
+        //    + .swiper-pagination-bullet {
+        //      position: relative;
+        //      margin-left: vw(17);
+        //
+        //      &::before {
+        //        content: '';
+        //        position: absolute;
+        //        left: vw(-8);
+        //        top: vw(5);
+        //        width: 1px;
+        //        height: vw(12);
+        //        background-color: $gray-500;
+        //        opacity: .5;
+        //      }
+        //    }
+        //  }
+        //}
 
-          .swiper-pagination-bullet {
-            width: auto;
-            height: auto;
-            opacity: 1 !important;
-            background-color: transparent;
-            font-family: $poppins-semiBold;
-            font-style: normal;
-            font-weight: 600;
-            font-size: vw(15);
-            line-height: vw(22);
-            color: rgba(34, 34, 34, .3);
+        .solution-slider {
+          position: relative;
+          overflow: hidden;
 
-            &.swiper-pagination-bullet-active {
-              color: $primary;
-            }
+          .swiper-pagination-bullets {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            bottom: 40px;
+            left: 0;
+            z-index: 2;
 
-            + .swiper-pagination-bullet {
-              position: relative;
-              margin-left: vw(17);
+            .swiper-pagination-bullet {
+              width: 8px;
+              height: 8px;
+              opacity: 1;
+              background-color: rgba(255,255,255,.5);
 
-              &::before {
-                content: '';
-                position: absolute;
-                left: vw(-8);
-                top: vw(5);
-                width: 1px;
-                height: vw(12);
-                background-color: $gray-500;
-                opacity: .5;
+              + .swiper-pagination-bullet {
+                margin-left: 12px;
+              }
+
+              &.swiper-pagination-bullet-active {
+                opacity: 1;
+                background-color: rgba(255,255,255,1);
               }
             }
           }
         }
 
-        .solution-slider {
-          overflow: hidden;
-        }
-
         .swiper-wrapper {
           .swiper-slide {
             width: 100%;
-            height: vw(352);
+            height: 264px;
 
             .solution-card {
               position: relative;
+              display: flex;
               width: 100%;
               height: 100%;
               background-color: #d5f4ef;
               border-radius: vw(16);
-              padding: vw(52) vw(20);
+              padding: 40px;
 
               .logo {
                 position: absolute;
                 width: vw(40);
                 height: vw(20);
-                right: vw(18);
-                top: vw(20);
+                right: 40px;
+                top: 40px;
 
                 img {
                   width: 100%;
@@ -1443,18 +1544,27 @@
               }
 
               .list {
-                + .list {
-                  margin-top: vw(32);
+                display: flex;
+                padding-top: 40px;
+                width: 50%;
+
+                &:nth-child(2) {
+                  padding-left: 66px;
                 }
 
                 .badge {
-                  margin-bottom: vw(8);
+                  padding: 0 12px;
+                  height: 34px;
+                  font-size: 15px;
+                  line-height: 34px;
+                  border-radius: 100px;
+                  margin-right: 40px;
                 }
 
                 .list-with-dot {
                   li {
-                    font-size: vw(15);
-                    line-height: vw(22);
+                    font-size: 16px;
+                    line-height: 24px;
                     color: $gray-800;
                     padding-left: vw(22);
                     margin-bottom: 0;
@@ -1462,7 +1572,9 @@
                     &::after {
                       background-color: $gray-800;
                       top: vw(10);
-                      left: vw(10);
+                      width: 4px;
+                      height: 4px;
+                      left: 6px;
                     }
                   }
                 }
@@ -1475,7 +1587,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: vw(32);
+          margin-top: 40px;
 
           .btn {
             display: flex;
@@ -1495,25 +1607,35 @@
       /* 추천 */
       .recommendation-wrap {
         .product-info-box {
-          padding: vw(76) vw(24);
+          padding: 120px 0 80px;
           background-color: $gray-200;
 
           .font-h2 {
             margin-bottom: vw(12);
+            font-size: 32px;
+            line-height: 44px;
           }
 
           .font-h6 {
             color: $gray-700;
-            margin-bottom: vw(32);
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 60px;
           }
 
           /* 키워드 탭 */
           .tab-btn {
-            margin-bottom: vw(24);
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
 
             .badge {
+              height: 42px;
               color: $gray-600;
               font-weight: bold;
+              padding: 0 18px;
+              font-size: 13px;
+              line-height: 42px;
 
               &.active {
                 background-color: $yellow;
@@ -1539,11 +1661,27 @@
           .p-list {
             background-color: #fff;
             border-radius: vw(16);
-            padding: 0 vw(20);
+
+            ul {
+              display: flex;
+            }
 
             .item {
               position: relative;
-              padding: vw(20) 0;
+              display: flex;
+              width: 33.33333%;
+              flex-direction: column;
+              padding: 40px 0;
+              justify-content: center;
+              align-items: center;
+
+              &:hover {
+                .img {
+                  .btn-cart {
+                    display: flex;
+                  }
+                }
+              }
 
               &::after {
                 content: '';
@@ -1552,10 +1690,23 @@
               }
 
               .img {
+                position: relative;
                 float: left;
-                width: vw(76);
-                height: vw(76);
-                margin-right: vw(4);
+                width: 160px;
+                height: 160px;
+                margin-bottom: 20px;
+
+                .btn-cart {
+                  display: none;
+                  position: absolute;
+                  width: 100%;
+                  height: 38px;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: rgba(238, 238, 238, .8);
+                  bottom: 0;
+                  left: 0;
+                }
 
                 img {
                   width: 100%;
@@ -1563,21 +1714,22 @@
                 }
               }
 
-              .info {
-                float: left;
-                width: vw(173);
-              }
-
               .font-body-1 {
+                width: 352px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 color: $gray-800;
-                margin-bottom: vw(4);
+                text-align: center;
               }
 
               .tag-list {
+                text-align: center;
+
                 span {
                   display: inline-block;
                   font-size: vw(13);
-                  line-height: vw(17.5);
+                  line-height: 18px;
                   font-weight: 500;
                   color: $primary;
 
@@ -1606,31 +1758,35 @@
           position: relative;
           width: 100%;
           background-color: $primary;
-          padding: vw(28) vw(24);
+          padding: 80px 0 90px;
 
           .txt-box {
-            width: vw(190);
+            width: 660px;
 
             .font-h6 {
               display: block;
+              font-size: 28px;
+              line-height: 39px;
               color: #fff;
-              margin-bottom: vw(16);
+              margin-bottom: 30px;
             }
 
             .badge {
-              padding: vw(6) vw(16);
-              line-height: vw(20);
+              padding: 0 40px;
+              line-height: 48px;
+              height: 48px;
               border-radius: vw(100);
               font-weight: bold;
+              font-size: 15px;
             }
           }
 
           .img {
             position: absolute;
-            width: vw(140);
-            height: vw(140);
-            right: 0;
-            top: vw(23);
+            width: 300px;
+            height: 300px;
+            right: 58px;
+            top: -67px;
 
             img {
               width: 100%;
@@ -1642,16 +1798,18 @@
         /* 피부 일기 */
         .skin-diary {
           background-color: $gray-200;
-          padding: vw(76) vw(24);
+          padding: 80px 0 240px;
 
           .diary-section {
             + .diary-section {
               border-top: vw(1) solid $gray-300;
-              padding-top: vw(48);
+              padding-top: 80px;
             }
 
             .font-h2 {
-              margin-bottom: vw(32);
+              margin-bottom: 60px;
+              font-size: 32px;
+              line-height: 44px;
             }
 
             .form-box {
@@ -1660,7 +1818,19 @@
                 overflow: hidden;
                 margin-right: 0;
                 margin-left: 0;
-                margin-bottom: vw(24);
+                margin-bottom: 40px;
+
+                &.form-row-4 {
+                  .form-col {
+                    width: 288px;
+                  }
+                }
+
+                &.form-row-3 {
+                  .form-col {
+                    width: 394px;
+                  }
+                }
 
                 &:last-child {
                   margin-bottom: 0;
@@ -1668,18 +1838,16 @@
 
                 .form-col {
                   float: left;
-                  width: calc(50% - #{vw(7.5)});
 
                   .label {
                     display: block;
-                    font-size: vw(15);
+                    font-size: 16px;
                     font-weight: bold;
-                    line-height: vw(22);
+                    line-height: 24px;
                     color: $gray-800;
-                    margin-bottom: vw(12);
+                    margin-bottom: 16px;
 
                     &.label-sm {
-                      font-weight: normal;
                       font-size: vw(13);
                       font-weight: 500;
                       line-height: vw(18);
@@ -1697,7 +1865,7 @@
 
                   .select-box {
                     display: flex;
-                    height: vw(68);
+                    height: 84px;
                     background: #ffffff;
                     border-radius: vw(16);
 
@@ -1716,7 +1884,7 @@
                           top: 50%;
                           transform: translateY(-50%);
                           width: vw(1);
-                          height: vw(37);
+                          height: 44px;
                           background-color: $gray-300;
                         }
                       }
@@ -1724,7 +1892,7 @@
                   }
 
                   + .form-col {
-                    margin-left: vw(15);
+                    margin-left: 30px;
                   }
 
                   &:only-child {
@@ -1736,11 +1904,16 @@
 
             .form-text-area {
               position: relative;
-              margin-bottom: vw(24);
+              margin-bottom: 40px;
 
               .form-control {
                 font-weight: normal;
                 color: $gray-700;
+                overflow: hidden;
+
+                &.form-control-lg {
+                  height: 200px;
+                }
               }
 
               .count {
@@ -1750,13 +1923,13 @@
                 line-height: vw(16);
                 text-align: right;
                 color: $gray-500;
-                bottom: vw(12);
-                right: vw(12);
+                bottom: 20px;
+                right: 20px;
               }
             }
 
             .btn-wrap {
-              margin-bottom: vw(48);
+              margin-bottom: 80px;
 
               a + a {
                 margin-left: vw(8);
@@ -1764,7 +1937,7 @@
             }
 
             .font-h3 {
-              margin-bottom: vw(24);
+              margin-bottom: 40px;
               color: $gray-800;
 
               &:first-child {
@@ -1777,7 +1950,7 @@
               margin-bottom: vw(17);
 
               .font-body-1 {
-                margin-right: vw(16);
+                margin-right: 12px;
               }
             }
 
@@ -1787,13 +1960,13 @@
               .star {
                 float: left;
                 display: inline-block;
-                width: vw(11);
-                height: vw(22);
+                width: 14px;
+                height: 27px;
                 cursor: pointer;
 
                 &.star-left {
                   background: url('../img/AI/ico-star-gray.svg') no-repeat 0.066667vw 0;
-                  background-size: vw(22);
+                  background-size: 27px;
                   margin-left: vw(10);
 
                   &:first-child {
@@ -1804,7 +1977,7 @@
                 &.star-right {
                   background: url('../img/AI/ico-star-gray.svg') no-repeat -0.066667vw 0;
                   transform: scaleX(-1);
-                  background-size: vw(22);
+                  background-size: 27px;
                 }
 
                 &.on {
@@ -1816,13 +1989,13 @@
             .date-box {
               border-radius: vw(12);
               background-color: #fff;
-              margin-bottom: vw(16);
+              margin-bottom: 20px;
               text-align: center;
               font-family: $poppins-semiBold;
-              font-size: vw(16);
-              line-height: vw(24);
+              font-size: 18px;
+              line-height: 28px;
               color: $primary;
-              padding: vw(12) 0;
+              padding: 16px 0;
             }
 
             .text-link {
@@ -2076,8 +2249,8 @@
   /* 피부 변화 리포트 */
   .skin-change-report {
     .heading-box {
-      padding: vw(20) vw(24) 0;
-      margin-bottom: vw(24);
+      padding: 40px 0 0;
+      margin-bottom: 60px;
 
       .font-body-1 {
         color: $gray-600;
@@ -2085,15 +2258,17 @@
       }
 
       .font-h2 {
-        margin-bottom: vw(32);
+        font-size: 32px;
+        line-height: 44px;
+        margin-bottom: 40px;
       }
 
       .animation-box {
-        width: vw(88);
-        height: vw(88);
+        width: 140px;
+        height: 140px;
         overflow: hidden;
         position: relative;
-        margin: 0 auto vw(5);
+        margin: 0 auto 20px;
 
         p {
           float: left;
@@ -2117,8 +2292,8 @@
 
         li {
           opacity: 1;
-          width: vw(88);
-          height: vw(88);
+          width: 140px;
+          height: 140px;
           list-style: none;
 
           img {
@@ -2130,8 +2305,11 @@
 
       .font-h5 {
         color: $gray-800;
+        font-size: 24px;
+        line-height: 35px;
         font-weight: bold;
         text-align: center;
+        margin-bottom: 8px;
 
         &.color-red {
           color: $error;
@@ -2151,46 +2329,53 @@
       }
 
       .desc {
-        font-size: vw(15);
-        line-height: vw(22);
+        font-size: 16px;
+        line-height: 24px;
         color: $gray-800;
         text-align: center;
         border-bottom: 1px solid $gray-300;
-        padding-bottom: vw(32);
+        padding-bottom: 60px;
       }
     }
 
-    > .result {
-      .analysis-result {
-        .line-chart-box {
-          padding: 0;
-
-          .chart-box {
-            height: vw(338);
-
-            .line-chart-wrap {
-              height: vw(338);
-            }
-          }
-        }
-      }
-    }
+    //> .result {
+    //  .analysis-result {
+    //    .line-chart-box {
+    //      padding: 0;
+    //
+    //      .chart-box {
+    //        height: vw(338);
+    //
+    //        .line-chart-wrap {
+    //          height: vw(338);
+    //        }
+    //      }
+    //    }
+    //  }
+    //}
 
     .care-point {
-      padding: vw(48) vw(24) 0;
+      padding: 120px 0 0;
 
       .font-h2 {
-        margin-bottom: vw(32);
+        margin-bottom: 40px;
+        font-size: 32px;
+        line-height: 44px;
       }
 
       .font-h5 {
-        margin-bottom: vw(8);
+        margin-bottom: 60px;
+        font-size: 22px;
+        line-height: 33px;
         color: $gray-800;
       }
 
       .font-h6 {
-        margin-bottom: vw(24);
+        font-size: 18px;
+        font-weight: normal;
+        height: 28px;
         color: $gray-700;
+        margin-left: 20px;
       }
 
       .swiper-container {
@@ -3762,111 +3947,111 @@
 
   /* 아이콘 */
   .ico-skin-type-1 {
-    @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-1-nor.svg');
+    @include background-img($width: 38.77, $height: 38.77, $category: 'AI', $img: 'skin-type-1-nor.svg');
   }
 
   .ico-skin-type-2 {
-    @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-2-nor.svg');
+    @include background-img($width: 38.77, $height: 38.77, $category: 'AI', $img: 'skin-type-2-nor.svg');
   }
 
   .ico-skin-type-3 {
-    @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-3-nor.svg');
+    @include background-img($width: 38.77, $height: 38.77, $category: 'AI', $img: 'skin-type-3-nor.svg');
   }
 
   .ico-skin-type-4 {
-    @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-4-nor.svg');
+    @include background-img($width: 38.77, $height: 38.77, $category: 'AI', $img: 'skin-type-4-nor.svg');
   }
 
   .ico-skin-type-5 {
-    @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-5-nor.svg');
+    @include background-img($width: 38.77, $height: 38.77, $category: 'AI', $img: 'skin-type-5-nor.svg');
   }
 
   .ico-skin-type-6 {
-    @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-6-nor.svg');
+    @include background-img($width: 38.77, $height: 38.77, $category: 'AI', $img: 'skin-type-6-nor.svg');
   }
 
   .ico-skin-type-7 {
-    @include background-img($width: 28, $height: 28, $category: 'AI', $img: 'skin-type-7-nor.svg');
+    @include background-img($width: 38.77, $height: 38.77, $category: 'AI', $img: 'skin-type-7-nor.svg');
   }
 
   .ico-diary-1-off {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-1-off.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-1-off.svg');
   }
 
   .ico-diary-2-off {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-2-off.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-2-off.svg');
   }
 
   .ico-diary-3-off {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-3-off.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-3-off.svg');
   }
 
   .ico-diary-4-off {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-4-off.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-4-off.svg');
   }
 
   .ico-diary-5-off {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-5-off.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-5-off.svg');
   }
 
   .ico-diary-6-off {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-6-off.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-6-off.svg');
   }
 
   .ico-diary-7-off {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-7-off.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-7-off.svg');
   }
 
   .ico-diary-8-off {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-8-off.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-8-off.svg');
   }
 
   .ico-diary-9-off {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-9-off.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-9-off.svg');
   }
 
   .ico-diary-10-off {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-10-off.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-10-off.svg');
   }
 
   .ico-diary-1-on {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-1-on.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-1-on.svg');
   }
 
   .ico-diary-2-on {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-2-on.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-2-on.svg');
   }
 
   .ico-diary-3-on {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-3-on.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-3-on.svg');
   }
 
   .ico-diary-4-on {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-4-on.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-4-on.svg');
   }
 
   .ico-diary-5-on {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-5-on.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-5-on.svg');
   }
 
   .ico-diary-6-on {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-6-on.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-6-on.svg');
   }
 
   .ico-diary-7-on {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-7-on.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-7-on.svg');
   }
 
   .ico-diary-8-on {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-8-on.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-8-on.svg');
   }
 
   .ico-diary-9-on {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-9-on.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-9-on.svg');
   }
 
   .ico-diary-10-on {
-    @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-10-on.svg');
+    @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-10-on.svg');
   }
 
   .ico-calendar {
@@ -3903,43 +4088,43 @@
     }
 
     .ico-diary-1-off {
-      @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-1-on.svg');
+      @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-1-on.svg');
     }
 
     .ico-diary-2-off {
-      @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-2-on.svg');
+      @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-2-on.svg');
     }
 
     .ico-diary-3-off {
-      @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-3-on.svg');
+      @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-3-on.svg');
     }
 
     .ico-diary-4-off {
-      @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-4-on.svg');
+      @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-4-on.svg');
     }
 
     .ico-diary-5-off {
-      @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-5-on.svg');
+      @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-5-on.svg');
     }
 
     .ico-diary-6-off {
-      @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-6-on.svg');
+      @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-6-on.svg');
     }
 
     .ico-diary-7-off {
-      @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-7-on.svg');
+      @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-7-on.svg');
     }
 
     .ico-diary-8-off {
-      @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-8-on.svg');
+      @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-8-on.svg');
     }
 
     .ico-diary-9-off {
-      @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-9-on.svg');
+      @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-9-on.svg');
     }
 
     .ico-diary-10-off {
-      @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-diary-10-on.svg');
+      @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-10-on.svg');
     }
   }
 }
@@ -4438,7 +4623,7 @@
   height: 100vh;
   z-index: 1050;
   overflow: hidden;
-  background-color: rgba(34, 34, 34,.2);
+  background-color: rgba(34, 34, 34, .2);
 
   &.show {
     display: block;
@@ -4454,7 +4639,7 @@
     height: 678px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: #fff;
     border-radius: 20px;
     border: 0;

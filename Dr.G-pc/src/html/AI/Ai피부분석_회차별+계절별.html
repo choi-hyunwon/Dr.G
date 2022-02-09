@@ -6,7 +6,7 @@
     <div class="line-chart-wrap _roundChart">
         <div class="line-chart">
             <div class="line-chart-inner">
-                <svg preserveAspectRatio="none" viewBox="0 0 375 200">
+                <svg preserveAspectRatio="none" viewBox="0 0 1238 301">
                     <defs>
                         <linearGradient id="Gradient" gradientTransform="rotate(90)">
                             <stop style="stop-color:#2DAFF9" offset="0%"></stop>
@@ -32,52 +32,68 @@
                  -->
                 <div class="chart-info">
                     <!-- s 이전 구간 -->
-                    <div class="item item-old">
-                        <input type="range" title="range" min="0" max="100" />
-                        <div class="percentage"></div>
-                        <div class="line-box">
-                            <div class="tooltip-box"><a href="#">0</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
-                        </div>
-                    </div>
+                    <!--                    <div class="item item-old">-->
+                    <!--                        <input type="range" title="range" min="0" max="100" />-->
+                    <!--                        <div class="percentage"></div>-->
+                    <!--                        <div class="line-box">-->
+                    <!--                            <div class="tooltip-box"><a href="#">0</a></div>-->
+                    <!--                            <div class="label-box"><span class="font-poppins">OS+</span> 민지형</div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
                     <!-- e 이전 구간 -->
 
                     <!-- s 현재 구간 -->
+                    <div class="item">
+                        <input type="range" title="range" min="0" max="100" />
+                        <div class="percentage"></div>
+                        <div class="line-box">
+                            <div class="tooltip-box"><a href="#">62</a></div>
+                            <div class="label-box"><span class="font-poppins">OS+</span> 민지형</div>
+                        </div>
+                    </div>
                     <div class="item item-top">
                         <input type="range" title="range" min="0" max="100" />
                         <div class="percentage"></div>
                         <div class="line-box">
                             <div class="tooltip-box"><a href="#">0</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                            <div class="label-box"><span class="font-poppins">OS+</span> 민지형</div>
                         </div>
                     </div>
                     <div class="item">
                         <input type="range" title="range" min="0" max="100" />
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">67</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                            <div class="tooltip-box"><a href="#">60</a></div>
+                            <div class="label-box"><span class="font-poppins">OS+</span> 민지형</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <input type="range" title="range" min="0" max="100" />
+                        <div class="percentage"></div>
+                        <div class="line-box">
+                            <div class="tooltip-box"><a href="#">100</a></div>
+                            <div class="label-box"><span class="font-poppins">OS+</span> 민지형</div>
                         </div>
                     </div>
                     <div class="item item-last">
                         <input type="range" title="range" min="0" max="100" />
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">100</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                            <div class="tooltip-box"><a href="#">70</a></div>
+                            <div class="label-box"><span class="font-poppins">OS+</span> 민지형</div>
                         </div>
                     </div>
                     <!-- s 현재 구간 -->
 
                     <!-- s 다음 구간 -->
-                    <div class="item item-new">
-                        <input type="range" title="range" min="0" max="100" />
-                        <div class="percentage"></div>
-                        <div class="line-box top">
-                            <div class="tooltip-box"><a href="#">0</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
-                        </div>
-                    </div>
+                    <!--                    <div class="item item-new">-->
+                    <!--                        <input type="range" title="range" min="0" max="100" />-->
+                    <!--                        <div class="percentage"></div>-->
+                    <!--                        <div class="line-box top">-->
+                    <!--                            <div class="tooltip-box"><a href="#">0</a></div>-->
+                    <!--                            <div class="label-box"><span class="font-poppins">OS+</span> 민지형</div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
                     <!-- e 다음 구간 -->
                 </div>
                 <div class="x-axis">
@@ -85,6 +101,8 @@
                         <li>2021-09-01</li>
                         <li>2021-10-01</li>
                         <li>2021-11-01</li>
+                        <li>2021-12-01</li>
+                        <li>2022-01-01</li>
                     </ul>
                 </div>
                 <div class="chart-nav">
@@ -97,7 +115,7 @@
     <div class="line-chart-wrap season _seasonChart">
         <div class="line-chart">
             <div class="line-chart-inner">
-                <svg preserveAspectRatio="none" viewBox="0 0 375 200">
+                <svg preserveAspectRatio="none" viewBox="0 0 1238 301">
                     <defs>
                         <linearGradient id="Gradient" gradientTransform="rotate(90)">
                             <stop style="stop-color:#2DAFF9" offset="0%"></stop>
@@ -189,24 +207,24 @@
     // data
     var data = [
         {
-            "date": "2021-08-01",
-            "value": 70,
-        },
-        {
             "date": "2021-09-01",
-            "value": 0,
+            "value": 62,
         },
         {
             "date": "2021-10-01",
-            "value": 67,
+            "value": 0,
         },
         {
             "date": "2021-11-01",
-            "value": 100,
+            "value": 60,
         },
         {
             "date": "2021-12-01",
-            "value": 75,
+            "value": 100,
+        },
+        {
+            "date": "2022-01-01",
+            "value": 70,
         },
     ];
 
@@ -250,8 +268,8 @@
     let app = (() => {
         const $svgLine = document.querySelector('._roundChart svg .line');
         const $svgSeasonLine = document.querySelector('._seasonChart svg .line');
-        const sliderHeight = 200;
-        const svgViewBoxHeight = 200;
+        const sliderHeight = 301;
+        const svgViewBoxHeight = 301;
         const svgViewBoxThumbLimit = svgViewBoxHeight / sliderHeight;
         const svgViewBoxGraphMax = svgViewBoxHeight - svgViewBoxThumbLimit;
         const svgViewBoxGraphMin = svgViewBoxThumbLimit;
@@ -275,50 +293,50 @@
 
         let temp = {
             begin: {
-                x: 0,
+                x: 192,
                 y: 0
             },
             point : [
                 {
-                    x: 0,
+                    x: 192,
                     y: 0
                 },
                 {
-                    x: 87,
+                    x: 400,
                     y: 0
                 },
                 {
-                    x: 187,
+                    x: 618,
                     y: 0
                 },
                 {
-                    x: 287,
+                    x: 835,
                     y: 0
                 },
                 {
-                    x: 387,
+                    x: 1041,
                     y: 0
                 },
             ],
             control : [
                 {
-                    x: 35,
+                    x: 270,
                     y: 0
                 },
                 {
-                    x: 40,
+                    x: 290,
                     y: 0
                 },
                 {
-                    x: 130,
+                    x: 511,
                     y: 0
                 },
                 {
-                    x: 230,
+                    x: 730,
                     y: 0
                 },
                 {
-                    x: 370,
+                    x: 950,
                     y: 0
                 },
             ]
@@ -335,49 +353,49 @@
                     y: 0
                 },
                 {
-                    x: 65,
+                    x: 286,
                     y: 0
                 },
                 {
-                    x: 146,
+                    x: 498,
                     y: 0
                 },
                 {
-                    x: 230,
+                    x: 710,
                     y: 0
                 },
                 {
-                    x: 315,
+                    x: 922,
                     y: 0
                 },
                 {
-                    x: 387,
+                    x: 1238,
                     y: 0
                 },
             ],
             control : [
                 {
-                    x: 20,
+                    x: 90,
                     y: 0
                 },
                 {
-                    x: 36,
+                    x: 160,
                     y: 0
                 },
                 {
-                    x: 109,
+                    x: 392,
                     y: 0
                 },
                 {
-                    x: 188,
+                    x: 604,
                     y: 0
                 },
                 {
-                    x: 273,
+                    x: 816,
                     y: 0
                 },
                 {
-                    x: 351,
+                    x: 1080,
                     y: 0
                 },
             ]
@@ -555,22 +573,21 @@
     })();
 
     /** -------------------------- line animation --------------------------- **/
-    anime({
-        targets: 'path',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutCubic',
-        duration: 2000,
-    });
-
-    function lineDrawing() {
-        anime({
-            targets: 'path',
-            strokeDashoffset: [anime.setDashoffset, 0],
-            easing: 'easeInOutCubic',
-            duration: 2000,
-        });
-    }
-
+    // anime({
+    //     targets: 'path',
+    //     strokeDashoffset: [anime.setDashoffset, 0],
+    //     easing: 'easeInOutCubic',
+    //     duration: 2000,
+    // });
+    //
+    // function lineDrawing() {
+    //     anime({
+    //         targets: 'path',
+    //         strokeDashoffset: [anime.setDashoffset, 0],
+    //         easing: 'easeInOutCubic',
+    //         duration: 2000,
+    //     });
+    // }
     /** -------------------------- swipe event --------------------------- **/
     let swipeEl =  $('.line-chart-inner');
 

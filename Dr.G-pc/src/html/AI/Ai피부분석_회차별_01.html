@@ -37,50 +37,50 @@
                         <div class="percentage"></div>
                         <div class="line-box">
                             <div class="tooltip-box"><a href="#">0</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                            <div class="label-box"><span class="font-poppins">OS+</span>민지형</div>
                         </div>
                     </div>
                     <!-- e 이전 구간 -->
 
                     <!-- s 현재 구간 -->
+                    <div class="item">
+                        <input type="range" title="range" min="0" max="100" />
+                        <div class="percentage"></div>
+                        <div class="line-box">
+                            <div class="tooltip-box"><a href="#">62</a></div>
+                            <div class="label-box"><span class="font-poppins">OS+</span>민지형</div>
+                        </div>
+                    </div>
                     <div class="item item-top">
                         <input type="range" title="range" min="0" max="100" />
                         <div class="percentage"></div>
                         <div class="line-box">
                             <div class="tooltip-box"><a href="#">0</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                            <div class="label-box"><span class="font-poppins">OS+</span>민지형</div>
                         </div>
                     </div>
                     <div class="item">
                         <input type="range" title="range" min="0" max="100" />
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">67</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                            <div class="tooltip-box"><a href="#">60</a></div>
+                            <div class="label-box"><span class="font-poppins">OS+</span>민지형</div>
                         </div>
                     </div>
                     <div class="item">
                         <input type="range" title="range" min="0" max="100" />
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">67</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <input type="range" title="range" min="0" max="100" />
-                        <div class="percentage"></div>
-                        <div class="line-box">
-                            <div class="tooltip-box"><a href="#">67</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                            <div class="tooltip-box"><a href="#">100</a></div>
+                            <div class="label-box"><span class="font-poppins">OS+</span>민지형</div>
                         </div>
                     </div>
                     <div class="item item-last">
                         <input type="range" title="range" min="0" max="100" />
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">100</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                            <div class="tooltip-box"><a href="#">70</a></div>
+                            <div class="label-box"><span class="font-poppins">OS+</span>민지형</div>
                         </div>
                     </div>
                     <!-- s 현재 구간 -->
@@ -91,7 +91,7 @@
                         <div class="percentage"></div>
                         <div class="line-box top">
                             <div class="tooltip-box"><a href="#">0</a></div>
-                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
+                            <div class="label-box"><span class="font-poppins">OS+</span>민지형</div>
                         </div>
                     </div>
                     <!-- e 다음 구간 -->
@@ -122,7 +122,7 @@
         },
         {
             "date": "2021-09-01",
-            "value": 50,
+            "value": 62,
         },
         {
             "date": "2021-10-01",
@@ -130,15 +130,15 @@
         },
         {
             "date": "2021-11-01",
-            "value": 100,
+            "value": 60,
         },
         {
             "date": "2021-12-01",
-            "value": 0,
+            "value": 100,
         },
         {
             "date": "2022-01-01",
-            "value": 50,
+            "value": 70,
         },
         {
             "date": "2022-02-01",
@@ -339,33 +339,33 @@
     })();
 
     /** -------------------------- line animation --------------------------- **/
-    // anime({
-    //     targets: 'path',
-    //     strokeDashoffset: [anime.setDashoffset, 0],
-    //     easing: 'easeInOutCubic',
-    //     duration: 2000,
-    // });
-    //
-    // function lineDrawing() {
-    //     anime({
-    //         targets: 'path',
-    //         strokeDashoffset: [anime.setDashoffset, 0],
-    //         easing: 'easeInOutCubic',
-    //         duration: 2000,
-    //     });
-    // }
+    anime({
+        targets: 'path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutCubic',
+        duration: 2000,
+    });
+
+    function lineDrawing() {
+        anime({
+            targets: 'path',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutCubic',
+            duration: 2000,
+        });
+    }
     /** -------------------------- swipe event --------------------------- **/
-    // let swipeEl =  $('.line-chart-inner');
-    //
-    // swipeEl.on('swipeleft',function(){
-    //     console.log('to the left')
-    //     alert('to the left')
-    // });
-    //
-    // swipeEl.on('swiperight',function(){
-    //     console.log('to the right')
-    //     alert('to the right')
-    // });
+    let swipeEl =  $('.line-chart-inner');
+
+    swipeEl.on('swipeleft',function(){
+        console.log('to the left')
+        alert('to the left')
+    });
+
+    swipeEl.on('swiperight',function(){
+        console.log('to the right')
+        alert('to the right')
+    });
 </script>
 </body>
 </html>

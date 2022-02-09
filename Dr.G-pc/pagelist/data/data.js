@@ -117,7 +117,7 @@ data.AI = {
             page: 'Ai피부분석_시작하기_팝업'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: 'Ai피부분석_서브메인',
             category: 'AI',
             page: 'Ai피부분석_서브메인'
@@ -170,60 +170,6 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_서브메인_DN-'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_비회원_정보입력',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_비회원_정보입력'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_개인정보_수집_및_활용동의',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_개인정보_수집_및_활용동의'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_Step1-1',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_Step1-1'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_Step1_촬영하기',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_Step1_촬영하기'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기2',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_Step1_촬영하기,촬영본_확인하기2'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_Step1_피부스캐닝_완료',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_Step1_피부스캐닝_완료'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_Step2',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_Step2'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_Step2_답변완료',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_Step2_답변완료'
-        // },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_결과',
@@ -231,77 +177,11 @@ data.AI = {
             page: 'Ai피부분석_결과'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: 'Ai피부분석_피부변화리포트',
             category: 'AI',
             page: 'Ai피부분석_피부변화리포트'
         },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_피부변화리포트_로딩중',
-            category: 'AI',
-            page: 'Ai피부분석_피부변화리포트_로딩중'
-        },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_결과_비회원',
-            category: 'AI',
-            page: 'Ai피부분석_결과_비회원'
-        },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_비회원_팝업_1',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_비회원_팝업_1'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_비회원_팝업_2',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_비회원_팝업_2'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_서브메인_진입시_로그인팝업',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_서브메인_진입시_로그인팝업'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_피부분석_안내_팝업',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_피부분석_안내_팝업'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_비회원_개인정보_수집_및_이용동의',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_비회원_개인정보_수집_및_이용동의'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_개인정보_수집_및_이용동의',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_개인정보_수집_및_이용동의'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_Step1-1앱설치안내',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_Step1-1앱설치안내'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_결과_추천_팝업',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_추천_팝업'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_Step1_촬영하기_경고메세지팝업',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_Step1_촬영하기_경고메세지팝업'
-        // },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_결과_솔루션_공유하기_팝업',
@@ -309,23 +189,11 @@ data.AI = {
             page: 'Ai피부분석_결과_솔루션_공유하기_팝업'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: 'Ai피부분석_피부변화리포트_달력모달',
             category: 'AI',
             page: 'Ai피부분석_피부변화리포트_달력모달'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_피부분석_주기관리_팝업',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_피부분석_주기관리_팝업'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_Loading',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_Loading'
-        // },
     ]
 }
 

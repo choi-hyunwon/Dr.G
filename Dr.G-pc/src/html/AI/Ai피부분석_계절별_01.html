@@ -3,10 +3,10 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
-    <div class="line-chart-wrap season">
+    <div class="line-chart-wrap season _seasonChart">
         <div class="line-chart">
             <div class="line-chart-inner">
-                <svg preserveAspectRatio="none" viewBox="0 0 375 200">
+                <svg preserveAspectRatio="none" viewBox="0 0 1238 301">
                     <defs>
                         <linearGradient id="Gradient" gradientTransform="rotate(90)">
                             <stop style="stop-color:#2DAFF9" offset="0%"></stop>
@@ -45,19 +45,19 @@
                     <div class="item">
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">10</a></div>
+                            <div class="tooltip-box"><a href="#" onclick="console.log('10 클릭')">10</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">35</a></div>
+                            <div class="tooltip-box"><a href="#" onclick="console.log('35 클릭')">35</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">67</a></div>
+                            <div class="tooltip-box"><a href="#" onclick="console.log('67 클릭')">67</a></div>
                         </div>
                     </div>
                     <div class="item item-last">
@@ -135,8 +135,8 @@
 
     let app = (() => {
         const $svgLine = document.querySelector('svg .line');
-        const sliderHeight = 200;
-        const svgViewBoxHeight = 200;
+        const sliderHeight = 301;
+        const svgViewBoxHeight = 301;
         const svgViewBoxThumbLimit = svgViewBoxHeight / sliderHeight;
         const svgViewBoxGraphMax = svgViewBoxHeight - svgViewBoxThumbLimit;
         const svgViewBoxGraphMin = svgViewBoxThumbLimit;
@@ -161,49 +161,49 @@
                     y: 0
                 },
                 {
-                    x: 65,
+                    x: 286,
                     y: 0
                 },
                 {
-                    x: 146,
+                    x: 498,
                     y: 0
                 },
                 {
-                    x: 230,
+                    x: 710,
                     y: 0
                 },
                 {
-                    x: 315,
+                    x: 922,
                     y: 0
                 },
                 {
-                    x: 387,
+                    x: 1238,
                     y: 0
                 },
             ],
             control : [
                 {
-                    x: 20,
+                    x: 90,
                     y: 0
                 },
                 {
-                    x: 36,
+                    x: 160,
                     y: 0
                 },
                 {
-                    x: 109,
+                    x: 392,
                     y: 0
                 },
                 {
-                    x: 188,
+                    x: 604,
                     y: 0
                 },
                 {
-                    x: 273,
+                    x: 816,
                     y: 0
                 },
                 {
-                    x: 351,
+                    x: 1080,
                     y: 0
                 },
             ]

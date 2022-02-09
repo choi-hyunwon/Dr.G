@@ -3,10 +3,10 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
-    <div class="line-chart-wrap season">
+    <div class="line-chart-wrap season _seasonChart">
         <div class="line-chart">
             <div class="line-chart-inner">
-                <svg preserveAspectRatio="none" viewBox="0 0 375 200">
+                <svg preserveAspectRatio="none" viewBox="0 0 1238 301">
                     <defs>
                         <linearGradient id="Gradient" gradientTransform="rotate(90)">
                             <stop style="stop-color:#2DAFF9" offset="0%"></stop>
@@ -25,57 +25,56 @@
                     <path style="stroke:url(#Gradient)" d="" class="line"></path>
                 </svg>
                 <!--
-                               **
-                               1. 현재 구간에서 마지막 요소, .item에 item-last 클래스 추가
-                               2. 데이터 값이 없을 경우, .item에 item-empty 클래스 추가
-                               3. 이전 데이터가 없는 경우, .item에 .item-old 클래스 추가
-                               4. 다음 데이터가 있는 경우, .item에 .item-new 클래스 추가
-                       -->
+                         **
+                         1. 현재 구간에서 마지막 요소, .item에 item-last 클래스 추가
+                         2. 데이터 값이 없을 경우, .item에 item-empty 클래스 추가
+                         3. 이전 데이터가 없는 경우, .item에 .item-old 클래스 추가
+                         4. 다음 데이터가 있는 경우, .item에 .item-new 클래스 추가
+                 -->
                 <div class="chart-info">
                     <!-- s 이전 구간 -->
-                    <div class="item item-old">
-                        <div class="percentage"></div>
-                        <div class="line-box">
-                            <div class="tooltip-box"><a href="#">70</a></div>
-                        </div>
-                    </div>
+<!--                    <div class="item item-old">-->
+<!--                        <div class="percentage"></div>-->
+<!--                        <div class="line-box">-->
+<!--                            <div class="tooltip-box"><a href="#">70</a></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <!-- e 이전 구간 -->
 
                     <!-- s 현재 구간 -->
                     <div class="item">
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">45</a></div>
+                            <div class="tooltip-box"><a href="#" onclick="console.log('10 클릭')">10</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">35</a></div>
+                            <div class="tooltip-box"><a href="#" onclick="console.log('35 클릭')">35</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">67</a></div>
+                            <div class="tooltip-box"><a href="#" onclick="console.log('67 클릭')">67</a></div>
                         </div>
                     </div>
                     <div class="item item-last">
                         <div class="percentage"></div>
                         <div class="line-box">
-                            <div class="tooltip-box"><a href="#">100</a></div>
+                            <div class="tooltip-box"><a href="#" onclick="console.log('100 클릭')">100</a></div>
                         </div>
                     </div>
                     <!-- s 현재 구간 -->
 
                     <!-- s 다음 구간 -->
-<!--                    <div class="item item-new">-->
-<!--                        <div class="percentage"></div>-->
-<!--                        <div class="line-box top">-->
-<!--                            <div class="tooltip-box"><a href="#">50</a></div>-->
-<!--                            <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <div class="item item-new">
+                        <div class="percentage"></div>
+                        <div class="line-box top">
+                            <div class="tooltip-box"><a href="#">50</a></div>
+                        </div>
+                    </div>
                     <!-- e 다음 구간 -->
                 </div>
                 <div class="x-axis">
@@ -99,12 +98,8 @@
     // data
     var data = [
         {
-            "category": "",
-            "value": 70,
-        },
-        {
             "category": "봄",
-            "value": 45,
+            "value": 10,
         },
         {
             "category": "여름",
@@ -118,10 +113,10 @@
             "category": "겨울",
             "value": 100,
         },
-        // {
-        //     "category": "",
-        //     "value": 50,
-        // },
+        {
+            "category": "",
+            "value": 50,
+        },
     ];
 
     // String formatter
@@ -136,8 +131,8 @@
 
     let app = (() => {
         const $svgLine = document.querySelector('svg .line');
-        const sliderHeight = 200;
-        const svgViewBoxHeight = 200;
+        const sliderHeight = 301;
+        const svgViewBoxHeight = 301;
         const svgViewBoxThumbLimit = svgViewBoxHeight / sliderHeight;
         const svgViewBoxGraphMax = svgViewBoxHeight - svgViewBoxThumbLimit;
         const svgViewBoxGraphMin = svgViewBoxThumbLimit;
@@ -153,60 +148,52 @@
 
         let temp = {
             begin: {
-                x: 0,
+                x: 286,
                 y: 0
             },
             point : [
                 {
-                    x: 0,
+                    x: 286,
                     y: 0
                 },
                 {
-                    x: 65,
+                    x: 498,
                     y: 0
                 },
                 {
-                    x: 146,
+                    x: 710,
                     y: 0
                 },
                 {
-                    x: 230,
+                    x: 922,
                     y: 0
                 },
                 {
-                    x: 315,
+                    x: 1238,
                     y: 0
                 },
-                // {
-                //     x: 387,
-                //     y: 0
-                // },
             ],
             control : [
                 {
-                    x: 20,
+                    x: 300,
                     y: 0
                 },
                 {
-                    x: 36,
+                    x: 392,
                     y: 0
                 },
                 {
-                    x: 109,
+                    x: 604,
                     y: 0
                 },
                 {
-                    x: 188,
+                    x: 816,
                     y: 0
                 },
                 {
-                    x: 273,
+                    x: 1080,
                     y: 0
                 },
-                // {
-                //     x: 351,
-                //     y: 0
-                // },
             ]
         };
 
