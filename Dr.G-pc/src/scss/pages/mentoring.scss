@@ -43,6 +43,11 @@
       }
     }
   }
+  .btn-wrap{
+    .btn{
+      min-width: 160px;
+    }
+  }
 
   /*step*/
   .step-heading {
@@ -518,71 +523,158 @@
   }
 
 
-  .section-color {
-    padding: vw(80) vw(0) vw(132);
-    margin-bottom: vw(80);
+  /*내역 - 목록*/
+  .question-intro {
+    width: 1242px;
+    margin: 0 auto 160px;
+    padding: 80px 0 125px;
     position: relative;
-
-    &.bg-blue {
-      background-color: $blue;
-    }
-
-    .font-h1, .font-h3 {
+    .font-h1 {
       color: $gray-fff;
-      padding: 0 vw(24);
+      text-align: center;
     }
-
     .floating-box {
       position: absolute;
-      bottom: vw(-32);
-      margin: 0 vw(24);
-
+      width: 100%;
+      bottom: -40px;
+      padding: 40px;
+      background-color: $gray-fff;
+      box-shadow: 0 4px 12px rgba(34, 34, 34, 0.08);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       .item {
-        background-color: $gray-fff;
-        box-shadow: 0 vw(4) vw(12) rgba(34, 34, 34, 0.08);
-        border-radius: vw(16);
-        padding: vw(20);
-
         .badge {
-          margin-bottom: vw(3.5);
+          margin-right: 40px;
         }
-
         .question {
-          font-size: vw(15);
-          line-height: vw(22);
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 16px;
+          line-height: 24px;
           color: $gray-800;
-          margin-bottom: vw(5);
         }
-
-        .date {
-          font-size: vw(13);
-          line-height: vw(18);
-          color: $gray-600;
-          font-family: Poppins , sans-serif;
-        }
+      }
+      .date {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 18px;
+        color: $gray-600;
       }
     }
   }
-
-
-
-
-  .section-tab {
+  .question-list {
       position: relative;
-      z-index: 10;
-      width:100%;
-      background: $gray-fff;
-      overflow-x: scroll;
       border-bottom: 1px solid #eeeeee;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-      &::-webkit-scrollbar{
-        display: none;
-        width: 0;
-        height: 0;
-        background: transparent;
-        -webkit-appearance: none;
+    .title{
+      width: 1242px;
+      margin: 0 auto;
+      .font-h3{
+        margin-bottom: 60px;
       }
+      .tab {
+        border-bottom: none;
+        .item {
+          &.active {
+            a {
+              color: $blue;
+            }
+            &:after {
+              background-color: $blue;
+              bottom: 0;
+              z-index: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .bg-gray{
+      border-top: 1px solid #e9e9e9;
+      .inner{
+        width: 1242px;
+        margin: 0 auto;
+        border-top: $gray-300;
+        .total {
+          font-size: 13px;
+          line-height: 18px;
+          color: $gray-700;
+          font-weight: 500;
+          text-align: right;
+          margin-bottom: 20px;
+
+          .answer {
+            display: inline-block;
+            &.waiting {
+              padding-right: 8px;
+              position: relative;
+              .num {
+                font-weight: 600;
+                color: $blue;
+              }
+              &:after {
+                content: '';
+                clear: both;
+                display: inline-block;
+                width: 1px;
+                height: 10px;
+                background-color: $gray-400;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+            &.complete {
+              width: unset;
+              padding-left: 4px;
+              .num {
+                font-weight: 600;
+                color: $gray-900;
+              }
+            }
+          }
+        }
+
+        .answer-list {
+          .item {
+            background-color: $gray-fff;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &:last-of-type {
+              margin-bottom: 60px;
+            }
+            .tit {
+              .badge {
+                margin-right: 40px;
+              }
+              .question {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 16px;
+                line-height: 24px;
+                color: $gray-800;
+              }
+            }
+            .date {
+              font-size: 13px;
+              line-height: 18px;
+              color: $gray-600;
+            }
+          }
+        }
+      }
+    }
+
+
+
+
+
 
     &.fixed{
       position:fixed;
@@ -596,116 +688,9 @@
       margin-bottom: vw(16);
     }
 
-    .tab {
-      overflow:unset;
-      border-bottom: none;
-      z-index: 5;
-      .item {
-        &.active {
-          a {
-            color: $blue;
-            &:after {
-              background-color: $blue;
-            }
-          }
-        }
-      }
 
-      /*스킨멘토링내역 목록- tab 예외*/
-      &._question-tab{
-        position: relative;
-        top: unset;
-        &.tab-fixed{
-          position:fixed;
-          top:16vw;
-          &.top_0{
-            top: 0;
-          }
-        }
-      }
-    }
-    .tab-content {
-      background-color: $gray-200;
-      border-top: $gray-300;
-      padding: vw(50) vw(24) vw(76);
-
-      .total {
-        font-size: vw(13);
-        line-height: vw(18);
-        color: $gray-700;
-        font-weight: 500;
-        text-align: right;
-        margin-bottom: vw(17);
-
-        .answer {
-          display: inline-block;
-
-          &.waiting {
-            padding-right: vw(8);
-            position: relative;
-
-            .num {
-              font-weight: 600;
-              color: $blue;
-            }
-
-            &:after {
-              content: '';
-              clear: both;
-              display: inline-block;
-              width: vw(1);
-              height: vw(10);
-              background-color: $gray-400;
-              position: absolute;
-              right: 0;
-              top: 50%;
-              transform: translateY(-50%);
-            }
-          }
-
-          &.complete {
-            padding-left: vw(8);
-
-            .num {
-              font-weight: 600;
-              color: $gray-900;
-            }
-          }
-        }
-      }
-
-      .answer-list {
-        .item {
-          background-color: $gray-fff;
-          border-radius: vw(16);
-          padding: vw(20);
-          margin-bottom: vw(16);
-
-          &:last-of-type {
-            margin-bottom: vw(48);
-          }
-
-          .badge {
-            margin-bottom: vw(3.5);
-          }
-
-          .question {
-            font-size: vw(15);
-            line-height: vw(22);
-            color: $gray-800;
-            margin-bottom: vw(5);
-          }
-
-          .date {
-            font-size: vw(13);
-            line-height: vw(18);
-            color: $gray-600;
-            font-family: Poppins, sans-serif;
-          }
-        }
-      }
-    }
   }
+
 
   &.mentoring-sub-main {
       .section {
@@ -1626,7 +1611,7 @@
       }
 
       /*후기전체보기*/
-      &.voc {
+   /*   &.voc {
         .header-details {
           background-color: $yellow;
         }
@@ -1659,7 +1644,7 @@
             }
           }
         }
-      }
+      }*/
 
   }
 
