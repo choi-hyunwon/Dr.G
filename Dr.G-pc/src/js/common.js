@@ -302,6 +302,40 @@ front.common = (function () {
                 lastScrollTop = st;
             }
         }
+
+        /* gnb */
+        var $nav = $('._menu .item > a');
+        var $navItem = $nav.parent();
+        if( !$nav.length ) return;
+
+        $(window).on('scroll load',function(e){
+            if( e.type == 'scroll' ) {
+                header.removeClass('hovering');
+                $navItem.removeClass('hovering');
+            }
+        })
+
+        $nav.each(function (){
+            var $thisItem = $(this).parent();
+            if($thisItem.index() !== 7){
+                $thisItem.on('mouseenter',function(e){
+                    $thisItem.addClass('hovering');
+                    $thisItem.siblings().removeClass('hovering');
+                    header.addClass('hovering');
+                })
+            } else {
+                console.log('x')
+                $thisItem.on('mouseenter',function(e){
+                    header.removeClass('hovering');
+                    $('._menu > .item').removeClass('hovering');
+                })
+            }
+        })
+
+        header.on('mouseleave',function(e){
+            header.removeClass('hovering');
+            $('._menu > .item').removeClass('hovering');
+        })
     }
 
     var floatBottom = function () {

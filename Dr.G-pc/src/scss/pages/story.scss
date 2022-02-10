@@ -354,6 +354,11 @@
       .btn-next, .btn-prev {
         display: block;
         position: absolute;
+
+
+        &.swiper-button-disabled {
+          //opacity: .7; !todo
+        }
       }
 
       .btn-prev {

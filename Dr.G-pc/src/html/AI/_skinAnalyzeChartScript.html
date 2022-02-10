@@ -50,6 +50,29 @@
         // },
     ];
 
+    var dataSkinChange = [
+        {
+            "date": "2021-09-01",
+            "value": 62,
+        },
+        {
+            "date": "2021-10-01",
+            "value": 0,
+        },
+        {
+            "date": "2021-11-01",
+            "value": 60,
+        },
+        {
+            "date": "2021-12-01",
+            "value": 100,
+        },
+        {
+            "date": "2022-01-01",
+            "value": 70,
+        },
+    ];
+
     // String formatter
     if (!String.prototype.format) {
         String.prototype.format = function() {
@@ -63,6 +86,7 @@
     let app = (() => {
         const $svgLine = document.querySelector('._roundChart svg .line');
         const $svgSeasonLine = document.querySelector('._seasonChart svg .line');
+        const $svgSkinChangeLine = document.querySelector('._skinChangeChart svg .line');
         const sliderHeight = 301;
         const svgViewBoxHeight = 301;
         const svgViewBoxThumbLimit = svgViewBoxHeight / sliderHeight;
@@ -84,6 +108,14 @@
             range4: null,
             // range5: null,
             // range6: null,
+        };
+
+        let rangesSkinChange = {
+            range1: null,
+            range2: null,
+            range3: null,
+            range4: null,
+            range5: null,
         };
 
         let temp = {
@@ -188,6 +220,57 @@
             ]
         };
 
+        let tempSkinChange = {
+            begin: {
+                x: 192,
+                y: 0
+            },
+            point : [
+                {
+                    x: 192,
+                    y: 0
+                },
+                {
+                    x: 400,
+                    y: 0
+                },
+                {
+                    x: 618,
+                    y: 0
+                },
+                {
+                    x: 835,
+                    y: 0
+                },
+                {
+                    x: 1041,
+                    y: 0
+                },
+            ],
+            control : [
+                {
+                    x: 270,
+                    y: 0
+                },
+                {
+                    x: 290,
+                    y: 0
+                },
+                {
+                    x: 511,
+                    y: 0
+                },
+                {
+                    x: 730,
+                    y: 0
+                },
+                {
+                    x: 950,
+                    y: 0
+                },
+            ]
+        };
+
         function mapDataRange(value) {
             return (((value - 0) * (svgViewBoxGraphMax - svgViewBoxGraphMin)) / svgViewBoxHeight) + svgViewBoxGraphMin;
         }
@@ -242,6 +325,31 @@
             }
         }
 
+        function updateSkinChangeSlider($element) {
+            if ($element) {
+
+                let rangeIndex = $element.getAttribute('data-slider-index'),
+                    range = rangesSkinChange[rangeIndex],
+                    value = $element.value;
+
+                if (range === value) {
+                    return;
+                }
+
+                rangesSkinChange[rangeIndex] = value;
+
+                let parent = $element.parentElement,
+                    $tootip = parent.querySelector('._skinChangeChart .line-box'),
+                    $bar = parent.querySelector('._skinChangeChart .percentage'),
+                    pct = value * (sliderHeight / sliderHeight)
+
+                $tootip.style.bottom = `${pct}%`;
+                $bar.style.height = `${pct}%`;
+
+                renderSliderGraph();
+            }
+        }
+
         function updatePoints() {
             temp.point.forEach((item, index)=>{
                 item.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges[`range${index+1}`]) / 100) | 0;
@@ -263,6 +371,18 @@
 
             tempSeason.control.forEach((item, index)=>{
                 item.y = tempSeason.point[index].y
+            })
+        }
+
+        function updateSkinChange() {
+            tempSkinChange.point.forEach((item, index)=>{
+                item.y = svgViewBoxHeight - (svgViewBoxHeight * (rangesSkinChange[`range${index+1}`]) / 100) | 0;
+                item.y = mapDataRange(item.y);
+            })
+            tempSkinChange.begin.y = tempSkinChange.point[0].y
+
+            tempSkinChange.control.forEach((item, index)=>{
+                item.y = tempSkinChange.point[index].y
             })
         }
 
@@ -313,11 +433,35 @@
             )
         }
 
+        function getInterpolatedSkinChangeLine() {
+            return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13} S {14} {15}, {16} {17} S {18} {19}, {20} {21}'.format(
+                // M
+                temp.begin.x, temp.begin.y,
+                // L
+                temp.point[0].x, temp.point[0].y,
+                // C
+                temp.control[0].x, temp.control[0].y,
+                temp.control[1].x, temp.control[1].y,
+                temp.point[1].x, temp.point[1].y,
+                // S
+                temp.control[2].x, temp.control[2].y,
+                temp.point[2].x, temp.point[2].y,
+                // S
+                temp.control[3].x, temp.control[3].y,
+                temp.point[3].x, temp.point[3].y,
+                // S
+                temp.control[4].x, temp.point[4].y,
+                temp.point[4].x, temp.point[4].y,
+            )
+        }
+
         function renderSliderGraph() {
             updatePoints();
             updateSeasonPoints();
+            updateSkinChange();
             $svgLine.setAttribute('d', getInterpolatedLine());
             $svgSeasonLine.setAttribute('d', getInterpolatedSeasonLine());
+            $svgSkinChangeLine.setAttribute('d', getInterpolatedSkinChangeLine());
         }
 
         function drawChart() {
@@ -328,13 +472,19 @@
             const percentageSeasonList = app.percentageSeason;
             percentageSeasonList.forEach((item, index) => {item.value = dataSeason[index]?.value | 0});
             percentageSeasonList.forEach(item => app.updateSeasonSlider(item));
+
+            const percentageSkinChangeList = app.percentageSkinChange;
+            percentageSkinChangeList.forEach((item, index) => {item.value = dataSkinChange[index]?.value | 0});
+            percentageSkinChangeList.forEach(item => app.updateSkinChangeSlider(item));
         }
 
         return {
             percentage: [].slice.call(document.querySelectorAll('._roundChart .line-chart-inner .percentage')),
             percentageSeason: [].slice.call(document.querySelectorAll('._seasonChart .line-chart-inner .percentage')),
+            percentageSkinChange: [].slice.call(document.querySelectorAll('._skinChangeChart .line-chart-inner .percentage')),
             updateSlider,
             updateSeasonSlider,
+            updateSkinChangeSlider,
             drawChart,
         };
     })();
@@ -342,6 +492,7 @@
     (function initAndSetupTheSliders() {
         const percentageList = app.percentage;
         const percentageSeasonList = app.percentageSeason;
+        const percentageSkinChangeList = app.percentageSkinChange;
 
         // 회차별
         percentageList.forEach((item,index) => item.setAttribute('data-slider-index', 'range' + String(index + 1)));
@@ -352,6 +503,12 @@
         percentageSeasonList.forEach((item,index) => item.setAttribute('data-slider-index', 'range' + String(index + 1)));
         percentageSeasonList.forEach(item => item.value = 50);
         percentageSeasonList.forEach(item => app.updateSeasonSlider(item));
+
+        // 피부변화
+        percentageSkinChangeList.forEach((item,index) => item.setAttribute('data-slider-index', 'range' + String(index + 1)));
+        percentageSkinChangeList.forEach(item => item.value = 50);
+        percentageSkinChangeList.forEach(item => app.updateSkinChangeSlider(item));
+
         app.drawChart();
     })();
 
