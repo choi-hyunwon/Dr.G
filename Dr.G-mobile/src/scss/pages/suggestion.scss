@@ -241,7 +241,10 @@
 
       &.swiper-slide-active {
         .text-box {
+          //display: block;
+          opacity: 1;
           transform: translateX(0);
+          -webkit-transform: translateX(0);
         }
 
         .img-box {
@@ -250,10 +253,13 @@
       }
 
       .text-box {
+        //display: none;
+        opacity: 0;
         position: relative;
         color: #fff;
         transition: 1s;
         transform: translateX(90%);
+        -webkit-transform: translateX(90%);
         z-index: 4;
 
         .font-body-2 {

@@ -62,8 +62,9 @@
 /*의견남기기*/
 .opinion {
   background-color: $gray-200;
-  padding: 80px 0 120px;
-  .divider{
+  padding: 80px 0 240px;
+
+  .divider {
     margin: 20px 0 24px;
   }
 }
@@ -86,17 +87,18 @@
 .section-privacy {
   margin-bottom: 60px;
 
-  >.font-h4{
+  > .font-h4 {
     margin-bottom: 30px;
     padding-top: 36px;
-    >.font-sm-1{
+
+    > .font-sm-1 {
       color: $gray-600;
       font-weight: 400;
     }
   }
 
   .radio-box {
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
     .custom-radio {
       margin-right: 40px;
@@ -107,17 +109,15 @@
     margin-bottom: 20px;
 
     /*개인정보 입력 부분 예외*/
-    .form-control , .select-popup {
+    .form-control, .select-popup {
       width: 304px;
       display: inline-block;
       margin: 0 4px 0 0;
     }
+
     input[type=password] {
       margin-right: 0;
     }
-
-
-
 
 
     input[type=text] {
@@ -607,7 +607,7 @@
   }
 
   .caution-box {
-    padding: 80px 0 0;
+    padding: 80px 0 240px;
 
     .title {
       margin-bottom: vw(12);

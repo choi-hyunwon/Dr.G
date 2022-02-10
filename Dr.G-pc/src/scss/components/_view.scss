@@ -6,7 +6,6 @@
 
 /*고객제안 , 스킨멘토링*/
 .view-details {
-
   .body-details {
     width: 900px;
     margin: 0 auto;
@@ -306,7 +305,7 @@
 
   .footer-details {
     border-top: 1px solid $gray-400;
-    padding: vw(32) vw(20) vw(48);
+    padding: vw(32) vw(20) 240px;
 
     &.bg-dark {
       background-color: $gray-800 !important;

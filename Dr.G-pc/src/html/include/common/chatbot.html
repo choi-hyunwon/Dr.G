@@ -1,3 +1,36 @@
 <div class="chatbot-box">
-    <a href="#" class="chatbot"></a>
+    <div href="#" class="chatbot" id="chatbot">
+        <img src="../../img/common/chatbot-img.png" alt="">
+        <span class="tip">
+            <em class="font-bold">푸석푸석 민감할 땐</em> <em class="font-bold color-primary">레드 블래미쉬 시카 수딩 크림</em><br/>
+            <em class="color-light-gray">멘토G가 알려드려요!</em>
+            <a href="#" class="btn-chatbot-close _chatClose"><span class="icon ico-chatbot-close"></span></a>
+        </span>
+    </div>
 </div>
+<script>
+    var chatbot = $('#chatbot');
+    chatbot.draggable({
+        containment: 'parent',
+        axis: 'y',
+        drag: function () {
+            var offset = $(this).offset();
+            var yPos = offset.top;
+            console.log('y :', yPos)
+        }
+    });
+
+    if($('.container').length == 1) {
+        $('.chatbot-box').css('height',$('.container').outerHeight() + 'px')
+    } else if($('.container-fluid').length == 1) {
+        $('.chatbot-box').css('height',$('.container-fluid').outerHeight() + 'px')
+    }
+
+    chatbot.find('img').on('click',function (){
+        $(this).siblings('.tip').show();
+    })
+
+    $('._chatClose').on('click',function (){
+        chatbot.children('.tip').hide();
+    })
+</script>

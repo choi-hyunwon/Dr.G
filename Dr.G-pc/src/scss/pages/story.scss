@@ -117,6 +117,7 @@
 
   .list {
     position: relative;
+    padding-bottom: 240px;
 
     .total {
       font-size: vw(15);
@@ -845,6 +846,8 @@
       }
 
       .total-comment {
+        padding-bottom: 240px;
+
         .heading {
           display: flex;
           align-items: center;

@@ -76,5 +76,24 @@
             modal.removeClass('show').addClass('hide');
             $('body').removeClass('scrOff')
         });
+
+        // animation
+        let iconAnalysis = document.querySelector('._analysisAni');
+
+        let animationAnalysis = bodymovin.loadAnimation({
+            container: iconAnalysis,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: "../../img/@temp/type_262x257.json"
+        });
+
+        new Waypoint({
+            element: document.querySelector('._analysisSection'),
+            handler: function () {
+                animationAnalysis.playSegments([0,274], true);
+            },
+            offset: "50%"
+        })
     })
 </script>

@@ -2870,7 +2870,7 @@
     }
 
     .recommendation-contents {
-      padding: 120px 0 240px;
+      padding: 120px 0 0;
 
       .font-h2 {
         font-size: 32px;
@@ -3909,6 +3909,10 @@
 
       .font-body-1 {
         margin-bottom: vw(24);
+
+        .color-primary {
+          font-weight: bold;
+        }
       }
 
       .sns-wrap {
