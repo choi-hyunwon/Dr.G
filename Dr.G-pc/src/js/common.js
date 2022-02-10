@@ -324,7 +324,6 @@ front.common = (function () {
                     header.addClass('hovering');
                 })
             } else {
-                console.log('x')
                 $thisItem.on('mouseenter',function(e){
                     header.removeClass('hovering');
                     $('._menu > .item').removeClass('hovering');
@@ -332,7 +331,7 @@ front.common = (function () {
             }
         })
 
-        header.on('mouseleave',function(e){
+        header.on('mouseleave',function(){
             header.removeClass('hovering');
             $('._menu > .item').removeClass('hovering');
         })
