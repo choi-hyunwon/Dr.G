@@ -7,7 +7,7 @@
     background-image: url("../img/freesample/bg-drg-stamp.svg");
     background-size: vw(176) vw(198);
     background-repeat: no-repeat;
-    background-position: 100% calc(100% - #{vw(115)});
+    background-position: vw(199) vw(142);
 
     .title {
       font-size: vw(32);
@@ -35,7 +35,7 @@
 
     .img {
       z-index: 3;
-      left: vw(50);
+      left: vw(37);
       bottom: vw(-50);
       position: absolute;
       width: vw(283);
