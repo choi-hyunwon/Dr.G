@@ -305,6 +305,11 @@
                                 <div class="input-range-calendar">
                                     <input title="기간선택" class="form-control _calendarInput" placeholder="변화를 확인하고 싶은 기간을 선택해주세요.">
                                     <a class="btn-calendar _showCal" href="#"><i class="icon ico-calendar"></i></a>
+                                    <div class="calendar-modal">
+                                        <div class="calendar-container _calendarModal">
+                                            <a href="#" class="btn-close _btnClose"><i class="icon ico-close-sm"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="gray-box">
@@ -630,12 +635,6 @@
         </div>
     </div>
     <!-- e contents -->
-
-    <div class="calendar-modal fade">
-        <div class="calendar-container _calendarModal">
-            <a href="#" class="btn-close _btnClose"><i class="icon ico-close-sm"></i></a>
-        </div>
-    </div>
 </div>
 <script>
     /* 피부변화리포트 */
@@ -655,7 +654,6 @@
     })
 
     /* 달력모달 */
-
     $triggerBtn = $('._showCal');
     $closeBtn = $('._btnClose');
     $calendalInput = $('._calendarInput');
@@ -683,13 +681,21 @@
             hideCalendarModal()
         })
 
-    $triggerBtn.on('click', function () {
-        showCalendarModal()
-    })
-
     $closeBtn.on('click', function () {
         hideCalendarModal()
     })
+
+    $('html').click(function (e) {
+        if($(e.target).is('.ico-calendar')) {
+            showCalendarModal()
+        } else {
+            if($('.calendar-modal').hasClass('show')){
+                if (!$(e.target).is('.calendar-modal')) {
+                    hideCalendarModal()
+                }
+            }
+        }
+    });
 
     $calendarModal.on('mouseup', function (e) {
         if ($(this).has(e.target).length === 0) {
@@ -699,9 +705,7 @@
 
     function hideCalendarModal() {
         $calendarModal.addClass('hide');
-        setTimeout(() => {
-            $calendarModal.removeClass('fade show hide').css('display', 'none');
-        }, 400);
+        $calendarModal.removeClass('fade show hide').css('display', 'none');
     }
 
     function showCalendarModal() {

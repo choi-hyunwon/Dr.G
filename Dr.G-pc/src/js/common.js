@@ -116,32 +116,30 @@ front.common = (function () {
         });
 
         /* 알림 팝업 */
-        var noticePopup = $('._noticePopup');
-        var noticePopupOpen = $('._noticePopupOpen');
-        var noticePopupClose = $('._noticePopupClose');
-        var noticePopupHeader = $('._popup-header');
+        var $alertPopup = $('._noticePopup');
+        var $btnClose = $('._noticePopupClose');
 
-        noticePopupOpen.on('click', function () {
-            noticePopup.removeClass('hide').addClass('show');
-            $('body').addClass('scrOff');
+        $btnClose.on('click',function () {
+            $alertPopup.removeClass('show');
+        })
+
+        $(window).scroll(function () {
+            $alertPopup.removeClass('show');
         });
 
-        noticePopupClose.on('click', function () {
-            noticePopup.removeClass('show').addClass('hide');
-            $('body').removeClass('scrOff');
-        });
-
-        var lastScroll = 0;
-
-        noticePopupHeader.find('.popup-content').scroll(function () {
-            var st = $(this).scrollTop();
-
-            if (st < 5) {
-                noticePopupHeader.removeClass('header-white');
+        $('html').click(function (e) {
+            console.log(e.target)
+            if($(e.target).is('._btnAlert')) {
+                var $alertPopup = $('._noticePopup');
+                $alertPopup.addClass('show');
             } else {
-                noticePopupHeader.addClass('header-white');
+                if($('._noticePopup').hasClass('show')){
+                    if (!$(e.target).is('.calendar-modal')) {
+                        var $alertPopup = $('._noticePopup');
+                        $alertPopup.removeClass('show');
+                    }
+                }
             }
-            lastScroll = st;
         });
 
         /* 상단으로 이동 */

@@ -4355,67 +4355,26 @@
 /* calendar modal */
 .calendar-modal {
   display: none;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  width: 394px;
+  height: 389px;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(34, 34, 34, .5);
-  z-index: 1050;
-  overflow: hidden;
+  top: 70px;
 
   &.show {
     display: block;
-
-    .calendar-container {
-      bottom: 0;
-
-      @keyframes animateup {
-        from {
-          bottom: vw(-300);
-          opacity: 0;
-        }
-        to {
-          bottom: 0;
-          opacity: 1;
-        }
-      }
-      animation: animateup 0.5s;
-    }
   }
 
   &.hide {
     display: none;
-
-    .calendar-container {
-      bottom: 0;
-
-      @keyframes animatedown {
-        from {
-          bottom: 0;
-          opacity: 1;
-        }
-        to {
-          bottom: vw(-300);
-          opacity: 0;
-        }
-      }
-      animation: animatedown 0.5s;
-    }
   }
 
   .calendar-container {
-    position: absolute;
     width: 100%;
-    //height: vw(357);
-    //padding: vw(40) vw(29);
-    padding: vw(25) vw(10);
-    //bottom: 0;
-    bottom: vw(-300);
-    left: 0;
+    padding: 49px 20px 33px;
     background-color: #fff;
-    box-shadow: 0 vw(-6) vw(10) rgba(34, 34, 34, 0.1);
-    border-radius: vw(20) vw(20) 0 0;
+    border-radius: 20px;
+    border: 1px solid $gray-300;
 
     &.done {
       .date-picker-wrapper {
@@ -4445,10 +4404,10 @@
     .btn-close {
       position: absolute;
       display: block;
-      top: vw(22);
-      right: vw(24);
-      width: vw(20);
-      height: vw(20);
+      top: 20px;
+      right: 20px;
+      width: 24px;
+      height: 24px;
       z-index: 2;
     }
 
@@ -4522,10 +4481,12 @@
 
               .prev {
                 background-image: url(../img/AI/ico-btn-prev.svg);
+                transform: translateX(13px);
               }
 
               .next {
                 background-image: url(../img/AI/ico-btn-next.svg);
+                transform: translateX(-13px);
               }
             }
 
@@ -4546,13 +4507,11 @@
           }
 
           td, th {
-            //width: vw(48);
-            padding: 0 vw(9);
+            padding: 11px 9px 1px;
             height: vw(42);
 
             .day {
               width: vw(30);
-              //height: vw(30);
               font-size: vw(13);
               line-height: vw(30);
               text-align: center;
