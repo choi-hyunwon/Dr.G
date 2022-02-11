@@ -15,7 +15,7 @@
 
 .ico-alert {
   position: relative;
-  @include background-img($width: 21, $height: 21, $category: 'common', $img: 'ico-alert.svg');
+  @include background-img($width: 20, $height: 21, $category: 'common', $img: 'ico-alert.svg');
 
   &.white {
     background-image: url(../img/common/ico-alert-white.svg);
