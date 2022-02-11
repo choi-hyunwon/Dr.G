@@ -1,75 +1,8 @@
 /*
 |--------------------------------------------------------------------|
- v.0.1 주연 : 최초 작업 -- 2022.01.24
+ v.0.1 주연 : 최초 작업 -- 2022.02.11
 |--------------------------------------------------------------------|
 */
-
-/* 메인 배너 */
-.main-banner {
-  position: relative;
-  width: 100%;
-  height: vw(80);
-
-  .img {
-    width: 100%;
-    height: 100%;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .swiper-pagination {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: vw(20);
-    //line-height: vw(20);
-    padding: 0 vw(8);
-    color: #fff;
-    background: rgba(34, 34, 34, 0.4);
-    border-radius: vw(100);
-    right: vw(12);
-    top: vw(48);
-    z-index: 2;
-  }
-
-  .swiper-pagination {
-    .swiper-counter {
-      display: flex;
-      align-items: center;
-      height: vw(20);
-      color: rgba(255, 255, 255, .5);
-      font-size: vw(12);
-      margin-right: vw(6);
-
-      .total, .count {
-        display: inline-block;
-        font-family: $poppins-medium;
-        font-weight: 500;
-        font-size: vw(12);
-        //line-height: vw(12);
-      }
-
-      .count {
-        color: #FFFFFF;
-      }
-    }
-
-    .btn-more {
-      display: inline-block;
-      width: vw(8);
-      height: vw(8);
-
-      .ico-plus {
-        @include background-img($width: 8, $height: 8, $category: 'main', $img: 'ico-plus.svg');
-        display: block;
-      }
-    }
-  }
-}
-
 /* 메인 컨텐츠 */
 .main-wrap {
   /* 공통 */
@@ -84,11 +17,11 @@
       padding: 0 vw(20);
       height: vw(44);
       line-height: vw(44);
-      background: #287EFF;
+      background: #287eff;
       border-radius: vw(100);
       font-weight: bold;
       font-size: vw(13);
-      color: #FFFFFF;
+      color: #ffffff;
       letter-spacing: 0;
 
       .ico-arrow {
@@ -138,7 +71,7 @@
         font-size: vw(16);
         line-height: vw(24);
         letter-spacing: -0.005em;
-        color: #FFFFFF;
+        color: #ffffff;
         margin-bottom: vw(24);
       }
     }
@@ -159,7 +92,7 @@
   .analysis {
     padding: vw(76) vw(26);
     width: 100%;
-    background-color: #F3FCFF;
+    background-color: #f3fcff;
 
     .heading {
       font-weight: bold;
@@ -183,7 +116,7 @@
       margin-bottom: vw(60);
 
       .btn-main {
-        background-color: #00D4D4;
+        background-color: #00d4d4;
       }
     }
 
@@ -213,7 +146,7 @@
   .mentoring {
     padding: vw(76) 0 vw(111);
     width: 100%;
-    background-color: #34A6F9;
+    background-color: #34a6f9;
 
     .heading {
       font-weight: bold;
@@ -240,7 +173,7 @@
       padding: 0 vw(26);
 
       .btn-main {
-        background-color: #0561EB;
+        background-color: #0561eb;
       }
     }
 
@@ -377,18 +310,33 @@
 
   /* 스토리 */
   .story {
+    .story-heading-img-wrap {
+      display: flex;
+      overflow: hidden;
+    }
+
     .story-heading-img {
+      width: 50%;
+      height: 666px;
+
       .flag {
-        .title {
-          letter-spacing: -0.02em;
-        }
+        width: 621px;
+        left: auto;
+        right: 0;
+        border-radius: 50px 0 0 0;
+        margin: 0;
+      }
 
-        .category {
-          letter-spacing: -0.02em;
-        }
+      .flag-content {
+        position: absolute;
+        width: 621px;
+        right: 0;
+        bottom: 0;
 
-        .tag {
-          letter-spacing: -0.02em;
+
+        .flag-inner {
+          min-width: auto;
+          padding-left: 60px;
         }
       }
     }
@@ -416,7 +364,7 @@
       margin-bottom: vw(23);
 
       .ico-bulb {
-        @include background-img ($width: 16, $height: 24, $category: 'main', $img: 'ico-bulb.svg');
+        @include background-img($width: 16, $height: 24, $category: 'main', $img: 'ico-bulb.svg');
         margin-right: vw(6);
       }
 
@@ -465,7 +413,7 @@
         }
 
         &:nth-child(1) {
-          background-color: #3BBEA8;
+          background-color: #3bbea8;
 
           .title {
             margin-bottom: vw(15);
@@ -479,7 +427,7 @@
         }
 
         &:nth-child(2) {
-          background-color: #FADB50;
+          background-color: #fadb50;
 
           .title {
             margin-bottom: vw(23);
@@ -493,7 +441,7 @@
         }
 
         &:nth-child(3) {
-          background-color: #838EF6;
+          background-color: #838ef6;
 
           .img {
             img {
@@ -503,7 +451,7 @@
         }
 
         &:nth-child(4) {
-          background-color: #54B9F1;
+          background-color: #54b9f1;
 
           .title {
             margin-bottom: vw(10);

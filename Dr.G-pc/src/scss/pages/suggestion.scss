@@ -78,6 +78,13 @@
   }
 
   .input-group {
+    .form-control {
+      height: 200px;
+
+      &.form-control-lg {
+        height: 400px;
+      }
+    }
     textarea {
       margin-bottom: 20px;
     }
@@ -310,6 +317,7 @@
         z-index: 4;
 
         .font-body-2 {
+          font-family: $poppins-semiBold;
           margin-bottom: 8px;
         }
 
@@ -536,6 +544,7 @@
             font-size: vw(13);
             vertical-align: middle;
             margin-left: vw(4);
+            color: $gray-700;
           }
 
           &.on {
@@ -598,7 +607,7 @@
     .text-btn {
       font-weight: 500;
       font-size: 16px;
-      padding-top: vw(24);
+      padding-top: 30px;
 
       a {
         color: $gray-700;

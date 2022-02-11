@@ -3,177 +3,153 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
-    <!-- s main banner -->
-    <div class="main-banner _mainBanner">
-        <div class="swiper-container _bannerSlider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="img"><img src="../../img/@temp/main/img-main-banner-1.png" alt="진정 순한 수분 토너"></div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="img"><img src="../../img/@temp/main/img-main-banner-2.png" alt="피부 건강 나눔 챌린지"></div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="img"><img src="../../img/@temp/main/img-main-banner-3.png" alt="더모이스처 배리어.D"></div>
-                </div>
-            </div>
-            <div class="swiper-pagination">
-                <span class="swiper-counter _bannerSliderNum"></span>
-                <a class="btn-more _bannerModalOpen" href="#"><i class="icon ico-plus"></i></a>
-            </div>
-        </div>
-    </div>
-    <!-- e main banner -->
+    <!-- s header -->
+    @@include('../../html/include/common/header-main.html')
+    <!-- e header -->
 
     <!-- s contents -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="main-wrap">
-            <!-- s header -->
-            @@include('../../html/include/common/header-main.html')
-            <!-- e header -->
-
             <!-- s visual -->
-            <div class="visual">
-                <div class="editor-area">
-                    <img src="../../img/@temp/main/bg-editor-area.png" alt="요즘 피부 어떠세요?">
-                </div>
-                <div class="heading-area">
-                    <div class="heading"><span class="color-yellow">요즘 피부</span> 어떠세요?</div>
-                    <div class="heading-sub">Ai로 빠르고 정확하게 확인하세요.</div>
-                    <div class="btn-wrap"><a href="#" class="btn-main"><span>Ai 피부분석 시작</span><span class="icon ico-arrow"></span></a></div>
-                </div>
-                <div class="chatbot-area">
-                    <div id="chatbot" class="btn-chatbot">
-                        <img src="../../img/common/btn-chatbot.png" alt="chatbot">
-                        <span class="tip">
-                            <em class="font-bold">푸석푸석 민감할 땐</em> <em class="font-bold color-primary">레드 블래미쉬 시카 수딩 크림</em><br/>
-                            <em class="color-light-gray">멘토G가 알려드려요!</em>
-                            <a href="#" class="btn-chatbot-close _chatClose"><span class="icon ico-chatbot-close"></span></a>
-                        </span>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="visual">-->
+<!--                <div class="editor-area">-->
+<!--                    <img src="../../img/@temp/main/bg-editor-area.png" alt="요즘 피부 어떠세요?">-->
+<!--                </div>-->
+<!--                <div class="heading-area">-->
+<!--                    <div class="heading"><span class="color-yellow">요즘 피부</span> 어떠세요?</div>-->
+<!--                    <div class="heading-sub">Ai로 빠르고 정확하게 확인하세요.</div>-->
+<!--                    <div class="btn-wrap"><a href="#" class="btn-main"><span>Ai 피부분석 시작</span><span class="icon ico-arrow"></span></a></div>-->
+<!--                </div>-->
+<!--            </div>-->
             <!-- s visual -->
 
             <!-- s 성분분석 -->
-            <div class="analysis">
-                <div class="heading">다 좋다는 화장품,<br/>내 피부에도 좋을까요?</div>
-                <div class="heading-sub">간편하게 내 피부와 매칭률을 확인하세요.</div>
-                <div class="btn-wrap"><a href="#" class="btn-main"><span>1:1 성분분석 시작</span><span class="icon ico-arrow"></span></a></div>
-                <div class="animation-box"><img src="../../img/@temp/main/img-analysis-1.png" alt="1:1 성분분석"></div>
-                <div class="animation-desc">성분을 스캔 중 입니다.<br/>잠시만 기다려주세요!</div>
-            </div>
+<!--            <div class="analysis">-->
+<!--                <div class="heading">다 좋다는 화장품,<br/>내 피부에도 좋을까요?</div>-->
+<!--                <div class="heading-sub">간편하게 내 피부와 매칭률을 확인하세요.</div>-->
+<!--                <div class="btn-wrap"><a href="#" class="btn-main"><span>1:1 성분분석 시작</span><span class="icon ico-arrow"></span></a></div>-->
+<!--                <div class="animation-box"><img src="../../img/@temp/main/img-analysis-1.png" alt="1:1 성분분석"></div>-->
+<!--                <div class="animation-desc">성분을 스캔 중 입니다.<br/>잠시만 기다려주세요!</div>-->
+<!--            </div>-->
             <!-- s 성분분석 -->
 
             <!-- s 스킨멘토링 -->
-            <div class="mentoring">
-                <div class="heading"><span class="color-yellow">피부 고민</span>이 생겼나요?</div>
-                <div class="heading-sub">스킨 멘토와 상담을 시작해보세요.</div>
-                <div class="btn-wrap"><a href="#" class="btn-main"><span>1:1 스킨멘토링 시작</span><span class="icon ico-arrow"></span></a></div>
-                <div class="animation-box"><img src="../../img/@temp/main/img-mentoring-1.png" alt="1:1 스킨멘토링"></div>
-            </div>
+<!--            <div class="mentoring">-->
+<!--                <div class="heading"><span class="color-yellow">피부 고민</span>이 생겼나요?</div>-->
+<!--                <div class="heading-sub">스킨 멘토와 상담을 시작해보세요.</div>-->
+<!--                <div class="btn-wrap"><a href="#" class="btn-main"><span>1:1 스킨멘토링 시작</span><span class="icon ico-arrow"></span></a></div>-->
+<!--                <div class="animation-box"><img src="../../img/@temp/main/img-mentoring-1.png" alt="1:1 스킨멘토링"></div>-->
+<!--            </div>-->
             <!-- s 스킨멘토링 -->
 
             <!-- s 고객제안 -->
-            <div class="customer-suggestion">
-                <div class="suggestion-wrap">
-                    <div class="swiper suggestion-slider _suggestionSlider">
-                        <div class="swiper-pagination _suggestionPagination"></div>
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="bg-gradient" style="background: linear-gradient(205.11deg, #B0D3FF 5.14%, rgba(176, 211, 255, 0) 59.22%);"></div>
-                                <div class="smile-motif">
-                                    <svg width="319" height="196" viewBox="0 0 319 196" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M324 0H396.062C395.623 52.1333 374.566 101.982 337.476 138.692C300.385 175.402 250.266 196 198.031 196C145.796 196 95.6767 175.402 58.5864 138.692C21.496 101.982 0.438743 52.1333 0 0H72C72.2792 33.2483 85.6771 65.0398 109.276 88.4518C132.876 111.864 164.765 125 198 125C231.235 125 263.124 111.864 286.724 88.4518C310.323 65.0398 323.721 33.2483 324 0Z" fill="#054390"/>
-                                    </svg>
-                                </div>
-                                <div class="text-box">
-                                    <div class="p-title">흡수 빠른<br/>프로 비타민 D 함유</div>
-                                    <div class="p-name">더모이스처 베리어.D</div>
-                                </div>
-                                <div class="btn-wrap"><a href="#" class="btn-main" style="background-color: #EF620A;"><span>SHOP</span><span class="icon ico-arrow"></span></a></div>
-                                <div class="img-box">
-                                    <div class="img"><img src="../../img/@temp/sample-product-2.png" alt="레드 블레미쉬 수딩 액티브 에센스">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="bg-gradient" style="background: linear-gradient(205.11deg, #9AE3BC 5.14%, rgba(150, 216, 181, 0) 59.22%, rgba(154, 227, 188, 0) 59.22%);;"></div>
-                                <div class="smile-motif">
-                                    <svg width="319" height="196" viewBox="0 0 319 196" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M324 0H396.062C395.623 52.1333 374.566 101.982 337.476 138.692C300.385 175.402 250.266 196 198.031 196C145.796 196 95.6767 175.402 58.5864 138.692C21.496 101.982 0.438743 52.1333 0 0H72C72.2792 33.2483 85.6771 65.0398 109.276 88.4518C132.876 111.864 164.765 125 198 125C231.235 125 263.124 111.864 286.724 88.4518C310.323 65.0398 323.721 33.2483 324 0Z" fill="#008257"/>
-                                    </svg>
-                                </div>
-                                <div class="text-box">
-                                    <div class="p-title">진정 강한 병풀 바이옴<br/>시카 수딩 크림</div>
-                                    <div class="p-name">레드 블레미쉬 시카 수딩 크림</div>
-                                </div>
-                                <div class="btn-wrap"><a href="#" class="btn-main" style="background-color: #FF4757;"><span>SHOP</span><span class="icon ico-arrow"></span></a></div>
-                                <div class="img-box">
-                                    <div class="img"><img src="../../img/@temp/sample-product-2.png" alt="레드 블레미쉬 시카 수딩 크림">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="bg-gradient" style="background: linear-gradient(205.11deg, #F8CCBF 5.14%, rgba(248, 204, 191, 0) 59.22%);"></div>
-                                <div class="smile-motif">
-                                    <svg width="319" height="196" viewBox="0 0 319 196" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M324 0H396.062C395.623 52.1333 374.566 101.982 337.476 138.692C300.385 175.402 250.266 196 198.031 196C145.796 196 95.6767 175.402 58.5864 138.692C21.496 101.982 0.438743 52.1333 0 0H72C72.2792 33.2483 85.6771 65.0398 109.276 88.4518C132.876 111.864 164.765 125 198 125C231.235 125 263.124 111.864 286.724 88.4518C310.323 65.0398 323.721 33.2483 324 0Z" fill="#F15A00"/>
-                                    </svg>
-                                </div>
-                                <div class="text-box">
-                                    <div class="p-title">잡티 잡는<br/>파워 비타민C 앰플</div>
-                                    <div class="p-name">비타슈티컬 15 플러스 앰플</div>
-                                </div>
-                                <div class="btn-wrap"><a href="#" class="btn-main" style="background-color: #F5E618; color: #444444;"><span>SHOP</span><span class="icon ico-arrow ico-arrow-black"></span></a></div>
-                                <div class="img-box">
-                                    <div class="img"><img src="../../img/@temp/sample-product-2.png" alt="레드 블레미쉬 시카 수딩 크림">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <style>
-                .main-wrap .customer-suggestion .suggestion-wrap .suggestion-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:nth-child(1) {
-                    color: #054390;
-                }
+<!--            <div class="customer-suggestion">-->
+<!--                <div class="suggestion-wrap">-->
+<!--                    <div class="swiper suggestion-slider _suggestionSlider">-->
+<!--                        <div class="swiper-pagination _suggestionPagination"></div>-->
+<!--                        <div class="swiper-wrapper">-->
+<!--                            <div class="swiper-slide">-->
+<!--                                <div class="bg-gradient" style="background: linear-gradient(205.11deg, #B0D3FF 5.14%, rgba(176, 211, 255, 0) 59.22%);"></div>-->
+<!--                                <div class="smile-motif">-->
+<!--                                    <svg width="319" height="196" viewBox="0 0 319 196" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M324 0H396.062C395.623 52.1333 374.566 101.982 337.476 138.692C300.385 175.402 250.266 196 198.031 196C145.796 196 95.6767 175.402 58.5864 138.692C21.496 101.982 0.438743 52.1333 0 0H72C72.2792 33.2483 85.6771 65.0398 109.276 88.4518C132.876 111.864 164.765 125 198 125C231.235 125 263.124 111.864 286.724 88.4518C310.323 65.0398 323.721 33.2483 324 0Z" fill="#054390"/>-->
+<!--                                    </svg>-->
+<!--                                </div>-->
+<!--                                <div class="text-box">-->
+<!--                                    <div class="p-title">흡수 빠른<br/>프로 비타민 D 함유</div>-->
+<!--                                    <div class="p-name">더모이스처 베리어.D</div>-->
+<!--                                </div>-->
+<!--                                <div class="btn-wrap"><a href="#" class="btn-main" style="background-color: #EF620A;"><span>SHOP</span><span class="icon ico-arrow"></span></a></div>-->
+<!--                                <div class="img-box">-->
+<!--                                    <div class="img"><img src="../../img/@temp/sample-product-2.png" alt="레드 블레미쉬 수딩 액티브 에센스">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="swiper-slide">-->
+<!--                                <div class="bg-gradient" style="background: linear-gradient(205.11deg, #9AE3BC 5.14%, rgba(150, 216, 181, 0) 59.22%, rgba(154, 227, 188, 0) 59.22%);;"></div>-->
+<!--                                <div class="smile-motif">-->
+<!--                                    <svg width="319" height="196" viewBox="0 0 319 196" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M324 0H396.062C395.623 52.1333 374.566 101.982 337.476 138.692C300.385 175.402 250.266 196 198.031 196C145.796 196 95.6767 175.402 58.5864 138.692C21.496 101.982 0.438743 52.1333 0 0H72C72.2792 33.2483 85.6771 65.0398 109.276 88.4518C132.876 111.864 164.765 125 198 125C231.235 125 263.124 111.864 286.724 88.4518C310.323 65.0398 323.721 33.2483 324 0Z" fill="#008257"/>-->
+<!--                                    </svg>-->
+<!--                                </div>-->
+<!--                                <div class="text-box">-->
+<!--                                    <div class="p-title">진정 강한 병풀 바이옴<br/>시카 수딩 크림</div>-->
+<!--                                    <div class="p-name">레드 블레미쉬 시카 수딩 크림</div>-->
+<!--                                </div>-->
+<!--                                <div class="btn-wrap"><a href="#" class="btn-main" style="background-color: #FF4757;"><span>SHOP</span><span class="icon ico-arrow"></span></a></div>-->
+<!--                                <div class="img-box">-->
+<!--                                    <div class="img"><img src="../../img/@temp/sample-product-2.png" alt="레드 블레미쉬 시카 수딩 크림">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="swiper-slide">-->
+<!--                                <div class="bg-gradient" style="background: linear-gradient(205.11deg, #F8CCBF 5.14%, rgba(248, 204, 191, 0) 59.22%);"></div>-->
+<!--                                <div class="smile-motif">-->
+<!--                                    <svg width="319" height="196" viewBox="0 0 319 196" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M324 0H396.062C395.623 52.1333 374.566 101.982 337.476 138.692C300.385 175.402 250.266 196 198.031 196C145.796 196 95.6767 175.402 58.5864 138.692C21.496 101.982 0.438743 52.1333 0 0H72C72.2792 33.2483 85.6771 65.0398 109.276 88.4518C132.876 111.864 164.765 125 198 125C231.235 125 263.124 111.864 286.724 88.4518C310.323 65.0398 323.721 33.2483 324 0Z" fill="#F15A00"/>-->
+<!--                                    </svg>-->
+<!--                                </div>-->
+<!--                                <div class="text-box">-->
+<!--                                    <div class="p-title">잡티 잡는<br/>파워 비타민C 앰플</div>-->
+<!--                                    <div class="p-name">비타슈티컬 15 플러스 앰플</div>-->
+<!--                                </div>-->
+<!--                                <div class="btn-wrap"><a href="#" class="btn-main" style="background-color: #F5E618; color: #444444;"><span>SHOP</span><span class="icon ico-arrow ico-arrow-black"></span></a></div>-->
+<!--                                <div class="img-box">-->
+<!--                                    <div class="img"><img src="../../img/@temp/sample-product-2.png" alt="레드 블레미쉬 시카 수딩 크림">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <style>-->
+<!--                .main-wrap .customer-suggestion .suggestion-wrap .suggestion-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:nth-child(1) {-->
+<!--                    color: #054390;-->
+<!--                }-->
 
-                .main-wrap .customer-suggestion .suggestion-wrap .suggestion-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:nth-child(2) {
-                    color: #008257;
-                }
+<!--                .main-wrap .customer-suggestion .suggestion-wrap .suggestion-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:nth-child(2) {-->
+<!--                    color: #008257;-->
+<!--                }-->
 
-                .main-wrap .customer-suggestion .suggestion-wrap .suggestion-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:nth-child(3) {
-                    color: #F15A00;
-                }
-            </style>
+<!--                .main-wrap .customer-suggestion .suggestion-wrap .suggestion-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:nth-child(3) {-->
+<!--                    color: #F15A00;-->
+<!--                }-->
+<!--            </style>-->
             <!-- s 고객제안 -->
 
             <!-- s 닥터지스토리 -->
             <div class="story">
-                <div class="story-heading-img" style="background-image: url(../../img/@temp/story-sample-1.png)">
-                    <div class="flag drg">
-                        <div class="title">
-                            찐팬이<br/>
-                            닥터지에게<br/>
-                            주는 의미
+                <div class="story-heading-img-wrap">
+                    <div class="story-heading-img" style="background-image: url(../../img/main/story-sample-1.png)">
+                        <div class="flag drg"> <!-- 타이틀 2줄 이상일 경우 / line-2 클래스 추가 -->
+                            <div class="smile"></div>
                         </div>
-                        <div class="category">Dr.G’s CUT</div>
-                        <div class="tag">#닥터지 #찐팬서포터즈</div>
-                        <div class="smile"></div>
+                        <div class="flag-content drg"> <!-- 타이틀 2줄 이상일 경우 / line-2 클래스 추가 -->
+                            <div class="flag-inner">
+                                <div class="category">Dr.G’s CUT</div>
+                                <div class="title">
+                                    <span>찐팬이 닥터지에게 주는 의미</span>
+                                    <span class="hidden _title">찐팬이 닥터지에게 주는 의미</span>
+                                </div>
+                                <div class="tag">#닥터지 #찐팬서포터즈</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="story-heading-img" style="background-image: url(../../img/@temp/story-sample-2.png)">
-                    <div class="flag user">
-                        <div class="title">
-                            편견을 깨는<br/>
-                            보통 사람들
+                    <div class="story-heading-img" style="background-image: url(../../img/main/story-sample-2.png)">
+                        <div class="flag user"> <!-- 타이틀 2줄 이상일 경우 / line-2 클래스 추가 -->
+                            <div class="smile"></div>
                         </div>
-                        <div class="category">User’s CUT</div>
-                        <div class="tag">#스킨케어 #레시피<br/>
-                            #자기관리</div>
-                        <div class="smile"></div>
+                        <div class="flag-content user"> <!-- 타이틀 2줄 이상일 경우 / line-2 클래스 추가 -->
+                            <div class="flag-inner">
+                                <div class="category">User’s CUT</div>
+                                <div class="title">
+                                    <span>찐팬이 닥터지에게 주는 의미 길어지면 두 줄처리</span>
+                                    <span class="hidden _title">찐팬이 닥터지에게 주는 의미 길어지면 두 줄처리</span>
+                                </div>
+                                <div class="tag">#닥터지 #찐팬서포터즈</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="btn-wrap"><a href="#" class="btn-main"><span>인사이드 닥터지 더보기</span><span class="icon ico-arrow ico-arrow-black"></span></a></div>
@@ -181,37 +157,37 @@
             <!-- s 닥터지스토리 -->
 
             <!-- s 제안 -->
-            <div class="suggestion">
-                <div class="heading"><i class="icon ico-bulb"></i><span>닥터지에게 제안해주세요</span></div>
-                <div class="suggestion-list _suggestionList">
-                    <ul class="list">
-                        <li class="item">
-                            <a href="#">
-                                <span class="title">이 제품을<br/>만들어주세요!</span>
-                                <span class="img"><img src="../../img/main/ico-suggestion-1.svg" alt="이 제품을 만들어주세요!"></span>
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a href="#">
-                                <span class="title">이런 서비스는<br/>없나요?</span>
-                                <span class="img"><img src="../../img/main/ico-suggestion-2.svg" alt="이런 서비스는 없나요?"></span>
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a href="#">
-                                <span class="title">이런 패키지는<br/>어떨까요?</span>
-                                <span class="img"><img src="../../img/main/ico-suggestion-3.svg" alt="이런 패키지는 어떨까요?"></span>
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a href="#">
-                                <span class="title">이런건 좀<br/>바꿔주세요.</span>
-                                <span class="img"><img src="../../img/main/ico-suggestion-4.svg" alt="이 제품을 만들어주세요!"></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<!--            <div class="suggestion">-->
+<!--                <div class="heading"><i class="icon ico-bulb"></i><span>닥터지에게 제안해주세요</span></div>-->
+<!--                <div class="suggestion-list _suggestionList">-->
+<!--                    <ul class="list">-->
+<!--                        <li class="item">-->
+<!--                            <a href="#">-->
+<!--                                <span class="title">이 제품을<br/>만들어주세요!</span>-->
+<!--                                <span class="img"><img src="../../img/main/ico-suggestion-1.svg" alt="이 제품을 만들어주세요!"></span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="item">-->
+<!--                            <a href="#">-->
+<!--                                <span class="title">이런 서비스는<br/>없나요?</span>-->
+<!--                                <span class="img"><img src="../../img/main/ico-suggestion-2.svg" alt="이런 서비스는 없나요?"></span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="item">-->
+<!--                            <a href="#">-->
+<!--                                <span class="title">이런 패키지는<br/>어떨까요?</span>-->
+<!--                                <span class="img"><img src="../../img/main/ico-suggestion-3.svg" alt="이런 패키지는 어떨까요?"></span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="item">-->
+<!--                            <a href="#">-->
+<!--                                <span class="title">이런건 좀<br/>바꿔주세요.</span>-->
+<!--                                <span class="img"><img src="../../img/main/ico-suggestion-4.svg" alt="이 제품을 만들어주세요!"></span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
             <!-- s 제안 -->
         </div>
     </div>
@@ -221,164 +197,6 @@
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
-<!-- s float bottom -->
-<div class="float-bottom _floatBottom">
-    <div class="more-box">
-        <div class="more row">
-            <a href="#" class="ai-btn col-6"><i class="icon ico-ai"></i><span>피부분석</span></a>
-            <a href="#" class="shop-btn col-6"><i class="icon ico-shop"></i><i class="icon ico-shop2"></i><span>쇼핑몰</span></a>
-        </div>
-        <a href="#" class="round _openMenu"><img src="../../img/common/logo-white.svg" alt="닥터지 로고"></a>
-        <div class="menu-drg-img"><img src="../../img/common/img-menu-drg.png" alt=""></div>
-        <div class="menu-drg-txt"><span class="txt">환절기 피부고민!<br/>멘토G에게 상담하세요.</span></div>
-        <div class="menu-box">
-            <div class="smile-graph">
-                <div class="line"></div>
-            </div>
-        </div>
-        <div class="menu-link-box">
-            <div class="menu-link-inner">
-                <div class="item item-1">
-                    <a class="_gnbShow" href="#">
-                        <i class="icon ico-menu-1"></i>
-                        <span>전체메뉴</span>
-                    </a>
-                </div>
-                <div class="item item-2">
-                    <a href="#">
-                        <i class="icon ico-menu-2"></i>
-                        <span>마이페이지</span>
-                    </a>
-                </div>
-                <div class="item item-3">
-                    <a href="#">
-                        <i class="icon ico-menu-3"></i>
-                        <span>고객제안</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="page-dim" style="display: none"></div>
-<!-- e float bottom -->
-
-<!-- s 전체 메뉴 팝업 -->
-<div class="modal gnb _gnb" tabindex="-1" id="gnb" aria-labelledby="modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="gnb-content">
-            <div class="gnb-header">
-                <h2 class="logo"><a href="#">Dr.G</a></h2>
-                <a href="#" class="btn-close-black" data-dismiss="modal" aria-label="Close"><i class="icon ico-close"></i></a>
-            </div>
-            <div class="gnb-body" id="menu">
-                <ul>
-                    <li><a href="#"><i class="icon ico-gnb-1"></i>Ai 피부분석</a>
-                        <ul>
-                            <li><a href="#">AI 피부분석 시작하기</a></li>
-                            <li><a href="#">AI 피부분석이란?</a></li>
-                            <li><a href="#">나의 피부분석 결과</a></li>
-                            <li><a href="#">나의 피부변화 리포트</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="icon ico-gnb-2"></i>1:1 스킨멘토링</a>
-                        <ul>
-                            <li><a href="#">1:1 스킨 멘토링 시작하기</a></li>
-                            <li><a href="#">1:1 스킨멘토링이란?</a></li>
-                            <li><a href="#">나의 멘토링 문의 내역</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="icon ico-gnb-3"></i>1:1 성분분석</a>
-                        <ul>
-                            <li><a href="#">1:1 성분분석 시작하기</a></li>
-                            <li><a href="#">1:1성분분석이란?</a></li>
-                            <li><a href="#">제품 등록 제안</a></li>
-                            <li><a href="#">나의 분석 내역</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="icon ico-gnb-4"></i>무료샘플신청</a>
-                        <ul>
-                            <li><a href="#">무료샘플신청하기</a></li>
-                            <li><a href="#">나의 신청 내역</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="icon ico-gnb-5"></i>닥터지스토리</a>
-                        <ul>
-                            <li><a href="#">인사이드 닥터지</a></li>
-                            <li><a href="#">Dr.Ahn 영상</a></li>
-                            <li><a href="#">스킨 리포트</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="icon ico-gnb-6"></i>브랜드 소개</a>
-                        <ul>
-                            <li><a href="#">닥터지 이야기</a></li>
-                            <li><a href="#">제조원칙</a></li>
-                            <li><a href="#">고객을 위한 서비스</a></li>
-                            <li><a href="#">사회를 위한 공헌활동</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="icon ico-gnb-7"></i>이벤트</a>
-                        <ul>
-                            <li><a href="#">진행 중 이벤트</a></li>
-                            <li><a href="#">당첨자 발표</a></li>
-                            <li><a href="#">종료된 이벤트</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-                <div class="bottom">
-                    <div class="item"><a href="#"><i class="icon ico-gnb-8"></i>고객제안</a></div>
-                    <div class="item"><a href="#"><i class="icon ico-gnb-9"></i>설정</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- e 전체 메뉴 팝업 -->
-
-<!-- s 배너 팝업 -->
-<div class="full-popup banner-popup _bannerModal">
-    <div class="popup-content">
-        <a class="btn-banner-close _bannerModalClose" href="#"><i class="icon ico-banner-close"></i></a>
-        <div class="banner-list">
-            <ul>
-                <li class="item">
-                    <a href="#">
-                        <span class="img"><img src="../../img/@temp/img-banner-1.png" alt="병풀 바이옴 수분 크림"></span>
-                        <span class="text-area">
-                            <em class="font-1">유투버도 PICK한</em>
-                            <em class="font-2">병풀 바이옴<br/>수분 크림</em>
-                            <em class="font-3">#병풀바이옴<br/>#100%비건포뮬라</em>
-                        </span>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <span class="img"><img src="../../img/@temp/img-banner-2.png" alt="병풀 바이옴 수분 크림"></span>
-                        <span class="text-area">
-                            <em class="font-1">Dr.G 스킨리포트 #2</em>
-                            <em class="font-2">수부지 인사이트</em>
-                            <em class="font-3">번들거리는 동시에 땅기는<br/>수부지피부, 아니신가요?</em>
-                        </span>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <span class="img"><img src="../../img/@temp/img-banner-3.png" alt="병풀 바이옴 수분 크림"></span>
-                        <span class="text-area">
-                            <em class="font-1">Dr.G X 한림화상재단</em>
-                            <em class="font-2">피부 건강<br/>나눔 챌린지</em>
-                            <em class="font-3">피부 건강을 확인하고<br/>기부에 동참해보세요!</em>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- e 배너 팝업 -->
-
-@@include('../../html/include/common/notice.html')
 @@include('./mainScript.html')
 </body>
 </html>
