@@ -116,24 +116,6 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_서브메인'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_서브메인2',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_서브메인2'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_component',
-        //     category: 'AI',
-        //     page: 'AI피부분석 component'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_회차별+계절별',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_회차별+계절별'
-        // },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_서브메인_OS+',
@@ -242,18 +224,18 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_결과'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_결과_솔루션',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_결과_솔루션'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'Ai피부분석_결과_추천',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_결과_추천'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_결과_저장_공유하기',
+            category: 'AI',
+            page: 'Ai피부분석_결과_저장_공유하기'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_결과_저장_공유하기2',
+            category: 'AI',
+            page: 'Ai피부분석_결과_저장_공유하기2'
+        },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_피부변화리포트',

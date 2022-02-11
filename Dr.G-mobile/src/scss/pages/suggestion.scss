@@ -1,7 +1,8 @@
 /*공통*/
-.select-popup{
+.select-popup {
   margin-bottom: vw(8);
-  .btn-select{
+
+  .btn-select {
     width: 100%;
     height: vw(60);
     line-height: vw(58);
@@ -15,25 +16,30 @@
     display: inline-block;
     background: $gray-fff url(../img/common/ico-select-disabled.svg) right vw(20) center/vw(20) vw(20) no-repeat;
   }
-  .toast-content{
-    padding: vw(24)!important;
-    ul{
-      li{
+
+  .toast-content {
+    padding: vw(24) !important;
+
+    ul {
+      li {
         margin-bottom: vw(12);
 
-        &:last-of-type{
+        &:last-of-type {
           margin-bottom: 0;
         }
-        a{
+
+        a {
           display: block;
           line-height: vw(40);
           letter-spacing: 0;
         }
-        &.active{
+
+        &.active {
           background: url("../img/common/check-primary.png") no-repeat right center;
           background-size: vw(24) vw(24);
           display: block;
-          a{
+
+          a {
             color: $primary;
             font-weight: 700;
           }
@@ -53,68 +59,86 @@
 }
 
 
-
 /*의견남기기*/
 .opinion {
   background-color: $gray-200;
   padding: vw(48) vw(24) vw(76);
 }
-.section-input{
+
+.section-input {
   letter-spacing: 0;
   margin-bottom: vw(48);
-  input{
+
+  input {
     margin-bottom: vw(8);
   }
-  .input-group{
-    textarea{
+
+  .input-group {
+    textarea {
       margin-bottom: vw(12);
     }
   }
 }
-.section-privacy{
+
+.section-privacy {
   margin-bottom: vw(48);
-  .font-h5{
+
+  .font-h5 {
     color: $gray-800;
     margin-bottom: vw(8);
     font-weight: 700;
   }
-  .font-body-1{
+
+  .font-body-1 {
     color: $gray-700;
     margin-bottom: vw(32);
   }
-  .radio-box{
+
+  .radio-box {
     margin-bottom: vw(24);
-    .custom-radio{
+
+    .custom-radio {
       margin-right: vw(24);
     }
   }
-  .input-box{
-    input[type=password]{
+
+  .input-box {
+    input[type=password] {
       margin-bottom: vw(32);
     }
-    input[type=text]{
+
+    input[type=text] {
       margin-bottom: vw(8);
     }
   }
-  .custom-checkbox{
+
+  .custom-checkbox {
     display: block;
     margin-bottom: vw(6);
-    label{
-      .collection{
+
+    label {
+      .collection {
         color: $gray-600;
         font-size: vw(12);
       }
+
+      span {
+        color: $gray-800;
+      }
     }
-    &:last-of-type{
+
+    &:last-of-type {
       margin-bottom: 0;
     }
-    a{
+
+    a {
       font-weight: 500;
       text-decoration: underline;
     }
 
   }
-  .desc{
+
+  .desc {
     font-size: vw(12);
     line-height: vw(16);
     letter-spacing: vw(-0.5);
@@ -122,7 +146,8 @@
     padding-top: vw(16);
   }
 }
-.btn-wrap{
+
+.btn-wrap {
   text-align: center;
 }
 
@@ -138,6 +163,14 @@
 
     .font-h6 {
       color: $gray-700;
+    }
+  }
+
+  .tab {
+    li {
+      a {
+        font-family: $font;
+      }
     }
   }
 
@@ -278,6 +311,10 @@
 
         .font-body-1 {
           width: vw(152);
+
+          .color-yellow {
+            font-weight: bold;
+          }
         }
       }
 
@@ -313,6 +350,7 @@
         width: 100%;
         height: 100%;
       }
+
       //@include background-img($width: 276, $height: 180, $category: 'suggestion', $img: 'img-smile-motif.svg');
     }
 
@@ -511,6 +549,7 @@
 
       .input-box {
         margin-bottom: vw(24);
+
         input {
           width: 100%;
         }
@@ -535,8 +574,9 @@
       margin-bottom: vw(24);
       color: $gray-800;
     }
+
     .btn-wrap {
-      .text-btn{
+      .text-btn {
         font-weight: 500;
         color: $gray-800;
         font-size: vw(13);
@@ -577,10 +617,12 @@
 
     .list-with-dot {
       padding-left: vw(3);
-      li{
+
+      li {
         a {
           font-weight: 500;
           text-decoration: underline;
+
           &:active, &:focus {
             font-weight: 500;
           }

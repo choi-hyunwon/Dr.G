@@ -262,7 +262,7 @@ front.common = (function () {
     var headerDetails = function () {
         var didScroll;
         var lastScrollTop = 0;
-        var delta = 5;
+        var delta = 3;
         var headerDetail = $('.header-details');
         var headerDetailHeight = headerDetail.outerHeight();
         var stepHeading = $('.step-heading');
@@ -444,6 +444,8 @@ front.common = (function () {
 
                 if (st > lastScrollTop) {
                     // Scroll Down
+                    $('._floatBottom').removeClass('arrow-off')
+
                     if ($('.AI-wrap').find('._scrollTabWrap').length) {
                         if (st > sectionStartPos) {
                             sectionTab.show().addClass('fixed').css('top', 0 + 'px');
@@ -458,6 +460,7 @@ front.common = (function () {
                 } else {
                     // Scroll Up
                     if (st + $(window).height() < $(document).height()) {
+                        $('._floatBottom').addClass('arrow-off')
                         if ($('.AI-wrap').find('._scrollTabWrap').length) {
                             // tab
                             if (st < sectionStartPos) {
@@ -468,6 +471,7 @@ front.common = (function () {
                             }
                             // header
                             if (st < delta) {
+                                $('._floatBottom').removeClass('arrow-off')
                                 headerWhite.show().addClass('header-transparent').removeClass('scroll-down');
                             } else {
                                 headerWhite.show().removeClass('header-transparent', 'scroll-up').addClass('scroll-down');
@@ -488,6 +492,7 @@ front.common = (function () {
                             }
                         } else {
                             if (st < delta) {
+                                $('._floatBottom').removeClass('arrow-off')
                                 headerWhite.addClass('header-transparent');
                             } else {
                                 headerWhite.removeClass('header-transparent');
@@ -524,6 +529,8 @@ front.common = (function () {
 
                 if (st > lastScrollTop) {
                     // Scroll Down
+                    $('._floatBottom').removeClass('arrow-off')
+
                     if (st > mainHeaderHeight + bannerHeight) {
                         mainHeader.removeClass('scroll-up').addClass('header-transparent','scroll-down');
                         // $('._chatBotArea').addClass('full')
@@ -531,10 +538,14 @@ front.common = (function () {
                     }
                 } else {
                     // Scroll Up
+                    $('._floatBottom').addClass('arrow-off')
+
                     if (st + $(window).height() < $(document).height()) {
                         if (st < delta) {
                             mainHeader.addClass('header-transparent').removeClass('scroll-up');
                             mainHeader.removeClass('scroll-down');
+                            $('._floatBottom').removeClass('arrow-off')
+
                             // console.log('2')
                             // $('._chatBotArea').removeClass('full')
                             // $('._chatBotArea').removeClass('no-banner')

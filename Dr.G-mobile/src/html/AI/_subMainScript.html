@@ -108,7 +108,7 @@
     });
 
     var howSlider = new Swiper("._howSlider", {
-        autoplay: true,
+        // autoplay: true,
         spaceBetween: 24,
         centeredSlides: true,
         effect: 'fade',
@@ -117,6 +117,21 @@
             clickable: true,
         },
     });
+
+    new Waypoint({
+        element: document.querySelector('._howSlider'),
+        handler: function () {
+            howSlider.autoplay.start();
+            countDown(100, 12, 0)
+            countUp(0, 88, 0)
+            setTimeout(function () {
+                countDown(100, 0, 1)
+                countUp(0, 100, 1)
+            }, 300)
+            console.log('how slider')
+        },
+        offset: "70%"
+    })
 
     howSlider.on('slideChange', function () {
         if(howSlider.realIndex === 0) {
@@ -128,7 +143,6 @@
             }, 300)
         } else if(howSlider.realIndex === 1) {
             animationFace.playSegments([0,100], true);
-        } else {
         }
     });
 
@@ -137,7 +151,6 @@
     $score.each(function () {
         let data = $(this).data('score');
         let numDate = 100 - Number(data);
-        // $(this).css('left', data + '%')
         $(this).siblings('.gradient').css({
             'mask-image': 'linear-gradient(to left, transparent ' + numDate + '%, black ' + numDate + '%)',
             '-webkit-mask-image': 'linear-gradient(to left, transparent ' + numDate + '%, black ' + numDate + '%)'
@@ -158,7 +171,7 @@
             if (start === to) {
                 clearInterval(countDown);
             }
-        }, 10);
+        }, 8);
     }
 
     function countUp(from, to, idx) {
@@ -170,21 +183,8 @@
             if (start === to) {
                 clearInterval(countUp);
             }
-        }, 10);
+        }, 8);
     }
-
-    new Waypoint({
-        element: document.querySelector('._howSlider'),
-        handler: function (direction) {
-            countDown(100, 12, 0)
-            countUp(0, 88, 0)
-            setTimeout(function () {
-                countDown(100, 0, 1)
-                countUp(0, 100, 1)
-            }, 300)
-        },
-        offset: "50%"
-    })
 
     setInterval(function (){
         var badge = $('._badgeTab .badge')
@@ -235,7 +235,7 @@
     });
 
     var storySlider = new Swiper("._storySlider", {
-        autoplay: true,
+        // autoplay: true,
         spaceBetween: 48,
         centeredSlides: true,
         effect: 'fade',
@@ -297,6 +297,7 @@
     new Waypoint({
         element: document.querySelector('._storySlider'),
         handler: function () {
+            storySlider.autoplay.start();
             $({ val : 0 }).animate({ val : 23 }, {
                 duration: 1000,
                 delay: 900,
@@ -309,8 +310,9 @@
                     $("._num1").text(num);
                 }
             });
+            console.log('story slider')
         },
-        offset: "50%"
+        offset: "70%"
     })
     /* ---------- e story section animation ---------- */
 
@@ -326,7 +328,7 @@
     });
 
     var whySlider = new Swiper("._whySlider", {
-        autoplay: true,
+        // autoplay: true,
         spaceBetween: 48,
         centeredSlides: true,
         effect: 'fade',
@@ -341,7 +343,6 @@
             $('._whySlider .item.item-1').addClass('ani-on');
         } else if(whySlider.realIndex === 1) {
             $('._whySlider .item.item-1').removeClass('ani-on');
-
             // animation
             animation6points.playSegments([0,160], true);
         } else {
@@ -352,7 +353,9 @@
     new Waypoint({
         element: document.querySelector('._whySlider'),
         handler: function () {
+            whySlider.autoplay.start();
             $('._whySlider .item.item-1').addClass('ani-on')
+            console.log('why slider')
         },
         offset: "70%"
     })
@@ -541,7 +544,10 @@
 
     /* ---------- s process section animation ---------- */
     var processSlider = new Swiper("._processSlider", {
-        autoplay: true,
+        // autoplay: true,
+        speed: 1000,
+        loop: true,
+        loopedSlides: 1,
         spaceBetween: 48,
         centeredSlides: true,
         // effect: 'fade',
@@ -549,6 +555,23 @@
             el: "._processSlider + ._sliderPagination",
             clickable: true,
         },
+    });
+
+    new Waypoint({
+        element: document.querySelector('._sectionProcess'),
+        handler: function () {
+            processSlider.autoplay.start();
+            console.log('process slider')
+        },
+        offset: "50%"
+    })
+
+    processSlider.on('slideChange', function () {
+        if(processSlider.realIndex === 0) {
+            $('._progressArea').find('.step').eq(0).addClass('on').siblings().removeClass('on');
+        } else {
+            $('._progressArea').find('.step').eq(1).addClass('on').siblings().removeClass('on');
+        }
     });
     /* ---------- e why section animation ---------- */
 

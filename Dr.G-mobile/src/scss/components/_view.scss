@@ -144,11 +144,10 @@
 
             .ico-arrow-green-right {
               margin-left: vw(2);
+              transform: translateY(vw(-1));
             }
           }
         }
-
-
       }
 
       /*질문 title 영역*/
