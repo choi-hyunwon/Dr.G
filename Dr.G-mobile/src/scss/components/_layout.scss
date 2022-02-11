@@ -42,8 +42,23 @@
   }
 
   .btn-alert {
+    position: relative;
+
     a {
       display: block;
+    }
+
+    &.on {
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: vw(4);
+        height: vw(4);
+        top: 0;
+        border-radius: 50%;
+        background-color: $error;
+      }
     }
   }
 
@@ -94,8 +109,23 @@
   }
 
   .btn-alert {
+    position: relative;
+
     a {
       display: block;
+    }
+
+    &.on {
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: vw(4);
+        height: vw(4);
+        top: 0;
+        border-radius: 50%;
+        background-color: $error;
+      }
     }
   }
 
@@ -111,6 +141,8 @@
     }
 
     .btn-alert {
+      position: relative;
+
       a {
         i {
           background: url("../img/common/ico-alert-white.svg") no-repeat 0 0;
@@ -167,8 +199,23 @@
   }
 
   .btn-alert {
+    position: relative;
+
     a {
       display: block;
+    }
+
+    &.on {
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: vw(4);
+        height: vw(4);
+        top: 0;
+        border-radius: 50%;
+        background-color: $error;
+      }
     }
   }
 
@@ -338,7 +385,7 @@
         padding-bottom: vw(48);
 
         > ul {
-          background-color: #D5F4EF;
+          background-color: #d5f4ef;
 
           > li {
             display: flex;
@@ -490,7 +537,7 @@
                 right: vw(17);
                 top: 50%;
                 transform: translateY(-50%);
-                @include background-img ($width: 16, $height: 16, $category: 'common', $img: 'ico-gnb-arrow.svg');
+                @include background-img($width: 16, $height: 16, $category: 'common', $img: 'ico-gnb-arrow.svg');
               }
             }
           }
@@ -500,76 +547,76 @@
   }
 
   .ico-gnb-1 {
-    @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-1.svg');
+    @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-1.svg');
   }
 
   .ico-gnb-2 {
-    @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-2.svg');
+    @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-2.svg');
   }
 
   .ico-gnb-3 {
-    @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-3.svg');
+    @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-3.svg');
   }
 
   .ico-gnb-4 {
-    @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-4.svg');
+    @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-4.svg');
   }
 
   .ico-gnb-5 {
-    @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-5.svg');
+    @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-5.svg');
   }
 
   .ico-gnb-6 {
-    @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-6.svg');
+    @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-6.svg');
   }
 
   .ico-gnb-7 {
-    @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-7.svg');
+    @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-7.svg');
   }
 
   .ico-gnb-8 {
-    @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-8.svg');
+    @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-8.svg');
   }
 
   .ico-gnb-9 {
-    @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-9.svg');
+    @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-9.svg');
   }
 
   .on {
     .ico-gnb-1 {
-      @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-1-on.svg');
+      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-1-on.svg');
     }
 
     .ico-gnb-2 {
-      @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-2-on.svg');
+      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-2-on.svg');
     }
 
     .ico-gnb-3 {
-      @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-3-on.svg');
+      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-3-on.svg');
     }
 
     .ico-gnb-4 {
-      @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-4-on.svg');
+      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-4-on.svg');
     }
 
     .ico-gnb-5 {
-      @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-5-on.svg');
+      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-5-on.svg');
     }
 
     .ico-gnb-6 {
-      @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-6-on.svg');
+      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-6-on.svg');
     }
 
     .ico-gnb-7 {
-      @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-7-on.svg');
+      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-7-on.svg');
     }
 
     .ico-gnb-8 {
-      @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-8-on.svg');
+      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-8-on.svg');
     }
 
     .ico-gnb-9 {
-      @include background-img ($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-9-on.svg');
+      @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-gnb-9-on.svg');
     }
   }
 }
@@ -960,7 +1007,7 @@
       padding: vw(24) vw(24) vw(20);
 
       &.active {
-        background-color: #D5F4EF;
+        background-color: #d5f4ef;
       }
 
       .title {
@@ -978,6 +1025,7 @@
         margin-bottom: vw(12);
         //@include ellipsis(2);
       }
+
       .bottom {
         display: flex;
         justify-content: space-between;
@@ -1039,7 +1087,7 @@ body {
       line-height: vw(16);
       letter-spacing: -0.005em;
       color: $gray-800;
-      background-color: #D5F4EF;
+      background-color: #d5f4ef;
       box-shadow: 0 vw(2) vw(1) rgba(34, 34, 34, 0.04);
       border-radius: vw(12);
       white-space: nowrap;
