@@ -655,5 +655,21 @@ function showPopup() {
 }
 
 function hidePopup() {
-    $('.toast-dim').removeClass('show fade').css('display', 'none');
+    $('.toast-dim').addClass('hide');
+    setTimeout(() => {
+        $('.toast-dim').removeClass('fade show').css('display', 'none');
+    }, 400);
+}
+
+function openPopup(className) {
+    var target = `.${className}`;
+    $(target).addClass('show fade').css('display', 'block');
+}
+
+function closePopup(className) {
+    var target = `.${className}`;
+    $(target).addClass('hide');
+    setTimeout(() => {
+        $(target).removeClass('fade show').css('display', 'none');
+    }, 400);
 }

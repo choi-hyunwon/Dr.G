@@ -1067,8 +1067,7 @@ body {
   .btn-chatbot {
     position: absolute;
     right: vw(24);
-    top: calc(100vh - 66%);
-    //bottom: vw(132);
+    top: calc(100vh - 65.8%);
     width: vw(48);
     height: vw(48);
     z-index: 5;
@@ -1122,11 +1121,19 @@ body {
     &.full {
       top: 0 !important;
       height: calc(100vh - #{vw(30)}) !important;
+
+      .btn-chatbot {
+        top: calc(100vh - 22.2%);
+      }
     }
 
     &.no-banner {
       top: vw(60);
       height: calc(100vh - #{vw(98)} - #{vw(60)});
+
+      .btn-chatbot {
+        top: calc(100vh - 39.5%);
+      }
     }
   }
 

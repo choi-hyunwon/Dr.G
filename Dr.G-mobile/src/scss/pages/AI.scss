@@ -2732,8 +2732,12 @@
       background-color: $primary;
 
       .editor-area {
-        width: 100%;
-        height: vw(290);
+        position: absolute;
+
+        .video {
+          width: 100%;
+          height: auto;
+        }
 
         img {
           width: 100%;
@@ -2759,6 +2763,7 @@
         text-align: center;
         color: #fff;
         padding: 0 vw(23);
+        margin-top: vw(291);
 
         .font-h6 {
           margin-bottom: vw(20);

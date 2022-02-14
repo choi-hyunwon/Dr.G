@@ -107,10 +107,18 @@
   .visual {
     position: relative;
     width: 100%;
+    height: vw(749);
     background-color: $primary;
 
     .editor-area {
+      position: absolute;
+      top: vw(177);
       width: 100%;
+
+      .video {
+        width: 100%;
+        height: auto;
+      }
 
       img {
         width: 100%;

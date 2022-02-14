@@ -64,6 +64,12 @@ data.guide = {
         },
         {
             stateClass: 'complete',
+            url: 'modal2',
+            category: 'guide',
+            page: '레이어 팝업 3개 연결'
+        },
+        {
+            stateClass: 'complete',
             url: 'badge',
             category: 'guide',
             page: 'badge'
