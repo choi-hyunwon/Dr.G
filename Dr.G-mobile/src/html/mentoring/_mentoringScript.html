@@ -1,5 +1,26 @@
 <script>
     $(document).ready(function () {
+        // chatbot
+        var chatbot = $('#chatbot');
+
+        chatbot.draggable({
+            containment: 'parent',
+            axis: 'y',
+            drag: function () {
+                var offset = $(this).offset();
+                var yPos = offset.top;
+                console.log('y :', yPos)
+            }
+        });
+
+        chatbot.find('img').on('click',function (){
+            $(this).siblings('.tip').show();
+        })
+
+        $('._chatClose').on('click',function (){
+            chatbot.children('.tip').hide();
+        })
+
         /*step1*/
         $('.asking .badge-box .badge').on('click', function () {
         $(this).toggleClass('active')

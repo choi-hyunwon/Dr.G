@@ -1,14 +1,24 @@
 <script>
     // chatbot
-    $('#chatbot').draggable({
+    var chatbot = $('#chatbot');
+
+    chatbot.draggable({
         containment: 'parent',
         axis: 'y',
         drag: function () {
             var offset = $(this).offset();
             var yPos = offset.top;
-            console.log('y :', yPos)
+            // console.log('y :', yPos)
         }
     });
+
+    chatbot.find('img').on('click',function (){
+        $(this).siblings('.tip').show();
+    })
+
+    $('._chatClose').on('click',function (){
+        chatbot.children('.tip').hide();
+    })
 
     // bubble slider
     // https://www.jqueryscript.net/slider/3D-Cover-Flow-Style-Image-Carousel-Plugin-with-jQuery-Cloud-9-Carousel.html
@@ -128,7 +138,7 @@
                 countDown(100, 0, 1)
                 countUp(0, 100, 1)
             }, 300)
-            console.log('how slider')
+            // console.log('how slider')
         },
         offset: "70%"
     })
@@ -195,8 +205,8 @@
             var badge = $('._badgeTab .badge')
             var content = $('._badgeTabContent .content-item')
             firstStep(badge, content)
-        },1500)
-    },3000)
+        },750)
+    },1500)
 
     function firstStep(step,content) {
         step.eq(0).addClass('on');
@@ -310,7 +320,7 @@
                     $("._num1").text(num);
                 }
             });
-            console.log('story slider')
+            // console.log('story slider')
         },
         offset: "70%"
     })
@@ -327,8 +337,17 @@
         path: "../../img/@temp/6point_279x301.json"
     });
 
-    var whySlider = new Swiper("._whySlider", {
+    let iconSpecialEdit = document.querySelector('._specialEdit');
+
+    let animationSpecialEdit = bodymovin.loadAnimation({
+        container: iconSpecialEdit,
+        renderer: 'svg',
+        loop: false,
         // autoplay: true,
+        path: "../../img/AI/special_edit.json"
+    });
+
+    var whySlider = new Swiper("._whySlider", {
         spaceBetween: 48,
         centeredSlides: true,
         effect: 'fade',
@@ -340,13 +359,15 @@
 
     whySlider.on('slideChange', function () {
         if(whySlider.realIndex === 0) {
-            $('._whySlider .item.item-1').addClass('ani-on');
+            $('._whySlider .chart-info').removeClass('ani-on')
+            animationSpecialEdit.playSegments([0,120], true);
         } else if(whySlider.realIndex === 1) {
-            $('._whySlider .item.item-1').removeClass('ani-on');
+            $('._whySlider .chart-info').removeClass('ani-on')
             // animation
             animation6points.playSegments([0,160], true);
         } else {
             lineDrawing()
+            $('._whySlider .chart-info').addClass('ani-on')
         }
     });
 
@@ -354,8 +375,8 @@
         element: document.querySelector('._whySlider'),
         handler: function () {
             whySlider.autoplay.start();
-            $('._whySlider .item.item-1').addClass('ani-on')
-            console.log('why slider')
+            animationSpecialEdit.playSegments([0,120], true);
+            // console.log('why slider')
         },
         offset: "70%"
     })
@@ -561,7 +582,7 @@
         element: document.querySelector('._sectionProcess'),
         handler: function () {
             processSlider.autoplay.start();
-            console.log('process slider')
+            // console.log('process slider')
         },
         offset: "50%"
     })

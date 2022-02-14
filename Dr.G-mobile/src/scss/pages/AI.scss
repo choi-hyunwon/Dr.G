@@ -3296,50 +3296,52 @@
             &.item-1 {
               .item-img {
                 position: relative;
-                @include background-img($width: 312, $height: 269, $category: 'AI', $img: 'img-why-1.png');
+                width: vw(312);
+                height: vw(269);
+                //@include background-img($width: 312, $height: 269, $category: 'AI', $img: 'img-why-1.png');
                 margin: vw(68) auto vw(56);
 
-                .symbol {
-                  position: absolute;
-                  top: vw(200);
-                  left: vw(50);
-                  opacity: 0;
-                  @include background-img($width: 66, $height: 66, $category: 'AI', $img: 'img-Ai-symbol.svg');
-                }
-
-                .logo {
-                  position: absolute;
-                  top: vw(200);
-                  right: vw(56);
-                  opacity: 0;
-                  @include background-img($width: 58, $height: 29, $category: 'AI', $img: 'logo-white.svg');
-                }
+                //.symbol {
+                //  position: absolute;
+                //  top: vw(200);
+                //  left: vw(50);
+                //  opacity: 0;
+                //  @include background-img($width: 66, $height: 66, $category: 'AI', $img: 'img-Ai-symbol.svg');
+                //}
+                //
+                //.logo {
+                //  position: absolute;
+                //  top: vw(200);
+                //  right: vw(56);
+                //  opacity: 0;
+                //  @include background-img($width: 58, $height: 29, $category: 'AI', $img: 'logo-white.svg');
+                //}
               }
 
-              &.ani-on {
-                .item-img {
-                  .symbol {
-                    opacity: 1;
-                    top: vw(147);
-                    transition: top 1s, opacity 1s;
-                    //animation-name: fadeInAni;
-                    //animation-duration: 1s;
-                    //animation-fill-mode: forwards;
-                  }
-
-                  .logo {
-                    opacity: 1;
-                    top: vw(165);
-                    transition: top 1s, opacity 1s;
-                    transition-delay: .6s;
-
-                    //animation-name: fadeInAni;
-                    //animation-duration: 1s;
-                    //animation-delay: 1s;
-                    //animation-fill-mode: forwards;
-                  }
-                }
-              }
+              //&.ani-on {
+              //  .item-img {
+              //    .symbol {
+              //      opacity: 1;
+              //      top: vw(147);
+              //      transition: top 1s, opacity 1s;
+              //      //animation-name: fadeInAni;
+              //      //animation-duration: 1s;
+              //      //animation-fill-mode: forwards;
+              //    }
+              //
+              //    .logo {
+              //      opacity: 1;
+              //      top: vw(165);
+              //      transition: top 1s, opacity 1s;
+              //      transition-delay: .6s;
+              //
+              //      //animation-name: fadeInAni;
+              //      //animation-duration: 1s;
+              //      //animation-delay: 1s;
+              //      //animation-fill-mode: forwards;
+              //    }
+              //  }
+              //}
             }
 
             &.item-2 {
@@ -3387,8 +3389,25 @@
               height: vw(215);
               padding-left: 0;
 
+              &.ani-on {
+                .item {
+                  animation-name: fadeInAni;
+                  animation-duration: 1s;
+                  animation-fill-mode: forwards;
+
+                  &:nth-child(2) {
+                    animation-delay: .5s;
+                  }
+
+                  &:nth-child(3) {
+                    animation-delay: 1s;
+                  }
+                }
+              }
+
               .item {
                 height: vw(210);
+                opacity: 0;
               }
 
               .item.item-last {

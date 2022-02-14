@@ -1067,7 +1067,7 @@ body {
   .btn-chatbot {
     position: absolute;
     right: vw(24);
-    top: calc(100vh - 65.8%);
+    top: calc(100vh - 40.4%);
     width: vw(48);
     height: vw(48);
     z-index: 5;
@@ -1110,13 +1110,49 @@ body {
     }
   }
 
-  //.btn-chatbot {
-  //  bottom: 0;
-  //}
+  .btn-start {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: vw(60);
+    height: vw(60);
+    border-radius: 50%;
+    background: $gray-800;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: vw(12);
+    line-height: vw(16);
+    color: #FFFFFF;
+
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &.with-btn {
+    .btn-chatbot {
+      height: vw(120);
+      top: calc(100vh - 54.8%);
+
+      img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
 
   &.main {
     top: vw(141);
     height: calc(100vh - #{vw(98)} - #{vw(60)} - #{vw(80)});
+
+    .btn-chatbot {
+      top: calc(100vh - 65.8%);
+    }
 
     &.full {
       top: 0 !important;
@@ -1139,6 +1175,10 @@ body {
 
   &.full {
     height: calc(100vh - #{vw(30)});
+
+    .btn-chatbot {
+      top: calc(100vh - 32.5%);
+    }
   }
 }
 

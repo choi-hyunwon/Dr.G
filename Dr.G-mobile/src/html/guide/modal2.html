@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="guide popup">
+            <p class="title font-h2 font-bold">레이어 팝업</p>
+            <p class="font-body-2 font-bold color-red mb-5">openPopup(className) / closePopup(className)</p>
+
+            <div class="box">
+                <a href="#" class="btn" onclick="openPopup('_popup1')">팝업 1</a>
+            </div>
+            <div class="box">
+                <a href="#" class="btn" onclick="openPopup('_popup2')">팝업 2</a>
+            </div>
+            <div class="box">
+                <a href="#" class="btn" onclick="openPopup('_popup3')">팝업 3</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="toast-dim _popup1">
+    <div class="toast-popup">
+        <div class="toast-content title">
+            <div class="toast-header">
+                <p class="title">팝업 1</p>
+                <a href="#" class="icon ico-close-sm" onclick="closePopup('_popup1')"></a>
+            </div>
+            <div class="toast-body bg-doctor">
+                <p class="main-title">여러분의 <span>피부고민</span>을 들려주세요.</p>
+                <p class="desc">작성한 댓글은 다음 편 영상 제작 시<br>참고 예정입니다. </p>
+                <textarea placeholder="고민 채택 시, 마일리지 5,000점 증정!&#10닥터안이 직접 솔루션을 드립니다."></textarea>
+                <p class="caption">자세한 피부고민 상담은 1:1 스킨 멘토링을 이용해주세요!</p>
+            </div>
+            <div class="toast-footer">
+                <a href="#" class="btn btn-lg btn-secondary">댓글 작성하기</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="toast-dim _popup2">
+    <div class="toast-popup">
+        <div class="toast-content title">
+            <div class="toast-header">
+                <p class="title">팝업 2</p>
+                <a href="#" class="icon ico-close-sm" onclick="closePopup('_popup2')"></a>
+            </div>
+            <div class="toast-body bg-doctor">
+                <p class="main-title">여러분의 <span>피부고민</span>을 들려주세요.</p>
+                <p class="desc">작성한 댓글은 다음 편 영상 제작 시<br>참고 예정입니다. </p>
+                <textarea placeholder="고민 채택 시, 마일리지 5,000점 증정!&#10닥터안이 직접 솔루션을 드립니다."></textarea>
+                <p class="caption">자세한 피부고민 상담은 1:1 스킨 멘토링을 이용해주세요!</p>
+            </div>
+            <div class="toast-footer">
+                <a href="#" class="btn btn-lg btn-secondary">댓글 작성하기</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="toast-dim _popup3">
+    <div class="toast-popup">
+        <div class="toast-content title">
+            <div class="toast-header">
+                <p class="title">팝업 3</p>
+                <a href="#" class="icon ico-close-sm" onclick="closePopup('_popup3')"></a>
+            </div>
+            <div class="toast-body bg-doctor">
+                <p class="main-title">여러분의 <span>피부고민</span>을 들려주세요.</p>
+                <p class="desc">작성한 댓글은 다음 편 영상 제작 시<br>참고 예정입니다. </p>
+                <textarea placeholder="고민 채택 시, 마일리지 5,000점 증정!&#10닥터안이 직접 솔루션을 드립니다."></textarea>
+                <p class="caption">자세한 피부고민 상담은 1:1 스킨 멘토링을 이용해주세요!</p>
+            </div>
+            <div class="toast-footer">
+                <a href="#" class="btn btn-lg btn-secondary">댓글 작성하기</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+</script>
+</body>
+</html>
