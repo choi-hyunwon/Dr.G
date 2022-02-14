@@ -667,7 +667,7 @@
 
   .footer-details {
     border-top: 1px solid $gray-400;
-    padding: vw(32) vw(20) vw(48);
+    padding: 0 vw(20) 0;
 
     &.bg-dark {
       background-color: $gray-800 !important;
@@ -694,6 +694,25 @@
             }
           }
         }
+      }
+    }
+
+    .page-btn-wrap {
+      position: relative;
+      width: 100%;
+      height: vw(102);
+
+      .btn-prev, .btn-next {
+        position: absolute;
+        top: vw(32);
+      }
+
+      .btn-prev {
+        left: 0;
+      }
+
+      .btn-next {
+        right: 0;
       }
     }
   }

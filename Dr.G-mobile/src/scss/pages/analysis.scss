@@ -698,6 +698,7 @@
                 display: inline-block;
               }
               &.name{
+                height: vw(45); /* 주연 -- 추가 (2022.02.14) */
                 font-size: vw(15);
                 color: $gray-700;
                 @include ellipsis(2)

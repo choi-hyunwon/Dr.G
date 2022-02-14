@@ -407,7 +407,7 @@
       margin-bottom: vw(23);
 
       .ico-bulb {
-        @include background-img ($width: 16, $height: 24, $category: 'main', $img: 'ico-bulb.svg');
+        @include background-img($width: 16, $height: 24, $category: 'main', $img: 'ico-bulb.svg');
         margin-right: vw(6);
       }
 

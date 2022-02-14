@@ -533,7 +533,7 @@ front.common = (function () {
 
                     if (st > mainHeaderHeight + bannerHeight) {
                         mainHeader.removeClass('scroll-up').addClass('header-transparent','scroll-down');
-                        // $('._chatBotArea').addClass('full')
+                        $('._chatBotArea').addClass('full')
                         // console.log('1')
                     }
                 } else {
@@ -547,12 +547,12 @@ front.common = (function () {
                             $('._floatBottom').removeClass('arrow-off')
 
                             // console.log('2')
-                            // $('._chatBotArea').removeClass('full')
-                            // $('._chatBotArea').removeClass('no-banner')
+                            $('._chatBotArea').removeClass('full')
+                            $('._chatBotArea').removeClass('no-banner')
                         } else {
                             // console.log('3')
                             mainHeader.removeClass('header-transparent', 'scroll-down').addClass('scroll-up');
-                            // $('._chatBotArea').removeClass('full').addClass('no-banner')
+                            $('._chatBotArea').removeClass('full').addClass('no-banner')
                         }
                     }
                 }
