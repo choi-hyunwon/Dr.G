@@ -4,19 +4,15 @@
 |----------------------------------|
 */
 
-.attach-box {
-  margin: 0 vw(-24);
-}
 
 .upload-box {
-  white-space: nowrap;
 
   .img-upload {
-    width: vw(60);
-    height: vw(60);
-    border-radius: vw(8);
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
     background: $gray-400 url("../img/common/ico-folder.svg") no-repeat center top 10px;
-    background-size: vw(24) vw(24);
+   // background-size: vw(24) vw(24);
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -27,10 +23,9 @@
     }
 
     .num {
-      font-size: vw(13);
+      font-size: 12px;
       color: $gray-700;
       text-align: center;
-      padding-top: vw(5);
       position: absolute;
       bottom: 8px;
       left: 50%;
@@ -46,28 +41,28 @@
       li {
         position: relative;
         display: inline-block;
-        margin-left: vw(4);
+        margin-left: 4px;
 
         &:last-of-type {
-          margin-right: vw(25);
+          margin-right: 0;
         }
 
         img {
-          width: vw(60);
-          height: vw(60);
-          border-radius: vw(8);
+          width: 60px;
+          height: 60px;
+          border-radius: 8px;
         }
 
         .delete-upload {
           background: url("../img/common/icon-cancel.svg") no-repeat 0 0;
           background-size: 100% auto;
-          width: vw(16);
-          height: vw(16);
+          width: 16px;
+          height: 16px;
           display: inline-block;
           font-size: 0;
           position: absolute;
-          right: vw(-2);
-          top: vw(-2);
+          right: -2px;
+          top: -2px;
         }
       }
     }
@@ -121,9 +116,10 @@
 
 /*확인화면*/
 .attach-box {
+/*  margin: 0 vw(-24);
   white-space: nowrap;
   overflow-x: scroll;
-  //padding-bottom: vw(48);
+  padding-bottom: vw(48);
   margin: 0 vw(-24);
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -134,25 +130,25 @@
     height: 0;
     background: transparent;
     -webkit-appearance: none;
-  }
+  }*/
 
   li {
     position: relative;
     display: inline-block;
-    margin-left: vw(4);
+    margin-left: 8px;
 
     &:first-of-type {
-      margin-left: vw(24);
+      margin-left: 0;
     }
-
+/*
     &:last-of-type {
       margin-right: vw(24);
-    }
+    }*/
 
     img {
       width: 60px;
       height: 60px;
-      border-radius: vw(12);
+      border-radius: 8px;
     }
   }
 }

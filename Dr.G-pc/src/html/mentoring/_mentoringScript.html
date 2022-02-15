@@ -39,50 +39,13 @@
             if (!$(this).hasClass('_title')) {
                 $(this).find('.icon').removeClass('ico-plus-sm').addClass('ico-minus-sm');
                 $(this).addClass('_title');
-                $(this).parent().addClass('_unfold');
-                $(this).siblings().slideDown(200);
+                $('.list-bg').slideDown(200);
             } else {
                 $(this).find('.icon').removeClass('ico-minus-sm').addClass('ico-plus-sm');
                 $(this).removeClass('_title');
-                $(this).parent().removeClass('_unfold');
-                $(this).siblings().slideUp(200);
+                $('.list-bg').slideUp(200);
             }
         })
-
-        /*목록 tab*/
-        let questionTab = $('._question-tab');
-        let lastScroll = 0;
-        $(window).scroll(function (){
-            if($('.container').find('._question-wrap').length){
-                let st = $(this).scrollTop();
-                let tabOffset = questionTab.offset().top
-                let contentOffset = $('.tab-content').offset().top
-
-                if (st > lastScroll){
-                    //console.log("DOWN");
-                    if (st == 0){
-                        questionTab.removeClass('tab-fixed')
-                    }
-                    if (st > tabOffset){
-                        questionTab.addClass('tab-fixed')
-                        questionTab.addClass('top_0')
-                    }
-                }
-                else {
-                    //console.log("UP");
-                    if (st <= contentOffset){
-                        questionTab.removeClass('tab-fixed')
-                    }else {
-                        questionTab.addClass('tab-fixed')
-                        questionTab.removeClass('top_0')
-                    }
-                }
-                //Updates scroll position
-                lastScroll = st;
-            }
-        });
-
-
 
 /*|--------------s 서브메인----------------------------|*/
 
@@ -147,6 +110,26 @@
                 $('html, body').animate({scrollTop : offset.top},400)
             }
         })
+
+
+
+        new Swiper('.answer-swiper', {
+
+            slidesPerView : 4, // 동시에 보여줄 슬라이드 갯수
+            spaceBetween : 30, // 슬라이드간 간격
+            slidesPerGroup : 4, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
+
+            // 그룹수가 맞지 않을 경우 빈칸으로 메우기
+            // 3개가 나와야 되는데 1개만 있다면 2개는 빈칸으로 채워서 3개를 만듬
+           //loopFillGroupWithBlank : true,
+
+            loop : true, // 무한 반복
+
+            navigation : { // 네비게이션
+                nextEl : '.swiper-button-next', // 다음 버튼 클래스명
+                prevEl : '.swiper-button-prev', // 이번 버튼 클래스명
+            },
+        });
 
 
 

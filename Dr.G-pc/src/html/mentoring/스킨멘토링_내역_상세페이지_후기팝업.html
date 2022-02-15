@@ -3,7 +3,7 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="popup-wrap">
-    <div class="popup mentoring-review">
+    <div class="popup mentoring-review-write">
         <div class="popup-content popup-lg">
             <div class="popup-header">
                 <a href="#" class="_hidePopup icon ico-close"></a>
@@ -42,4 +42,14 @@
 </div>
 <script>
     showPopup();
+
+
+    <!--grade script-->
+        $("._star").on('click', function () {
+        $("._star").removeClass("on");
+        var idx = $(this).index();
+        for (var i = 0; i <= idx; i++) {
+        $("._star").eq(i).addClass("on");
+    }
+    });
 </script>
