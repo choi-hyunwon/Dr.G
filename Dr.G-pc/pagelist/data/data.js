@@ -116,12 +116,12 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_시작하기_팝업'
         },
-        // {
-        //     stateClass: 'working',
-        //     url: 'Ai피부분석_서브메인',
-        //     category: 'AI',
-        //     page: 'Ai피부분석_서브메인'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_서브메인',
+            category: 'AI',
+            page: 'Ai피부분석_서브메인'
+        },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_서브메인_OS+',

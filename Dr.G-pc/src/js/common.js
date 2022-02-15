@@ -267,6 +267,15 @@ front.common = (function () {
                         } else {
                             header.addClass('_scroll')
                         }
+                    } else if ($('._AiSubMain').find('._scrollTabWrap').length) {
+                        var tabContentOffset = $('.section-wrap').offset().top;
+                        // console.log(tabScrollPos)
+                        if (st > tabContentOffset) {
+                            header.addClass('_scroll')
+                            $('._scrollTabWrap').addClass('fixed').css('top', 86 + 'px')
+                        } else {
+                            header.addClass('_scroll')
+                        }
                     } else {
                         header.addClass('_scroll')
                     }
@@ -292,6 +301,16 @@ front.common = (function () {
                         if (st < delta) {
                             header.removeClass('_scroll')
                         }
+                    } else if($('._AiSubMain').find('._scrollTabWrap').length) {
+                        var tabContentOffset = $('.section-wrap').offset().top;
+                        if (tabContentOffset > st) {
+                            $('._scrollTabWrap').removeClass('fixed').css('top', 86 + 'px')
+                        } else if (st < delta) {
+                            header.removeClass('_scroll')
+                        } else {
+                            $('._scrollTabWrap').addClass('fixed').css('top', 86 + 'px')
+                        }
+
                     } else {
                         if (st < 65){
                             header.removeClass('_scroll')
@@ -398,13 +417,37 @@ function hidePopup() {
 
 function openPopup(className) {
     var target = `.${className}`;
-    $(target).addClass('show fade').css('display', 'block');
+    var popup = $(target);
+    var btnPopupTrigger = $('._showPopup');
+    var idx = btnPopupTrigger.index(this);
+
+    popup.eq(idx).removeClass('hide').css('display', 'block');
+    popup.after(`<div class="popup-backdrop"></div>`);
+    $('body').addClass('scrOff')
+
+    setTimeout(function (){
+        var popup = $('.popup-wrap');
+        var popupBackDrop = $('.popup-backdrop');
+
+        popupBackDrop.addClass('show')
+        popup.eq(idx).removeClass('hide').addClass('show')
+    },300)
 }
 
 function closePopup(className) {
     var target = `.${className}`;
-    $(target).addClass('hide');
-    setTimeout(() => {
-        $(target).removeClass('fade show').css('display', 'none');
-    }, 400);
+    var popup = $(target);
+    var popupBackDrop = $('.popup-backdrop');
+
+    popup.addClass('hide').removeClass('show');
+    popupBackDrop.addClass('hide').removeClass('show');
+    $('body').removeClass('scrOff')
+
+    setTimeout(function (){
+        var popup = $('.popup-wrap');
+        var popupBackDrop = $('.popup-backdrop');
+
+        popup.css('display', 'none');
+        popupBackDrop.remove();
+    },300)
 }

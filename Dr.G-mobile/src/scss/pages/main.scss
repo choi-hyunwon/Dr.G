@@ -107,21 +107,18 @@
   .visual {
     position: relative;
     width: 100%;
-    height: vw(749);
-    background-color: $primary;
+    height: vw(660);
+    background-color: #45DCC4;
+    overflow: hidden;
 
     .editor-area {
       position: absolute;
-      top: vw(177);
+      top: vw(186);
+      left: vw(-212);
       width: 100%;
 
       .video {
-        width: 100%;
-        height: auto;
-      }
-
-      img {
-        width: 100%;
+        width: vw(842);
         height: auto;
       }
     }

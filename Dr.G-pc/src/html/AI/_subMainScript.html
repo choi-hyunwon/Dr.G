@@ -29,11 +29,11 @@
         xRadius: 420,
         yRadius: 200,
         autoPlay: true,
-        bringToFront: true,
+        bringToFront: false,
         onLoaded: function () {
             showcase.css('visibility', 'visible')
             showcase.css('display', 'none')
-            showcase.fadeIn(1500)
+            showcase.fadeIn(1000)
         },
         farScale: 0.4,
         speed: 4,
@@ -50,11 +50,16 @@
         let showcase = $("._showCase")
         showcase.Cloud9Carousel({
             xOrigin: null,
-            yOrigin: 53,
-            xRadius: 260,
-            yRadius: 130,
+            yOrigin: 150,
+            xRadius: 420,
+            yRadius: 200,
+            bringToFront: false,
             autoPlay: true,
-            bringToFront: true,
+            onLoaded: function () {
+                showcase.css('visibility', 'visible')
+                showcase.css('display', 'none')
+                showcase.fadeIn(1500)
+            },
             farScale: 0.4,
             speed: 4,
             autoPlayDelay: 2000,
@@ -62,6 +67,43 @@
             itemClass: '_showCaseItem',
         })
     }
+    /* ---------- s modal animation ---------- */
+    $triggerBtn = $('._showCaseItem');
+    $closeBtn = $('._btnClose');
+    $skinTypeModal = $('._skinTypeModal');
+
+    $triggerBtn.on('click', function () {
+        showSkinTypeModal()
+    })
+
+    $('._tabBox li a').on('click', function () {
+        $(this).parent().addClass('on').siblings().removeClass('on')
+    })
+
+    $closeBtn.on('click', function () {
+        hideSkinTypeModal()
+    })
+
+    $skinTypeModal.on('click', function (e) {
+        if ($(this).has(e.target).length === 0) {
+            hideSkinTypeModal()
+        }
+    })
+
+    function hideSkinTypeModal() {
+        // modal
+        $skinTypeModal.addClass('hide').removeClass('show fade').css('display', 'none');
+        // body scroll
+        $('body').removeClass('scrOff');
+    }
+
+    function showSkinTypeModal() {
+        // modal
+        $skinTypeModal.addClass('show fade').css('display', 'block');
+        // body scroll
+        $('body').addClass('scrOff')
+    }
+    /* ---------- e modal animation ---------- */
 
     // tab
     var scrollTab = $('._scrollTab');
@@ -77,7 +119,7 @@
         var sectionProcess = $('._sectionProcess').position().top;
         var sectionReview = $('._sectionReview').position().top;
         var sectionFAQ = $('._sectionFAQ').position().top;
-        var offset = 200;
+        var offset = 264;
 
         lastScroll = st;
 
@@ -85,7 +127,7 @@
             scrollTab.scrollLeft(100);
         } else if (lastScroll > sectionReview - offset && lastScroll < sectionFAQ - offset) {
             scrollTab.scrollLeft(200);
-        } else if (lastScroll > sectionFAQ - offset) {
+        } else if (lastScroll > sectionFAQ - 400) {
             scrollTab.scrollLeft(300);
         } else {
             scrollTab.scrollLeft(0);
@@ -271,25 +313,25 @@
     /* ---------- e story section animation ---------- */
 
     /* ---------- s why section animation ---------- */
-    // let icon6points = document.querySelector('._6points');
-    //
-    // let animation6points = bodymovin.loadAnimation({
-    //     container: icon6points,
-    //     renderer: 'svg',
-    //     loop: false,
-    //     autoplay: true,
-    //     path: "../../img/AI/6point_279x301.json"
-    // });
-    //
-    // let iconSpecialEdit = document.querySelector('._specialEdit');
-    //
-    // let animationSpecialEdit = bodymovin.loadAnimation({
-    //     container: iconSpecialEdit,
-    //     renderer: 'svg',
-    //     loop: false,
-    //     // autoplay: true,
-    //     path: "../../img/AI/special_edit.json"
-    // });
+    let icon6points = document.querySelector('._6points');
+
+    let animation6points = bodymovin.loadAnimation({
+        container: icon6points,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/AI/6point_279x301.json"
+    });
+
+    let iconSpecialEdit = document.querySelector('._specialEdit');
+
+    let animationSpecialEdit = bodymovin.loadAnimation({
+        container: iconSpecialEdit,
+        renderer: 'svg',
+        loop: false,
+        // autoplay: true,
+        path: "../../img/AI/special_edit.json"
+    });
 
     var whySlider = new Swiper("._whySlider", {
         spaceBetween: 48,
@@ -301,28 +343,28 @@
         }
     });
 
-    // whySlider.on('slideChange', function () {
-    //     if(whySlider.realIndex === 0) {
-    //         $('._whySlider .chart-info').removeClass('ani-on')
-    //         animationSpecialEdit.playSegments([0,120], true);
-    //     } else if(whySlider.realIndex === 1) {
-    //         $('._whySlider .chart-info').removeClass('ani-on')
-    //         // animation
-    //         animation6points.playSegments([0,160], true);
-    //     } else {
-    //         lineDrawing()
-    //         $('._whySlider .chart-info').addClass('ani-on')
-    //     }
-    // });
+    whySlider.on('slideChange', function () {
+        if(whySlider.realIndex === 0) {
+            $('._whySlider .chart-info').removeClass('ani-on')
+            animationSpecialEdit.playSegments([0,120], true);
+        } else if(whySlider.realIndex === 1) {
+            $('._whySlider .chart-info').removeClass('ani-on')
+            // animation
+            animation6points.playSegments([0,160], true);
+        } else {
+            lineDrawing()
+            $('._whySlider .chart-info').addClass('ani-on')
+        }
+    });
 
     new Waypoint({
         element: document.querySelector('._whySlider'),
         handler: function () {
-            // whySlider.autoplay.start();
-            // animationSpecialEdit.playSegments([0,120], true);
+            whySlider.autoplay.start();
+            animationSpecialEdit.playSegments([0,120], true);
             // console.log('why slider')
         },
-        offset: "60%"
+        offset: "90%"
     })
 
     /* 차트 */
@@ -508,36 +550,45 @@
     /* ---------- e why section animation ---------- */
 
     /* ---------- s process section animation ---------- */
-    // var processSlider = new Swiper("._processSlider", {
-    //     // autoplay: true,
-    //     speed: 1000,
-    //     loop: true,
-    //     loopedSlides: 1,
-    //     spaceBetween: 48,
-    //     centeredSlides: true,
-    //     // effect: 'fade',
-    //     pagination: {
-    //         el: "._processSlider + ._sliderPagination",
-    //         clickable: true,
-    //     },
-    // });
+    var processSlider = new Swiper("._processSlider", {
+        autoplay: {
+            enabled: false,
+            delay: 5000,
+        },
+        speed: 1000,
+        loopedSlides: 2,
+        spaceBetween: 48,
+        centeredSlides: true,
+        effect: 'fade',
+    });
+
+    let iconProcessing = document.querySelector('._processAni');
+
+    let animationProcessing = bodymovin.loadAnimation({
+        container: iconProcessing,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/AI/processing.json"
+    });
 
     new Waypoint({
         element: document.querySelector('._sectionProcess'),
         handler: function () {
-            // processSlider.autoplay.start();
+            processSlider.autoplay.start();
             // console.log('process slider')
         },
         offset: "50%"
     })
 
-    // processSlider.on('slideChange', function () {
-    //     if(processSlider.realIndex === 0) {
-    //         $('._progressArea').find('.step').eq(0).addClass('on').siblings().removeClass('on');
-    //     } else {
-    //         $('._progressArea').find('.step').eq(1).addClass('on').siblings().removeClass('on');
-    //     }
-    // });
+    processSlider.on('slideChange', function () {
+        if(processSlider.realIndex === 0) {
+            $('._progressArea').find('.step').eq(0).addClass('on').siblings().removeClass('on');
+        } else if(processSlider.realIndex === 1) {
+            $('._progressArea').find('.step').eq(1).addClass('on').siblings().removeClass('on');
+            animationProcessing.playSegments([0,180], true);
+        }
+    });
     /* ---------- e why section animation ---------- */
 
     /* ---------- e faq section animation ---------- */
@@ -564,51 +615,4 @@
         }
     });
     /* ---------- e faq section animation ---------- */
-
-    /* ---------- s modal animation ---------- */
-    $triggerBtn = $('._showCaseItem');
-    $closeBtn = $('._btnClose');
-    $skinTypeModal = $('._skinTypeModal');
-
-    $triggerBtn.on('click', function () {
-        showSkinTypeModal()
-        $('._sectionWhat').find('.font-h6 ').css('visibility', 'hidden')
-    })
-
-    $('._tabBox li a').on('click', function () {
-        $(this).parent().addClass('on').siblings().removeClass('on')
-    })
-
-    $closeBtn.on('click', function () {
-        hideSkinTypeModal()
-        setShowcase()
-        $('._sectionWhat').find('.font-h6 ').css('visibility', 'visible')
-    })
-
-    $skinTypeModal.on('click', function (e) {
-        if ($(this).has(e.target).length === 0) {
-            hideSkinTypeModal()
-        }
-    })
-
-    function hideSkinTypeModal() {
-        // modal
-        $skinTypeModal.addClass('hide');
-        // body scroll
-        $('body').removeClass('scrOff')
-        // setTimeout(() => {
-        $skinTypeModal.removeClass('show hide').css('display', 'none');
-        // }, 400);
-        setShowcase()
-    }
-
-    function showSkinTypeModal() {
-        // modal
-        $skinTypeModal.addClass('show fade').css('display', 'block');
-        // circle slider
-        $('._showCase').data("carousel").deactivate();
-        // body scroll
-        $('body').addClass('scrOff')
-    }
-    /* ---------- e modal animation ---------- */
 </script>

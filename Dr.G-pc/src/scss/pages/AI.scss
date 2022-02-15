@@ -3023,6 +3023,7 @@
     .tab {
       width: 100%;
       padding: 0;
+      overflow-x: visible;
 
       &.fixed {
         position: fixed;
@@ -3031,6 +3032,10 @@
         left: 0;
         top: 0;
         z-index: 5;
+
+        + .section-wrap {
+          padding-top: 86px;
+        }
       }
     }
 
@@ -3523,6 +3528,7 @@
                 height: vw(212);
                 margin-bottom: 0;
                 margin-top: 9px;
+                margin-right: 112px;
 
                 &::before {
                   content: '';
@@ -3819,39 +3825,35 @@
 
     .process {
       position: relative;
-      padding: vw(76) 0 0;
+      padding: 120px 0 0;
       text-align: center;
-      //background-color: $primary;
-      color: #fff;
+      background-color: #DAFFF9;
+      height: 967px;
 
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        @include background-img($width: 375, $height: 592, $category: 'AI', $img: 'bg-progress.svg');
-      }
+      .inner {
+        .title {
+          font-weight: bold;
+          font-size: 40px;
+          line-height: 52px;
+          letter-spacing: -0.01em;
+          text-align: center;
+          margin-bottom: 30px;
+        }
 
-      .title {
-        font-weight: bold;
-        font-size: vw(28);
-        line-height: vw(39);
-        text-align: center;
-        margin-bottom: vw(12);
-      }
-
-      > .font-h6 {
-        margin-bottom: vw(32);
+        > .font-h6 {
+          color: $gray-700;
+          margin-bottom: 60px;
+        }
       }
 
       .progress-area {
         display: flex;
         justify-content: center;
-        margin-bottom: vw(32);
+        margin-bottom: 79px;
 
         .step {
           display: none;
-          @include background-img($width: 175, $height: 70, $category: 'AI', $img: 'img-progress-2.png');
+          @include background-img($width: 195, $height: 100, $category: 'AI', $img: 'img-progress-2.png');
 
           &.on {
             display: block;
@@ -3868,41 +3870,91 @@
       }
 
       .slider-box {
-        //background-color: #fff;
-        padding-bottom: vw(76);
-
         .slider {
           .swiper-slide {
-            .item {
+            > .item {
+              position: relative;
               width: 100%;
               height: 100%;
-              //background-color: #fff;
-
-              .font-body-1 {
-                margin-bottom: vw(2);
-              }
-
-              .font-h3 {
-                color: $gray-800;
-                margin-bottom: vw(6);
-              }
-
-              .font-h6 {
-                color: $gray-700;
-              }
+              background-color: #DAFFF9;
 
               .item-img {
                 display: none;
-                background-color: $primary;
+                opacity: 0;
+              }
+
+              .item-txt {
+                position: absolute;
+                right: 20px;
+                top: 6px;
+
+                .item {
+                  position: relative;
+                  opacity: 0.5;
+                  padding-left: 82px;
+                  text-align: left;
+                  padding-bottom: 45px;
+
+                  + .item {
+                    border-top: 1px solid rgba(37,37,37,.1);
+                    padding-top: 45px;
+
+                    .font-body-1 {
+                      top: 50px;
+                    }
+                  }
+
+                  .font-body-1 {
+                    position: absolute;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: $gray-700;
+                    left: 0;
+                    top: 5px;
+                  }
+
+                  .font-h3 {
+                    font-size: 24px;
+                    line-height: 35px;
+                    color: $gray-700;
+                    margin-bottom: vw(6);
+                  }
+
+                  .font-h6 {
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: $gray-700;
+                  }
+
+                  &.on {
+                    opacity: 1;
+
+                    .font-body-1 {
+                      color: $gray-800;
+                    }
+
+                    .font-h3 {
+                      color: $primary;
+                    }
+
+                    .font-h6 {
+                      color: $gray-700;
+                    }
+                  }
+                }
               }
 
               &.item-1 {
+                padding-left: 125px;
+
                 .item-img {
                   position: relative;
-                  width: vw(235);
-                  height: vw(230);
-                  margin: 0 auto vw(84);
+                  width: 384px;
+                  height: 378px;
+                  //margin: 0 auto vw(84);
                   overflow: hidden;
+                  box-shadow: 0 5px 10px rgba(34, 34, 34, 0.12);
+                  border-radius: 14.3511px;
 
                   img {
                     width: 100%;
@@ -3910,19 +3962,15 @@
 
                   .scan-box {
                     position: absolute;
-                    width: vw(217);
-                    height: vw(210);
+                    width: 341.63px;
+                    height: 344.66px;
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
 
                     .scan-line {
                       position: absolute;
-                      @include background-img($width: 184, $height: 67, $category: 'AI', $img: 'img-scan-line.svg');
-                      //width: vw(184);
-                      //height: vw(2);
-                      //background-color: $yellow;
-                      //border-radius: vw(89);
+                      @include background-img($width: 341.63, $height: 128.11, $category: 'AI', $img: 'img-scan-line.svg');
                       left: 50%;
                       transform: translateX(-50%);
                       z-index: 1;
@@ -3953,10 +4001,11 @@
               }
 
               &.item-2 {
+                padding-left: 99px;
+
                 .item-img {
                   position: relative;
-                  width: vw(316);
-                  margin: 0 auto vw(90);
+                  width: 436px;
 
                   img {
                     width: 100%;
@@ -3969,6 +4018,7 @@
               .item {
                 .item-img {
                   display: block;
+                  opacity: 1;
                 }
               }
             }
@@ -3985,62 +4035,102 @@
     .review {
       background-color: $yellow;
       position: relative;
-      padding: vw(76) vw(24) vw(96);
+      padding: 120px 0;
 
       .font-h2 {
-        margin-bottom: vw(12);
+        font-size: 40px;
+        line-height: 52px;
+        margin-bottom: 30px;
         text-align: center;
+        letter-spacing: -0.01em;
       }
 
       .font-h6 {
-        margin-bottom: vw(32);
+        font-size: 18px;
+        line-height: 28px;
         text-align: center;
-        color: $gray-800;
+        color: $gray-700;
+        margin-bottom: 80px;
       }
 
       .review-box {
         .item {
-          padding: vw(20);
-          margin-bottom: vw(16);
+          position: relative;
+          padding: 30px 40px 30px 160px;
+          margin-bottom: 30px;
           background-color: $gray-fff;
-          border-radius: vw(16);
+          border-radius: 20px;
 
           .info-area {
+            position: absolute;
             font-size: 0;
             margin-bottom: vw(6);
+            left: 40px;
+            top: 30px;
 
             .icon {
-              width: vw(32);
-              height: vw(32);
+              width: 90px;
+              height: 90px;
+            }
+          }
+
+          .content-area {
+            .content {
+              font-size: 18px;
+              line-height: 28px;
+              color: $gray-800;
+              @include ellipsis(2);
+              margin-bottom: vw(12);
+            }
+
+            .info-bottom {
+              display: flex;
+              align-content: center;
+              height: 22px;
             }
 
             .username {
               vertical-align: middle;
               display: inline-block;
-              margin-left: vw(8);
-              font-size: vw(13);
+              margin-right: 17px;
               color: $gray-600;
-              line-height: vw(18);
+              font-weight: 500;
+              font-size: 15px;
+              line-height: 22px;
             }
-          }
 
-          .content-area {
-            margin-bottom: vw(12);
-            font-size: vw(15);
-            color: $gray-800;
-            line-height: vw(22);
-            @include ellipsis(2)
+            .date {
+              position: relative;
+              font-size: 13px;
+              color: $gray-600;
+              padding-top: 2px;
+
+              &::before {
+                content: '';
+                position: absolute;
+                left: -8px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 12px;
+                background-color: $gray-400;
+              }
+            }
           }
 
           .star-area {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 15.93px;
+            margin-bottom: 16px;
 
             .score {
+              height: 15.93px;
+
               span {
-                width: vw(14.5);
-                height: vw(14);
+                width: 16.5px;
+                height: 15.93px;
                 display: inline-block;
 
                 &.on {
@@ -4059,11 +4149,6 @@
                 }
               }
             }
-
-            .date {
-              font-size: vw(13);
-              color: $gray-600;
-            }
           }
 
           &.active {
@@ -4074,37 +4159,19 @@
           }
 
           &:last-of-type {
-            margin-bottom: vw(48);
+            margin-bottom: 60px;
           }
         }
-      }
-
-      .btn-wrap {
-        position: absolute;
-        bottom: vw(96);
-        left: 50%;
-        transform: translateX(-50%);
-
-        &:before {
-          content: '';
-          display: inline-block;
-          width: vw(327);
-          height: vw(70);
-        }
-
-        width: 100%;
-        background: linear-gradient(180deg, transparent 0%, rgba(255, 230, 101, 1) 60%);
-
       }
     }
 
     /* 자주 묻는 질문 */
     .faq {
       background-color: $gray-200;
-      padding: vw(76) vw(24) vw(96);
+      padding: 120px 0;
 
       .font-h2 {
-        margin-bottom: vw(32);
+        margin-bottom: 80px;
         text-align: center;
       }
 
@@ -4112,15 +4179,24 @@
         .item {
           border-radius: vw(16);
           margin-bottom: vw(10);
-          padding: vw(17) vw(20) vw(19) vw(45);
-          background: #fff url("../img/mentoring/ico-Q.svg") no-repeat left vw(20) top vw(22);
-          background-size: vw(17) vw(14);
+          padding: 20px 26px 20px 57px;
+          background: #fff url("../img/AI/ico-Q.svg") no-repeat left 30px top 20px;
+          background-size: 19px 28px;
+
+          &::before {
+            content: url("../img/AI/ico-Q-white.svg");
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            z-index: -1;
+          }
 
           .title {
             display: flex;
             justify-content: space-between;
-            font-size: vw(15);
-            line-height: vw(22);
+            font-size: 18px;
+            line-height: 28px;
             color: $gray-800;
             font-weight: 500;
 
@@ -4134,22 +4210,20 @@
           }
 
           .solution {
-            padding-top: vw(14);
-            font-size: vw(13);
-            line-height: vw(18);
+            padding-top: 12px;
+            font-size: 16px;
+            line-height: 24px;
             display: none;
           }
 
           &.active {
-            background: $primary url("../img/mentoring/ico-Q-white.svg") no-repeat left vw(20) top vw(22);
-            background-size: vw(17) vw(14);
+            background: $primary url("../img/AI/ico-Q-white.svg") no-repeat left 30px top 27px;
 
             .title {
               color: $gray-fff;
 
               .ico-plus-sm-gray {
                 background: url("../img/common/ico-minus-sm-white.svg") no-repeat 0 0;
-                background-size: vw(12) vw(12);
               }
             }
 
@@ -4159,7 +4233,7 @@
           }
 
           &:last-of-type {
-            margin-bottom: vw(48);
+            margin-bottom: 60px;
           }
         }
       }
@@ -4167,13 +4241,13 @@
 
     /* 배너 */
     .banner {
-      padding: vw(76) 0;
+      padding: 120px 0 240px;
       text-align: center;
 
       .img {
-        width: vw(50);
+        width: 92px;
         height: auto;
-        margin: 0 auto vw(16);
+        margin: 0 auto 12px;
 
         img {
           width: 100%;
@@ -4182,7 +4256,10 @@
       }
 
       .font-body-1 {
-        margin-bottom: vw(24);
+        margin-bottom: 30px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
 
         .color-primary {
           font-weight: bold;
@@ -4916,7 +4993,7 @@
   .modal-content {
     position: absolute;
     width: 600px;
-    height: 678px;
+    height: 609px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -4953,7 +5030,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        bottom: -196px;
+        bottom: -137px;
         left: 0;
         z-index: 0;
 
@@ -4967,7 +5044,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 129px;
+        top: 60px;
         width: vw(160);
         height: vw(160);
 
@@ -4995,13 +5072,13 @@
         position: relative;
         z-index: 1;
         text-align: center;
-        padding-top: 333px;
+        padding-top: 259px;
         margin-bottom: 48px;
 
         .font-h3 {
           font-size: 24px;
           height: 35px;
-          margin-bottom: vw(8);
+          margin-bottom: 13px;
         }
 
         .font-body-2 {
@@ -5014,7 +5091,10 @@
       }
 
       .tab-box {
-        position: relative;
+        position: absolute;
+        width: 100%;
+        bottom: 53px;
+        left: 0;
         z-index: 1;
         text-align: center;
         display: flex;
