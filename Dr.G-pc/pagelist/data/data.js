@@ -177,7 +177,7 @@ data.AI = {
             page: 'Ai피부분석_결과'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'Ai피부분석_피부변화리포트',
             category: 'AI',
             page: 'Ai피부분석_피부변화리포트'
