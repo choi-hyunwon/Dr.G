@@ -403,6 +403,7 @@
       }
     }
 
+    /* ai피부분석 - 시작하기 */
     &.ai-start-popup {
       .popup-body {
         .title {
@@ -419,6 +420,82 @@
 
           img {
             width: 100%;
+          }
+        }
+      }
+    }
+
+    /* ai피부분석 - 공유하기 팝업 */
+    &.popup-share {
+      .popup-body {
+        .title {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    /* ai피부분석 - 결과 저장/공유하기 팝업 */
+    &.popup-ai-result-detail {
+      .popup-content {
+        padding: 0;
+        max-width: 600px;
+        overflow: hidden;
+
+        .popup-header {
+          height: 64px;
+          padding: 20px;
+          margin-bottom: 0;
+        }
+
+        .popup-body {
+          padding: 0;
+
+          .AI-wrap {
+            .result-detail {
+              padding: 0;
+
+              .font-h3 {
+                font-size: 24px;
+                line-height: 35px;
+                margin-bottom: 30px;
+                padding: 0 30px;
+              }
+
+              .box {
+                background-color: transparent;
+                padding: 0;
+                overflow-y: auto;
+                max-height: calc(680px - 64px - 35px - 30px);
+
+                .list {
+                  background-color: #f8f8f8;
+                  padding: 30px 24px 30px 34px;
+
+                  .item {
+                    .custom-checkbox {
+                      .custom-control-label {
+                        font-size: 18px;
+                        padding-top: 1px;
+                      }
+                    }
+
+                    + .item {
+                      margin-top: 17.5px;
+                    }
+                  }
+                }
+
+                .btn-wrap {
+                  background-color: #f8f8f8;
+                  margin-top: 0;
+                  padding-bottom: 60px;
+
+                  .btn {
+                    width: 123px;
+                  }
+                }
+              }
+            }
           }
         }
       }

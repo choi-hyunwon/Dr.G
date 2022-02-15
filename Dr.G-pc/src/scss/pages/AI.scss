@@ -4531,6 +4531,101 @@
       @include background-img($width: 44, $height: 44, $category: 'AI', $img: 'ico-diary-10-on.svg');
     }
   }
+
+  /* 피부분석 결과 저장/공유하기 */
+  .result-detail {
+    padding: vw(20) 0 0;
+
+    .font-h3 {
+      padding: 0 vw(24);
+      margin-bottom: vw(24);
+    }
+
+    .box {
+      padding: vw(48) vw(24);
+      background-color: $gray-200;
+
+      .list {
+        .item {
+          + .item {
+            margin-top: vw(14);
+          }
+
+          .custom-checkbox {
+            margin-bottom: vw(6);
+
+            .custom-control-label {
+              font-weight: bold;
+              font-size: vw(16);
+              line-height: vw(20);
+              color: $gray-800;
+            }
+          }
+
+          .font-body-2 {
+            padding-left: vw(28);
+            color: $gray-700;
+          }
+        }
+      }
+
+      .btn-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: vw(32);
+
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32.8vw;
+          padding: 0;
+          font-weight: 500;
+
+          + .btn {
+            margin-left: vw(12);
+          }
+        }
+      }
+    }
+  }
+
+  .result-detail-view {
+    > .heading {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: vw(90);
+      background-color: #fff;
+      padding: 0 vw(24);
+
+      img {
+        display: inline-block;
+        width: vw(60);
+        margin-right: vw(12);
+      }
+
+      span {
+        display: inline-block;
+        font-weight: bold;
+        font-size: vw(20);
+        line-height: vw(30);
+      }
+    }
+
+    .result {
+      .heading {
+        margin-bottom: vw(40);
+      }
+
+      .analysis-result {
+        .bar-chart-box {
+          padding: 0 vw(24) vw(50);
+        }
+      }
+    }
+  }
 }
 
 /* circle slider */

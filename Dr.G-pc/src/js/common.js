@@ -272,6 +272,7 @@ front.common = (function () {
                     if ($('.inside-drg').find('._tab').length) {
                         var tabScrollPos = $('._tab').offset().top + $('._tab').outerHeight();
                         if (st > tabScrollPos - 64) {
+                            // console.log('1')
                             header.addClass('_scroll')
                             $('._tab').addClass('fixed').css('top', 86 + 'px')
                         } else {
@@ -302,8 +303,10 @@ front.common = (function () {
                     if ($('.inside-drg').find('._tab').length) {
                         var tabContentOffset = $('.tab-content').offset().top;
                         if (tabContentOffset > st) {
-                            $('._tab').removeClass('fixed').css('top', 86 + 'px')
+                            // console.log('2')
+                            $('._tab').removeClass('fixed').css('top', 'auto')
                         } else {
+                            // console.log('3')
                             $('._tab').addClass('fixed').css('top', 86 + 'px')
                         }
                         if (st < delta) {
@@ -436,10 +439,8 @@ function hidePopup() {
 function openPopup(className) {
     var target = `.${className}`;
     var popup = $(target);
-    var btnPopupTrigger = $('._showPopup');
-    var idx = btnPopupTrigger.index(this);
 
-    popup.eq(idx).removeClass('hide').css('display', 'block');
+    popup.removeClass('hide').css('display', 'block');
     popup.after(`<div class="popup-backdrop"></div>`);
     $('body').addClass('scrOff')
 
@@ -448,7 +449,7 @@ function openPopup(className) {
         var popupBackDrop = $('.popup-backdrop');
 
         popupBackDrop.addClass('show')
-        popup.eq(idx).removeClass('hide').addClass('show')
+        popup.removeClass('hide').addClass('show')
     },300)
 }
 

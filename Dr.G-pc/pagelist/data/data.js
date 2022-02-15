@@ -64,6 +64,12 @@ data.guide = {
         },
         {
             stateClass: 'complete',
+            url: 'modal2',
+            category: 'guide',
+            page: 'modal - 한 페이지 내에 3개'
+        },
+        {
+            stateClass: 'complete',
             url: 'badge',
             category: 'guide',
             page: 'badge'
@@ -175,6 +181,12 @@ data.AI = {
             url: 'Ai피부분석_결과',
             category: 'AI',
             page: 'Ai피부분석_결과'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_결과_저장_공유하기',
+            category: 'AI',
+            page: 'Ai피부분석_결과_저장_공유하기'
         },
         {
             stateClass: 'complete',
