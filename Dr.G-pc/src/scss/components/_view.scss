@@ -6,6 +6,7 @@
 
 /*고객제안 , 스킨멘토링*/
 .view-details {
+
   .body-details {
     width: 900px;
     margin: 0 auto;
@@ -18,8 +19,7 @@
       .badge-box {
         margin-bottom: 13px;
       }
-
-      .title {
+      .title{
         word-break: keep-all;
       }
 
@@ -30,23 +30,18 @@
           color: $gray-700;
         }
 
-        .like-box {
+        .like-box{
           padding-top: 20px;
-
           .like {
             margin-right: 10px;
             position: relative;
-
             .icon {
               width: 16px;
               height: 16px;
               margin-bottom: 4px;
             }
-
             .num {
-              font-family: $poppins-semiBold;
               font-weight: 600;
-              font-size: 15px;
               color: $gray-700;
               vertical-align: middle;
             }
@@ -64,16 +59,13 @@
             }
 
             + .date {
-              margin-left: 10px;
+              margin-left:10px;
             }
           }
-
           .date {
             font-weight: 400;
-            font-size: 15px;
             color: $gray-600;
           }
-
           &.on {
             .like {
               .icon {
@@ -87,8 +79,7 @@
 
     .area-desc {
       padding: 60px 0;
-
-      &.answer_paddng {
+      &.answer_paddng{
         padding-bottom: 0;
       }
 
@@ -126,15 +117,13 @@
           .more {
             display: block;
             color: $primary;
-
-            span {
+            span{
               display: inline-block;
               vertical-align: middle;
             }
 
             .ico-arrow-green-right {
               margin-left: 4px;
-              transform: translateY(1px);
             }
           }
         }
@@ -575,10 +564,8 @@
 
 
   .footer-details {
-    width: 900px;
-    margin: 0 auto;
     border-top: 1px solid $gray-400;
-    padding: vw(32) vw(20) 240px;
+    padding: vw(32) vw(20) vw(48);
 
     &.bg-dark {
       background-color: $gray-800 !important;
@@ -606,330 +593,330 @@
 
 
   /* 성분분석 */
- /* .analysis-wrap {
-    !* 등록제안,수정요청입력란 *!
-    .heading {
-      padding: vw(20) vw(24);
+  /* .analysis-wrap {
+     !* 등록제안,수정요청입력란 *!
+     .heading {
+       padding: vw(20) vw(24);
 
-      .font-h3 {
-        + .font-body-1 {
-          color: $gray-700;
-          padding-top: vw(8);
-        }
-      }
+       .font-h3 {
+         + .font-body-1 {
+           color: $gray-700;
+           padding-top: vw(8);
+         }
+       }
 
-    }
+     }
 
-    !* 질문 & 답 *!
-    .question-box {
-      background-color: $gray-200;
-      padding: vw(48) vw(24);
+     !* 질문 & 답 *!
+     .question-box {
+       background-color: $gray-200;
+       padding: vw(48) vw(24);
 
-      .info {
-        margin-bottom: vw(48);
+       .info {
+         margin-bottom: vw(48);
 
-        .sub-desc {
-          padding-top: vw(12);
-          color: $gray-600;
-        }
-      }
+         .sub-desc {
+           padding-top: vw(12);
+           color: $gray-600;
+         }
+       }
 
-      .question-item {
-        margin-bottom: vw(48);
+       .question-item {
+         margin-bottom: vw(48);
 
-        &:first-of-type {
-          padding-top: 0;
-        }
+         &:first-of-type {
+           padding-top: 0;
+         }
 
-        &:last-of-type {
-          margin-bottom: 0;
-        }
+         &:last-of-type {
+           margin-bottom: 0;
+         }
 
-        .question {
-          padding-bottom: vw(12);
+         .question {
+           padding-bottom: vw(12);
 
-          .num {
-            display: inline-block;
-            vertical-align: middle;
-            font-family: $poppins-semiBold;
-            font-style: normal;
-            font-weight: 600;
-            font-size: vw(18);
-            line-height: vw(28);
-            color: $gray-600;
-            margin-right: vw(8);
-          }
+           .num {
+             display: inline-block;
+             vertical-align: middle;
+             font-family: $poppins-semiBold;
+             font-style: normal;
+             font-weight: 600;
+             font-size: vw(18);
+             line-height: vw(28);
+             color: $gray-600;
+             margin-right: vw(8);
+           }
 
-          .font-h5 {
-            display: inline-block;
-            vertical-align: middle;
-            font-weight: bold;
-            color: $gray-800;
-          }
-        }
+           .font-h5 {
+             display: inline-block;
+             vertical-align: middle;
+             font-weight: bold;
+             color: $gray-800;
+           }
+         }
 
-        .answer {
-          position: relative;
+         .answer {
+           position: relative;
 
-          ul {
-            li {
-              display: block;
-              width: 100%;
-              background: #ffffff;
-              padding: vw(14) vw(32);
-              border-radius: vw(100);
-              color: $gray-700;
-              font-size: vw(15);
-              line-height: vw(22);
+           ul {
+             li {
+               display: block;
+               width: 100%;
+               background: #ffffff;
+               padding: vw(14) vw(32);
+               border-radius: vw(100);
+               color: $gray-700;
+               font-size: vw(15);
+               line-height: vw(22);
 
-              a {
-                color: $gray-700;
-                display: block;
+               a {
+                 color: $gray-700;
+                 display: block;
 
-                &:hover {
-                  color: $gray-700;
-                }
-              }
+                 &:hover {
+                   color: $gray-700;
+                 }
+               }
 
-              + li {
-                margin-top: vw(10);
-              }
-            }
-          }
+               + li {
+                 margin-top: vw(10);
+               }
+             }
+           }
 
-          .delete {
-            display: none;
-          }
+           .delete {
+             display: none;
+           }
 
-          &.complete {
-            ul {
-              li {
-                background: $violet;
+           &.complete {
+             ul {
+               li {
+                 background: $violet;
 
-                a {
-                  color: $gray-fff;
-                }
-              }
-            }
+                 a {
+                   color: $gray-fff;
+                 }
+               }
+             }
 
-            .delete {
-              display: block;
-              padding: 0 vw(10);
-              position: absolute;
-              right: vw(22);
-              top: 50%;
-              transform: translateY(-50%);
+             .delete {
+               display: block;
+               padding: 0 vw(10);
+               position: absolute;
+               right: vw(22);
+               top: 50%;
+               transform: translateY(-50%);
 
-              .btn-delete {
-                width: vw(12);
-                height: vw(12);
-                display: inline-block;
-              }
-            }
-          }
-        }
-      }
-    }
+               .btn-delete {
+                 width: vw(12);
+                 height: vw(12);
+                 display: inline-block;
+               }
+             }
+           }
+         }
+       }
+     }
 
 
-    !* 제품등록제안 *!
-    .full-img {
-      width: vw(375);
-      height: vw(375);
-      color: $primary;
+     !* 제품등록제안 *!
+     .full-img {
+       width: vw(375);
+       height: vw(375);
+       color: $primary;
 
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
+       img {
+         width: 100%;
+         height: auto;
+       }
+     }
 
-    .propose-box {
-      .form-control + .select-popup {
-        margin-top: vw(8);
-      }
+     .propose-box {
+       .form-control + .select-popup {
+         margin-top: vw(8);
+       }
 
-      .caution-area {
-        padding-top: vw(32);
+       .caution-area {
+         padding-top: vw(32);
 
-        .title {
-          margin-bottom: vw(12);
+         .title {
+           margin-bottom: vw(12);
 
-          .ico-caution {
-            margin-right: vw(4.5);
-          }
+           .ico-caution {
+             margin-right: vw(4.5);
+           }
 
-        }
-      }
+         }
+       }
 
-      .divider {
-        margin-bottom: vw(24);
-      }
+       .divider {
+         margin-bottom: vw(24);
+       }
 
-      .check-area {
-        label {
-          a {
-            font-weight: 500;
-            text-decoration: underline;
+       .check-area {
+         label {
+           a {
+             font-weight: 500;
+             text-decoration: underline;
 
-            &:focus {
-              color: $gray-900;
-            }
-          }
-        }
+             &:focus {
+               color: $gray-900;
+             }
+           }
+         }
 
-        .list-with-dot {
-          padding-top: vw(8);
+         .list-with-dot {
+           padding-top: vw(8);
 
-          li {
-            font-size: vw(12);
-            margin-bottom: 0;
-            padding-left: vw(7);
-          }
-        }
+           li {
+             font-size: vw(12);
+             margin-bottom: 0;
+             padding-left: vw(7);
+           }
+         }
 
-      }
-    }
+       }
+     }
 
-    !* 수정요청 입력 *!
-    .product-area {
-      margin-bottom: vw(48);
+     !* 수정요청 입력 *!
+     .product-area {
+       margin-bottom: vw(48);
 
-      > .img-cosmetics {
-        width: vw(78);
-        height: vw(66);
-        margin: 0 auto vw(16);
+       > .img-cosmetics {
+         width: vw(78);
+         height: vw(66);
+         margin: 0 auto vw(16);
 
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
+         img {
+           width: 100%;
+           height: auto;
+         }
+       }
 
-      .product-name {
-        color: $gray-800;
-        text-align: center;
+       .product-name {
+         color: $gray-800;
+         text-align: center;
 
-        span {
-          color: $gray-600;
-          font-size: vw(13);
-          display: block;
-          font-weight: normal;
-        }
-      }
-    }
+         span {
+           color: $gray-600;
+           font-size: vw(13);
+           display: block;
+           font-weight: normal;
+         }
+       }
+     }
 
-    .write-area {
-      .sub-title {
-        color: $gray-800;
-        margin-bottom: vw(12);
-      }
+     .write-area {
+       .sub-title {
+         color: $gray-800;
+         margin-bottom: vw(12);
+       }
 
-      .badge-box {
-        font-size: 0;
-        margin-bottom: vw(24);
+       .badge-box {
+         font-size: 0;
+         margin-bottom: vw(24);
 
-        .badge {
-          margin-right: vw(10);
+         .badge {
+           margin-right: vw(10);
 
-          &:last-of-type {
-            margin-right: 0;
-          }
+           &:last-of-type {
+             margin-right: 0;
+           }
 
-          &.active {
-            background-color: $yellow;
-            font-weight: bold;
-          }
-        }
-      }
+           &.active {
+             background-color: $yellow;
+             font-weight: bold;
+           }
+         }
+       }
 
-      textarea {
-        margin-bottom: vw(32);
-      }
-    }
+       textarea {
+         margin-bottom: vw(32);
+       }
+     }
 
-    !* 일치율팝업*!
-    .match-rate {
-      padding-bottom: vw(48);
+     !* 일치율팝업*!
+     .match-rate {
+       padding-bottom: vw(48);
 
-      .table-box {
-        text-align: center;
-        margin-bottom: vw(48);
+       .table-box {
+         text-align: center;
+         margin-bottom: vw(48);
 
-        thead {
-          color: $gray-800;
+         thead {
+           color: $gray-800;
 
-          th {
-            vertical-align: middle;
-            padding: vw(16);
-            width: 50%;
-            border-top: vw(1) solid $gray-900;
-            border-bottom: vw(1) solid $gray-400;
-            font-size: vw(16);
-          }
-        }
+           th {
+             vertical-align: middle;
+             padding: vw(16);
+             width: 50%;
+             border-top: vw(1) solid $gray-900;
+             border-bottom: vw(1) solid $gray-400;
+             font-size: vw(16);
+           }
+         }
 
-        tbody {
-          tr {
-            &:last-of-type {
-              th, td {
-                border-bottom: vw(1) solid $gray-400
-              }
-            }
-          }
+         tbody {
+           tr {
+             &:last-of-type {
+               th, td {
+                 border-bottom: vw(1) solid $gray-400
+               }
+             }
+           }
 
-          th, td {
-            border-bottom: 1px solid $gray-300;
-            color: $gray-700;
-            font-weight: normal;
-            font-size: vw(15);
+           th, td {
+             border-bottom: 1px solid $gray-300;
+             color: $gray-700;
+             font-weight: normal;
+             font-size: vw(15);
 
-          }
-        }
+           }
+         }
 
-      }
+       }
 
-      .sub-title {
-        color: $gray-800;
-        margin-bottom: vw(12);
-      }
+       .sub-title {
+         color: $gray-800;
+         margin-bottom: vw(12);
+       }
 
-      .method-box {
-        border-radius: vw(16);
-        display: flex;
-        padding: vw(24);
-        justify-content: space-between;
-        align-items: center;
-        background: $gray-fff url("../img/analysis/ico-minus.png") no-repeat center center;
-        background-size: vw(28) vw(28);
+       .method-box {
+         border-radius: vw(16);
+         display: flex;
+         padding: vw(24);
+         justify-content: space-between;
+         align-items: center;
+         background: $gray-fff url("../img/analysis/ico-minus.png") no-repeat center center;
+         background-size: vw(28) vw(28);
 
-        .area {
-          display: inline-block;
-          text-align: center;
-          font-size: 0;
+         .area {
+           display: inline-block;
+           text-align: center;
+           font-size: 0;
 
-          &.good-area {
-          }
+           &.good-area {
+           }
 
-          &.caution-area {
-          }
+           &.caution-area {
+           }
 
-          .tit {
-            display: block;
-            margin-bottom: vw(4);
-            font-size: vw(15);
+           .tit {
+             display: block;
+             margin-bottom: vw(4);
+             font-size: vw(15);
 
-            + span {
-              color: $gray-700;
-              font-size: vw(13);
-            }
-          }
-        }
-      }
+             + span {
+               color: $gray-700;
+               font-size: vw(13);
+             }
+           }
+         }
+       }
 
-    }
+     }
 
-  }*/
+   }*/
 }
 
 
