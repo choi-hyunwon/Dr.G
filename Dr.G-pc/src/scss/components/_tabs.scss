@@ -1,15 +1,26 @@
 /*
 |--------------------------------------------------------------------|
  v.0.1 주연 : 최초 작업 -- 2022.01.27
+ v.0.1 주연 : tab border 수정 -- 2022.02.15
 |--------------------------------------------------------------------|
 */
 .tab {
+  position: relative;
   width: 100%;
   height: vw(64);
   background-color: $gray-fff;
   overflow-x: auto;
   overflow-y: hidden;
-  border-bottom: 1px solid $gray-300;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: vw(1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $gray-300;
+  }
 
   &.tab-blue {
     .item {
@@ -70,9 +81,10 @@
         width: 100%;
         height: vw(2);
         position: absolute;
-        bottom: 1px;
+        bottom: 0;
         left: 0;
         background-color: $primary;
+        z-index: 2;
       }
     }
   }

@@ -6,7 +6,6 @@
 
 /*고객제안 , 스킨멘토링*/
 .view-details {
-
   .body-details {
     width: 900px;
     margin: 0 auto;
@@ -17,9 +16,10 @@
       border-bottom: 1px solid $gray-900;
 
       .badge-box {
-        margin-bottom: 13px;
+        margin-bottom: 10px;
       }
-      .title{
+
+      .title {
         word-break: keep-all;
       }
 
@@ -30,20 +30,27 @@
           color: $gray-700;
         }
 
-        .like-box{
+        .like-box {
           padding-top: 20px;
+
           .like {
             margin-right: 10px;
             position: relative;
+
             .icon {
               width: 16px;
               height: 16px;
               margin-bottom: 4px;
             }
+
             .num {
+              display: inline-block;
               font-weight: 600;
+              font-size: 15px;
+              font-family: $poppins-semiBold;
               color: $gray-700;
               vertical-align: middle;
+              transform: translateX(-3px);
             }
 
             &:after {
@@ -59,13 +66,16 @@
             }
 
             + .date {
-              margin-left:10px;
+              margin-left: 10px;
             }
           }
+
           .date {
             font-weight: 400;
+            font-size: 15px;
             color: $gray-600;
           }
+
           &.on {
             .like {
               .icon {
@@ -79,7 +89,8 @@
 
     .area-desc {
       padding: 60px 0;
-      &.answer_paddng{
+
+      &.answer_paddng {
         padding-bottom: 0;
       }
 
@@ -117,13 +128,16 @@
           .more {
             display: block;
             color: $primary;
-            span{
+
+            span {
               display: inline-block;
               vertical-align: middle;
+              font-weight: 500;
             }
 
             .ico-arrow-green-right {
               margin-left: 4px;
+              transform: translateY(1px);
             }
           }
         }
@@ -133,14 +147,18 @@
     .sns-box {
       padding: 60px 0 0;
       text-align: center;
-      >p{
+
+      > p {
         color: $gray-600;
       }
-      .more{
+
+      .more {
         margin-bottom: 60px;
       }
-      .btn-wrap{
+
+      .btn-wrap {
         padding: 16px 0 0;
+
         > a {
           margin-right: 16px;
 
@@ -157,9 +175,10 @@
 
       .btn {
         + .btn {
-          margin-left: 10px;
+          margin-left: 8px;
         }
       }
+
       &.btn-wrap-xl {
         padding: vw(48) 0;
       }
@@ -205,6 +224,7 @@
   .unfold-box {
     padding: 40px 0 60px;
     position: relative;
+
     > .title {
       text-align: center;
       padding: 40px 0;
@@ -222,17 +242,21 @@
         margin-right: 2px;
       }
     }
+
     .list-bg {
       display: none;
       background-color: $gray-200;
       padding: 80px 0;
       margin-bottom: 40px;
-      .list{
+
+      .list {
         width: 900px;
         margin: 0 auto;
+
         > li {
           margin-bottom: 60px;
-          &:first-of-type{
+
+          &:first-of-type {
             margin-bottom: 50px;
           }
 
@@ -275,7 +299,8 @@
               margin-bottom: 16px;
               border-radius: 12px;
               margin-right: 16px;
-              &:nth-of-type(2n){
+
+              &:nth-of-type(2n) {
                 margin-right: 0;
               }
 
@@ -284,7 +309,7 @@
               }
 
               .num {
-                font-family: Poppins-Medium,sans-serif;
+                font-family: Poppins-Medium, sans-serif;
                 color: $gray-600;
                 margin-right: vw(4);
               }
@@ -350,18 +375,20 @@
             font-size: vw(13);
             line-height: vw(18);
             color: $gray-600;
-            font-family: Poppins , sans-serif;
+            font-family: Poppins, sans-serif;
           }
         }
       }
     }
-    .solution-intro{
+
+    .solution-intro {
       width: 900px;
       padding: 120px 0 148px;
       margin: 60px auto 120px;
       position: relative;
       background: $blue url("../img/mentoring/bg-round.svg") no-repeat right 50px bottom -28px / 278px 138px;
       background-size: 100% auto;
+
       .font-h1, .font-h3 {
         color: $gray-fff;
       }
@@ -389,13 +416,13 @@
             font-size: vw(13);
             line-height: vw(18);
             color: $gray-600;
-            font-family: Poppins , sans-serif;
+            font-family: Poppins, sans-serif;
           }
         }
       }
     }
 
-    .inner{
+    .inner {
       width: 900px;
       margin: 0 auto;
 
@@ -417,15 +444,18 @@
         > .title {
           margin-bottom: 30px;
         }
+
         .step {
           border-radius: 20px;
           overflow: hidden;
           margin-bottom: 30px;
+
           > p {
             padding: 16px 40px;
             color: $gray-fff;
             font-size: 18px;
             font-weight: 500;
+
             span {
               &.num {
                 text-transform: uppercase;
@@ -446,24 +476,30 @@
               }
             }
           }
+
           > .box {
             background-color: $gray-200;
             padding: 30px 40px 60px;
+
             .area {
               margin-bottom: 40px;
               color: $gray-700;
               @include ellipsis(3)
             }
+
             .list {
               font-size: 0;
               margin-bottom: 40px;
+
               .item {
                 margin-right: 23.7px;
                 display: inline-block;
                 vertical-align: top;
+
                 a {
                   display: block;
                   width: 145px;
+
                   .img {
                     width: 145px;
                     height: 145px;
@@ -477,6 +513,7 @@
                       height: 100%;
                     }
                   }
+
                   .name {
                     width: 145px;
                     display: block;
@@ -491,30 +528,36 @@
                 }
               }
             }
+
             .define {
               background: $gray-fff;
               padding: 30px;
               margin-top: 40px;
               border-radius: 12px;
+
               > p {
                 color: $gray-800;
                 margin-bottom: 12px;
               }
+
               > span {
                 color: $gray-700;
               }
             }
           }
+
           &:nth-of-type(1) {
             > p {
               background-color: #00b398
             }
           }
+
           &:nth-of-type(2) {
             > p {
               background-color: #006341
             }
           }
+
           &:nth-of-type(3) {
             > p {
               background-color: #97d700
@@ -549,14 +592,16 @@
           font-size: 20px;
           margin-bottom: 30px;
         }
-        .btn-wrap{
-          .btn{
+
+        .btn-wrap {
+          .btn {
             min-width: 210px;
           }
         }
       }
     }
-    +.footer-details{
+
+    + .footer-details {
       width: 900px;
       margin: 0 auto;
     }
@@ -565,7 +610,7 @@
 
   .footer-details {
     border-top: 1px solid $gray-400;
-    padding: vw(32) vw(20) vw(48);
+    padding: vw(32) vw(20) 240px;
 
     &.bg-dark {
       background-color: $gray-800 !important;
@@ -588,8 +633,6 @@
       }
     }
   }
-
-
 
 
   /* 성분분석 */

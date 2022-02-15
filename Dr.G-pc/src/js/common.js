@@ -183,6 +183,24 @@ front.common = (function () {
         $body.on('click', function(){
             $('._selectBox').removeClass('down');
         });
+
+        /* 고객제안 - 모두 선택하기 */
+        if($('.section-privacy').length == 1) {
+            $('#selecAll').click( function() {
+                $('.box-gray .custom-control-input').prop('checked',this.checked);
+            });
+
+            $('.box-gray .custom-control-input').each(function (){
+                $(this).on('change',function (){
+                    console.log('change')
+                    if($('.box-gray .custom-control-input:checked').length == $('.box-gray .custom-control-input').length){
+                        $( '#selecAll.custom-control-input' ).prop('checked',this.checked);
+                    } else {
+                        $( '#selecAll.custom-control-input' ).prop('checked', false);
+                    }
+                })
+            })
+        }
     }
 
     var tab = function () {
