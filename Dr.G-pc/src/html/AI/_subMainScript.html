@@ -133,7 +133,7 @@
             // 2
             animationFace.playSegments([0,100], true);
         },
-        offset: "50%"
+        offset: "90%"
     })
 
     var $score = $('._barChart .bar .pos');
@@ -220,7 +220,7 @@
     });
 
     new Waypoint({
-        element: document.querySelector('._storySlider'),
+        element: document.querySelector('._sectionStory'),
         handler: function () {
             // count - 1
             $({ val : 10 }).animate({ val : 23 }, {
@@ -264,43 +264,42 @@
 
             // animation
             animationGraph.playSegments([0,60], true);
-
-            console.log('story slider')
+            // console.log('story slider')
         },
         offset: "70%"
     })
     /* ---------- e story section animation ---------- */
 
     /* ---------- s why section animation ---------- */
-    let icon6points = document.querySelector('._6points');
-
-    let animation6points = bodymovin.loadAnimation({
-        container: icon6points,
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        path: "../../img/AI/6point_279x301.json"
-    });
-
-    let iconSpecialEdit = document.querySelector('._specialEdit');
-
-    let animationSpecialEdit = bodymovin.loadAnimation({
-        container: iconSpecialEdit,
-        renderer: 'svg',
-        loop: false,
-        // autoplay: true,
-        path: "../../img/AI/special_edit.json"
-    });
-
-    // var whySlider = new Swiper("._whySlider", {
-    //     spaceBetween: 48,
-    //     centeredSlides: true,
-    //     effect: 'fade',
-    //     pagination: {
-    //         el: "._whySlider + ._sliderPagination",
-    //         clickable: true,
-    //     }
+    // let icon6points = document.querySelector('._6points');
+    //
+    // let animation6points = bodymovin.loadAnimation({
+    //     container: icon6points,
+    //     renderer: 'svg',
+    //     loop: false,
+    //     autoplay: true,
+    //     path: "../../img/AI/6point_279x301.json"
     // });
+    //
+    // let iconSpecialEdit = document.querySelector('._specialEdit');
+    //
+    // let animationSpecialEdit = bodymovin.loadAnimation({
+    //     container: iconSpecialEdit,
+    //     renderer: 'svg',
+    //     loop: false,
+    //     // autoplay: true,
+    //     path: "../../img/AI/special_edit.json"
+    // });
+
+    var whySlider = new Swiper("._whySlider", {
+        spaceBetween: 48,
+        centeredSlides: true,
+        effect: 'fade',
+        pagination: {
+            el: "._whySlider + ._sliderPagination",
+            clickable: true,
+        }
+    });
 
     // whySlider.on('slideChange', function () {
     //     if(whySlider.realIndex === 0) {
@@ -320,10 +319,10 @@
         element: document.querySelector('._whySlider'),
         handler: function () {
             // whySlider.autoplay.start();
-            animationSpecialEdit.playSegments([0,120], true);
+            // animationSpecialEdit.playSegments([0,120], true);
             // console.log('why slider')
         },
-        offset: "70%"
+        offset: "60%"
     })
 
     /* 차트 */
@@ -335,7 +334,7 @@
         },
         {
             "date": "2021-10-01",
-            "value": 55,
+            "value": 65,
         },
         {
             "date": "2021-11-01",
