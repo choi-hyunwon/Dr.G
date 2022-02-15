@@ -4,41 +4,42 @@
 <body>
 <div class="wrap">
     <!-- s header -->
-    @@include('../../html/include/common/header-white.html')
+    @@include('../../html/include/common/header.html')
     <!-- e header -->
 
     <!-- s contents -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="mentoring-wrap mentoring-sub-main sub-main _sub-main">
             <!-- s section-color -->
-            <div class="section-color bg-blue">
-                <div class="text-box" data-aos="fade-up" data-aos-duration="500">
-                    <p class="font-h1 font-bold">1:1 스킨 멘토링</p>
-                    <p class="font-h5">피부고민, 스킨 멘토와 함께하세요</p>
-                </div>
-                <div class="img-box">
-                    <div class="img img-mentor">
-                        <img src="../../img/mentoring/img-submain-mentor.png" alt="멘토이미지">
+            <div class="bg-blue">
+                <div class="section-visual inner">
+                    <div class="box text-box">
+                        <p class="font-h1 font-bold" data-aos="fade-up" data-aos-duration="500">1:1 스킨 멘토링</p>
+                        <p class="font-h5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                            피부고민, 스킨 멘토와 함께하세요.<br>
+                            <span class="color-yellow font-medium"><span class="font-poppins-medium num">5,895</span>명의</span> 피부고민 상담이 이루어졌어요.
+                        </p>
+
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">
+                            <a href="#" class="btn btn-lg btn-black">1:1 스킨멘토링 시작하기</a>
+                        </div>
                     </div>
-                    <ul class="smile-graph">
-                        <li class="value"></li>
-                    </ul>
+                    <div class="box img-box">
+                        <div class="img img-mentor">
+                            <img src="../../img/mentoring/img-submain-mentor.png" alt="멘토이미지">
+                        </div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="total-box" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1700">
-                    <p class="total"><span class="num font-h1">5,895</span><span class="unit font-h2">명</span></p>
-                    <p class="text">피부 고민 상담이 이루어졌어요.</p>
-                </div>
-                <div class="btn-box" data-aos="fade-up" data-aos-duration="500" data-aos-delay="2200">
-                    <a href="#" class="btn btn-xl btn-block btn-black">1:1 스킨멘토링 시작하기</a>
-                </div>
-                @@include('../../html/include/common/sub-main-btn.html')
-             </div>
+            </div>
             <!-- e section-color -->
 
             <!-- s section-tab -->
             <div class="section-tab _section-tab">
-                <div class="tab _tab slide-tab">
-                    <ul>
+                <div class="tab tab-blue _tab slide-tab">
+                    <ul class="inner">
                         <li class="item active"><a href="#">ABOUT</a></li>
                         <li class="item"><a href="#">PROCESS</a></li>
                         <li class="item"><a href="#">ANSWER</a></li>
@@ -49,23 +50,23 @@
             </div>
             <!-- e section-tab -->
 
-            <!--s ABOUT -->
+            <!--s section-about -->
             <div class="section section-about">
-                <div class="content">
-                    <p class="font-h2 font-bold h2-title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">1:1 스킨멘토링은<br>무엇인가요?</p>
-                    <p class="font-h5 font-bold color-blue"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">닥터지는 피부 고민에 도움을 드립니다.</p>
-                    <div class="desc">
-                        <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">말 못할 피부 고민부터,<br>피부에 관한 사소한 궁금증까지 말이죠.</p>
-                        <p class="_underline" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">생활 습관부터 <span class="font-bold underscore">피부 고민</span>을 남겨주시면<br>닥터지 스킨 멘토가 정성껏 답변해 드려요.</p>
-                        <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">피부 고민의 원인 분석은 물론,<br>나의 라이프스타일에 맞춘 전문가의 솔루션을<br>닥터지 스킨멘토링에서 경험해보세요.</p>
+                <div class="inner">
+                    <p class="font-h2 font-bold h2-title" data-aos="fade-up" data-aos-duration="500">1:1 스킨멘토링은 무엇인가요?</p>
+                    <p class="font-h4 font-bold color-blue"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">닥터지는 피부 고민에 도움을 드립니다.</p>
+                    <div class="desc" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+                        <p>말 못할 피부 고민부터, 피부에 관한 사소한 궁금증까지 말이죠.</p>
+                        <p class="_underline">생활 습관부터 <span class="font-bold underscore">피부 고민</span>을 남겨주시면 닥터지 스킨 멘토가 정성껏 답변해 드려요.</p>
+                        <p>피부 고민의 원인 분석은 물론, 나의 라이프스타일에 맞춘 전문가의 솔루션을<br>닥터지 스킨멘토링에서 경험해보세요.</p>
                     </div>
                 </div>
             </div>
-            <!--e ABOUT -->
+            <!--e section-about -->
 
             <!--s PROCESS -->
             <div class="section section-process">
-                <div class="content">
+                <div class="inner">
                     <p class="font-h2 font-bold h2-title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">어떻게 진행되나요?</p>
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                         <ul class="step-box">
@@ -210,118 +211,233 @@
 
             <!--s ANSWER -->
             <div class="section section-answer">
-                <div class="content">
-                    <p class="font-h2 font-bold h2-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">지금 <span class="num">586</span>분께서<br><span class="color-blue">스킨 멘토의 답변</span>을<br>기다리고 있어요</p>
-                    <ul class="answer_box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                        <li class="item">
-                            <div class="skin_icon"><i class="icon icon-DN-m"></i></div>
-                            <div class="type">
-                                <p class="font-body-1 font-bold">수부민건</p>
-                                <span class="badge badge-sm badge-blue">답변대기</span>
+                <div class="inner">
+                    <p class="font-h2 font-bold h2-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">지금 <span class="num">586</span>분께서 <span class="color-blue">스킨 멘토의 답변</span>을 기다리고 있어요</p>
+
+
+
+                    <div class="question-wrap">
+                        <div class="answer-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide item">
+                                    <div class="skin_icon"><i class="icon icon-DN-m"></i></div>
+                                    <div class="type">
+                                        <p class="font-h6 font-bold">수부민건</p>
+                                        <span class="badge badge-blue">답변대기</span>
+                                    </div>
+                                    <div class="area">
+                                        <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <div class="skin_icon"><i class="icon icon-DN-p"></i></div>
+                                    <div class="type">
+                                        <p class="font-h6 font-bold">수부민건</p>
+                                        <span class="badge badge-gray">답변완료</span>
+                                    </div>
+                                    <div class="area">
+                                        <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <div class="skin_icon"><i class="icon icon-DS-m"></i></div>
+                                    <div class="type">
+                                        <p class="font-h6 font-bold">수부민건</p>
+                                        <span class="badge badge-blue">답변대기</span>
+                                    </div>
+                                    <div class="area">
+                                        <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <div class="skin_icon"><i class="icon icon-DS-p"></i></div>
+                                    <div class="type">
+                                        <p class="font-h6 font-bold">수부민건</p>
+                                        <span class="badge badge-gray">답변완료</span>
+                                    </div>
+                                    <div class="area">
+                                        <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <div class="skin_icon"><i class="icon icon-ON-m"></i></div>
+                                    <div class="type">
+                                        <p class="font-h6 font-bold">수부민건</p>
+                                        <span class="badge badge-blue">답변대기</span>
+                                    </div>
+                                    <div class="area">
+                                        <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <div class="skin_icon"><i class="icon icon-ON-p"></i></div>
+                                    <div class="type">
+                                        <p class="font-h6 font-bold">수부민건</p>
+                                        <span class="badge badge-gray">답변완료</span>
+                                    </div>
+                                    <div class="area">
+                                        <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <div class="skin_icon"><i class="icon icon-OS-m"></i></div>
+                                    <div class="type">
+                                        <p class="font-h6 font-bold">수부민건</p>
+                                        <span class="badge badge-blue">답변대기</span>
+                                    </div>
+                                    <div class="area">
+                                        <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <div class="skin_icon"><i class="icon icon-OS-p"></i></div>
+                                    <div class="type">
+                                        <p class="font-h6 font-bold">수부민건</p>
+                                        <span class="badge badge-gray">답변완료</span>
+                                    </div>
+                                    <div class="area">
+                                        <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <div class="skin_icon"><i class="icon icon-DN-m"></i></div>
+                                    <div class="type">
+                                        <p class="font-h6 font-bold">수부민건</p>
+                                        <span class="badge badge-blue">답변대기</span>
+                                    </div>
+                                    <div class="area">
+                                        <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide item">
+                                    <div class="skin_icon"><i class="icon icon-DN-p"></i></div>
+                                    <div class="type">
+                                        <p class="font-h6 font-bold">수부민건</p>
+                                        <span class="badge badge-gray">답변완료</span>
+                                    </div>
+                                    <div class="area">
+                                        <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="area">
-                                <p class="font-body-1"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="skin_icon"><i class="icon icon-DN-p"></i></div>
-                            <div class="type">
-                                <p class="font-body-1 font-bold">수부민건</p>
-                                <span class="badge badge-sm badge-gray">답변완료</span>
-                            </div>
-                            <div class="area">
-                                <p class="font-body-1"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="skin_icon"><i class="icon icon-DS-m"></i></div>
-                            <div class="type">
-                                <p class="font-body-1 font-bold">수부민건</p>
-                                <span class="badge badge-sm badge-blue">답변대기</span>
-                            </div>
-                            <div class="area">
-                                <p class="font-body-1"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="skin_icon"><i class="icon icon-DS-p"></i></div>
-                            <div class="type">
-                                <p class="font-body-1 font-bold">수부민건</p>
-                                <span class="badge badge-sm badge-gray">답변완료</span>
-                            </div>
-                            <div class="area">
-                                <p class="font-body-1"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="skin_icon"><i class="icon icon-ON-m"></i></div>
-                            <div class="type">
-                                <p class="font-body-1 font-bold">수부민건</p>
-                                <span class="badge badge-sm badge-blue">답변대기</span>
-                            </div>
-                            <div class="area">
-                                <p class="font-body-1"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="skin_icon"><i class="icon icon-ON-p"></i></div>
-                            <div class="type">
-                                <p class="font-body-1 font-bold">수부민건</p>
-                                <span class="badge badge-sm badge-gray">답변완료</span>
-                            </div>
-                            <div class="area">
-                                <p class="font-body-1"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="skin_icon"><i class="icon icon-OS-m"></i></div>
-                            <div class="type">
-                                <p class="font-body-1 font-bold">수부민건</p>
-                                <span class="badge badge-sm badge-blue">답변대기</span>
-                            </div>
-                            <div class="area">
-                                <p class="font-body-1"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="skin_icon"><i class="icon icon-OS-p"></i></div>
-                            <div class="type">
-                                <p class="font-body-1 font-bold">수부민건</p>
-                                <span class="badge badge-sm badge-gray">답변완료</span>
-                            </div>
-                            <div class="area">
-                                <p class="font-body-1"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="skin_icon"><i class="icon icon-DN-m"></i></div>
-                            <div class="type">
-                                <p class="font-body-1 font-bold">수부민건</p>
-                                <span class="badge badge-sm badge-blue">답변대기</span>
-                            </div>
-                            <div class="area">
-                                <p class="font-body-1"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="skin_icon"><i class="icon icon-DN-p"></i></div>
-                            <div class="type">
-                                <p class="font-body-1 font-bold">수부민건</p>
-                                <span class="badge badge-sm badge-gray">답변완료</span>
-                            </div>
-                            <div class="area">
-                                <p class="font-body-1"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
-                            </div>
-                        </li>
-                    </ul>
+                         </div>
+
+                    </div>
+                    <div class="answer-button swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+                    <div class="answer-button swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+
+
+                    <!--
+                                        <ul class="answer_box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                                            <li class="item">
+                                                <div class="skin_icon"><i class="icon icon-DN-m"></i></div>
+                                                <div class="type">
+                                                    <p class="font-h6 font-bold">수부민건</p>
+                                                    <span class="badge badge-blue">답변대기</span>
+                                                </div>
+                                                <div class="area">
+                                                    <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="skin_icon"><i class="icon icon-DN-p"></i></div>
+                                                <div class="type">
+                                                    <p class="font-h6 font-bold">수부민건</p>
+                                                    <span class="badge badge-gray">답변완료</span>
+                                                </div>
+                                                <div class="area">
+                                                    <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="skin_icon"><i class="icon icon-DS-m"></i></div>
+                                                <div class="type">
+                                                    <p class="font-h6 font-bold">수부민건</p>
+                                                    <span class="badge badge-blue">답변대기</span>
+                                                </div>
+                                                <div class="area">
+                                                    <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="skin_icon"><i class="icon icon-DS-p"></i></div>
+                                                <div class="type">
+                                                    <p class="font-h6 font-bold">수부민건</p>
+                                                    <span class="badge badge-gray">답변완료</span>
+                                                </div>
+                                                <div class="area">
+                                                    <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="skin_icon"><i class="icon icon-ON-m"></i></div>
+                                                <div class="type">
+                                                    <p class="font-h6 font-bold">수부민건</p>
+                                                    <span class="badge badge-blue">답변대기</span>
+                                                </div>
+                                                <div class="area">
+                                                    <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="skin_icon"><i class="icon icon-ON-p"></i></div>
+                                                <div class="type">
+                                                    <p class="font-h6 font-bold">수부민건</p>
+                                                    <span class="badge badge-gray">답변완료</span>
+                                                </div>
+                                                <div class="area">
+                                                    <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="skin_icon"><i class="icon icon-OS-m"></i></div>
+                                                <div class="type">
+                                                    <p class="font-h6 font-bold">수부민건</p>
+                                                    <span class="badge badge-blue">답변대기</span>
+                                                </div>
+                                                <div class="area">
+                                                    <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="skin_icon"><i class="icon icon-OS-p"></i></div>
+                                                <div class="type">
+                                                    <p class="font-h6 font-bold">수부민건</p>
+                                                    <span class="badge badge-gray">답변완료</span>
+                                                </div>
+                                                <div class="area">
+                                                    <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="skin_icon"><i class="icon icon-DN-m"></i></div>
+                                                <div class="type">
+                                                    <p class="font-h6 font-bold">수부민건</p>
+                                                    <span class="badge badge-blue">답변대기</span>
+                                                </div>
+                                                <div class="area">
+                                                    <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="skin_icon"><i class="icon icon-DN-p"></i></div>
+                                                <div class="type">
+                                                    <p class="font-h6 font-bold">수부민건</p>
+                                                    <span class="badge badge-gray">답변완료</span>
+                                                </div>
+                                                <div class="area">
+                                                    <p class="font-body-2"> 염증성 여드름과 흉터가 자리잡고 있어요. 겨울에는 홍조도 심해요. 제품 추천 좀 해주세요.</p>
+                                                </div>
+                                            </li>
+                                        </ul>-->
                 </div>
             </div>
             <!--e ANSWER -->
 
             <!--s VOC -->
             <div class="section section-voc">
-                <div class="content">
-                    <p class="font-h2 font-bold h2-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">1:1 스킨멘토링을<br>경험한 분들의 <span class="color-blue">진짜 후기</span>를<br>확인하세요.</p>
+                <div class="inner">
+                    <p class="font-h2 font-bold h2-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">1:1 스킨멘토링을 경험한 분들의 <span class="color-blue">진짜 후기</span>를 확인하세요.</p>
                     <div class="review-wrap">
                         <ul class="review_box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                             <!--
@@ -579,7 +695,7 @@
 
             <!--s FAQ -->
             <div class="section section-faq">
-                <div class="content">
+                <div class="inner">
                     <p class="font-h2 font-bold h2-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"><span class="color-blue">더 궁금한 점</span> 있으신가요?</p>
                     <ul class="faq_box" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <li class="item">
@@ -627,23 +743,3 @@
 @@include('./_mentoringScript.html')
 </body>
 </html>
-
-<style>
-    .vert .carousel-item-next.carousel-item-left,
-    .vert .carousel-item-prev.carousel-item-right {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-
-    .vert .carousel-item-next,
-    .vert .active.carousel-item-right {
-        -webkit-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100% 0);
-    }
-
-    .vert .carousel-item-prev,
-    .vert .active.carousel-item-left {
-        -webkit-transform: translate3d(0,-100%, 0);
-        transform: translate3d(0,-100%, 0);
-    }
-</style>

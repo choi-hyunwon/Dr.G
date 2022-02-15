@@ -306,3 +306,11 @@
 .ico-minus-sm {
   @include background-img($width: 14, $height: 14, $category: 'common', $img: 'ico-minus-sm.svg');
 }
+
+.ico-nav-prev-gray {
+  @include background-img($width: 32, $height: 32, $category: 'common', $img: 'ico-nav-prev-gray.svg');
+}
+
+.ico-nav-next-gray {
+  @include background-img($width: 32, $height: 32, $category: 'common', $img: 'ico-nav-next-gray.svg');
+}
