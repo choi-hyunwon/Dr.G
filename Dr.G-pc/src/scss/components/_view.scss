@@ -16,7 +16,7 @@
       border-bottom: 1px solid $gray-900;
 
       .badge-box {
-        margin-bottom: 10px;
+        margin-bottom: 13px;
       }
 
       .title {
@@ -96,14 +96,7 @@
         word-break: keep-all;
         color: $gray-700;
         letter-spacing: 0;
-        font-size: vw(16);
-
-        .more {
-          text-decoration: underline;
-          font-weight: 500;
-          color: $gray-500;
-          font-size: vw(15);
-        }
+        font-size: 16px;
       }
 
       .product-box {
@@ -145,120 +138,20 @@
             }
           }
         }
-
-
       }
     }
-
-    /*생활습관 펼쳐보기*/
-    .unfold-box {
-      margin-top: vw(48);
-      border-top: 1px solid $gray-400;
-      padding: vw(32) vw(24) 0;
-
-      &._unfold {
-        background-color: $gray-200;
-        border-top: none;
-      }
-
-      > .title {
-        text-align: center;
-        font-weight: 700;
-        font-size: vw(15);
-        color: $gray-800;
-
-        span {
-          vertical-align: middle;
-          margin-right: vw(6);
-        }
-      }
-
-      .list {
-        display: none;
-        padding-top: vw(56);
-        padding-bottom: vw(48);
-
-        > li {
-          margin-bottom: vw(32);
-
-          &:first-of-type {
-            margin-bottom: vw(22);
-          }
-
-          &:last-of-type {
-            margin-bottom: 0;
-          }
-
-          .sub-title {
-            color: $gray-800;
-            font-size: vw(16);
-            line-height: vw(24);
-            font-weight: 700;
-            margin-bottom: vw(12);
-          }
-
-          .badge-box {
-            .badge {
-              font-weight: 700;
-              margin-right: vw(6);
-              margin-bottom: vw(10);
-
-              &:last-of-type {
-                margin-right: 0;
-              }
-            }
-          }
-
-          .habit {
-            background-color: $gray-fff;
-            border-radius: vw(12);
-            padding: vw(20);
-
-            li {
-              font-size: vw(15);
-              color: $gray-800;
-              font-weight: 500;
-              margin-bottom: vw(8);
-
-              &:last-of-type {
-                margin-bottom: 0
-              }
-
-              .num {
-                color: $gray-600;
-                margin-right: vw(4);
-              }
-
-              .answer {
-                color: $blue;
-                font-weight: 700;
-                margin-left: vw(4);
-              }
-            }
-          }
-        }
-
-
-      }
-    }
-
 
     .sns-box {
       padding: 60px 0 0;
       text-align: center;
-
-      > p {
+      >p{
         color: $gray-600;
-        font-weight: 500;
       }
-
-      .more {
+      .more{
         margin-bottom: 60px;
       }
-
-      .btn-wrap {
+      .btn-wrap{
         padding: 16px 0 0;
-
         > a {
           margin-right: 16px;
 
@@ -275,10 +168,9 @@
 
       .btn {
         + .btn {
-          margin-left: 8px;
+          margin-left: 10px;
         }
       }
-
       &.btn-wrap-xl {
         padding: vw(48) 0;
       }
@@ -320,6 +212,368 @@
 
   }
 
+  /*멘토링 - 생활습관 펼쳐보기*/
+  .unfold-box {
+    padding: 40px 0 60px;
+    position: relative;
+    > .title {
+      text-align: center;
+      padding: 40px 0;
+      font-weight: 700;
+      font-size: 16px;
+      color: $gray-800;
+      line-height: 1;
+      width: 900px;
+      margin: 0 auto;
+      border-top: 1px solid $gray-300;
+      cursor: pointer;
+
+      span {
+        vertical-align: middle;
+        margin-right: 2px;
+      }
+    }
+    .list-bg {
+      display: none;
+      background-color: $gray-200;
+      padding: 80px 0;
+      margin-bottom: 40px;
+      .list{
+        width: 900px;
+        margin: 0 auto;
+        > li {
+          margin-bottom: 60px;
+          &:first-of-type{
+            margin-bottom: 50px;
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          .sub-title {
+            color: $gray-800;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+          }
+
+          .badge-box {
+            .badge {
+              font-weight: 700;
+              margin-right: 8px;
+              margin-bottom: 10px;
+
+              &:last-of-type {
+                margin-right: 0;
+              }
+            }
+          }
+
+          .habit {
+
+            li {
+              background-color: $gray-fff;
+              padding: 20px 30px;
+              display: inline-flex;
+              justify-content: space-between;
+              align-items: center;
+              width: calc(50% - 10px);
+              font-size: 15px;
+              color: $gray-800;
+              font-weight: 500;
+              margin-bottom: 16px;
+              border-radius: 12px;
+              margin-right: 16px;
+              &:nth-of-type(2n){
+                margin-right: 0;
+              }
+
+              &:last-of-type {
+                margin-bottom: 0
+              }
+
+              .num {
+                font-family: Poppins-Medium,sans-serif;
+                color: $gray-600;
+                margin-right: vw(4);
+              }
+
+              .answer {
+                color: $blue;
+                font-weight: 700;
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*멘토링 - 답변완료*/
+  .solution-box {
+    .section-color {
+      margin-top: 60px;
+      padding: 120px 0 148px;
+      margin-bottom: 120px;
+      position: relative;
+      background: $blue url("../img/mentoring/bg-round.svg") no-repeat right 50px bottom -28px / 278px 138px;
+      background-size: 100% auto;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        background: url("../img/mentoring/img-mentor2.svg") no-repeat;
+        width: 186px;
+        height: 286px;
+        background-size: 100% auto;
+        position: absolute;
+        right: 100px;
+        bottom: -24px;
+      }
+
+      .font-h1, .font-h3 {
+        color: $gray-fff;
+      }
+
+      .floating-box {
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+        z-index: 3;
+
+        .item {
+          background-color: $gray-fff;
+          box-shadow: 0 4px 12px rgba(34, 34, 34, 0.08);
+          border-radius: 20px;
+          padding: 40px;
+
+          .question {
+            font-size: vw(15);
+            line-height: vw(22);
+            color: $gray-800;
+            margin-bottom: vw(5);
+          }
+
+          .date {
+            font-size: vw(13);
+            line-height: vw(18);
+            color: $gray-600;
+            font-family: Poppins , sans-serif;
+          }
+        }
+      }
+    }
+    .solution-intro{
+      width: 900px;
+      padding: 120px 0 148px;
+      margin: 60px auto 120px;
+      position: relative;
+      background: $blue url("../img/mentoring/bg-round.svg") no-repeat right 50px bottom -28px / 278px 138px;
+      background-size: 100% auto;
+      .font-h1, .font-h3 {
+        color: $gray-fff;
+      }
+
+      .floating-box {
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+        z-index: 3;
+
+        .item {
+          background-color: $gray-fff;
+          box-shadow: 0 4px 12px rgba(34, 34, 34, 0.08);
+          border-radius: 20px;
+          padding: 40px;
+
+          .question {
+            font-size: vw(15);
+            line-height: vw(22);
+            color: $gray-800;
+            margin-bottom: vw(5);
+          }
+
+          .date {
+            font-size: vw(13);
+            line-height: vw(18);
+            color: $gray-600;
+            font-family: Poppins , sans-serif;
+          }
+        }
+      }
+    }
+
+    .inner{
+      width: 900px;
+      margin: 0 auto;
+
+      .answer {
+        > li {
+          margin-bottom: 60px;
+
+          .title {
+            margin-bottom: 16px;
+          }
+
+          .desc {
+            color: $gray-700;
+          }
+        }
+      }
+
+      .step-box {
+        > .title {
+          margin-bottom: 30px;
+        }
+        .step {
+          border-radius: 20px;
+          overflow: hidden;
+          margin-bottom: 30px;
+          > p {
+            padding: 16px 40px;
+            color: $gray-fff;
+            font-size: 18px;
+            font-weight: 500;
+            span {
+              &.num {
+                text-transform: uppercase;
+                padding-right: 17px;
+                position: relative;
+
+                &:after {
+                  content: '';
+                  display: inline-block;
+                  width: 1px;
+                  height: 18px;
+                  background-color: $gray-fff;
+                  position: absolute;
+                  right: 8px;
+                  top: 5px;
+                  opacity: 0.3;
+                }
+              }
+            }
+          }
+          > .box {
+            background-color: $gray-200;
+            padding: 30px 40px 60px;
+            .area {
+              margin-bottom: 40px;
+              color: $gray-700;
+              @include ellipsis(3)
+            }
+            .list {
+              font-size: 0;
+              margin-bottom: 40px;
+              .item {
+                margin-right: 23.7px;
+                display: inline-block;
+                vertical-align: top;
+                a {
+                  display: block;
+                  width: 145px;
+                  .img {
+                    width: 145px;
+                    height: 145px;
+                    display: inline-block;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    margin-bottom: 16px;
+
+                    img {
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                  .name {
+                    width: 145px;
+                    display: block;
+                    font-size: 15px;
+                    color: $gray-800;
+                    white-space: normal;
+                  }
+                }
+
+                &:last-of-type {
+                  margin-right: 0;
+                }
+              }
+            }
+            .define {
+              background: $gray-fff;
+              padding: 30px;
+              margin-top: 40px;
+              border-radius: 12px;
+              > p {
+                color: $gray-800;
+                margin-bottom: 12px;
+              }
+              > span {
+                color: $gray-700;
+              }
+            }
+          }
+          &:nth-of-type(1) {
+            > p {
+              background-color: #00b398
+            }
+          }
+          &:nth-of-type(2) {
+            > p {
+              background-color: #006341
+            }
+          }
+          &:nth-of-type(3) {
+            > p {
+              background-color: #97d700
+            }
+          }
+        }
+      }
+
+      .greetings {
+        background-color: #e9f7ff;
+        padding: 40px;
+        border-radius: 20px;
+
+        > p {
+          padding-left: 32px;
+          background: url("../img/mentoring/bg-bubble.svg") no-repeat left center;
+          background-size: 26px 26px;
+          margin-bottom: 16px;
+        }
+
+        > span {
+          letter-spacing: -0.02em;
+          color: $gray-800;
+        }
+      }
+
+      .more {
+        padding: 60px 0;
+
+        > p {
+          color: $gray-800;
+          font-size: 20px;
+          margin-bottom: 30px;
+        }
+        .btn-wrap{
+          .btn{
+            min-width: 210px;
+          }
+        }
+      }
+    }
+    +.footer-details{
+      width: 900px;
+      margin: 0 auto;
+    }
+  }
+
+
   .footer-details {
     width: 900px;
     margin: 0 auto;
@@ -348,9 +602,12 @@
     }
   }
 
+
+
+
   /* 성분분석 */
-  .analysis-wrap {
-    /* 등록제안,수정요청입력란 */
+ /* .analysis-wrap {
+    !* 등록제안,수정요청입력란 *!
     .heading {
       padding: vw(20) vw(24);
 
@@ -363,7 +620,7 @@
 
     }
 
-    /* 질문 & 답 */
+    !* 질문 & 답 *!
     .question-box {
       background-color: $gray-200;
       padding: vw(48) vw(24);
@@ -475,7 +732,7 @@
     }
 
 
-    /* 제품등록제안 */
+    !* 제품등록제안 *!
     .full-img {
       width: vw(375);
       height: vw(375);
@@ -534,7 +791,7 @@
       }
     }
 
-    /* 수정요청 입력 */
+    !* 수정요청 입력 *!
     .product-area {
       margin-bottom: vw(48);
 
@@ -591,7 +848,7 @@
       }
     }
 
-    /* 일치율팝업*/
+    !* 일치율팝업*!
     .match-rate {
       padding-bottom: vw(48);
 
@@ -672,7 +929,7 @@
 
     }
 
-  }
+  }*/
 }
 
 

@@ -5,6 +5,29 @@
 |--------------------------------------------------------------------|
 */
 
+
+.popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(34, 34, 34, .2);
+  opacity: 0;
+  transition: opacity 0.15s linear;
+
+  &.show {
+    opacity: 1;
+  }
+
+  &.hide {
+    opacity: 0;
+  }
+}
+
 /* alert */
 .modal {
   .modal-dialog {
@@ -38,6 +61,10 @@
       border-top: 1px solid $gray-300;
 
       a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 13px;
         font-weight: bold;
         font-size: 15px;
         line-height: 22px;
@@ -45,22 +72,17 @@
         margin: 0;
       }
 
-      &.btn-double {
-        padding: 0;
-
-        a {
+      &.btn-double{
+        a{
           display: inline-block;
           width: 50%;
           border-right: 1px solid $gray-300;
-          padding: 13px;
-          text-align: center;
 
-          &.color-gray {
+          &.color-gray{
             color: $gray-600;
             font-weight: 500;
           }
-
-          &:last-of-type {
+          &:last-of-type{
             border-right: none;
           }
         }
@@ -70,29 +92,7 @@
 
 }
 
-.popup-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1040;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  outline: 0;
-  background-color: rgba(34, 34, 34, .2);
-  opacity: 0;
-  transition: opacity 0.15s linear;
-
-  &.show {
-    opacity: 1;
-  }
-
-  &.hide {
-    opacity: 0;
-  }
-}
-
-/* custom popup */
+/* popup */
 .popup-wrap {
   display: none;
   opacity: 0;
@@ -247,25 +247,26 @@
       }
     }
 
-    &.mentoring-review {
-      .popup-body {
+
+    /*후기작성하기 팝업*/
+    &.mentoring-review-write{
+      .popup-body{
         .star-box {
           height: 44px;
           text-align: center;
-          padding: 0 150px;
-          margin-bottom: 30px;
-
+          width: 254px;
+          margin: 0 auto 30px;
           .star {
             float: left;
             display: inline-block;
-            width: vw(21);
-            height: vw(40);
+            width: 23px;
+            height: 44px;
             cursor: pointer;
 
             &.star_left {
-              background: url('../img/common/ico-star-gray.svg') no-repeat 0.066667vw 0;
-              background-size: vw(42);
-              margin-left: vw(6);
+              background: url('../img/common/ico-star-gray.svg') no-repeat 0 0;
+              background-size: 46px;
+              margin-left: 6px;
 
               &:nth-child(1) {
                 margin-left: 0;
@@ -273,9 +274,9 @@
             }
 
             &.star_right {
-              background: url('../img/common/ico-star-gray.svg') no-repeat -0.066667vw 0;
+              background: url('../img/common/ico-star-gray.svg') no-repeat 0 0;
               transform: scaleX(-1);
-              background-size: vw(42);
+              background-size: 46px;
             }
 
             &.on {
@@ -283,12 +284,129 @@
             }
           }
         }
-
-        .list-with-dot {
+        .list-with-dot{
           padding-top: 20px;
-
-          .font-medium {
+          .font-medium{
             color: $gray-700;
+          }
+        }
+      }
+    }
+
+    /*후기팝업*/
+    &.mentoring-review {
+      .popup-content{
+        background-color: $yellow;
+        padding: 20px 12px 0 20px ;
+      }
+
+      .popup-body{
+        height: 616px;
+        overflow-y: scroll;
+        padding-right: 12px;
+        &::-webkit-scrollbar {
+          width: 6px;  /* 세로축 스크롤바 길이 */
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $gray-600;
+          border-radius: 10px;
+        }
+
+        >.title{
+          color: $gray-900;
+        }
+        >.btn-wrap{
+          padding: 30px 30px 60px;
+        }
+      }
+
+      .review_box{
+        .item{
+          padding: 30px;
+          background-color: $gray-fff;
+          border-radius: 20px;
+          margin-bottom: 20px;
+          font-size: 0;
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+
+          .icon-area {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+            .icon {
+              width: 70px;
+              height: 70px;
+            }
+          }
+          .content-area{
+            width: calc(100% - 90px);
+            display: inline-block;
+            .star-area {
+              margin-bottom: 12px;
+              .score {
+                span {
+                  width: 16.5px;
+                  height: 16px;
+                  display: inline-block;
+                  margin-right: 6px;
+                  &:last-of-type{
+                    margin-right: 0;
+                  }
+
+                  &.on {
+                    background: url("../img/mentoring/ico-star-yellow.svg") no-repeat 0 0;
+                    background-size: 100% auto;
+                    &.half{
+                      background: url("../img/mentoring/ico-star-yellow-half.svg") no-repeat 0 0;
+                      background-size: 100% auto;
+                    }
+                  }
+
+                  &.off {
+                    background: url("../img/mentoring/ico-star-gray.svg") no-repeat 0 0;
+                    background-size: 100% auto;
+                  }
+                }
+              }
+            }
+
+            >p{
+              font-size: 18px;
+              line-height: 28px;
+              margin-bottom: 12px;
+              color: $gray-800;
+            }
+
+            .nickname{
+              font-size: 15px;
+              .username {
+                display: inline-block;
+                font-size: 15px;
+                line-height:22px;
+                color: $gray-600;
+                padding-right: 8px;
+                position: relative;
+                &:after{
+                  content: '';
+                  clear: both;
+                  display: inline-block;
+                  width: 1px;
+                  height: 12px;
+                  background-color: $gray-400;
+                  position: absolute;
+                  right: 0;
+                  top: 5px;
+                }
+              }
+              .date {
+                font-size: 13px;
+                line-height:18px;
+                color: $gray-600;
+                padding-left: 8px;
+              }
+            }
           }
         }
       }
