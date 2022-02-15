@@ -708,16 +708,12 @@
             width: vw(48);
             height: vw(67);
             background-position: 0 0;
-            margin-right: vw(18);
+            margin-right: vw(37);
             position: relative;
             &.active {
               height: vw(67);
             }
             &:nth-of-type(1) {
-              background: url("../img/mentoring/img-submain-step1.svg") no-repeat;
-              background-size: 100% auto;
-            }
-            &:nth-of-type(2) {
               background: url("../img/mentoring/img-submain-step2.svg") no-repeat;
               background-size: 100% auto;
 
@@ -726,7 +722,7 @@
                 background-size: 100% auto;
               }
             }
-            &:nth-of-type(3) {
+            &:nth-of-type(2) {
               background: url("../img/mentoring/img-submain-step3.svg") no-repeat;
               background-size: 100% auto;
 
@@ -735,7 +731,7 @@
                 background-size: 100% auto;
               }
             }
-            &:nth-of-type(4) {
+            &:nth-of-type(3) {
               background: url("../img/mentoring/img-submain-step4.svg") no-repeat;
               background-size: 100% auto;
               margin-right: 0;
@@ -753,10 +749,10 @@
               content: '..';
               font-size: vw(13);
               color: $gray-fff;
-              letter-spacing: vw(1);
+              letter-spacing: vw(1.5);
               opacity: 0.5;
               position: absolute;
-              right: vw(-13);
+              right: vw(-24);
               top: 45%;
             }
           }
