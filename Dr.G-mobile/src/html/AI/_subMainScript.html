@@ -229,7 +229,7 @@
     let animation2times = bodymovin.loadAnimation({
         container: icon2times,
         renderer: 'svg',
-        loop: false,
+        loop: true,
         autoplay: true,
         path: "../../img/@temp/2time.json"
     });
@@ -271,7 +271,7 @@
             });
 
             // animation
-            animation2times.playSegments([0,60], true);
+            animation2times.playSegments([0,45], true);
         } else if(storySlider.realIndex === 1) {
             // count
             $({ val : 30 }).animate({ val : 37 }, {
@@ -343,7 +343,7 @@
         container: iconSpecialEdit,
         renderer: 'svg',
         loop: false,
-        // autoplay: true,
+        autoplay: true,
         path: "../../img/AI/special_edit.json"
     });
 
@@ -565,17 +565,28 @@
 
     /* ---------- s process section animation ---------- */
     var processSlider = new Swiper("._processSlider", {
-        // autoplay: true,
+        autoplay: {
+            enabled: false,
+            delay: 5000,
+        },
         speed: 1000,
-        loop: true,
-        loopedSlides: 1,
+        loopedSlides: 2,
         spaceBetween: 48,
         centeredSlides: true,
-        // effect: 'fade',
         pagination: {
             el: "._processSlider + ._sliderPagination",
             clickable: true,
         },
+    });
+
+    let iconProcessing = document.querySelector('._processAni');
+
+    let animationProcessing = bodymovin.loadAnimation({
+        container: iconProcessing,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/AI/processing.json"
     });
 
     new Waypoint({
@@ -590,8 +601,9 @@
     processSlider.on('slideChange', function () {
         if(processSlider.realIndex === 0) {
             $('._progressArea').find('.step').eq(0).addClass('on').siblings().removeClass('on');
-        } else {
+        } else if(processSlider.realIndex === 1) {
             $('._progressArea').find('.step').eq(1).addClass('on').siblings().removeClass('on');
+            animationProcessing.playSegments([0,180], true);
         }
     });
     /* ---------- e why section animation ---------- */

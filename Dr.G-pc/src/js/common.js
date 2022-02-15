@@ -132,6 +132,8 @@ front.common = (function () {
             if($(e.target).is('._btnAlert')) {
                 var $alertPopup = $('._noticePopup');
                 $alertPopup.addClass('show');
+            } else if($(e.target).is('._noticePopup .custom-control-input') || $(e.target).is('._noticePopup .custom-control-label') || $(e.target).is('._noticePopup .content') || $(e.target).is('._noticePopup .ico-delete') || $(e.target).is('._noticePopup .item') || $(e.target).is('._noticePopup .title') || $(e.target).is('._noticePopup .date') || $(e.target).is('._noticePopup .font-body-1')) {
+                // return false;
             } else {
                 if($('._noticePopup').hasClass('show')){
                     if (!$(e.target).is('.calendar-modal')) {

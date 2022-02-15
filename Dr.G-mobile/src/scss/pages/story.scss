@@ -17,7 +17,7 @@
       line-height: vw(26);
       letter-spacing: vw(-0.002);
       color: #ffffff;
-      padding-top: vw(89);
+      padding-top: vw(90);
       padding-left: vw(24);
       margin-bottom: vw(10);
     }
@@ -32,7 +32,7 @@
       color: #ffffff;
       transform: rotate(90deg);
       right: vw(-11);
-      top: vw(49);
+      top: vw(50);
     }
 
     .tag {
@@ -42,12 +42,12 @@
       letter-spacing: vw(-0.002);
       color: #ffffff;
       padding-left: vw(24);
-      margin-bottom: vw(34);
+      margin-bottom: vw(32);
     }
 
     .smile {
       position: absolute;
-      bottom: vw(25);
+      bottom: vw(28);
       left: vw(26);
       @include background-img($width: 42, $height: 21, $category: 'story', $img: 'img-smile.svg');
     }

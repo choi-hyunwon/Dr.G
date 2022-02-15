@@ -1,23 +1,33 @@
 <script>
     // chatbot
-    $('#chatbot').draggable({
+    var chatbot = $('#chatbot');
+
+    chatbot.draggable({
         containment: 'parent',
         axis: 'y',
         drag: function () {
             var offset = $(this).offset();
             var yPos = offset.top;
-            console.log('y :', yPos)
+            // console.log('y :', yPos)
         }
     });
+
+    chatbot.find('img').on('click',function (){
+        $(this).siblings('.tip').show();
+    })
+
+    $('._chatClose').on('click',function (){
+        chatbot.children('.tip').hide();
+    })
 
     // bubble slider
     // https://www.jqueryscript.net/slider/3D-Cover-Flow-Style-Image-Carousel-Plugin-with-jQuery-Cloud-9-Carousel.html
     let showcase = $("._showCase")
     showcase.Cloud9Carousel({
         xOrigin: null,
-        yOrigin: 53,
-        xRadius: 260,
-        yRadius: 130,
+        yOrigin: 150,
+        xRadius: 420,
+        yRadius: 200,
         autoPlay: true,
         bringToFront: true,
         onLoaded: function () {
@@ -96,31 +106,45 @@
     });
 
     /* ---------- s how section animation ---------- */
-    var howSlider = new Swiper("._howSlider", {
-        spaceBetween: 24,
-        centeredSlides: true,
-        effect: 'fade',
-        pagination: {
-            el: "._howSlider + ._sliderPagination",
-            clickable: true,
-        },
+    // animation
+    let iconFace = document.querySelector('._faceAni');
+
+    let animationFace = bodymovin.loadAnimation({
+        container: iconFace,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/AI/face_280x280.json"
     });
+
+    new Waypoint({
+        element: document.querySelector('._sectionHow'),
+        handler: function () {
+            // 1
+            setTimeout(function () {
+                countDown(100, 12, 0)
+                countUp(0, 88, 0)
+            }, 600)
+            setTimeout(function () {
+                countDown(100, 0, 1)
+                countUp(0, 100, 1)
+            }, 600)
+
+            // 2
+            animationFace.playSegments([0,100], true);
+        },
+        offset: "50%"
+    })
 
     var $score = $('._barChart .bar .pos');
 
     $score.each(function () {
         let data = $(this).data('score');
         let numDate = 100 - Number(data);
-        // $(this).css('left', data + '%')
         $(this).siblings('.gradient').css({
             'mask-image': 'linear-gradient(to left, transparent ' + numDate + '%, black ' + numDate + '%)',
             '-webkit-mask-image': 'linear-gradient(to left, transparent ' + numDate + '%, black ' + numDate + '%)'
         })
-        if (0 < data && data <= 5) {
-            $(this).addClass('align-left')
-        } else if (95 < data && data <= 100) {
-            $(this).addClass('align-right')
-        }
     })
 
     function countDown(from, to, idx) {
@@ -147,35 +171,17 @@
         }, 10);
     }
 
-    new Waypoint({
-        element: document.querySelector('._howSlider'),
-        handler: function (direction) {
-            countDown(100, 12, 0)
-            countUp(0, 88, 0)
-            setTimeout(function () {
-                countDown(100, 0, 1)
-                countUp(0, 100, 1)
-            }, 300)
-        },
-        offset: "50%"
-    })
+    setInterval(function (){
+        var badge = $('._badgeTab .badge')
+        var content = $('._badgeTabContent .content-item')
+        secondStep(badge, content)
 
-    howSlider.on('slideChange', function () {
-
-        if(howSlider.realIndex === 2) {
-            setInterval(function (){
-                var badge = $('._badgeTab .badge')
-                var content = $('._badgeTabContent .content-item')
-                secondStep(badge, content)
-
-                setTimeout(function (){
-                    var badge = $('._badgeTab .badge')
-                    var content = $('._badgeTabContent .content-item')
-                    firstStep(badge, content)
-                },1500)
-            },3000)
-        }
-    });
+        setTimeout(function (){
+            var badge = $('._badgeTab .badge')
+            var content = $('._badgeTabContent .content-item')
+            firstStep(badge, content)
+        },750)
+    },1500)
 
     function firstStep(step,content) {
         step.eq(0).addClass('on');
@@ -193,39 +199,346 @@
     /* ---------- e how section animation ---------- */
 
     /* ---------- s story section animation ---------- */
-    var storySlider = new Swiper("._storySlider", {
-        spaceBetween: 48,
-        centeredSlides: true,
-        effect: 'fade',
-        pagination: {
-            el: "._storySlider + ._sliderPagination",
-            clickable: true,
-        },
+    let icon2times = document.querySelector('._2times');
+
+    let animation2times = bodymovin.loadAnimation({
+        container: icon2times,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/AI/2time.json"
     });
+
+    let iconGraph = document.querySelector('._graphAni');
+
+    let animationGraph = bodymovin.loadAnimation({
+        container: iconGraph,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/AI/icon_stick_188x188.json"
+    });
+
+    new Waypoint({
+        element: document.querySelector('._storySlider'),
+        handler: function () {
+            // count - 1
+            $({ val : 10 }).animate({ val : 23 }, {
+                duration: 1000,
+                step: function() {
+                    var num = Math.floor(this.val);
+                    $("._num1").text(num);
+                },
+                complete: function() {
+                    var num = Math.floor(this.val);
+                    $("._num1").text(num);
+                }
+            });
+            animation2times.playSegments([0,45], true);
+
+            // count - 2
+            $({ val : 30 }).animate({ val : 37 }, {
+                duration: 1000,
+                step: function() {
+                    var num = Math.floor(this.val);
+                    $("._num2").text(num);
+                },
+                complete: function() {
+                    var num = Math.floor(this.val);
+                    $("._num2").text(num);
+                }
+            });
+
+            // count - 3
+            $({ val : 0 }).animate({ val : 1.5 }, {
+                duration: 1000,
+                step: function() {
+                    var num = this.val.toFixed(1);
+                    $("._num3").text(num);
+                },
+                complete: function() {
+                    var num = this.val.toFixed(1);
+                    $("._num3").text(num);
+                }
+            });
+
+            // animation
+            animationGraph.playSegments([0,60], true);
+
+            console.log('story slider')
+        },
+        offset: "70%"
+    })
     /* ---------- e story section animation ---------- */
 
     /* ---------- s why section animation ---------- */
-    var whySlider = new Swiper("._whySlider", {
-        spaceBetween: 48,
-        centeredSlides: true,
-        effect: 'fade',
-        pagination: {
-            el: "._whySlider + ._sliderPagination",
-            clickable: true,
-        },
+    let icon6points = document.querySelector('._6points');
+
+    let animation6points = bodymovin.loadAnimation({
+        container: icon6points,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/AI/6point_279x301.json"
     });
+
+    let iconSpecialEdit = document.querySelector('._specialEdit');
+
+    let animationSpecialEdit = bodymovin.loadAnimation({
+        container: iconSpecialEdit,
+        renderer: 'svg',
+        loop: false,
+        // autoplay: true,
+        path: "../../img/AI/special_edit.json"
+    });
+
+    // var whySlider = new Swiper("._whySlider", {
+    //     spaceBetween: 48,
+    //     centeredSlides: true,
+    //     effect: 'fade',
+    //     pagination: {
+    //         el: "._whySlider + ._sliderPagination",
+    //         clickable: true,
+    //     }
+    // });
+
+    // whySlider.on('slideChange', function () {
+    //     if(whySlider.realIndex === 0) {
+    //         $('._whySlider .chart-info').removeClass('ani-on')
+    //         animationSpecialEdit.playSegments([0,120], true);
+    //     } else if(whySlider.realIndex === 1) {
+    //         $('._whySlider .chart-info').removeClass('ani-on')
+    //         // animation
+    //         animation6points.playSegments([0,160], true);
+    //     } else {
+    //         lineDrawing()
+    //         $('._whySlider .chart-info').addClass('ani-on')
+    //     }
+    // });
+
+    new Waypoint({
+        element: document.querySelector('._whySlider'),
+        handler: function () {
+            // whySlider.autoplay.start();
+            animationSpecialEdit.playSegments([0,120], true);
+            // console.log('why slider')
+        },
+        offset: "70%"
+    })
+
+    /* 차트 */
+    // data
+    var data = [
+        {
+            "date": "2021-09-01",
+            "value": 0,
+        },
+        {
+            "date": "2021-10-01",
+            "value": 55,
+        },
+        {
+            "date": "2021-11-01",
+            "value": 100,
+        },
+    ];
+
+    // String formatter
+    if (!String.prototype.format) {
+        String.prototype.format = function() {
+            var args = arguments;
+            return this.replace(/{(\d+)}/g, function(match, number) {
+                return typeof args[number] != 'undefined' ? args[number] : match;
+            });
+        };
+    }
+
+    let app = (() => {
+        const $svgLine = document.querySelector('svg .line');
+        const sliderHeight = 210;
+        const svgViewBoxHeight = 210;
+        const svgViewBoxThumbLimit = svgViewBoxHeight / sliderHeight;
+        const svgViewBoxGraphMax = svgViewBoxHeight - svgViewBoxThumbLimit;
+        const svgViewBoxGraphMin = svgViewBoxThumbLimit;
+
+        let ranges = {
+            range1: null,
+            range2: null,
+            range3: null,
+        };
+
+        let points = {
+            // 1번 점
+            begin: {
+                x: 87,
+                y: 0
+            },
+            point1: {
+                x: 87,
+                y: 0
+            },
+            control1: {
+                x: 130,
+                y: 0
+            },
+            control2: {
+                x: 130,
+                y: 0
+            },
+            // 2번 점
+            point2: {
+                x: 187,
+                y: 0
+            },
+            control3: {
+                x: 230,
+                y: 0
+            },
+            // 3번 점
+            point3: {
+                x: 287,
+                y: 0
+            },
+        };
+
+        function mapDataRange(value) {
+            return (((value - 0) * (svgViewBoxGraphMax - svgViewBoxGraphMin)) / svgViewBoxHeight) + svgViewBoxGraphMin;
+        }
+
+        function updateSlider($element) {
+            if ($element) {
+
+                let rangeIndex = $element.getAttribute('data-slider-index'),
+                    range = ranges[rangeIndex],
+                    value = $element.value;
+
+                if (range === value) {
+                    return;
+                }
+
+                ranges[rangeIndex] = value;
+
+                let parent = $element.parentElement,
+                    $tootip = parent.querySelector('.line-box'),
+                    $bar = parent.querySelector('.percentage'),
+                    pct = value * (sliderHeight / sliderHeight)
+
+                $tootip.style.bottom = `${pct}%`;
+                $bar.style.height = `${pct}%`;
+
+                renderSliderGraph();
+            }
+        }
+
+        function updatePoints() {
+            points.point1.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges.range1) / 100) | 0;
+            points.point2.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges.range2) / 100) | 0;
+            points.point3.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges.range3) / 100) | 0;
+
+            const max = svgViewBoxGraphMax;
+            const min = svgViewBoxGraphMin;
+
+            points.point1.y = mapDataRange(points.point1.y);
+            points.point2.y = mapDataRange(points.point2.y);
+            points.point3.y = mapDataRange(points.point3.y);
+
+            points.begin.y = points.point1.y;
+            points.control1.y = points.point1.y;
+            points.control2.y = points.point2.y;
+            points.control3.y = points.point3.y;
+        }
+
+        function getInterpolatedLine() {
+            return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13}'.format(
+                // M
+                points.begin.x, points.begin.y,
+                // L
+                points.point1.x, points.point1.y,
+                // C
+                points.control1.x, points.control1.y,
+                points.control2.x, points.control2.y,
+                points.point2.x, points.point2.y,
+                // S
+                points.control3.x, points.control3.y,
+                points.point3.x, points.point3.y,
+            )
+        }
+
+        function renderSliderGraph() {
+            updatePoints();
+            $svgLine.setAttribute('d', getInterpolatedLine());
+        }
+
+        function updateChart() {
+            const inputs = app.inputs;
+            inputs.forEach((input, index) => {input.value = data[index].value | 0});
+            inputs.forEach(input => app.updateSlider(input));
+        }
+
+        return {
+            inputs: [].slice.call(document.querySelectorAll('.line-chart-inner input')),
+            updateSlider,
+            updateChart,
+        };
+    })();
+
+    (function initLineChart() {
+        const inputs = app.inputs;
+        let index = 1;
+        inputs.forEach(input => input.setAttribute('data-slider-index', 'range' + index++));
+        inputs.forEach(input => input.value = 50);
+        inputs.forEach(input => app.updateSlider(input));
+        app.updateChart();
+    })();
+    /** -------------------------- line animation --------------------------- **/
+    anime({
+        targets: '._lineAni',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutCubic',
+        duration: 2000,
+    });
+
+    function lineDrawing() {
+        anime({
+            targets: '._lineAni',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutCubic',
+            duration: 2000,
+        });
+    }
     /* ---------- e why section animation ---------- */
 
     /* ---------- s process section animation ---------- */
-    var processSlider = new Swiper("._processSlider", {
-        spaceBetween: 48,
-        centeredSlides: true,
-        effect: 'fade',
-        pagination: {
-            el: "._processSlider + ._sliderPagination",
-            clickable: true,
+    // var processSlider = new Swiper("._processSlider", {
+    //     // autoplay: true,
+    //     speed: 1000,
+    //     loop: true,
+    //     loopedSlides: 1,
+    //     spaceBetween: 48,
+    //     centeredSlides: true,
+    //     // effect: 'fade',
+    //     pagination: {
+    //         el: "._processSlider + ._sliderPagination",
+    //         clickable: true,
+    //     },
+    // });
+
+    new Waypoint({
+        element: document.querySelector('._sectionProcess'),
+        handler: function () {
+            // processSlider.autoplay.start();
+            // console.log('process slider')
         },
-    });
+        offset: "50%"
+    })
+
+    // processSlider.on('slideChange', function () {
+    //     if(processSlider.realIndex === 0) {
+    //         $('._progressArea').find('.step').eq(0).addClass('on').siblings().removeClass('on');
+    //     } else {
+    //         $('._progressArea').find('.step').eq(1).addClass('on').siblings().removeClass('on');
+    //     }
+    // });
     /* ---------- e why section animation ---------- */
 
     /* ---------- e faq section animation ---------- */

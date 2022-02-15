@@ -3543,7 +3543,8 @@
               }
 
               .item-img {
-                display: none;
+                //display: none;
+                //opacity: 0;
                 background-color: $primary;
               }
 
@@ -3609,9 +3610,10 @@
                 .item-img {
                   position: relative;
                   width: vw(316);
+                  height: vw(218);
                   margin: 0 auto vw(90);
 
-                  img {
+                  svg {
                     width: 100%;
                   }
                 }
@@ -3621,7 +3623,8 @@
             &.swiper-slide-active {
               .item {
                 .item-img {
-                  display: block;
+                  //opacity: 1;
+                  //display: block;
                 }
               }
             }
