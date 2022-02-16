@@ -315,13 +315,13 @@ data.analysis = {
             page: '성분분석_1-2_사진촬영_실행'
         },*/
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-2_제품명입력_검색_1',
             category: 'analysis',
             page: '성분분석_1-2_제품명입력_검색_1'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-2_제품명입력_검색_2',
             category: 'analysis',
             page: '성분분석_1-2_제품명입력_검색_2'
