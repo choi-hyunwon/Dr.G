@@ -107,7 +107,7 @@
       }
 
       .divider {
-        margin: vw(32) 0;
+        margin: vw(48) 0 vw(32);
       }
 
       .product-box {
@@ -293,7 +293,7 @@
     /*생활습관 펼쳐보기*/
     .unfold-box {
       margin-top: vw(48);
-      border-top: 1px solid $gray-400;
+      border-top: 1px solid $gray-300;
       padding: vw(32) vw(24) 0;
 
       &._unfold {
