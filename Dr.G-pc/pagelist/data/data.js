@@ -291,17 +291,17 @@ data.analysis = {
             page: '성분분석_서브메인'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-1_사진촬영_안내',
             category: 'analysis',
             page: '성분분석_1-1_사진촬영_안내'
         },
-        {
+     /*   {
             stateClass: 'working',
             url: '성분분석_1-2_사진촬영_실행',
             category: 'analysis',
             page: '성분분석_1-2_사진촬영_실행'
-        },
+        },*/
         {
             stateClass: 'working',
             url: '성분분석_1-2_제품명입력_검색_1',
