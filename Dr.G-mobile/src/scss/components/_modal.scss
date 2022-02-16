@@ -765,6 +765,10 @@
 
           .main-title {
             margin-bottom: 0;
+            font-weight: normal;
+            >span{
+              font-weight: bold;
+            }
 
        /*     span {
               color: $primary;
