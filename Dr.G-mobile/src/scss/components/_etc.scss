@@ -7,6 +7,7 @@
  v.0.5 선미 : sub-main > more-box, btn-chatbot 추가 -- 2022.01.19
  v.0.6 주연 : more-box 수정 -- 2022.01.24
  v.0.7 선미 : body.scrOff > touch-action 제거 -- 2022.02.11
+ v.0.8 주연 : s-select-box 추가 -- 2022.02.16
 |--------------------------------------------------------------------|
 */
 .list-with-dot {
@@ -420,6 +421,105 @@ body.scrOff {
         animation-delay: 1.3s;
         animation-duration: .5s;
         animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+.s-select-box {
+  position: relative;
+
+  .btn-select {
+    &.selected {
+      font-weight: bold;
+      color: $gray-800;
+      background-image: url(../img/common/ico-select.svg);
+    }
+  }
+
+  .list {
+    display: none;
+    width: 100%;
+    position: absolute;
+    padding: 9px 20px;
+    user-select: none;
+    top: 59px;
+    left: 0;
+    background-color: white;
+    border: 1px solid $gray-600;
+    border-radius: 0 0 12px 12px;
+    z-index: 2;
+  }
+
+  ul {
+    width: 100%;
+    max-height: 190px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-300;
+      border-radius: 100px;
+    }
+    li {
+      a {
+        padding: 8px 0;
+        display: block;
+        font-size: 15px;
+        line-height: 22px;
+        color: $gray-700;
+      }
+    }
+  }
+
+  &.down {
+    .list {
+      display: block;
+      border: 1px solid $gray-600;
+      border-top: 1px solid $gray-300;
+    }
+
+    .btn-select {
+      border-color: $gray-600;
+      border-bottom: 0;
+      border-radius: 12px 12px 0 0;
+      background-image: url(../img/common/ico-select-up.svg);
+    }
+  }
+}
+
+.mentoring-wrap{
+  .s-select-box{
+    ul{
+      li{
+        &.on {
+          a {
+            color: $blue;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.suggestion-wrap{
+  .s-select-box{
+    ul{
+      li{
+        &.on {
+          a {
+            color: $primary;
+            font-weight: bold;
+          }
+        }
       }
     }
   }

@@ -23,6 +23,7 @@
     // bubble slider
     // https://www.jqueryscript.net/slider/3D-Cover-Flow-Style-Image-Carousel-Plugin-with-jQuery-Cloud-9-Carousel.html
     let showcase = $("._showCase")
+
     showcase.Cloud9Carousel({
         xOrigin: null,
         yOrigin: 53,
@@ -62,6 +63,64 @@
             itemClass: '_showCaseItem',
         })
     }
+
+    /* ---------- s modal animation ---------- */
+    $triggerBtn = $('._showCaseItem');
+    $closeBtn = $('._btnClose');
+    $skinTypeModal = $('._skinTypeModal');
+
+    $triggerBtn.on('click', function () {
+        showSkinTypeModal()
+        $('._sectionWhat').find('.font-h6 ').css('visibility', 'hidden')
+    })
+
+    $('._tabBox li a').on('click', function () {
+        $(this).parent().addClass('on').siblings().removeClass('on')
+    })
+
+    $closeBtn.on('click', function () {
+        hideSkinTypeModal()
+        setShowcase()
+        $('._sectionWhat').find('.font-h6 ').css('visibility', 'visible')
+    })
+
+    $skinTypeModal.on('click', function (e) {
+        if ($(this).has(e.target).length === 0) {
+            hideSkinTypeModal()
+        }
+    })
+
+    function hideSkinTypeModal() {
+        // modal
+        $skinTypeModal.addClass('hide');
+        // body scroll
+        // $('body').removeClass('scrOff')
+        // setTimeout(() => {
+        $skinTypeModal.removeClass('show hide').css('display', 'none');
+        // }, 400);
+        setShowcase()
+    }
+
+    function showSkinTypeModal() {
+        // modal
+        $skinTypeModal.addClass('show fade').css('display', 'block');
+        // circle slider
+        $('._showCase').data("carousel").deactivate();
+        // body scroll
+        // $('body').addClass('scrOff')
+    }
+
+    $(document).ready(function (){
+        var modalHeight = $('._skinTypeModal .circle').outerHeight();
+        var modalHeaderHeight = $('._skinTypeModal .skin-type-modal-header').outerHeight();
+        var winHeight = window.innerHeight;
+        var contentHeight = winHeight - modalHeaderHeight;
+
+        if(modalHeight > contentHeight) {
+            $('._skinTypeModal .modal-content').css('height', modalHeight + 'px')
+        }
+    })
+    /* ---------- e modal animation ---------- */
 
     // tab
     var scrollTab = $('._scrollTab');
@@ -632,51 +691,4 @@
         }
     });
     /* ---------- e faq section animation ---------- */
-
-    /* ---------- s modal animation ---------- */
-    $triggerBtn = $('._showCaseItem');
-    $closeBtn = $('._btnClose');
-    $skinTypeModal = $('._skinTypeModal');
-
-    $triggerBtn.on('click', function () {
-        showSkinTypeModal()
-        $('._sectionWhat').find('.font-h6 ').css('visibility', 'hidden')
-    })
-
-    $('._tabBox li a').on('click', function () {
-        $(this).parent().addClass('on').siblings().removeClass('on')
-    })
-
-    $closeBtn.on('click', function () {
-        hideSkinTypeModal()
-        setShowcase()
-        $('._sectionWhat').find('.font-h6 ').css('visibility', 'visible')
-    })
-
-    $skinTypeModal.on('click', function (e) {
-        if ($(this).has(e.target).length === 0) {
-            hideSkinTypeModal()
-        }
-    })
-
-    function hideSkinTypeModal() {
-        // modal
-        $skinTypeModal.addClass('hide');
-        // body scroll
-        $('body').removeClass('scrOff')
-        // setTimeout(() => {
-        $skinTypeModal.removeClass('show hide').css('display', 'none');
-        // }, 400);
-        setShowcase()
-    }
-
-    function showSkinTypeModal() {
-        // modal
-        $skinTypeModal.addClass('show fade').css('display', 'block');
-        // circle slider
-        $('._showCase').data("carousel").deactivate();
-        // body scroll
-        $('body').addClass('scrOff')
-    }
-    /* ---------- e modal animation ---------- */
 </script>
