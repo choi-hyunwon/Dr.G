@@ -3208,48 +3208,14 @@
           }
 
           &.item-2 {
+            overflow: hidden;
+
             .img {
               position: relative;
               width: 358px;
               height: auto;
               margin: 26px auto 0;
               z-index: 1;
-
-              //img {
-              //  width: 100%;
-              //  height: auto;
-              //}
-              //
-              //.spot {
-              //  position: absolute;
-              //  height: auto;
-              //  animation-name: fadeInAni;
-              //  animation-duration: .5s;
-              //  animation-timing-function: linear;
-              //  animation-play-state: paused;
-              //  animation-fill-mode: forwards;
-              //  opacity: 0;
-              //
-              //  &.spot-1 {
-              //    width: vw(97);
-              //    top: vw(91);
-              //    right: vw(66);
-              //  }
-              //
-              //  &.spot-2 {
-              //    width: vw(127);
-              //    top: vw(156);
-              //    right: vw(17);
-              //    animation-delay: .5s;
-              //  }
-              //
-              //  &.spot-3 {
-              //    width: vw(89);
-              //    top: vw(190);
-              //    left: vw(19);
-              //    animation-delay: 1s;
-              //  }
-              //}
             }
           }
 

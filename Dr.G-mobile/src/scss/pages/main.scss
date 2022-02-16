@@ -108,7 +108,7 @@
     position: relative;
     width: 100%;
     height: vw(660);
-    background-color: #45DCC4;
+    background-color: $primary;
     overflow: hidden;
 
     .editor-area {
@@ -117,9 +117,16 @@
       left: vw(-212);
       width: 100%;
 
+      img {
+        width: vw(842);
+        height: auto;
+      }
+
       .video {
         width: vw(842);
         height: auto;
+        outline: none;
+        border: none;
       }
     }
 
