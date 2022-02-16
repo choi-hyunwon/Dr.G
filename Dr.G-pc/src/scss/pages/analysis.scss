@@ -252,11 +252,52 @@
 
       .search-box{
         padding-top: 60px;
+        margin: 0 212px;
         .search-group{
-          padding: 60px 60px 0;
+          position: relative;
+
+          /*안내*/
           .desc{
             color: $gray-500;
+            padding: 60px 60px 0;
           }
+          /*검색*/
+          .scroll-area{
+            background-color: #ffffff;
+            border-radius: 0 0 12px 12px;
+            overflow: hidden;
+            position: absolute;
+            width: 818px;
+
+
+
+            .list{
+              background-color: $gray-fff;
+              padding: 8px 21px;
+              text-align: left;
+              max-height: 243px;
+              overflow-y: scroll;
+              margin-right: 12px;
+              &::-webkit-scrollbar {
+                width: 6px; /* 세로축 스크롤바 길이 */
+                padding-right: 20px;
+              }
+
+              &::-webkit-scrollbar-thumb {
+                background-color: $gray-300;
+                border-radius: 10px;
+              }
+              &::-webkit-scrollbar-button {
+                color: #fff;
+                height: 15px;
+              }
+
+              li{
+                line-height: 38px;
+              }
+            }
+          }
+
         }
       }
     }
