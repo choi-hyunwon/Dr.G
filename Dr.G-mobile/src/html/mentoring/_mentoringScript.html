@@ -180,27 +180,13 @@
             }
         })
 
-
         /*서브메인 process*/ /* s 02.17*/
         let processSwiper = new Swiper("._processSwiper", {
-          /*  effect: 'slide',
-            /!*  autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-                  delay : 5000,   // 시간 설정
-                  disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
-              },*!/
-            speed : 800,
-            loop: false,
-            pagination: {
-                el: "._processSwiper + ._sliderPagination",
-                clickable: true,
-            },*/
-
-
             autoplay: {
                 enabled: false,
                 delay: 3800,
             },
-            loopedSlides: 3,
+            loop:true,
             speed: 1000,
             spaceBetween: 24,
             centeredSlides: true,
@@ -215,7 +201,7 @@
             element: document.querySelector('._processSwiper'),
             handler: function () {
                 processSwiper.autoplay.start();
-                // console.log('process slider')
+                console.log('process slider')
             },
             offset: "50%"
         })
@@ -255,7 +241,6 @@
             if (processSwiper.realIndex === 0) {
                 processStep1.playSegments([0, 180], true)
                 $('._stepBox').find('.step').eq(0).addClass('active').siblings().removeClass('active');
-                $('.')
 
             } else if (processSwiper.realIndex === 1) {
                 processStep2.playSegments([0, 120], true)
