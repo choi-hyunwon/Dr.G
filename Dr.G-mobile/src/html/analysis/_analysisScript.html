@@ -240,7 +240,7 @@
     },
     slidesPerView: 3,/*보여지는 갯수*/
     centeredSlides: true, /*가운데 정렬*/
-   // allowTouchMove: false, /*터치금지*/
+    allowTouchMove: false, /*터치금지*/
     initialSlide: 1, /*시작 슬라이드*/
   //  spaceBetween:20
 
@@ -248,51 +248,116 @@
 
 
   let whatSwiper = new Swiper('.what-swiper', {
-    loop: true,
+    loop: false,
     speed : 800,
-    autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+   /* autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
       delay : 3000,   // 시간 설정
       disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
-    },
+    },*/
     pagination: {
       el: ".process-pagination",
     },
   });
-  whatSwiper.on('transitionEnd', function () {
+
+
+  let whatAni1 = document.querySelector('._whatAni1');
+  let whatStep1 = bodymovin.loadAnimation({
+    container: whatAni1,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: "../../img/analysis/img-main-what-slide1.json"
+  });
+
+  let whatAni2 = document.querySelector('._whatAni2');
+  let whatStep2 = bodymovin.loadAnimation({
+    container: whatAni2,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: "../../img/analysis/img-main-what-slide2.json"
+  });
+
+  whatSwiper.on('slideChange', function () {
     let idx = whatSwiper.realIndex + 1
     //console.log(idx);
     $('.step-box .step').removeClass('active')
     $('.step-box .step').eq(idx).addClass('active')
+
+
+    if (whatSwiper.realIndex === 0) {
+      whatStep1.playSegments([0, 180], true)
+
+    } else if (processSwiper.realIndex === 1) {
+      whatStep2.playSegments([11, 69], true)
+    }
   });
+
 
 
 
   /*서브메인 process*/
-  let processSwiper = new Swiper('.process-swiper', {
-    loop: true,
+  let processSwiper = new Swiper("._processSwiper", {
+    effect: 'slide',
+    /*  autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+          delay : 5000,   // 시간 설정
+          disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+      },*/
     speed : 800,
-    autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-      delay : 3000,   // 시간 설정
-      disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
-    },
+    loop: false,
     pagination: {
-      el: ".process-pagination",
+      el: "._processSwiper + ._sliderPagination",
+      clickable: true,
     },
   });
-  processSwiper.on('transitionEnd', function () {
-    let idx = processSwiper.realIndex + 1
-    let stepLi = $('.analysis-sub-main .step-box li')
-    console.log(idx);
 
-    if (idx == 1){
+  let processAni1 = document.querySelector('._processAni1');
+  let processStep1 = bodymovin.loadAnimation({
+    container: processAni1,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: "../../img/mentoring/progress-step1.json"
+  });
+
+  let processAni2 = document.querySelector('._processAni2');
+  let processStep2 = bodymovin.loadAnimation({
+    container: processAni2,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: "../../img/analysis/progress-step2.json"
+  });
+
+  let processAni3 = document.querySelector('._processAni3');
+  let processStep3 = bodymovin.loadAnimation({
+    container: processAni3,
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: "../../img/mentoring/progress-step3.json"
+  });
+
+  processSwiper.on('slideChange', function () {
+
+    let stepLi = $('.analysis-sub-main .step-box li')
+
+    if (processSwiper.realIndex === 0) {
+      processStep1.playSegments([0, 180], true)
+      $('._stepBox').find('.step').eq(0).addClass('active').siblings().removeClass('active');
       stepLi.removeClass('active check bar')
       stepLi.eq(0).addClass('active')
-    }else if (idx == 2){
 
+    } else if (processSwiper.realIndex === 1) {
+      processStep2.playSegments([11, 69], true)
+      $('._stepBox').find('.step').eq(1).addClass('active').siblings().removeClass('active');
       stepLi.eq(0).removeClass('active')
       stepLi.eq(1).addClass('active bar')
       stepLi.eq(2).removeClass('active')
-    }else if(idx == 3){
+
+    } else if (processSwiper.realIndex === 2) {
+      processStep3.playSegments([0, 240], true)
+      $('._stepBox').find('.step').eq(2).addClass('active').siblings().removeClass('active');
       stepLi.eq(0).removeClass('active')
       stepLi.eq(1).removeClass('active').addClass('check bar')
       stepLi.eq(2).addClass('active bar')
