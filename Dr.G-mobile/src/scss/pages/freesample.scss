@@ -4,10 +4,10 @@
     background-color: $primary;
     position: relative;
     height: vw(438);
-    background-image: url("../img/freesample/bg-drg-stamp.svg");
-    background-size: vw(176) vw(198);
-    background-repeat: no-repeat;
-    background-position: vw(199) vw(142);
+    //background-image: url("../img/freesample/bg-drg-stamp.svg");
+    //background-size: vw(176) vw(198);
+    //background-repeat: no-repeat;
+    //background-position: vw(199) vw(142);
 
     .title {
       font-size: vw(32);
@@ -35,11 +35,12 @@
 
     .img {
       z-index: 3;
-      left: vw(37);
+      left: 50%;
+      transform: translateX(-50%);
       bottom: vw(-50);
       position: absolute;
-      width: vw(283);
-      height: auto;
+      width: vw(336);
+      height: vw(288);
 
       img {
         width: 100%;

@@ -206,6 +206,28 @@ front.common = (function () {
 
             gnbSet.click('#menu li', 300)
         })
+
+        /* select box - 유형선택 */
+        var $body = $('body')
+
+        $('._selectBox .btn-select').on('click',function (e) {
+            // if ($(this).hasClass('disabled')) return;
+            e.stopPropagation();
+            $(this).parent().toggleClass('down');
+        })
+
+        $('._selectBox li a').on('click',function (e) {
+            let text = $(this).text();
+            $(this).parent().addClass('on').siblings().removeClass('on');
+            console.log($(this).parent().parents('.list').parent())
+            $(this).parent().parents('.list').prev('.btn-select').children('.text').text(text);
+            $(this).parent().parents('.list').prev('.btn-select').addClass('selected')
+            $(this).parent().parents('.list').parent().removeClass('down');
+        })
+
+        $body.on('click', function(){
+            $('._selectBox').removeClass('down');
+        });
     }
 
     var tab = function () {

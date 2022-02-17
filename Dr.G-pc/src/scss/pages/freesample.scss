@@ -33,18 +33,18 @@
     }
 
     .bg-img {
+      position: relative;
       width: 100%;
-      //background-color: $primary;
+      background-color: $primary;
       height: 400px;
-      background-image: url("../img/freesample/bg-sub-main.png");
-      background-size: cover;
-      background-position-x: center;
-      margin-bottom: 126px;
+      margin-bottom: 130px;
 
       img {
-        width: 425px;
-        margin-top: 56px;
-        margin-left: -188px;
+        position: absolute;
+        width: 490px;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   }
