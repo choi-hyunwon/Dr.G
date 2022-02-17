@@ -2736,15 +2736,39 @@
 
       .editor-area {
         position: absolute;
+        width: vw(230);
+        height: vw(230);
+        left: 50%;
+        transform: translateX(-50%);
+        top: vw(196);
+        padding: vw(4);
 
-        .video {
-          width: 100%;
-          height: auto;
+        &::after {
+          content: '';
+          position: absolute;
+          @include background-img ($width: 234, $height: 234, $category: 'AI', $img: 'bg-camera-frame.svg');
+          left: vw(-2);
+          top: vw(-6);
         }
 
-        img {
-          width: 100%;
-          height: auto;
+        .img {
+          position: absolute;
+          width: vw(230);
+          height: vw(230);
+          bottom: vw(4);
+          left: 50%;
+          transform: translateX(-50%);
+          overflow: hidden;
+          background-color: #47dcc5;
+          border-radius: vw(12);
+
+          img {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: vw(-18);
+            width: vw(620);
+          }
         }
       }
 
@@ -2766,7 +2790,7 @@
         text-align: center;
         color: #fff;
         padding: 0 vw(23);
-        margin-top: vw(291);
+        margin-top: vw(288);
 
         .font-h6 {
           margin-bottom: vw(20);

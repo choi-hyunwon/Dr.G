@@ -2961,11 +2961,35 @@
       }
 
       .editor-area {
-        width: 100%;
+        position: relative;
+        width: vw(370);
+        height: vw(368);
 
-        img {
-          width: 100%;
-          height: auto;
+        &::after {
+          content: '';
+          position: absolute;
+          @include background-img ($width: 374, $height: 374, $category: 'AI', $img: 'bg-camera-frame.svg');
+          left: -2px;
+          top: -4px;
+        }
+
+        .img {
+          position: absolute;
+          width: vw(370);
+          height: vw(368);
+          left: 50%;
+          transform: translateX(-50%);
+          overflow: hidden;
+          background-color: #47dcc5;
+          border-radius: vw(12);
+
+          img {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -18px;
+            width: 891px;
+          }
         }
       }
 
@@ -2974,8 +2998,10 @@
       }
 
       .heading-area {
+        width: vw(501);
         text-align: center;
         color: #fff;
+        margin-right: vw(244);
 
         .font-h1 {
           font-weight: bold;
@@ -2987,29 +3013,10 @@
         .font-h5 {
           font-size: 20px;
           line-height: 30px;
-          margin-bottom: 3px;
         }
-      }
-
-      .counting-area {
-        text-align: center;
-        color: #fff;
 
         .txt {
           margin-bottom: 48px;
-        }
-
-        .font-h1 {
-          font-size: 20px;
-          line-height: 30px;
-
-          .font-poppins-semiBold {
-            color: $yellow;
-          }
-
-          .font-bold {
-            color: $yellow;
-          }
         }
 
         .font-h6 {
@@ -3017,6 +3024,9 @@
           line-height: 30px;
           margin-bottom: vw(20);
         }
+      }
+
+      .counting-area {
       }
     }
 
