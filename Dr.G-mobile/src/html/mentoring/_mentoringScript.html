@@ -116,42 +116,79 @@
     });
 
     /*|--------------s 서브메인----------------------------|*/
+    // 변경 전
+    // let sectionTab = $('._section-tab');
+    // let lastScroll = 0;
+    // var sectionStart = $('.section-about');
+    // var sectionStartPos = sectionStart.position().top;
+    //
+    // $(window).scroll(function (){
+    //     if($('.container').find('._sub-main').length){
+    //         let st = $(this).scrollTop();
+    //
+    //         /* 탭활성화 */
+    //         let section = $('.section')
+    //         let tab = $('._section-tab .item')
+    //         section.each(function( index ) {
+    //             if ( st > $(this).offset().top - 350){
+    //                 tab.removeClass('active')
+    //                 tab.eq(index).addClass('active')
+    //             }
+    //         });
+    //     }
+    // });
 
-    /*tab*/
-    let sectionTab = $('._section-tab');
-    let lastScroll = 0;
+    // 변경 후
+    var sectionTab = $('._section-tab');
     var sectionStart = $('.section-about');
+    var tabStartPos = sectionTab.position().top;
     var sectionStartPos = sectionStart.position().top;
+    var tabHeight = sectionTab.outerHeight();
+    var lastScroll = 0;
 
-    /* tab */
-    $(window).scroll(function (){
-        if($('.container').find('._sub-main').length){
-            let st = $(this).scrollTop();
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        var sectionReview = $('.section-voc').position().top;
+        var sectionFAQ = $('.section-faq').position().top;
+        var offset = 200;
 
-            /* 탭활성화 */
-            let section = $('.section')
-            let tab = $('._section-tab .item')
-            section.each(function( index ) {
-                if ( st > $(this).offset().top - 350){
-                    tab.removeClass('active')
-                    tab.eq(index).addClass('active')
-                }
-            });
+        lastScroll = st;
+
+        if (lastScroll > sectionReview - offset && lastScroll < sectionFAQ - offset) {
+            sectionTab.scrollLeft(100);
+        } else if (lastScroll > sectionFAQ - offset) {
+            sectionTab.scrollLeft(200);
+        } else {
+            sectionTab.scrollLeft(0);
         }
+
+        let section = $('.mentoring-sub-main .section')
+        let tab = $('._section-tab .item')
+        section.each(function (index) {
+            if (st > $(this).offset().top - offset) {
+                tab.eq(index).addClass('active').siblings().removeClass('active')
+            }
+        });
     });
 
-    $('.slide-tab .item a').on('click',function (){
-        let idx = $(this).parent().index()
-        // console.log(idx)
-        let offset = $('.section').eq(idx).offset();
-        let headHeight = $('.header-white').height() + $('._tab').height()
-
-        if ($('.header-white').hasClass('header-transparent')){
-            $('html, body').animate({scrollTop : offset.top - headHeight},400)
-        }else {
-            $('html, body').animate({scrollTop : offset.top},400)
-        }
-    })
+    // 변경 전
+    // $('.slide-tab .item a').on('click',function (){
+    //     let idx = $(this).parent().index()
+    //     // console.log(idx)
+    //     let offset = $('.section').eq(idx).offset();
+    //     let headHeight = $('.header-white').height() + $('._tab').height()
+    //
+    //     if ($('.header-white').hasClass('header-transparent')){
+    //         $('html, body').animate({scrollTop : offset.top - headHeight},400)
+    //     }else {
+    //         $('html, body').animate({scrollTop : offset.top},400)
+    //     }
+    // })
+    // 변경 후
+    $('.slide-tab .item a').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $(this.hash).offset().top - tabHeight }, 300);
+    });
 
     /*서브메인 process*/
     let processSwiper = new Swiper("._processSwiper", {
