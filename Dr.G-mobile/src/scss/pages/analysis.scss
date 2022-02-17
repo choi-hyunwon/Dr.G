@@ -1246,6 +1246,7 @@
           }
         }
         .what-swiper{
+          position: relative;
           .page{
             text-align: center;
             .img_box{
@@ -1259,10 +1260,20 @@
               margin-bottom: vw(20);
             }
           }
-          .process-pagination{
+          .what-pagination{
+            width: 100%;
+            z-index: 3;
             text-align: center;
-            .swiper-pagination-bullet-active{
-              background: $violet;
+            line-height: 1;
+            .swiper-pagination-bullet {
+              width: vw(8);
+              height: vw(8);
+              margin: 0 vw(6);
+              background-color: $gray-400!important;
+              opacity: 1;
+              &.swiper-pagination-bullet-active{
+                background-color: $violet!important;
+              }
             }
           }
         }

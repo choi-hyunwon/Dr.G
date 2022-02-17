@@ -201,7 +201,7 @@
             element: document.querySelector('._processSwiper'),
             handler: function () {
                 processSwiper.autoplay.start();
-                console.log('process slider')
+                //console.log('process slider')
             },
             offset: "50%"
         })
@@ -210,7 +210,7 @@
         let processStep1 = bodymovin.loadAnimation({
             container: processAni1,
             renderer: 'svg',
-            loop: true,
+            loop: false,
             autoplay: true,
             path: "../../img/mentoring/progress-step1.json"
         });
@@ -219,7 +219,7 @@
         let processStep2 = bodymovin.loadAnimation({
             container: processAni2,
             renderer: 'svg',
-            loop: true,
+            loop: false,
             autoplay: true,
             path: "../../img/mentoring/progress-step2.json"
         });
@@ -228,7 +228,7 @@
         let processStep3 = bodymovin.loadAnimation({
             container: processAni3,
             renderer: 'svg',
-            loop: true,
+            loop: false,
             autoplay: true,
             path: "../../img/mentoring/progress-step3.json"
         });
