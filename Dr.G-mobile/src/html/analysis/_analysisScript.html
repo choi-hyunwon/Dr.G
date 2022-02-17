@@ -232,39 +232,48 @@
 
 
   /*서브메인 what*/
-  var stepSwiper = new Swiper ('.step-swiper', {
+  let stepSwiper = new Swiper ('.step-swiper', {
     loop: true,
     speed: 800,
     autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-      delay : 3000,   // 시간 설정
+      delay : 4000,   // 시간 설정
     },
     slidesPerView: 3,/*보여지는 갯수*/
     centeredSlides: true, /*가운데 정렬*/
     allowTouchMove: false, /*터치금지*/
     initialSlide: 1, /*시작 슬라이드*/
   //  spaceBetween:20
-
   })
 
 
-  let whatSwiper = new Swiper('.what-swiper', {
-    loop: false,
-    speed : 800,
-   /* autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-      delay : 3000,   // 시간 설정
-      disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
-    },*/
+  let whatSwiper = new Swiper('._whatSwiper', {
+    autoplay: {
+      enabled: false,
+      delay: 3000,
+    },
+    speed: 1000,
+    loopedSlides: 2,
+    spaceBetween: 48,
+    centeredSlides: true,
     pagination: {
-      el: ".process-pagination",
+      el: "._whatPagination",
     },
   });
 
+  new Waypoint({
+    element: document.querySelector('._whatSwiper'),
+    handler: function () {
+      whatSwiper.autoplay.start();
+      //console.log('_whatSwiper')
+    },
+    offset: "50%"
+  })
 
   let whatAni1 = document.querySelector('._whatAni1');
   let whatStep1 = bodymovin.loadAnimation({
     container: whatAni1,
     renderer: 'svg',
-    loop: true,
+    loop: false,
     autoplay: true,
     path: "../../img/analysis/img-main-what-slide1.json"
   });
@@ -286,36 +295,48 @@
 
 
     if (whatSwiper.realIndex === 0) {
-      whatStep1.playSegments([0, 180], true)
+      whatStep1.playSegments([0, 104], true)
 
     } else if (processSwiper.realIndex === 1) {
-      whatStep2.playSegments([11, 69], true)
+      whatStep2.playSegments([0, 79], true)
     }
   });
 
 
 
+  /*성분분석 슬라이드 이슈*/
 
   /*서브메인 process*/
   let processSwiper = new Swiper("._processSwiper", {
+    autoplay: {
+      enabled: false,
+      delay: 3800,
+    },
+    loop:true,
+    speed: 1000,
+    spaceBetween: 24,
+    centeredSlides: true,
     effect: 'slide',
-    /*  autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-          delay : 5000,   // 시간 설정
-          disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
-      },*/
-    speed : 800,
-    loop: false,
     pagination: {
       el: "._processSwiper + ._sliderPagination",
       clickable: true,
     },
   });
 
+  new Waypoint({
+    element: document.querySelector('._processSwiper'),
+    handler: function () {
+      processSwiper.autoplay.start();
+      //console.log('_processSwiper')
+    },
+    offset: "50%"
+  })
+
   let processAni1 = document.querySelector('._processAni1');
   let processStep1 = bodymovin.loadAnimation({
     container: processAni1,
     renderer: 'svg',
-    loop: true,
+    loop: false,
     autoplay: true,
     path: "../../img/mentoring/progress-step1.json"
   });
@@ -324,7 +345,7 @@
   let processStep2 = bodymovin.loadAnimation({
     container: processAni2,
     renderer: 'svg',
-    loop: true,
+    loop: false,
     autoplay: true,
     path: "../../img/analysis/progress-step2.json"
   });
