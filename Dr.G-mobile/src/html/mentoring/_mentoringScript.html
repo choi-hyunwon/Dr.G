@@ -180,16 +180,13 @@
             }
         })
 
-        /*서브메인 process*/ /* s 02.17*/
+        /*서브메인 process*/
         let processSwiper = new Swiper("._processSwiper", {
             autoplay: {
                 enabled: false,
-                delay: 3800,
+                delay: 3000,
             },
-            loop:true,
             speed: 1000,
-            spaceBetween: 24,
-            centeredSlides: true,
             effect: 'slide',
             pagination: {
                 el: "._processSwiper + ._sliderPagination",
@@ -198,12 +195,12 @@
         });
 
         new Waypoint({
-            element: document.querySelector('._processSwiper'),
+            element: document.querySelector('.section-process'),
             handler: function () {
                 processSwiper.autoplay.start();
                 //console.log('process slider')
             },
-            offset: "50%"
+            offset: "80%"
         })
 
         let processAni1 = document.querySelector('._processAni1');
@@ -228,7 +225,7 @@
         let processStep3 = bodymovin.loadAnimation({
             container: processAni3,
             renderer: 'svg',
-            loop: false,
+            loop: true,
             autoplay: true,
             path: "../../img/mentoring/progress-step3.json"
         });
@@ -251,7 +248,6 @@
                 $('._stepBox').find('.step').eq(2).addClass('active').siblings().removeClass('active');
             }
         });
-        /*e 02.17*/
 
 
         /*서브메인 voc*/

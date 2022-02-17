@@ -247,17 +247,17 @@
 
 
   let whatSwiper = new Swiper('._whatSwiper', {
+    loop: false,
+    effect: 'slide',
     autoplay: {
       enabled: false,
       delay: 3000,
     },
     speed: 1000,
-    loopedSlides: 2,
-    spaceBetween: 48,
-    centeredSlides: true,
     pagination: {
-      el: "._whatPagination",
+      el: "._whatPagination"
     },
+
   });
 
   new Waypoint({
@@ -304,21 +304,16 @@
 
 
 
-  /*성분분석 슬라이드 이슈*/
-
   /*서브메인 process*/
   let processSwiper = new Swiper("._processSwiper", {
+    effect: 'slide',
     autoplay: {
       enabled: false,
-      delay: 3800,
+      delay: 3000,
     },
-    loop:true,
     speed: 1000,
-    spaceBetween: 24,
-    centeredSlides: true,
-    effect: 'slide',
     pagination: {
-      el: "._processSwiper + ._sliderPagination",
+      el: "._whatPagination",
       clickable: true,
     },
   });
