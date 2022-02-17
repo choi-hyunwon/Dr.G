@@ -113,175 +113,146 @@
                 lastScroll = st;
             }
         });
-
-
-
-/*|--------------s 서브메인----------------------------|*/
-
-        /*tab*/
-        let sectionTab = $('._section-tab');
-       // let lastScroll = 0;
-        $(window).scroll(function (){
-            if($('.container').find('._sub-main').length){
-                let st = $(this).scrollTop();
-                //console.log(st);
-                let sectionTabOffset = $('._section-tab').position ().top;
-                let sectionAbout = $('.section-about').position ().top;
-                let sectionAnswer = $('.section-answer').position ().top;
-
-                if (st > lastScroll){
-                    //console.log("DOWN");
-                    if (window.pageYOffset > sectionTabOffset) {
-                       // sectionTab.hide();
-                        sectionTab.addClass('fixed').addClass('top_0');
-                    }
-                }
-                else {
-                    //console.log("UP");
-                    if (window.pageYOffset >= sectionTabOffset) {
-                        sectionTab.addClass('fixed').removeClass('top_0');
-                        if (window.pageYOffset < sectionAbout) {
-                            sectionTab.removeClass('fixed')
-                        }
-                    }
-                }
-                //Updates scroll position
-                lastScroll = st;
-
-                 if (st > sectionAnswer){
-                     sectionTab.scrollLeft(90);
-                 } else {
-                     sectionTab.scrollLeft(0);
-                 }
-
-                 /* 탭활성화 */
-                 let section = $('.section')
-                 let tab = $('._section-tab .item')
-                 section.each(function( index, element ) {
-                    // console.log( section.eq(index));
-                    if ( st > $(this).offset().top - 350){
-                        tab.removeClass('active')
-                        tab.eq(index).addClass('active')
-                    }
-                 });
-
-             }
-        });
-        $('.slide-tab .item a').on('click',function (){
-            let idx = $(this).parent().index()
-            console.log(idx)
-            let offset = $('.section').eq(idx).offset();
-            let headHeight = $('.header-white').height() + $('._tab').height()
-
-            if ($('.header-white').hasClass('header-transparent')){
-                $('html, body').animate({scrollTop : offset.top - headHeight},400)
-            }else {
-                $('html, body').animate({scrollTop : offset.top},400)
-            }
-        })
-
-        /*서브메인 process*/
-        let processSwiper = new Swiper("._processSwiper", {
-            autoplay: {
-                enabled: false,
-                delay: 3000,
-            },
-            speed: 1000,
-            effect: 'slide',
-            pagination: {
-                el: "._processSwiper + ._sliderPagination",
-                clickable: true,
-            },
-        });
-
-        new Waypoint({
-            element: document.querySelector('.section-process'),
-            handler: function () {
-                processSwiper.autoplay.start();
-                //console.log('process slider')
-            },
-            offset: "80%"
-        })
-
-        let processAni1 = document.querySelector('._processAni1');
-        let processStep1 = bodymovin.loadAnimation({
-            container: processAni1,
-            renderer: 'svg',
-            loop: false,
-            autoplay: true,
-            path: "../../img/mentoring/progress-step1.json"
-        });
-
-        let processAni2 = document.querySelector('._processAni2');
-        let processStep2 = bodymovin.loadAnimation({
-            container: processAni2,
-            renderer: 'svg',
-            loop: false,
-            autoplay: true,
-            path: "../../img/mentoring/progress-step2.json"
-        });
-
-        let processAni3 = document.querySelector('._processAni3');
-        let processStep3 = bodymovin.loadAnimation({
-            container: processAni3,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: "../../img/mentoring/progress-step3.json"
-        });
-
-        processSwiper.on('slideChange', function () {
-
-            $('.slide-infobox .info').removeClass('active');
-            $('.slide-infobox .info').eq(this.realIndex).addClass('active');
-
-            if (processSwiper.realIndex === 0) {
-                processStep1.playSegments([0, 180], true)
-                $('._stepBox').find('.step').eq(0).addClass('active').siblings().removeClass('active');
-
-            } else if (processSwiper.realIndex === 1) {
-                processStep2.playSegments([0, 120], true)
-                $('._stepBox').find('.step').eq(1).addClass('active').siblings().removeClass('active');
-
-            } else if (processSwiper.realIndex === 2) {
-                processStep3.playSegments([0, 240], true)
-                $('._stepBox').find('.step').eq(2).addClass('active').siblings().removeClass('active');
-            }
-        });
-
-
-        /*서브메인 voc*/
-        $('.voc .review_box .item').on('click', function () {
-            if (!$(this).hasClass('active')) {
-                $(this).addClass('active').slideDown();
-                $(this).siblings().removeClass('active');
-            } else {
-                $(this).removeClass('active');
-            }
-        })
-
-        /*서브메인 faq*/
-        let box = $('.faq_box')
-        let item = $('.faq_box .item')
-        let solution = $('.solution')
-        item.on('click', function () {
-          if (!$(this).hasClass('active')) {
-              $(this).siblings().removeClass('active')
-              $(this).siblings().find(solution).slideUp(200);
-              $(this).addClass('active');
-              $(this).find(solution).slideDown(200);
-          } else {
-              $(this).removeClass('active');
-              $(this).find(solution).slideUp(200);
-          }
-        })
-        $('body').click(function(e) { /*외부클릭시 닫힘처리*/
-            if(!box.has(e.target).length){
-                item.removeClass('active');
-                item.find('.solution').slideUp(200);
-            }
-        });
-
-/*|--------------e 서브메인----------------------------|*/
     });
+
+    /*|--------------s 서브메인----------------------------|*/
+
+    /*tab*/
+    let sectionTab = $('._section-tab');
+    let lastScroll = 0;
+    var sectionStart = $('.section-about');
+    var sectionStartPos = sectionStart.position().top;
+
+    /* tab */
+    $(window).scroll(function (){
+        if($('.container').find('._sub-main').length){
+            let st = $(this).scrollTop();
+
+            /* 탭활성화 */
+            let section = $('.section')
+            let tab = $('._section-tab .item')
+            section.each(function( index ) {
+                if ( st > $(this).offset().top - 350){
+                    tab.removeClass('active')
+                    tab.eq(index).addClass('active')
+                }
+            });
+        }
+    });
+
+    $('.slide-tab .item a').on('click',function (){
+        let idx = $(this).parent().index()
+        // console.log(idx)
+        let offset = $('.section').eq(idx).offset();
+        let headHeight = $('.header-white').height() + $('._tab').height()
+
+        if ($('.header-white').hasClass('header-transparent')){
+            $('html, body').animate({scrollTop : offset.top - headHeight},400)
+        }else {
+            $('html, body').animate({scrollTop : offset.top},400)
+        }
+    })
+
+    /*서브메인 process*/
+    let processSwiper = new Swiper("._processSwiper", {
+        autoplay: {
+            enabled: false,
+            delay: 3000,
+        },
+        speed: 1000,
+        effect: 'slide',
+        pagination: {
+            el: "._processSwiper + ._sliderPagination",
+            clickable: true,
+        },
+    });
+
+    new Waypoint({
+        element: document.querySelector('.section-process'),
+        handler: function () {
+            processSwiper.autoplay.start();
+            //console.log('process slider')
+        },
+        offset: "80%"
+    })
+
+    let processAni1 = document.querySelector('._processAni1');
+    let processStep1 = bodymovin.loadAnimation({
+        container: processAni1,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/mentoring/progress-step1.json"
+    });
+
+    let processAni2 = document.querySelector('._processAni2');
+    let processStep2 = bodymovin.loadAnimation({
+        container: processAni2,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/mentoring/progress-step2.json"
+    });
+
+    let processAni3 = document.querySelector('._processAni3');
+    let processStep3 = bodymovin.loadAnimation({
+        container: processAni3,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: "../../img/mentoring/progress-step3.json"
+    });
+
+    processSwiper.on('slideChange', function () {
+
+        $('.slide-infobox .info').removeClass('active');
+        $('.slide-infobox .info').eq(this.realIndex).addClass('active');
+
+        if (processSwiper.realIndex === 0) {
+            processStep1.playSegments([0, 180], true)
+            $('._stepBox').find('.step').eq(0).addClass('active').siblings().removeClass('active');
+
+        } else if (processSwiper.realIndex === 1) {
+            processStep2.playSegments([0, 120], true)
+            $('._stepBox').find('.step').eq(1).addClass('active').siblings().removeClass('active');
+
+        } else if (processSwiper.realIndex === 2) {
+            processStep3.playSegments([0, 240], true)
+            $('._stepBox').find('.step').eq(2).addClass('active').siblings().removeClass('active');
+        }
+    });
+
+
+    /*서브메인 voc*/
+    $('.voc .review_box .item').on('click', function () {
+        if (!$(this).hasClass('active')) {
+            $(this).addClass('active').slideDown();
+            $(this).siblings().removeClass('active');
+        } else {
+            $(this).removeClass('active');
+        }
+    })
+
+    /*서브메인 faq*/
+    let box = $('.faq_box')
+    let item = $('.faq_box .item')
+    let solution = $('.solution')
+    item.on('click', function () {
+        if (!$(this).hasClass('active')) {
+            $(this).siblings().removeClass('active')
+            $(this).siblings().find(solution).slideUp(200);
+            $(this).addClass('active');
+            $(this).find(solution).slideDown(200);
+        } else {
+            $(this).removeClass('active');
+            $(this).find(solution).slideUp(200);
+        }
+    })
+    $('body').click(function(e) { /*외부클릭시 닫힘처리*/
+        if(!box.has(e.target).length){
+            item.removeClass('active');
+            item.find('.solution').slideUp(200);
+        }
+    });
+    /*|--------------e 서브메인----------------------------|*/
 </script>

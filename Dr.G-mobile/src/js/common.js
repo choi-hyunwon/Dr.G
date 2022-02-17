@@ -210,13 +210,13 @@ front.common = (function () {
         /* select box - 유형선택 */
         var $body = $('body')
 
-        $('._selectBox .btn-select').on('click',function (e) {
+        $('._selectBox .btn-select').on('click', function (e) {
             // if ($(this).hasClass('disabled')) return;
             e.stopPropagation();
             $(this).parent().toggleClass('down');
         })
 
-        $('._selectBox li a').on('click',function (e) {
+        $('._selectBox li a').on('click', function (e) {
             let text = $(this).text();
             $(this).parent().addClass('on').siblings().removeClass('on');
             console.log($(this).parent().parents('.list').parent())
@@ -225,7 +225,7 @@ front.common = (function () {
             $(this).parent().parents('.list').parent().removeClass('down');
         })
 
-        $body.on('click', function(){
+        $body.on('click', function () {
             $('._selectBox').removeClass('down');
         });
     }
@@ -469,12 +469,29 @@ front.common = (function () {
                     $('._floatBottom').removeClass('arrow-off')
                     $('._chatBotArea').addClass('full')
 
+                    /* Ai피부분석 서브메인 scroll - tab + header  */
                     if ($('.AI-wrap').find('._scrollTabWrap').length) {
                         if (st > sectionStartPos) {
                             sectionTab.show().addClass('fixed').css('top', 0 + 'px');
                             headerWhite.hide();
                         }
-                    } else if ($('.AI-wrap').find('._scrollAnalysisTab').length) {
+                    }
+                    /* Ai피부분석 결과 scroll - tab + header  */
+                    else if ($('.AI-wrap').find('._scrollAnalysisTab').length) {
+                        if (st > sectionStartPos) {
+                            sectionTab.show().addClass('fixed').css('top', 0 + 'px');
+                            headerWhite.hide();
+                        }
+                    }
+                    /* 성분분석 scroll - tab + header  */
+                    else if ($('.analysis-sub-main').find('._section-tab').length) {
+                        if (st > sectionStartPos) {
+                            sectionTab.show().addClass('fixed').css('top', 0 + 'px');
+                            headerWhite.hide();
+                        }
+                    }
+                    /* 스킨멘토링 scroll - tab + header  */
+                    else if ($('.mentoring-sub-main').find('._section-tab').length) {
                         if (st > sectionStartPos) {
                             sectionTab.show().addClass('fixed').css('top', 0 + 'px');
                             headerWhite.hide();
@@ -484,6 +501,7 @@ front.common = (function () {
                     // Scroll Up
                     if (st + $(window).height() < $(document).height()) {
                         $('._floatBottom').addClass('arrow-off')
+                        /* Ai피부분석 서브메인 scroll - tab + header  */
                         if ($('.AI-wrap').find('._scrollTabWrap').length) {
                             // tab
                             if (st < sectionStartPos) {
@@ -501,7 +519,9 @@ front.common = (function () {
                             } else {
                                 headerWhite.show().removeClass('header-transparent', 'scroll-up').addClass('scroll-down');
                             }
-                        } else if ($('.AI-wrap').find('._scrollAnalysisTab').length) {
+                        }
+                        /* Ai피부분석 결과 scroll - tab + header  */
+                        else if ($('.AI-wrap').find('._scrollAnalysisTab').length) {
                             // tab
                             if (st < sectionStartPos) {
                                 sectionTab.removeClass('fixed', 'scroll-down').css('top', 0 + 'px');
@@ -515,7 +535,47 @@ front.common = (function () {
                             } else {
                                 headerWhite.show().removeClass('header-transparent', 'scroll-up').addClass('scroll-down');
                             }
-                        } else {
+                        }
+                        /* 성분분석 scroll - tab + header  */
+                        else if ($('.analysis-sub-main').find('._section-tab').length) {
+                            // tab
+                            if (st < sectionStartPos) {
+                                sectionTab.removeClass('fixed', 'scroll-down').css('top', 0 + 'px');
+                                $('._chatBotArea').removeClass('full')
+                            } else {
+                                var headerHeight = $('.header-white').outerHeight();
+                                sectionTab.addClass('fixed').css('top', headerHeight + 'px');
+                                $('._chatBotArea').removeClass('full')
+                            }
+                            // header
+                            if (st < delta) {
+                                $('._floatBottom').removeClass('arrow-off')
+                                headerWhite.show().addClass('header-transparent').removeClass('scroll-down');
+                            } else {
+                                headerWhite.show().removeClass('header-transparent', 'scroll-up').addClass('scroll-down');
+                            }
+                        }
+                        /* 스킨멘토링 scroll - tab + header  */
+                        else if ($('.mentoring-sub-main').find('._section-tab').length) {
+                            // tab
+                            if (st < sectionStartPos) {
+                                sectionTab.removeClass('fixed', 'scroll-down').css('top', 0 + 'px');
+                                $('._chatBotArea').removeClass('full')
+                            } else {
+                                var headerHeight = $('.header-white').outerHeight();
+                                sectionTab.addClass('fixed').css('top', headerHeight + 'px');
+                                $('._chatBotArea').removeClass('full')
+                            }
+                            // header
+                            if (st < delta) {
+                                $('._floatBottom').removeClass('arrow-off')
+                                headerWhite.show().addClass('header-transparent').removeClass('scroll-down');
+                            } else {
+                                headerWhite.show().removeClass('header-transparent', 'scroll-up').addClass('scroll-down');
+                            }
+                        }
+                        /* 기타 */
+                        else {
                             if (st < delta) {
                                 $('._floatBottom').removeClass('arrow-off');
                                 $('._chatBotArea').removeClass('full');
@@ -559,7 +619,7 @@ front.common = (function () {
                     $('._floatBottom').removeClass('arrow-off')
 
                     if (st > mainHeaderHeight + bannerHeight) {
-                        mainHeader.removeClass('scroll-up').addClass('header-transparent','scroll-down');
+                        mainHeader.removeClass('scroll-up').addClass('header-transparent', 'scroll-down');
                         $('._chatBotArea').addClass('full')
                         // console.log('1')
                     }
