@@ -170,51 +170,29 @@
 
   /*tab*/
   let sectionTab = $('._section-tab');
-   let lastScroll = 0;
+  let lastScroll = 0;
+  var sectionStart = $('.section-about');
+  var sectionStartPos = sectionStart.position().top;
+
   $(window).scroll(function (){
     if($('.container').find('._sub-main').length){
       let st = $(this).scrollTop();
-      //console.log(st);
-      let sectionTabOffset = $('._section-tab').position ().top;
-      let sectionAbout = $('.section-about').position ().top;
-
-      if (st > lastScroll){
-        //console.log("DOWN");
-        if (window.pageYOffset > sectionTabOffset) {
-          // sectionTab.hide();
-          sectionTab.addClass('fixed').addClass('top_0');
-        }
-      }
-      else {
-        //console.log("UP");
-        if (window.pageYOffset >= sectionTabOffset) {
-          sectionTab.addClass('fixed').removeClass('top_0');
-          if (window.pageYOffset < sectionAbout) {
-            sectionTab.removeClass('fixed')
-          }
-        }
-      }
-      //Updates scroll position
-      lastScroll = st;
-
-
 
       /* 탭활성화 */
-      let section = $('.section')
+      let section = $('._section')
       let tab = $('._section-tab .item')
-      section.each(function( index, element ) {
-        // console.log( section.eq(index));
+      section.each(function( index) {
         if ( st > $(this).offset().top - 350){
           tab.removeClass('active')
           tab.eq(index).addClass('active')
         }
       });
-
     }
   });
+
   $('.slide-tab .item a').on('click',function (){
     let idx = $(this).parent().index()
-    console.log(idx)
+    // console.log(idx)
     let offset = $('.section').eq(idx).offset();
     let headHeight = $('.header-white').height() + $('._tab').height()
 
@@ -225,11 +203,6 @@
     }
 
   })
-
-
-
-
-
 
   /*서브메인 what*/
   let stepSwiper = new Swiper ('.step-swiper', {
