@@ -4,10 +4,6 @@
     margin-bottom: vw(80);
     position: relative;
 
-    &.bg-blue {
-      background-color: #34A6F9;
-    }
-
     .font-h1, .font-h3 {
       color: $gray-fff;
       padding: 0 vw(24);
@@ -119,11 +115,10 @@
           display: inline-block;
 
           &.waiting {
-            padding-right: vw(8);
+            padding-right: vw(4);
             position: relative;
 
             .num {
-              font-weight: 600;
               color: $blue;
             }
 
@@ -135,7 +130,7 @@
               height: vw(10);
               background-color: $gray-400;
               position: absolute;
-              right: 0;
+              right: vw(-4);
               top: 50%;
               transform: translateY(-50%);
             }
@@ -145,7 +140,6 @@
             padding-left: vw(8);
 
             .num {
-              font-weight: 600;
               color: $gray-900;
             }
           }
@@ -315,13 +309,13 @@
     .section-color {
       padding: vw(48) vw(0) vw(94);
       margin-bottom: vw(64);
-      background: $blue url("../img/mentoring/bg-round.svg") no-repeat;
-      background-size: vw(375) vw(208);
+      background: $blue url("../img/mentoring/bg-round.png") no-repeat right bottom vw(20);
+      background-size: vw(200) vw(99);
 
       &:after {
         content: '';
         display: inline-block;
-        background: url("../img/mentoring/img-mentor2.svg") no-repeat;
+        background: url("../img/mentoring/img-mentor2.png") no-repeat;
         width: vw(134);
         height: vw(206);
         background-size: 100% auto;
@@ -377,11 +371,12 @@
           font-size: vw(16);
 
           span {
+            font-weight: 500;
             &.num {
               text-transform: uppercase;
-              padding-right: vw(12);
+              padding-right: vw(13);
               position: relative;
-              font-family: Poppins, sans-serif;
+              font-weight: 600;
 
               &:after {
                 content: '';
@@ -391,7 +386,7 @@
                 background-color: $gray-fff;
                 position: absolute;
                 right: vw(6);
-                top: vw(1.5);
+                top: vw(3.5);
                 opacity: 0.3;
               }
             }
@@ -541,6 +536,9 @@
       margin-bottom: 0;
       padding: vw(60) vw(0) vw(68);
       position: relative;
+      &.bg-blue {
+        background-color: #34A6F9;
+      }
       .text-box{
         margin-top: vw(20);
         .font-h1{
@@ -632,6 +630,7 @@
         padding: vw(24) vw(24) 0;
         margin-bottom: vw(86);
       }
+
     }
 
     .section-about {
