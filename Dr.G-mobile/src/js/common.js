@@ -273,13 +273,15 @@ front.common = (function () {
             }, 400);
         });
 
-        /*외부클릭시 삭제*/
-        $('.toast-dim').mouseup(function (e) {
-            let toastPopup = $('.toast-popup');
-            if (toastPopup.has(e.target).length === 0) {
-                $('.toast-dim').css('display', 'none');
-            }
-        })
+        /* 외부클릭시 삭제 */
+        if($('._toast-popup._no-hide-dim').length == 0){
+            $('.toast-dim').mouseup(function (e) {
+                let toastPopup = $('.toast-popup');
+                if (toastPopup.has(e.target).length === 0) {
+                    $('.toast-dim').css('display', 'none');
+                }
+            })
+        }
     }
 
     var headerDetails = function () {

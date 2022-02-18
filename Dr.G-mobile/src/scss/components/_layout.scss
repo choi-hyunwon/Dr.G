@@ -923,12 +923,17 @@
       .item {
         position: relative;
 
+        a {
+          display: block;
+        }
+
         + .item {
           margin-top: vw(16);
         }
 
         .img {
-          width: vw(100%);
+          display: block;
+          width: 100%;
           height: vw(200);
 
           img {

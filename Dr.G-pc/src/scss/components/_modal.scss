@@ -433,6 +433,15 @@
         .title {
           margin-bottom: 24px;
         }
+
+        .sns-share-wrap {
+          display: flex;
+          justify-content: center;
+
+          a + a {
+            margin-left: 16px;
+          }
+        }
       }
     }
 

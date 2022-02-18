@@ -101,11 +101,9 @@
             </section>
             <!--무료 샘플 신청 주의사항 e-->
 
-            <div class="inner">
-                <!-- s chatbot -->
-                @@include('../../html/include/common/chatbot.html')
-                <!-- e chatbot -->
-            </div>
+            <!-- s chatbot -->
+            @@include('../../html/include/common/chatbot.html')
+            <!-- e chatbot -->
         </div>
     </div>
     <!-- e contents -->
@@ -115,17 +113,15 @@
     <!-- e footer -->
 </div>
 <script>
-    $(document).ready(function (){
-        setInterval(function (){
-            let step = $('.step-list > .step')
-            secondStep(step)
+    setInterval(function (){
+        let step = $('.step-list > .step')
 
-            setTimeout(function (){
-                let step = $('.step-list > .step')
-                firstStep(step)
-            },3000)
-        },6000)
-    })
+        if (step.eq(0).hasClass('active')) {
+            secondStep(step)
+        } else {
+            firstStep(step)
+        }
+    },3000)
 
     function firstStep(step) {
         step.eq(0).addClass('active');
