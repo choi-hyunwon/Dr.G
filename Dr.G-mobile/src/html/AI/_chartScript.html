@@ -275,17 +275,44 @@
         }
 
         function getInterpolatedLine() {
-            return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13} S {14} {15}, {16} {17} S {18} {19}, {20} {21}'.format(
+
+            console.log(data)
+            /**
+             * 시작점이 있는 경우
+             */
+
+            // return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13} S {14} {15}, {16} {17} S {18} {19}, {20} {21}'.format(
+            //     // M
+            //     temp.begin.x, temp.begin.y,
+            //     // L
+            //     temp.point[0].x, temp.point[0].y,
+            //     // C
+            //     temp.control[0].x, temp.control[0].y,
+            //     temp.control[1].x, temp.control[1].y,
+            //     temp.point[1].x, temp.point[1].y,
+            //     // S
+            //     temp.control[2].x, temp.control[2].y,
+            //     temp.point[2].x, temp.point[2].y,
+            //     // S
+            //     temp.control[3].x, temp.control[3].y,
+            //     temp.point[3].x, temp.point[3].y,
+            //     // S
+            //     temp.control[4].x, temp.point[4].y,
+            //     temp.point[4].x, temp.point[4].y,
+            // )
+
+            /**
+             * 시작점이 없는 경우
+              */
+
+            return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13} S {14} {15}, {16} {17}'.format(
                 // M
-                temp.begin.x, temp.begin.y,
-                // L
-                temp.point[0].x, temp.point[0].y,
-                // C
-                temp.control[0].x, temp.control[0].y,
-                temp.control[1].x, temp.control[1].y,
                 temp.point[1].x, temp.point[1].y,
-                // S
-                temp.control[2].x, temp.control[2].y,
+                // L
+                temp.point[1].x, temp.point[1].y,
+                // C
+                130, temp.control[1].y,
+                130, temp.control[2].y,
                 temp.point[2].x, temp.point[2].y,
                 // S
                 temp.control[3].x, temp.control[3].y,
