@@ -577,11 +577,119 @@
             background-color: $gray-200;
             padding: vw(18);
             text-align: center;
-            font-weight: bold;
             border-radius: vw(12);
             margin-bottom: vw(24);
+            font-weight: bold;
             + .font-h6 {
               color: $gray-800;
+            }
+
+            /*셀렉트로 변경*/
+            &.input-area{
+              padding: 0;
+              background-color: transparent;
+              text-align: left;
+              .select-box {
+                position: relative;
+                margin-bottom: vw(24);
+                line-height: 1;
+
+                .btn-select {
+                  &.selected {
+                    font-weight: bold;
+                    color: $gray-800;
+                    background-image: url(../img/common/ico-select.svg);
+                    padding-right: vw(60);
+                    @include ellipsis(1)
+                  }
+                }
+
+                .list {
+                  display: none;
+                  width: 100%;
+                  position: absolute;
+                  padding-right: vw(9);
+                  user-select: none;
+                  top: vw(59);
+                  left: 0;
+                  background-color: white;
+                  border: vw(1) solid $gray-600;
+                  border-radius: 0 0 vw(12) vw(12);
+                  z-index: 2;
+                }
+
+                ul {
+                  width: 100%;
+                  max-height: vw(207);
+                  overflow-y: auto;
+
+                  &::-webkit-scrollbar {
+                    width: vw(6) !important;
+                    display: inline-block;
+                  }
+
+                  &::-webkit-scrollbar-button:start:decrement,
+                  &::-webkit-scrollbar-button:end:increment {
+                    display:block;
+                    height:15px;
+                    background-color: transparent;
+                  }
+
+                  &::-webkit-scrollbar-track {
+                    background-color: transparent;
+                  }
+
+                  &::-webkit-scrollbar-thumb {
+                    background-color: $gray-300;
+                    border-radius: vw(100);
+                  }
+                  li {
+                    a {
+                      padding: vw(8) vw(20) 0;
+                      margin-bottom: vw(8);
+                      display: block;
+                      font-size: vw(15);
+                      line-height: vw(22);
+                      font-weight: 400;
+                      color: $gray-700;
+                      @include ellipsis(2);
+
+                    }
+                    &:first-of-type{
+                      a{
+                        padding-top: vw(15);
+                      }
+                    }
+                    &:last-of-type{
+                      a{
+                        margin-bottom: vw(15);
+                      }
+                    }
+
+                    &.on{
+                      a{
+                        color: $violet;
+                        font-weight: bold;
+                      }
+                    }
+                  }
+                }
+
+                &.down {
+                  .list {
+                    display: block;
+                    border: vw(1) solid $gray-600;
+                    border-top: vw(1) solid $gray-300;
+                  }
+
+                  .btn-select {
+                    border-color: $gray-600;
+                    border-bottom: 0;
+                    border-radius: vw(12) vw(12) 0 0;
+                    background-image: url(../img/common/ico-select-up.svg);
+                  }
+                }
+              }
             }
           }
 
