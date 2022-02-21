@@ -281,7 +281,7 @@
     effect: 'slide',
     autoplay: {
       enabled: false,
-      delay: 3000,
+      delay: 4000,
     },
     speed: 1000,
     pagination: {
@@ -305,14 +305,14 @@
     renderer: 'svg',
     loop: false,
     autoplay: true,
-    path: "../../img/mentoring/progress-step1.json"
+    path: "../../img/analysis/progress-step1.json"
   });
 
   let processAni2 = document.querySelector('._processAni2');
   let processStep2 = bodymovin.loadAnimation({
     container: processAni2,
     renderer: 'svg',
-    loop: false,
+    loop: true,
     autoplay: true,
     path: "../../img/analysis/progress-step2.json"
   });
@@ -331,7 +331,7 @@
     let stepLi = $('.analysis-sub-main .step-box li')
 
     if (processSwiper.realIndex === 0) {
-      processStep1.playSegments([0, 180], true)
+      processStep1.playSegments([0, 60], true)
       $('._stepBox').find('.step').eq(0).addClass('active').siblings().removeClass('active');
       stepLi.removeClass('active check bar')
       stepLi.eq(0).addClass('active')
