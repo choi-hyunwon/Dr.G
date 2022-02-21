@@ -1,32 +1,5 @@
 <script>
-    function updSwiperNumericPagination() {
-        var slidesQuantity = $('._bannerSlider .swiper-slide').length
-        this.el.querySelector('._bannerSliderNum').innerHTML = '<span class="count">' + (this.realIndex + 1) + '</span>/<span class="total">' + slidesQuantity + '</span>';
-    }
-
     $(document).ready(function (){
-        /* 영상 자동 재생 */
-        // document.getElementById('video').play();
-        //
-        // window.myVideo = document.getElementById('video');
-        // window.myVideo.controls = false;
-        // window.myVideo.play();
-
-        /* 메인 슬라이더 */
-        new Swiper("._bannerSlider", {
-            spaceBetween: 24,
-            centeredSlides: true,
-            effect: 'fade',
-            pagination: {
-                el: "._bannerSlider + ._sliderPagination",
-                clickable: true,
-            },
-            on: {
-                init: updSwiperNumericPagination,
-                slideChange: updSwiperNumericPagination
-            }
-        });
-
         /* 하단 버튼 */
         var chatbot = $('#chatbot');
         chatbot.draggable({
@@ -47,27 +20,113 @@
             chatbot.children('.tip').hide();
         })
 
-        /* 고객제안 슬라이더 */
-        new Swiper("._suggestionSlider", {
-            effect: 'fade',
+        /* 배너 슬라이더 */
+        var bannerSlider = new Swiper("._bannerSlider", {
+            spaceBetween: 120,
+            speed: 400,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+            },
+            // observer: true,
+            // observeParents: true,
             pagination: {
-                el: "._suggestionPagination",
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
-                },
+                el: '._pagination',
+            },
+        });
+
+        window.onresize=function(){
+            bannerSlider.update();
+        }
+
+        $('.btn-play-stop').on('click',function (){
+            if(!$(this).hasClass('play')){
+                bannerSlider.autoplay.stop();
+                $(this).addClass('play');
+            } else {
+                bannerSlider.autoplay.start();
+                $(this).removeClass('play');
+            }
+        })
+
+        /* 고객제안 슬라이더 */
+        var suggestionSlider = new Swiper("._suggestionSlider", {
+            slidesPerView: 5,
+            spaceBetween: 120,
+            centeredSlides: true,
+            loop: true,
+            autoplay: true,
+            speed: 1000,
+            infinite: true,
+            navigation: {
+                nextEl: "._sNext",
+                prevEl: "._sPrev",
             }
         });
 
-        /* 제안 리스트 너비 */
-        var sum = 0;
-        var listItem = $('._suggestionList .item');
+        suggestionSlider.on('slideChange', function () {
+            var smileMotif = $('._smileMotif');
+            var desc = $('._desc');
+            var name = $('._name');
+            var btn = $('._sBtn');
+            var btnArrow = $('._arrow path');
 
-        listItem.each(function () {
-            sum = sum + $(this).outerWidth(true);
+            if(suggestionSlider.realIndex === 0) {
+                smileMotif.css('fill','#05439')
+                desc.text('흡수 빠른 프로 비타민 D 함유')
+                name.text('더모이스처 베리어.D')
+                btn.css('background-color','#EF620A')
+                btn.css('color','#ffffff')
+                btnArrow.css('stroke','#ffffff')
+            } else if(suggestionSlider.realIndex === 1) {
+                smileMotif.css('fill','#F15a00')
+                desc.text('잡티 잡는 파워 비타민C 앰플')
+                name.text('비타슈티컬 15 플러스 앰플')
+                btn.css('background-color','#F5E618')
+                btn.css('color','#444444')
+                btnArrow.css('stroke','#444444')
+            } else if(suggestionSlider.realIndex === 2) {
+                smileMotif.css('fill','#008257')
+                desc.text('진정 강한 병풀 바이옴 시카 수딩 크림')
+                name.text('레드 블레미쉬 시카 수딩 크림')
+                btn.css('background-color','#FF4757')
+                btn.css('color','#FFFFFF')
+                btnArrow.css('stroke','#FFFFFF')
+            } else if(suggestionSlider.realIndex === 3) {
+                smileMotif.css('fill','#05439')
+                desc.text('흡수 빠른 프로 비타민 D 함유')
+                name.text('더모이스처 베리어.D')
+                btn.css('background-color','#EF620A')
+                btnArrow.css('stroke','#ffffff')
+            } else if(suggestionSlider.realIndex === 4) {
+                smileMotif.css('fill','#F15a00')
+                desc.text('잡티 잡는 파워 비타민C 앰플')
+                name.text('비타슈티컬 15 플러스 앰플')
+                btn.css('background-color','#F5E618')
+                btn.css('color','#444444')
+                btnArrow.css('stroke','#444444')
+            } else if(suggestionSlider.realIndex === 5) {
+                smileMotif.css('fill','#008257')
+                desc.text('진정 강한 병풀 바이옴 시카 수딩 크림')
+                name.text('레드 블레미쉬 시카 수딩 크림')
+                btn.css('background-color','#FF4757')
+                btn.css('color','#FFFFFF')
+                btnArrow.css('stroke','#FFFFFF')
+            } else if(suggestionSlider.realIndex === 6) {
+                smileMotif.css('fill','#05439')
+                desc.text('흡수 빠른 프로 비타민 D 함유')
+                name.text('더모이스처 베리어.D')
+                btn.css('background-color','#EF620A')
+                btnArrow.css('stroke','#ffffff')
+            } else if(suggestionSlider.realIndex === 7) {
+                smileMotif.css('fill','#F15a00')
+                desc.text('잡티 잡는 파워 비타민C 앰플')
+                name.text('비타슈티컬 15 플러스 앰플')
+                btn.css('background-color','#F5E618')
+                btn.css('color','#444444')
+                btnArrow.css('stroke','#444444')
+            }
         });
-
-        $('._suggestionList .list').css('width', sum + 10 * 100 / 375 +  'px');
 
         /* 배너 모달 */
         var modal = $('._bannerModal');

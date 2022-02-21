@@ -124,6 +124,7 @@
           margin: 0 auto vw(32);
           border-radius: vw(16);
           overflow: hidden;
+          -webkit-backface-visibility: hidden;
 
           .scan-line {
             position: absolute;
@@ -133,6 +134,7 @@
             border-radius: vw(100);
             left: 0;
             z-index: 1;
+            -webkit-perspective: 1000;
             animation-name: scanAni;
             -webkit-animation-name: scanAni;
             animation-duration: 2s;
