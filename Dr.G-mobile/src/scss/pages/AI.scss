@@ -12,8 +12,16 @@
     justify-content: flex-end;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     background-color: transparent;
+  }
+
+  .color-gray-dark {
+    color: $gray-800 !important;
+  }
+
+  .color-gray-dark-light {
+    color: $gray-700 !important;
   }
 
   /* 피부분석 step */
@@ -111,8 +119,8 @@
 
         .scan-img {
           position: relative;
-          width: vw(248);
-          height: vw(440);
+          width: vw(300);
+          height: vw(400);
           margin: 0 auto vw(32);
           border-radius: vw(16);
           overflow: hidden;
@@ -299,6 +307,7 @@
               box-shadow: 0 vw(4) vw(4) rgba(34, 34, 34, 0.12);
               margin: 0 auto vw(24);
               background-color: #2fcab0;
+              border: vw(1) solid #36E2C5;
 
               .icon-camera {
                 @include background-img($width: 32, $height: 32, $category: 'AI', $img: 'ico-camera.svg');
@@ -536,6 +545,7 @@
 
               a {
                 color: $gray-700;
+                font-weight: 500;
                 display: block;
 
                 &:hover {
@@ -1025,8 +1035,8 @@
         .img {
           background: #d5dade;
           border-radius: vw(20);
-          width: vw(325);
-          height: vw(325);
+          width: vw(260);
+          height: vw(346);
           margin: 0 auto vw(24);
 
           img {
@@ -1912,7 +1922,7 @@
 
     .btn-wrap {
       position: absolute;
-      bottom: vw(32);
+      bottom: vw(76);
       width: 100%;
       left: 50%;
       transform: translateX(-50%);
@@ -1980,6 +1990,7 @@
           a {
             display: block;
             color: $gray-600;
+            font-weight: 500;
           }
 
           &.on {
@@ -2645,9 +2656,11 @@
           font-size: vw(16);
           line-height: vw(25);
           color: $gray-800;
+          font-weight: 500;
 
           .color-light-gray {
             color: $gray-500;
+            font-weight: 400;
           }
         }
       }
@@ -2672,6 +2685,7 @@
               position: relative;
               width: 100%;
               height: vw(156);
+              border-radius: vw(12);
 
               .category {
                 position: absolute;

@@ -5,6 +5,13 @@
     }
 
     $(document).ready(function (){
+        /* 영상 자동 재생 */
+        // document.getElementById('video').play();
+        //
+        // window.myVideo = document.getElementById('video');
+        // window.myVideo.controls = false;
+        // window.myVideo.play();
+
         /* 메인 슬라이더 */
         new Swiper("._bannerSlider", {
             spaceBetween: 24,
@@ -76,5 +83,42 @@
             modal.removeClass('show').addClass('hide');
             $('body').removeClass('scrOff')
         });
+
+        // animation
+        let iconAnalysis = document.querySelector('._analysisAni');
+
+        let animationAnalysis = bodymovin.loadAnimation({
+            container: iconAnalysis,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: "../../img/main/type_262x257.json"
+        });
+
+        let iconMentoring = document.querySelector('._mentoringAni');
+
+        let animationMentoring = bodymovin.loadAnimation({
+            container: iconMentoring,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: "../../img/main/skin.json"
+        });
+
+        new Waypoint({
+            element: document.querySelector('._analysisSection'),
+            handler: function () {
+                animationAnalysis.playSegments([0,274], true);
+            },
+            offset: "50%"
+        })
+
+        new Waypoint({
+            element: document.querySelector('._mentoringSection'),
+            handler: function () {
+                animationMentoring.playSegments([0,220], true);
+            },
+            offset: "50%"
+        })
     })
 </script>

@@ -166,12 +166,11 @@ front.common = (function () {
         var $body = $('body')
 
         $('._selectBox .btn-select').on('click',function (e) {
-            // if ($(this).hasClass('disabled')) return;
             e.stopPropagation();
             $(this).parent().toggleClass('down');
         })
 
-        $('._selectBox li a').on('click',function (e) {
+        $('._selectBox li a').on('click',function () {
             let text = $(this).text();
             $(this).parent().addClass('on').siblings().removeClass('on');
             console.log($(this).parent().parents('.list').parent())
@@ -272,7 +271,6 @@ front.common = (function () {
                     if ($('.inside-drg').find('._tab').length) {
                         var tabScrollPos = $('._tab').offset().top + $('._tab').outerHeight();
                         if (st > tabScrollPos - 64) {
-                            // console.log('1')
                             header.addClass('_scroll')
                             $('._tab').addClass('fixed').css('top', 86 + 'px')
                         } else {
@@ -288,7 +286,6 @@ front.common = (function () {
                         }
                     } else if ($('._AiSubMain').find('._scrollTabWrap').length) {
                         var tabContentOffset = $('.section-wrap').offset().top;
-                        // console.log(tabScrollPos)
                         if (st > tabContentOffset) {
                             header.addClass('_scroll')
                             $('._scrollTabWrap').addClass('fixed').css('top', 86 + 'px')
@@ -303,10 +300,8 @@ front.common = (function () {
                     if ($('.inside-drg').find('._tab').length) {
                         var tabContentOffset = $('.tab-content').offset().top;
                         if (tabContentOffset > st) {
-                            // console.log('2')
                             $('._tab').removeClass('fixed').css('top', 'auto')
                         } else {
-                            // console.log('3')
                             $('._tab').addClass('fixed').css('top', 86 + 'px')
                         }
                         if (st < delta) {
@@ -315,7 +310,7 @@ front.common = (function () {
                     } else if($('._AIResult').find('._tab').length) {
                         var tabContentOffset = $('._scrollTabWrap').offset().top;
                         if (tabContentOffset > st) {
-                            $('._tab').removeClass('fixed').css('top', 86 + 'px')
+                            $('._tab').removeClass('fixed').css('top', 'auto')
                         } else {
                             $('._tab').addClass('fixed').css('top', 86 + 'px')
                         }

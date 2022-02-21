@@ -503,6 +503,11 @@ body.scrOff {
         line-height: 22px;
         color: $gray-700;
       }
+      &.on {
+        a {
+          color: $primary;
+        }
+      }
     }
   }
 

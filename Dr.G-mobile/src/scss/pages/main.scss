@@ -310,6 +310,12 @@
             background-color: #fff;
             padding: 0;
 
+            &.swiper-slide-active {
+              .text-box {
+                transform: none;
+              }
+            }
+
             .img-box {
               .img {
                 width: vw(212);
@@ -336,7 +342,6 @@
               bottom: vw(76);
               right: vw(24);
               width: auto;
-              transform: translateX(vw(140));
               transition: .5s;
               transition-delay: .5s;
             }
@@ -346,6 +351,7 @@
               width: vw(220);
               top: vw(532);
               left: vw(26);
+              transform: none;
 
               .p-title {
                 font-weight: bold;
@@ -363,15 +369,6 @@
                 color: $gray-700;
               }
             }
-
-            .img-box {
-            }
-
-            &.swiper-slide-active {
-              .btn-wrap {
-                transform: translateX(0);
-              }
-            }
           }
         }
       }
@@ -382,6 +379,10 @@
   .story {
     .story-heading-img {
       .flag {
+        .inner {
+          position: relative;
+          height: 100%;
+        }
         .title {
           letter-spacing: -0.02em;
         }

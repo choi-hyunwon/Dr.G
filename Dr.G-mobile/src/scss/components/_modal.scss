@@ -360,6 +360,10 @@
           text-align: center;
           color: $gray-800;
 
+          &.font-bold {
+            font-weight: bold !important;
+          }
+
           &.next-desc {
             margin-bottom: vw(11) !important;
           }
