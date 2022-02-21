@@ -799,8 +799,9 @@
       .smile-graph{
         span { /*span 기준점*/
           &.value{ /*실제 그래프*/
-            animation: smileLoading 2s infinite;
-            transform: unset;
+            transform: rotateZ(-360deg);
+            animation: smileGraph 3s infinite;
+            -webkit-animation: smileGraph 3s infinite;
           }
         }
       }
@@ -842,18 +843,13 @@
       &.value{ /*실제 그래프*/
         z-index: 1;
         border-color: #ffe444;
-        animation: smileGraph 1s 0.5s ;
+        animation: smileGraph 1s 0.5s;
         transform:rotateZ(-360deg);
       }
     }
   }
   @keyframes smileGraph{
     0%{transform: rotateZ(-180deg);}
-  }
-  @keyframes smileLoading{
-    0%{transform: rotateZ(-180deg);}
-    50%{transform: rotateZ(-360deg);}
-    100%{transform: rotateZ(-180deg);}
   }
 
 
