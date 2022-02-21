@@ -4,14 +4,16 @@
         this.el.querySelector('._bannerSliderNum').innerHTML = '<span class="count">' + (this.realIndex + 1) + '</span>/<span class="total">' + slidesQuantity + '</span>';
     }
 
-    $(document).ready(function (){
-        /* 영상 자동 재생 */
-        // document.getElementById('video').play();
-        //
-        // window.myVideo = document.getElementById('video');
-        // window.myVideo.controls = false;
-        // window.myVideo.play();
+    function aniText() {
+        var target = $('._analysisAni + .animation-desc');
+        target.html('성분을 스캔 중 입니다.<br>잠시만 기다려주세요!');
 
+        setTimeout(function (){
+            target.html('성분 분석 완료!');
+        },2800)
+    }
+
+    $(document).ready(function (){
         /* 메인 슬라이더 */
         new Swiper("._bannerSlider", {
             spaceBetween: 24,
@@ -109,6 +111,7 @@
             element: document.querySelector('._analysisSection'),
             handler: function () {
                 animationAnalysis.playSegments([0,274], true);
+                aniText()
             },
             offset: "50%"
         })

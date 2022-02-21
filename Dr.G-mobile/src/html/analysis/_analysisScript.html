@@ -290,15 +290,6 @@
     },
   });
 
-  new Waypoint({
-    element: document.querySelector('._processSwiper'),
-    handler: function () {
-      processSwiper.autoplay.start();
-      //console.log('_processSwiper')
-    },
-    offset: "50%"
-  })
-
   let processAni1 = document.querySelector('._processAni1');
   let processStep1 = bodymovin.loadAnimation({
     container: processAni1,
@@ -352,6 +343,14 @@
     }
   });
 
+  new Waypoint({
+      element: document.querySelector('._processSwiper'),
+      handler: function () {
+          processSwiper.autoplay.start();
+          //console.log('_processSwiper')
+      },
+      offset: "50%"
+  })
 
 
 
