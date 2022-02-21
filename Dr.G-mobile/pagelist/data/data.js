@@ -320,12 +320,12 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_결과_솔루션_공유하기_팝업'
         },
-        {
-            stateClass: 'complete',
-            url: 'Ai피부분석_피부변화리포트_달력모달',
-            category: 'AI',
-            page: 'Ai피부분석_피부변화리포트_달력모달'
-        },
+        // {
+        //     stateClass: 'complete',
+        //     url: 'Ai피부분석_피부변화리포트_달력모달',
+        //     category: 'AI',
+        //     page: 'Ai피부분석_피부변화리포트_달력모달'
+        // },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_피부분석_주기관리_팝업',

@@ -1947,7 +1947,9 @@
 
             .star-box {
               display: flex;
-              margin-bottom: vw(17);
+              height: 40px;
+              align-items: center;
+              margin-bottom: 20px;
 
               .font-body-1 {
                 margin-right: 12px;
@@ -1960,24 +1962,22 @@
               .star {
                 float: left;
                 display: inline-block;
-                width: 14px;
-                height: 27px;
+                width: 40px;
+                height: 40px;
                 cursor: pointer;
+                background-repeat: no-repeat;
+                background-size: 40px;
 
                 &.star-left {
-                  background: url('../img/AI/ico-star-gray.svg') no-repeat 0.066667vw 0;
-                  background-size: 27px;
-                  margin-left: vw(10);
-
-                  &:first-child {
-                    margin-left: 0;
-                  }
+                  width: 20px;
+                  background-image: url('../img/AI/ico-star-gray.svg');
+                  background-position: left center;
                 }
 
                 &.star-right {
-                  background: url('../img/AI/ico-star-gray.svg') no-repeat -0.066667vw 0;
-                  transform: scaleX(-1);
-                  background-size: 27px;
+                  width: 20px;
+                  background-image: url('../img/AI/ico-star-gray.svg');
+                  background-position: right center;
                 }
 
                 &.on {
