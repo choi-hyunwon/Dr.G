@@ -79,6 +79,16 @@
       width: 100%;
       height: 451px;
 
+      + .box-bg {
+        margin-bottom: 120px;
+
+        .inner {
+          .text-wrap {
+            padding: 93px 0 0 70px;
+          }
+        }
+      }
+
       .inner {
         display: flex;
         height: 100%;
@@ -94,7 +104,41 @@
         }
 
         .text-wrap {
+          background-color: $gray-200;
           width: calc(100% - 501px);
+          padding: 50px 0 0 70px;
+
+          .font-h3 {
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 39px;
+            color: $gray-800;
+            margin-bottom: 20px;
+          }
+
+          .font-h6 {
+            font-size: 14px;
+            line-height: 22px;
+            color: $gray-700;
+
+            + .font-h6 {
+              margin-top: 30px;
+            }
+          }
+
+          .btn-wrap {
+            justify-content: flex-start;
+            margin-top: 40px;
+
+            .btn {
+              display: flex;
+              align-items: center;
+            }
+
+            .ico-plus-lg {
+              @include background-img ($width: 12, $height: 12, $category: 'brand', $img: 'ico-plus.svg');
+            }
+          }
         }
       }
 
@@ -104,55 +148,45 @@
     }
 
     .box-link {
+      padding-bottom: 240px;
+
       ul {
-        font-size: 0;
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
 
         li {
-          font-size: vw(16);
-          width: 50%;
-          height: vw(150);
+          width: 286px;
+          height: 241px;
+
+          + li {
+            margin-left: 33px;
+          }
 
           a {
             display: block;
             height: 100%;
-            padding: vw(30);
             position: relative;
-
-            span {
-              display: block;
-            }
-
-            .icon {
-              position: absolute;
-              bottom: vw(30);
-            }
           }
 
           &:nth-of-type(1) {
-            background: url(../img/brand/bg-quarter1.svg) no-repeat 0 0;
+            background: url(../img/brand/bg-quarter1.png) no-repeat 0 0;
             background-size: 100% auto;
           }
 
           &:nth-of-type(2) {
-            background: url(../img/brand/bg-quarter2.svg) no-repeat 0 0;
+            background: url(../img/brand/bg-quarter2.png) no-repeat 0 0;
             background-size: 100% auto;
           }
 
           &:nth-of-type(3) {
-            background: url(../img/brand/bg-quarter3.svg) no-repeat 0 0;
+            background: url(../img/brand/bg-quarter3.png) no-repeat 0 0;
             background-size: 100% auto;
           }
 
           &:nth-of-type(4) {
-            background: url(../img/brand/bg-quarter4.svg) no-repeat 0 0;
+            background: url(../img/brand/bg-quarter4.png) no-repeat 0 0;
             background-size: 100% auto;
           }
-
         }
-
       }
     }
   }
