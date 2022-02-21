@@ -41,7 +41,7 @@ $slider-width: #{vw(100)};
           width: $slider-width;
           position: relative;
           height: vw(200);
-          margin-right: -2px;
+          margin-right: vw(-2.5);
 
           &:first-child {
             margin-right: 0;
