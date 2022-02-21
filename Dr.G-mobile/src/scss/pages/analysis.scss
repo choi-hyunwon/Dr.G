@@ -794,6 +794,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &.smile-loading{
+      .smile-graph{
+        span { /*span 기준점*/
+          &.value{ /*실제 그래프*/
+            animation: smileLoading 2s infinite;
+            transform: unset;
+          }
+        }
+      }
+    }
   }
   .smile-graph {
     margin: 0 auto;
@@ -838,6 +849,11 @@
   }
   @keyframes smileGraph{
     0%{transform: rotateZ(-180deg);}
+  }
+  @keyframes smileLoading{
+    0%{transform: rotateZ(-180deg);}
+    50%{transform: rotateZ(-360deg);}
+    100%{transform: rotateZ(-180deg);}
   }
 
 

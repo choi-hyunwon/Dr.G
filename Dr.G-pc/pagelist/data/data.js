@@ -333,13 +333,13 @@ data.analysis = {
             page: '성분분석_1-2_제품명입력_검색_2'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-2_제품명입력_검색_3_제품이없는경우',
             category: 'analysis',
             page: '성분분석_1-2_제품명입력_검색_3_제품이없는경우'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-3_사진확인',
             category: 'analysis',
             page: '성분분석_1-3_사진확인'
