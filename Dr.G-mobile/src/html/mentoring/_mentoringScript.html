@@ -191,28 +191,6 @@
     });
 
     /*서브메인 process*/
-    let processSwiper = new Swiper("._processSwiper", {
-        autoplay: {
-            enabled: false,
-            delay: 3000,
-        },
-        speed: 1000,
-        effect: 'slide',
-        pagination: {
-            el: "._processSwiper + ._sliderPagination",
-            clickable: true,
-        },
-    });
-
-    new Waypoint({
-        element: document.querySelector('.section-process'),
-        handler: function () {
-            processSwiper.autoplay.start();
-            //console.log('process slider')
-        },
-        offset: "80%"
-    })
-
     let processAni1 = document.querySelector('._processAni1');
     let processStep1 = bodymovin.loadAnimation({
         container: processAni1,
@@ -240,6 +218,27 @@
         path: "../../img/mentoring/progress-step3.json"
     });
 
+    let processSwiper = new Swiper("._processSwiper", {
+        autoplay: {
+            enabled: false,
+            delay: 3000,
+        },
+        speed: 1000,
+        effect: 'slide',
+        pagination: {
+            el: "._processSwiper + ._sliderPagination",
+            clickable: true,
+        },
+    });
+
+    new Waypoint({
+        element: document.querySelector('.section-process'),
+        handler: function () {
+            processSwiper.autoplay.start();
+            //console.log('process slider')
+        },
+        offset: "30%"
+    })
     processSwiper.on('slideChange', function () {
 
         $('.slide-infobox .info').removeClass('active');
