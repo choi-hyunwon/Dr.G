@@ -15,11 +15,8 @@ front.common = (function () {
         this.commonHandler();
         this.tab();
         this.onClickModal();
-        this.introScroll();
         this.ani();
         this.header();
-        this.headerDetails();
-        this.floatBottom();
     }
 
     var a = function () {
@@ -219,9 +216,6 @@ front.common = (function () {
         })
     }
 
-    var introScroll = function introScroll() {
-    }
-
     var onClickModal = function OnclickModal() {
         let popupOpen = $('._showPopup');
         let popupClose = $('._hidePopup');
@@ -241,9 +235,6 @@ front.common = (function () {
                 hidePopup()
             }
         })
-    }
-
-    var headerDetails = function () {
     }
 
     var header = function () {
@@ -371,9 +362,6 @@ front.common = (function () {
         })
     }
 
-    var floatBottom = function () {
-    }
-
     var ani = function () {
         AOS.init();
     }
@@ -384,11 +372,8 @@ front.common = (function () {
         tab: tab,
         init: init,
         onClickModal: onClickModal,
-        introScroll: introScroll,
         ani: ani,
         header: header,
-        headerDetails: headerDetails,
-        floatBottom: floatBottom
     }
 })();
 
@@ -464,4 +449,9 @@ function closePopup(className) {
         popup.css('display', 'none');
         popupBackDrop.remove();
     },300)
+}
+
+function gnbActive(firstDepth, SecondDepth) {
+    $('._menu > .item').eq(firstDepth).addClass('on').siblings().removeClass('on')
+    $('._menu > .item').eq(firstDepth).find('li').eq(SecondDepth).addClass('on').siblings().removeClass('on')
 }

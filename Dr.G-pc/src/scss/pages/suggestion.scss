@@ -62,7 +62,7 @@
 /*의견남기기*/
 .opinion {
   background-color: $gray-200;
-  padding: 80px 0 240px;
+  padding: 80px 0 120px;
 
   .divider {
     margin: 20px 0 24px;
@@ -209,7 +209,7 @@
 
   .my-opinion-list {
     background-color: $gray-200;
-    padding: vw(48) 0 240px;
+    padding: vw(48) 0 0;
 
     .item {
       float: left;

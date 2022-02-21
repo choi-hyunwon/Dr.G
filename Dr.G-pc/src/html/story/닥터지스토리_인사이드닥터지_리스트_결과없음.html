@@ -8,64 +8,66 @@
     <!-- e header -->
 
     <!-- s contents -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="story-wrap">
-            <div class="inside-drg">
-                <div class="heading">
-                    <div class="font-h1 font-bold">인사이드 닥터지</div>
-                    <div class="font-h6">닥터지와 여러분의 이야기를 공유하고 공감해요.</div>
-                </div>
-                <div class="tab _tab">
-                    <ul class="clearfix">
-                        <li class="item"><a class="font-ko" href="#">전체</a></li>
-                        <li class="item active"><a href="#">Dr.G's CUT</a></li>
-                        <li class="item"><a href="#">User's CUT</a></li>
-                    </ul>
-                </div>
-                <div class="tab-content">
-                    <div class="tab-pane">
-                        <div class="input-search input-search-list">
-                            <input type="text" title="검색" class="form-control" placeholder="제목, 해시태그, 내용을 입력하세요">
-                            <a href="#" class="btn-search"></a>
-                        </div>
-                        <div class="list _list">
-                            <div class="total">전체 <span class="num">63</span><span class="unit">건</span></div>
-                            @@include('./_list.html')
-                            <div class="btn-wrap">
-                                <div class="btn btn-lg btn-black">더보기</div>
-                            </div>
-                        </div>
+            <div class="inner">
+                <div class="inside-drg">
+                    <div class="heading">
+                        <div class="font-h1 font-bold">인사이드 닥터지</div>
+                        <div class="font-h6">닥터지와 여러분의 이야기를 공유하고 공감해요.</div>
                     </div>
-                    <div class="tab-pane active">
-                        <div class="input-search input-search-list">
-                            <input type="text" title="검색" class="form-control" placeholder="제목, 해시태그, 내용을 입력하세요">
-                            <a href="#" class="btn-search"></a>
-                        </div>
-                        <div class="list _list">
-                            <div class="total">전체 <span class="num">0</span><span class="unit">건</span></div>
-                            <div class="result">검색결과 <span class="font-poppins-semiBold color-primary">0</span>건</div>
-                            <div class="empty">
-                                <div class="img"><img src="../../img/story/img-empty.svg" alt="검색결과가 없습니다."></div>
-                                <div class="font-h6">
-                                    검색결과가 없습니다.
-                                </div>
-                                <div class="font-body-1">다시 검색해 주세요.</div>
+                    <div class="tab _tab">
+                        <ul class="clearfix">
+                            <li class="item"><a class="font-ko" href="#">전체</a></li>
+                            <li class="item active"><a href="#">Dr.G's CUT</a></li>
+                            <li class="item"><a href="#">User's CUT</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane">
+                            <div class="input-search input-search-list">
+                                <input type="text" title="검색" class="form-control" placeholder="제목, 해시태그, 내용을 입력하세요">
+                                <a href="#" class="btn-search"></a>
+                            </div>
+                            <div class="list _list">
+                                <div class="total">전체 <span class="num">63</span><span class="unit">건</span></div>
+                                @@include('./_list.html')
                                 <div class="btn-wrap">
-                                    <div class="btn btn-lg btn-black">목록으로 이동</div>
+                                    <div class="btn btn-lg btn-black">더보기</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane">
-                        <div class="input-search input-search-list">
-                            <input type="text" title="검색" class="form-control" placeholder="제목, 해시태그, 내용을 입력하세요">
-                            <a href="#" class="btn-search"></a>
+                        <div class="tab-pane active">
+                            <div class="input-search input-search-list">
+                                <input type="text" title="검색" class="form-control" placeholder="제목, 해시태그, 내용을 입력하세요">
+                                <a href="#" class="btn-search"></a>
+                            </div>
+                            <div class="list _list">
+                                <div class="total">전체 <span class="num">0</span><span class="unit">건</span></div>
+                                <div class="result">검색결과 <span class="font-poppins-semiBold color-primary">0</span>건</div>
+                                <div class="empty">
+                                    <div class="img"><img src="../../img/story/img-empty.svg" alt="검색결과가 없습니다."></div>
+                                    <div class="font-h6">
+                                        검색결과가 없습니다.
+                                    </div>
+                                    <div class="font-body-1">다시 검색해 주세요.</div>
+                                    <div class="btn-wrap">
+                                        <div class="btn btn-lg btn-black">목록으로 이동</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="list _list">
-                            <div class="total">전체 <span class="num">43</span><span class="unit">건</span></div>
-                            @@include('./_list.html')
-                            <div class="btn-wrap">
-                                <div class="btn btn-lg btn-black">더보기</div>
+                        <div class="tab-pane">
+                            <div class="input-search input-search-list">
+                                <input type="text" title="검색" class="form-control" placeholder="제목, 해시태그, 내용을 입력하세요">
+                                <a href="#" class="btn-search"></a>
+                            </div>
+                            <div class="list _list">
+                                <div class="total">전체 <span class="num">43</span><span class="unit">건</span></div>
+                                @@include('./_list.html')
+                                <div class="btn-wrap">
+                                    <div class="btn btn-lg btn-black">더보기</div>
+                                </div>
                             </div>
                         </div>
                     </div>
