@@ -92,24 +92,6 @@ data.main = {
             category: 'Main',
             page: 'Main'
         },
-        {
-            stateClass: 'complete',
-            url: 'banner',
-            category: 'Main',
-            page: '배너 펼침'
-        },
-        {
-            stateClass: 'complete',
-            url: 'notice',
-            category: 'guide',
-            page: '알림'
-        },
-        {
-            stateClass: 'complete',
-            url: 'gnb',
-            category: 'guide',
-            page: '전체 메뉴'
-        },
     ]
 }
 
