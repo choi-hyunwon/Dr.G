@@ -470,7 +470,7 @@ front.common = (function () {
                 if (st > lastScrollTop) {
                     // Scroll Down
                     $('._floatBottom').removeClass('arrow-off')
-                    $('._chatBotArea').addClass('full')
+                    // $('._chatBotArea').addClass('full')
 
                     /* Ai피부분석 서브메인 scroll - tab + header  */
                     if ($('.AI-wrap').find('._scrollTabWrap').length) {
@@ -509,11 +509,11 @@ front.common = (function () {
                             // tab
                             if (st < sectionStartPos) {
                                 sectionTab.removeClass('fixed', 'scroll-down').css('top', 0 + 'px');
-                                $('._chatBotArea').removeClass('full')
+                                // $('._chatBotArea').removeClass('full')
                             } else {
                                 var headerHeight = $('.header-white').outerHeight();
                                 sectionTab.addClass('fixed').css('top', headerHeight + 'px');
-                                $('._chatBotArea').removeClass('full')
+                                // $('._chatBotArea').removeClass('full')
                             }
                             // header
                             if (st < delta) {
@@ -544,11 +544,11 @@ front.common = (function () {
                             // tab
                             if (st < sectionStartPos) {
                                 sectionTab.removeClass('fixed', 'scroll-down').css('top', 0 + 'px');
-                                $('._chatBotArea').removeClass('full')
+                                // $('._chatBotArea').removeClass('full')
                             } else {
                                 var headerHeight = $('.header-white').outerHeight();
                                 sectionTab.addClass('fixed').css('top', headerHeight + 'px');
-                                $('._chatBotArea').removeClass('full')
+                                // $('._chatBotArea').removeClass('full')
                             }
                             // header
                             if (st < delta) {
@@ -563,11 +563,11 @@ front.common = (function () {
                             // tab
                             if (st < sectionStartPos) {
                                 sectionTab.removeClass('fixed', 'scroll-down').css('top', 0 + 'px');
-                                $('._chatBotArea').removeClass('full')
+                                // $('._chatBotArea').removeClass('full')
                             } else {
                                 var headerHeight = $('.header-white').outerHeight();
                                 sectionTab.addClass('fixed').css('top', headerHeight + 'px');
-                                $('._chatBotArea').removeClass('full')
+                                // $('._chatBotArea').removeClass('full')
                             }
                             // header
                             if (st < delta) {
@@ -581,10 +581,10 @@ front.common = (function () {
                         else {
                             if (st < delta) {
                                 $('._floatBottom').removeClass('arrow-off');
-                                $('._chatBotArea').removeClass('full');
+                                // $('._chatBotArea').removeClass('full');
                                 headerWhite.addClass('header-transparent');
                             } else {
-                                $('._chatBotArea').removeClass('full');
+                                // $('._chatBotArea').removeClass('full');
                                 headerWhite.removeClass('header-transparent');
                             }
                         }
@@ -623,7 +623,7 @@ front.common = (function () {
 
                     if (st > mainHeaderHeight + bannerHeight) {
                         mainHeader.removeClass('scroll-up').addClass('header-transparent', 'scroll-down');
-                        $('._chatBotArea').addClass('full')
+                        // $('._chatBotArea').addClass('full')
                         // console.log('1')
                     }
                 } else {
@@ -637,12 +637,12 @@ front.common = (function () {
                             $('._floatBottom').removeClass('arrow-off')
 
                             // console.log('2')
-                            $('._chatBotArea').removeClass('full')
-                            $('._chatBotArea').removeClass('no-banner')
+                            // $('._chatBotArea').removeClass('full')
+                            // $('._chatBotArea').removeClass('no-banner')
                         } else {
                             // console.log('3')
                             mainHeader.removeClass('header-transparent', 'scroll-down').addClass('scroll-up');
-                            $('._chatBotArea').removeClass('full').addClass('no-banner')
+                            // $('._chatBotArea').removeClass('full').addClass('no-banner')
                         }
                     }
                 }
