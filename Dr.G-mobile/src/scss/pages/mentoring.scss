@@ -563,7 +563,7 @@
             left: 50%;
             top: vw(300);
             transform: translateX(-50%);
-            animation: mentor 1s 1s forwards;
+            animation: mentor 1s 0.3s forwards;
           }
           @keyframes mentor{
             100% {top:vw(32)}
@@ -602,7 +602,7 @@
             &.value{ /*실제 그래프*/
               z-index: 1;
               border-color: #ffe444;
-              animation: chartAni 1s 0.5s forwards;
+              animation: chartAni 1s 0.2s forwards;
               transform: rotateZ(-180deg)
             }
           }
