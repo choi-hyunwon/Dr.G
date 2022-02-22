@@ -401,7 +401,6 @@ front.common = (function () {
 
             function hasScrolled() {
                 var st = $(this).scrollTop();
-                var tabContentOffset = $('.tab-content').offset().top;
 
                 if (Math.abs(lastScrollTop - st) <= delta)
                     return;
@@ -410,6 +409,8 @@ front.common = (function () {
                     // Scroll Down
                     if (st > lastScrollTop) {
                         if ($('.inside-drg').find('._tab').length) {
+                            var tabContentOffset = $('.tab-content').offset().top;
+
                             if (st > tabContentOffset) {
                                 console.log('1')
                                 header.removeClass('scroll-down').addClass('scroll-up');
@@ -425,6 +426,7 @@ front.common = (function () {
                     // Scroll Up
                     if (st + $(window).height() < $(document).height()) {
                         if ($('.inside-drg').find('._tab').length) {
+                            var tabContentOffset = $('.tab-content').offset().top;
                             if (st < tabContentOffset) {
                                 console.log('2')
                                 $('._tab').removeClass('fixed').css('top', 'auto')
