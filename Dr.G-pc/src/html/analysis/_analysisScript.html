@@ -54,31 +54,31 @@
     })
 
     // 질문 클릭 시
-    let answer = $('.question-box .answer')
-    let list = answer.find('li');
-    answer.each(function () {
-      list.on('click', function () {
-        $(this).siblings().hide()
-        $(this).parents('.answer').addClass('complete')
-      })
-
-      $('.delete').on('click', function () {
-        $(this).parent().removeClass('complete')
-        $(this).parent().find('li').show()
-      })
-    })
-    if (answer.hasClass('complete')) {
-      list.hide();
-    } else {
-      list.show()
-    }
+    // let answer = $('.question-box .answer')
+    // let list = answer.find('li');
+    // answer.each(function () {
+    //   list.on('click', function () {
+    //     $(this).siblings().hide()
+    //     $(this).parents('.answer').addClass('complete')
+    //   })
+    //
+    //   $('.delete').on('click', function () {
+    //     $(this).parent().removeClass('complete')
+    //     $(this).parent().find('li').show()
+    //   })
+    // })
+    // if (answer.hasClass('complete')) {
+    //   list.hide();
+    // } else {
+    //   list.show()
+    // }
 
     /*수정요청입력란*/
-    let badge = $('.write-area .badge-box .badge')
-    badge.on('click', function () {
-      $(this).siblings().removeClass('active')
-      $(this).addClass('active')
-    })
+    // let badge = $('.write-area .badge-box .badge')
+    // badge.on('click', function () {
+    //   $(this).siblings().removeClass('active')
+    //   $(this).addClass('active')
+    // })
 
 
 

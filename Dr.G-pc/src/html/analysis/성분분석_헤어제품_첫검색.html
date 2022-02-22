@@ -3,85 +3,125 @@
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
 
     <!-- s contents -->
-    <div class="container view-details">
+    <div class="container-fluid">
         <div class="analysis-wrap">
-            <div class="header-details">
-                <a href="#"><i class="icon ico-close"></i></a>
+            <!-- s heading -->
+            <div class="inner step-inner">
+                <div class="heading-box">
+                    <div class="font-h1 font-bold">1:1 성분분석</div>
+                    <div class="font-h6 font-poppins">Dr.G Cosmetic Analysis</div>
+                </div>
+                <div class="step-heading row">
+                    <div class="step col-4">
+                        <span class="tit">제품 업로드/검색</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-4">
+                        <span class="tit">제품명 확인</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-4 active">
+                        <span class="tit">성분 분석</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph full">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--
+                .smile-graph > .value {transform: rotateZ(-180deg)}로 그래프값 조절
+                (-180deg - 기본-> -360 deg 가까울수록 그래프가채워짐)
+                -->
             </div>
-            <div class="body-details">
-                <div class="question-box">
-                    <div class="info">
-                        <p class="font-h3 font-bold"><span class="color-violet">헤어 제품</span>을 분석 요청하셨네요!</p>
-                        <p class="font-body-1 sub-desc">하단 질문에 답해주시면<br>더욱 정확한 분석이 가능해요.</p>
-                    </div>
-                    <div class="question-item">
-                        <div class="question">
-                            <span class="num">Q1.</span>
-                            <span class="font-h5">나의 두피타입은?</span>
-                            <a class="btn-delete" href="#"><span class="sr-only">삭제</span></a>
-                        </div>
-                        <div class="answer">
-                            <ul>
-                                <li><a href="#">비듬 두피</a></li>
-                                <li><a href="#">지성 두피</a></li>
-                                <li><a href="#">건성 두피</a></li>
-                                <li><a href="#">민감성 두피</a></li>
-                            </ul>
-                            <span class="delete"><a class="btn-delete" href="#"> <i class="icon ico-close-xs white"></i><span class="sr-only">삭제</span></a></span>
-                        </div>
-                    </div>
+            <!-- e heading -->
 
-                    <div class="question-item">
-                        <div class="question">
-                            <span class="num">Q2.</span>
-                            <span class="font-h5">모발 상태는 어떤가요?</span>
+            <!-- s contents -->
+            <div class="content bg-gray">
+                <div class="inner">
+                    <div class="question-box">
+                        <div class="info">
+                            <p class="heading">헤어 제품을 분석 요청하셨네요!</p>
+                            <p class="sub-desc">하단 질문에 답해주시면 더욱 정확한 분석이 가능해요.</p>
                         </div>
-                        <div class="answer">
-                            <ul>
-                                <li><a href="#">가늘고 힘없는 모발</a></li>
-                                <li><a href="#">손상된 모발</a></li>
-                                <li><a href="#">건조한 모발</a></li>
-                                <li><a href="#">굵고 뻣뻣한 모발</a></li>
-                            </ul>
-                            <span class="delete"><a class="btn-delete" href="#"> <i class="icon ico-close-xs white"></i><span class="sr-only">삭제</span></a></span>
+                        <div class="box">
+                            <div class="item">
+                                <div class="question">
+                                    <span class="num">Q1.</span>
+                                    <span class="font-h5">나의 두피타입은?</span>
+                                    <a class="btn-delete" href="#"><span class="sr-only">삭제</span></a>
+                                </div>
+                                <div class="answer _answer">
+                                    <ul>
+                                        <li class="active"><a href="#">비듬 두피</a></li>
+                                        <li><a href="#">지성 두피</a></li>
+                                        <li><a href="#">건성 두피</a></li>
+                                        <li><a href="#">민감성 두피</a></li>
+                                    </ul>
+                                    <span class="delete"><a class="btn-delete" href="#"> <i class="icon ico-close-xs white"></i><span class="sr-only">삭제</span></a></span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="question">
+                                    <span class="num">Q2.</span>
+                                    <span class="font-h5">모발 상태는 어떤가요?</span>
+                                </div>
+                                <div class="answer _answer">
+                                    <ul>
+                                        <li><a href="#">가늘고 힘없는 모발</a></li>
+                                        <li><a href="#">손상된 모발</a></li>
+                                        <li class="active"><a href="#">건조한 모발</a></li>
+                                        <li><a href="#">굵고 뻣뻣한 모발</a></li>
+                                    </ul>
+                                    <span class="delete"><a class="btn-delete" href="#"> <i class="icon ico-close-xs white"></i><span class="sr-only">삭제</span></a></span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="question">
+                                    <span class="num">Q3.</span>
+                                    <span class="font-h5">헤어 고민은 무엇인가요?</span>
+                                </div>
+                                <div class="answer _answer">
+                                    <ul>
+                                        <li class="active"><a href="#">탈모</a></li>
+                                        <li><a href="#">두피 진정</a></li>
+                                        <li><a href="#">모발 끊어짐</a></li>
+                                        <li><a href="#">푸석함</a></li>
+                                    </ul>
+                                    <span class="delete"><a class="btn-delete" href="#"> <i class="icon ico-close-xs white"></i><span class="sr-only">삭제</span></a></span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question">
-                            <span class="num">Q3.</span>
-                            <span class="font-h5">헤어 고민은 무엇인가요?</span>
-                        </div>
-                        <div class="answer">
-                            <ul>
-                                <li><a href="#">탈모</a></li>
-                                <li><a href="#">두피 진정</a></li>
-                                <li><a href="#">모발 끊어짐</a></li>
-                                <li><a href="#">푸석함</a></li>
-                            </ul>
-                            <span class="delete"><a class="btn-delete" href="#"> <i class="icon ico-close-xs white"></i><span class="sr-only">삭제</span></a></span>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn btn-lg btn-black btn-violet"><span>확인</span></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-details bg-dark">
-                <div class="page-btn-wrap btn-center">
-                    <a href="#" class="btn-page">
-                        <span class="font-body-1">확인</span>
-                    </a>
-                </div>
-            </div>
+            <!-- e contents -->
         </div>
     </div>
     <!-- e contents -->
 
     <!-- s footer -->
-<!--    @@include('../../html/include/common/footer.html')-->
+    @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
-@@include('./_analysisScript.html')
+<script>
+    $('._answer li').on('click',function (){
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+</script>
 </body>
 </html>
 
