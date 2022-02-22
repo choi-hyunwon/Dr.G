@@ -47,6 +47,7 @@ function copyLibJs() {
         'src/js/lib/jquery.waypoints.js',
         'src/js/lib/tweenMax.js',
         'src/js/lib/lottie.js',
+        'src/js/lib/jquery.mCustomScrollbar.js',
     ];
 
     return gulp.src(sourceLib)

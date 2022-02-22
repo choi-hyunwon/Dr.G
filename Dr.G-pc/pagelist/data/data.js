@@ -429,7 +429,7 @@ data.analysis = {
             page: '성분분석_분석결과_상세_헤어제품2'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_분석결과_상세_일치율팝업',
             category: 'analysis',
             page: '성분분석_분석결과_상세_일치율팝업'

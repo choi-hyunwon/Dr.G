@@ -2,82 +2,83 @@
 <html lang="ko">
 @@include('../../html/include/common/head.html')
 <body>
-<div class="wrap">
-
-    <!-- s contents -->
-    <div class="container view-details">
-        <div class="analysis-wrap">
-            <div class="header-details">
-                <a href="#"><i class="icon ico-close"></i></a>
+<div class="wrap"></div>
+<div class="popup-wrap _matchRatePopup">
+    <div class="popup popup-match-rate">
+        <div class="popup-content">
+            <div class="popup-header">
+                <a href="#" class="_hidePopup icon ico-close"></a>
             </div>
-            <div class="body-details">
-                <div class="heading">
-                    <p class="font-h3 font-bold"><span class="color-violet">스킨케어</span> 일치율 가이드</p>
-                </div>
-                <div class="area-desc bg-gray match-rate">
-                    <table class="table table-box">
-                        <thead>
-                        <tr>
-                            <th scope="col">내 피부고민과 맞는<br>최종성분 개수</th>
-                            <th scope="col">일치율</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row"><span class="font-poppins">6</span>개 이상</th>
-                            <td><span class="font-poppins">95%</span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span class="font-poppins">5</span>개</th>
-                            <td><span class="font-poppins">90%</span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span class="font-poppins">3~4</span>개</th>
-                            <td><span class="font-poppins">85%</span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span class="font-poppins">1~2</span>개</th>
-                            <td><span class="font-poppins">80%</span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span class="font-poppins">0</span>개</th>
-                            <td><span class="font-poppins">75%</span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span class="font-poppins">1~-2</span>-개</th>
-                            <td><span class="font-poppins">70%</span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span class="font-poppins">-3~-4</span>개</th>
-                            <td><span class="font-poppins">65%</span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><span class="font-poppins">-5</span>개</th>
-                            <td><span class="font-poppins">60%</span></td>
-                        </tr>
-                        </tbody>
-                    </table>
-
-                    <p class="font-h6 font-bold sub-title">최종 성분 산출 방법</p>
-                    <div class="method-box">
-                        <div class="area good-area">
-                            <span class="color-violet font-bold tit">좋은 성분 수</span>
-                            <span>(지성, 민감성, 보습,<br>미백, 탄력)</span>
-                        </div>
-                        <div class="area caution-area">
-                            <span class="color-violet font-bold tit">주의 성분 수</span>
-                            <span>(알레르기, 여드름,<br>자극)</span>
+            <div class="popup-body">
+                <div class="analysis-wrap">
+                    <div class="font-h3 font-bold"><span class="color-violet">스킨케어</span> 일치율 가이드</div>
+                    <div class="area-desc bg-gray match-rate">
+                        <table class="table table-box">
+                            <colgroup>
+                                <col width="50%"/>
+                                <col width="50%"/>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">내 피부고민과 맞는<br>최종성분 개수</th>
+                                <th scope="col">일치율</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="font-poppins">6</span>개 이상</td>
+                                <td><span class="font-poppins">95%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-poppins">5</span>개</td>
+                                <td><span class="font-poppins">90%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-poppins">3~4</span>개</td>
+                                <td><span class="font-poppins">85%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-poppins">1~2</span>개</td>
+                                <td><span class="font-poppins">80%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-poppins">0</span>개</td>
+                                <td><span class="font-poppins">75%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-poppins">1~-2</span>-개</td>
+                                <td><span class="font-poppins">70%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-poppins">-3~-4</span>개</td>
+                                <td><span class="font-poppins">65%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-poppins">-5</span>개</td>
+                                <td><span class="font-poppins">60%</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p class="font-h6 font-bold sub-title">최종 성분 산출 방법</p>
+                        <div class="method-box">
+                            <div class="area good-area">
+                                <span class="color-violet font-bold tit">좋은 성분 수</span>
+                                <span>(지성, 민감성, 보습,<br>미백, 탄력)</span>
+                            </div>
+                            <div class="area caution-area">
+                                <span class="color-violet font-bold tit">주의 성분 수</span>
+                                <span>(알레르기, 여드름,<br>자극)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- e contents -->
-
-    <!-- s footer -->
-<!--    @@include('../../html/include/common/footer.html')-->
-    <!-- e footer -->
 </div>
+<script>
+    openPopup('_matchRatePopup')
+    $("._matchRatePopup .popup-body").mCustomScrollbar();
+</script>
 </body>
 </html>

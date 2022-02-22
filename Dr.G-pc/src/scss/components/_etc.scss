@@ -452,7 +452,6 @@ body.scrOff {
   }
 }
 
-
 .s-select-box {
   position: relative;
 
@@ -495,6 +494,7 @@ body.scrOff {
       background-color: $gray-300;
       border-radius: 100px;
     }
+
     li {
       a {
         padding: 8px 0;
@@ -503,6 +503,7 @@ body.scrOff {
         line-height: 22px;
         color: $gray-700;
       }
+
       &.on {
         a {
           color: $primary;
@@ -527,10 +528,10 @@ body.scrOff {
   }
 }
 
-.mentoring-wrap{
-  .s-select-box{
-    ul{
-      li{
+.mentoring-wrap {
+  .s-select-box {
+    ul {
+      li {
         &.on {
           a {
             color: $blue;
@@ -542,10 +543,10 @@ body.scrOff {
   }
 }
 
-.suggestion-wrap{
-  .s-select-box{
-    ul{
-      li{
+.suggestion-wrap {
+  .s-select-box {
+    ul {
+      li {
         &.on {
           a {
             color: $primary;
@@ -557,10 +558,35 @@ body.scrOff {
   }
 }
 
-
-.divider{
+.divider {
   margin: 60px 0 40px;
-  &.divider-sm{
+
+  &.divider-sm {
     margin: 20px 0 24px;
+  }
+}
+
+.mCSB_inside {
+  > .mCSB_container {
+    margin-right: 0;
+  }
+
+  .mCSB_scrollTools {
+    opacity: 1;
+    width: 38px;
+
+    .mCSB_dragger {
+      .mCSB_dragger_bar {
+        width: 6px;
+        background-color: $gray-300;
+        border-radius: 100px;
+      }
+
+      .mCSB_draggerRail {
+        width: 6px;
+        background-color: transparent;
+        border-radius: 100px;
+      }
+    }
   }
 }
