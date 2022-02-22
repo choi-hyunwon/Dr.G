@@ -405,25 +405,25 @@ data.analysis = {
             page: '성분분석_헤어제품_첫검색'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_분석결과_상세_스킨케어',
             category: 'analysis',
             page: '성분분석_분석결과_상세_스킨케어'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_분석결과_상세_스킨케어2',
             category: 'analysis',
             page: '성분분석_분석결과_상세_스킨케어2'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_분석결과_상세_헤어제품',
             category: 'analysis',
             page: '성분분석_분석결과_상세_헤어제품'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_분석결과_상세_헤어제품2',
             category: 'analysis',
             page: '성분분석_분석결과_상세_헤어제품2'

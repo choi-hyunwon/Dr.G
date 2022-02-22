@@ -55,6 +55,17 @@
       chatbot.children('.tip').hide();
     })
 
+    $('._answer li').on('click',function (){
+      $(this).addClass('active').siblings().removeClass('active')
+    })
+
+    // popup scroll
+    $("._analysisEditPopup .popup-body").mCustomScrollbar();
+
+    $('._selectCategory li').on('click',function (){
+      $(this).addClass('on').siblings().removeClass('on')
+    })
+
     // 질문 클릭 시
     // let answer = $('.question-box .answer')
     // let list = answer.find('li');
@@ -102,12 +113,10 @@
       }
     }, 20);
 
-
     /*- 제품버전 보기-*/
-    let name = $('.section-product .name')
-    let btnVersion = $('.section-product .name .btn_version')
+    let btnVersion = $('.section-product .btn_version')
     btnVersion.on('click', function () {
-      name.toggleClass('show')
+      $(this).toggleClass('show')
     })
 
     /*전성분 보기*/
@@ -121,7 +130,16 @@
       product.removeClass('open')
     })
 
-
+    /* s 분석 리스트 */
+    var productSlider = new Swiper("._productList", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '._productList + .swiper-navigation .btn-next',
+        prevEl: '._productList + .swiper-navigation .btn-prev',
+      },
+    });
+    /* e 분석 리스트 */
 
     /*--- s 매칭된 성분 확인 ---*/
 
