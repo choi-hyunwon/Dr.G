@@ -327,7 +327,7 @@ data.analysis = {
             page: '성분분석_1-3_사진확인'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-4_제품스캔',
             category: 'analysis',
             page: '성분분석_1-4_제품스캔'

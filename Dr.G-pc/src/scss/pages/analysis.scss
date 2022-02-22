@@ -320,25 +320,110 @@
         border-radius: 20px;
         padding: 60px;
 
-        /*사진확인*/
+        /* 사진확인 / 제품 업로드 */
         &.confirm{
           .img{
             border-radius: 16px;
             overflow: hidden;
-
           }
-          >p{
-            padding-top: 30px;
+          .text{
             font-weight: 500;
+            &.bottom-text{
+              padding-top: 30px;
+              color: $gray-700;
+              font-size: 18px;
+            }
+            &.top-text{
+              margin-bottom: 30px;
+              color: $gray-800;
+              font-size: 20px;
+            }
 
+            /*제품명 선택 - 예외*/
+            &.sub-text{
+              font-weight: 400;
+              color: $gray-700;
+              font-size: 15px;
+              padding-top: 24px;
+              margin-bottom: 40px;
+              a{
+                padding-top: 6px;
+                display: block;
+                text-decoration: underline;
+                color: $gray-700;
+              }
+            }
           }
 
-        }
+          .scan-img{
+            position: relative;
+            display: inline-block;
+            img{
+              width: auto;
+              height: 100%;
+            }
 
+            /*제품명 선택*/
+            .selection{
+              position: absolute;
+              border: vw(2) solid #ff3a48;
+              background: rgba(255, 58, 72, 0.3);
+              padding: 3px;
+              border-radius: vw(2);
+              &.active{
+                border: vw(2) solid #4971FF;
+                background: rgba(73, 113, 255, 0.3);
+              }
+            }
+          }
+
+          /*제품명 선택*/
+          .bedge-wrap{
+            background-color: $gray-200;
+            border-radius: 12px;
+            text-align: left;
+            padding-right: 12px;
+            ul{
+              padding: 40px 28px 40px 40px;
+              overflow-y: auto;
+              height: 242px;
+              &::-webkit-scrollbar {
+                width: vw(6);
+              }
+
+              &::-webkit-scrollbar-button:start:decrement,
+              &::-webkit-scrollbar-button:end:increment {
+                display:block;
+                height:15px;
+                background-color: transparent;
+              }
+
+              &::-webkit-scrollbar-track {
+                background-color: transparent;
+              }
+
+              &::-webkit-scrollbar-thumb {
+                background-color: $gray-300;
+                border-radius: vw(100);
+              }
+            }
+
+            .badge{
+              background-color: #FFFFFF;
+              color: $gray-700;
+              margin-right: 4px;
+              margin-bottom: 12px;
+            }
+          }
+        }
       }
     }
     .btn-wrap{
       padding-top: 60px;
+      .btn{
+        padding: 0 48px;
+        letter-spacing: -0.01rem;
+      }
       &.w273{
         .btn{
           min-width: 273px;
@@ -354,6 +439,12 @@
           min-width: 257px;
         }
       }
+      &.w224{
+        .btn{
+          min-width: 224px;
+        }
+      }
+
     }
 
   }
