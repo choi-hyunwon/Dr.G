@@ -399,7 +399,7 @@ data.analysis = {
             page: '성분분석_Loading'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_헤어제품_첫검색',
             category: 'analysis',
             page: '성분분석_헤어제품_첫검색'
