@@ -223,7 +223,7 @@
       }
     }
 
-    /*후기작성하기 팝업*/
+    /*멘토링 - 후기작성하기 팝업*/
     &.mentoring-review-write {
       .popup-body {
         .star-box {
@@ -271,7 +271,7 @@
       }
     }
 
-    /*후기팝업*/
+    /*멘토링 - 후기팝업*/
     &.mentoring-review {
       .popup-content {
         background-color: $yellow;
@@ -402,6 +402,53 @@
         }
       }
     }
+
+    /*성분분석 - 촬영가이드*/
+    &.analysis-guide{
+      .popup-body {
+        .img-guide{
+            margin-bottom: 30px;
+            padding-top: 30px;
+            img{
+              width: 170px;
+              height: 170px;
+              border-radius: 20px;
+            }
+          }
+
+        .check-point {
+          .title {
+            padding-left: 20px;
+            position: relative;
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 7px;
+            color: $gray-800;
+            line-height: 1.5;
+
+            &:before {
+              content: '';
+              display: inline-block;
+              clear: both;
+              background: url("../img/common/ico-alert-circle.svg") no-repeat center center;
+              background-size: 100% auto;
+              width: 18px;
+              height: 18px;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+          .list {
+            color: $gray-700;
+            font-size: vw(15);
+          }
+        }
+      }
+    }
+
+
 
     /* ai피부분석 - 시작하기 */
     &.ai-start-popup {

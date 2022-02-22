@@ -39,7 +39,6 @@
         +div{
           padding-top: 480px;
         }
-
       }
     }
   }
@@ -413,8 +412,83 @@
               color: $gray-700;
               margin-right: 4px;
               margin-bottom: 12px;
+              padding: 12px 20px;
+              font-size: 15px;
+              line-height: 22px;
+              border-radius: 23px;
             }
           }
+        }
+
+        .select-popup{
+          &.product_confirm{
+            width: 550px;
+            text-align: left;
+            margin: 0 auto 30px;
+            position: relative;
+            line-height: 1;
+
+              .btn-select {
+                &.selected {
+                  padding-right: 60px;
+                  @include ellipsis(1)
+                }
+              }
+
+              .list {
+                padding: 0 9px 0 0;
+              }
+
+              ul {
+                max-height: 207px;
+
+                &::-webkit-scrollbar {
+                  width: 6px !important;
+                  display: inline-block;
+                }
+
+                &::-webkit-scrollbar-button:start:decrement,
+                &::-webkit-scrollbar-button:end:increment {
+                  display: block;
+                  height: 15px;
+                  background-color: transparent;
+                }
+
+                &::-webkit-scrollbar-track {
+                  background-color: transparent;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                  background-color: $gray-300;
+                  border-radius: 100px;
+                }
+
+                li {
+                  a {
+                    padding: 8px 20px 0;
+                    margin-bottom: 8px;
+                    @include ellipsis(2);
+                  }
+
+                  &:first-of-type {
+                    a {
+                      padding-top: 16px;
+                    }
+                  }
+
+                  &:last-of-type {
+                    a {
+                      margin-bottom: 16px;
+                    }
+                  }
+                }
+              }
+            +p{
+              color: $gray-800;
+            }
+
+          }
+
         }
       }
     }
@@ -423,6 +497,11 @@
       .btn{
         padding: 0 48px;
         letter-spacing: -0.01rem;
+      }
+      &.w388{
+        .btn{
+          min-width: 388px;
+        }
       }
       &.w273{
         .btn{
@@ -448,6 +527,7 @@
     }
 
   }
+
 
 
 
@@ -1266,6 +1346,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &.smile-loading{
+      .smile-graph{
+        span { /*span 기준점*/
+          &.value{ /*실제 그래프*/
+            transform: rotateZ(-360deg);
+            animation: smileGraph 3s infinite;
+            -webkit-animation: smileGraph 3s infinite;
+          }
+        }
+      }
+    }
   }
   .smile-graph {
     margin: 0 auto;
@@ -1273,17 +1365,17 @@
     list-style-type: none;
     overflow: hidden;
     position: relative;
-    width: vw(52);
-    height: vw(26);
+    width: 52px;
+    height: 26px;
     &::before { /*배경*/
       position: absolute;
       content: '';
       width: inherit;
       height: inherit;
-      border: vw(10) solid $gray-300;
+      border: 10px solid $gray-300;
       border-top: none;
-      border-bottom-left-radius: vw(130);
-      border-bottom-right-radius: vw(130);
+      border-bottom-left-radius: 130px;
+      border-bottom-right-radius: 130px;
       top: 0;
       left: 0;
     }
@@ -1292,13 +1384,13 @@
       z-index: 11;
       top: 0;
       left: 0;
-      border: vw(10) solid;
+      border: 10px solid;
       border-top: none!important;
       width: inherit;
       height: inherit;
       border-top: none;
-      border-bottom-left-radius: vw(130);
-      border-bottom-right-radius: vw(130);
+      border-bottom-left-radius: 130px;
+      border-bottom-right-radius: 130px;
       transform-origin: 50% 0;
       &.value{ /*실제 그래프*/
         z-index: 1;
@@ -1311,4 +1403,62 @@
   @keyframes smileGraph{
     0%{transform: rotateZ(-180deg);}
   }
+
+  /* 스캐닝 완료 */
+  .scanning-completed {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(34, 34, 34, .5);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .smile-graph {
+      margin: 0 auto;
+      padding: 0;
+      list-style-type: none;
+      overflow: hidden;
+      position: relative;
+      width: 70px;
+      height: 35px;
+      &::before { /*배경*/
+        position: absolute;
+        content: '';
+        width: inherit;
+        height: inherit;
+        border: 15px solid $gray-300;
+        border-top: none;
+        border-bottom-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+        top: 0;
+        left: 0;
+      }
+      span { /*span 기준점*/
+        position: absolute;
+        z-index: 11;
+        top: 0;
+        left: 0;
+        border: 15px solid;
+        border-top: none!important;
+        width: inherit;
+        height: inherit;
+        border-top: none;
+        border-bottom-left-radius:  70px;
+        border-bottom-right-radius:  70px;
+        transform-origin: 50% 0;
+        &.value{ /*실제 그래프*/
+          z-index: 1;
+          border-color: #ffe444;
+          animation: smileGraph 1s 0.5s ;
+          transform:rotateZ(-360deg);
+        }
+      }
+    }
+  }
+
 }

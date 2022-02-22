@@ -8,19 +8,28 @@
     <!-- e header -->
 
     <!-- s contents -->
-    <div class="container">
-        <div class="AI-wrap analysis-wrap"> <!--AI-wrap 기본 / 예외사항만 analysis-wrap-->
-            <div class="intro">
-                <div class="step-box">
-                    <div class="inner">
-                        <div class="scan-img">
-                            <img src="../../img/analysis/img-sample-scan.png" alt="스캔이미지">
-                            <div class="dim">
+    <div class="container-fluid">
+        <div class="analysis-wrap">
+            <!-- s heading -->
+            <div class="inner">
+                <div class="heading-box">
+                    <div class="font-h1 font-bold">1:1 성분분석</div>
+                    <div class="font-h6 font-poppins">Dr.G Cosmetic Analysis</div>
+                </div>
+            </div>
+            <!-- e heading -->
+
+            <div class="content bg-gray">
+                <div class="inner">
+                    <div class="step-box">
+                        <div class="progress-area bg-white border-radius confirm">
+                            <div class="img scan-img">
+                                <img src="../../img/analysis/img-sample.png" alt="스캔이미지">
                                 <span class="scan-line"></span>
                             </div>
-                        </div>
-                        <div class="rolling-txt fixed">
-                            <span><em class="color-violet">제품</em>을 검색하고 있습니다.</span>
+
+                            <p class="text bottom-text"><span class="color-violet"> 제품</span>을 분석하고 있습니다.</p>
+
                         </div>
                     </div>
                 </div>
@@ -33,5 +42,7 @@
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
+@@include('./_analysisScript.html')
+
 </body>
 </html>
