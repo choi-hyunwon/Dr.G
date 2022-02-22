@@ -108,17 +108,15 @@
 
 </div>
 <script>
-    $(document).ready(function (){
-        setInterval(function (){
-            let step = $('.application-section > .step-list > .step')
-            secondStep(step)
+    setInterval(function (){
+        let step = $('.step-list > .step')
 
-            setTimeout(function (){
-                let step = $('.application-section > .step-list > .step')
-                firstStep(step)
-            },3000)
-        },6000)
-    })
+        if (step.eq(0).hasClass('active')) {
+            secondStep(step)
+        } else {
+            firstStep(step)
+        }
+    },3000)
 
     function firstStep(step) {
         step.eq(0).addClass('active');

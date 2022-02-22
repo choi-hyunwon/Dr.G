@@ -87,7 +87,7 @@ data.main = {
     title: 'Main',
     list: [
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'main',
             category: 'main',
             page: 'main'
@@ -117,7 +117,7 @@ data.AI = {
     title: 'AI피부분석',
     list: [
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'Ai피부분석_서브메인',
             category: 'AI',
             page: 'Ai피부분석_서브메인'

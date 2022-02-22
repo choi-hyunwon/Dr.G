@@ -759,6 +759,16 @@
             chartContent.addClass('seasonChart').removeClass('roundChart')
         }
     })
+
+    /* 접기 & 더보기 */
+    $('._btnMore').on('click',function (){
+        if($(this).siblings('.name').hasClass('more')) {
+            $(this).siblings('.name').removeClass('more')
+        }
+        else {
+            $(this).siblings('.name').addClass('more')
+        }
+    })
 </script>
 @@include('_skinAnalyzeChartScript.html')
 </body>

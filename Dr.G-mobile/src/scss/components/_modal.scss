@@ -69,7 +69,7 @@
             height: vw(52);
             color: $gray-600;
 
-            &:focus,&:active {
+            &:focus, &:active {
               background-color: $gray-fff !important;
               color: $gray-900 !important;
             }
@@ -79,6 +79,7 @@
               color: $gray-900;
               border-left: vw(1) solid $gray-300;
             }
+
             /*버튼 한개일시*/
             &.one {
               width: 100%;
@@ -398,9 +399,9 @@
         }
 
         span {
-        //  color: $blue;
-        //  color: red;
-       //   font-weight: 700;
+          //  color: $blue;
+          //  color: red;
+          //   font-weight: 700;
         }
 
         .text-btn {
@@ -421,9 +422,11 @@
           .agree-area {
             position: relative;
             margin-bottom: vw(4);
-            &:nth-last-of-type(1){
+
+            &:nth-last-of-type(1) {
               margin-bottom: 0;
             }
+
             .view-content {
               position: absolute;
               top: vw(1);
@@ -432,14 +435,10 @@
           }
 
           .custom-control-label {
-            color: $gray-800;
+            color: $gray-700;
 
-            &:before {
-
-            }
-
-            &:after {
-
+            .color-gray-dark {
+              color: $gray-800;
             }
           }
 
@@ -537,30 +536,35 @@
         }
 
         /* 1:1 성분분석 */
-        &.analysis-box{
+        &.analysis-box {
           margin-bottom: 0;
 
           /*제품명 입력검색*/
-          .search-group{
+          .search-group {
             padding-top: vw(32);
-            ul{
-              &.list{
+
+            ul {
+              &.list {
                 font-size: vw(13);
                 color: $gray-700;
-                li{
+
+                li {
                   margin-bottom: vw(20);
-                  &:last-of-type{
+
+                  &:last-of-type {
                     margin-bottom: 0;
                   }
                 }
               }
-              &.desc{
+
+              &.desc {
                 color: $gray-500;
                 font-weight: 500;
                 font-size: vw(16);
-                &.notice{
-                  p{
-                    &:first-of-type{
+
+                &.notice {
+                  p {
+                    &:first-of-type {
                       color: $gray-800;
                       font-weight: 500;
                       font-size: vw(16);
@@ -573,22 +577,24 @@
           }
 
           /*제품명 확인*/
-          .product-name{
+          .product-name {
             background-color: $gray-200;
             padding: vw(18);
             text-align: center;
             border-radius: vw(12);
             margin-bottom: vw(24);
             font-weight: bold;
+
             + .font-h6 {
               color: $gray-800;
             }
 
             /*셀렉트로 변경*/
-            &.input-area{
+            &.input-area {
               padding: 0;
               background-color: transparent;
               text-align: left;
+
               .select-box {
                 position: relative;
                 margin-bottom: vw(24);
@@ -630,8 +636,8 @@
 
                   &::-webkit-scrollbar-button:start:decrement,
                   &::-webkit-scrollbar-button:end:increment {
-                    display:block;
-                    height:15px;
+                    display: block;
+                    height: 15px;
                     background-color: transparent;
                   }
 
@@ -643,6 +649,7 @@
                     background-color: $gray-300;
                     border-radius: vw(100);
                   }
+
                   li {
                     a {
                       padding: vw(8) vw(20) 0;
@@ -655,19 +662,21 @@
                       @include ellipsis(2);
 
                     }
-                    &:first-of-type{
-                      a{
+
+                    &:first-of-type {
+                      a {
                         padding-top: vw(15);
                       }
                     }
-                    &:last-of-type{
-                      a{
+
+                    &:last-of-type {
+                      a {
                         margin-bottom: vw(15);
                       }
                     }
 
-                    &.on{
-                      a{
+                    &.on {
+                      a {
                         color: $violet;
                         font-weight: bold;
                       }
@@ -694,27 +703,30 @@
           }
 
           /*촬영 가이드*/
-          .img{
-            &.img-guide{
+          .img {
+            &.img-guide {
               width: vw(145);
               height: vw(145);
               border-radius: vw(20);
-              overflow:hidden;
-              img{
+              overflow: hidden;
+
+              img {
                 width: 100%;
                 height: auto;
               }
             }
           }
-          .check-point{
-            .title{
+
+          .check-point {
+            .title {
               padding-left: vw(20);
               position: relative;
               font-weight: 700;
               font-size: vw(13);
               margin-bottom: vw(8);
               color: $gray-800;
-              &:before{
+
+              &:before {
                 content: '';
                 display: inline-block;
                 clear: both;
@@ -728,7 +740,8 @@
                 transform: translateY(-50%);
               }
             }
-            .list{
+
+            .list {
               color: $gray-700;
               font-size: vw(15);
             }
@@ -736,20 +749,21 @@
         }
 
         /* 고객제안 */
-        &.suggestion-box{
-          .input-box{
+        &.suggestion-box {
+          .input-box {
             padding-top: vw(24);
             margin-bottom: vw(24);
           }
         }
 
         /*후기 작성하기*/
-        textarea{
-          +.circle-list-area{
-            li{
-              p{
+        textarea {
+          + .circle-list-area {
+            li {
+              p {
                 color: $gray-600;
-                span{
+
+                span {
                   color: $gray-700;
                 }
               }
@@ -761,9 +775,11 @@
 
       .toast-footer {
         padding-top: vw(32);
-        &.no-padding{
+
+        &.no-padding {
           padding: 0;
         }
+
         .btn {
           width: 100%;
 
@@ -798,13 +814,13 @@
             text-align: left;
             margin-bottom: vw(6);
 
-         /*   span {
-              color: $primary;
+            /*   span {
+                 color: $primary;
 
-              &.color-blue {
-                color: $blue;
-              }
-            }*/
+                 &.color-blue {
+                   color: $blue;
+                 }
+               }*/
           }
 
           .question {
@@ -871,24 +887,25 @@
         &.un-check {
           .toast-body {
             .desc {
-       //      margin-bottom: vw(12);
+              //      margin-bottom: vw(12);
             }
           }
 
           .main-title {
             margin-bottom: 0;
             font-weight: normal;
-            >span{
+
+            > span {
               font-weight: bold;
             }
 
-       /*     span {
-              color: $primary;
-            }
+            /*     span {
+                   color: $primary;
+                 }
 
-            .color-blue {
-              color: $blue !important;
-            }*/
+                 .color-blue {
+                   color: $blue !important;
+                 }*/
           }
         }
 
@@ -913,13 +930,16 @@
                 &.active {
                   span {
                     font-weight: 700;
-                    &.primary{
+
+                    &.primary {
                       color: $primary;
                     }
+
                     &.blue {
                       color: $blue;
                     }
-                    &.violet{
+
+                    &.violet {
                       color: $violet;
                     }
                   }
@@ -952,7 +972,7 @@
         }
 
         .desc {
-      //    margin-bottom: vw(32);
+          //    margin-bottom: vw(32);
         }
       }
 
@@ -975,10 +995,10 @@
             padding: 0 vw(20);
             margin-bottom: vw(12);
 
-          /*  span {
-              color: $primary;
-              font-weight: 700;
-            }*/
+            /*  span {
+                color: $primary;
+                font-weight: 700;
+              }*/
 
             + .agree-area-list {
               padding-top: vw(20);
