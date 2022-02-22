@@ -1,16 +1,15 @@
 <script>
   $(document).ready(function () {
 
-
     /*step 공통*/
     let stepScroll = 0;
     $(window).scroll(function (event) {
-      if ($('.mentoring-wrap').find('.step-heading').length) {
+      if ($('.analysis-wrap').find('.step-heading').length) {
         let st = $(this).scrollTop();
         let stepTop = $('.step-heading').offset().top - 80
 
         if (st > stepScroll) {
-          //console.log("DOWN");
+         //console.log("DOWN");
           if (st > stepTop){
             $('.inner').addClass('_step-fixed')
           }
@@ -26,7 +25,10 @@
     });
 
 
-
+    /*step1*/
+    $('.confirm .bedge-wrap .badge').on('click', function () {
+      $(this).toggleClass('active')
+    })
 
 
 
@@ -365,4 +367,6 @@
       item.find('.solution').slideUp(200);
     }
   });
+
+
   </script>

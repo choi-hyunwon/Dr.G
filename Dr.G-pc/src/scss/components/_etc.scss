@@ -494,7 +494,6 @@ body.scrOff {
       background-color: $gray-300;
       border-radius: 100px;
     }
-
     li {
       a {
         padding: 8px 0;
@@ -503,7 +502,6 @@ body.scrOff {
         line-height: 22px;
         color: $gray-700;
       }
-
       &.on {
         a {
           color: $primary;
@@ -557,6 +555,22 @@ body.scrOff {
     }
   }
 }
+
+.analysis-wrap{
+  .s-select-box{
+    ul{
+      li{
+        &.on {
+          a {
+            color: $violet;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 .divider {
   margin: 60px 0 40px;
