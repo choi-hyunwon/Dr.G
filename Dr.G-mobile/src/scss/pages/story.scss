@@ -12,10 +12,11 @@
     top: 0;
 
     .title {
+      width: vw(129);
       font-size: vw(22);
       font-weight: 500;
       line-height: vw(26);
-      letter-spacing: vw(-0.002);
+      letter-spacing: -0.02em;
       color: #ffffff;
       padding-top: vw(90);
       padding-left: vw(24);
@@ -72,6 +73,22 @@
   .tab {
     margin-bottom: vw(48);
     padding: 0;
+
+    &::before {
+      content: none;
+    }
+
+    &.fixed {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: vw(1);
+        background-color: $gray-300;
+        bottom: 0;
+        left: 0;
+      }
+    }
 
     > ul {
       display: flex;
@@ -165,7 +182,7 @@
         position: relative;
         width: 100%;
         height: vw(156);
-        border-radius: vw(16) vw(16) vw(16) 0;
+        border-radius: vw(16);
         overflow: hidden;
         //padding-bottom: vw(8);
         margin-bottom: vw(12);
@@ -465,6 +482,7 @@
 
       .list-scroll {
         margin-bottom: vw(32);
+        overflow-y: hidden;
 
         ul {
           width: vw(850);
@@ -746,6 +764,7 @@
     }
   }
 
+  /* 스킨 리포트 - 상세 페이지 & 뷰티클래스 */
   .skin-report-detail {
     .heading {
       padding: vw(20) vw(24) vw(32);
@@ -836,7 +855,26 @@
           margin-right: vw(16);
 
           .img {
+            flex-direction: column;
+            align-items: flex-start;
+            height: auto;
             border-radius: vw(12);
+            margin-bottom: 0;
+
+            .img-inner {
+              width: vw(156);
+              height: vw(156);
+              margin-bottom: vw(12);
+            }
+
+            .badge {
+              position: static;
+              margin-bottom: vw(4);
+
+              &.badge-gray {
+                background-color: $gray-600;
+              }
+            }
           }
 
           .badge {
@@ -856,10 +894,6 @@
 
           &:nth-child(2n-1) {
             padding-right: 0;
-          }
-
-          .img {
-            height: vw(156);
           }
         }
       }

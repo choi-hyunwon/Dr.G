@@ -345,13 +345,13 @@ data.analysis = {
             page: '성분분석_1-5_촬영가이드'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-5_제품명확인_안내메세지',
             category: 'analysis',
             page: '성분분석_1-5_제품명확인_안내메세지'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-5_제품명확인_안내메세지2',
             category: 'analysis',
             page: '성분분석_1-5_제품명확인_안내메세지2'
@@ -387,10 +387,10 @@ data.analysis = {
             page: '성분분석_1-6_제품등록제안_제품없을시'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-6_제품등록완료',
             category: 'analysis',
-            page: ':성분분석_1-6_제품등록완료'
+            page: '성분분석_1-6_제품등록완료'
         },
         {
             stateClass: 'working',
@@ -441,7 +441,7 @@ data.analysis = {
             page: '성분분석_수정요청_입력란'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_수정요청_입력란_완료팝업',
             category: 'analysis',
             page: '성분분석_수정요청_입력란_완료팝업'

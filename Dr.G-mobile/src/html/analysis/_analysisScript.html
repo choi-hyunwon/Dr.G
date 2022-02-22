@@ -50,7 +50,7 @@
 
 
 
-/*-------------s 분석결과 상세 (스킨케어,헤어제품)-----------------*/
+    /*-------------s 분석결과 상세 (스킨케어,헤어제품)-----------------*/
 
     /*gauge bar*/
     let progress = 0.5
@@ -149,7 +149,7 @@
       }
     });
 
-/*-------------e 분석결과 상세 (스킨케어,헤어제품)-----------------*/
+    /*-------------e 분석결과 상세 (스킨케어,헤어제품)-----------------*/
 
 
     /*서브메인*/
@@ -215,8 +215,10 @@
     centeredSlides: true, /*가운데 정렬*/
     allowTouchMove: false, /*터치금지*/
     initialSlide: 1, /*시작 슬라이드*/
-  //  spaceBetween:20
+    //  spaceBetween:20
   })
+
+  let sectionTop = $('._section').offset().top;
 
   let whatAni1 = document.querySelector('._whatAni1');
   let whatStep1 = bodymovin.loadAnimation({
@@ -246,27 +248,23 @@
     pagination: {
       el: "._whatPagination"
     },
-
   });
 
   whatSwiper.on('slideChange', function () {
-    let idx = whatSwiper.realIndex + 1
-    //console.log(idx);
-    $('.step-box .step').removeClass('active')
-    $('.step-box .step').eq(idx).addClass('active')
-
 
     if (whatSwiper.realIndex === 0) {
       whatStep1.playSegments([0, 90], true)
 
-    } else if (processSwiper.realIndex === 1) {
+    } else if (whatSwiper.realIndex === 1) {
       whatStep2.playSegments([0, 79], true)
     }
   });
+
+
   new Waypoint({
     element: document.querySelector('._whatSwiper'),
     handler: function () {
-      whatSwiper.autoplay.start();
+        whatSwiper.autoplay.start();
       //console.log('_whatSwiper')
     },
     offset: "40%"
@@ -322,54 +320,32 @@
 
     if (processSwiper.realIndex === 0) {
       processStep1.playSegments([0, 60], true)
-      $('._stepBox').find('.step').eq(0).addClass('active').siblings().removeClass('active');
-      stepLi.removeClass('active check bar')
-      stepLi.eq(0).addClass('active')
+      stepLi.eq(0).addClass('active').find('span').addClass('on')
+      stepLi.eq(1).removeClass('active check bar').find('span').removeClass('on')
+      stepLi.eq(2).removeClass('active bar').find('span').removeClass('on')
 
     } else if (processSwiper.realIndex === 1) {
       processStep2.playSegments([0, 70], true)
-      $('._stepBox').find('.step').eq(1).addClass('active').siblings().removeClass('active');
-      stepLi.eq(0).removeClass('active')
-      stepLi.eq(1).addClass('active bar')
-      stepLi.eq(2).removeClass('active')
+        stepLi.eq(0).removeClass('active')
+        stepLi.eq(1).addClass('active bar').removeClass('check').find('span').addClass('on')
+        stepLi.eq(2).removeClass('active bar').find('span').removeClass('on')
 
     } else if (processSwiper.realIndex === 2) {
       processStep3.playSegments([0, 180], true)
-      $('._stepBox').find('.step').eq(2).addClass('active').siblings().removeClass('active');
-      stepLi.eq(0).removeClass('active')
-      stepLi.eq(1).removeClass('active').addClass('check bar')
-      stepLi.eq(2).addClass('active bar')
+        stepLi.eq(0).removeClass('active')
+        stepLi.eq(1).removeClass('active').addClass('check')
+        stepLi.eq(2).addClass('active bar').find('span').addClass('on')
+
     }
   });
 
-
- /* processSwiper.on('transitionEnd', function () {
-    let idx = processSwiper.realIndex + 1
-    let stepLi = $('.analysis-sub-main .step-box li')
-    console.log(idx);
-
-    if (idx == 1){
-      stepLi.removeClass('active check bar')
-      stepLi.eq(0).addClass('active')
-    }else if (idx == 2){
-
-      stepLi.eq(0).removeClass('active')
-      stepLi.eq(1).addClass('active bar')
-      stepLi.eq(2).removeClass('active')
-    }else if(idx == 3){
-      stepLi.eq(0).removeClass('active')
-      stepLi.eq(1).removeClass('active').addClass('check bar')
-      stepLi.eq(2).addClass('active bar')
-    }
-  });*/
-
   new Waypoint({
-      element: document.querySelector('._processSwiper'),
-      handler: function () {
-          processSwiper.autoplay.start();
-          //console.log('_processSwiper')
-      },
-      offset: "40%"
+    element: document.querySelector('._processSwiper'),
+    handler: function () {
+      processSwiper.autoplay.start();
+      //console.log('_processSwiper')
+    },
+    offset: "40%"
   })
   /*---------s 서브메인 process------------*/
 
@@ -405,4 +381,4 @@
       item.find('.solution').slideUp(200);
     }
   });
-  </script>
+</script>

@@ -1,4 +1,4 @@
-$slider-width: #{vw(100)};
+$slider-width: #{vw(99)};
 
 .line-chart-wrap {
   position: relative;
@@ -41,7 +41,7 @@ $slider-width: #{vw(100)};
           width: $slider-width;
           position: relative;
           height: vw(200);
-          margin-right: vw(-2.5);
+          margin-right: vw(-1.4);
 
           &:first-child {
             margin-right: 0;
@@ -276,7 +276,7 @@ $slider-width: #{vw(100)};
 
           .item {
             width: vw(66);
-            margin-right: vw(15);
+            margin-right: vw(14.5);
 
             &:first-child {
               margin-right: vw(15);
