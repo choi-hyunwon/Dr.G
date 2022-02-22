@@ -339,9 +339,19 @@
     }
     .btn-wrap{
       padding-top: 60px;
+      &.w273{
+        .btn{
+          min-width: 273px;
+        }
+      }
       &.w261{
         .btn{
           min-width: 261px;
+        }
+      }
+      &.w257{
+        .btn{
+          min-width: 257px;
         }
       }
     }
