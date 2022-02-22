@@ -369,7 +369,7 @@ data.analysis = {
             page: '성분분석_1-6_제품명검색_확인'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-6_제품명검색_확인_제품이없는경우',
             category: 'analysis',
             page: '성분분석_1-6_제품명검색_확인_제품이없는경우'

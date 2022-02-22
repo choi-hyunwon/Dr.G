@@ -828,5 +828,46 @@
         }
       }
     }
+
+    /* 성분분석 - 제품명 검색 */
+    &.popup-search-product {
+      .popup-header {
+        margin-bottom: 20px;
+      }
+
+      .analysis-box {
+        .product-name {
+          padding: 19px;
+          text-align: center;
+          background-color: $gray-200;
+          border-radius: 12px;
+          margin-bottom: 16px;
+
+          .font-h6 {
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            text-align: center;
+          }
+        }
+
+        > .font-h6 {
+          font-size: 15px;
+          line-height: 22px;
+          color: $gray-700;
+          text-align: center;
+          margin-bottom: 24px;
+        }
+      }
+
+      .popup-footer {
+        padding: 0 10px;
+
+        .text-btn {
+          font-size: 13px;
+          line-height: 18px;
+        }
+      }
+    }
   }
 }
