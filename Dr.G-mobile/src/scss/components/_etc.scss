@@ -476,6 +476,12 @@ body.scrOff {
         line-height: vw(22);
         color: $gray-700;
       }
+
+      &.on {
+        a {
+          color: $primary;
+        }
+      }
     }
   }
 

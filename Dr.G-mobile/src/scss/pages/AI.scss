@@ -1972,6 +1972,10 @@
           height: vw(80);
           line-height: vw(78);
 
+          .font-poppins {
+            font-family: $poppins-medium;
+          }
+
           &:nth-child(3n) {
             margin-right: 0;
           }
