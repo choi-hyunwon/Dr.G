@@ -435,7 +435,7 @@ data.analysis = {
             page: '성분분석_분석결과_상세_일치율팝업'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_수정요청_입력란',
             category: 'analysis',
             page: '성분분석_수정요청_입력란'

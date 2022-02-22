@@ -587,7 +587,8 @@
                     border-bottom: 1px solid $gray-400;
                   }
                 }
-                th,td {
+
+                th, td {
                   text-align: center;
                   vertical-align: middle;
                 }
@@ -650,7 +651,175 @@
                     left: -14px;
                     top: 50%;
                     transform: translateY(-50%);
-                    @include background-img ($width: 28, $height: 28, $category: 'analysis', $img: 'ico-minus.svg');
+                    @include background-img($width: 28, $height: 28, $category: 'analysis', $img: 'ico-minus.svg');
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* 성분분석 - 제품에 잘못된 정보가 있다면 알려주세요! */
+    &.popup-analysis-edit {
+      .popup-content {
+        padding: 0;
+        max-width: 600px;
+        height: 680px;
+        overflow: hidden;
+
+        .popup-header {
+          height: 64px;
+          padding: 20px;
+          margin-bottom: 0;
+        }
+
+        .popup-body {
+          height: calc(680px - 64px);
+          padding: 0;
+
+          .heading {
+            padding: 0 30px 30px;
+
+            .font-h3 {
+              font-weight: bold;
+              font-size: 24px;
+              line-height: 35px;
+              margin-bottom: 8px;
+            }
+
+            .font-body-1 {
+              font-size: 15px;
+              line-height: 22px;
+              color: $gray-700;
+            }
+          }
+
+          .analysis-wrap {
+            .bg-gray {
+              padding: 40px 30px;
+            }
+
+            .product-area {
+              border-bottom: 1px solid $gray-300;
+              margin-bottom: 40px;
+
+              .img-cosmetics {
+                width: 78px;
+                height: auto;
+                margin: 0 auto 20px;
+
+                img {
+                  width: 100%;
+                }
+              }
+
+              .title-cosmetics {
+                text-align: center;
+                width: 449px;
+                margin: 0 auto 40px;
+
+                .title {
+                  font-weight: bold;
+                  font-size: 20px;
+                  line-height: 30px;
+                  color: $gray-800;
+                  margin-bottom: 8px;
+                }
+
+                .title-sm {
+                  font-size: 15px;
+                  line-height: 22px;
+                  color: $gray-600;
+                }
+              }
+            }
+
+            .write-area {
+              .sub-title {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 28px;
+                color: $gray-800;
+                margin-bottom: 20px;
+                text-align: center;
+              }
+
+              .badge-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 30px;
+
+                .badge {
+                  margin-right: 0;
+                  cursor: pointer;
+
+                  &.on {
+                    background-color: $yellow;
+                    font-weight: bold;
+                  }
+
+                  + .badge {
+                    margin-left: 12px;
+                  }
+                }
+              }
+
+              .form-control {
+                height: 200px;
+                margin-bottom: 20px;
+              }
+
+              .font-h5 {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 28px;
+                color: $gray-800;
+                margin-bottom: 16px;
+              }
+
+              .upload-box {
+                border-bottom: 1px solid $gray-300;
+                padding-bottom: 20px;
+                margin-bottom: 24px;
+              }
+            }
+
+            .check-area {
+              margin-bottom: 30px;
+
+              .custom-checkbox {
+                display: block;
+
+                .custom-control-label {
+                  span {
+                    color: $gray-800;
+                  }
+                  a {
+                    text-decoration: underline;
+                    font-weight: 500;
+                    color: $gray-800;
+                  }
+                }
+
+                + .custom-checkbox {
+                  margin-top: 9px;
+                }
+              }
+
+              .list-with-dot {
+                margin-top: 17px;
+                background-color: #fff;
+                border-radius: 12px;
+                padding: 20px 0 20px 25px;
+
+                li {
+                  margin-bottom: 4px;
+
+                  &:last-child {
+                    margin-bottom: 0;
                   }
                 }
               }
