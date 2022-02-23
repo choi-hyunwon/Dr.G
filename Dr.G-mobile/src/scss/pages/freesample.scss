@@ -465,6 +465,8 @@
           .img {
             flex: vw(76) 0 0;
             height: auto;
+            border-radius: vw(8);
+            overflow: hidden;
 
             img {
               width: 100%;
