@@ -161,10 +161,6 @@
   @include background-img($width: 14, $height: 14, $category: 'common', $img: 'ico-link.svg');
 }
 
-.ico-caution {
-  @include background-img($width: 18, $height: 18, $category: 'common', $img: 'ico-caution.svg');
-}
-
 .ico-check-black {
   @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-check-black.svg');
 }
@@ -329,4 +325,8 @@
 
 .ico-minus-sm-white {
   @include background-img($width: 16, $height: 16, $category: 'common', $img: 'ico-minus-sm-white.svg');
+}
+
+.ico-caution {
+  @include background-img($width: 18, $height: 18, $category: 'common', $img: 'ico-caution.svg');
 }

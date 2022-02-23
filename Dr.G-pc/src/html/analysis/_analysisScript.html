@@ -29,6 +29,23 @@
 
 
 
+    /* 제품등록제안 - select box - 팝업 (common.js 적용 불가로 동일 코드 적용)*/
+    $('._selectBox .btn-select').on('click',function (e) {
+      e.stopPropagation();
+      $(this).parent().toggleClass('down');
+    })
+
+    $('._selectBox li a').on('click',function () {
+      let text = $(this).text();
+      $(this).parent().addClass('on').siblings().removeClass('on');
+      console.log($(this).parent().parents('.list').parent())
+      $(this).parent().parents('.list').prev('.btn-select').children('.text').text(text);
+      $(this).parent().parents('.list').prev('.btn-select').addClass('selected')
+      $(this).parent().parents('.list').parent().removeClass('down');
+    })
+
+
+
     /*-----------------e 사용중-------------------------*/
 
 
