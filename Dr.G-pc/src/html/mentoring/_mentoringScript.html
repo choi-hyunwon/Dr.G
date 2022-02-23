@@ -136,86 +136,75 @@
 
 
         /*서브메인 process*/
-
-        // let processItem = $('.mentoring-sub-main .slide-tab ul .item').eq(0)
-        // console.log(idx)
-        let processSwiper = new Swiper('.process-swiper', {
-            loop: true,
-            speed : 800,
-            autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
-                delay : 3000,   // 시간 설정
-                disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+        let processSwiper = new Swiper("._processSwiper", {
+            autoplay: {
+                enabled: false,
+                delay: 3000,
             },
+            speed: 1000,
+            effect: 'slide',
             pagination: {
-                el: ".process-pagination",
+                el: "._processSwiper + ._sliderPagination",
+                clickable: true,
             },
-    /*        on: {
-                slideChange: function () {
-                    if ($('.page2').hasClass('swiper-slide-active')) {
-                        console.log('a')
-                        let typingBool = false;
-                        let typingIdx = 0;
-                        let typingTxt = $(".typing-txt").text(); // 타이핑될 텍스트
-                        typingTxt = typingTxt.split(""); // 한글자씩 자른다.
-
-                        if (typingBool == false) {
-                            // 타이핑이 진행되지 않았다면
-                            typingBool = true;
-                            let tyInt = setInterval(typing, 100); // 반복동작
-                        }
-
-                        function typing() {
-                            if (typingIdx < typingTxt.length) {
-                                // 타이핑될 텍스트 길이만큼 반복
-                                $(".typing").append(typingTxt[typingIdx]);
-                                // 한글자씩 이어준다.
-                                typingIdx++;
-                            } else {
-                                //끝나면 반복종료
-                                clearInterval(tyInt);
-                            }
-                        }
-                    } else {
-                        $(".typing").empty();
-                    }
-                }
-            }*/
-        });
-        processSwiper.on('transitionEnd', function () {
-            let idx = processSwiper.realIndex + 1
-            //console.log(idx);
-            $('.step-box .step').removeClass('active')
-            $('.step-box .step').eq(idx).addClass('active')
         });
 
-        /* let page1Swipe = new Swiper('.page1-swiper', {
-             direction: "vertical",
-             loop:true,
-             loopAdditionalSlides: 1, //마지막장에서 첫장 슬라이드 끊김현상 제어
-             //autoplayDisableOnInteraction: false,
-             autoplay: {
-                 delay: 1000
-             },
+        let processAni1 = document.querySelector('._processAni1');
+        let processStep1 = bodymovin.loadAnimation({
+            container: processAni1,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: "../../img/mentoring/progress-step1.json"
+        });
 
-             //touchRatio: 0,//드래그 금지
-             on: {
-                 slideChange: function () {
-                     let activeIndex = this.activeIndex;
-                     let realIndex = this.slides.eq(activeIndex).attr('data-swiper-slide-index');
-                     console.log(realIndex)
+        let processAni2 = document.querySelector('._processAni2');
+        let processStep2 = bodymovin.loadAnimation({
+            container: processAni2,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: "../../img/mentoring/progress-step2.json"
+        });
 
-                     // $('.page1-swiper .swiper-slide').addClass('item-sm');
-                     // $('.page1-swiper .swiper-slide').eq(realIndex).find('item').removeClass('item-sm');
-                 }
-             }
-         });*/
-        /*
-                var carouselExample = document.querySelector('#carouselExample')
-                var carousel = new bootstrap.Carousel(carouselExample, {
-                    interval: 2000,
-                    wrap: false
-                })
-        */
+        let processAni3 = document.querySelector('._processAni3');
+        let processStep3 = bodymovin.loadAnimation({
+            container: processAni3,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: "../../img/mentoring/progress-step3.json"
+        });
+
+
+
+        new Waypoint({
+            element: document.querySelector('.section-process'),
+            handler: function () {
+                processSwiper.autoplay.start();
+                //console.log('process slider')
+            },
+            offset: "70%"
+        })
+        processSwiper.on('slideChange', function () {
+
+            $('.slide-infobox .info').removeClass('active');
+            $('.slide-infobox .info').eq(this.realIndex).addClass('active');
+
+            if (processSwiper.realIndex === 0) {
+                processStep1.playSegments([0, 180], true)
+                $('._stepBox').find('.step').eq(0).addClass('active').siblings().removeClass('active');
+
+            } else if (processSwiper.realIndex === 1) {
+                processStep2.playSegments([0, 120], true)
+                $('._stepBox').find('.step').eq(1).addClass('active').siblings().removeClass('active');
+
+            } else if (processSwiper.realIndex === 2) {
+                processStep3.playSegments([0, 240], true)
+                $('._stepBox').find('.step').eq(2).addClass('active').siblings().removeClass('active');
+            }
+        });
+
 
 
 
