@@ -34,7 +34,8 @@
           display: none;
         }
         .step-heading{
-          height: 192px;
+          padding-top: 40px;
+          margin-bottom: 40px;
         }
         +div{
           padding-top: 480px;
@@ -672,7 +673,6 @@
         padding: 0;
         .inner {
           padding:  120px 0;
-          border: 1px solid red;
           > .h2-title {
             text-align: center;
             margin-bottom: 80px;
@@ -783,6 +783,62 @@
 
     }
 
+    .section-tab {
+      border-bottom: 1px solid #eeeeee;
+      margin: 0 auto;
+      .inner{
+        position: relative;
+        z-index: 10;
+        width:100%;
+        background: $gray-fff;
+
+
+        &.fixed{
+          position:fixed;
+          top:87px;
+          left: 50%;
+          transform: translateX(-50%);
+          &:before{
+            content:'';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -200%;
+            width: 1000%;
+            height:64px;
+            background:#FFFFFF;
+            border-bottom: 1px solid #eee;
+          }
+          .tab {
+            border-bottom: 1px solid #eee;
+          }
+        }
+        .font-h4 {
+          padding: 0 vw(24);
+          margin-bottom: vw(16);
+        }
+        .tab {
+          overflow:unset;
+          border-bottom: none;
+          z-index: 5;
+          .item {
+            &.active {
+              a {
+                color: $violet;
+              }
+              &:after {
+                background-color: $violet;
+              }
+            }
+          }
+          &:after{
+            background-color: unset;
+          }
+
+        }
+      }
+    }
+
     .section-about {
       text-align: center;
       .font-h2 {
@@ -840,49 +896,73 @@
 
     .section-process {
       position: relative;
-      background: #edf8ff url("../img/mentoring/bg-main-progress2.png") no-repeat top center / contain;
+      background: #edf8ff;
+
+      &.section{
+        .inner{
+          .h2-title {
+            margin-bottom: 60px;
+          }
+        }
+      }
 
 
       .step-box {
         display: flex;
         justify-content: center;
+        margin-bottom: 80px;
         li {
-          font-size: 0;
           display: inline-block;
-          width: vw(48);
-          height: vw(67);
-          background-position: 0 0;
-          margin-right: vw(18);
+          width: 70px;
+          padding-bottom :78px;
+          margin-right: 50px;
           position: relative;
+          font-size: 0;
+          background-position: 0 0;
+          span{
+            font-size: 15px;
+            width: 70px;
+            display: inline-block;
+            text-align: center;
+            text-indent: 2px;
+            color: $gray-800;
+            &.on{
+              color: $yellow;
+            }
+          }
+
           &.active {
-            height: vw(67);
+            span{
+              color: $blue;
+            }
+
           }
 
           &:nth-of-type(1) {
-            background: url("../img/mentoring/img-submain-step2.svg") no-repeat;
+            background: url("../img/mentoring/img-submain-step2.png") no-repeat center bottom;
             background-size: 100% auto;
 
             &.active {
-              background: url("../img/mentoring/img-submain-step2-active.svg") no-repeat;
+              background: url("../img/mentoring/img-submain-step2-active.png") no-repeat center bottom;
               background-size: 100% auto;
             }
           }
           &:nth-of-type(2) {
-            background: url("../img/mentoring/img-submain-step3.svg") no-repeat;
+            background: url("../img/mentoring/img-submain-step3.png") no-repeat center bottom;
             background-size: 100% auto;
 
             &.active {
-              background: url("../img/mentoring/img-submain-step3-active.svg") no-repeat;
+              background: url("../img/mentoring/img-submain-step3-active.png") no-repeat center bottom;
               background-size: 100% auto;
             }
           }
           &:nth-of-type(3) {
-            background: url("../img/mentoring/img-submain-step4.svg") no-repeat;
+            background: url("../img/mentoring/img-submain-step4.png") no-repeat center bottom;
             background-size: 100% auto;
             margin-right: 0;
 
             &.active {
-              background: url("../img/mentoring/img-submain-step4-active.svg") no-repeat;
+              background: url("../img/mentoring/img-submain-step4-active.png") no-repeat center bottom;
               background-size: 100% auto;
             }
 
@@ -903,7 +983,7 @@
         }
       }
 
-      .slider-box {
+     /* .slider-box {
         position: relative;
         .swiper-wrapper{
 
@@ -996,7 +1076,7 @@
           }
 
         }
-      }
+      }*/
       /*.slide-infobox{
         position: absolute;
         bottom: 0;
@@ -1018,6 +1098,105 @@
           }
         }
       }*/
+
+      .slider-box {
+
+        .swiper-wrapper{
+
+          .item {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            .item-img {
+              position: relative;
+              width: 476px;
+              height: 441px;
+              margin-right: 100px;
+              display: none;
+              opacity: 0;
+
+              img {
+                width: 100%;
+              }
+            }
+
+            .info-box {
+              display: none;
+              opacity: 0;
+              .step{
+                font-size: 18px;
+                display: block;
+                text-align: left;
+                padding-left: 83px;
+                position: relative;
+                /*opacity: 0.5;*/
+                color: /*$gray-700*/ rgba(102, 102, 102, 0.5);
+                border-bottom: 1px solid /*$gray-300 #eeeeee*/ rgba(238, 238, 238, 0.5);
+
+                &:before{
+                  display: inline-block;
+                  font-size: 18px;
+                  font-weight: 600;
+                  position: absolute;
+                  color: $gray-500;
+                  font-family: Poppins-Regular, sans-serif;
+                  left: 0;
+                  top: 4px;
+                }
+
+                .font-h4{
+                  margin-bottom: 8px;
+                }
+
+                &:nth-of-type(1) {
+                  padding-bottom: 45px;
+                  margin-bottom: 45px;
+                  &:before{
+                    content: 'STEP 1';
+                  }
+                }
+
+                &:nth-of-type(2) {
+                  padding-bottom: 45px;
+                  margin-bottom: 45px;
+                  &:before{
+                    content: 'STEP 2';
+                  }
+                }
+
+                &:nth-of-type(3) {
+                  border-bottom: none;
+                  &:before{
+                    content: 'STEP 3';
+                  }
+                }
+                &.on{
+                  color: /*$gray-700*/ rgba(102, 102, 102, 1);
+                  .font-h4{
+                    color: $blue;
+                  }
+                  &:before{
+                    color: $gray-800;
+                  }
+                }
+              }
+            }
+          }
+          .swiper-slide-active {
+            .item {
+              .item-img {
+                display: block;
+                opacity: 1;
+              }
+              .info-box {
+                display: block;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
     }
     /*.section-process {
       background-color: #EDF8FF;

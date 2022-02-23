@@ -18,6 +18,8 @@
         }
         .scan-img{
           position: relative;
+          width: vw(300);
+          height: vw(400);
           .selection{
             position: absolute;
             border: vw(2) solid #ff3a48;
@@ -292,23 +294,23 @@
       }
       &.product-default-img{ /*샘플이미지일 경우 배경이 달라짐*/
         background: url("../img/analysis/bg_care_default.png") no-repeat center center;
-        height: vw(568);
-        background-size: contain;
-        margin-bottom: vw(30);
+        height: vw(556);
+        background-size: cover;
+        margin-bottom: vw(23);
         .gauge-gradient{
           +.font-body-2{
-            margin-bottom: vw(30);
+            margin-bottom: vw(32);
           }
         }
         .floating-box{
-          width: vw(234);
-          height: vw(235);
+          width: vw(212);
+          height: vw(212);
         }
 
       }
     }
     &.section-product{
-      padding: vw(32) vw(24) vw(48);
+      padding-top: vw(32);
       .name{
         text-align: center;
         margin-bottom: vw(32);
@@ -421,7 +423,7 @@
         width: 100%;
         padding: vw(24) vw(24);
         background-color: $gray-fff;
-        margin-top: vw(76);
+        margin-top: vw(48);
         color: $gray-800;
         text-align: center;
         &:before{

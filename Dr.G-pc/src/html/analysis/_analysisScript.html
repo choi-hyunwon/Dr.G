@@ -233,39 +233,56 @@
 
 
   /*tab*/
-  let sectionTab = $('._section-tab');
-  let lastScroll = 0;
-  let sectionStart = $('.section-about');
-  let sectionStartPos = sectionStart.position().top;
+  $(function(){
+      let lastScroll = 0;
+      let sectionAbout = $('.section-about').offset().top;
+      let sectionTab = $('._section-tab')
+      let sectionTabOffset = sectionTab.offset().top-200;
+      $(window).scroll(function(event){
+          let st = $(this).scrollTop();
 
-  $(window).scroll(function (){
-    if($('.container').find('._sub-main').length){
-      let st = $(this).scrollTop();
+          //console.log(sectionTabOffset)
 
-      /* 탭활성화 */
-      let section = $('._section')
-      let tab = $('._section-tab .item')
-      section.each(function( index) {
-        if ( st > $(this).offset().top - 350){
-          tab.removeClass('active')
-          tab.eq(index).addClass('active')
-        }
+          if($('.container-fluid').find('._sub-main').length) {
+              //console.log(st)
+              if (st > lastScroll) {
+                  //console.log("DOWN");
+                  if (st > sectionTabOffset ) {
+                      sectionTab.find('.inner').addClass('fixed')
+                  }
+              } else {
+                  //console.log("UP");
+                  if (st < sectionAbout) {
+                      sectionTab.find('.inner').removeClass('fixed')
+                  }
+              }
+              //Updates scroll position
+              lastScroll = st;
+          }
+
+          /* 탭활성화 */
+          let section = $('._section')
+          let tab = $('._section-tab .item')
+          section.each(function( index) {
+              if ( st > $(this).offset().top - 350){
+                  tab.removeClass('active')
+                  tab.eq(index).addClass('active')
+              }
+          });
       });
-    }
   });
-
   $('.slide-tab .item a').on('click',function (){
-    let idx = $(this).parent().index()
+    let idx = $(this).parent().index()+1
     // console.log(idx)
     let offset = $('.section').eq(idx).offset();
-    let headHeight = $('.header').height() + $('._tab').height()
+    let headHeight = $('.header').height() + $('._section-tab').height()
 
-    if ($('.header').hasClass('header-transparent')){
-      $('html, body').animate({scrollTop : offset.top - headHeight},400)
-    }else {
-      $('html, body').animate({scrollTop : offset.top},400)
-    }
+      //console.log(headHeight)
+      $('html, body').animate({scrollTop : offset.top - headHeight },400)
+
   })
+
+
 
   /*---------s 서브메인 what------------*/
  /* let stepSwiper = new Swiper ('.step-swiper', {
@@ -281,69 +298,72 @@
     //  spaceBetween:20
   })*/
 
-  setInterval(function() {
-      let li = $('.section-what .icon-list li').index()
-console.log(li)
-     // alert("2초마다 반복 실행됩니다.");
-  },2000);
+  let iconList = $('.section-what .icon-list li')
+  let count = 0;
+  let repeat = setInterval(function (){
+      count++;
+      //console.log(count);
+      iconList.removeClass('active')
+      iconList.eq(count-1).addClass('active')
+      if(count == 6){
+          count = 0
+      }
+  },1000)
 
 
 
+    let sectionTop = $('._section').offset().top;
+
+    let whatAni1 = document.querySelector('._whatAni1');
+    let whatStep1 = bodymovin.loadAnimation({
+      container: whatAni1,
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      path: "../../img/analysis/img-main-what-slide1.json"
+    });
+
+    let whatAni2 = document.querySelector('._whatAni2');
+    let whatStep2 = bodymovin.loadAnimation({
+      container: whatAni2,
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      path: "../../img/analysis/img-main-what-slide2.json"
+    });
+
+    let whatSwiper = new Swiper('._whatSwiper', {
+      effect: 'slide',
+      autoplay: {
+        enabled: false,
+        delay: 3000,
+      },
+      speed: 1000,
+      pagination: {
+        el: "._whatPagination"
+      },
+    });
+
+    whatSwiper.on('slideChange', function () {
+
+      if (whatSwiper.realIndex === 0) {
+        whatStep1.playSegments([0, 90], true)
+
+      } else if (whatSwiper.realIndex === 1) {
+        whatStep2.playSegments([0, 79], true)
+      }
+    });
 
 
-
-  let sectionTop = $('._section').offset().top;
-
-  let whatAni1 = document.querySelector('._whatAni1');
-  let whatStep1 = bodymovin.loadAnimation({
-    container: whatAni1,
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    path: "../../img/analysis/img-main-what-slide1.json"
-  });
-
-  let whatAni2 = document.querySelector('._whatAni2');
-  let whatStep2 = bodymovin.loadAnimation({
-    container: whatAni2,
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    path: "../../img/analysis/img-main-what-slide2.json"
-  });
-
-  let whatSwiper = new Swiper('._whatSwiper', {
-    effect: 'slide',
-    autoplay: {
-      enabled: false,
-      delay: 3000,
-    },
-    speed: 1000,
-    pagination: {
-      el: "._whatPagination"
-    },
-  });
-
-  whatSwiper.on('slideChange', function () {
-
-    if (whatSwiper.realIndex === 0) {
-      whatStep1.playSegments([0, 90], true)
-
-    } else if (whatSwiper.realIndex === 1) {
-      whatStep2.playSegments([0, 79], true)
-    }
-  });
-
-
-  new Waypoint({
-    element: document.querySelector('._whatSwiper'),
-    handler: function () {
-      whatSwiper.autoplay.start();
-      //console.log('_whatSwiper')
-    },
-    offset: "40%"
-  })
-  /*---------e 서브메인 what------------*/
+    new Waypoint({
+      element: document.querySelector('._whatSwiper'),
+      handler: function () {
+        whatSwiper.autoplay.start();
+        //console.log('_whatSwiper')
+      },
+      offset: "40%"
+    })
+    /*---------e 서브메인 what------------*/
 
 
 
