@@ -124,12 +124,12 @@ body.scrOff {
 
     .round {
       position: absolute;
-      top: vw(-24);
+      top: vw(-28);
       left: 50%;
       transform: translateX(-50%);
       border: vw(3) solid $gray-fff;
-      width: vw(68);
-      height: vw(68);
+      width: vw(74);
+      height: vw(74);
       border-radius: 100%;
       background: linear-gradient(180deg, #313464 0%, #11143A 100%);
       color: $gray-fff;
@@ -299,6 +299,7 @@ body.scrOff {
             line-height: vw(18);
             text-align: center;
             color: #fff;
+            margin-top: vw(3);
           }
         }
         .ico-menu-1 {
@@ -335,7 +336,7 @@ body.scrOff {
     position: absolute;
     width: vw(305);
     height: vw(259);
-    bottom: vw(110);
+    bottom: vw(107);
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
@@ -344,10 +345,9 @@ body.scrOff {
 
     img {
       position: absolute;
-      left: 50%;
+      left: vw(146);
       opacity: 0;
       bottom: vw(-110);
-      transform: translateX(-50%);
       width: vw(259);
       height: auto;
     }
@@ -379,7 +379,7 @@ body.scrOff {
     bottom: vw(130);
     left: 50%;
     transform: translateX(-50%);
-    padding: vw(11) vw(29) vw(13);
+    padding: vw(11) vw(28) vw(13);
     text-align: center;
     background-color: rgba(255,255,255,.95);
     border-radius: vw(30);
@@ -392,10 +392,10 @@ body.scrOff {
     &::after {
       content: '';
       position: absolute;
-      bottom: vw(-9);
+      bottom: vw(-6);
       left: 50%;
       transform: translateX(-50%);
-      @include background-img ($width: 12, $height: 10, $category: 'common', $img: 'ico-menu-tooltip.svg');
+      @include background-img ($width: 8, $height: 7.1, $category: 'common', $img: 'ico-menu-tooltip.svg');
     }
 
     .txt {
@@ -409,7 +409,7 @@ body.scrOff {
     @keyframes drgTxtAni {
       100% {
         opacity: 1;
-        bottom: vw(332);
+        bottom: vw(330);
       }
     }
 
