@@ -375,13 +375,13 @@ data.analysis = {
             page: '성분분석_1-6_제품명검색_확인_제품이없는경우'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-6_제품등록제안',
             category: 'analysis',
             page: '성분분석_1-6_제품등록제안'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_1-6_제품등록제안_제품없을시',
             category: 'analysis',
             page: '성분분석_1-6_제품등록제안_제품없을시'
@@ -393,7 +393,7 @@ data.analysis = {
             page: '성분분석_1-6_제품등록완료'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_Loading',
             category: 'analysis',
             page: '성분분석_Loading'
