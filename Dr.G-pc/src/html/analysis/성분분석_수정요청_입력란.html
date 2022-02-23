@@ -84,6 +84,14 @@
 <script>
     // popup open
     openPopup('_analysisEditPopup')
+
+    // popup scroll
+    $("._analysisEditPopup .popup-body").mCustomScrollbar();
+
+    // select category
+    $('._selectCategory li').on('click',function (){
+        $(this).addClass('on').siblings().removeClass('on')
+    })
 </script>
 </body>
 </html>

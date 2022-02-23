@@ -446,6 +446,12 @@ data.analysis = {
             category: 'analysis',
             page: '성분분석_수정요청_입력란_완료팝업'
         },
+        {
+            stateClass: 'complete',
+            url: '성분분석_수정요청_초기화얼럿',
+            category: 'analysis',
+            page: '성분분석_수정요청_초기화얼럿'
+        },
     ]
 }
 

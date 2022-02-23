@@ -1142,8 +1142,8 @@
         height: 308px;
         filter: drop-shadow(0px 8px 16px rgba(34, 34, 34, 0.06));
         position: relative;
-        bottom: vw(0);
-        border-radius: vw(16);
+        bottom: 0;
+        border-radius: 16px;
         overflow: hidden;
         margin: 0 auto;
 
@@ -1151,6 +1151,11 @@
           width: 100%;
           height: auto;
         }
+        &.default-img{
+          top: 20px;
+        }
+
+
       }
 
       &.product-default-img { /*샘플이미지일 경우 배경이 달라짐*/
@@ -1186,6 +1191,7 @@
           letter-spacing: -0.01em;
           color: $gray-800;
           margin: 0 auto 30px;
+          @include ellipsis(2)
         }
       }
 
