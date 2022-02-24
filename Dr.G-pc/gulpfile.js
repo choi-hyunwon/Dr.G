@@ -48,6 +48,7 @@ function copyLibJs() {
         'src/js/lib/tweenMax.js',
         'src/js/lib/lottie.js',
         'src/js/lib/jquery.mCustomScrollbar.js',
+        'src/js/lib/chart.min.js',
     ];
 
     return gulp.src(sourceLib)

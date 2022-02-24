@@ -677,9 +677,27 @@ data.brand = {
     list: [
         {
             stateClass: 'waiting',
+            url: '브랜드소개_고객을위한_닥터지이야기',
+            category: 'brand',
+            page: '브랜드소개_고객을위한_닥터지이야기'
+        },
+        {
+            stateClass: 'waiting',
+            url: '브랜드소개_제조원칙',
+            category: 'brand',
+            page: '브랜드소개_제조원칙'
+        },
+        {
+            stateClass: 'waiting',
             url: '브랜드소개_고객을위한_서비스',
             category: 'brand',
             page: '브랜드소개_고객을위한_서비스'
+        },
+        {
+            stateClass: 'waiting',
+            url: '브랜드소개_사회를위한_공헌활동',
+            category: 'brand',
+            page: '브랜드소개_사회를위한_공헌활동'
         },
     ]
 }
