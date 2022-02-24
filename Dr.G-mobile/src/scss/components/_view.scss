@@ -2,13 +2,22 @@
 |----------------------------------------------------------------------|
  v.0.1 선미 : 최초 작업 --- 2021.12.16
  v.0.2 주연 : .step-heading 수정  --- 2022.01.21
+ v.0.3 주연 : 고객제안 이슈 수정  --- 2022.02.23
 |----------------------------------------------------------------------|
 */
 
 /*고객제안 , 스킨멘토링*/
 .view-details {
-  .header-details {
-    /*layout.scss*/
+  &.bg-gray {
+    /* 고객제안 이슈 수정 -- 2022.02.23 */
+    .header-details {
+      background-color: transparent;
+      position: static !important;
+
+      &.scroll-down + .body-details {
+        padding-top: 0 !important;
+      }
+    }
   }
 
   .body-details {
@@ -668,10 +677,12 @@
   .footer-details {
     border-top: 1px solid $gray-400;
     padding: 0 vw(20) 0;
+    height: vw(102);
 
     &.bg-dark {
       background-color: $gray-800 !important;
       padding: vw(19.5);
+      height: auto;
 
       .page-btn-wrap {
         a {

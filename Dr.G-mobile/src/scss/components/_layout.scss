@@ -13,6 +13,10 @@
 |----------------------------------------------------------------------|
 */
 
+body {
+  touch-action: pan-y;
+}
+
 /* header */
 .sticky-wrapper {
   background-color: $gray-fff;
@@ -328,6 +332,7 @@
       flex-direction: column;
       width: 100%;
       min-height: 100vh;
+      min-height: calc(var(--vh, 1vh) * 100);
       height: 100%;
       pointer-events: auto;
       background-color: #fff;
@@ -1065,6 +1070,7 @@ body {
   position: fixed;
   width: vw(12.8);
   height: calc(100vh - #{vw(98)} - #{vw(60)});
+  height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(60)});
   top: vw(60);
   right: 0;
   z-index: 10;
@@ -1073,6 +1079,7 @@ body {
     position: absolute;
     right: vw(24);
     top: calc(100vh - 40.4%);
+    top: calc(var(--vh, 1vh) * 100 - 40.4%);
     width: vw(48);
     height: vw(48);
     z-index: 5;
@@ -1142,6 +1149,7 @@ body {
     .btn-chatbot {
       height: vw(120);
       top: calc(100vh - 54.8%);
+      top: calc(var(--vh, 1vh) * 100 - 54.8%);
 
       img {
         position: absolute;
@@ -1154,35 +1162,43 @@ body {
   &.main {
     top: vw(141);
     height: calc(100vh - #{vw(98)} - #{vw(60)} - #{vw(80)});
+    height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(60)} - #{vw(80)});
 
     .btn-chatbot {
       top: calc(100vh - 65.8%);
+      top: calc(var(--vh, 1vh) * 100 - 65.8%);
     }
 
     &.full {
       top: 0 !important;
       height: calc(100vh - #{vw(30)}) !important;
+      height: calc(var(--vh, 1vh) * 100 - #{vw(30)}) !important;
 
       .btn-chatbot {
         top: calc(100vh - 22.2%);
+        top: calc(var(--vh, 1vh) * 100 - 22.2%);
       }
     }
 
     &.no-banner {
       top: vw(60);
       height: calc(100vh - #{vw(98)} - #{vw(60)});
+      height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(60)});
 
       .btn-chatbot {
         top: calc(100vh - 39.5%);
+        top: calc(var(--vh, 1vh) * 100 - 39.5%);
       }
     }
   }
 
   &.full {
     height: calc(100vh - #{vw(30)});
+    height: calc(var(--vh, 1vh) * 100 - #{vw(30)});
 
     .btn-chatbot {
       top: calc(100vh - 32.5%);
+      top: calc(var(--vh, 1vh) * 100 - 32.5%);
     }
   }
 }

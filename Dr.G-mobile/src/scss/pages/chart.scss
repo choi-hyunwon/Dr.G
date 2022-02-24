@@ -34,14 +34,14 @@ $slider-width: #{vw(99)};
         width: 100%;
         height: vw(205);
         z-index: 5;
-        padding-left: vw(36);
+        padding-left: vw(38);
 
         .item {
           display: inline-block;
           width: $slider-width;
           position: relative;
           height: vw(200);
-          margin-right: vw(-1.4);
+          margin-right: vw(-1.5);
 
           &:first-child {
             margin-right: 0;

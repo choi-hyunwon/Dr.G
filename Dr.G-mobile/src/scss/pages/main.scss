@@ -113,8 +113,8 @@
 
     .editor-area {
       position: absolute;
-      width: vw(230);
-      height: vw(230);
+      width: vw(273);
+      height: vw(273);
       left: 50%;
       transform: translateX(-50%);
       top: vw(250);
@@ -123,15 +123,15 @@
       &::after {
         content: '';
         position: absolute;
-        @include background-img ($width: 234, $height: 234, $category: 'AI', $img: 'bg-camera-frame.svg');
+        @include background-img ($width: 276, $height: 276, $category: 'main', $img: 'bg-camera-frame.svg');
         left: vw(-2);
         top: vw(-6);
       }
 
       .img {
         position: absolute;
-        width: vw(230);
-        height: vw(230);
+        width: vw(273);
+        height: vw(273);
         bottom: vw(4);
         left: 50%;
         transform: translateX(-50%);
@@ -144,7 +144,7 @@
           left: 50%;
           transform: translateX(-50%);
           top: vw(-18);
-          width: vw(620);
+          width: vw(732);
         }
       }
     }

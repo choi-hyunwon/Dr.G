@@ -336,7 +336,7 @@ body.scrOff {
     position: absolute;
     width: vw(305);
     height: vw(259);
-    bottom: vw(107);
+    bottom: vw(110);
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
@@ -345,7 +345,7 @@ body.scrOff {
 
     img {
       position: absolute;
-      left: vw(146);
+      left: vw(16);
       opacity: 0;
       bottom: vw(-110);
       width: vw(259);
@@ -356,7 +356,6 @@ body.scrOff {
       100% {
         opacity: 1;
         bottom: vw(-20);
-        transform: translateX(-50%);
       }
     }
 
@@ -409,7 +408,7 @@ body.scrOff {
     @keyframes drgTxtAni {
       100% {
         opacity: 1;
-        bottom: vw(330);
+        bottom: vw(335);
       }
     }
 

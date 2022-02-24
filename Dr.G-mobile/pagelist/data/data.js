@@ -790,7 +790,7 @@ data.brand = {
     title: '브랜드 소개',
     list: [
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: '브랜드소개_고객을위한_서비스',
             category: 'brand',
             page: '브랜드소개_고객을위한_서비스'
