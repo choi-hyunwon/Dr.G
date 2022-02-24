@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container-fluid">
+        <div class="event-wrap">
+            <div class="event__wrap">
+
+                <div class="column column-wide">
+
+                    <div class="conts conts-full tab-wrap">
+                        <div class="tab__uio tab__uio__type4 col-3 tab__depth1">
+                            <a href="/brand/event" class="tab">
+                                <span>진행중 이벤트</span>
+                            </a>
+                            <a href="/brand/event/winner" class="tab active">
+                                <span>당첨자 발표</span>
+                            </a>
+                            <a href="/brand/event?type=end" class="tab">
+                                <span>종료된 이벤트</span>
+                            </a>
+                            <a href="/brand/event/sample" class="tab">
+                                <span>무료 샘플 신청</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/.about__lnb-->
+
+
+
+                    <div class="event__wrap">
+                        <div class="column column-wide">
+                            <form name="searchForm">
+                                <input type="hidden" id="pageNo" name="pageNo" value="1">
+                                <input type="hidden" id="type" name="type" value="">
+                            </form>
+
+                            <div class="conts conts-full announce-winner-wrap">
+
+                                <div class="board__box">
+
+                                    <div class="board__box__header">
+                                        <label class="stx-uio stx-uio stx-uio-cuio" data-width="150" data-top="36">
+
+                                            <select name="" id="searchType">
+                                                <option value="titleContent">제목 + 내용</option>
+                                                <option value="title">제목</option>
+                                                <option value="content">내용</option>
+                                            </select>
+
+
+                                            <ul class="virtual__wrap" style="width:150px;"><li data-idx="0"><a>제목 + 내용</a></li>
+                                                <li data-idx="1"><a>제목</a></li>
+                                                <li data-idx="2"><a>내용</a></li>
+                                            </ul></label>
+                                        <!-- // .stx-uio -->
+
+                                        <div class="srch__box">
+
+                                            <div class="input input__srch__box">
+                                                <form name="major">
+                                                    <input type="text" name="titleContent" id="categorySearch" placeholder="검색어를 입력해 주세요">
+                                                    <button type="submit" class="submit"><span class="sound-only">검색</span></button>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                        <!-- // .srch__box -->
+                                    </div>
+                                    <!-- // .board__box__header -->
+                                    <input type="hidden" id="pageNo" value="1">
+                                    <div class="board__box__list">
+
+                                        <ul class="items empty" style="display:none;">
+                                            <li class="nodata" style="padding-top:80px;">
+                                                검색 결과가 없습니다.
+                                            </li>
+                                        </ul>
+                                        <table class="notification_db">
+                                            <colgroup>
+                                                <col width="105">
+                                                <col>
+                                                <col width="215">
+                                                <col width="130">
+                                            </colgroup>
+
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">순번</th>
+                                                <th scope="col">제목</th>
+                                                <th scope="col"></th>
+                                                <th scope="col">당첨 발표일</th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody id="row-tmpl">
+
+                                            <tr><td scope="row" class="num">153</td><td class="title"><a href="/brand/event/winner/866?pageNo=1&amp;categorySearch=">NEW 그린 딥 포밍 스크럽 뷰티테스터 우수 리뷰 당첨자 발표</a></td><td class="file"><i class="ico_file"></i><em class="sound-only">파일첨부</em></td><td class="date"></td></tr><tr><td scope="row" class="num">152</td><td class="title"><a href="/brand/event/winner/863?pageNo=1&amp;categorySearch=">1월 베스트 리뷰 당첨자 발표</a></td><td class="file"><i class="ico_file"></i><em class="sound-only">파일첨부</em></td><td class="date"></td></tr><tr><td scope="row" class="num">151</td><td class="title"><a href="/brand/event/winner/860?pageNo=1&amp;categorySearch=">에이클리어 샘플링 리뷰 이벤트 당첨자 발표</a></td><td class="file"><i class="ico_file"></i><em class="sound-only">파일첨부</em></td><td class="date">2021-12-14</td></tr><tr><td scope="row" class="num">150</td><td class="title"><a href="/brand/event/winner/859?pageNo=1&amp;categorySearch=">NEW 그린 딥 포밍 스크럽 뷰티테스터 당첨자 발표</a></td><td class="file"><i class="ico_file"></i><em class="sound-only">파일첨부</em></td><td class="date">2022-01-13</td></tr><tr><td scope="row" class="num">149</td><td class="title"><a href="/brand/event/winner/857?pageNo=1&amp;categorySearch=">12월 에이클리어 리뷰이벤트 당첨자 발표</a></td><td class="file"><i class="ico_file"></i><em class="sound-only">파일첨부</em></td><td class="date"></td></tr><tr><td scope="row" class="num">148</td><td class="title"><a href="/brand/event/winner/852?pageNo=1&amp;categorySearch=">12월 베스트 리뷰 당첨자 발표</a></td><td class="file"><i class="ico_file"></i><em class="sound-only">파일첨부</em></td><td class="date"></td></tr><tr><td scope="row" class="num">147</td><td class="title"><a href="/brand/event/winner/849?pageNo=1&amp;categorySearch=">2021 바른피부 어워드 - 바른피부일상 당첨자 발표</a></td><td class="file"><i class="ico_file"></i><em class="sound-only">파일첨부</em></td><td class="date">2022-01-03</td></tr><tr><td scope="row" class="num">146</td><td class="title"><a href="/brand/event/winner/843?pageNo=1&amp;categorySearch=">2021 멘토G 에이클리어 모의고사 이벤트 당첨자 발표</a></td><td class="file"><i class="ico_file"></i><em class="sound-only">파일첨부</em></td><td class="date"></td></tr><tr><td scope="row" class="num">145</td><td class="title"><a href="/brand/event/winner/842?pageNo=1&amp;categorySearch=">NEW 에이클리어 스팟 큐어 패치 뷰티테스터 우수 리뷰 당첨자 발표</a></td><td class="file"><i class="ico_file"></i><em class="sound-only">파일첨부</em></td><td class="date"></td></tr><tr><td scope="row" class="num">144</td><td class="title"><a href="/brand/event/winner/835?pageNo=1&amp;categorySearch=">NEW 에이클리어 스팟 포 페이스 세럼 뷰티테스터 우수 리뷰 당첨자 발표</a></td><td class="file"><i class="ico_file"></i><em class="sound-only">파일첨부</em></td><td class="date"></td></tr></tbody>
+                                        </table>
+                                    </div>
+                                    <!-- // .winner__box__list -->
+
+                                    <nav aria-label="페이지 네비게이션">
+                                        <ul class="pagination" id="paging"><li class="first"><a href="#" aria-label="처음" class="btn_pnumcon startBtn"><span aria-hidden="true">«</span></a></li><li class="prev"><a href="#" aria-label="이전" class="btn_pnumcon prevBtn"><span aria-hidden="true">«</span></a></li><li class="active"><a href="#" class="pageBtn" data-page_no="1">1</a></li><li class=""><a href="#" class="pageBtn" data-page_no="2">2</a></li><li class=""><a href="#" class="pageBtn" data-page_no="3">3</a></li><li class=""><a href="#" class="pageBtn" data-page_no="4">4</a></li><li class=""><a href="#" class="pageBtn" data-page_no="5">5</a></li><li class=""><a href="#" class="pageBtn" data-page_no="6">6</a></li><li class=""><a href="#" class="pageBtn" data-page_no="7">7</a></li><li class=""><a href="#" class="pageBtn" data-page_no="8">8</a></li><li class=""><a href="#" class="pageBtn" data-page_no="9">9</a></li><li class=""><a href="#" class="pageBtn" data-page_no="10">10</a></li><li class=""><a href="#" class="pageBtn" data-page_no="11">11</a></li><li class=""><a href="#" class="pageBtn" data-page_no="12">12</a></li><li class=""><a href="#" class="pageBtn" data-page_no="13">13</a></li><li class=""><a href="#" class="pageBtn" data-page_no="14">14</a></li><li class=""><a href="#" class="pageBtn" data-page_no="15">15</a></li><li class=""><a href="#" class="pageBtn" data-page_no="16">16</a></li><li class="next"><a href="#" aria-label="다음" class="btn_pnumcon nextBtn"><span aria-hidden="true">»</span></a></li><li class="last"><a href="#" aria-label="마지막" class="btn_pnumcon endBtn"><span aria-hidden="true">»</span></a></li></ul>
+                                    </nav>
+
+                                </div>
+                                <!-- // .winner__box -->
+
+                            </div>
+                            <!-- // .conts -->
+
+                        </div>
+                        <!-- // .column -->
+                    </div>
+                    <!-- // .event__wrap -->
+
+
+
+                </div><!--/.column-->
+
+            </div>
+        </div>
+
+        <!-- s chatbot -->
+        @@include('../../html/include/common/chatbot.html')
+        <!-- e chatbot -->
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+</body>
+</html>

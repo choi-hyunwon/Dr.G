@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container-fluid">
+        <div class="event-wrap">
+            <div class="event__wrap">
+
+                <div class="column column-wide">
+
+                    <div class="conts conts-full tab-wrap">
+                        <div class="tab__uio tab__uio__type4 col-3 tab__depth1">
+                            <a href="/brand/event" class="tab">
+                                <span>진행중 이벤트</span>
+                            </a>
+                            <a href="/brand/event/winner" class="tab">
+                                <span>당첨자 발표</span>
+                            </a>
+                            <a href="/brand/event?type=end" class="tab">
+                                <span>종료된 이벤트</span>
+                            </a>
+                            <a href="/brand/event/sample" class="tab active">
+                                <span>무료 샘플 신청</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/.about__lnb-->
+
+
+
+                    <script>
+
+                        function show_apply_info() {
+
+                            //주소값이 없을시 처리
+                            var resultCnt = 0;
+
+                            var tel1 = $("#pop-apply-tel1").val();
+                            var tel2 = $("#pop-apply-tel2").val();
+                            var tel3 = $("#pop-apply-tel3").val();
+
+                            var zipCode = $("#zipCode").val();
+                            var addr1 = $("#pop-apply-addr1").val();
+                            var addr2 = $("#pop-apply-addr2").val();
+
+                            if(tel1 == '' || tel1 == null || tel2 == '' || tel2 == null || tel3 == '' || tel3 == null){
+                                if(confirm("연락처가 마이페이지에 등록되어 있지 않습니다.\n마이페이지로 이동하셔서 주소정보를 등록해주세요.")){
+                                    location.href="/mypage/member/check-member?returnPage=memInfo";
+                                    return false;
+                                }
+                                resultCnt++;
+                            }
+
+                            if(zipCode == '' || zipCode == null ){
+                                if(confirm("우편번호가 마이페이지에 등록되어 있지 않습니다.\n마이페이지로 이동하셔서 주소정보를 등록해주세요.")){
+                                    location.href="/mypage/member/check-member?returnPage=memInfo";
+                                    return false;
+                                }
+                                resultCnt++;
+                            }
+
+                            if(addr1 == '' || addr1 == null){
+                                if(confirm("주소가 등록되어 있지 않습니다.\n마이페이지에서 샘플을 받아보실 주소를 입력해주세요.")){
+                                    location.href="/mypage/member/check-member?returnPage=memInfo";
+                                    return false;
+                                }
+                                resultCnt++;
+                            }
+
+                            if(addr2 == '' || addr2 == null){
+                                if(confirm("상세주소정보가 마이페이지에 등록되어 있지 않습니다.\n마이페이지로 이동하셔서 주소정보를 등록해주세요.")){
+                                    location.href="/mypage/member/check-member?returnPage=memInfo";
+                                    return false;
+                                }
+                                resultCnt++;
+                            }
+
+                            console.log(resultCnt);
+                            if(resultCnt < 1){
+                                drg.Ajax.post(null, {
+                                    url: '/event/entry/create',
+                                    method: 'post',
+                                    data: {
+                                    }
+                                }).done(function(d){
+                                    console.log(d);
+                                    if(d.code == "SUCCESS"){
+                                        alert("무료샘플 신청이 완료되었습니다.");
+                                        works.uio.pop.cls('.pop_event_info');
+                                    }else{
+                                        alert(d.msg);
+                                    }
+                                });
+                            }
+
+                        }
+
+                        function show_pop(){
+
+                            if(window.c.isLogin != 'true'){
+                                if(confirm('로그인이 필요한 서비스입니다. 로그인하시겠습니까?'))
+                                {
+                                    drg.common.goLogin(window.c.path);
+                                }
+                            }else{
+                                works.uio.pop.opn('.pop_event_info');
+                            }
+                        }
+
+                        function move_buman(){
+                            if(window.c.isLogin != 'true'){
+                                if(confirm('로그인이 필요한 서비스입니다. 로그인하시겠습니까?'))
+                                {
+                                    drg.common.goLogin(window.c.path);
+                                }
+                            }else{
+                                location.href="/skinSolution/baumann/test";
+
+                            }
+                        }
+
+
+
+                        $(".l__wrap").addClass("showing");
+
+
+                    </script>
+
+
+                    <div class="">
+                        <div>
+
+                            <div class="conts conts-full event-list-wrap">
+
+                                <div class="exec_sample">
+
+                                    <div class="sample_header">
+                                        <h1>닥터지 스킨케어북에 무료샘플을 담아드려요.</h1>
+                                        <div class="is_guide">
+                                            <p class="box">구성안내</p>
+                                            <p>피부고민에 따른 성분 안내 및 무료 샘플 증정(클렌저, 크림, 선크림)</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="sample_container">
+
+                                        <div class="sect sect-1">
+                                            <h2>STEP 1</h2>
+                                            <div>
+                                                <p>
+                                                    샘플 신청은 <i class="eng">Dr.G</i> 회원전용 서비스입니다!
+                                                    <br>로그인 후 신청하실 수 있어요.
+                                                </p>
+
+                                                <div class="mt30 actions">
+                                                    <a href="/member/login?returnUrl=/brand/event/sample" class="dbtn dbtn-small54 x120 rds41 tealish"><strong>로그인</strong></a>
+                                                    <a href="/member/signup" class="dbtn dbtn-small54 x120 rds41 dirt-brown"><strong>회원가입</strong></a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--./sect-->
+
+                                        <div class="sect sect-2">
+                                            <h2>STEP 2</h2>
+                                            <div>
+                                                <p>
+                                                    닥터지 피부 유형 테스트에 참여하시면,
+                                                    <br>무료 샘플 신청이 가능해요.
+                                                </p>
+
+                                                <div class="mt30 actions">
+                                                    <a onclick="move_buman()" class="dbtn dbtn-small54 x206 rds41 grey"><strong>피부유형 테스트 시작하기</strong></a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <!--/.sect-->
+
+                                        <div class="sect sect-3">
+                                            <h2>STEP 3</h2>
+                                            <div>
+                                                <p>
+                                                    피부고민에 따른
+                                                    <br>닥터지 스킨케어북을 신청해보세요!
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+                                        <!--/.sect-->
+
+                                    </div>
+                                    <!--/.sample_container-->
+
+                                </div>
+                                <!--/.exec_sample-->
+
+                                <div class="exec_sample_tails">
+                                    <div class="module_tip">
+                                        <h1 class="imperative">무료 샘플 신청 주의사항</h1>
+                                        <ul class="dot">
+                                            <li>샘플 신청은 월 1회 가능하며, 재신청은 마지막 신청일로부터 30일 이후부터 가능합니다.</li>
+                                            <li>매주 금요일에 우편으로 일괄발송되며 수령까지 2~3주 소요됩니다.(전주 수요일~금주 화요일 신청자 대상) </li>
+                                            <li>동일 주소지 당 1개의 샘플만 발송되며, ID / 개인정보 도용 등 부정한 방법으로 샘플 신청 시 발송되지 않습니다.</li>
+                                            <li>주소지 오류로 인한 반송 시 재발송 되지 않으므로 정확한 주소를 꼭 확인해주세요.</li>
+                                            <li>네이버, 카카오톡 간편가입으로 인해 연락처 및 주소지 미기재 시 샘플 발송에서 제외됩니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // .conts -->
+                        </div>
+                        <!-- // .column -->
+                    </div>
+                    <!-- // .event__wrap -->
+                </div><!--/.column-->
+            </div>
+        </div>
+
+        <!-- s chatbot -->
+        @@include('../../html/include/common/chatbot.html')
+        <!-- e chatbot -->
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+</body>
+</html>
