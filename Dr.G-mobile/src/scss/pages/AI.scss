@@ -64,7 +64,7 @@
         > .font-body-1 {
           text-align: center;
           color: $gray-700;
-          font-weight: 500;
+          font-weight: 400;
           margin-bottom: vw(24);
         }
 
@@ -201,15 +201,15 @@
             }
 
             .ico-step-1 {
-              @include background-img($width: 34, $height: 34, $category: 'AI', $img: 'ico-visual-step-1.svg');
+              @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-visual-step-1.svg');
             }
 
             .ico-step-2 {
-              @include background-img($width: 29, $height: 34, $category: 'AI', $img: 'ico-visual-step-2.svg');
+              @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-visual-step-2.svg');
             }
 
             .ico-step-3 {
-              @include background-img($width: 33, $height: 38, $category: 'AI', $img: 'ico-visual-step-3.svg');
+              @include background-img($width: 36, $height: 36, $category: 'AI', $img: 'ico-visual-step-3.svg');
             }
 
             .ico-step-4 {
