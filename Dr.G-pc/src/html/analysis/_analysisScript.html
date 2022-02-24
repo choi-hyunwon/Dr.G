@@ -300,69 +300,79 @@
 
   let iconList = $('.section-what .icon-list li')
   let count = 0;
-  let repeat = setInterval(function (){
+  let repeat = setInterval(function () {
       count++;
       //console.log(count);
       iconList.removeClass('active')
-      iconList.eq(count-1).addClass('active')
-      if(count == 6){
+      iconList.eq(count - 1).addClass('active')
+      if (count == 6) {
           count = 0
       }
-  },1000)
+  }, 1000)
 
+  let sectionTop = $('._section').offset().top;
 
-
-    let sectionTop = $('._section').offset().top;
-
-    let whatAni1 = document.querySelector('._whatAni1');
-    let whatStep1 = bodymovin.loadAnimation({
-      container: whatAni1,
-      renderer: 'svg',
-      loop: false,
-      autoplay: true,
-      path: "../../img/analysis/img-main-what-slide1.json"
-    });
-
-    let whatAni2 = document.querySelector('._whatAni2');
-    let whatStep2 = bodymovin.loadAnimation({
-      container: whatAni2,
-      renderer: 'svg',
-      loop: false,
-      autoplay: true,
-      path: "../../img/analysis/img-main-what-slide2.json"
-    });
-
-    let whatSwiper = new Swiper('._whatSwiper', {
+  let whatStep11, whatStep12, whatStep21, whatStep22;
+  let whatSwiper = new Swiper('._whatSwiper', {
       effect: 'slide',
       autoplay: {
-        enabled: false,
-        delay: 3000,
+          enabled: false,
+          delay: 3000,
       },
       speed: 1000,
+      loop: true,
       pagination: {
-        el: "._whatPagination"
+          el: "._whatPagination"
       },
-    });
-
-    whatSwiper.on('slideChange', function () {
-
-      if (whatSwiper.realIndex === 0) {
-        whatStep1.playSegments([0, 90], true)
-
-      } else if (whatSwiper.realIndex === 1) {
-        whatStep2.playSegments([0, 79], true)
+      on: {
+          init: function () {
+              whatStep11 = bodymovin.loadAnimation({
+                  container: document.querySelectorAll('._whatAni1')[0],
+                  renderer: 'svg',
+                  loop: false,
+                  autoplay: true,
+                  path: "../../img/analysis/img-main-what-slide1.json"
+              });
+              whatStep22 = bodymovin.loadAnimation({
+                  container: document.querySelectorAll('._whatAni2')[1],
+                  renderer: 'svg',
+                  loop: false,
+                  autoplay: true,
+                  path: "../../img/analysis/img-main-what-slide2.json"
+              });
+          },
       }
-    });
+  });
+
+  whatSwiper.on('slideChange', function (index) {
+      $('._whatAni1').eq(1).empty()
+      whatStep12 = bodymovin.loadAnimation({
+          container: document.querySelectorAll('._whatAni1')[1],
+          renderer: 'svg',
+          loop: false,
+          path: "../../img/analysis/img-main-what-slide1.json"
+      });
 
 
-    new Waypoint({
+      $('._whatAni2').eq(0).empty()
+      whatStep21 = bodymovin.loadAnimation({
+          container: document.querySelectorAll('._whatAni2')[0],
+          renderer: 'svg',
+          loop: false,
+          path: "../../img/analysis/img-main-what-slide2.json"
+      });
+
+      whatStep11.playSegments([0, 90], true)
+      whatStep22.playSegments([0, 79], true)
+  });
+
+  new Waypoint({
       element: document.querySelector('._whatSwiper'),
       handler: function () {
-        whatSwiper.autoplay.start();
-        console.log('_whatSwiper')
+          whatSwiper.autoplay.start();
       },
-      offset: "40%"
-    })
+      offset: "90%"
+  })
     /*---------e 서브메인 what------------*/
 
 
