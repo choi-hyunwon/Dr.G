@@ -1550,7 +1550,7 @@
           .item {
             background-color: $gray-200;
             width: 266px;
-            border-radius: vw(16);
+            border-radius: 16px;
             display: inline-block;
             white-space: normal;
 
@@ -1562,9 +1562,16 @@
                 width: 234px;
                 height: 234px;
                 display: inline-block;
-                border-radius: vw(12);
+                border-radius: 12px;
                 overflow: hidden;
-                margin-bottom: 17px;
+                margin-bottom: 20px;
+                background-color: $gray-fff;
+                &.default-img-skin{
+                  background: $gray-fff url("../img/analysis/img-past-product-skin.png") no-repeat center center / 112px 112px;
+                }
+                &.default-img-hair{
+                  background: $gray-fff url("../img/analysis/img-past-product-hair.png") no-repeat center center / 112px 112px;
+                }
 
                 img {
                   width: 100%;

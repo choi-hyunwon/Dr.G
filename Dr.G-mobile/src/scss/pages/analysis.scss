@@ -691,6 +691,12 @@
               overflow: hidden;
               margin-bottom: vw(12);
               background: $gray-fff;
+              &.default-img-skin{
+                background: $gray-fff url("../img/analysis/img-past-product-skin.png") no-repeat center center / vw(70) vw(70);
+              }
+              &.default-img-hair{
+                background: $gray-fff url("../img/analysis/img-past-product-hair.png") no-repeat center center / vw(70) vw(70);
+              }
               img{
                 width: 100%;
                 height: auto;
