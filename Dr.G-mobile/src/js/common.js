@@ -13,6 +13,7 @@
  v.0.9 주연 : header-detail / header 수정 및 추가 -- 2022.01.21
  v.0.10 주연 : main header 추가 -- 2022.01.24
  v.0.11 주연 : header / 스킨멘토링 & 성분분석 -- 2022.02.17
+ v.0.12 선미 : scrOff 추가 -- 2022.02.24
  * --------------------------------------------------------------------------
  */
 var front = front || {};
@@ -68,8 +69,10 @@ front.common = (function () {
                 Popup.addClass('hide');
                 setTimeout(() => {
                     Popup.removeClass('fade show').css('display', 'none');
+                    $('body').removeClass('scrOff')
                 }, 400);
             }
+
 
             if ($('._toast-popup .select-list > .list').hasClass("active")) {
                 $(this).siblings().removeClass("active");
@@ -264,14 +267,25 @@ front.common = (function () {
         popupOpen.on('click', function () {
             const idx = popupOpen.index(this);
             select.eq(idx).removeClass('hide').addClass('fade show').css('display', 'block');
-
+            $('body').addClass('scrOff')
         });
+
         popupClose.on('click', function () {
             select.addClass('hide');
+            $('body').removeClass('scrOff')
             setTimeout(() => {
                 select.removeClass('fade show').css('display', 'none');
             }, 400);
         });
+
+     /*   if (select.hasClass('hide') === true){
+            $('body').removeClass('scrOff')
+        }
+*/
+
+
+
+
 
         /* 외부클릭시 삭제 */
         if($('._toast-popup._no-hide-dim').length == 0){
@@ -279,6 +293,7 @@ front.common = (function () {
                 let toastPopup = $('.toast-popup');
                 if (toastPopup.has(e.target).length === 0) {
                     $('.toast-dim').css('display', 'none');
+                    $('body').removeClass('scrOff')
                 }
             })
         }

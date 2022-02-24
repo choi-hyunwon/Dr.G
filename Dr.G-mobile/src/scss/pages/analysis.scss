@@ -130,6 +130,9 @@
           .btn-wrap{
             .btn-shooter{
               background: $violet;
+              border: 1px solid #727FFF;
+              box-sizing: border-box;
+              box-shadow: 0 4px 4px rgba(34, 34, 34, 0.12);
               .icon-camera {
                 @include background-img($width: 32, $height: 32, $category: 'analysis', $img: 'ico-camera.svg');
               }
@@ -682,11 +685,12 @@
             padding: vw(10) vw(10) vw(20);
             .img{
               width: vw(120);
-              height: vw(121);
+              height: vw(120);
               display: inline-block;
               border-radius: vw(12);
               overflow: hidden;
               margin-bottom: vw(12);
+              background: $gray-fff;
               img{
                 width: 100%;
                 height: auto;

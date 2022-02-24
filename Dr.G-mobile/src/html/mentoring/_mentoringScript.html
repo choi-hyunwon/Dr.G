@@ -24,6 +24,14 @@
         /*step1*/
         $('.asking .badge-box .badge').on('click', function () {
         $(this).toggleClass('active')
+
+            let input = $('.asking .badge-box').next('.etc-input')
+
+            if($(this).last().hasClass('active')){
+                input.addClass('show')
+            }else {
+                input.removeClass('show')
+            }
     })
 
         /*step2*/
@@ -73,13 +81,35 @@
                 $(this).addClass('_title');
                 $(this).parent().addClass('_unfold');
                 $(this).siblings().slideDown(200);
+                $(this).find('span').text('나의 피부고민 및 생활습관 접기')
             } else {
                 $(this).find('.icon').removeClass('ico-minus-sm').addClass('ico-plus-sm');
                 $(this).removeClass('_title');
                 $(this).parent().removeClass('_unfold');
                 $(this).siblings().slideUp(200);
+                $(this).find('span').text('나의 피부고민 및 생활습관 펼쳐보기')
             }
         })
+
+        /*스크롤 최하단 -후기팝업 노출*/
+        $(window).scroll(function(){
+            if($('.mentoring-wrap').hasClass('_reviewOpen')){
+                var scrollTop = $(window).scrollTop();
+                //console.log(scrollTop) //스크롤 값
+                if(scrollTop === $(document).height() - $(window).height()){
+                    //스크롤이 끝에 도달했을때 실행될 이벤트
+                    showPopup();
+                    $('body').addClass('scrOff')
+
+                }else{
+                    $('body').removeClass('scrOff')//아닐때 이벤트
+                }
+            }
+        });
+
+
+
+
 
         /*목록 tab*/
         let questionTab = $('._question-tab');
