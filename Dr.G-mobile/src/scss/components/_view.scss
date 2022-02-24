@@ -2,6 +2,7 @@
 |----------------------------------------------------------------------|
  v.0.1 선미 : 최초 작업 --- 2021.12.16
  v.0.2 주연 : .step-heading 수정  --- 2022.01.21
+ v.0.3 선미 : .footer-details btn 간격 수정  --- 2022.02.24
 |----------------------------------------------------------------------|
 */
 
@@ -190,6 +191,13 @@
               font-weight: bold;
             }
           }
+
+          +.etc-input{
+            display: none;
+            &.show{
+              display: block;
+            }
+          }
         }
 
         .font_right {
@@ -221,6 +229,8 @@
                 .num {
                   color: $gray-600;
                   margin-right: vw(4);
+                  font-family: Poppins, sans-serif;
+                  font-weight: 600;
                 }
               }
 
@@ -309,7 +319,7 @@
 
         span {
           vertical-align: middle;
-          margin-right: vw(6);
+          margin-right: vw(2);
         }
       }
 
@@ -367,6 +377,7 @@
               .num {
                 color: $gray-600;
                 margin-right: vw(4);
+                font-family: Poppins-Medium, sans-serif
               }
 
               .answer {
@@ -500,7 +511,7 @@
           font-weight: 400;
           color: $gray-600;
           display: block;
-          margin-bottom: vw(13);
+          margin-bottom: vw(8);
 
         }
 
@@ -667,13 +678,13 @@
 
   .footer-details {
     border-top: 1px solid $gray-400;
-    padding: 0 vw(20) 0;
+    padding:  vw(20);
 
     &.bg-dark {
       background-color: $gray-800 !important;
-      padding: vw(19.5);
 
       .page-btn-wrap {
+        padding: 0;
         a {
           color: $gray-fff;
           line-height: 1;
@@ -701,11 +712,15 @@
       position: relative;
       width: 100%;
       //height: vw(102);
-
+      display: flex;
+      justify-content: space-between;
+      padding-top: vw(12);
+      padding-bottom: vw(28);
+/*
       .btn-prev, .btn-next {
         position: absolute;
         top: vw(32);
-      }
+      }*/
 
       .btn-prev {
         left: 0;

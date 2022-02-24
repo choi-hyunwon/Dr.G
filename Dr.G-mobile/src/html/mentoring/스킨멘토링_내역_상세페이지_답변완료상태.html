@@ -6,7 +6,7 @@
 
     <!-- s contents -->
     <div class="container view-details">
-        <div class="mentoring-wrap">
+        <div class="mentoring-wrap _reviewOpen"> <!-- _reviewOpen 후기작성하기 팝업 호출-->
             <div class="header-details">
                 <a class="btn-prev" href="#"><i class="icon ico-nav-prev"></i></a>
                 <a href="#"><i class="icon ico-close"></i></a>
@@ -330,6 +330,46 @@
     <!-- s footer -->
 <!--    @@include('../../html/include/common/footer.html')-->
     <!-- e footer -->
+</div>
+
+<div class="toast-dim">
+    <div class="toast-popup _toast-popup">
+        <div class="toast-content grade">
+            <div class="toast-header">
+                <p class="title">후기 작성하기</p>
+                <a href="#" class="_toast-popup-close icon ico-close-sm"></a>
+            </div>
+            <div class="toast-body">
+                <div class="star-point-area">
+                    <div class="star-box">
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
+
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
+
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
+
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
+
+                        <span class="star star_left _star"></span>
+                        <span class="star star_right _star"></span>
+                    </div>
+                </div>
+
+                <textarea title="후기를 작성해주세요" class="form-control form-control-lg" placeholder=""></textarea>
+                <ul class="circle-list-area">
+                    <li><p>후기 작성 시 <span>적립금 500원</span> 지급(월 1회)</p></li>
+                    <li><p>월간 베스트 후기로 선정 시 <span>적립금 3,000원</span> 지급(월 3명)</p></li>
+                </ul>
+            </div>
+            <div class="toast-footer">
+                <a href="#" class="btn btn-lg btn-blue _toast-popup-close">등록</a>
+            </div>
+        </div>
+    </div>
 </div>
 @@include('./_mentoringScript.html')
 </body>

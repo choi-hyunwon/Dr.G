@@ -1,7 +1,7 @@
 .mentoring-wrap {
   .section-color {
     padding: vw(80) vw(0) vw(132);
-    margin-bottom: vw(80);
+    margin-bottom: vw(83);
     position: relative;
 
     .font-h1, .font-h3 {
@@ -11,8 +11,10 @@
 
     .floating-box {
       position: absolute;
-      bottom: vw(-32);
+      bottom: vw(-35);
       margin: 0 vw(24);
+      width: 87.2%;
+
 
       .item {
         background-color: $gray-fff;
@@ -21,21 +23,22 @@
         padding: vw(20);
 
         .badge {
-          margin-bottom: vw(3.5);
+          margin-bottom: vw(6);
         }
 
         .question {
           font-size: vw(15);
           line-height: vw(22);
           color: $gray-800;
-          margin-bottom: vw(5);
+          margin-bottom: vw(10);
+          @include ellipsis(2);
         }
 
         .date {
           font-size: vw(13);
           line-height: vw(18);
           color: $gray-600;
-          font-family: Poppins , sans-serif;
+          font-family: Poppins-Regular, sans-serif;
         }
       }
     }
@@ -180,6 +183,8 @@
   }
 
   .area-desc {
+
+    /*step4 완료*/
     .complete {
       .img-box{
         position: relative;
@@ -264,6 +269,10 @@
         padding-top: vw(6);
         color: $gray-600;
       }
+
+      .btn-wrap{
+        padding-bottom: vw(48);
+      }
     }
   }
 
@@ -320,7 +329,7 @@
         height: vw(206);
         background-size: 100% auto;
         position: absolute;
-        right: vw(36);
+        right: vw(30);
         bottom: vw(-14);
       }
 
@@ -372,6 +381,7 @@
 
           span {
             font-weight: 500;
+            line-height: 1;
             &.num {
               text-transform: uppercase;
               padding-right: vw(13);
@@ -386,7 +396,7 @@
                 background-color: $gray-fff;
                 position: absolute;
                 right: vw(6);
-                top: vw(3.5);
+                top: vw(4.5);
                 opacity: 0.3;
               }
             }
@@ -426,6 +436,9 @@
                   height: vw(120);
                   display: inline-block;
                   margin-bottom: vw(16);
+                  border-radius: vw(12);
+                  overflow: hidden;
+
 
                   img {
                     width: 100%;
