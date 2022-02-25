@@ -475,7 +475,7 @@
 
               .box {
                 position: relative;
-                max-height: 680px;
+                max-height: 616px;  /*헤더 높이 제외 680 -> 616*/
 
                 .list {
                   position: relative;
@@ -1116,7 +1116,7 @@
             }
 
             .propose-box{
-              padding: 30px 18px 0 30px;
+              padding: 30px 12px 0 30px;
               line-height: 1;
               .half-box{
                 display: flex;
@@ -1179,6 +1179,12 @@
                   display: block;
                   &:first-of-type{
                     margin-bottom: 9px;
+                  }
+                  label{
+                    >a{
+                      text-decoration: underline;
+                      font-weight: 500;
+                    }
                   }
                 }
                 .list-with-dot{

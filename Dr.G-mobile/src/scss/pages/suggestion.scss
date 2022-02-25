@@ -433,6 +433,7 @@
           }
 
           + .nav-link {
+            padding-left: vw(11);
             &::after {
               content: '';
               position: absolute;
@@ -516,6 +517,11 @@
 
           span {
             font-family: $poppins-semiBold;
+          }
+          .icon{
+            +span{
+              font-family: $font-family-bold;
+            }
           }
 
           .ico-bookmark {

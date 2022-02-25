@@ -40,10 +40,12 @@
                 $(this).find('.icon').removeClass('ico-plus-sm').addClass('ico-minus-sm');
                 $(this).addClass('_title');
                 $('.list-bg').slideDown(200);
+                $(this).find('span').text('나의 피부고민 및 생활습관 접기')
             } else {
                 $(this).find('.icon').removeClass('ico-minus-sm').addClass('ico-plus-sm');
                 $(this).removeClass('_title');
                 $('.list-bg').slideUp(200);
+                $(this).find('span').text('나의 피부고민 및 생활습관 펼쳐보기')
             }
         })
 
