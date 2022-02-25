@@ -264,22 +264,24 @@ body.scrOff {
         position: absolute;
 
         &.item-1 {
-          position: absolute;
           width: vw(48);
           left: vw(28);
           top: vw(18);
         }
 
         &.item-2 {
-          position: absolute;
-          width: vw(60);
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: vw(20);
+          width: vw(40);
+          left: vw(89);
+          bottom: vw(27);
         }
 
         &.item-3 {
-          position: absolute;
+          width: vw(60);
+          right: vw(76);
+          bottom: vw(27);
+        }
+
+        &.item-4 {
           width: vw(48);
           right: vw(28);
           top: vw(18);
@@ -308,10 +310,16 @@ body.scrOff {
         }
 
         .ico-menu-2 {
-          @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-menu-2.svg');
+          @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-home.svg');
+          transform: translateY(vw(-3));
         }
 
         .ico-menu-3 {
+          @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-menu-2.svg');
+          transform: translateY(vw(-3));
+        }
+
+        .ico-menu-4 {
           @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-menu-3.svg');
         }
       }
