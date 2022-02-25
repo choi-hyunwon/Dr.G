@@ -232,6 +232,11 @@ front.common = (function () {
         $body.on('click', function () {
             $('._selectBox').removeClass('down');
         });
+
+        /* brand 탭 */
+        if($('.brand-wrap').find('._tab').length) {
+            $('._tab li')
+        }
     }
 
     var tab = function () {
@@ -429,7 +434,16 @@ front.common = (function () {
                             var tabContentOffset = $('.tab-content').offset().top;
 
                             if (st > tabContentOffset) {
-                                console.log('1')
+                                // console.log('1')
+                                header.removeClass('scroll-down').addClass('scroll-up');
+                                $('._tab').addClass('fixed').css('top', '0')
+                            }
+                        }
+                        else if ($('.brand-wrap').find('._tab').length) {
+                            var tabContentOffset = $('.section-intro').offset().top;
+
+                            if (st > tabContentOffset) {
+                                // console.log('1')
                                 header.removeClass('scroll-down').addClass('scroll-up');
                                 $('._tab').addClass('fixed').css('top', '0')
                             }
@@ -447,10 +461,25 @@ front.common = (function () {
                         if ($('.inside-drg').find('._tab').length) {
                             var tabContentOffset = $('.tab-content').offset().top;
                             if (st < tabContentOffset) {
-                                console.log('2')
+                                // console.log('2')
                                 $('._tab').removeClass('fixed').css('top', 'auto')
                             } else {
-                                console.log('3')
+                                // console.log('3')
+                                $('._tab').addClass('fixed').css('top', headerHeight + 'px')
+                            }
+                            if (st < delta) {
+                                header.removeClass('scroll-down');
+                            } else {
+                                header.removeClass('scroll-up').addClass('scroll-down');
+                            }
+                        }
+                        else if ($('.brand-wrap').find('._tab').length) {
+                            var tabContentOffset = $('.section-intro').offset().top;
+                            if (st < tabContentOffset) {
+                                // console.log('2')
+                                $('._tab').removeClass('fixed').css('top', 'auto')
+                            } else {
+                                // console.log('3')
                                 $('._tab').addClass('fixed').css('top', headerHeight + 'px')
                             }
                             if (st < delta) {

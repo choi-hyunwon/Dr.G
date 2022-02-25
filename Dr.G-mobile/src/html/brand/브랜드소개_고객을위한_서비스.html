@@ -10,23 +10,37 @@
     <!-- s contents -->
     <div class="container">
         <div class="brand-wrap">
+            <div class="tab _tab">
+                <ul class="clearfix">
+                    <li class="item"><a class="font-ko" href="#">닥터지이야기</a></li>
+                    <li class="item"><a href="#">제조원칙</a></li>
+                    <li class="item active"><a href="#">고객을 위한 서비스</a></li>
+                    <li class="item"><a href="#">사회를 위한 공헌활동</a></li>
+                </ul>
+            </div>
 
             <div class="section-intro">
                 <div class="heading">
                     <div class="font-h1 font-poppins-semiBold">Dr.G Brand Story</div>
                 </div>
-                <div class="img">
-                    <img src="../../img/brand/img-product.svg" alt="건강한 피부를 위한 닥터지의 진심">
-                </div>
             </div>
-            <div class="section-area">
-                <div class="box">
-                    <div class="font-h3 font-bold title">피부를 건강하게 만드는 것으로 ‘화장(化粧)’에 대한 인식을 변화시켜 나가고자 하는 것입니다.</div>
-                    <div class="font-h6 desc">
-                        닥터지는 피부에 대한 깊이 있는 이해를 바탕으로 한 올바른 스킨케어를 지향합니다. 건강한 피부를 위해 피부 과학에 기반한 제품과 멘토링 서비스를 통해 올바른 제품,
-                        라이프스타일을 제안합니다.
+
+            <div class="drg-story">
+                <div class="drg-story__visual">
+                    <div class="item-img item-img--img2">
+                        <div>
+                            <strong>건강한 피부를 위한<br> 닥터지의 진심</strong>
+                        </div>
                     </div>
                 </div>
+                <div class="drg-story__txt">
+                    <span>닥터지의 목표는 얼굴을 예쁘게 꾸미는 것에서</span>
+                    <strong>피부를 건강하게 만드는 것으로<br> ‘화장(化粧)’에 대한 인식을 변화시켜<br> 나가고자 하는 것입니다.</strong>
+                    <p>닥터지는 피부에 대한 깊이 있는 이해를 바탕으로 한 올바른 스킨케어를 지향합니다. 피부를 건강하게 만들어주는 솔루션을 제공하기 위해, 사용자들에게 피부 과학에 기반한 제품과 함께 멘토링 서비스를 통해 올바른 제품, 스킨케어, 라이프스타일을 제안합니다.</p>
+                </div>
+            </div>
+
+            <div class="section-area">
                 <div class="box bg-box">
                     <div class="img">
                         <img src="../../img/brand/img-product2.svg" alt="건강한 피부를 위한 닥터지의 진심">
@@ -66,14 +80,27 @@
                     </div>
                 </div>
             </div>
-            <div class="section-quarter">
-                <ul>
-                    <li class="item"><a href="#"><span class="font-h6 font-bold">닥터지<br>이야기</span><i class="icon ico-plus-round"></i></a></li>
-                    <li class="item"><a href="#"><span class="font-h6 font-bold">제조원칙</span><i class="icon ico-plus-round"></i></a></li>
-                    <li class="item"><a href="#"><span class="font-h6 font-bold">고객을 위한<br>서비스</span><i class="icon ico-plus-round"></i></a></li>
-                    <li class="item"><a href="#"><span class="font-h6 font-bold">사회를 위한<br>공헌활동</span><i class="icon ico-plus-round"></i></a></li>
-                </ul>
+
+            <!-- --------------------------------------
+             # 하단 메뉴 배너
+            -------------------------------------- -->
+            <div class="drg-story__banner mt25">
+
+                <div onclick="location.href='/brand/intro/story';">
+                    <p>닥터지<br> 이야기</p>
+                </div>
+                <div onclick="location.href='/brand/intro/rule';">
+                    <p>제조원칙</p>
+                </div>
+                <div onclick="location.href='/brand/intro/service';">
+                    <p>고객을 위한<br> 서비스</p>
+                </div>
+                <div onclick="location.href='/brand/intro/contribute';">
+                    <p>사회를 위한<br> 공헌활동</p>
+                </div>
+
             </div>
+            <!-- // .drg-story__banner -->
         </div>
     </div>
     <!-- e contents -->
@@ -82,5 +109,10 @@
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
 </div>
+<script>
+    // 고객을 위한 서비스 탭이 활성화일 경우
+    var width = $('._tab li').eq(2).outerWidth(true);
+    $('._tab ul').animate( { scrollLeft: width + 60}, 400);
+</script>
 </body>
 </html>

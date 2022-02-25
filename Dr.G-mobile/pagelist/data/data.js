@@ -791,9 +791,57 @@ data.brand = {
     list: [
         {
             stateClass: 'complete',
+            url: '브랜드소개_닥터지이야기',
+            category: 'brand',
+            page: '브랜드소개_닥터지이야기'
+        },
+        {
+            stateClass: 'complete',
+            url: '브랜드소개_제조원칙',
+            category: 'brand',
+            page: '브랜드소개_제조원칙'
+        },
+        {
+            stateClass: 'complete',
             url: '브랜드소개_고객을위한_서비스',
             category: 'brand',
             page: '브랜드소개_고객을위한_서비스'
         },
+        {
+            stateClass: 'complete',
+            url: '브랜드소개_사회를위한_공헌활동',
+            category: 'brand',
+            page: '브랜드소개_사회를위한_공헌활동'
+        },
+    ]
+}
+
+data.event = {
+    title: '이벤트',
+    list: [
+        {
+            stateClass: 'complete',
+            url: '이벤트_진행중_이벤트',
+            category: 'event',
+            page: '이벤트_진행중_이벤트'
+        },
+        {
+            stateClass: 'complete',
+            url: '이벤트_당첨자_발표',
+            category: 'event',
+            page: '이벤트_당첨자_발표'
+        },
+        {
+            stateClass: 'complete',
+            url: '이벤트_종료된_이벤트',
+            category: 'event',
+            page: '이벤트_종료된_이벤트'
+        },
+        {
+            stateClass: 'complete',
+            url: '이벤트_무료_샘플_신청',
+            category: 'event',
+            page: '이벤트_무료_샘플_신청'
+        }
     ]
 }
