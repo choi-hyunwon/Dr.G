@@ -112,6 +112,12 @@ body {
     }
   }
 
+  .btn-menu {
+    .icon {
+      background-image: url(../img/common/ico-menu-white.svg);
+    }
+  }
+
   .btn-alert {
     position: relative;
 
@@ -223,16 +229,15 @@ body {
     }
   }
 
+  .btn-menu {
+    a {
+      display: block;
+    }
+  }
+
   &.header-transparent {
     background-color: transparent;
     position: absolute;
-
-    .brand-logo {
-      a {
-        background: url("../img/common/logo-white.svg") no-repeat 0 0;
-        background-size: 100% auto;
-      }
-    }
 
     .btn-alert {
       a {

@@ -28,6 +28,7 @@
  v.0.26 선미 : .ico-check-violet 추가 --2021.01.18
  v.0.27 선미 : .ico-minus-xs ,ico-plus-xs, ico-edit2 추가 --2021.01.21
  v.0.28 주연 : .ico-banner-close 추가 --2021.01.25
+ v.0.29 주연 : .ico-menu 추가 --2021.02.25
 |--------------------------------------------------------------------|
 */
 .icon {
@@ -306,7 +307,10 @@
   @include background-img($width: 28, $height: 21, $category: 'common', $img: 'ico-ai.png');
 }
 
-
 .ico-banner-close {
   @include background-img($width: 38, $height: 38, $category: 'common', $img: 'ico-banner-close.svg');
+}
+
+.ico-menu {
+  @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-menu.svg');
 }
