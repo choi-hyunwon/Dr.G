@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="event-wrap">
+            <div class="tab _tab">
+                <ul class="clearfix">
+                    <li class="item"><a class="font-ko" href="/event">진행중 이벤트</a></li>
+                    <li class="item active"><a href="/event/winner">당첨자 발표</a></li>
+                    <li class="item"><a href="/event?type=end">종료된 이벤트</a></li>
+                </ul>
+            </div>
+            <div class="event-contents">
+                <div class="event__wrap">
+                    <!-- 일반 콘텐츠 -->
+                    <div class="contents">
+                        <div class="board__uio">
+                            <div class="board__srch__bar">
+                                <fieldset>
+                                    <legend>당첨자 발표 검색</legend>
+                                    <span class="stx_uio x90">
+                                        <select name="" id="searchType">
+	                                        <option value="titleContent">제목 + 내용</option>
+	                                        <option value="title">제목</option>
+	                                        <option value="content">내용</option>
+                                    	</select>
+                                    </span>
+                                    <label class="itx_uio x205">
+                                        <form id="major" name="major" class="ng-pristine ng-valid">
+                                            <input type="text" name="titleContent" id="categorySearch" placeholder="검색어를 입력해주세요.">
+                                            <input type="hidden" id="pageNo" value="1" autocomplete="off">
+                                            <button type="submit" class="submit_srch"><i></i><span class="sound-only">검색</span></button>
+                                        </form>
+                                    </label>
+
+                                </fieldset>
+
+                            </div>
+                            <!-- /.board__srch__bar -->
+
+                            <div class="board__lst is-winners">
+
+                                <ul class="items" id="row-tmpl"><li class="itm"><p class="category">당첨자 발표</p><p class="date"></p><a href="/event/winner/866?pageNo=1&amp;categorySearch=" class="subject">NEW 그린 딥 포밍 스크럽 뷰티테스터 우수 리뷰 당첨자 발표</a></li><li class="itm"><p class="category">당첨자 발표</p><p class="date"></p><a href="/event/winner/863?pageNo=1&amp;categorySearch=" class="subject">1월 베스트 리뷰 당첨자 발표</a></li><li class="itm"><p class="category">당첨자 발표</p><p class="date">2021-12-14</p><a href="/event/winner/860?pageNo=1&amp;categorySearch=" class="subject">에이클리어 샘플링 리뷰 이벤트 당첨자 발표</a></li><li class="itm"><p class="category">당첨자 발표</p><p class="date">2022-01-13</p><a href="/event/winner/859?pageNo=1&amp;categorySearch=" class="subject">NEW 그린 딥 포밍 스크럽 뷰티테스터 당첨자 발표</a></li><li class="itm"><p class="category">당첨자 발표</p><p class="date"></p><a href="/event/winner/857?pageNo=1&amp;categorySearch=" class="subject">12월 에이클리어 리뷰이벤트 당첨자 발표</a></li><li class="itm"><p class="category">당첨자 발표</p><p class="date"></p><a href="/event/winner/852?pageNo=1&amp;categorySearch=" class="subject">12월 베스트 리뷰 당첨자 발표</a></li><li class="itm"><p class="category">당첨자 발표</p><p class="date">2022-01-03</p><a href="/event/winner/849?pageNo=1&amp;categorySearch=" class="subject">2021 바른피부 어워드 - 바른피부일상 당첨자 발표</a></li><li class="itm"><p class="category">당첨자 발표</p><p class="date"></p><a href="/event/winner/843?pageNo=1&amp;categorySearch=" class="subject">2021 멘토G 에이클리어 모의고사 이벤트 당첨자 발표</a></li><li class="itm"><p class="category">당첨자 발표</p><p class="date"></p><a href="/event/winner/842?pageNo=1&amp;categorySearch=" class="subject">NEW 에이클리어 스팟 큐어 패치 뷰티테스터 우수 리뷰 당첨자 발표</a></li><li class="itm"><p class="category">당첨자 발표</p><p class="date"></p><a href="/event/winner/835?pageNo=1&amp;categorySearch=" class="subject">NEW 에이클리어 스팟 포 페이스 세럼 뷰티테스터 우수 리뷰 당첨자 발표</a></li></ul>
+                                <ul class="items empty" style="display:none;">
+                                    <li class="nodata">
+                                        검색 결과가 없습니다.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="action">
+                                <button id="moreBtn" type="button" class="dbtn dbtn_lg dbtn-more-plus white full rds41">
+                                    <strong>
+                                        더보기
+                                    </strong>
+                                </button>
+                            </div>
+                            <!-- /.board_lst -->
+
+                        </div>
+                        <!-- // .board__uio -->
+
+                    </div>
+                    <!-- / .contents -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+</body>
+</html>

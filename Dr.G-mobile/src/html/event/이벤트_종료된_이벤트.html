@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="event-wrap">
+            <div class="tab _tab">
+                <ul class="clearfix">
+                    <li class="item"><a class="font-ko" href="/event">진행중 이벤트</a></li>
+                    <li class="item"><a href="/event/winner">당첨자 발표</a></li>
+                    <li class="item active"><a href="/event?type=end">종료된 이벤트</a></li>
+                </ul>
+            </div>
+            <div class="event-contents">
+                <div class="event__wrap">
+                    <!-- 일반 콘텐츠 -->
+                    <div class="contents">
+                        <form name="searchEventForm" class="ng-pristine ng-valid">
+                            <input type="hidden" id="pageNo" name="pageNo" value="2" autocomplete="off">
+                            <input type="hidden" id="type" name="type" value="end" autocomplete="off">
+                            <input type="hidden" id="etype" name="etype" value="all" autocomplete="off">
+                            <input type="hidden" id="rowsPerPage" name="rowsPerPage" value="6" autocomplete="off">
+                        </form>
+                        <div class="event_lists_wrap">
+
+                            <div class="event__list event__end__list">
+                                <div id="content-tmpl">
+                                    <div class="item"><a href="javascript:alert('종료된 이벤트입니다.');" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2022/202201/460bacf0-600f-46ae-bc57-86cdeaeb55ca/Mobile_banner.jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><span class="label label-event-end">이벤트 종료</span><p>Hello 2022! 닥터지 설 특별 기획전</p><p class="period"><span>당첨자 발표</span></p></a></div><div class="item"><a href="javascript:alert('종료된 이벤트입니다.');" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2021/202112/82c7457d-18ac-4833-b4f6-94e51705af59/Mobile_banner.jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><span class="label label-event-end">이벤트 종료</span><p>2021 멘토G 에이클리어 모의고사</p><p class="period"><span>당첨자 발표</span>2021-12-23</p></a></div><div class="item"><a href="javascript:alert('종료된 이벤트입니다.');" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2021/202112/57e57543-9634-47d8-9e78-8deac778a115/m_banner_20211124_aclear.jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><span class="label label-event-end">이벤트 종료</span><p>에이클리어 런칭기념 1만명 무료 샘플링 (마감)</p><p class="period"><span>당첨자 발표</span>2021-12-14</p></a></div><div class="item"><a href="javascript:alert('종료된 이벤트입니다.');" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2021/202111/5d00f273-bbe1-4658-a51f-624a7f80c61b/Mobile_banner.jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><span class="label label-event-end">이벤트 종료</span><p>2021 올리브영 어워즈 기념 한정수량 기획세트</p><p class="period"><span>당첨자 발표</span></p></a></div><div class="item"><a href="javascript:alert('종료된 이벤트입니다.');" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2021/202111/b803c297-93b4-45e0-8a0f-d0d42fcd8428/m_banner_20211124_aclear.jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><span class="label label-event-end">이벤트 종료</span><p>NEW 에이클리어 트러블 스팟 케어</p><p class="period"><span>당첨자 발표</span></p></a></div><div class="item"><a href="javascript:alert('종료된 이벤트입니다.');" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2021/202112/16fa2548-3f54-4c38-b6c1-9dab81e386b9/Mobile_banner.jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><span class="label label-event-end">이벤트 종료</span><p>2021 바른피부 어워드</p><p class="period"><span>당첨자 발표</span>2022-01-03</p></a></div></div>
+
+                                <div class="action">
+                                    <button type="button" id="moreBtn" class="dbtn dbtn_lg dbtn-more-plus white full rds41">
+                                        <strong>
+                                            더보기
+                                        </strong>
+                                    </button>
+                                </div>
+
+                            </div><!-- / .event__list -->
+
+                        </div>
+                        <!-- / .event_lists_wrap -->
+
+                    </div>
+                    <!-- / .contents -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+</body>
+</html>

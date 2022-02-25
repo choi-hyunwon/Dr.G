@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="event-wrap">
+            <div class="tab _tab">
+                <ul class="clearfix">
+                    <li class="item active"><a class="font-ko" href="/event">진행중 이벤트</a></li>
+                    <li class="item"><a href="/event/winner">당첨자 발표</a></li>
+                    <li class="item"><a href="/event?type=end">종료된 이벤트</a></li>
+                </ul>
+            </div>
+            <div class="event-contents">
+                <div class="event__wrap">
+                    <div class="tab__uio tab__uio_underline col-3 mb30">
+                        <a href="/event?type=ing" class="tab  active"><span>전체</span></a>
+                        <a href="/event?type=ing&amp;etype=prd" class="tab  "><span>기획전</span></a>
+                        <a href="/event?type=ing&amp;etype=event" class="tab  "><span>이벤트</span></a>
+                    </div>
+                    <!-- 일반 콘텐츠 -->
+                    <div class="contents">
+                        <form name="searchEventForm" class="ng-pristine ng-valid">
+                            <input type="hidden" id="pageNo" name="pageNo" value="2" autocomplete="off">
+                            <input type="hidden" id="type" name="type" value="ing" autocomplete="off">
+                            <input type="hidden" id="etype" name="etype" value="all" autocomplete="off">
+                            <input type="hidden" id="rowsPerPage" name="rowsPerPage" value="6" autocomplete="off">
+                        </form>
+                        <div class="event_lists_wrap">
+
+                            <div class="event__list ">
+                                <div id="content-tmpl">
+                                    <div class="item"><a href="/event/basic/84?type=ing&amp;etype=all" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2022/202202/39dca77b-5d85-4ced-992d-26a3bf1fadd0/Mobile_banner.jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"><span class="label"><strong>D-3</strong></span></figure><p>닥터지와 함께하는 민감두피 Refresh 클래스</p><p class="period">2022-02-18 ~ 2022-02-28</p></a></div><div class="item"><a href="/event/basic/81?type=ing&amp;etype=all" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2022/202202/13bdf6be-b330-4504-a647-1b92647ddced/Mobile_banner_(2).jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"><span class="label"><strong>D-1</strong></span></figure><p>나이스버디 선착순 2,000명 0원 이벤트</p><p class="period">2022-02-21 ~ 2022-02-27</p></a></div><div class="item"><a href="/event/basic/67?type=ing&amp;etype=all" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2022/202201/71c0e160-f81f-4468-bf96-56b5565de298/Mobile_banner.jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"><span class="label"><strong>D-33</strong></span></figure><p>송중기 배경화면으로 매일매일 만나요</p><p class="period">2022-01-26 ~ 2022-03-31</p></a></div><div class="item"><a href="/event/basic/68?type=ing&amp;etype=all" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2022/202202/1ebc75de-4449-4d93-8444-ced6a18b9554/Mobile_banner.jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"><span class="label"><strong>D-34</strong></span></figure><p>러블리 보현 PICK! 레드 블레미쉬 포맨</p><p class="period">2022-02-15 ~ 2022-03-31</p></a></div><div class="item"><a href="/event/basic/69?type=ing&amp;etype=all" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2022/202202/83d205fb-6e38-4c10-b8ff-d013a70a3f9d/m_banner.jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"><span class="label"><strong>D-2</strong></span></figure><p>두피랩 뷰티테스터 모집</p><p class="period">2022-02-19 ~ 2022-02-28</p></a></div><div class="item"><a href="/event/basic/72?type=ing&amp;etype=all" class="anchor"><figure><img src="https://fs.dr-g.co.kr/event/2022/202202/daa7638b-4582-4c05-b3b9-a854fb00820a/Mobile_banner_(1).jpg" alt="" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"><span class="label"><strong>D-4</strong></span></figure><p>탄력 붙는 로얄 블랙 스네일</p><p class="period">2022-02-03 ~ 2022-03-02</p></a></div></div>
+
+                                <div class="action">
+                                    <button type="button" id="moreBtn" class="dbtn dbtn_lg dbtn-more-plus white full rds41">
+                                        <strong>
+                                            더보기
+                                        </strong>
+                                    </button>
+                                </div>
+
+                            </div><!-- / .event__list -->
+
+                        </div>
+                        <!-- / .event_lists_wrap -->
+
+                    </div>
+                    <!-- / .contents -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+</body>
+</html>

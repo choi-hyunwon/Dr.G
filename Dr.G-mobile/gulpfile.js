@@ -48,6 +48,7 @@ function copyLibJs() {
         'src/js/lib/lazyload.js',
         'src/js/lib/lottie.js',
         'src/js/lib/TweenMax.js',
+        'src/js/lib/imageMapResizer.min.js',
     ];
 
     return gulp.src(sourceLib)

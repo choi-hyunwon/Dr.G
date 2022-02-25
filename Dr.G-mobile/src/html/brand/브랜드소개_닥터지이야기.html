@@ -393,7 +393,9 @@
 
     // 북이미지 더보기 이벤트
     $('.btn-more-expand').each(function (){
-        $(this).on('click',function (){
+        $(this).on('click',function (e){
+            e.preventDefault();
+
             var $tgl = $(this);
             var $tgt = $($tgl.attr('href'));
             var cond = $tgl.hasClass('on');

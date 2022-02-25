@@ -833,15 +833,21 @@ data.event = {
         },
         {
             stateClass: 'complete',
+            url: '이벤트_당첨자_발표_상세',
+            category: 'event',
+            page: '이벤트_당첨자_발표_상세'
+        },
+        {
+            stateClass: 'complete',
             url: '이벤트_종료된_이벤트',
             category: 'event',
             page: '이벤트_종료된_이벤트'
         },
         {
             stateClass: 'complete',
-            url: '이벤트_무료_샘플_신청',
+            url: '이벤트_이벤트_상세',
             category: 'event',
-            page: '이벤트_무료_샘플_신청'
+            page: '이벤트_이벤트_상세'
         }
     ]
 }
