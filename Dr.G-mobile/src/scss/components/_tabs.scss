@@ -72,17 +72,18 @@
 
     ul {
       white-space: nowrap;
+      overflow-y: scroll;
 
       li {
         display: inline-block;
         float: unset;
 
         &:first-of-type {
-          margin-left: vw(24);
+          padding-left: vw(24);
         }
 
         &:last-of-type {
-          margin-right: vw(24);
+          padding-right: vw(24);
         }
       }
     }

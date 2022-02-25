@@ -1568,10 +1568,6 @@
                   position: relative;
                   padding-left: 60px;
 
-                  .badge {
-                    margin-right: 25px;
-                  }
-
                   &::before {
                     content: '';
                     position: absolute;
@@ -1590,7 +1586,7 @@
                   font-size: 15px;
                   line-height: 34px;
                   border-radius: 100px;
-                  margin-right: 40px;
+                  margin-right: 20px;
                 }
 
                 .list-with-dot {
@@ -4019,11 +4015,15 @@
                       -webkit-animation-name: scanAni;
                       animation-duration: 2s;
                       -webkit-animation-duration: 2s;
+
                       animation-timing-function: linear;
                       -webkit-animation-timing-function: linear;
                       animation-iteration-count: infinite;
-                      -webkit-animation-iteration-count: infinite;
+                      animation-delay: .8s;
+                      -webkit-animation-delay: .8s;
+                      -webkit-animation-iteration-count: 2;
                       animation-direction: alternate;
+                      animation-fill-mode: forwards;
                       -webkit-animation-direction: alternate;
 
                       //&::after {

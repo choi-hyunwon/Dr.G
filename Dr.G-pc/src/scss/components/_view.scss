@@ -36,6 +36,7 @@
           .like {
             margin-right: 10px;
             position: relative;
+            display: inline-block;
 
             .icon {
               width: 16px;
@@ -150,6 +151,7 @@
 
       > p {
         color: $gray-600;
+        font-weight: 500;
       }
 
       .more {
@@ -216,8 +218,6 @@
         padding: 0
       }
     }
-
-
   }
 
   /*멘토링 - 생활습관 펼쳐보기*/
@@ -600,17 +600,14 @@
         }
       }
     }
-
-    + .footer-details {
-      width: 900px;
-      margin: 0 auto;
-    }
   }
 
 
   .footer-details {
     border-top: 1px solid $gray-400;
     padding: vw(32) vw(20) 240px;
+    width: 900px;
+    margin: 0 auto;
 
     &.bg-dark {
       background-color: $gray-800 !important;
@@ -633,6 +630,8 @@
       }
     }
   }
+
+
 
 
   /* 성분분석 */

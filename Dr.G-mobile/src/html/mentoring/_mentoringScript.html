@@ -27,10 +27,11 @@
 
             let input = $('.asking .badge-box').next('.etc-input')
 
+            input.hide()
             if($(this).last().hasClass('active')){
-                input.addClass('show')
+                input.show()
             }else {
-                input.removeClass('show')
+                input.hide()
             }
     })
 

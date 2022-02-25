@@ -199,6 +199,10 @@
               font-weight: bold;
             }
           }
+          +.etc-input{
+            display: none;
+          }
+
         }
 
         .font_right {
@@ -230,8 +234,7 @@
                 .num {
                   color: $gray-600;
                   margin-right: vw(4);
-                  font-family: Poppins, sans-serif;
-                  font-weight: 600;
+                  font-family: $poppins-semiBold;
                 }
               }
 

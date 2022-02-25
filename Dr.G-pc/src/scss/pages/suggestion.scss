@@ -466,6 +466,7 @@
           }
 
           + .nav-link {
+            padding-left: 11px;
             &::after {
               content: '';
               position: absolute;
@@ -509,11 +510,10 @@
           }
 
           .link {
-            .num {
-              color: $primary;
-            }
-
             &.on {
+              .num {
+                color: $primary;
+              }
               .ico-like {
                 background-image: url(../img/common/ico-link-foc2.svg);
               }
