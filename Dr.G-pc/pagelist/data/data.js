@@ -677,9 +677,9 @@ data.brand = {
     list: [
         {
             stateClass: 'complete',
-            url: '브랜드소개_고객을위한_닥터지이야기',
+            url: '브랜드소개_닥터지이야기',
             category: 'brand',
-            page: '브랜드소개_고객을위한_닥터지이야기'
+            page: '브랜드소개_닥터지이야기'
         },
         {
             stateClass: 'complete',

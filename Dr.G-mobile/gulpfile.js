@@ -47,6 +47,7 @@ function copyLibJs() {
         'src/js/lib/jquery.waypoints.js',
         'src/js/lib/lazyload.js',
         'src/js/lib/lottie.js',
+        'src/js/lib/TweenMax.js',
     ];
 
     return gulp.src(sourceLib)
