@@ -113,25 +113,25 @@
 
       &:nth-of-type(1) {
         .icon {
-          background: url("../img/mentoring/ico-step1.svg") no-repeat center center / 100% 100%;
+          background: url("../img/mentoring/ico-step1.png") no-repeat center center / 100% 100%;
         }
       }
 
       &:nth-of-type(2) {
         .icon {
-          background: url("../img/mentoring/ico-step2.svg") no-repeat center center / 100% 100%;
+          background: url("../img/mentoring/ico-step2.png") no-repeat center center / 100% 100%;
         }
       }
 
       &:nth-of-type(3) {
         .icon {
-          background: url("../img/mentoring/ico-step3.svg") no-repeat center center / 100% 100%;
+          background: url("../img/mentoring/ico-step3.png") no-repeat center center / 100% 100%;
         }
       }
 
       &:nth-of-type(4) {
         .icon {
-          background: url("../img/mentoring/ico-step4.svg") no-repeat center center / 100% 100%;
+          background: url("../img/mentoring/ico-step4.png") no-repeat center center / 100% 100%;
         }
 
         &:before {
@@ -206,35 +206,33 @@
         }
 
         .icon {
-          width: 52px;
-          height: 52px;
           position: absolute;
-          bottom: 13px;
+          bottom: 0;
           left: 50%;
           transform: translateX(-50%);
         }
 
         &:nth-of-type(1) {
           .icon {
-            background: url("../img/mentoring/ico-step1-active.svg") no-repeat center center / 100% 100%;
+            background: url("../img/mentoring/ico-step1-active.png") no-repeat center center / 100% 100%;
           }
         }
 
         &:nth-of-type(2) {
           .icon {
-            background: url("../img/mentoring/ico-step2-active.svg") no-repeat center center / 100% 100%;
+            background: url("../img/mentoring/ico-step2-active.png") no-repeat center center / 100% 100%;
           }
         }
 
         &:nth-of-type(3) {
           .icon {
-            background: url("../img/mentoring/ico-step3-active.svg") no-repeat center center / 100% 100%;
+            background: url("../img/mentoring/ico-step3-active.png") no-repeat center center / 100% 100%;
           }
         }
 
         &:nth-of-type(4) {
           .icon {
-            background: url("../img/mentoring/ico-step4-active.svg") no-repeat center center / 100% 100%;
+            background: url("../img/mentoring/ico-step4-active.png") no-repeat center center / 100% 100%;
           }
         }
 
@@ -250,6 +248,10 @@
   .guidance {
     margin-bottom: 60px;
 
+    &.step4{
+      margin-bottom: 50px;
+    }
+
     .sub-desc {
       padding-top: 12px;
       color: $gray-600;
@@ -260,7 +262,7 @@
   /*step1,2  질문 영역*/
   .asking {
     .box {
-      .font-h6 {
+      .font-h5 {
         color: $gray-800;
         display: inline-block;
         width: 230px;
@@ -282,7 +284,7 @@
 
       .badge-box {
         .badge {
-          margin-right: 12px;
+          margin-right: 8px;
           margin-bottom: 20px;
           background-color: $gray-300;
           color: $gray-800;
@@ -331,7 +333,9 @@
 
             .num {
               color: $gray-600;
-              margin-right: vw(4);
+              margin-right: 4px;
+              font-family: $poppins;
+              font-weight: 600;
             }
           }
 
@@ -372,9 +376,9 @@
 
     .font_right {
       text-align: right;
-      padding-top: vw(20);
+      padding-top: 12px;
       font-weight: bold;
-      font-size: vw(18);
+      font-size: 18px;
       color: $gray-800;
     }
 
@@ -386,7 +390,14 @@
       font-weight: bold;
       background-color: $gray-fff;
       margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      .icon{
+        margin-right: 3px;
+      }
     }
+
     .list-with-dot {
       margin-bottom: 8px;
       &:last-of-type {
@@ -607,6 +618,7 @@
               .num {
                 font-weight: 600;
                 color: $blue;
+                font-family: $poppins-semiBold;
               }
               &:after {
                 content: '';
@@ -624,9 +636,11 @@
             &.complete {
               width: unset;
               padding-left: 4px;
+              color: $gray-700;
               .num {
                 font-weight: 600;
                 color: $gray-900;
+                font-family: $poppins-semiBold;
               }
             }
           }
@@ -654,6 +668,8 @@
                 font-size: 16px;
                 line-height: 24px;
                 color: $gray-800;
+                width: 949px;
+
               }
             }
             .date {

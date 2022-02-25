@@ -646,6 +646,15 @@
 
     }
 
+    .section-tab{
+      border-bottom: 0;
+
+      &.fixed{
+       border-bottom: none;
+      }
+
+    }
+
     .section-about {
       background-color: #edf8ff;
       text-align: center;
