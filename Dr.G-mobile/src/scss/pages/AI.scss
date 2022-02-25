@@ -26,13 +26,15 @@
 
   /* 피부분석 step */
   .intro {
+    background-color: $gray-200;
+
     .heading {
       display: block;
-      padding: 0 vw(24);
-      margin-bottom: vw(24);
+      padding: 0 vw(24) vw(24);
       margin-top: vw(21);
       opacity: 1;
       transition: .2s;
+      background-color: #fff;
 
       .font-body-2 {
         display: inline-block;
@@ -332,11 +334,12 @@
       background-color: #fff;
       padding: 0 vw(24);
       margin-bottom: vw(20);
+      margin-top: vw(-4);
 
       .step-list {
         position: relative;
         width: 100%;
-        margin-top: vw(20);
+        padding: 0 0 vw(20);
 
         .progress {
           position: absolute;
@@ -444,8 +447,11 @@
         left: 0;
         background-color: #fff;
         z-index: 5;
+        margin-top: 0;
 
         .step-list {
+          padding: vw(20) 0 0;
+
           .progress {
             width: calc(100% - #{vw(52)});
             top: auto;

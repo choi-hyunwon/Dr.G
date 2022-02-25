@@ -338,7 +338,7 @@
         position: absolute;
         right: 0;
         top: vw(174);
-        transition: 1.2s;
+        transition: transform 1.2s;
         transform: translateX(910%);
         z-index: 3;
         opacity: 0;
