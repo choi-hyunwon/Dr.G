@@ -319,7 +319,7 @@
 
   .itx_uio {position:relative;display:inline-block;}
   .itx_uio form {width:inherit;}
-  .itx_uio input[type=text] {position:relative;width:inherit;font-size:3.2vw;height:7.46666667vw;line-height:7.46666667vw;letter-spacing:0.64vw;box-sizing:border-box;font-weight:bold;font-stretch:normal;font-style:normal;text-align:left;color:#333;border-bottom:2px solid #000;outline:none;}
+  .itx_uio input[type=text] {border-radius:0; border-left:0; border-right:0;position:relative;width:inherit;font-size:3.2vw;height:7.46666667vw;line-height:7.46666667vw;letter-spacing:0.64vw;box-sizing:border-box;font-weight:bold;font-stretch:normal;font-style:normal;text-align:left;color:#333;border-bottom:2px solid #000;outline:none;}
   .itx_uio .submit_srch {padding-top:1.33333333vw;position:absolute;right:0;top:0;}
   .itx_uio .submit_srch i {display:block;width:4.24vw;height:4.29333333vw;background:url('../img/event/icon_srch.svg') no-repeat 50%;background-size:contain;}
   .itx {display:inline-block;}
