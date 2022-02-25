@@ -4,6 +4,7 @@
  v.0.2 선미 : select-box 여백 및 border 색상 수정 -- 2022.02.04
  v.0.3 선미 : s-select-box > .on > a 색상 카테고리별 분류 / divider 추가 -- 2022.02.07
  v.0.4 선미 : .list-with-dot 추가 -- 2022.02.08
+ v.0.5 선미 : .list-with-dot 간격수정, more-box 화살표 제거 -- 2022.02.25
 |--------------------------------------------------------------------|
 */
 .list-with-dot {
@@ -12,7 +13,7 @@
     font-size: 13px;
     line-height: 18px;
     color: $gray-600;
-    padding-left: 8px;
+    padding-left: 11px;
     margin-bottom: 8px;
 
     &:last-child {

@@ -8,6 +8,7 @@
  v.0.6 주연 : more-box 수정 -- 2022.01.24
  v.0.7 선미 : body.scrOff > touch-action 제거 -- 2022.02.11
  v.0.8 주연 : s-select-box 추가 -- 2022.02.16
+
 |--------------------------------------------------------------------|
 */
 .list-with-dot {
@@ -160,7 +161,7 @@ body.scrOff {
       }
     }
 
-    &:before {
+   /* &:before {
       content: '';
       display: inline-block;
       position: absolute;
@@ -170,7 +171,7 @@ body.scrOff {
       top: vw(-68);
       left: 50%;
       transform: translateX(-50%);
-    }
+    }*/
   }
 
   &.show {
