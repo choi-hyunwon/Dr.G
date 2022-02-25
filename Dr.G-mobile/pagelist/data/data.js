@@ -845,9 +845,9 @@ data.event = {
         },
         {
             stateClass: 'complete',
-            url: '이벤트_이벤트_상세',
+            url: '이벤트_상세',
             category: 'event',
-            page: '이벤트_이벤트_상세'
+            page: '이벤트_상세'
         }
     ]
 }

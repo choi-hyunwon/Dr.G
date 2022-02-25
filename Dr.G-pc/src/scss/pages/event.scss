@@ -1,5 +1,6 @@
-
 .event-wrap {
+  padding-bottom: 240px;
+
   /* custom */
   .tab {
     text-transform: none;
@@ -388,6 +389,13 @@
   .dbtn.purple {background:#6b389d;color:#fff;}
   .dbtn.purple:hover {background:#A662D8;}
 
+  .dbtn-more-plus {font-size:14px;font-weight:bold;font-stretch:normal;font-style:normal;letter-spacing:2.8px;text-align:left;color:#333;width:89px;height:37px;}
+  .dbtn-more-plus:hover {color:#333;}
+  .dbtn-more-plus span {position:relative;display:block;width:100%;height:inherit;line-height:37px;}
+  .dbtn-more-plus span:before,
+  .dbtn-more-plus span:after {content:'';display:block;position:absolute;}
+  .dbtn-more-plus span:before {font-family:xeicon;content:'\e914';right:0;top:0;font-size:20px;width:12px;height:12px;top:12px;line-height:12px;text-indent:-4px;text-align:left;}
+  .dbtn-more-plus span:after {width:100%;height:2px;background-color:#222;bottom:0;left:0;overflow:hidden;}
   /** ----------------------------------------
   * ## BEST / NEW 라벨
   * ---------------------------------------- */
@@ -405,8 +413,42 @@
   .goods_lists_wrap .paging_typeA.mg_b30 {margin-top:100px;}
   .detail__desc img, .evt_wrap img{vertical-align:top;}
 
+  .module_action {font-size:0;}
+  .module_action_t1 {text-align:center;}
+  .module_action_t1 .dbtn {width:120px;border-radius:41px;}
+  .module_action_t1 .dbtn + .dbtn {margin-left:10px;}
+  .module_action_t2 {text-align:right;}
+  .module_action_t2 .dbtn {width:80px;}
+  .module_action_t2 .dbtn:first-child {background-image:url('../imgs/uio/ico_basket.svg');background-repeat:no-repeat;background-position:50% 50%;background-size:19px 22px;}
+  .module_action_t2 .dbtn:first-child span {position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);}
+  .module_action_t2 .dbtn + .dbtn {width:120px;}
+  .module_action_t3 {text-align:center;}
+  .module_action_t3 .dbtn {width:120px;}
+
+  /** ---------------------------------------------
+   * # icon
+   * ----------------------------------------------*/
+  .dbtn, button, [type="button"], [type="reset"], [type="submit"] {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: button;
+    outline: none;
+    cursor: pointer;
+    line-height: 1;
+    box-sizing: border-box;
+  }
+
+  .shares button {width:30px;height:30px;display:inline-block;border-radius:5px;overflow:hidden;margin:0 6px;}
+  .shares button .ico{width:30px;height:30px;display:block;}
+  .shares button.fb .ico {background:url('../img/event/icon_ico_fb.png') no-repeat 50%;}
+  .shares button.kt .ico {background:url('../img/event/icon_ico_kt.png') no-repeat 50%;}
+  .shares button.ur .ico {background:url('../img/event/icon_ico_ur.png') no-repeat 50%;}
+
+
   /* event */
-  .event__wrap {padding-bottom:160px;}
+  //.event__wrap {padding-bottom:160px;}
   .event__wrap .column .conts hgroup {margin-bottom:0;}
   .event__wrap .tab-wrap {padding-bottom:40px;}
   .event__wrap .tab-wrap + .conts {margin-top:20px;}
@@ -460,7 +502,7 @@
   .event__list.col3 .item:nth-of-type(3n-2) {margin-left:0;}
   .event__list .action {text-align:center;}
   .event__list .dbtn-more-plus {width:160px;height:40px;line-height:38px;border-radius:41px;border:1px solid #eaeaea;color:#333;letter-spacing:-0.7px;text-align:center;background-color: transparent;}
-  .event__list .dbtn-more-plus span {line-height:40px;/*padding-left:20px;*/box-sizing:border-box;font-size: 12px}
+  .event__list .dbtn-more-plus span {line-height:40px;padding-left:20px;box-sizing:border-box;font-size: 12px}
   .event__list .dbtn-more-plus span:before {top:14px;left:52px;right:auto;}
   .event__list .dbtn-more-plus span:after {display:none;}
   .event-view-wrap {margin-bottom:60px;}
@@ -600,7 +642,4 @@
   .exec_sample .sample_container .sect .actions .dbtn + .dbtn {margin-left:10px;}
   .exec_sample .sample_container .sect p {font-size:24px;font-weight:500;font-stretch:normal;font-style:normal;line-height:36px;letter-spacing:-0.6px;text-align:left;color:#333;}
   .exec_sample .sample_container .sect p .eng {font-family:$poppins;}
-  @media all and (max-width:1599px) {
-    .event__wrap {padding-bottom:230px;}
-  }
 }
