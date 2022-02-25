@@ -3109,6 +3109,12 @@
                     height: auto;
                     margin: 0 auto;
 
+                    &:nth-child(2) {
+                      img {
+                        margin-top: -7px;
+                      }
+                    }
+
                     img {
                       width: 100%;
                       height: auto;

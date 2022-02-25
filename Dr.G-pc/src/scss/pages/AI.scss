@@ -3320,6 +3320,12 @@
                 height: auto;
                 margin: 0 auto;
 
+                &:nth-child(2) {
+                  img {
+                    margin-top: -10px;
+                  }
+                }
+
                 img {
                   width: 100%;
                   height: auto;
