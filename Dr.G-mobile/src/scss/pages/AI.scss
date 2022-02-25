@@ -1125,7 +1125,7 @@
       }
 
       .bar-chart-box {
-        padding: vw(76) vw(24) vw(76);
+        padding: vw(76) vw(24) vw(65);
 
         .font-h2 {
           margin-bottom: vw(47);
@@ -1270,7 +1270,7 @@
       }
 
       .line-chart-box {
-        padding: vw(58) 0 0;
+        padding: vw(76) 0 0;
 
         > .font-h2 {
           margin-bottom: vw(12);
@@ -1378,6 +1378,17 @@
           &:last-child {
             margin-right: 0;
           }
+        }
+      }
+
+      .btn-wrap {
+        padding: 0 vw(24);
+
+        .btn-inner {
+          display: flex;
+          justify-content: center;
+          border-bottom: vw(1) solid $gray-300;
+          padding-bottom: vw(76);
         }
       }
 
