@@ -143,8 +143,10 @@
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          top: vw(-18);
-          width: vw(732);
+          top: 0;
+          width: vw(273);
+          //top: vw(-18);
+          //width: vw(732);
         }
       }
     }
