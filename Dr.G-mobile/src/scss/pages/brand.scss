@@ -35,6 +35,31 @@
     }
   }
 
+  .more__uio {
+    &.expand {
+      button {
+        i {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    dt {
+      button {
+        padding-left: 0 !important;
+
+        i {
+          transition: .3s;
+          margin-right: 0 !important;
+        }
+
+        strong {
+          margin-left: 2vw !important;
+        }
+      }
+    }
+  }
+
   .section-intro {
     .heading {
       padding: 0 vw(24) vw(24);
