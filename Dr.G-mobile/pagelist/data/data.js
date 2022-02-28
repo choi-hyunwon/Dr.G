@@ -338,6 +338,18 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_Loading'
         },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_개인정보_활용동의_팝업_회원',
+            category: 'AI',
+            page: 'Ai피부분석_개인정보_활용동의_팝업_회원'
+        },
+        {
+            stateClass: 'complete',
+            url: 'Ai피부분석_개인정보_활용동의_팝업_비회원',
+            category: 'AI',
+            page: 'Ai피부분석_개인정보_활용동의_팝업_비회원'
+        },
     ]
 }
 
@@ -596,6 +608,18 @@ data.analysis = {
             category: 'analysis',
             page: '성분분석_수정요청_입력란_완료팝업'
         },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_개인정보_활용동의_팝업_회원',
+            category: 'analysis',
+            page: '성분분석_개인정보_활용동의_팝업_회원'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_개인정보_활용동의_팝업_비회원',
+            category: 'analysis',
+            page: '성분분석_개인정보_활용동의_팝업_비회원'
+        },
     ]
 }
 
@@ -692,6 +716,18 @@ data.suggestion = {
             category: 'suggestion',
             page: '고객제안_의견남기기_유형선택'
         },
+        {
+            stateClass: 'complete',
+            url: '고객제안_개인정보_활용동의_팝업_회원',
+            category: 'suggestion',
+            page: '고객제안_개인정보_활용동의_팝업_회원'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_개인정보_활용동의_팝업_비회원',
+            category: 'suggestion',
+            page: '고객제안_개인정보_활용동의_팝업_비회원'
+        },
     ]
 }
 
@@ -728,6 +764,12 @@ data.freesample = {
             url: '무료샘플신청_무료샘플신청팝업_솔드아웃',
             category: 'freesample',
             page: '무료샘플신청_무료샘플신청팝업_솔드아웃'
+        },
+        {
+            stateClass: 'complete',
+            url: '무료샘플신청_개인정보_활용동의_팝업',
+            category: 'freesample',
+            page: '무료샘플신청_개인정보_활용동의_팝업'
         },
     ]
 }

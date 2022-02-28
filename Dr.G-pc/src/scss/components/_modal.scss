@@ -115,6 +115,7 @@
   }
 
   .popup {
+
     .popup-content {
       width: 100%;
       max-width: 400px;
@@ -1208,5 +1209,60 @@
         }
       }
     }
+  }
+
+
+  /*개인정보처리방침 공통사용*/
+  &.privacy-policy{
+
+    .popup-content{
+      padding: 0;
+      overflow: hidden;
+      max-width: 600px;
+      max-height: 680px;
+      .popup-header {
+        padding: 20px;
+        margin-bottom: 0;
+        height: 64px;
+      }
+
+      .popup-body{
+        max-height: calc(680px - 64px);
+        padding: 0;
+        .policy-wrap{
+          .heading{
+            padding: 0 30px 30px;
+          }
+          .area-desc{
+            padding:30px 38px 40px 30px;
+          }
+        }
+        .step{
+          margin-bottom: 30px;
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+
+          .font-h6{
+            margin-bottom: 12px;
+            color: $gray-800;
+          }
+          .font-body-2{
+            color: $gray-700;
+          }
+          .list-with-dot{
+            li{
+              margin-bottom: 0;
+              color: $gray-700;
+              font-size: 15px;
+              line-height: 22px;
+            }
+          }
+
+        }
+      }
+
+    }
+
   }
 }

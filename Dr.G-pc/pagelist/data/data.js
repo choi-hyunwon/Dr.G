@@ -458,6 +458,18 @@ data.analysis = {
             category: 'analysis',
             page: '성분분석_수정요청_초기화얼럿'
         },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_개인정보_활용동의_팝업_회원',
+            category: 'analysis',
+            page: '성분분석_개인정보_활용동의_팝업_회원'
+        },
+        {
+            stateClass: 'waiting',
+            url: '성분분석_개인정보_활용동의_팝업_비회원',
+            category: 'analysis',
+            page: '성분분석_개인정보_활용동의_팝업_비회원'
+        },
     ]
 }
 
@@ -560,6 +572,18 @@ data.suggestion = {
             category: 'suggestion',
             page: '고객제안_의견남기기_얼럿팝업2(첨부파일갯수초과)'
         },
+        {
+            stateClass: 'complete',
+            url: '고객제안_개인정보_활용동의_팝업_회원',
+            category: 'suggestion',
+            page: '고객제안_개인정보_활용동의_팝업_회원'
+        },
+        {
+            stateClass: 'complete',
+            url: '고객제안_개인정보_활용동의_팝업_비회원',
+            category: 'suggestion',
+            page: '고객제안_개인정보_활용동의_팝업_비회원'
+        },
         // {
         //     stateClass: 'complete',
         //     url: '고객제안_의견남기기_유형선택',
@@ -602,6 +626,12 @@ data.freesample = {
             url: '무료샘플신청_무료샘플신청페이지_수정',
             category: 'freesample',
             page: '무료샘플신청_무료샘플신청페이지_수정'
+        },
+        {
+            stateClass: 'complete',
+            url: '무료샘플신청_개인정보_활용동의_팝업',
+            category: 'freesample',
+            page: '무료샘플신청_개인정보_활용동의_팝업'
         },
     ]
 }

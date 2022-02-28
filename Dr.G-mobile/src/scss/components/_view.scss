@@ -1075,4 +1075,37 @@
     }
 
   }
+
+  /*개인정보 수집 및 이용 동의 공통*/
+  .privacy-policy{
+    padding: vw(20) vw(24);
+    .step{
+      margin-bottom: vw(32);
+      >div{
+        margin-bottom: vw(12);
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+
+      .font-h3{
+        color: $gray-900;
+      }
+      .font-body-1{
+        color: $gray-800;
+        &.desc{
+          color: $gray-700;
+        }
+      }
+      .list-with-dot{
+        li{
+          margin-bottom: 0;
+          font-size: vw(15);
+          line-height: vw(22);
+          color: $gray-700;
+        }
+      }
+    }
+
+  }
 }
