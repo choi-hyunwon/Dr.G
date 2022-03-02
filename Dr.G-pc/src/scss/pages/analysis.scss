@@ -734,20 +734,20 @@
 
         .item {
           width: 100%;
-          display: flex;
           background-color: #fff;
           border-radius: 16px;
-          padding: 30px 0;
+          padding: 40px 60px;
 
           + .item {
             margin-top: 24px;
           }
 
+          &:last-of-type{ /*뱃지 영역 패딩 조절*/
+           padding-bottom: 20px;
+          }
+
           .question {
-            display: flex;
-            align-items: center;
-            width: 506px;
-            padding-left: 60px;
+            margin-bottom: 20px;
 
             .num {
               font-family: $poppins-semiBold;
@@ -767,10 +767,6 @@
           }
 
           .answer {
-            display: flex;
-            align-items: center;
-            width: calc(100% - 506px);
-
             ul {
               display: flex;
               align-items: center;
@@ -788,22 +784,29 @@
                 &.active {
                   border: 1px solid $violet;
                   background-color: $violet;
-
-                  a {
-                    color: #fff;
-                  }
+                  color: #fff;
+                  font-size: 15px;
+                  line-height: 22px;
+                  letter-spacing: -0.005em;
                 }
 
                 + li {
                   margin-left: 12px;
                 }
+              }
+            }
 
-                a {
-                  display: block;
-                  font-size: 15px;
-                  line-height: 22px;
-                  letter-spacing: -0.005em;
-                  color: $gray-500;
+            .badge-box {
+              .badge {
+                margin-right: 12px;
+                margin-bottom: 20px;
+                background-color: $gray-300;
+                color: $gray-800;
+                cursor: pointer;
+
+                &.active {
+                  background-color: $yellow;
+                  font-weight: bold;
                 }
               }
             }
@@ -1272,7 +1275,6 @@
               display: block;
               font-size: 16px;
               line-height: 24px;
-              margin-bottom: 12px;
             }
 
             .icon {

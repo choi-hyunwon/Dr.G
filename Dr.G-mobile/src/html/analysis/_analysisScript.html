@@ -41,12 +41,20 @@
       list.show()
     }
 
-    /*수정요청입력란*/
-    let badge = $('.write-area .badge-box .badge')
-    badge.on('click', function () {
-      $(this).siblings().removeClass('active')
-      $(this).addClass('active')
-    })
+
+      /*헤어제품 첫검색 뱃지*/
+      let questionBadge = $('.question-item .badge-box .badge')
+      questionBadge.on('click', function () {
+          $(this).toggleClass('active')
+      })
+
+
+      /*수정요청입력란*/
+      let badge = $('.write-area .badge-box .badge')
+      badge.on('click', function () {
+          $(this).siblings().removeClass('active')
+          $(this).addClass('active')
+      })
 
 
 

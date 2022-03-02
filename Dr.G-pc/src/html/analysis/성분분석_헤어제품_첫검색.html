@@ -63,12 +63,12 @@
                                 </div>
                                 <div class="answer _answer">
                                     <ul>
-                                        <li class="active"><a href="#">비듬 두피</a></li>
-                                        <li><a href="#">지성 두피</a></li>
-                                        <li><a href="#">건성 두피</a></li>
-                                        <li><a href="#">민감성 두피</a></li>
+                                        <li>지성 두피</li>
+                                        <li class="active">비듬 두피</li>
+                                        <li>건성 두피</li>
+                                        <li>민감성 두피</li>
+                                        <li>중성 두피</li>
                                     </ul>
-                                    <span class="delete"><a class="btn-delete" href="#"> <i class="icon ico-close-xs white"></i><span class="sr-only">삭제</span></a></span>
                                 </div>
                             </div>
                             <div class="item">
@@ -78,12 +78,12 @@
                                 </div>
                                 <div class="answer _answer">
                                     <ul>
-                                        <li><a href="#">가늘고 힘없는 모발</a></li>
-                                        <li><a href="#">손상된 모발</a></li>
-                                        <li class="active"><a href="#">건조한 모발</a></li>
-                                        <li><a href="#">굵고 뻣뻣한 모발</a></li>
+                                        <li>얇은 모발</li>
+                                        <li>손상된 모발</li>
+                                        <li>염색된 모발</li>
+                                        <li class="active">건조한 모발</li>
+                                        <li>건강한 모발</li>
                                     </ul>
-                                    <span class="delete"><a class="btn-delete" href="#"> <i class="icon ico-close-xs white"></i><span class="sr-only">삭제</span></a></span>
                                 </div>
                             </div>
                             <div class="item">
@@ -92,13 +92,18 @@
                                     <span class="font-h5">헤어 고민은 무엇인가요?</span>
                                 </div>
                                 <div class="answer _answer">
-                                    <ul>
-                                        <li class="active"><a href="#">탈모</a></li>
-                                        <li><a href="#">두피 진정</a></li>
-                                        <li><a href="#">모발 끊어짐</a></li>
-                                        <li><a href="#">푸석함</a></li>
-                                    </ul>
-                                    <span class="delete"><a class="btn-delete" href="#"> <i class="icon ico-close-xs white"></i><span class="sr-only">삭제</span></a></span>
+                                    <div class="badge-box">
+                                        <div class="badge badge-lg">탈모</div>
+                                        <div class="badge badge-lg active">건조함</div>
+                                        <div class="badge badge-lg">두피 트러블</div>
+                                        <div class="badge badge-lg">모발 갈라짐</div>
+                                        <div class="badge badge-lg">간지러움</div>
+                                        <div class="badge badge-lg active">적은 볼륨</div>
+                                        <div class="badge badge-lg active">윤기 없음</div>
+                                        <div class="badge badge-lg">두피 각질</div>
+                                        <div class="badge badge-lg">모발 손상</div>
+                                        <div class="badge badge-lg">염색모 케어</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +121,9 @@
     <!-- s footer -->
     @@include('../../html/include/common/footer.html')
     <!-- e footer -->
+
 </div>
+@@include('./_analysisScript.html')
 </body>
 </html>
 

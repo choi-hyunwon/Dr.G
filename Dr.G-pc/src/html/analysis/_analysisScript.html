@@ -63,11 +63,26 @@
       chatbot.children('.tip').hide();
     })
 
-    $('._answer li').on('click',function (){
-      $(this).addClass('active').siblings().removeClass('active')
-    })
+      // 질문 클릭 시
+      let answer = $('.question-box .item ._answer')
+      let list = answer.find('li');
+      answer.each(function () {
+          console.log('sss')
+          list.on('click', function () {
+              $(this).addClass('active')
+              $(this).siblings().removeClass('active')
+          })
+      })
 
-    // popup scroll
+      /*헤어제품 첫검색 뱃지*/
+      let questionBadge = $('.question-box .badge-box .badge')
+      questionBadge.on('click', function () {
+          $(this).toggleClass('active')
+      })
+
+
+
+      // popup scroll
     $("._analysisEditPopup .popup-body").mCustomScrollbar();
 
     $('._selectCategory li').on('click',function (){
