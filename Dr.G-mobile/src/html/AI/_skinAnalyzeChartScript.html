@@ -517,4 +517,22 @@
         console.log('to the right')
         alert('to the right')
     });
+
+    /** -------------------------- scroll event --------------------------- **/
+    function skinChangeChartDrawing() {
+        anime({
+            targets: '._skinChangeChart path',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutCubic',
+            duration: 2000,
+        });
+    }
+
+    new Waypoint({
+        element: document.querySelector('._skinChangeChart'),
+        handler: function () {
+            skinChangeChartDrawing()
+        },
+        offset: "50%"
+    })
 </script>

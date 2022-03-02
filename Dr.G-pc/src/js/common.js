@@ -329,13 +329,13 @@ front.common = (function () {
                     } else if($('._AiSubMain').find('._scrollTabWrap').length) {
                         var tabContentOffset = $('.section-wrap').offset().top;
                         if (tabContentOffset > st) {
-                            $('._scrollTabWrap').removeClass('fixed').css('top', 86 + 'px')
-                        } else if (st < delta) {
-                            header.removeClass('_scroll')
+                            $('._tab').removeClass('fixed').css('top', 'auto')
                         } else {
-                            $('._scrollTabWrap').addClass('fixed').css('top', 86 + 'px')
+                            $('._tab').addClass('fixed').css('top', 86 + 'px')
                         }
-
+                        if (st < delta) {
+                            header.removeClass('_scroll')
+                        }
                     } else {
                         if (st < 65){
                             header.removeClass('_scroll')

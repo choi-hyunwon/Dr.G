@@ -153,6 +153,12 @@
       }
 
       &.green {
+        .img {
+          .img-inner {
+            border-radius: 16px 16px 16px 0;
+          }
+        }
+
         .badge {
           background-color: $primary;
         }
@@ -165,6 +171,12 @@
       }
 
       &.violet {
+        .img {
+          .img-inner {
+            border-radius: 16px 16px 16px 0;
+          }
+        }
+
         .badge {
           background-color: rgba(97, 112, 255, 0.9);
         }
@@ -203,6 +215,7 @@
           width: 100%;
           height: 100%;
           overflow: hidden;
+          border-radius: 16px;
         }
 
         img {
@@ -974,6 +987,8 @@
             width: vw(168);
             height: vw(95);
             margin-right: vw(20);
+            border-radius: 12px;
+            overflow: hidden;
 
             img {
               width: 100%;
