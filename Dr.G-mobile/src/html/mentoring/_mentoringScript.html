@@ -170,37 +170,39 @@
     // });
 
     // 변경 후
-    var sectionTab = $('._section-tab');
-    var sectionStart = $('.section-about');
-    var tabStartPos = sectionTab.position().top;
-    var sectionStartPos = sectionStart.position().top;
-    var tabHeight = sectionTab.outerHeight();
-    var lastScroll = 0;
+    if($('._section-tab').length) {
+        var sectionTab = $('._section-tab');
+        var sectionStart = $('.section-about');
+        var tabStartPos = sectionTab.position().top;
+        var sectionStartPos = sectionStart.position().top;
+        var tabHeight = sectionTab.outerHeight();
+        var lastScroll = 0;
 
-    $(window).scroll(function () {
-        var st = $(this).scrollTop();
-        var sectionReview = $('.section-voc').position();
-        var sectionFAQ = $('.section-faq').position();
-        var offset = 200;
+        $(window).scroll(function () {
+            var st = $(this).scrollTop();
+            var sectionReview = $('.section-voc').position();
+            var sectionFAQ = $('.section-faq').position();
+            var offset = 200;
 
-        lastScroll = st;
+            lastScroll = st;
 
-        if (lastScroll > sectionReview - offset && lastScroll < sectionFAQ - offset) {
-            sectionTab.scrollLeft(100);
-        } else if (lastScroll > sectionFAQ - offset) {
-            sectionTab.scrollLeft(200);
-        } else {
-            sectionTab.scrollLeft(0);
-        }
-
-        let section = $('.mentoring-sub-main .section')
-        let tab = $('._section-tab .item')
-        section.each(function (index) {
-            if (st > $(this).offset().top - offset) {
-                tab.eq(index).addClass('active').siblings().removeClass('active')
+            if (lastScroll > sectionReview - offset && lastScroll < sectionFAQ - offset) {
+                sectionTab.scrollLeft(100);
+            } else if (lastScroll > sectionFAQ - offset) {
+                sectionTab.scrollLeft(200);
+            } else {
+                sectionTab.scrollLeft(0);
             }
+
+            let section = $('.mentoring-sub-main .section')
+            let tab = $('._section-tab .item')
+            section.each(function (index) {
+                if (st > $(this).offset().top - offset) {
+                    tab.eq(index).addClass('active').siblings().removeClass('active')
+                }
+            });
         });
-    });
+    }
 
     // 변경 전
     // $('.slide-tab .item a').on('click',function (){
