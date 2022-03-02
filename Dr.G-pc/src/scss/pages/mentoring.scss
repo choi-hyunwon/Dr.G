@@ -295,11 +295,22 @@
             font-weight: bold;
           }
         }
+        +.etc-input{
+          display: none;
+          margin-bottom: 12px;
+        }
       }
 
       > textarea {
         margin-bottom: 20px;
       }
+    }
+
+    .font_right {
+      text-align: right;
+      font-weight: bold;
+      font-size: 18px;
+      color: $gray-800;
     }
 
     .input-box {
@@ -374,13 +385,7 @@
     }
 
 
-    .font_right {
-      text-align: right;
-      padding-top: 12px;
-      font-weight: bold;
-      font-size: 18px;
-      color: $gray-800;
-    }
+
 
   }
 

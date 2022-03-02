@@ -201,13 +201,14 @@
           }
           +.etc-input{
             display: none;
+            margin-bottom: vw(12);
           }
 
         }
 
         .font_right {
           text-align: right;
-          padding-top: vw(20);
+          padding-top: vw(8);
           font-weight: bold;
           font-size: vw(18);
           color: $gray-800;

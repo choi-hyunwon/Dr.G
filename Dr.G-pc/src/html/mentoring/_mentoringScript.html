@@ -1,9 +1,19 @@
 <script>
     $(document).ready(function () {
+
         /*step1*/
         $('.asking .badge-box .badge').on('click', function () {
-        $(this).toggleClass('active')
-    })
+            $(this).toggleClass('active')
+
+            let input = $('.asking .badge-box').next('.etc-input')
+
+            input.hide()
+            if($('.etc').hasClass('active')){
+                input.show()
+            }else {
+                input.hide()
+            }
+        })
 
         /*step2*/
         $('.question-box .habit li .btn').on('click', function () {
