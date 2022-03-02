@@ -150,8 +150,8 @@
     // 변경 전
     // let sectionTab = $('._section-tab');
     // let lastScroll = 0;
-    // var sectionStart = $('.section-about');
-    // var sectionStartPos = sectionStart.position().top;
+    // let sectionStart = $('.section-about');
+    // let sectionStartPos = sectionStart.position().top;
     //
     // $(window).scroll(function (){
     //     if($('.container').find('._sub-main').length){
@@ -179,8 +179,8 @@
 
     $(window).scroll(function () {
         var st = $(this).scrollTop();
-        var sectionReview = $('.section-voc').position().top;
-        var sectionFAQ = $('.section-faq').position().top;
+        var sectionReview = $('.section-voc').position();
+        var sectionFAQ = $('.section-faq').position();
         var offset = 200;
 
         lastScroll = st;
@@ -264,14 +264,19 @@
 
 
 
-    new Waypoint({
-        element: document.querySelector('.section-process'),
-        handler: function () {
-            processSwiper.autoplay.start();
-            //console.log('process slider')
-        },
-        offset: "70%"
-    })
+    if($('.section-process').length === 1) {
+        new Waypoint({
+            element: document.querySelector('.section-process'),
+            handler: function () {
+                processSwiper.autoplay.start();
+                //console.log('process slider')
+            },
+            offset: "70%"
+        })
+    }
+
+
+
     processSwiper.on('slideChange', function () {
 
         $('.slide-infobox .info').removeClass('active');

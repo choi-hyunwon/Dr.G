@@ -235,12 +235,12 @@
   /*tab*/
   $(function(){
       let lastScroll = 0;
-      let sectionAbout = $('.section-about').offset().top;
       let sectionTab = $('._section-tab')
-      let sectionTabOffset = sectionTab.offset().top-200;
+
       $(window).scroll(function(event){
           let st = $(this).scrollTop();
-
+          let sectionAbout = $('.section-about').offset();
+          let sectionTabOffset = sectionTab.offset()-200;
           //console.log(sectionTabOffset)
 
           if($('.container-fluid').find('._sub-main').length) {
@@ -310,7 +310,7 @@
       }
   }, 2000)
 
-  let sectionTop = $('._section').offset().top;
+  //let sectionTop = $('._section').offset().top;
 
   let whatStep11, whatStep12, whatStep21, whatStep22;
   let whatSwiper = new Swiper('._whatSwiper', {
@@ -366,13 +366,17 @@
       whatStep22.playSegments([0, 79], true)
   });
 
-  new Waypoint({
-      element: document.querySelector('._whatSwiper'),
-      handler: function () {
-          whatSwiper.autoplay.start();
-      },
-      offset: "90%"
-  })
+  if($('._whatSwiper').length === 1) {
+      new Waypoint({
+          element: document.querySelector('._whatSwiper'),
+          handler: function () {
+              whatSwiper.autoplay.start();
+          },
+          offset: "90%"
+      })
+  }
+
+
     /*---------e 서브메인 what------------*/
 
 
@@ -443,14 +447,18 @@
     }
   });
 
-  new Waypoint({
-    element: document.querySelector('._processSwiper'),
-    handler: function () {
-      processSwiper.autoplay.start();
-      console.log('_processSwiper')
-    },
-    offset: "40%"
-  })
+
+  if($('._processSwiper').length === 1) {
+      new Waypoint({
+          element: document.querySelector('._processSwiper'),
+          handler: function () {
+              processSwiper.autoplay.start();
+              console.log('_processSwiper')
+          },
+          offset: "40%"
+      })
+  }
+
   /*---------s 서브메인 process------------*/
 
 

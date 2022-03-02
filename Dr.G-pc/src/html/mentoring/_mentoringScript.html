@@ -73,12 +73,12 @@
         /*tab*/
         $(function(){
             let lastScroll = 0;
-            let sectionAbout = $('.section-about').offset().top;
             let sectionTab = $('._section-tab')
-            let sectionTabOffset = sectionTab.offset().top-200;
+
             $(window).scroll(function(event){
                 let st = $(this).scrollTop();
-
+                let sectionAbout = $('.section-about').offset();
+                let sectionTabOffset = sectionTab.offset()-200;
                 //console.log(sectionTabOffset)
 
                 if($('.container-fluid').find('._sub-main').length) {
@@ -177,15 +177,17 @@
         });
 
 
+        if($('.section-process').length === 1) {
+            new Waypoint({
+                element: document.querySelector('.section-process'),
+                handler: function () {
+                    processSwiper.autoplay.start();
+                    //console.log('process slider')
+                },
+                offset: "70%"
+            })
+        }
 
-        new Waypoint({
-            element: document.querySelector('.section-process'),
-            handler: function () {
-                processSwiper.autoplay.start();
-                //console.log('process slider')
-            },
-            offset: "70%"
-        })
         processSwiper.on('slideChange', function () {
 
             $('.slide-infobox .info').removeClass('active');
