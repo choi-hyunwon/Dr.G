@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="Referrer" content="origin"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-title" content="Dr.G"/>
+    <meta name="robots" content="index,nofollow"/>
+    <meta name="description" content="Dr.G"/>
+    <meta name="keywords" content="Dr.G"/>
+    <link rel="shortcut icon" href="../../img/@temp/favicon.ico">
+    <title>Dr.G PC</title>
+    <link type="text/css" rel="stylesheet" href="../../css/Dr.G_pc_components.css"/>
+    <link type="text/css" rel="stylesheet" href="../../css/Dr.G_pc_pages.css"/>
+    <script src="../../js/bundle.js?"></script>
+    <script src="../../js/common.js?"></script>
+</head>
+
+<body>
+<div class="popup-wrap">
+    <div class="popup mentoring-review-write">
+        <div class="popup-content popup-lg">
+            <div class="popup-header">
+                <a href="#" class="_hidePopup icon ico-close"></a>
+            </div>
+            <div class="popup-body">
+                <div class="title title-lg">후기 작성하기</div>
+                <div class="star-box">
+                    <span class="star star_left _star"></span>
+                    <span class="star star_right _star"></span>
+
+                    <span class="star star_left _star"></span>
+                    <span class="star star_right _star"></span>
+
+                    <span class="star star_left _star"></span>
+                    <span class="star star_right _star"></span>
+
+                    <span class="star star_left _star"></span>
+                    <span class="star star_right _star"></span>
+
+                    <span class="star star_left _star"></span>
+                    <span class="star star_right _star"></span>
+                </div>
+
+                <div class="form-text-area">
+                    <textarea title="textarea" class="form-control" maxlength="500" onkeyup="countChar(this,'_val')" placeholder="불편함을 느꼈거나 바라는 점이 있다면 들려주세요."></textarea>
+                    <span class="count"><em class="_val">0</em>/500</span>
+                </div>
+
+                <ul class="list-with-dot">
+                    <li>후기 작성 시 적립금 <span class="font-medium">500원</span> 지급(월 1회)</li>
+                    <li>월간 베스트 후기로 선정 시 적립금 <span class="font-medium">3,000원</span> 지급(월 3명)</li>
+                </ul>
+            </div>
+            <div class="popup-footer">
+                <a href="#" class="btn btn-blue">등록</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    showPopup();
+
+
+    <!--grade script-->
+        $("._star").on('click', function () {
+        $("._star").removeClass("on");
+        var idx = $(this).index();
+        for (var i = 0; i <= idx; i++) {
+        $("._star").eq(i).addClass("on");
+    }
+    });
+
+    /* textarea - count text*/
+    function countChar(val , target) {
+        var len = val.value.length;
+        var targetItem = $(`.${target}`);
+
+        targetItem.text(len)
+
+        if(len === 0) {
+            targetItem.css('color','#BBBBBB')
+        }
+        else {
+            targetItem.css('color','#47bdff')
+        }
+    }
+</script>

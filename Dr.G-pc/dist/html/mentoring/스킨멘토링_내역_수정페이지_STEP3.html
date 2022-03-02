@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="Referrer" content="origin"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-title" content="Dr.G"/>
+    <meta name="robots" content="index,nofollow"/>
+    <meta name="description" content="Dr.G"/>
+    <meta name="keywords" content="Dr.G"/>
+    <link rel="shortcut icon" href="../../img/@temp/favicon.ico">
+    <title>Dr.G PC</title>
+    <link type="text/css" rel="stylesheet" href="../../css/Dr.G_pc_components.css"/>
+    <link type="text/css" rel="stylesheet" href="../../css/Dr.G_pc_pages.css"/>
+    <script src="../../js/bundle.js?"></script>
+    <script src="../../js/common.js?"></script>
+</head>
+
+<body>
+<div class="wrap">
+    <!-- s header -->
+    <div class="l__wrap">
+    <div class="l__top__tab">
+        <div class="tab__uio tab__uio__top">
+            <a href="#" class="tab active"><strong>SHOP</strong><span>내 피부를 위한 큐레이션</span></a>
+            <a href="#" class="tab"><strong>Brand</strong><span>마이 스킨 멘토</span></a>
+        </div>
+    </div>
+</div>
+<div class="header _header">
+    <div class="header-mask _headerMask"></div>
+    <div class="inner">
+        <a href="#" class="logo"><img src="../../img/common/logo-black.svg" alt="Dr.G"></a>
+        <div class="menu">
+            <!--
+                ** gnb 활성화 방법
+                gnbActive(firstDepth, SecondDepth)
+
+                ex) Ai 피부분석 / 나의 피부변화 리포트 메뉴 활성화 방법
+                gnbActive(0, 3)
+            -->
+            <ul class="_menu">
+                <li class="item">
+                    <a href="#">Ai 피부분석</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Ai 피부분석이란?</a></li>
+                        <li><a href="#">Ai 피부분석 시작하기</a></li>
+                        <li><a href="#">나의 피부분석 결과</a></li>
+                        <li><a href="#">나의 피부변화 리포트</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">1:1 스킨멘토링</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">1:1 스킨멘토링이란?</a></li>
+                        <li><a href="#">1:1 스킨 멘토링 시작하기</a></li>
+                        <li><a href="#">나의 멘토링 문의 내역</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">1:1 성분분석</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">1:1성분분석이란?</a></li>
+                        <li><a href="#">1:1 성분분석 시작하기</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">무료샘플 신청</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">무료샘플 신청하기</a></li>
+                        <li><a href="#">나의 신청 내역</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">닥터지스토리</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">인사이드 닥터지</a></li>
+                        <li><a href="#">Dr.Ahn 영상</a></li>
+                        <li><a href="#">스킨 리포트</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">브랜드소개</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">닥터지 이야기</a></li>
+                        <li><a href="#">제조원칙</a></li>
+                        <li><a href="#">고객을 위한 서비스</a></li>
+                        <li><a href="#">사회를 위한 공헌활동</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">이벤트</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">진행 중 이벤트</a></li>
+                        <li><a href="#">당첨자 발표</a></li>
+                        <li><a href="#">종료된 이벤트</a></li>
+                    </ul>
+                </li>
+                <li class="item _Nohover"><a href="#">고객제안</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <a class="btn-mypage" href="#"><i class="icon ico-mypage"></i></a>
+         <!--   <div class="btn-alert on"> &lt;!&ndash; 활성화 시, on 클래스 추가 &ndash;&gt;
+                <i class="icon ico-alert _btnAlert"></i>
+                <div class="notice-popup _noticePopup">
+                    <div class="popup-content">
+                        <div class="popup-header">
+                            <p class="title font-h3">알림</p>
+                            <a class="_noticePopupClose" href="#"><i class="icon ico-close full"></i></a>
+                        </div>
+                        <div class="popup-body">
+                            <div class="toggle-area">
+                                <div class="font-body-1">읽지 않은 알림만 보기</div>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                                    <label class="custom-control-label" for="customSwitch1"></label>
+                                </div>
+                            </div>
+                            <div class="notice-list">
+                                <ul>
+                                    <li class="item active">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+<div class="location-box">
+    <ul>
+        <li class="item"><a href="#"><i class="icon ic-home"></i><span class="sr-only">home</span></a></li>
+        <li class="item"><a href="#">Page Name</a></li>
+    </ul>
+</div>
+
+
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container-fluid">
+        <div class="mentoring-wrap">
+            <!-- s heading -->
+            <div class="inner step-inner">
+                <div class="heading-box">
+                    <div class="font-h1 font-bold">1:1 스킨 멘토링</div>
+                    <div class="font-h6 font-poppins">1:1 Skin Mentoring</div>
+                </div>
+                <div class="step-heading row">
+                    <div class="step col-3">
+                        <span class="tit">기본정보</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph full">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">생활습관</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3 active">
+                        <span class="tit">피부고민</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">완료</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph full">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--
+                .smile-graph > .value {transform: rotateZ(-180deg)}로 그래프값 조절
+                (-180deg - 기본-> -360 deg 가까울수록 그래프가채워짐)
+                -->
+            </div>
+            <!-- e heading -->
+
+            <div class="bg-gray">
+                <div class="inner">
+                        <div class="guidance text-center">
+                            <p class="font-h3 font-bold">조수인님의 <span class="color-blue">피부고민</span>을 스킨멘토에게 자유롭게 들려주세요.</p>
+                            <p class="font-body-1 sub-desc">고민되는 부위의 사진을 첨부해주시면 정확한 상담에 도움이 됩니다.</p>
+                        </div>
+
+                        <div class="asking">
+                            <div class="box">
+                                <input type="text" title="피부 고민 제목 입력" class="form-control" placeholder="피부 고민에 대한 제목을 입력해주세요">
+
+                                <textarea title="피부고민을 들려주세요" class="form-control form-control-lg"
+                                          placeholder="피부 고민을 상세하게 입력해주세요.
+스킨멘토가 답변을 드릴때, 회원님께 맞는 솔루션을 안내합니다."></textarea>
+                            </div>
+
+
+                            <div class="upload-box">
+                                <div class="custom-file img-upload">
+                                    <input type="file" class="custom-file-input" id="imgFile" accept="image/*">
+                                    <p class="font-poppins num"><span>4</span>/5</p>
+                                </div>
+                                <div class="upload-list">
+                                    <ul>
+                                        <li><img src="../../img/@temp/sample01.png" alt="temp img 1">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                        <li><img src="../../img/@temp/sample02.png" alt="temp img 2">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                        <li><img src="../../img/@temp/sample03.png" alt="temp img 3">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                        <li><img src="../../img/@temp/sample04.png" alt="temp img 4">
+                                            <a href="#" class="delete-upload">삭제</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr class="divider divider-sm">
+
+                            <div class="input-box">
+                                <div class="custom-control custom-checkbox checkbox-sm mb-2">
+                                    <input type="checkbox" class="custom-control-input blue" id="notice" checked="">
+                                    <label class="custom-control-label" for="notice">스킨 멘토의 답변이 등록되면, 알림을 보내주세요</label>
+                                </div>
+
+                                <div class="custom-control custom-checkbox checkbox-sm">
+                                    <input type="checkbox" class="custom-control-input blue" id="suggestion">
+                                    <label class="custom-control-label" for="suggestion">피부고민에 맞는 닥터지 제품을 추천 받을게요!</label>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="btn-wrap">
+                            <a href="#" class="btn btn-lg btn-black btn-border-black"><span
+                                    class="font-body-1">이전</span></a>
+                            <a href="#" class="btn btn-lg btn-blue"><span class="font-body-1">작성완료</span></a>
+                        </div>
+                    </div>
+            </div>
+            <div class="content bg-white">
+                <div class="inner terms">
+                    <div class="title"><i class="icon ico-alert-circle"></i> <span>읽어주세요!</span></div>
+                    <ul class="list-with-dot">
+                        <li>정확한 솔루션을 위해 사진을 남겨주세요. (얼굴 정면, 고민 부위 등) 사진은 분석용으로만 활용됩니다.</li>
+                        <li>스킨 멘토링 외에 다른 목적이나 부적절한 내용을 등록하신 경우 삭제 처리 될 수 있습니다.</li>
+                        <li>피부과 전문의 상담이 필요한 경우 인근 병원에서 전문적인 상담을 받으시는 것을 추천합니다.</li>
+                        <li>작성하신 스킨 멘토링 내용은 고운세상 코스메틱의 마케팅 자료로 활용될 수 있습니다.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    <button type="button" class="uio-top-btn"><span>상단으로 이동</span></button>
+<footer class="l__footer">
+    <div class="footer__in">
+        <nav class="l__fnb">
+            <a href="#" class="logo"><img src="../../img/common/brand_logo_white.svg" alt="Dr.G"></a>
+            <ul>
+                <li><a href="#">Dr.G소개</a></li>
+                <li><a href="https://gwss.recruiter.co.kr/appsite/company/index">채용정보</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">회원혜택</a></li>
+                <li><a href="#">제휴문의</a></li>
+            </ul>
+        </nav>
+        <aside>
+            <nav class="sns__group">
+                <li class="sns sns-kakaoch"><a href="https://pf.kakao.com/_HuEsE" target="_blank" title="새창"><span class="sound-only">닥터지 카카오채널</span></a></li>
+                <li class="sns sns-youtube"><a href="https://www.youtube.com/user/DRGKOREA" target="_blank" title="새창"><span class="sound-only">닥터지 유투브</span></a></li>
+                <li class="sns sns-facebook"><a href="https://www.facebook.com/gwsscosmetic" target="_blank" title="새창"><span class="sound-only">닥터지 페이스북</span></a></li>
+                <li class="sns sns-insta"><a href="https://www.instagram.com/dr.g_official/" target="_blank" title="새창"><span class="sound-only">닥터지 인스타그램</span></a></li>
+            </nav>
+            <div class="l__cs">
+                <h5>고객센터 <a href="tel:1811-9415">1811-9415</a></h5>
+                <h6 class="sound-only">근무시간 안내</h6>
+                <ul class="items">
+                    <li>평일 : 09:30 ~ 16:00</li>
+                    <li>점심 : 12:30 ~ 13:30</li>
+                    <li>토요일, 일요일, 공휴일 휴무 입니다.</li>
+                </ul>
+            </div>
+            <img src="../../img/common/em_brand_drg_v2@2x.png" alt="Dr.G" class="subLogo">
+        </aside>
+        <div class="l__desc">
+            <p class="corp">(주)고운세상코스메틱</p>
+            <ul class="items">
+                <li class="address">경기도 성남시 분당구 분당로 55 퍼스트타워 11층</li>
+                <li class="corp_ceo">대표이사  안건영</li>
+                <li class="corp_regnum">사업자등록번호  209-81-23948</li>
+                <li class="corp_marketnum">통신판매업신고번호  2012-경기성남-0552</li>
+                <li class="corp_regnum_inq"><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2098123948" target="_blank">사업자정보확인</a></li>
+            </ul>
+        </div>
+        <div class="l__language">
+            <dl>
+                <dt><button type="button"><i class="ico ico-global"></i><span>중국</span></button></dt>
+                <dd>
+                    <a href="https://login.taobao.com/member/login.jhtml?redirectURL=http%3A%2F%2Fdrghzp.world.tmall.com%2Fshop%2Fview_shop.htm&amp;uuid=42d70ded92ecc6c10ef299d6826288cc" target="_blank" title="새창">중국</a>
+                    <a href="http://www.dr-g.co.jp/" target="_blank" title="새창">일본</a>
+                </dd>
+            </dl>
+            <div class="corp_copyright">Copyright © GOWOONSESANG COSMETICS Co.,Ltd. All Rights Reserved.</div>
+        </div>
+    </div>
+</footer>
+
+    <!-- e footer -->
+</div>
+<script>
+    $(document).ready(function () {
+
+        /*step1*/
+        $('.asking .badge-box .badge').on('click', function () {
+            $(this).toggleClass('active')
+
+            let input = $('.asking .badge-box').next('.etc-input')
+
+            input.hide()
+            if($('.etc').hasClass('active')){
+                input.show()
+            }else {
+                input.hide()
+            }
+        })
+
+        /*step2*/
+        $('.question-box .habit li .btn').on('click', function () {
+        $(this).parents('li').find('.btn').removeClass('active')
+        $(this).addClass('active');
+    })
+
+        /*step 공통*/
+        let stepScroll = 0;
+        $(window).scroll(function (event) {
+            if ($('.mentoring-wrap').find('.step-heading').length) {
+                let st = $(this).scrollTop();
+                let stepTop = $('.step-heading').offset().top - 80
+
+                if (st > stepScroll) {
+                     //console.log("DOWN");
+                    if (st > stepTop){
+                        $('.inner').addClass('_step-fixed')
+                    }
+                } else {
+                     //console.log("UP");
+                    if (st < stepTop){
+                        $('.inner').removeClass('_step-fixed')
+                    }
+                }
+                //Updates scroll position
+                stepScroll = st;
+            }
+        });
+
+        /*답변 대기, 답변 완료*/
+        $('.unfold-box .title').on('click', function () {
+            if (!$(this).hasClass('_title')) {
+                $(this).find('.icon').removeClass('ico-plus-sm').addClass('ico-minus-sm');
+                $(this).addClass('_title');
+                $('.list-bg').slideDown(200);
+                $(this).find('span').text('나의 피부고민 및 생활습관 접기')
+            } else {
+                $(this).find('.icon').removeClass('ico-minus-sm').addClass('ico-plus-sm');
+                $(this).removeClass('_title');
+                $('.list-bg').slideUp(200);
+                $(this).find('span').text('나의 피부고민 및 생활습관 펼쳐보기')
+            }
+        })
+
+        /*목록 tab*/
+        let lastScroll = 0;
+        $(window).scroll(function (){
+            if($('.container-fluid').find('._question-wrap').length){
+                let st = $(this).scrollTop();
+                let questionTab = $('._question-tab');
+                let tabOffset = questionTab.offset().top
+                let contentOffset = $('.question-list .content').offset().top
+
+                if (st > lastScroll){
+                    //console.log("DOWN");
+                    if (st > tabOffset){
+                        questionTab.addClass('tab-fixed')
+                    }
+                }
+                else {
+                    //console.log("UP");
+                    if (st <= contentOffset){
+                        questionTab.removeClass('tab-fixed')
+                    }
+                }
+                //Updates scroll position
+                lastScroll = st;
+            }
+        });
+
+        /*|--------------s 서브메인----------------------------|*/
+
+        /*-------tab-------*/
+        $('.slide-tab .item a').on('click', function () {
+            let idx = $(this).parent().index() + 1
+            // console.log(idx)
+            let offset = $('.section').eq(idx).offset();
+            let headHeight = $('.header').height() + $('._section-tab').height()
+
+            //console.log(headHeight)
+            $('html, body').animate({scrollTop: offset.top - headHeight}, 400)
+        })
+
+        $(function () {
+            let lastScroll = 0;
+
+            $(window).scroll(function (event) {
+                let st = $(this).scrollTop();
+                let tab = $('._tab');
+                let tabOffset = tab.offset().top;
+                let aboutOffset = $('.section-about').offset().top;
+                //console.log(sectionTabOffset)
+
+                if ($('.container-fluid').find('._section-tab').length) {
+                    //console.log(st)
+                    if (st > lastScroll) {
+                        //console.log("DOWN");
+                        if (st > tabOffset) {
+                            tab.addClass('tab-fixed')
+                        }
+                    } else {
+                        //console.log("UP");
+                        if (st <= aboutOffset) {
+                            tab.removeClass('tab-fixed')
+                        }
+                    }
+                    //Updates scroll position
+                    lastScroll = st;
+                }
+
+                /* 탭활성화 */
+                let section = $('.section')
+                let item = $('._section-tab .item')
+                section.each(function (index) {
+                    if (st > $(this).offset().top) {
+                        item.removeClass('active')
+                        item.eq(index).addClass('active')
+                    }
+                });
+            });
+        });
+        /*-----------------*/
+
+
+        new Swiper('.answer-swiper', {
+
+            slidesPerView: 4, // 동시에 보여줄 슬라이드 갯수
+            spaceBetween: 30, // 슬라이드간 간격
+            slidesPerGroup: 4, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
+
+            // 그룹수가 맞지 않을 경우 빈칸으로 메우기
+            // 3개가 나와야 되는데 1개만 있다면 2개는 빈칸으로 채워서 3개를 만듬
+            //loopFillGroupWithBlank : true,
+
+            loop: true, // 무한 반복
+
+            navigation: { // 네비게이션
+                nextEl: '.swiper-button-next', // 다음 버튼 클래스명
+                prevEl: '.swiper-button-prev', // 이번 버튼 클래스명
+            },
+        });
+
+
+
+        /*서브메인 process*/
+        let processSwiper = new Swiper("._processSwiper", {
+            autoplay: {
+                enabled: false,
+                delay: 3000,
+            },
+            speed: 1000,
+            effect: 'slide',
+            pagination: {
+                el: "._processSwiper + ._sliderPagination",
+                clickable: true,
+            },
+        });
+
+        let processAni1 = document.querySelector('._processAni1');
+        let processStep1 = bodymovin.loadAnimation({
+            container: processAni1,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: "../../img/mentoring/progress-step1.json"
+        });
+
+        let processAni2 = document.querySelector('._processAni2');
+        let processStep2 = bodymovin.loadAnimation({
+            container: processAni2,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: "../../img/mentoring/progress-step2.json"
+        });
+
+        let processAni3 = document.querySelector('._processAni3');
+        let processStep3 = bodymovin.loadAnimation({
+            container: processAni3,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: "../../img/mentoring/progress-step3.json"
+        });
+
+
+        if($('.section-process').length === 1) {
+            new Waypoint({
+                element: document.querySelector('.section-process'),
+                handler: function () {
+                    processSwiper.autoplay.start();
+                    //console.log('process slider')
+                },
+                offset: "70%"
+            })
+        }
+
+        processSwiper.on('slideChange', function () {
+
+            $('.slide-infobox .info').removeClass('active');
+            $('.slide-infobox .info').eq(this.realIndex).addClass('active');
+
+            if (processSwiper.realIndex === 0) {
+                processStep1.playSegments([0, 180], true)
+                $('._stepBox').find('.step').eq(0).addClass('active').siblings().removeClass('active');
+
+            } else if (processSwiper.realIndex === 1) {
+                processStep2.playSegments([0, 120], true)
+                $('._stepBox').find('.step').eq(1).addClass('active').siblings().removeClass('active');
+
+            } else if (processSwiper.realIndex === 2) {
+                processStep3.playSegments([0, 240], true)
+                $('._stepBox').find('.step').eq(2).addClass('active').siblings().removeClass('active');
+            }
+        });
+
+
+
+
+
+
+        /*서브메인 voc*/
+        $('.voc .review_box .item').on('click', function () {
+            if (!$(this).hasClass('active')) {
+                $(this).addClass('active').slideDown();
+                $(this).siblings().removeClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        })
+
+        /*서브메인 faq*/
+        let box = $('.faq_box')
+        let item = $('.faq_box .item')
+        let solution = $('.solution')
+        item.on('click', function () {
+          if (!$(this).hasClass('active')) {
+              $(this).siblings().removeClass('active')
+              $(this).siblings().find(solution).slideUp(200);
+              $(this).addClass('active');
+              $(this).find(solution).slideDown(200);
+          } else {
+              $(this).removeClass('active');
+              $(this).find(solution).slideUp(200);
+          }
+        })
+        $('body').click(function(e) { /*외부클릭시 닫힘처리*/
+            if(!box.has(e.target).length){
+                item.removeClass('active');
+                item.find('.solution').slideUp(200);
+            }
+        });
+
+/*|--------------e 서브메인----------------------------|*/
+    });
+</script>
+
+
+</body>
+</html>
+
+
+

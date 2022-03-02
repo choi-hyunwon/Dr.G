@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="Referrer" content="origin"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-title" content="Dr.G"/>
+    <meta name="robots" content="index,nofollow"/>
+    <meta name="description" content="Dr.G"/>
+    <meta name="keywords" content="Dr.G"/>
+    <link rel="shortcut icon" href="../../img/@temp/favicon.ico">
+    <title>Dr.G PC</title>
+    <link type="text/css" rel="stylesheet" href="../../css/Dr.G_pc_components.css"/>
+    <link type="text/css" rel="stylesheet" href="../../css/Dr.G_pc_pages.css"/>
+    <script src="../../js/bundle.js?"></script>
+    <script src="../../js/common.js?"></script>
+</head>
+
+<body>
+<div class="wrap">
+
+    <!-- s header -->
+    <div class="l__wrap">
+    <div class="l__top__tab">
+        <div class="tab__uio tab__uio__top">
+            <a href="#" class="tab active"><strong>SHOP</strong><span>내 피부를 위한 큐레이션</span></a>
+            <a href="#" class="tab"><strong>Brand</strong><span>마이 스킨 멘토</span></a>
+        </div>
+    </div>
+</div>
+<div class="header _header">
+    <div class="header-mask _headerMask"></div>
+    <div class="inner">
+        <a href="#" class="logo"><img src="../../img/common/logo-black.svg" alt="Dr.G"></a>
+        <div class="menu">
+            <!--
+                ** gnb 활성화 방법
+                gnbActive(firstDepth, SecondDepth)
+
+                ex) Ai 피부분석 / 나의 피부변화 리포트 메뉴 활성화 방법
+                gnbActive(0, 3)
+            -->
+            <ul class="_menu">
+                <li class="item">
+                    <a href="#">Ai 피부분석</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Ai 피부분석이란?</a></li>
+                        <li><a href="#">Ai 피부분석 시작하기</a></li>
+                        <li><a href="#">나의 피부분석 결과</a></li>
+                        <li><a href="#">나의 피부변화 리포트</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">1:1 스킨멘토링</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">1:1 스킨멘토링이란?</a></li>
+                        <li><a href="#">1:1 스킨 멘토링 시작하기</a></li>
+                        <li><a href="#">나의 멘토링 문의 내역</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">1:1 성분분석</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">1:1성분분석이란?</a></li>
+                        <li><a href="#">1:1 성분분석 시작하기</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">무료샘플 신청</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">무료샘플 신청하기</a></li>
+                        <li><a href="#">나의 신청 내역</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">닥터지스토리</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">인사이드 닥터지</a></li>
+                        <li><a href="#">Dr.Ahn 영상</a></li>
+                        <li><a href="#">스킨 리포트</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">브랜드소개</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">닥터지 이야기</a></li>
+                        <li><a href="#">제조원칙</a></li>
+                        <li><a href="#">고객을 위한 서비스</a></li>
+                        <li><a href="#">사회를 위한 공헌활동</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a href="#">이벤트</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">진행 중 이벤트</a></li>
+                        <li><a href="#">당첨자 발표</a></li>
+                        <li><a href="#">종료된 이벤트</a></li>
+                    </ul>
+                </li>
+                <li class="item _Nohover"><a href="#">고객제안</a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <a class="btn-mypage" href="#"><i class="icon ico-mypage"></i></a>
+         <!--   <div class="btn-alert on"> &lt;!&ndash; 활성화 시, on 클래스 추가 &ndash;&gt;
+                <i class="icon ico-alert _btnAlert"></i>
+                <div class="notice-popup _noticePopup">
+                    <div class="popup-content">
+                        <div class="popup-header">
+                            <p class="title font-h3">알림</p>
+                            <a class="_noticePopupClose" href="#"><i class="icon ico-close full"></i></a>
+                        </div>
+                        <div class="popup-body">
+                            <div class="toggle-area">
+                                <div class="font-body-1">읽지 않은 알림만 보기</div>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                                    <label class="custom-control-label" for="customSwitch1"></label>
+                                </div>
+                            </div>
+                            <div class="notice-list">
+                                <ul>
+                                    <li class="item active">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="title">뷰티 테스터를 모집합니다!</div>
+                                        <div class="content">뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스뷰티 테스터 신청 사연을 댓글로 남겨주시면 총 50분을 선정하여 신제품 &lt;에이클리어 스</div>
+                                        <div class="bottom">
+                                            <span class="date">2021-08-24 12:48</span>
+                                            <a href="#" class="btn-delete"><i class="icon ico-delete"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+<div class="location-box">
+    <ul>
+        <li class="item"><a href="#"><i class="icon ic-home"></i><span class="sr-only">home</span></a></li>
+        <li class="item"><a href="#">Page Name</a></li>
+    </ul>
+</div>
+
+
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container-fluid view-details">
+        <div class="body-details">
+            <div class="area-title">
+                <div class="badge-box">
+                    <div class="badge badge-gray">분석완료</div>
+                </div>
+                <div class="font-h2 font-bold title">블랙헤드가 안없어져요. 어떻게 없애나요?</div>
+
+                <div class="info-line">
+                    <div class="like-box on font-poppins">
+                        <span class="date">2020.08.12</span>
+                    </div>
+                </div>
+            </div>
+            <div class="area-desc">
+                <div class="text">
+                    19살 남자인 제가 처음으로 닥터지 제품을 써봤는데, 괜히 사람들이 닥터지 닥터지하는게 아니였어요 ..<br><br>
+                    좋았던 점<br>
+                    (1) 착한 성분 일단 20가지 주의사항 성분이 없고, 알레르기 주의성분도 하나도 없어서 민감한 저에게는 매우 좋았어요.<br>
+                    특히 티트리, 녹차, 캐모마일, 알로에베라 등 성난 피부를 진정시켜주는 자연유래 성분들이 많이 있어서 피부에 트러블이 있는 저에게는 찰떡이였습니다 !<br><br>
+                    (2) 흡수력이 좋다 겨울이여서, 지성이지만 세안을 하고나면 건조해요 .. 그래서 보습도 중요한데 이 친구는 바를 때, 슥슥 하면 피부에 다 흡수되고, 직접 흡수시킬 필요가 없어서 좋더라고요 ㅎㅎ<br><br>
+                    (3) 진정효과가 있었다 ! 제가 쓴 지 1주일 후에 리뷰를 썼는데, 다시 쓴 이유는 바로 트러블이 진정되어 잠잠해졌기 때문인데요 ! 아까도 말했듯이 트러블을 진정시켜주는 성분들도 있고, ‘5시카 콤플렉스’ 라는 레드 블레미쉬 라인만의 성분들이 저와는 잘 맞아서 트러블들을 진정시켜주었어요.<br><br><br>
+                    아쉬운 점<br>
+                    (1) 겨울에는 보습이 부족하다 아무리 좋아도 올인원이다보니 이 제품 하나로는 겨울을 보낼 수가 없어요..<br>
+                    특히 수부지나 건성이신 분들 ! 그래서 겨울철에 이거 하나만 바르면 조금 건조해서 수분크림같은 크림류를 같이 바르시는 것을 추천드려요 !<br><br>
+                    저는 그래서 아침에는 레드 블레미쉬 올인원 -> 레드 블레미쉬 클리어 수딩크림 -> 레드 블레미쉬 시카 크림 -> 그린 마일드 없 선으로 하되, 양을 조절하면서 피부가 너무 번들거리지않고,
+                    필요한 보습만 채우도록 했고, 시카크림을 덧바르면서, 진정시킬 트러블 부위에 집중 케어를 했어요 ! 밤에는 무너진 피부 장벽을 회복시키기 위해,
+                    클리어 수딩 크림 대신 필라그린 민감지성용 크림으로 바꿔서 썼어요 ! 그렇게 2주, 3주 되더니 확실히 트러블이랑 색소침착된 부위가 회복되었어요 .
+                    앞으로도 건강한 제품을 많이 만들어주세요 !
+                </div>
+            </div>
+        </div>
+
+        <div class="unfold-box">
+            <div class="title"><span>나의 피부고민 및 생활습관 펼쳐보기</span> <i class="icon ico-plus-sm"></i></div>
+            <div class="list-bg">
+                <ul class="list">
+                    <li>
+                        <p class="sub-title">내가 선택한 피부고민</p>
+                        <div class="badge-box">
+                            <div class="badge badge-lg badge-yellow">블랙헤드</div>
+                            <div class="badge badge-lg badge-yellow">유수분 밸런스</div>
+                            <div class="badge badge-lg badge-yellow">속건조</div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="sub-title">나의 생활습관</p>
+                        <ul class="habit">
+                            <li><p><span class="num">Q1.</span>흡연을 하나요?</p><span class="answer">네</span></li>
+                            <li><p><span class="num">Q2.</span>운동을 하나요?</p><span class="answer">아니오</span></li>
+                            <li><p><span class="num">Q3.</span>음주를 하나요?</p><span class="answer">네</span></li>
+                            <li><p><span class="num">Q4.</span>자외선 차단제를 사용하나요?</p><span class="answer">네</span></li>
+                            <li><p><span class="num">Q5.</span>수면의 질은 좋은가요?</p><span class="answer">나빠요</span></li>
+                            <li><p><span class="num">Q6.</span>스트레스가 있나요?</p><span class="answer">많음</span></li>
+                            <li><p><span class="num">Q7.</span>월경 주기는 어떤가요?</p><span class="answer">불규칙</span></li>
+                            <li><p><span class="num">Q8.</span>물 섭취량은 어떤가요?</p><span class="answer">1L 이상</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="sub-title">업로드된 나의 고민 사진</p>
+                        <div class="attach-box">
+                            <ul>
+                                <li><img src="../../img/@temp/sample01.png" alt="temp img 1"></li>
+                                <li><img src="../../img/@temp/sample02.png" alt="temp img 2"></li>
+                                <li><img src="../../img/@temp/sample03.png" alt="temp img 3"></li>
+                                <li><img src="../../img/@temp/sample04.png" alt="temp img 4"></li>
+                                <li><img src="../../img/@temp/sample04.png" alt="temp img 4"></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-wrap">
+                <a href="#" class="btn btn-black btn-border-black btn-icon"><span>삭제</span><i class="icon ico-delete"></i></a>
+            </div>
+        </div>
+
+        <div class="solution-box">
+            <div class="bg-blue">
+                <div class="solution-intro">
+                    <p class="font-h3 font-bold">스킨 멘토의 답변을 확인하세요.</p>
+                    <div class="floating-box">
+                        <div class="item">
+                            <p>안녕하세요, 고객님♥<br>바른 진단, 바른 화장품 마이스킨멘토 Dr.G 재방문을 진심으로 환영합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner">
+                <ul class="answer">
+                    <li>
+                        <p class="font-h4 font-bold title">지금 가장 큰 고민으로 여드름과 모공, 건조한 피부에 대해 말씀 주셨네요</p>
+                        <p class="font-body-1 desc">OSPW번들거리며 민감하고 색소 침착에 주름진 피부 유형으로, 피지로 인한 번들거림은 물론 민감, 색소 침착, 주름, 처진 피부
+                            등으로 피부 고민의 종합세트 타입이에요.</p>
+                    </li>
+                    <li>
+                        <p class="font-h4 font-bold title">조수인님의 블랙헤드 관리법</p>
+                        <p class="font-body-1 desc">블랙헤드가 생기는 주 원인은 과도한 피지 분비와 각질탈락이 제대로 이루어지지 않으면서 생기는 현상이에요. 블랙헤드 관리법의 핵심은
+                            피지와 각질제거예요. 주 1~2회는 딥 클렌징인 필링제품으로 각질제거를 해 주시되, 자극이 되지 않는 제품으로 사용하여 각질 윗부분부터 순차로 탈락시키고, 딥 클렌징
+                            후에는 비로 진정보습 제품을 적절히 사용하여 피부가 건조해지지 않도록 기초제품을 사용 해주시는 것이 중요해요.</p>
+                    </li>
+                </ul>
+
+                <div class="step-box">
+                    <p class="font-h4 font-bold title">조수인님의 피부고민을 위한 스킨 멘토의 <span class="color-blue">추천 제품!</span></p>
+                    <div class="step">
+                        <p><span class="font-poppins-semiBold num">step1</span><span>각질</span></p>
+                        <div class="box">
+                            <p class="area">
+                                해당 영역은 관리자에서 입력합니다. 최대 3줄정도 까지 작성 가능하도록 글자수를 체크 할 예정입니다.
+                                해당 영역은 관리자에서 입력합니다. 최대 3줄정도 까지 작성 가능하도록 글자수를 체크 할 예정입니다.
+                                해당 영역은 관리자에서 입력합니다. 최대 3줄정도 까지 작성 가능하도록 글자수를 체크 할 예정입니다.
+                                해당 영역은 관리자에서 입력합니다. 최대 3줄정도 까지 작성 가능하도록 글자수를 체크 할 예정입니다.
+                                해당 영역은 관리자에서 입력합니다. 최대 3줄정도 까지 작성 가능하도록 글자수를 체크 할 예정입니다.
+                                해당 영역은 관리자에서 입력합니다. 최대 3줄정도 까지 작성 가능하도록 글자수를 체크 할 예정입니다.</p>
+                            <ul class="list">
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/common/noimg.png" alt="약산성 레드 블레미쉬 클리어 수딩폼 200ml">
+                                        </span>
+                                        <span class="name">약산성 레드 블레미쉬 클리어 수딩폼 200ml</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/@temp/sample07.png" alt="레드 블레미쉬 클리어 수딩 액티브 에센스 80ml">
+                                        </span>
+                                        <span class="name">레드 블레미쉬 클리어 수딩 액티브 에센스 80ml</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/@temp/sample06.png" alt="약산성 레드 블레미쉬 클리어 수딩폼 200ml">
+                                        </span>
+                                        <span class="name">약산성 레드 블레미쉬 클리어 수딩폼 200ml</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-black btn-border-black btn-icon"><span>제품 장바구니 담기</span><i class="icon ico-cart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <p><span class="font-poppins-semiBold num">step2</span><span>보습</span></p>
+                        <div class="box">
+                            <p class="area">해당 영역은 관리자에서 입력합니다. <br>
+                                최대 3줄정도 까지 작성 가능하도록 글자수를 체크 할 예정입니다. 글자수를 체크 할 예정입니다.</p>
+                            <ul class="list">
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/@temp/sample07.png" alt="레드 블레미쉬 클리어 수딩 액티브 에센스 80ml">
+                                        </span>
+                                        <span class="name">레드 블레미쉬 클리어 수딩 액티브 에센스 80ml</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/@temp/sample06.png" alt="약산성 레드 블레미쉬 클리어 수딩폼 200ml">
+                                        </span>
+                                        <span class="name">약산성 레드 블레미쉬 클리어 수딩폼 200ml</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/@temp/sample07.png" alt="레드 블레미쉬 클리어 수딩 액티브 에센스 80ml">
+                                        </span>
+                                        <span class="name">레드 블레미쉬 클리어 수딩 액티브 에센스 80ml</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/@temp/sample06.png" alt="약산성 레드 블레미쉬 클리어 수딩폼 200ml">
+                                        </span>
+                                        <span class="name">약산성 레드 블레미쉬 클리어 수딩폼 200ml</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-black btn-border-black btn-icon"><span>제품 장바구니 담기</span><i class="icon ico-cart"></i></a>
+                            </div>
+                            <div class="define">
+                                <p class="font-body-1 font-bold">피부장벽이란?</p>
+                                <span class="font-body-1">피부 표피 각질층이 외부유해물질 & 세균 등으로부터 피부를 보호하고, 피부 안쪽의 수분과 영양분 등이 빠져나가지 않게 해줘요. 피부 속 수분이 손실되어 건조할 경우 우리 피부는 스스로를 보호하기 위해 더욱 많은 유분을 만들어내기 때문에 피부장벽 손상은 피지, 여드름 등 피부 문제를 일으키기도 해요. 그렇기 때문에 피부장벽관리는 민감, 트러블보호와 여름철 모공을 막지 않는 산뜻한 보습까지 지킬 수 있는 제품으로 추천 드려요.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <p><span class="font-poppins-semiBold num">step3</span><span>자외선 차단</span></p>
+                        <div class="box">
+                            <p class="area">해당 영역은 관리자에서 입력합니다. 최대 3줄정도 까지 작성 가능하도록 글자수를 체크 할 예정입니다.<br>
+                                해당 영역은 관리자에서 입력합니다. 최대 3줄정도 까지 작성 가능하도록 글자수를 체크 할 예정입니다.
+                                해당 영역은 관리자에서 입력합니다. 최대 3줄정도 까지 작성 가능하도록 글자수를 체크 할 예정입니다.
+                                해당 영역은 관리자에서 입력합니다. 최대 3줄정도 까지 작성 가능하도록 글자수를 체크 할 예정입니다.</p>
+                            <ul class="list">
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/@temp/sample06.png" alt="약산성 레드 블레미쉬 클리어 수딩폼 200ml">
+                                        </span>
+                                        <span class="name">약산성 레드 블레미쉬 클리어 수딩폼 200ml</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/@temp/sample07.png" alt="레드 블레미쉬 클리어 수딩 액티브 에센스 80ml">
+                                        </span>
+                                        <span class="name">레드 블레미쉬 클리어 수딩 액티브 에센스 80ml</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/@temp/sample06.png" alt="약산성 레드 블레미쉬 클리어 수딩폼 200ml">
+                                        </span>
+                                        <span class="name">약산성 레드 블레미쉬 클리어 수딩폼 200ml</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/@temp/sample07.png" alt="레드 블레미쉬 클리어 수딩 액티브 에센스 80ml">
+                                        </span>
+                                        <span class="name">레드 블레미쉬 클리어 수딩 액티브 에센스 80ml</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#">
+                                        <span class="img">
+                                            <img src="../../img/@temp/sample06.png" alt="약산성 레드 블레미쉬 클리어 수딩폼 200ml">
+                                        </span>
+                                        <span class="name">약산성 레드 블레미쉬 클리어 수딩폼 200ml</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-black btn-border-black btn-icon"><span>제품 장바구니 담기</span><i
+                                        class="icon ico-cart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="greetings">
+                    <p class="font-h5 font-bold"><span>피부 고민에 도움이 되었나요?</span></p>
+                    <span class="font-body-1">
+                    계절의 변하면 우리 피부 타입도 바뀔 수 있답니다.<br>
+                    계절이 바뀌는 3개월에 한번씩은 닥터지 AI 피부분석을 통해 피부의 변화를 살펴 주시고, 피부 상태에 따라 필요한 스킨케어 관리를 해주시는 것이 중요합니다~!<br>
+                    마이스킨멘토 Dr.G 는 올바른 화장품 사용에 대한 상담을 진행하고 있으며 상담 시 화장품법 등 관련법률을 준수하고 있습니다.<br>
+                    따라서 의료와 관련된 부분은 전문가와 상담하시기 바라며, 상담내용 중 언급된 화장품을 의약품으로 오인하여서는 안됨을 알려드립니다.<br>
+                    스킨 멘토와 함께 건강한 피부 만들어보세요.<br>감사합니다.
+                </span>
+
+                </div>
+
+                <div class="more text-center">
+                    <p class="font-bold">더 궁금한 내용이 있으신가요?</p>
+                    <div class="btn-wrap">
+                        <a href="#" class="btn btn-lg btn-border-black btn-black"><span>추가 문의 작성</span></a>
+                        <a href="#" class="btn btn-lg btn-black"><span>후기 작성</span></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-details">
+            <div class="page-btn-wrap">
+                <a href="#" class="btn-page btn-prev"><i class="icon ico-prev"></i><span class="font-h6">이전</span></a>
+                <a href="#" class="btn-page btn-next"><span class="font-h6">다음</span><i class="icon ico-next"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    <button type="button" class="uio-top-btn"><span>상단으로 이동</span></button>
+<footer class="l__footer">
+    <div class="footer__in">
+        <nav class="l__fnb">
+            <a href="#" class="logo"><img src="../../img/common/brand_logo_white.svg" alt="Dr.G"></a>
+            <ul>
+                <li><a href="#">Dr.G소개</a></li>
+                <li><a href="https://gwss.recruiter.co.kr/appsite/company/index">채용정보</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">회원혜택</a></li>
+                <li><a href="#">제휴문의</a></li>
+            </ul>
+        </nav>
+        <aside>
+            <nav class="sns__group">
+                <li class="sns sns-kakaoch"><a href="https://pf.kakao.com/_HuEsE" target="_blank" title="새창"><span class="sound-only">닥터지 카카오채널</span></a></li>
+                <li class="sns sns-youtube"><a href="https://www.youtube.com/user/DRGKOREA" target="_blank" title="새창"><span class="sound-only">닥터지 유투브</span></a></li>
+                <li class="sns sns-facebook"><a href="https://www.facebook.com/gwsscosmetic" target="_blank" title="새창"><span class="sound-only">닥터지 페이스북</span></a></li>
+                <li class="sns sns-insta"><a href="https://www.instagram.com/dr.g_official/" target="_blank" title="새창"><span class="sound-only">닥터지 인스타그램</span></a></li>
+            </nav>
+            <div class="l__cs">
+                <h5>고객센터 <a href="tel:1811-9415">1811-9415</a></h5>
+                <h6 class="sound-only">근무시간 안내</h6>
+                <ul class="items">
+                    <li>평일 : 09:30 ~ 16:00</li>
+                    <li>점심 : 12:30 ~ 13:30</li>
+                    <li>토요일, 일요일, 공휴일 휴무 입니다.</li>
+                </ul>
+            </div>
+            <img src="../../img/common/em_brand_drg_v2@2x.png" alt="Dr.G" class="subLogo">
+        </aside>
+        <div class="l__desc">
+            <p class="corp">(주)고운세상코스메틱</p>
+            <ul class="items">
+                <li class="address">경기도 성남시 분당구 분당로 55 퍼스트타워 11층</li>
+                <li class="corp_ceo">대표이사  안건영</li>
+                <li class="corp_regnum">사업자등록번호  209-81-23948</li>
+                <li class="corp_marketnum">통신판매업신고번호  2012-경기성남-0552</li>
+                <li class="corp_regnum_inq"><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2098123948" target="_blank">사업자정보확인</a></li>
+            </ul>
+        </div>
+        <div class="l__language">
+            <dl>
+                <dt><button type="button"><i class="ico ico-global"></i><span>중국</span></button></dt>
+                <dd>
+                    <a href="https://login.taobao.com/member/login.jhtml?redirectURL=http%3A%2F%2Fdrghzp.world.tmall.com%2Fshop%2Fview_shop.htm&amp;uuid=42d70ded92ecc6c10ef299d6826288cc" target="_blank" title="새창">중국</a>
+                    <a href="http://www.dr-g.co.jp/" target="_blank" title="새창">일본</a>
+                </dd>
+            </dl>
+            <div class="corp_copyright">Copyright © GOWOONSESANG COSMETICS Co.,Ltd. All Rights Reserved.</div>
+        </div>
+    </div>
+</footer>
+
+    <!-- e footer -->
+</div>
+<script>
+    $(document).ready(function () {
+
+        /*step1*/
+        $('.asking .badge-box .badge').on('click', function () {
+            $(this).toggleClass('active')
+
+            let input = $('.asking .badge-box').next('.etc-input')
+
+            input.hide()
+            if($('.etc').hasClass('active')){
+                input.show()
+            }else {
+                input.hide()
+            }
+        })
+
+        /*step2*/
+        $('.question-box .habit li .btn').on('click', function () {
+        $(this).parents('li').find('.btn').removeClass('active')
+        $(this).addClass('active');
+    })
+
+        /*step 공통*/
+        let stepScroll = 0;
+        $(window).scroll(function (event) {
+            if ($('.mentoring-wrap').find('.step-heading').length) {
+                let st = $(this).scrollTop();
+                let stepTop = $('.step-heading').offset().top - 80
+
+                if (st > stepScroll) {
+                     //console.log("DOWN");
+                    if (st > stepTop){
+                        $('.inner').addClass('_step-fixed')
+                    }
+                } else {
+                     //console.log("UP");
+                    if (st < stepTop){
+                        $('.inner').removeClass('_step-fixed')
+                    }
+                }
+                //Updates scroll position
+                stepScroll = st;
+            }
+        });
+
+        /*답변 대기, 답변 완료*/
+        $('.unfold-box .title').on('click', function () {
+            if (!$(this).hasClass('_title')) {
+                $(this).find('.icon').removeClass('ico-plus-sm').addClass('ico-minus-sm');
+                $(this).addClass('_title');
+                $('.list-bg').slideDown(200);
+                $(this).find('span').text('나의 피부고민 및 생활습관 접기')
+            } else {
+                $(this).find('.icon').removeClass('ico-minus-sm').addClass('ico-plus-sm');
+                $(this).removeClass('_title');
+                $('.list-bg').slideUp(200);
+                $(this).find('span').text('나의 피부고민 및 생활습관 펼쳐보기')
+            }
+        })
+
+        /*목록 tab*/
+        let lastScroll = 0;
+        $(window).scroll(function (){
+            if($('.container-fluid').find('._question-wrap').length){
+                let st = $(this).scrollTop();
+                let questionTab = $('._question-tab');
+                let tabOffset = questionTab.offset().top
+                let contentOffset = $('.question-list .content').offset().top
+
+                if (st > lastScroll){
+                    //console.log("DOWN");
+                    if (st > tabOffset){
+                        questionTab.addClass('tab-fixed')
+                    }
+                }
+                else {
+                    //console.log("UP");
+                    if (st <= contentOffset){
+                        questionTab.removeClass('tab-fixed')
+                    }
+                }
+                //Updates scroll position
+                lastScroll = st;
+            }
+        });
+
+        /*|--------------s 서브메인----------------------------|*/
+
+        /*-------tab-------*/
+        $('.slide-tab .item a').on('click', function () {
+            let idx = $(this).parent().index() + 1
+            // console.log(idx)
+            let offset = $('.section').eq(idx).offset();
+            let headHeight = $('.header').height() + $('._section-tab').height()
+
+            //console.log(headHeight)
+            $('html, body').animate({scrollTop: offset.top - headHeight}, 400)
+        })
+
+        $(function () {
+            let lastScroll = 0;
+
+            $(window).scroll(function (event) {
+                let st = $(this).scrollTop();
+                let tab = $('._tab');
+                let tabOffset = tab.offset().top;
+                let aboutOffset = $('.section-about').offset().top;
+                //console.log(sectionTabOffset)
+
+                if ($('.container-fluid').find('._section-tab').length) {
+                    //console.log(st)
+                    if (st > lastScroll) {
+                        //console.log("DOWN");
+                        if (st > tabOffset) {
+                            tab.addClass('tab-fixed')
+                        }
+                    } else {
+                        //console.log("UP");
+                        if (st <= aboutOffset) {
+                            tab.removeClass('tab-fixed')
+                        }
+                    }
+                    //Updates scroll position
+                    lastScroll = st;
+                }
+
+                /* 탭활성화 */
+                let section = $('.section')
+                let item = $('._section-tab .item')
+                section.each(function (index) {
+                    if (st > $(this).offset().top) {
+                        item.removeClass('active')
+                        item.eq(index).addClass('active')
+                    }
+                });
+            });
+        });
+        /*-----------------*/
+
+
+        new Swiper('.answer-swiper', {
+
+            slidesPerView: 4, // 동시에 보여줄 슬라이드 갯수
+            spaceBetween: 30, // 슬라이드간 간격
+            slidesPerGroup: 4, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
+
+            // 그룹수가 맞지 않을 경우 빈칸으로 메우기
+            // 3개가 나와야 되는데 1개만 있다면 2개는 빈칸으로 채워서 3개를 만듬
+            //loopFillGroupWithBlank : true,
+
+            loop: true, // 무한 반복
+
+            navigation: { // 네비게이션
+                nextEl: '.swiper-button-next', // 다음 버튼 클래스명
+                prevEl: '.swiper-button-prev', // 이번 버튼 클래스명
+            },
+        });
+
+
+
+        /*서브메인 process*/
+        let processSwiper = new Swiper("._processSwiper", {
+            autoplay: {
+                enabled: false,
+                delay: 3000,
+            },
+            speed: 1000,
+            effect: 'slide',
+            pagination: {
+                el: "._processSwiper + ._sliderPagination",
+                clickable: true,
+            },
+        });
+
+        let processAni1 = document.querySelector('._processAni1');
+        let processStep1 = bodymovin.loadAnimation({
+            container: processAni1,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: "../../img/mentoring/progress-step1.json"
+        });
+
+        let processAni2 = document.querySelector('._processAni2');
+        let processStep2 = bodymovin.loadAnimation({
+            container: processAni2,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: "../../img/mentoring/progress-step2.json"
+        });
+
+        let processAni3 = document.querySelector('._processAni3');
+        let processStep3 = bodymovin.loadAnimation({
+            container: processAni3,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: "../../img/mentoring/progress-step3.json"
+        });
+
+
+        if($('.section-process').length === 1) {
+            new Waypoint({
+                element: document.querySelector('.section-process'),
+                handler: function () {
+                    processSwiper.autoplay.start();
+                    //console.log('process slider')
+                },
+                offset: "70%"
+            })
+        }
+
+        processSwiper.on('slideChange', function () {
+
+            $('.slide-infobox .info').removeClass('active');
+            $('.slide-infobox .info').eq(this.realIndex).addClass('active');
+
+            if (processSwiper.realIndex === 0) {
+                processStep1.playSegments([0, 180], true)
+                $('._stepBox').find('.step').eq(0).addClass('active').siblings().removeClass('active');
+
+            } else if (processSwiper.realIndex === 1) {
+                processStep2.playSegments([0, 120], true)
+                $('._stepBox').find('.step').eq(1).addClass('active').siblings().removeClass('active');
+
+            } else if (processSwiper.realIndex === 2) {
+                processStep3.playSegments([0, 240], true)
+                $('._stepBox').find('.step').eq(2).addClass('active').siblings().removeClass('active');
+            }
+        });
+
+
+
+
+
+
+        /*서브메인 voc*/
+        $('.voc .review_box .item').on('click', function () {
+            if (!$(this).hasClass('active')) {
+                $(this).addClass('active').slideDown();
+                $(this).siblings().removeClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        })
+
+        /*서브메인 faq*/
+        let box = $('.faq_box')
+        let item = $('.faq_box .item')
+        let solution = $('.solution')
+        item.on('click', function () {
+          if (!$(this).hasClass('active')) {
+              $(this).siblings().removeClass('active')
+              $(this).siblings().find(solution).slideUp(200);
+              $(this).addClass('active');
+              $(this).find(solution).slideDown(200);
+          } else {
+              $(this).removeClass('active');
+              $(this).find(solution).slideUp(200);
+          }
+        })
+        $('body').click(function(e) { /*외부클릭시 닫힘처리*/
+            if(!box.has(e.target).length){
+                item.removeClass('active');
+                item.find('.solution').slideUp(200);
+            }
+        });
+
+/*|--------------e 서브메인----------------------------|*/
+    });
+</script>
+
+</body>
+</html>
