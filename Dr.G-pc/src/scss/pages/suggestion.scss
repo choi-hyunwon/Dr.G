@@ -219,6 +219,28 @@
     background-color: $gray-200;
     padding: vw(48) 0 0;
 
+    .empty {
+      text-align: center;
+      padding-top: 32px;
+
+      .img {
+        width: 45px;
+        margin: 0 auto 20px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .txt {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        color: $gray-800;
+        margin-bottom: 40px;
+      }
+    }
+
     .item {
       float: left;
       width: 288px;
@@ -666,6 +688,7 @@
 
       i {
         margin-right: vw(3);
+        margin-left: 3px;
       }
     }
 

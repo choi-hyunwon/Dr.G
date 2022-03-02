@@ -760,7 +760,7 @@
             border-radius: vw(100);
             left: 50%;
             transform: translateX(-50%);
-            top: vw(-30);
+            top: vw(-33);
             filter: drop-shadow(0 vw(4) vw(2) rgba(34, 34, 34, 0.06));
 
             &::before {
@@ -2639,6 +2639,7 @@
             height: 184px;
             background-color: $blue;
             box-shadow: 0 vw(10) vw(12) rgba(34, 34, 34, 0.1);
+            z-index: 2;
 
             .txt {
               font-weight: bold;
@@ -2652,6 +2653,7 @@
             height: 132px;
             background-color: $yellow;
             box-shadow: 0 vw(10) vw(12) rgba(34, 34, 34, 0.1);
+            z-index: 2;
 
             .txt {
               font-weight: bold;
@@ -2666,6 +2668,7 @@
             height: 121.43px;
             background-color: #ff7a72;
             box-shadow: 0 vw(10) vw(12) rgba(34, 34, 34, 0.1);
+            z-index: 2;
           }
 
           &.pos-1 {
@@ -3011,15 +3014,15 @@
 
       .editor-area {
         position: relative;
-        width: vw(370);
+        width: vw(368);
         height: vw(368);
 
         &::after {
           content: '';
           position: absolute;
-          @include background-img($width: 374, $height: 374, $category: 'AI', $img: 'bg-camera-frame.svg');
-          left: -2px;
-          top: -4px;
+          @include background-img($width: 380, $height: 380, $category: 'AI', $img: 'bg-camera-frame.svg');
+          left: -6px;
+          top: -6px;
         }
 
         .img {

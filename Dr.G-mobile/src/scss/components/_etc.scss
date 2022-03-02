@@ -199,30 +199,20 @@ body.scrOff {
       height: vw(152);
       overflow: hidden;
 
-      &::before {
-        position: absolute;
-        content: '';
-        width: inherit;
-        height: inherit;
-        border: vw(81) solid transparent;
-        border-top: none;
-        top: 0;
-        left: 0;
-      }
-
       .line {
         position: absolute;
         top: 0;
         left: 0;
-        border: vw(80) solid $blue;
-        border-top: none;
+        @include background-img ($width: 305, $height: 152, $category: 'common', $img: 'float-smile.svg');
+        //border: vw(80) solid $blue;
+        border-top: 0;
         width: inherit;
         height: inherit;
-        border-bottom-left-radius: vw(152);
-        border-bottom-right-radius: vw(152);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
         transform-origin: 50% 0;
         z-index: 1;
-        transform: rotateZ(-180deg)
+        transform: rotateZ(-180deg);
       }
     }
 
@@ -232,7 +222,7 @@ body.scrOff {
 
       .smile-graph {
         .line {
-          animation: chartAni 1s 0.5s forwards;
+          animation: smileGraphAni 1s 0.5s forwards;
         }
       }
     }
@@ -344,8 +334,8 @@ body.scrOff {
     display: none;
     position: absolute;
     width: vw(305);
-    height: vw(259);
-    bottom: vw(110);
+    height: vw(250);
+    bottom: vw(119);
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
@@ -364,7 +354,7 @@ body.scrOff {
     @keyframes drgAni {
       100% {
         opacity: 1;
-        bottom: vw(-20);
+        bottom: vw(-29);
       }
     }
 
@@ -387,7 +377,7 @@ body.scrOff {
     bottom: vw(130);
     left: 50%;
     transform: translateX(-50%);
-    padding: vw(11) vw(28) vw(13);
+    padding: vw(12) vw(28);
     text-align: center;
     background-color: rgba(255,255,255,.95);
     border-radius: vw(30);
