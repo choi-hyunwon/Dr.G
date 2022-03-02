@@ -1589,7 +1589,9 @@
                 float: left;
                 width: vw(76);
                 height: vw(76);
-                margin-right: vw(4);
+                margin-right: vw(8);
+                border-radius: vw(12);
+                overflow: hidden;
 
                 img {
                   width: 100%;
@@ -1625,7 +1627,7 @@
                 position: absolute;
                 text-align: right;
                 bottom: vw(20);
-                right: 0;
+                right: vw(-20);
               }
 
               + .item {
@@ -1790,6 +1792,7 @@
             }
 
             .btn-wrap {
+              padding: 0;
               margin-bottom: vw(48);
 
               a + a {
