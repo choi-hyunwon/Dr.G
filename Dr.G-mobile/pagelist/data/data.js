@@ -178,12 +178,6 @@ data.AI = {
         },
         {
             stateClass: 'complete',
-            url: 'Ai피부분석_개인정보_수집_및_활용동의',
-            category: 'AI',
-            page: 'Ai피부분석_개인정보_수집_및_활용동의'
-        },
-        {
-            stateClass: 'complete',
             url: 'Ai피부분석_Step1-1',
             category: 'AI',
             page: 'Ai피부분석_Step1-1'
