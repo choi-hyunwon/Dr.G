@@ -2450,6 +2450,10 @@
             height: vw(190);
             background-color: $primary;
 
+            img {
+              width: vw(40);
+            }
+
             .txt {
               color: #fff;
               font-size: vw(18);
@@ -2481,6 +2485,10 @@
             box-shadow: 0 vw(10) vw(12) rgba(34, 34, 34, 0.1);
             z-index: 1;
 
+            img {
+              width: vw(40);
+            }
+
             .txt {
               font-size: vw(15);
               font-weight: bold;
@@ -2495,6 +2503,10 @@
             box-shadow: 0 vw(10) vw(12) rgba(34, 34, 34, 0.1);
             z-index: 2;
 
+            img {
+              width: vw(30);
+            }
+
             .txt {
               font-size: vw(13);
               line-height: vw(18);
@@ -2508,6 +2520,10 @@
             background-color: #ff7a72;
             box-shadow: 0 vw(10) vw(12) rgba(34, 34, 34, 0.1);
             z-index: 2;
+
+            img {
+              width: vw(20);
+            }
 
             .txt {
               font-size: vw(13);
@@ -2799,14 +2815,14 @@
         left: 50%;
         transform: translateX(-50%);
         top: vw(196);
-        padding: vw(4);
+        //padding: vw(4);
 
         &::after {
           content: '';
           position: absolute;
-          @include background-img ($width: 234, $height: 234, $category: 'AI', $img: 'bg-camera-frame.svg');
-          left: vw(-2);
-          top: vw(-6);
+          @include background-img ($width: 238, $height: 238, $category: 'AI', $img: 'bg-camera-frame.svg');
+          left: vw(-4);
+          top: vw(-8);
         }
 
         .img {
@@ -2824,8 +2840,8 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            top: vw(-18);
-            width: vw(620);
+            top: 0;
+            width: vw(230);
           }
         }
       }

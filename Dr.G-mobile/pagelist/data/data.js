@@ -646,6 +646,12 @@ data.suggestion = {
         },
         {
             stateClass: 'complete',
+            url: '고객제안_나의제안내역_내역없는경우',
+            category: 'suggestion',
+            page: '고객제안_나의제안내역_내역없는경우'
+        },
+        {
+            stateClass: 'complete',
             url: '고객제안_비회원_의견남기기',
             category: 'suggestion',
             page: '고객제안_비회원_의견남기기'
