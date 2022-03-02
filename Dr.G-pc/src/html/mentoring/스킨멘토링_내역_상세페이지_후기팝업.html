@@ -27,7 +27,10 @@
                     <span class="star star_right _star"></span>
                 </div>
 
-                <textarea title="textarea" class="form-control" placeholder="불편함을 느꼈거나 바라는 점이 있다면 들려주세요."></textarea>
+                <div class="form-text-area">
+                    <textarea title="textarea" class="form-control" maxlength="500" onkeyup="countChar(this,'_val')" placeholder="불편함을 느꼈거나 바라는 점이 있다면 들려주세요."></textarea>
+                    <span class="count"><em class="_val">0</em>/500</span>
+                </div>
 
                 <ul class="list-with-dot">
                     <li>후기 작성 시 적립금 <span class="font-medium">500원</span> 지급(월 1회)</li>
@@ -52,4 +55,19 @@
         $("._star").eq(i).addClass("on");
     }
     });
+
+    /* textarea - count text*/
+    function countChar(val , target) {
+        var len = val.value.length;
+        var targetItem = $(`.${target}`);
+
+        targetItem.text(len)
+
+        if(len === 0) {
+            targetItem.css('color','#BBBBBB')
+        }
+        else {
+            targetItem.css('color','#47bdff')
+        }
+    }
 </script>
