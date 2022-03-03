@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 |--------------------------------------|
-  Dr.G Pages - v0.1.13 / 02.25
+  Dr.G Pages - v0.1.14 / 03.03
 |-------------------------------------|
 */
 /*
@@ -861,6 +861,24 @@
   background-color: #f8f8f8;
   padding: 48px 0 0;
 }
+.suggestion-wrap .my-opinion-list .empty {
+  text-align: center;
+  padding-top: 32px;
+}
+.suggestion-wrap .my-opinion-list .empty .img {
+  width: 45px;
+  margin: 0 auto 20px;
+}
+.suggestion-wrap .my-opinion-list .empty .img img {
+  width: 100%;
+}
+.suggestion-wrap .my-opinion-list .empty .txt {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  color: #444444;
+  margin-bottom: 40px;
+}
 .suggestion-wrap .my-opinion-list .item {
   float: left;
   width: 288px;
@@ -1225,6 +1243,7 @@
 }
 .suggestion-wrap .caution-box .title i {
   margin-right: 3px;
+  margin-left: 3px;
 }
 .suggestion-wrap .caution-box .list-with-dot {
   padding-left: 3px;
@@ -5265,7 +5284,7 @@
   border-radius: 100px;
   left: 50%;
   transform: translateX(-50%);
-  top: -30px;
+  top: -33px;
   filter: drop-shadow(0 4px 2px rgba(34, 34, 34, 0.06));
 }
 .AI-wrap .result .heading .skin-type-info .btn-tooltip .alert-tooltip::before {
@@ -6788,6 +6807,7 @@
   height: 184px;
   background-color: #47BDFF;
   box-shadow: 0 10px 12px rgba(34, 34, 34, 0.1);
+  z-index: 2;
 }
 .AI-wrap .skin-change-report .skin-trouble .bubble-chart .bubble.bubble-blue .txt {
   font-weight: bold;
@@ -6799,6 +6819,7 @@
   height: 132px;
   background-color: #FFE665;
   box-shadow: 0 10px 12px rgba(34, 34, 34, 0.1);
+  z-index: 2;
 }
 .AI-wrap .skin-change-report .skin-trouble .bubble-chart .bubble.bubble-yellow .txt {
   font-weight: bold;
@@ -6811,6 +6832,7 @@
   height: 121.43px;
   background-color: #ff7a72;
   box-shadow: 0 10px 12px rgba(34, 34, 34, 0.1);
+  z-index: 2;
 }
 .AI-wrap .skin-change-report .skin-trouble .bubble-chart .bubble.pos-1 {
   bottom: 0;
@@ -7080,18 +7102,18 @@
 }
 .AI-wrap .sub-main .visual .editor-area {
   position: relative;
-  width: 370px;
+  width: 368px;
   height: 368px;
 }
 .AI-wrap .sub-main .visual .editor-area::after {
   content: "";
   position: absolute;
-  width: 374px;
-  height: 374px;
+  width: 380px;
+  height: 380px;
   background-image: url("../img/AI/bg-camera-frame.svg");
   background-size: cover;
-  left: -2px;
-  top: -4px;
+  left: -6px;
+  top: -6px;
 }
 .AI-wrap .sub-main .visual .editor-area .img {
   position: absolute;
@@ -12569,6 +12591,7 @@
   min-width: 160px;
   height: 48px;
   border: 1px solid #dddddd;
+  color: #bbbbbb;
   border-radius: 100px;
   cursor: pointer;
 }
@@ -12967,6 +12990,7 @@
   display: flex;
   justify-content: center;
   margin: 60px 0 0;
+  padding: 0 77px;
 }
 .analysis-wrap .section.section-ingredient .title-list li {
   position: relative;
@@ -12986,47 +13010,71 @@
   height: 120px;
   /*주의성분 아이콘 숫자*/
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-elasticity {
-  background: url("../img/analysis/ico-elasticity.png") no-repeat center center/contain;
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-skin-01 {
+  background: url("../img/analysis/ico-matching-skin-01.png") no-repeat center center/contain;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-whitening {
-  background: url("../img/analysis/ico-whitening.png") no-repeat center center/contain;
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-skin-02 {
+  background: url("../img/analysis/ico-matching-skin-02.png") no-repeat center center/contain;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-sensitivity {
-  background: url("../img/analysis/ico-sensitivity.png") no-repeat center center/contain;
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-skin-03 {
+  background: url("../img/analysis/ico-matching-skin-03.png") no-repeat center center/contain;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-intelligence {
-  background: url("../img/analysis/ico-intelligence.png") no-repeat center center/contain;
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-skin-04 {
+  background: url("../img/analysis/ico-matching-skin-04.png") no-repeat center center/contain;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-moisturizing {
-  background: url("../img/analysis/ico-moisturizing.png") no-repeat center center/contain;
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-skin-05 {
+  background: url("../img/analysis/ico-matching-skin-05.png") no-repeat center center/contain;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-allergy {
-  background: url("../img/analysis/ico-caution-1.svg") no-repeat center center/contain;
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-skin-06 {
+  background: url("../img/analysis/ico-matching-skin-06.png") no-repeat center center/contain;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-allergy + .number {
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-skin-06 + .number {
   background-color: #FDE149;
   color: #444;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-pimple {
-  background: url("../img/analysis/ico-caution-2.svg") no-repeat center center/contain;
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-skin-07 {
+  background: url("../img/analysis/ico-matching-skin-07.png") no-repeat center center/contain;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-pimple + .number {
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-skin-07 + .number {
   background-color: #FF707A;
   color: #fff;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-stimulation {
-  background: url("../img/analysis/ico-caution-3.svg") no-repeat center center/contain;
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-skin-08 {
+  background: url("../img/analysis/ico-matching-skin-08.png") no-repeat center center/contain;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-stimulation + .number {
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-skin-08 + .number {
   background-color: #F88F2E;
   color: #fff;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-loss {
-  background: url("../img/analysis/ico-hair-loss.png") no-repeat center center/contain;
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-01 {
+  background: url("../img/analysis/ico-matching-hair-01.png") no-repeat center center/contain;
 }
-.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-strengthening {
-  background: url("../img/analysis/ico-hair-strengthening.png") no-repeat center center/contain;
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-02 {
+  background: url("../img/analysis/ico-matching-hair-02.png") no-repeat center center/contain;
+}
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-03 {
+  background: url("../img/analysis/ico-matching-hair-03.png") no-repeat center center/contain;
+}
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-04 {
+  background: url("../img/analysis/ico-matching-hair-04.png") no-repeat center center/contain;
+}
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-05 {
+  background: url("../img/analysis/ico-matching-hair-05.png") no-repeat center center/contain;
+}
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-06 {
+  background: url("../img/analysis/ico-matching-hair-06.png") no-repeat center center/contain;
+}
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-07 {
+  background: url("../img/analysis/ico-matching-hair-07.png") no-repeat center center/contain;
+}
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-08 {
+  background: url("../img/analysis/ico-matching-hair-08.png") no-repeat center center/contain;
+}
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-09 {
+  background: url("../img/analysis/ico-matching-hair-09.png") no-repeat center center/contain;
+}
+.analysis-wrap .section.section-ingredient .title-list li .icon.ico-hair-10 {
+  background: url("../img/analysis/ico-matching-hair-10.png") no-repeat center center/contain;
 }
 .analysis-wrap .section.section-ingredient .title-list li .icon + .number {
   display: inline-block;
@@ -13036,27 +13084,18 @@
   font-size: 15px;
   font-family: "Poppins-SemiBold";
   font-weight: 600;
-  line-height: 29px;
+  line-height: 28px;
   position: absolute;
-  right: 0;
-  top: 36px;
+  top: 30px;
+  left: 60%;
 }
 .analysis-wrap .section.section-ingredient .title-list li + li {
   position: relative;
-  margin-left: 244px;
-}
-.analysis-wrap .section.section-ingredient .title-list li + li::before {
-  content: "";
-  position: absolute;
-  left: -121px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 144px;
-  background: rgba(34, 34, 34, 0.1);
+  border-left: 1px solid rgba(34, 34, 34, 0.1);
 }
 .analysis-wrap .section.section-ingredient .ingredient-box {
   margin-top: 60px;
+  /* 헤어제품 장점 영역 */
 }
 .analysis-wrap .section.section-ingredient .ingredient-box .info-list {
   background-color: #ffffff;
@@ -13141,6 +13180,19 @@
 .analysis-wrap .section.section-ingredient .ingredient-box .info-list.open .mixing {
   display: block;
   overflow-y: auto;
+}
+.analysis-wrap .section.section-ingredient .ingredient-box.amount {
+  display: flex;
+  margin-top: 40px;
+}
+.analysis-wrap .section.section-ingredient .ingredient-box.amount .info-list {
+  margin-bottom: 0;
+  margin-right: 12px;
+  width: 100%;
+  text-align: center;
+}
+.analysis-wrap .section.section-ingredient .ingredient-box.amount .info-list:last-of-type {
+  margin-right: 0;
 }
 .analysis-wrap .section.section-ingredient.no-matching .desc-box {
   background: url("../img/analysis/img-noMatching.png") no-repeat top center/contain;

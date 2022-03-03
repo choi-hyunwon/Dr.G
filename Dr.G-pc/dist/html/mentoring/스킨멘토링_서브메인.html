@@ -765,12 +765,13 @@
 
             $(window).scroll(function (event) {
                 let st = $(this).scrollTop();
-                let tab = $('._tab');
-                let tabOffset = tab.offset().top;
-                let aboutOffset = $('.section-about').offset().top;
-                //console.log(sectionTabOffset)
 
                 if ($('.container-fluid').find('._section-tab').length) {
+                    let tab = $('._tab');
+                    let tabOffset = tab.offset().top;
+                    let aboutOffset = $('.section-about').offset().top;
+                    //console.log(sectionTabOffset)
+
                     //console.log(st)
                     if (st > lastScroll) {
                         //console.log("DOWN");

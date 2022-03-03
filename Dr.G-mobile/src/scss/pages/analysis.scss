@@ -473,64 +473,93 @@
           color: $gray-800;
           >span{
             display: block;
+            margin-bottom: vw(8);
           }
           .icon{
             width: vw(80);
             height: vw(80);
-            &.ico-elasticity{
-              background: url("../img/analysis/ico-elasticity.png") no-repeat center center / contain;
+            &.ico-skin-01{
+              background: url("../img/analysis/ico-matching-skin-01.png") no-repeat center center / contain;
             }
-            &.ico-whitening{
-              background: url("../img/analysis/ico-whitening.png") no-repeat center center / contain;
+            &.ico-skin-02{
+              background: url("../img/analysis/ico-matching-skin-02.png") no-repeat center center / contain;
             }
-            &.ico-sensitivity{
-              background: url("../img/analysis/ico-sensitivity.png") no-repeat center center / contain;
+            &.ico-skin-03{
+              background: url("../img/analysis/ico-matching-skin-03.png") no-repeat center center / contain;
             }
-            &.ico-intelligence{
-              background: url("../img/analysis/ico-intelligence.png") no-repeat center center / contain;
+            &.ico-skin-04{
+              background: url("../img/analysis/ico-matching-skin-04.png") no-repeat center center / contain;
             }
-            &.ico-moisturizing{
-              background: url("../img/analysis/ico-moisturizing.png") no-repeat center center / contain;
+            &.ico-skin-05{
+              background: url("../img/analysis/ico-matching-skin-05.png") no-repeat center center / contain;
             }
-            &.ico-allergy{
-              background: url("../img/analysis/ico-caution-1.svg") no-repeat center center / contain;
+            &.ico-skin-06{
+              background: url("../img/analysis/ico-matching-skin-06.png") no-repeat center center / contain;
               +.number{
                 background-color:  #FDE149;
                 color: #444;
               }
             }
-            &.ico-pimple{
-              background: url("../img/analysis/ico-caution-2.svg") no-repeat center center / contain;
+            &.ico-skin-07{
+              background: url("../img/analysis/ico-matching-skin-07.png") no-repeat center center / contain;
               +.number{
                 background-color:  #FF707A;
                 color: #fff;
               }
             }
-            &.ico-stimulation{
-              background: url("../img/analysis/ico-caution-3.svg") no-repeat center center / contain;
+            &.ico-skin-08{
+              background: url("../img/analysis/ico-matching-skin-08.png") no-repeat center center / contain;
               +.number{
                 background-color:  #F88F2E;
                 color: #fff;
               }
             }
-            &.ico-hair-loss{
-              background: url("../img/analysis/ico-hair-loss.png") no-repeat center center / contain;
+
+            &.ico-hair-01{
+              background: url("../img/analysis/ico-matching-hair-01.png") no-repeat center center / contain;
             }
-            &.ico-hair-strengthening{
-              background: url("../img/analysis/ico-hair-strengthening.png") no-repeat center center / contain;
+            &.ico-hair-02{
+              background: url("../img/analysis/ico-matching-hair-02.png") no-repeat center center / contain;
             }
+            &.ico-hair-03{
+              background: url("../img/analysis/ico-matching-hair-03.png") no-repeat center center / contain;
+            }
+            &.ico-hair-04{
+              background: url("../img/analysis/ico-matching-hair-04.png") no-repeat center center / contain;
+            }
+            &.ico-hair-05{
+              background: url("../img/analysis/ico-matching-hair-05.png") no-repeat center center / contain;
+            }
+            &.ico-hair-06{
+              background: url("../img/analysis/ico-matching-hair-06.png") no-repeat center center / contain;
+            }
+            &.ico-hair-07{
+              background: url("../img/analysis/ico-matching-hair-07.png") no-repeat center center / contain;
+            }
+            &.ico-hair-08{
+              background: url("../img/analysis/ico-matching-hair-08.png") no-repeat center center / contain;
+            }
+            &.ico-hair-09{
+              background: url("../img/analysis/ico-matching-hair-09.png") no-repeat center center / contain;
+            }
+            &.ico-hair-10{
+              background: url("../img/analysis/ico-matching-hair-10.png") no-repeat center center / contain;
+            }
+
+
             /*주의성분 아이콘 숫자*/
             +.number{
               display: inline-block;
               width: vw(22);
               height: vw(22);
               border-radius: 50%;
+              margin-bottom: 0;
               font-size: vw(13);
               font-weight: 600;
               line-height: vw(22);
               position: absolute;
-              right: vw(20);
-              top: vw(26);
+              right: vw(17);
+              top: vw(34);
             }
           }
           &:last-of-type{
