@@ -160,6 +160,9 @@
     /*-------------e 분석결과 상세 (스킨케어)-----------------*/
 
 
+
+
+
     /*서브메인*/
     /*gauge number*/
     let mainCounter = setInterval(function () {
@@ -174,6 +177,21 @@
       }
     }, 20);
   });
+
+  /*크림 텍스쳐*/
+  let Texture = document.querySelector('.img-main-texture');
+  setTimeout(() => {
+  let animationSkipForward = bodymovin.loadAnimation({
+      container: Texture,
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      path: "../../img/analysis/img-main-texture.json"
+  });
+  }, 1000)
+
+
+
 
 
   /*tab*/

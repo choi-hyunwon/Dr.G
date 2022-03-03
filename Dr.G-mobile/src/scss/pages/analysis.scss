@@ -942,7 +942,7 @@
           top: vw(18);
           left: 50%;
           transform: translateX(-50%);
-          z-index: 1;
+          z-index: 2;
           .counter{
             font-size: vw(46);
             font-weight: 600;
@@ -961,7 +961,22 @@
           margin: 0 auto;
           position: relative;
           background: url("../img/analysis/img-main-circle-round.png") 0 0 /100% auto;
+          z-index: 1;
           &:before{
+            content: '';
+            clear: both;
+            display: inline-block;
+            animation: left 8s linear infinite;
+            background: url("../img/analysis/img-main-circle-left.png") 0 0 / 100% auto;
+            width: vw(222);
+            height: vw(222);
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            top: 0;
+          }
+
+          &:after{
             content: '';
             clear: both;
             display: inline-block;
@@ -971,26 +986,11 @@
             height: vw(222);
             position: absolute;
             z-index: 0;
-          }
-          &:after{
-            content: '';
-            clear: both;
-            display: inline-block;
-            animation: left 8s linear infinite;
-            background: url("../img/analysis/img-main-circle-left.png") 0 0 / 100% auto;
-            width: vw(222);
-            height: vw(222);
-            z-index: 0;
+            left: 0;
+            top: 0;
           }
 
-          img{ /*texture*/
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: vw(246);
-            height: vw(254);
-            z-index: 1;
-          }
+
 
           // Keyframes
           @keyframes right {
