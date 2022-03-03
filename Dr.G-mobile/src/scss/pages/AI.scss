@@ -574,10 +574,11 @@
 
           &:last-child {
             margin-bottom: 0;
-            padding-bottom: vw(52);
+            padding-bottom: vw(48);
 
             .question {
               border-bottom: 0;
+              padding-bottom: 0;
             }
           }
 
