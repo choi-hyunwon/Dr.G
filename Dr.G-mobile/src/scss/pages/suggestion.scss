@@ -273,6 +273,28 @@
         }
       }
     }
+
+    .empty {
+      text-align: center;
+      padding-top: vw(52);
+      padding-bottom: vw(24);
+
+      .img {
+        width: vw(61.87);
+        margin: 0 auto vw(16);
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .txt {
+        font-size: vw(16);
+        font-weight: 500;
+        line-height: vw(24);
+        color: $gray-800;
+      }
+    }
   }
 
   .suggestion-slider {

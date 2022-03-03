@@ -107,36 +107,35 @@
   .visual {
     position: relative;
     width: 100%;
-    height: vw(602);
+    height: vw(606);
     background-color: #3DD7BD;
     overflow: hidden;
 
     .editor-area {
       position: absolute;
-      width: vw(273);
-      height: vw(273);
+      width: vw(272);
+      height: vw(272);
       left: 50%;
       transform: translateX(-50%);
-      top: vw(262);
-      padding: vw(4);
+      top: vw(260);
 
       &::after {
         content: '';
         position: absolute;
-        @include background-img ($width: 276, $height: 276, $category: 'main', $img: 'bg-camera-frame.svg');
-        left: vw(-2);
-        top: vw(-6);
+        @include background-img ($width: 280, $height: 280, $category: 'main', $img: 'bg-camera-frame.svg');
+        left: vw(-4);
+        top: vw(-8);
       }
 
       .img {
         position: absolute;
-        width: vw(273);
-        height: vw(273);
+        width: vw(272);
+        height: vw(272);
         bottom: vw(4);
         left: 50%;
         transform: translateX(-50%);
         overflow: hidden;
-        background-color: #3DD7BD;
+        background-color: rgba(255, 255, 255, 0.2);
         border-radius: vw(12);
 
         img {
@@ -144,9 +143,7 @@
           left: 50%;
           transform: translateX(-50%);
           top: 0;
-          width: vw(273);
-          //top: vw(-18);
-          //width: vw(732);
+          width: vw(272);
         }
       }
     }
@@ -155,7 +152,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      padding: vw(80) vw(26) 0;
+      padding: vw(76) vw(26) 0;
 
       .heading {
         font-weight: bold;
