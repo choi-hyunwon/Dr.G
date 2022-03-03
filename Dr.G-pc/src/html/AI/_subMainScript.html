@@ -576,17 +576,20 @@
         element: document.querySelector('._sectionProcess'),
         handler: function () {
             processSlider.autoplay.start();
+            $('._sectionProcess .item-1').addClass('ani-on')
             // console.log('process slider')
         },
-        offset: "50%"
+        offset: "90%"
     })
 
     processSlider.on('slideChange', function () {
         if(processSlider.realIndex === 0) {
             $('._progressArea').find('.step').eq(0).addClass('on').siblings().removeClass('on');
+            $('._sectionProcess .item-1').addClass('ani-on')
         } else if(processSlider.realIndex === 1) {
             $('._progressArea').find('.step').eq(1).addClass('on').siblings().removeClass('on');
             animationProcessing.playSegments([0,180], true);
+            $('._sectionProcess .item-1').removeClass('ani-on')
         }
     });
     /* ---------- e why section animation ---------- */

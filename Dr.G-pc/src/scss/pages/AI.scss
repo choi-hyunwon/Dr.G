@@ -3994,9 +3994,7 @@
                   position: relative;
                   width: 384px;
                   height: 376.67px;
-                  //margin: 0 auto vw(84);
                   overflow: hidden;
-                  //box-shadow: 0 5px 10px rgba(34, 34, 34, 0.12);
                   border-radius: 14.3511px;
 
                   img {
@@ -4021,7 +4019,6 @@
                       -webkit-animation-name: scanAni;
                       animation-duration: 2s;
                       -webkit-animation-duration: 2s;
-
                       animation-timing-function: linear;
                       -webkit-animation-timing-function: linear;
                       animation-iteration-count: infinite;
@@ -4031,17 +4028,17 @@
                       animation-direction: alternate;
                       animation-fill-mode: forwards;
                       -webkit-animation-direction: alternate;
+                      animation-play-state: paused;
+                    }
+                  }
+                }
 
-                      //&::after {
-                      //  content: '';
-                      //  position: absolute;
-                      //  top: vw(3);
-                      //  left: 0;
-                      //  width: 100%;
-                      //  height: vw(69);
-                      //  background: linear-gradient(180deg, #ddbc0f 0%, rgba(221, 188, 15, 0) 100%);
-                      //  opacity: .5;
-                      //}
+                &.ani-on {
+                  .item-img {
+                    .scan-box {
+                      .scan-line {
+                        animation-play-state: running;
+                      }
                     }
                   }
                 }

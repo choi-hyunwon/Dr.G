@@ -16,21 +16,33 @@
         drag: function () {
             var offset = $(this).offset();
             var yPos = offset.top;
-            console.log('y :', yPos)
+            // console.log('y :', yPos)
         }
     });
 
-    if($('.container').length == 1) {
-        // $('.chatbot-box').css('height',$('.container').outerHeight() + 'px')
-    } else if($('.container-fluid').length == 1) {
-        $('.chatbot-box').css('height',$('.container-fluid').outerHeight() + 'px')
+    if ($('.container-fluid').length == 1) {
+        setTimeout(function () {
+            var containerHeight = $('.container-fluid').height();
+            $('.chatbot-box').css('height', containerHeight + 'px')
+        }, 200)
     }
 
-    chatbot.find('img').on('click',function (){
+    $(window).on('scroll', function () {
+        var c = $(this).scrollTop(),
+            $nav = $('.l__footer'),
+            $tarN = $(document).height() - ($(window).height() + $nav.height());
+        if (c > $tarN) {
+            $('.chatbot').css('bottom', c - $tarN + 30 + "px");
+        } else {
+            $('.chatbot').css('bottom', '30px');
+        }
+    });
+
+    chatbot.find('img').on('click', function () {
         $(this).siblings('.tip').show();
     })
 
-    $('._chatClose').on('click',function (){
+    $('._chatClose').on('click', function () {
         chatbot.children('.tip').hide();
     })
 </script>
