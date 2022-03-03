@@ -250,25 +250,25 @@
   /*tab*/
   $(function(){
       let lastScroll = 0;
-      let sectionTab = $('._section-tab')
 
       $(window).scroll(function(event){
           let st = $(this).scrollTop();
-          let sectionAbout = $('.section-about').offset();
-          let sectionTabOffset = sectionTab.offset()-200;
+          let tab = $('._tab');
+          let tabOffset = tab.offset().top;
+          let aboutOffset = $('.section-about').offset().top;
           //console.log(sectionTabOffset)
 
-          if($('.container-fluid').find('._sub-main').length) {
+          if($('.container-fluid').find('._section-tab').length) {
               //console.log(st)
               if (st > lastScroll) {
                   //console.log("DOWN");
-                  if (st > sectionTabOffset ) {
-                      sectionTab.find('.inner').addClass('fixed')
+                  if (st > tabOffset) {
+                      tab.addClass('tab-fixed')
                   }
               } else {
                   //console.log("UP");
-                  if (st < sectionAbout) {
-                      sectionTab.find('.inner').removeClass('fixed')
+                  if (st <= aboutOffset) {
+                      tab.removeClass('tab-fixed')
                   }
               }
               //Updates scroll position
@@ -277,11 +277,11 @@
 
           /* 탭활성화 */
           let section = $('._section')
-          let tab = $('._section-tab .item')
+          let item = $('._section-tab .item')
           section.each(function( index) {
               if ( st > $(this).offset().top - 350){
-                  tab.removeClass('active')
-                  tab.eq(index).addClass('active')
+                  item.removeClass('active')
+                  item.eq(index).addClass('active')
               }
           });
       });

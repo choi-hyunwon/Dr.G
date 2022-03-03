@@ -1831,57 +1831,21 @@
     }
 
     .section-tab {
-      border-bottom: 1px solid #eeeeee;
+      background-color: #ffffff;
       margin: 0 auto;
-      .inner{
-        position: relative;
-        z-index: 10;
-        width:100%;
-        background: $gray-fff;
 
-
-        &.fixed{
+      .tab{
+        .inner{
+          position: relative;
+          z-index: 10;
+          width:100%;
+        }
+        &.tab-fixed{
           position:fixed;
           top:87px;
+          z-index: 3;
           left: 50%;
           transform: translateX(-50%);
-          &:before{
-            content:'';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: -200%;
-            width: 1000%;
-            height:64px;
-            background:#FFFFFF;
-            border-bottom: 1px solid #eee;
-          }
-          .tab {
-            border-bottom: 1px solid #eee;
-          }
-        }
-        .font-h4 {
-          padding: 0 vw(24);
-          margin-bottom: vw(16);
-        }
-        .tab {
-          overflow:unset;
-          border-bottom: none;
-          z-index: 5;
-          .item {
-            &.active {
-              a {
-                color: $violet;
-              }
-              &:after {
-                background-color: $violet;
-              }
-            }
-          }
-          &:after{
-            background-color: unset;
-          }
-
         }
       }
     }
