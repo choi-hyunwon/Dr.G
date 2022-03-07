@@ -113,6 +113,17 @@
                 },
             },
         });
+
+        /* 피부타입 공유하기 */
+        $("#copy").on('click',function(){
+            html2canvas($('#copyArea')[0]).then(function (canvas) {
+                var img = document.createElement("a");
+                img.download = "result.png";
+                img.href = canvas.toDataURL();
+                document.body.appendChild(img);
+                img.click();
+            });
+        });
     })
 
     // tab

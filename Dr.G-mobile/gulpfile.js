@@ -49,6 +49,7 @@ function copyLibJs() {
         'src/js/lib/lottie.js',
         'src/js/lib/TweenMax.js',
         'src/js/lib/imageMapResizer.min.js',
+        'src/js/lib/html2canvas.js',
     ];
 
     return gulp.src(sourceLib)

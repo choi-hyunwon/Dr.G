@@ -4236,7 +4236,9 @@
 
     .result {
       .heading {
-        margin-bottom: vw(40);
+        background: $primary;
+        height: vw(459);
+        margin-bottom: vw(90);
       }
 
       .analysis-result {
