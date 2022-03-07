@@ -103,7 +103,7 @@
 
         .inner {
           .text-wrap {
-            padding: 93px 0 0 70px;
+            padding: 93px 0 93px 70px;
           }
         }
       }
@@ -125,7 +125,7 @@
         .text-wrap {
           background-color: $gray-200;
           width: calc(100% - 501px);
-          padding: 50px 0 0 70px;
+          padding: 60px 0 60px 70px;
 
           .font-h3 {
             font-weight: bold;
