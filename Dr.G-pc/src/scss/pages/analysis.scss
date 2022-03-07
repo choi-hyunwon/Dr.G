@@ -1770,7 +1770,7 @@
               top: 82px;
               left: 50%;
               transform: translateX(-50%);
-              z-index: 1;
+              z-index: 2;
               color: $gray-fff;
               .counter{
                 font-size: 70px;
@@ -1789,7 +1789,21 @@
               margin: 0 auto;
               position: relative;
               background: url("../img/analysis/img-main-circle-round.png") 0 0 /100% auto;
+              z-index: 1;
               &:before{
+                content: '';
+                clear: both;
+                display: inline-block;
+                animation: left 8s linear infinite;
+                background: url("../img/analysis/img-main-circle-left.png") 0 0 / 100% auto;
+                width: 352px;
+                height: 352px;
+                position: absolute;
+                z-index: 0;
+                left: 0;
+                top: 0;
+              }
+              &:after{
                 content: '';
                 clear: both;
                 display: inline-block;
@@ -1799,16 +1813,8 @@
                 height: 352px;
                 position: absolute;
                 z-index: 0;
-              }
-              &:after{
-                content: '';
-                clear: both;
-                display: inline-block;
-                animation: left 8s linear infinite;
-                background: url("../img/analysis/img-main-circle-left.png") 0 0 / 100% auto;
-                width: 352px;
-                height: 352px;
-                z-index: 0;
+                left: 0;
+                top: 0;
               }
 
               img{ /*texture*/
