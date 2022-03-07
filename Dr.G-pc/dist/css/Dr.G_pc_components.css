@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 |---------------------------------------|
-  Dr.G PC Components - v0.1.14 / 03.03
+  Dr.G PC Components - v0.1.16 / 03.07
 |---------------------------------------|
 */
 /*
@@ -15663,21 +15663,26 @@ em, i {
   bottom: 0;
   padding-top: 30px;
   padding-bottom: 30px;
+  z-index: 50;
 }
 .chatbot-box.bg-light-gray {
   background-color: #f8f8f8;
 }
 .chatbot-box .chatbot {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   width: 99px;
-  height: 129px;
+  height: 200px;
   left: 60px;
   bottom: 30px;
   display: block;
 }
 .chatbot-box .chatbot img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  height: 129px;
 }
 .chatbot-box .chatbot .tip {
   display: none;
