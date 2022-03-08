@@ -336,6 +336,8 @@
             }
 
             .img-box {
+              transition: transform 2s, opacity 3s;
+
               .img {
                 width: vw(212);
                 height: vw(270);
