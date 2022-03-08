@@ -424,7 +424,7 @@
         border-radius: vw(16);
         position: relative;
         width: 100%;
-        padding: vw(24) vw(24);
+        padding: vw(24) 0 vw(14);
         background-color: $gray-fff;
         margin-top: vw(48);
         color: $gray-800;
@@ -452,6 +452,7 @@
             font-size: vw(13);
             font-weight: 700;
             margin-right: vw(10);
+            margin-bottom: vw(10);
             &:last-of-type{
               margin-right: 0;
             }
@@ -948,6 +949,7 @@
             font-size: vw(46);
             font-weight: 600;
             line-height: 1;
+            font-family: $poppins;
           }
           .unit{
             font-size: vw(36);
