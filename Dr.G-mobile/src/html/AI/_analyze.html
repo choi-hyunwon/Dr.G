@@ -166,7 +166,7 @@
     -->
     <div class="btn-wrap">
         <div class="btn-inner">
-            <a href="#" class="btn btn-lg btn-black">나의 분석 결과 공유하기</a>
+            <a href="#" class="btn btn-lg btn-black" id="copy">나의 분석 결과 공유하기</a>
         </div>
     </div>
     <div class="line-chart-box _triggerDrawChart">
@@ -199,7 +199,24 @@
                                     <stop style="stop-color:#EA8181" offset="100%"></stop>
                                 </linearGradient>
                             </defs>
-                            <path style="stroke:url(#Gradient)" d="" class="line"></path>
+                            <!--
+                                2개의 점수가 같을 경우는 정상 노출되고 있는데, (style="stroke:url(#Gradient)")
+                                3개 이상의 점수가 같을 경우 stroke에 같은 점수에 따라 색상값 넣는 방안 검토부탁드립니다. (style="stroke:#6BD665")
+                                1~10점 : #EA8181
+                                11~20점 : #EB9C80
+                                21~30점 : #ECB67F
+                                31~40점 : #ECD17D
+                                41~50점 : #CFDA77
+                                51~60점: #9ED86E
+                                61~70점 : #6BD665
+                                71~80점 : #46D269
+                                81~90점 : #3DC69D
+                                91~100점 : #2DAFF9
+
+                                ex) 67로 3회차가 동일할 경우, <path style="stroke:#6BD665" d="" class="line"></path>
+                                ex) 80로 3회차가 동일할 경우, <path style="stroke:#46D269" d="" class="line"></path>
+                            -->
+                            <path style="stroke:#6BD665" d="" class="line"></path>
                         </svg>
                         <!--
                                  1. 현재 구간에서 마지막 요소, .item에 item-last 클래스 추가
@@ -210,11 +227,11 @@
                         <div class="chart-info">
 
                             <!-- s 현재 구간 -->
-                            <div class="item item-top">
+                            <div class="item">
                                 <input type="range" title="range" min="0" max="100" />
                                 <div class="percentage"></div>
                                 <div class="line-box">
-                                    <div class="tooltip-box"><a href="#">0</a></div>
+                                    <div class="tooltip-box"><a href="#">67</a></div>
                                     <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
                                 </div>
                             </div>
@@ -230,7 +247,7 @@
                                 <input type="range" title="range" min="0" max="100" />
                                 <div class="percentage"></div>
                                 <div class="line-box">
-                                    <div class="tooltip-box"><a href="#">100</a></div>
+                                    <div class="tooltip-box"><a href="#">67</a></div>
                                     <div class="label-box"><span class="font-poppins">OS+</span><br/>민지형</div>
                                 </div>
                             </div>
