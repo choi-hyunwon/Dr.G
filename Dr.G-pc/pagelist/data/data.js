@@ -88,9 +88,9 @@ data.main = {
     list: [
         {
             stateClass: 'working',
-            url: 'Main',
-            category: 'Main',
-            page: 'Main'
+            url: 'main',
+            category: 'main',
+            page: 'main'
         },
     ]
 }
