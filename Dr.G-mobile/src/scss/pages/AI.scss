@@ -2817,7 +2817,6 @@
         left: 50%;
         transform: translateX(-50%);
         top: vw(196);
-        //padding: vw(4);
 
         &::after {
           content: '';
@@ -2870,6 +2869,23 @@
 
         .font-h6 {
           margin-bottom: vw(20);
+        }
+
+        .more-box {
+          display: flex;
+          width: 100%;
+          height: vw(24);
+          justify-content: center;
+          align-items: center;
+          margin-top: vw(14);
+
+          .arrow {
+            display: inline-block;
+            background: url("../img/mentoring/ico-arrow-bottom-white-lg.svg") no-repeat center center;
+            background-size: cover;
+            width: vw(24);
+            height: vw(24);
+          }
         }
       }
     }

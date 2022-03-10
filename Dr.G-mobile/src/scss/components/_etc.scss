@@ -161,18 +161,18 @@ body.scrOff {
       }
     }
 
-    &:before {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      background: url("../img/mentoring/ico-arrow-bottom-white-lg.svg") no-repeat center center;
-      background-size: cover;
-      width: vw(24);
-      height: vw(24);
-      top: vw(-68);
-      left: 50%;
-      transform: translateX(-50%);
-    }
+    //&:before {
+    //  content: '';
+    //  display: inline-block;
+    //  position: absolute;
+    //  background: url("../img/mentoring/ico-arrow-bottom-white-lg.svg") no-repeat center center;
+    //  background-size: cover;
+    //  width: vw(24);
+    //  height: vw(24);
+    //  top: vw(-68);
+    //  left: 50%;
+    //  transform: translateX(-50%);
+    //}
   }
 
   &.show {
