@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="container">
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="completeAlert" tabindex="-1" role="dialog" aria-labelledby="completeAlert"
+     aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered alert-popup" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="title">첨부 파일 갯수 초과</p>
+                <p class="font-body-2">최대 첨부 가능한 파일 갯수를 초과 하였습니다.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" type="button" data-dismiss="modal">확인</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--페이지 보여주기 위한 show 실행 (생략가능)-->
+<script>
+    $('#completeAlert').modal('show')
+</script>
+
+</body>
+</html>

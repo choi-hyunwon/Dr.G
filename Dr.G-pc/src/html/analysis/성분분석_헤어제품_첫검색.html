@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container-fluid">
+        <div class="analysis-wrap">
+            <!-- s heading -->
+            <div class="inner step-inner">
+                <div class="heading-box">
+                    <div class="font-h1 font-bold">1:1 성분분석</div>
+                    <div class="font-h6 font-poppins">Dr.G Cosmetic Analysis</div>
+                </div>
+                <div class="step-heading row">
+                    <div class="step col-4">
+                        <span class="tit">제품 업로드/검색</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-4">
+                        <span class="tit">제품명 확인</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-4 active">
+                        <span class="tit">성분 분석</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph full">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--
+                .smile-graph > .value {transform: rotateZ(-180deg)}로 그래프값 조절
+                (-180deg - 기본-> -360 deg 가까울수록 그래프가채워짐)
+                -->
+            </div>
+            <!-- e heading -->
+
+            <!-- s contents -->
+            <div class="content bg-gray">
+                <div class="inner">
+                    <div class="question-box">
+                        <div class="info">
+                            <p class="heading">헤어 제품을 분석 요청하셨네요!</p>
+                            <p class="sub-desc">하단 질문에 답해주시면 더욱 정확한 분석이 가능해요.</p>
+                        </div>
+                        <div class="box">
+                            <div class="item">
+                                <div class="question">
+                                    <span class="num">Q1.</span>
+                                    <span class="font-h5">나의 두피타입은?</span>
+                                    <a class="btn-delete" href="#"><span class="sr-only">삭제</span></a>
+                                </div>
+                                <div class="answer _answer">
+                                    <ul>
+                                        <li>지성 두피</li>
+                                        <li class="active">비듬 두피</li>
+                                        <li>민감성 두피</li>
+                                        <li>건성 두피</li>
+                                        <li>중성 두피</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="question">
+                                    <span class="num">Q2.</span>
+                                    <span class="font-h5">모발 상태는 어떤가요?</span>
+                                </div>
+                                <div class="answer _answer">
+                                    <ul>
+                                        <li>얇은 모발</li>
+                                        <li>손상된 모발</li>
+                                        <li>염색된 모발</li>
+                                        <li class="active">건조한 모발</li>
+                                        <li>건강한 모발</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="question">
+                                    <span class="num">Q3.</span>
+                                    <span class="font-h5">헤어 고민은 무엇인가요?</span>
+                                </div>
+                                <div class="answer _answer">
+                                    <div class="badge-box">
+                                        <div class="badge badge-lg">탈모</div>
+                                        <div class="badge badge-lg active">건조함</div>
+                                        <div class="badge badge-lg">두피 트러블</div>
+                                        <div class="badge badge-lg">모발 갈라짐</div>
+                                        <div class="badge badge-lg">간지러움</div>
+                                        <div class="badge badge-lg active">적은 볼륨</div>
+                                        <div class="badge badge-lg active">윤기 없음</div>
+                                        <div class="badge badge-lg">두피 각질</div>
+                                        <div class="badge badge-lg">모발 손상</div>
+                                        <div class="badge badge-lg">염색모 케어</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn btn-lg btn-black btn-violet"><span>확인</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- e contents -->
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+
+</div>
+@@include('./_analysisScript.html')
+</body>
+</html>
+
+

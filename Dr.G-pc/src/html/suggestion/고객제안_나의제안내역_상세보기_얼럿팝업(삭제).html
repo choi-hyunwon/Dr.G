@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+
+<div class="wrap">
+    <div class="container">
+    </div>
+</div>
+
+<!-- 삭제 Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog"
+     aria-labelledby="deleteModal" aria-hidden="true">
+    <div class="modal-dialog modal-sm alert-popup modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="title">삭제</p>
+                <p class="font-body-2">게시물을 삭제하면 다시 복구할 수 없습니다. 그래도 삭제할까요?</p>
+            </div>
+            <div class="modal-footer btn-double">
+                <a href="#" type="button" class="color-gray" data-dismiss="modal">네</a>
+                <a href="#" type="button" data-dismiss="modal" data-toggle="modal"
+                   data-target="#completeAlert">아니오</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 완료 Modal -->
+<div class="modal fade" id="completeAlert" tabindex="-1" role="dialog"
+     aria-labelledby="alertPopupType2" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered alert-popup" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="title">완료</p>
+                <p class="font-body-2">삭제되었습니다.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" type="button" data-dismiss="modal">확인</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--페이지 보여주기 위한 show 실행 (생략가능)-->
+<script>
+    $('#deleteModal').modal('show')
+</script>
+</body>
+</html>

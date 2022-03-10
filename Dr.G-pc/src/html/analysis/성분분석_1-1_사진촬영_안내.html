@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container-fluid">
+        <div class="analysis-wrap">
+            <!-- s heading -->
+            <div class="inner step-inner">
+
+                <div class="heading-box">
+                    <div class="font-h1 font-bold">1:1 성분분석</div>
+                    <div class="font-h6 font-poppins">Dr.G Cosmetic Analysis</div>
+                </div>
+                <div class="step-heading row">
+                    <div class="step col-4 active">
+                        <span class="tit">제품 업로드/검색</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-4">
+                        <span class="tit">제품명 확인</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-4">
+                        <span class="tit">성분 분석</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph full">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--
+                .smile-graph > .value {transform: rotateZ(-180deg)}로 그래프값 조절
+                (-180deg - 기본-> -360 deg 가까울수록 그래프가채워짐)
+                -->
+            </div>
+            <!-- e heading -->
+
+            <div class="content bg-gray">
+                <div class="inner">
+                    <div class="step-box">
+                        <div class="progress-title text-center">
+                            <p class="font-h3 font-bold">제품 촬영을 시작합니다.</p>
+                            <p class="font-body-1 sub-desc">더 정확한 분석을 위해 아래와 같은 방법으로 진행해주세요!</p>
+                        </div>
+                        <div class="progress-area guidance">
+                            <div class="img"><img src="../../img/analysis/img-sample.png" alt="촬영 견본이미지"></div>
+                            <div class="step">
+                                <ul>
+                                    <li class="item">
+                                        <span class="font-body-2">한글 제품명을 <em class="font-bold">크게 보여주세요.</em></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="font-body-2"><em class="font-bold">정면에서</em> 찍어주세요.</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="font-body-2"><em class="font-bold">초점은 정확하게</em> 맞춰 주세요.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="btn-wrap w261">
+                            <a href="#" class="btn btn-lg btn-violet"><span>제품 사진 업로드 하기</span></a>
+                            <a href="#" class="btn btn-lg btn-black btn-border-black"><span>제품명으로 검색하기</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+@@include('./_analysisScript.html')
+
+</body>
+</html>

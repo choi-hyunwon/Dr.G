@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body class="scrOff">
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container-fluid">
+        <div class="analysis-wrap">
+            <!-- s heading -->
+            <div class="inner step-inner">
+
+                <div class="heading-box">
+                    <div class="font-h1 font-bold">1:1 성분분석</div>
+                    <div class="font-h6 font-poppins">Dr.G Cosmetic Analysis</div>
+                </div>
+                <div class="step-heading row">
+                    <div class="step col-4">
+                        <span class="tit">제품 업로드/검색</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-4 active">
+                        <span class="tit">제품명 확인</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-4">
+                        <span class="tit">성분 분석</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph full">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--
+                .smile-graph > .value {transform: rotateZ(-180deg)}로 그래프값 조절
+                (-180deg - 기본-> -360 deg 가까울수록 그래프가채워짐)
+                -->
+            </div>
+            <!-- e heading -->
+
+            <div class="content bg-gray">
+                <div class="inner">
+                    <div class="step-box">
+                        <div class="progress-title text-center"><p class="font-h3 font-bold">제품명을 확인합니다.</p></div>
+                        <div class="progress-area bg-white border-radius confirm">
+
+                            <p class="text top-text">인식된 텍스트 영역 중에서 <span class="color-violet"> 브랜드명, 제품명</span>에 해당하는 영역을 모두 선택해주세요.</p>
+                            <div class="img scan-img">
+                                <img src="../../img/analysis/img-sample3.png" alt="사진 확인">
+                                <!--스캔 텍스트 영역 / 선택전 빨강색(selection) 선택후 파란색(+active)-->
+                                <div class="dim">
+                                    <span class="selection" style="top: 21%;left: 25%;width: 20%;height: 5%;"></span>
+                                    <span class="selection active" style="top: 30%; left: 25%; width: 48%; height: 10%;"></span>
+                                </div>
+                            </div>
+                            <p class="text sub-text">
+                                제품명이 인식되지 않는다면? 촬영 가이드를 확인하세요.
+                                <a href="#">촬영 가이드 확인</a>
+                            </p>
+
+                            <div class="bedge-wrap">
+                                <ul>
+                                    <li class="badge badge-lightgray">그린 마일드 업</li>
+                                    <li class="badge badge-lightgray">인바디</li>
+                                    <li class="badge badge-lightgray">선 에센스</li>
+                                    <li class="badge badge-lightgray">스킨케어</li>
+                                    <li class="badge badge-lightgray">아이</li>
+                                    <li class="badge badge-lightgray">닥터지</li>
+                                    <li class="badge badge-lightgray">그린 마일드 업</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="btn-wrap w224">
+                            <a href="#" class="btn btn-lg btn-violet"><span>선택 완료</span></a>
+                            <a href="#" class="btn btn-lg btn-black btn-border-black"><span>다시 업로드하기</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scanning-completed">
+                <div class="smile-graph">
+                    <span class="value"></span>
+                </div>
+                <!--  .smile-graph > .value {transform: rotateZ(-180deg)}로 그래프값 조절
+                  (-180deg - 기본-> -360 deg 가까울수록 그래프가채워짐)-->
+            </div>
+        </div>
+
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+@@include('./_analysisScript.html')
+
+</body>
+</html>
+
+

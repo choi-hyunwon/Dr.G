@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container-fluid">
+        <div class="event-wrap">
+            <div class="event__wrap">
+
+                <div class="column column-wide">
+
+                    <div class="conts conts-full tab-wrap">
+                        <div class="tab__uio tab__uio__type4 col-3 tab__depth1">
+                            <a href="/brand/event" class="tab ">
+                                <span>진행중 이벤트</span>
+                            </a>
+                            <a href="/brand/event/winner" class="tab">
+                                <span>당첨자 발표</span>
+                            </a>
+                            <a href="/brand/event?type=end" class="tab active">
+                                <span>종료된 이벤트</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/.tab-wrap-->
+
+
+
+                    <div class="event__wrap">
+                        <div class="column column-wide">
+                            <form name="searchEventForm">
+                                <input type="hidden" id="pageNo" name="pageNo" value="2">
+                                <input type="hidden" id="type" name="type" value="end">
+                                <input type="hidden" id="etype" name="etype" value="all">
+                            </form>
+
+                            <div class="conts conts-full event-list-wrap">
+                                <div class="event__list col3">
+                                    <div id="content-tmpl">
+                                        <div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2022/202201/f7983d2a-3da4-44e5-85e3-b5a9274c53dc/PC_banner.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">Hello 2022! 닥터지 설 특별 기획전</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202112/9514bc98-167e-4922-853e-e812f7ce52b7/PC_banner.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">2021 멘토G 에이클리어 모의고사</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date">2021-12-23</dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202112/b2e45ce6-d08e-447c-8064-176134b5fe75/PC_banner_2021124_aclear.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">에이클리어 런칭기념 1만명 무료 샘플링 (마감)</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date">2021-12-14</dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202111/1d17c95f-2e6a-4646-adf3-7f45df5f97ad/PC_banner.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">2021 올리브영 어워즈 기념 한정수량 기획세트</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202111/b0aa6459-63d3-4e2d-b583-3a74da87caf1/PC_banner_2021124_aclear.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">NEW 에이클리어 트러블 스팟 케어</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202112/f6d69cd5-6e0d-4868-a65b-9925c5510252/PC_banner.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">2021 바른피부 어워드</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date">2022-01-03</dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202111/8156de0c-2665-4a37-8092-014f63d8552a/PC_banner_202111.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">닥터지 경험에 대한 솔직한 이야기를 들려주세요!</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202111/d7ae40da-c138-48a7-b263-b9cfb7b29e94/PC_banner.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">진정 강한 라치카의 병풀바이옴 시카 크림</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202111/466eb2b1-076b-49f3-8650-27131d3f5a1d/PC_banner_20211101_aclear.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">NEW 에이클리어 스팟 큐어 패치 뷰티테스터 모집</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date">2021-12-02</dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202111/809b45bd-8d8d-43f5-a0bc-79c800046d08/11월_PC.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">11월 한정 1+1 혜택</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202111/6b81a92a-5354-420c-8686-a0ddb7549e08/PC_banner.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">바르는 프로 비타민D 보습<br>더모이스처 배리어.D</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202111/d3090dc8-8d8a-4662-ae36-de2a08a6fec6/PC_banner_20211101_aclear.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">NEW 에이클리어 스팟 포 세럼 뷰티테스터 모집</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date">2021-11-17</dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202110/4ca597cb-7bcc-487f-b519-7a49ca3b0827/PC_banner.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">레드 블레미쉬 시카 수딩 크림 ~50% SALE</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202109/985385c6-f6ba-4c04-92e9-b6ae3eee588f/PC_banner_202110.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">메이크업 딥 클렌징 10월 SALE</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202109/b43a19c0-3576-4fdd-bff7-edce9412f354/PC_banner.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">속 깊은 보습엔 닥터지 인 바디 5.0</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202107/07135757-a9b6-4db6-8465-5e3f133a1b8f/PC_banner_20210719.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">수분 밀도를 촘촘하게 하이드라 아쿠아</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202109/0fca74f3-94e4-4f02-a84a-ba702c9f03f0/PC_banner.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">추석 연휴 배송 지연 혜택</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div><div class="item finished"><a href="javascript:alert('종료된 이벤트입니다.');"><figure><img alt="2020 바른피부 어워드" src="https://fs.dr-g.co.kr/event/2021/202109/97df0ce3-6df1-4f36-8c6f-b001100bafa0/PC_banner.jpg" onerror="this.onerror=null;this.src=`/resources/assets/imgs/util/noimg_1.png`;"></figure><div class="event-info"><small class="goods-label goods-label-gift dbtn dirt-brown">이벤트 종료</small><h3 class="event-tit">진정 강한 시카의 힘</h3><dl class="event-period"><dt>당첨자 발표</dt><dd class="date"></dd></dl></div></a></div></div>
+                                    <div class="action">
+                                        <button type="button" id="moreBtn" class="dbtn dbtn-more-plus">
+	                                    <span>더보기</span>
+                                        </button>
+                                    </div>
+                                </div><!-- // .event__list -->
+                            </div><!-- // .conts -->
+                        </div><!-- // .column -->
+                    </div><!-- // .event__wrap -->
+
+
+
+                </div><!--/.column-->
+
+            </div>
+        </div>
+
+        <!-- s chatbot -->
+        @@include('../../html/include/common/chatbot.html')
+        <!-- e chatbot -->
+    </div>
+    <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+</body>
+</html>

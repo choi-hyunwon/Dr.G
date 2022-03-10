@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap"></div>
+<div class="popup-wrap _analysisRegistration">
+    <div class="popup analysis-registration">
+        <div class="popup-content popup-lg">
+            <div class="popup-header">
+                <a href="#" class="_hidePopup icon ico-close"></a>
+            </div>
+            <div class="popup-body">
+                <div class="scroll-area">
+                    <div class="heading">
+                        <p class="font-h3 font-bold">제품 정보 입력</p>
+                        <p class="font-body-1">아직 닥터지에 등록되지 않은 제품의 정보를 알려주세요.</p>
+                    </div>
+
+                    <div class="img-box bg-gray">
+                        <div class="img no-img">
+                            <p>등록하고 싶은 제품의 정보를 입력해주세요.</p>
+                        </div>
+                    </div>
+
+                    <div class="propose-box">
+                        <input type="text" title="제품명을 입력하세요." class="form-control" placeholder="제품명을 입력하세요.">
+                        <div class="half-box">
+                            <input type="text" title="브랜드명을 입력하세요." class="form-control half" placeholder="브랜드명을 입력하세요.">
+
+                            <div class="select-popup s-select-box _selectBox half">
+                                <a href="#" class="btn-select">
+                                    <span class="text">제품 카테고리를 선택하세요.</span>
+                                </a>
+                                <div class="list">
+                                    <ul>
+                                        <li><a href="#">클렌징</a></li>
+                                        <li><a href="#">필링/스크럽</a></li>
+                                        <li><a href="#">토너/미스트</a></li>
+                                        <li><a href="#">에센스/엠플</a></li>
+                                        <li><a href="#">에멀전</a></li>
+                                        <li><a href="#">크림</a></li>
+                                        <li><a href="#">선 케어</a></li>
+                                        <li><a href="#">마스크/팩</a></li>
+                                        <li><a href="#">바디 케어</a></li>
+                                        <li><a href="#">화장소품</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="caution-area">
+                            <div class="font-body-2 font-bold">유의사항</div>
+                            <ul class="list-with-dot">
+                                <li>제품 등록은 색조를 제외한 스킨케어 및 헤어 관련 제품에 한정됩니다.</li>
+                                <li>진행 상태는 마이페이지에 등록된 전화번호로 알림이 갑니다.</li>
+                            </ul>
+                        </div>
+
+                        <hr class="divider divider-sm"/>
+
+                        <div class="check-area">
+                            <div class="custom-control custom-checkbox checkbox-sm">
+                                <input type="checkbox" class="custom-control-input violet" id="consent1">
+                                <label class="custom-control-label" for="consent1">처리 결과를 카카오톡 알림으로 보내주세요.</label>
+                            </div>
+                            <div class="custom-control custom-checkbox checkbox-sm">
+                                <input type="checkbox" class="custom-control-input violet" id="consent2" checked="">
+                                <label class="custom-control-label" for="consent2">(필수) 개인정보 활용동의 <a href="#">자세히 보기</a></label>
+                            </div>
+                            <ul class="list-with-dot">
+                                <li>개인정보 활용 항목 : 성명, 아이디, 휴대폰 번호</li>
+                                <li>개인정보 활용 목적 : 닥터지 회원 식별 및 성분분석 제품 등록, 수정 제안에 대한 결과 알림</li>
+                                <li>개인정보 보유 기간 : 회원 탈퇴 전까지 보유</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btn-wrap">
+                        <a href="#" class="btn btn-violet"><span>신청하기</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // popup open
+    openPopup('_analysisRegistration')
+
+    // popup scroll
+    // $("._analysisRegistration .popup-body").mCustomScrollbar();
+</script>
+
+@@include('./_analysisScript.html')
+</body>
+</html>
+

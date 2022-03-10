@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="container"></div>
+</div>
+<div class="popup-wrap">
+    <div class="popup _toast-popup">
+        <div class="popup-content title">
+            <div class="popup-header mb-half">
+                <p class="title">Ai 피부분석</p>
+            </div>
+            <div class="popup-body">
+                <div class="img logo">
+                    <img id="gif" src="../../img/common/Ai-symbol.gif" alt="Ai심블">
+                </div>
+                <p class="main-title text-center mb-0">
+                    로그인 후 닥터지 <span class="color-primary font-bold">Ai 피부분석</span>과 함께<br/>
+                    <span class="color-primary font-bold">무료샘플</span>도 받아보시겠어요?
+                </p>
+            </div>
+            <div class="popup-footer">
+                <a href="#" class="btn  btn-lg btn-primary _hidePopup">네, 로그인 후 분석할게요.</a>
+                <a href="#" class="text-btn _toast-popup-noclose-title">아니오. 비회원으로 체험할게요.</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    showPopup()
+    // hidePopup();
+
+    const gif=document.getElementById('gif');
+
+    function restartGIF(){
+        gif.src=gif.getAttribute('src');
+    }
+
+    function startTimer(){
+        gif.src=gif.getAttribute('src');
+        setTimeout(function(){ restartGIF() }, 50);
+    }
+
+    startTimer()
+</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+
+
+
+<!doctype html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header -->
+    @@include('../../html/include/common/header.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container-fluid">
+        <div class="mentoring-wrap">
+            <!-- s heading -->
+            <div class="inner step-inner">
+
+                <div class="heading-box">
+                    <div class="font-h1 font-bold">1:1 스킨 멘토링</div>
+                    <div class="font-h6 font-poppins">1:1 Skin Mentoring</div>
+                </div>
+                <div class="step-heading row">
+                    <div class="step col-3 active">
+                        <span class="tit">기본정보</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph full">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">생활습관</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">피부고민</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                    <div class="step col-3">
+                        <span class="tit">완료</span>
+                        <div class="icon"></div>
+                        <ul class="smile-graph full">
+                            <li class="value"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--
+                .smile-graph > .value {transform: rotateZ(-180deg)}로 그래프값 조절
+                (-180deg - 기본-> -360 deg 가까울수록 그래프가채워짐)
+                -->
+            </div>
+            <!-- e heading -->
+
+            <div class="content bg-gray">
+                <div class="inner">
+                    <div class="guidance">
+                        <p class="font-h3 font-bold">조수인님의 <span class="color-blue">기본정보</span>부터 확인할게요.</p>
+                    </div>
+                    <div class="asking">
+                        <div class="box">
+                            <p class="font-h5 font-bold">저의 피부타입은</p>
+                            <div class="input-area">
+                                <input type="text" title="피부타입 입력" class="form-control" value="OS-수부민지형" disabled>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <p class="font-h5 font-bold">연령대는</p>
+                            <div class="input-area">
+                                <div class="select-popup s-select-box _selectBox">
+                                    <a href="#" class="btn-select">
+                                        <span class="text">연령대를 선택해주세요.</span>
+                                    </a>
+                                    <div class="list">
+                                        <ul>
+                                            <li><a href="#">10대</a></li>
+                                            <li><a href="#">20대</a></li>
+                                            <li><a href="#">30대</a></li>
+                                            <li><a href="#">40대</a></li>
+                                            <li><a href="#">50대</a></li>
+                                            <li><a href="#">60대 이상</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <p class="font-h5 font-bold">피부고민은</p>
+                            <div class="input-area">
+                                <div class="badge-box">
+                                    <div class="badge badge-lg">블랙헤드</div>
+                                    <div class="badge badge-lg active">유수분 밸런스</div>
+                                    <div class="badge badge-lg">속건조</div>
+                                    <div class="badge badge-lg">건조</div>
+                                    <div class="badge badge-lg">피지</div>
+                                    <div class="badge badge-lg">주름</div>
+                                    <div class="badge badge-lg">탄력</div>
+                                    <div class="badge badge-lg active">모공</div>
+                                    <div class="badge badge-lg">민감</div>
+                                    <div class="badge badge-lg">여드름</div>
+                                    <div class="badge badge-lg">좁쌀여드름</div>
+                                    <div class="badge badge-lg">기미</div>
+                                    <div class="badge badge-lg">주근깨</div>
+                                    <div class="badge badge-lg active">모낭염</div>
+                                    <div class="badge badge-lg">색소침착</div>
+                                    <div class="badge badge-lg">홍조</div>
+                                    <div class="badge badge-lg">다크서클</div>
+                                    <div class="badge badge-lg">따끔거림</div>
+                                    <div class="badge badge-lg active">가려움</div>
+                                    <div class="badge badge-lg">알레르기</div>
+                                    <div class="badge badge-lg">지루성 피부염</div>
+                                    <div class="badge badge-lg">비립종</div>
+                                    <div class="badge badge-lg">접촉피부염</div>
+                                    <div class="badge badge-lg etc">기타</div>
+                                </div>
+                                <input type="text" title="피부고민 입력(최대10글자)" class="form-control etc-input" placeholder="최대 10자 입력 가능">
+                                <p class="font_right">입니다.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="#" class="btn btn-black btn-lg">다음</a>
+                    </div>
+                </div>
+                <!-- s chatbot -->
+                <div class="chatbot-box bg-light-gray">
+                    <a href="#" class="chatbot"></a>
+                </div>
+                <!-- e chatbot -->
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+
+
+
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
+</div>
+@@include('./_mentoringScript.html')
+
+</body>
+</html>
+
+
+

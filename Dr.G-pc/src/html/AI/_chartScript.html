@@ -1,0 +1,404 @@
+<script>
+    // data
+    var data = [
+        {
+            "date": "2021-09-01",
+            "value": 62,
+        },
+        {
+            "date": "2021-10-01",
+            "value": 0,
+        },
+        {
+            "date": "2021-11-01",
+            "value": 60,
+        },
+        {
+            "date": "2021-12-01",
+            "value": 100,
+        },
+        {
+            "date": "2022-01-01",
+            "value": 70,
+        },
+    ];
+
+    var dataSeason = [
+        // {
+        //     "category": "",
+        //     "value": 70,
+        // },
+        {
+            "category": "봄",
+            "value": 10,
+        },
+        {
+            "category": "여름",
+            "value": 35,
+        },
+        {
+            "category": "가을",
+            "value": 67,
+        },
+        {
+            "category": "겨울",
+            "value": 100,
+        },
+        // {
+        //     "category": "",
+        //     "value": 50,
+        // },
+    ];
+
+    // String formatter
+    if (!String.prototype.format) {
+        String.prototype.format = function() {
+            var args = arguments;
+            return this.replace(/{(\d+)}/g, function(match, number) {
+                return typeof args[number] != 'undefined' ? args[number] : match;
+            });
+        };
+    }
+
+    let app = (() => {
+        const $svgLine = document.querySelector('._roundChart svg .line');
+        const $svgSeasonLine = document.querySelector('._seasonChart svg .line');
+        const sliderHeight = 301;
+        const svgViewBoxHeight = 301;
+        const svgViewBoxThumbLimit = svgViewBoxHeight / sliderHeight;
+        const svgViewBoxGraphMax = svgViewBoxHeight - svgViewBoxThumbLimit;
+        const svgViewBoxGraphMin = svgViewBoxThumbLimit;
+
+        let ranges = {
+            range1: null,
+            range2: null,
+            range3: null,
+            range4: null,
+            range5: null,
+        };
+
+        let rangesSeason = {
+            range1: null,
+            range2: null,
+            range3: null,
+            range4: null,
+            // range5: null,
+            // range6: null,
+        };
+
+        let temp = {
+            begin: {
+                x: 192,
+                y: 0
+            },
+            point : [
+                {
+                    x: 192,
+                    y: 0
+                },
+                {
+                    x: 400,
+                    y: 0
+                },
+                {
+                    x: 618,
+                    y: 0
+                },
+                {
+                    x: 835,
+                    y: 0
+                },
+                {
+                    x: 1041,
+                    y: 0
+                },
+            ],
+            control : [
+                {
+                    x: 270,
+                    y: 0
+                },
+                {
+                    x: 290,
+                    y: 0
+                },
+                {
+                    x: 511,
+                    y: 0
+                },
+                {
+                    x: 730,
+                    y: 0
+                },
+                {
+                    x: 950,
+                    y: 0
+                },
+            ]
+        };
+
+        let tempSeason = {
+            begin: {
+                x: 286,
+                y: 0
+            },
+            point : [
+                {
+                    x: 286,
+                    y: 0
+                },
+                {
+                    x: 498,
+                    y: 0
+                },
+                {
+                    x: 710,
+                    y: 0
+                },
+                {
+                    x: 922,
+                    y: 0
+                },
+                {
+                    x: 1238,
+                    y: 0
+                },
+            ],
+            control : [
+                {
+                    x: 300,
+                    y: 0
+                },
+                {
+                    x: 392,
+                    y: 0
+                },
+                {
+                    x: 604,
+                    y: 0
+                },
+                {
+                    x: 816,
+                    y: 0
+                },
+                {
+                    x: 1080,
+                    y: 0
+                },
+            ]
+        };
+
+        function mapDataRange(value) {
+            return (((value - 0) * (svgViewBoxGraphMax - svgViewBoxGraphMin)) / svgViewBoxHeight) + svgViewBoxGraphMin;
+        }
+
+        function updateSlider($element) {
+            if ($element) {
+
+                let rangeIndex = $element.getAttribute('data-slider-index'),
+                    range = ranges[rangeIndex],
+                    value = $element.value;
+
+                if (range === value) {
+                    return;
+                }
+
+                ranges[rangeIndex] = value;
+
+                let parent = $element.parentElement,
+                    $tootip = parent.querySelector('._roundChart .line-box'),
+                    $bar = parent.querySelector('._roundChart .percentage'),
+                    pct = value * (sliderHeight / sliderHeight)
+
+                $tootip.style.bottom = `${pct}%`;
+                $bar.style.height = `${pct}%`;
+
+                renderSliderGraph();
+            }
+        }
+
+        function updateSeasonSlider($element) {
+            if ($element) {
+
+                let rangeIndex = $element.getAttribute('data-slider-index'),
+                    range = rangesSeason[rangeIndex],
+                    value = $element.value;
+
+                if (range === value) {
+                    return;
+                }
+
+                rangesSeason[rangeIndex] = value;
+
+                let parent = $element.parentElement,
+                    $tootip = parent.querySelector('._seasonChart .line-box'),
+                    $bar = parent.querySelector('._seasonChart .percentage'),
+                    pct = value * (sliderHeight / sliderHeight)
+
+                $tootip.style.bottom = `${pct}%`;
+                $bar.style.height = `${pct}%`;
+
+                renderSliderGraph();
+            }
+        }
+
+        function updatePoints() {
+            temp.point.forEach((item, index)=>{
+                item.y = svgViewBoxHeight - (svgViewBoxHeight * (ranges[`range${index+1}`]) / 100) | 0;
+                item.y = mapDataRange(item.y);
+            })
+            temp.begin.y = temp.point[0].y
+
+            temp.control.forEach((item, index)=>{
+                item.y = temp.point[index].y
+            })
+        }
+
+        function updateSeasonPoints() {
+            tempSeason.point.forEach((item, index)=>{
+                item.y = svgViewBoxHeight - (svgViewBoxHeight * (rangesSeason[`range${index+1}`]) / 100) | 0;
+                item.y = mapDataRange(item.y);
+            })
+            tempSeason.begin.y = tempSeason.point[0].y
+
+            tempSeason.control.forEach((item, index)=>{
+                item.y = tempSeason.point[index].y
+            })
+        }
+
+        function getInterpolatedLine() {
+            return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13} S {14} {15}, {16} {17} S {18} {19}, {20} {21}'.format(
+                // M
+                temp.begin.x, temp.begin.y,
+                // L
+                temp.point[0].x, temp.point[0].y,
+                // C
+                temp.control[0].x, temp.control[0].y,
+                temp.control[1].x, temp.control[1].y,
+                temp.point[1].x, temp.point[1].y,
+                // S
+                temp.control[2].x, temp.control[2].y,
+                temp.point[2].x, temp.point[2].y,
+                // S
+                temp.control[3].x, temp.control[3].y,
+                temp.point[3].x, temp.point[3].y,
+                // S
+                temp.control[4].x, temp.point[4].y,
+                temp.point[4].x, temp.point[4].y,
+            )
+        }
+
+        function getInterpolatedSeasonLine() {
+            return 'M {0},{1} L {2},{3} C {4},{5} {6},{7} {8},{9} S {10} {11}, {12} {13} S {14} {15}, {16} {17}'.format(
+                // M
+                tempSeason.begin.x, tempSeason.begin.y,
+                // L
+                tempSeason.point[0].x, tempSeason.point[0].y,
+                // C
+                tempSeason.control[0].x, tempSeason.control[0].y,
+                tempSeason.control[1].x, tempSeason.control[1].y,
+                tempSeason.point[1].x, tempSeason.point[1].y,
+                // S
+                tempSeason.control[2].x, tempSeason.control[2].y,
+                tempSeason.point[2].x, tempSeason.point[2].y,
+                // S
+                tempSeason.control[3].x, tempSeason.control[3].y,
+                tempSeason.point[3].x, tempSeason.point[3].y,
+                // S
+                // tempSeason.control[4].x, tempSeason.point[4].y,
+                // tempSeason.point[4].x, tempSeason.point[4].y,
+                // S
+                // tempSeason.control[5].x, tempSeason.point[5].y,
+                // tempSeason.point[5].x, tempSeason.point[5].y,
+            )
+        }
+
+        function renderSliderGraph() {
+            updatePoints();
+            updateSeasonPoints();
+            $svgLine.setAttribute('d', getInterpolatedLine());
+            $svgSeasonLine.setAttribute('d', getInterpolatedSeasonLine());
+        }
+
+        function drawChart() {
+            const percentageList = app.percentage;
+            percentageList.forEach((item, index) => {item.value = data[index]?.value | 0});
+            percentageList.forEach(item => app.updateSlider(item));
+
+            const percentageSeasonList = app.percentageSeason;
+            percentageSeasonList.forEach((item, index) => {item.value = dataSeason[index]?.value | 0});
+            percentageSeasonList.forEach(item => app.updateSeasonSlider(item));
+        }
+
+        return {
+            percentage: [].slice.call(document.querySelectorAll('._roundChart .line-chart-inner .percentage')),
+            percentageSeason: [].slice.call(document.querySelectorAll('._seasonChart .line-chart-inner .percentage')),
+            updateSlider,
+            updateSeasonSlider,
+            drawChart,
+        };
+    })();
+
+    (function initAndSetupTheSliders() {
+        const percentageList = app.percentage;
+        const percentageSeasonList = app.percentageSeason;
+
+        // 회차별
+        percentageList.forEach((item,index) => item.setAttribute('data-slider-index', 'range' + String(index + 1)));
+        percentageList.forEach(item => item.value = 50);
+        percentageList.forEach(item => app.updateSlider(item));
+
+        // 계절별
+        percentageSeasonList.forEach((item,index) => item.setAttribute('data-slider-index', 'range' + String(index + 1)));
+        percentageSeasonList.forEach(item => item.value = 50);
+        percentageSeasonList.forEach(item => app.updateSeasonSlider(item));
+        app.drawChart();
+    })();
+
+    /** -------------------------- line animation --------------------------- **/
+    anime({
+        targets: 'path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutCubic',
+        duration: 2000,
+    });
+
+    function lineDrawing() {
+        anime({
+            targets: 'path',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutCubic',
+            duration: 2000,
+        });
+    }
+
+    function firstLineDrawing() {
+        anime({
+            targets: '._roundChart path',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutCubic',
+            duration: 2000,
+        });
+    }
+
+    new Waypoint({
+        element: document.querySelector('._triggerDrawChart'),
+        handler: function () {
+            firstLineDrawing()
+        },
+        offset: "50%"
+    })
+
+    /** -------------------------- swipe event --------------------------- **/
+    let swipeEl =  $('.line-chart-inner');
+
+    swipeEl.on('swipeleft',function(){
+        console.log('to the left')
+        alert('to the left')
+    });
+
+    swipeEl.on('swiperight',function(){
+        console.log('to the right')
+        alert('to the right')
+    });
+</script>
