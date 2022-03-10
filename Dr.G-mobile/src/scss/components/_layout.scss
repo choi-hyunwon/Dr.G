@@ -10,6 +10,7 @@
  v.0.8 선미 : header-details >  fixed 추가 -- 2021.01.06
  v.0.10 주연 : gnb menu 추가 -- 2022.01.25
  v.0.11 주연 : chatbot-area 추가 -- 2022.02.04
+ v.0.12 선미 : 스크롤시 header 메뉴 아이콘 노출로 변경 -- 2022.03.10
 |----------------------------------------------------------------------|
 */
 
@@ -114,7 +115,7 @@ body {
 
   .btn-menu {
     .icon {
-      background-image: url(../img/common/ico-menu-white.svg);
+      background: url("../img/common/ico-menu.svg") no-repeat 0 0;
     }
   }
 
@@ -158,6 +159,12 @@ body {
           background: url("../img/common/ico-alert-white.svg") no-repeat 0 0;
           background-size: 100% auto;
         }
+      }
+    }
+
+    .btn-menu {
+      .icon {
+        background: url("../img/common/ico-menu-white.svg") no-repeat 0 0;
       }
     }
   }

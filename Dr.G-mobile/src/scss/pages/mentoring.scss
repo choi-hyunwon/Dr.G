@@ -548,7 +548,7 @@
       color: $gray-fff;
       text-align: center;
       margin-bottom: 0;
-      padding: vw(60) vw(0) vw(68);
+      padding: vw(60) vw(0) vw(76);
       position: relative;
       &.bg-blue {
         background-color: #34A6F9;
@@ -561,9 +561,9 @@
       }
       .img-box{
         position: relative;
-        padding-top: vw(120);
+        padding-top: vw(125);
         overflow: hidden;
-        margin-bottom: vw(32);
+        margin-bottom: vw(36);
         .img{
           margin: 0 auto;
           img{
@@ -641,10 +641,8 @@
         }
       }
       .btn-box{
-        padding: vw(24) vw(24) 0;
-        margin-bottom: vw(86);
+        padding: vw(20) vw(24) 0;
       }
-
     }
 
     .section-tab{
