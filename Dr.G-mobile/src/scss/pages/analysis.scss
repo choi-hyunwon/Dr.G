@@ -927,7 +927,7 @@
       color: $gray-fff;
       text-align: center;
       margin-bottom: 0;
-      padding: vw(60) vw(0) vw(114);
+      padding: vw(60) vw(0) vw(76);
       position: relative;
       &:before{
         content: '';
@@ -1224,10 +1224,10 @@
                   bottom: 0;
                   left: vw(-3);
                   z-index: -1;
-                  animation: line 0.7s 1.5s forwards ease-in-out;
+                  animation: analysis 0.7s 1s forwards ease-in-out;
                   border-radius: vw(2.5);
                 }
-                @keyframes line {
+                @keyframes analysis {
                   from{
                     width: 0;
                   }

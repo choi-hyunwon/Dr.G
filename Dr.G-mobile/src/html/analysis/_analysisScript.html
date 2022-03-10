@@ -204,6 +204,14 @@
     if($('.container').find('._sub-main').length){
       let st = $(this).scrollTop();
 
+        /*about - 노란색 라인 ani 효과*/
+        //console.log(st)
+        if(st > 570){
+            $('.section-about .desc .font-bold').addClass('underscore')
+        }else {
+            $('.section-about .desc .font-bold').removeClass('underscore')
+        }
+
       /* 탭활성화 */
       let section = $('._section')
       let tab = $('._section-tab .item')
