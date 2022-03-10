@@ -114,8 +114,15 @@ body {
   }
 
   .btn-menu {
+    a {
+      display: block;
+      width: vw(24);
+      height: vw(24);
+    }
+
     .icon {
-      background: url("../img/common/ico-menu.svg") no-repeat 0 0;
+      background: url("../img/common/ico-menu.svg") no-repeat;
+      background-size: cover;
     }
   }
 
@@ -164,7 +171,8 @@ body {
 
     .btn-menu {
       .icon {
-        background: url("../img/common/ico-menu-white.svg") no-repeat 0 0;
+        background: url("../img/common/ico-menu-white.svg") no-repeat;
+        background-size: cover;
       }
     }
   }
@@ -248,9 +256,12 @@ body {
 
     .btn-alert {
       a {
+        display: block;
+        width: vw(24);
+        height: vw(24);
+
         i {
-          background: url("../img/common/ico-alert-white.svg") no-repeat 0 0;
-          background-size: 100% auto;
+          background: url("../img/common/ico-alert-white.svg") no-repeat;
         }
       }
     }

@@ -161,11 +161,12 @@ body.scrOff {
       }
     }
 
-   &:before {
+    &:before {
       content: '';
       display: inline-block;
       position: absolute;
       background: url("../img/mentoring/ico-arrow-bottom-white-lg.svg") no-repeat center center;
+      background-size: cover;
       width: vw(24);
       height: vw(24);
       top: vw(-68);
@@ -203,7 +204,7 @@ body.scrOff {
         position: absolute;
         top: 0;
         left: 0;
-        @include background-img ($width: 305, $height: 152, $category: 'common', $img: 'float-smile.svg');
+        @include background-img($width: 305, $height: 152, $category: 'common', $img: 'float-smile.svg');
         //border: vw(80) solid $blue;
         border-top: 0;
         width: inherit;
@@ -295,6 +296,7 @@ body.scrOff {
             margin-top: vw(3);
           }
         }
+
         .ico-menu-1 {
           @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-menu-1.svg');
         }
@@ -379,7 +381,7 @@ body.scrOff {
     transform: translateX(-50%);
     padding: vw(12) vw(28);
     text-align: center;
-    background-color: rgba(255,255,255,.95);
+    background-color: rgba(255, 255, 255, .95);
     border-radius: vw(30);
     animation-name: drgTxtAni;
     animation-delay: 1.3s;
@@ -393,7 +395,7 @@ body.scrOff {
       bottom: vw(-6);
       left: 50%;
       transform: translateX(-50%);
-      @include background-img ($width: 8, $height: 7.1, $category: 'common', $img: 'ico-menu-tooltip.svg');
+      @include background-img($width: 8, $height: 7.1, $category: 'common', $img: 'ico-menu-tooltip.svg');
     }
 
     .txt {
@@ -466,6 +468,7 @@ body.scrOff {
       background-color: $gray-300;
       border-radius: vw(100);
     }
+
     li {
       a {
         padding: vw(8) 0;
@@ -499,10 +502,10 @@ body.scrOff {
   }
 }
 
-.mentoring-wrap{
-  .s-select-box{
-    ul{
-      li{
+.mentoring-wrap {
+  .s-select-box {
+    ul {
+      li {
         &.on {
           a {
             color: $blue;
@@ -514,10 +517,10 @@ body.scrOff {
   }
 }
 
-.suggestion-wrap{
-  .s-select-box{
-    ul{
-      li{
+.suggestion-wrap {
+  .s-select-box {
+    ul {
+      li {
         &.on {
           a {
             color: $primary;

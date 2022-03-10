@@ -115,18 +115,9 @@
             font-size: 16px;
             line-height: 24px;
 
-            &:hover {
-              color: $primary;
-
-              &::after {
-                content: '';
-                position: absolute;
-                bottom: -31px;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background-color: $primary;
-              }
+            &::after {
+              content: '';
+              width: 0;
             }
           }
 
@@ -135,6 +126,22 @@
           }
 
           &.hovering {
+            > a {
+              color: $primary;
+
+              &::after {
+                content: '';
+                position: absolute;
+                bottom: -31px;
+                left: 50%;
+                width: 100%;
+                height: 2px;
+                background-color: $primary;
+                transition: .4s ease-in-out;
+                transform: translate(-50%,0);
+              }
+            }
+
             .sub-menu {
               display: flex;
               opacity: 1;
@@ -179,7 +186,7 @@
 
           &:nth-child(7) {
             .sub-menu {
-              padding-left: 837px;
+              padding-left: 831px;
             }
           }
 
