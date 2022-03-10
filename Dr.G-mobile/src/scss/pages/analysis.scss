@@ -484,36 +484,44 @@
             width: vw(80);
             height: vw(80);
 
-            &.ico-skin-01{
+            /*ico-skin-01*/
+            &.ico-elasticity {
               background: url("../img/analysis/ico-elasticity.png") no-repeat center center / contain;
             }
-            &.ico-skin-02{
+            /*ico-skin-02*/
+            &.ico-whitening{
               background: url("../img/analysis/ico-whitening.png") no-repeat center center / contain;
             }
-            &.ico-skin-03{
+            /*ico-skin-03*/
+            &.ico-sensitivity{
               background: url("../img/analysis/ico-sensitivity.png") no-repeat center center / contain;
             }
-            &.ico-skin-04{
+            /*ico-skin-04*/
+            &.ico-intelligence{
               background: url("../img/analysis/ico-intelligence.png") no-repeat center center / contain;
             }
-            &.ico-skin-05{
+            /*ico-skin-05*/
+            &.ico-moisturizing{
               background: url("../img/analysis/ico-moisturizing.png") no-repeat center center / contain;
             }
-            &.ico-skin-06{
+            /*ico-skin-06*/
+            &.ico-allergy{
               background: url("../img/analysis/ico-caution-1.png") no-repeat center center / contain;
               +.number{
                 background-color:  #FDE149;
                 color: #444;
               }
             }
-            &.ico-skin-07{
+            /*ico-skin-07*/
+            &.ico-pimple{
               background: url("../img/analysis/ico-caution-2.png") no-repeat center center / contain;
               +.number{
                 background-color:  #FF707A;
                 color: #fff;
               }
             }
-            &.ico-skin-08{
+            /*ico-skin-08*/
+            &.ico-stimulation{
               background: url("../img/analysis/ico-caution-3.png") no-repeat center center / contain;
               +.number{
                 background-color:  #F88F2E;
@@ -521,7 +529,8 @@
               }
             }
 
-            &.ico-hair-01{
+            /*ico-hair-01*/
+            &.ico-hair-loss{
               background: url("../img/analysis/ico-hair-loss.png") no-repeat center center / contain;
             }
             &.ico-hair-02{
@@ -539,7 +548,8 @@
             &.ico-hair-06{
               background: url("../img/analysis/ico-matching-hair-06.png") no-repeat center center / contain;
             }
-            &.ico-hair-07{
+            /*ico-hair-07*/
+            &.ico-hair-strengthening{
               background: url("../img/analysis/ico-hair-strengthening.png") no-repeat center center / contain;
             }
             &.ico-hair-08{
@@ -1045,7 +1055,24 @@
       }
       .btn-box{
         padding: vw(20) vw(24) 0;
+        .more {
+          display: flex;
+          width: 100%;
+          height: vw(24);
+          justify-content: center;
+          align-items: center;
+          margin-top: vw(14);
+
+          .arrow {
+            display: inline-block;
+            background: url("../img/mentoring/ico-arrow-bottom-white-lg.svg") no-repeat center center;
+            background-size: cover;
+            width: vw(24);
+            height: vw(24);
+          }
+        }
       }
+
     }
 
     .section-tab {
