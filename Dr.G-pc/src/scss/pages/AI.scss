@@ -3014,21 +3014,21 @@
 
       .editor-area {
         position: relative;
-        width: vw(368);
-        height: vw(368);
+        width: vw(360);
+        height: vw(360);
 
         &::after {
           content: '';
           position: absolute;
-          @include background-img($width: 380, $height: 380, $category: 'AI', $img: 'bg-camera-frame.svg');
+          @include background-img($width: 372, $height: 372, $category: 'AI', $img: 'bg-camera-frame.svg');
           left: -6px;
           top: -6px;
         }
 
         .img {
           position: absolute;
-          width: vw(370);
-          height: vw(368);
+          width: vw(360);
+          height: vw(360);
           left: 50%;
           transform: translateX(-50%);
           overflow: hidden;
@@ -3036,17 +3036,14 @@
           border-radius: vw(12);
 
           img {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: -18px;
-            width: 891px;
+            width: 100%;
           }
         }
       }
 
       .text-area {
         margin-left: 49px;
+        margin-right: 6px;
       }
 
       .heading-area {

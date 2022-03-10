@@ -107,7 +107,7 @@
   .visual {
     position: relative;
     width: 100%;
-    height: vw(606);
+    height: vw(630);
     background-color: #3DD7BD;
     overflow: hidden;
 
@@ -117,7 +117,7 @@
       height: vw(272);
       left: 50%;
       transform: translateX(-50%);
-      top: vw(260);
+      top: vw(284);
 
       &::after {
         content: '';
