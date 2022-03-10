@@ -916,7 +916,7 @@
       color: $gray-fff;
       text-align: center;
       margin-bottom: 0;
-      padding: vw(60) vw(0) vw(68);
+      padding: vw(60) vw(0) vw(76);
       position: relative;
       &:before{
         content: '';
@@ -932,14 +932,17 @@
       }
       .text-box{
         margin-top: vw(20);
-        margin-bottom: vw(24);
+        margin-bottom: vw(30);
         .font-h1{
           margin-bottom: vw(8);
+        }
+        .font-h5{
+          line-height: 26px;
         }
       }
       .img-box{
         position: relative;
-        margin-bottom: vw(10);
+        margin-bottom: vw(15);
         .percent{
           display: inline-block;
           text-align: right;
@@ -1040,8 +1043,7 @@
         }
       }
       .btn-box{
-        padding: vw(24) vw(24) 0;
-        margin-bottom: vw(86);
+        padding: vw(20) vw(24) 0;
       }
     }
 
