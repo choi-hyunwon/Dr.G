@@ -901,6 +901,7 @@
 
 
   &.analysis-sub-main {
+    background-color: $gray-fff;
     .section {
       padding: 0;
       .content {
@@ -916,7 +917,7 @@
       color: $gray-fff;
       text-align: center;
       margin-bottom: 0;
-      padding: vw(60) vw(0) vw(76);
+      padding: vw(60) vw(0) vw(114);
       position: relative;
       &:before{
         content: '';
