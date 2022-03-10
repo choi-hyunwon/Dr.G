@@ -1045,7 +1045,24 @@
       }
       .btn-box{
         padding: vw(20) vw(24) 0;
+        .more {
+          display: flex;
+          width: 100%;
+          height: vw(24);
+          justify-content: center;
+          align-items: center;
+          margin-top: vw(14);
+
+          .arrow {
+            display: inline-block;
+            background: url("../img/mentoring/ico-arrow-bottom-white-lg.svg") no-repeat center center;
+            background-size: cover;
+            width: vw(24);
+            height: vw(24);
+          }
+        }
       }
+
     }
 
     .section-tab {
