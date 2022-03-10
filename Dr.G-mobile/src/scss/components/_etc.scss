@@ -161,7 +161,7 @@ body.scrOff {
       }
     }
 
-   /* &:before {
+   &:before {
       content: '';
       display: inline-block;
       position: absolute;
@@ -171,7 +171,7 @@ body.scrOff {
       top: vw(-68);
       left: 50%;
       transform: translateX(-50%);
-    }*/
+    }
   }
 
   &.show {
