@@ -1462,7 +1462,7 @@
               height: 100%;
               background-color: #d5f4ef;
               border-radius: vw(16);
-              padding: vw(52) vw(20);
+              padding: vw(52) vw(20) vw(50);
 
               .logo {
                 position: absolute;
@@ -1479,11 +1479,23 @@
 
               .list {
                 + .list {
-                  margin-top: vw(32);
+                  margin-top: vw(29);
                 }
 
                 .badge {
-                  margin-bottom: vw(8);
+                  margin-bottom: vw(10);
+                  height: vw(25);
+                  line-height: vw(25);
+                  padding: 0 vw(9);
+                  font-size: vw(13);
+                }
+
+                .font-body-1 {
+                  color: $gray-800;
+
+                  .font-bold {
+                    color: $gray-900;
+                  }
                 }
 
                 .list-with-dot {
@@ -1516,7 +1528,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: vw(123);
+            width: vw(212);
             padding: 0;
             font-weight: 500;
 
@@ -4199,13 +4211,13 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 32.8vw;
           padding: 0;
           font-weight: 500;
+          width: vw(131);
 
-          + .btn {
-            margin-left: vw(12);
-          }
+          //+ .btn {
+          //  margin-left: vw(12);
+          //}
         }
       }
     }
@@ -4243,7 +4255,125 @@
 
       .analysis-result {
         .bar-chart-box {
-          padding: 0 vw(24) vw(50);
+          padding: 0 vw(24) vw(17);
+        }
+      }
+    }
+
+    > .btn-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: vw(32);
+      padding-bottom: vw(48);
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        font-weight: 500;
+        width: vw(123);
+
+        + .btn {
+          margin-left: vw(12);
+        }
+      }
+    }
+  }
+
+  /* 피부 고민 케어법 공유하기 */
+  .share-solution {
+    padding: 0 vw(24);
+
+    .font-h4 {
+      margin-bottom: vw(24);
+      margin-top: vw(24);
+    }
+
+    .box {
+      .solution-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #d5f4ef;
+        border-radius: vw(16);
+        padding: vw(52) vw(20) vw(50);
+
+        .logo {
+          position: absolute;
+          width: vw(40);
+          height: vw(20);
+          right: vw(18);
+          top: vw(20);
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .list {
+          + .list {
+            margin-top: vw(29);
+          }
+
+          .badge {
+            margin-bottom: vw(10);
+            height: vw(25);
+            line-height: vw(25);
+            padding: 0 vw(9);
+            font-size: vw(13);
+          }
+
+          .font-body-1 {
+            color: $gray-800;
+
+            .font-bold {
+              color: $gray-900;
+            }
+          }
+
+          .list-with-dot {
+            li {
+              font-size: vw(15);
+              line-height: vw(22);
+              color: $gray-800;
+              padding-left: vw(22);
+              margin-bottom: 0;
+
+              &::after {
+                background-color: $gray-800;
+                top: vw(10);
+                left: vw(10);
+              }
+            }
+          }
+        }
+
+        + .solution-card {
+          margin-top: vw(16);
+        }
+      }
+    }
+
+    > .btn-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: vw(32);
+      padding-bottom: vw(48);
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        font-weight: 500;
+        width: vw(123);
+
+        + .btn {
+          margin-left: vw(12);
         }
       }
     }

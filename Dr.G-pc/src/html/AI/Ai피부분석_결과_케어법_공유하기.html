@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap"></div>
+<div class="popup-wrap _aiSolutionCarePopup">
+    <div class="popup popup-care-solution">
+        <div class="popup-content">
+            <div class="popup-header">
+                <a href="#" class="icon ico-close" onclick="closePopup('_aiSolutionCarePopup')"></a>
+            </div>
+            <div class="popup-body">
+                <div class="scroll-container">
+                    <div class="title">피부 고민 케어법을 알려드려요.</div>
+                    <div class="share-solution">
+                        <div class="font-h4 font-bold">피부 고민 케어법을 알려드려요.</div>
+                        <div class="box">
+                            <div class="solution-card">
+                                <div class="logo"><img src="../../img/common/logo-black.svg" alt=""></div>
+                                <div class="list">
+                                    <span class="badge badge-dark badge-sm">문제점</span>
+                                    <p class="font-body-1">
+                                        <span class="font-bold">#자꾸 올라오는 여드름</span><br>
+                                        피지 생성, 막힌 모낭, P.acnes<br>
+                                        (여드름균)의 증식이 주된 요인입니다.
+                                    </p>
+                                </div>
+                                <div class="list">
+                                    <span class="badge badge-primary badge-sm">케어법</span>
+                                    <ul class="list-with-dot">
+                                        <li>약산성 클렌저로 저자극 깔끔 세안</li>
+                                        <li>압출은 깨끗한 면봉 이용하기</li>
+                                        <li>세안 직후 보습제 바르기</li>
+                                        <li>잊지말고 무기자차!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="solution-card">
+                                <div class="logo"><img src="../../img/common/logo-black.svg" alt=""></div>
+                                <div class="list">
+                                    <span class="badge badge-dark badge-sm">문제점</span>
+                                    <p class="font-body-1">
+                                        <span class="font-bold">#자꾸 올라오는 여드름</span><br>
+                                        피지 생성, 막힌 모낭, P.acnes<br>
+                                        (여드름균)의 증식이 주된 요인입니다.
+                                    </p>
+                                </div>
+                                <div class="list">
+                                    <span class="badge badge-primary badge-sm">케어법</span>
+                                    <ul class="list-with-dot">
+                                        <li>약산성 클렌저로 저자극 깔끔 세안</li>
+                                        <li>압출은 깨끗한 면봉 이용하기</li>
+                                        <li>세안 직후 보습제 바르기</li>
+                                        <li>잊지말고 무기자차!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="solution-card">
+                                <div class="logo"><img src="../../img/common/logo-black.svg" alt=""></div>
+                                <div class="list">
+                                    <span class="badge badge-dark badge-sm">문제점</span>
+                                    <p class="font-body-1">
+                                        <span class="font-bold">#자꾸 올라오는 여드름</span><br>
+                                        피지 생성, 막힌 모낭, P.acnes<br>
+                                        (여드름균)의 증식이 주된 요인입니다.
+                                    </p>
+                                </div>
+                                <div class="list">
+                                    <span class="badge badge-primary badge-sm">케어법</span>
+                                    <ul class="list-with-dot">
+                                        <li>약산성 클렌저로 저자극 깔끔 세안</li>
+                                        <li>압출은 깨끗한 면봉 이용하기</li>
+                                        <li>세안 직후 보습제 바르기</li>
+                                        <li>잊지말고 무기자차!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <a class="btn btn-md btn-light" href="#"><i class="icon ico-download"></i><span>저장하기</span></a>
+                    <a class="btn btn-md btn-light" onclick="openPopup('_sharePopup')" href="#"><i class="icon ico-share"></i><span>공유하기</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-wrap _sharePopup">
+    <div class="popup popup-share">
+        <div class="popup-content">
+            <div class="popup-header">
+                <a href="#" class="icon ico-close" onclick="closePopup('_sharePopup')"></a>
+            </div>
+            <div class="popup-body text-center">
+                <p class="title">공유하기</p>
+                <div class="sns-share-wrap">
+                    <a href="#" class="btn-sns-kakao"><i class="icon ico-sns-kakao"></i></a>
+                    <a href="#" class="btn-sns-facebook"><i class="icon ico-sns-facebook"></i></a>
+                    <a href="#" class="btn-sns-line"><i class="icon ico-sns-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    openPopup('_aiSolutionCarePopup')
+    $("._aiSolutionCarePopup .scroll-container").mCustomScrollbar();
+</script>
+</body>
+</html>

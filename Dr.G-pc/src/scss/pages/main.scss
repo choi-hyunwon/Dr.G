@@ -126,6 +126,7 @@
         justify-content: center;
         align-items: center;
         margin-left: 25px;
+        width: 8px;
 
         &.play {
           .ico-pause {
@@ -176,18 +177,18 @@
         content: '';
         position: absolute;
         @include background-img ($width: 372, $height: 372, $category: 'main', $img: 'bg-camera-frame.svg');
-        left: vw(-4);
-        top: vw(-8);
+        left: -6px;
+        top: -6px;
       }
 
       .img {
         position: absolute;
-        width: vw(366);
-        height: vw(366);
+        width: 360px;
+        height: 360px;
         bottom: 0;
         left: 0;
         overflow: hidden;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: #3DD7BD;
         border-radius: vw(16);
 
         img {
@@ -452,7 +453,7 @@
               left: -34px;
 
               .ico-arrow-prev {
-                @include background-img($width: 28, $height: 28, $category: 'main', $img: 'nav-prev.svg');
+                @include background-img($width: 24, $height: 24, $category: 'main', $img: 'nav-prev.svg');
               }
             }
 
@@ -460,7 +461,7 @@
               right: -34px;
 
               .ico-arrow-next {
-                @include background-img($width: 28, $height: 28, $category: 'main', $img: 'nav-next.svg');
+                @include background-img($width: 24, $height: 24, $category: 'main', $img: 'nav-next.svg');
               }
             }
           }
@@ -473,7 +474,7 @@
         background-color: transparent;
 
         .swiper-wrapper {
-          margin-top: 120px;
+          margin-top: 169px;
 
           .swiper-slide {
             position: relative;
@@ -484,13 +485,14 @@
             height: 450px;
             background-color: transparent;
             padding: 0;
+            overflow: visible;
 
             .img-box {
               position: static;
               transform: none;
               opacity: .4;
-              transition: .1s;
-              transform-origin: center 173px;
+              transition: .8s;
+              transform-origin: center 269px;
 
               .img {
                 width: 212px;
