@@ -438,35 +438,33 @@ function openPopup(className) {
     var target = `.${className}`;
     var popup = $(target);
 
-    popup.removeClass('hide').css('display', 'block');
+    popup.removeClass('hide').addClass('show').css('display', 'block');
     popup.after(`<div class="popup-backdrop"></div>`);
     $('body').addClass('scrOff')
 
     setTimeout(function (){
-        var popup = $('.popup-wrap');
-        var popupBackDrop = $('.popup-backdrop');
+        var target = `.${className}`;
+        var popup = $(target);
+        var popupBackDrop = $(target).next('.popup-backdrop');
 
         popupBackDrop.addClass('show')
         popup.removeClass('hide').addClass('show')
-    },300)
+    },300, className)
 }
 
 function closePopup(className) {
     var target = `.${className}`;
     var popup = $(target);
-    var popupBackDrop = $('.popup-backdrop');
+    var popupBackDrop = $(target).next('.popup-backdrop');
 
     popup.addClass('hide').removeClass('show');
     popupBackDrop.addClass('hide').removeClass('show');
     $('body').removeClass('scrOff')
 
     setTimeout(function (){
-        var popup = $('.popup-wrap');
-        var popupBackDrop = $('.popup-backdrop');
-
         popup.css('display', 'none');
         popupBackDrop.remove();
-    },300)
+    },300, className)
 }
 
 function gnbActive(firstDepth, SecondDepth) {
