@@ -320,7 +320,7 @@ front.common = (function () {
 
                 function hasScrolled() {
                     var st = $(this).scrollTop();
-                    console.log(st)
+
 
                     if (Math.abs(lastScrollTop - st) <= delta)
                         return;
@@ -329,12 +329,16 @@ front.common = (function () {
                         // Scroll Up
                         if (st > lastScrollTop) {
                             /*메인페이지 화살표 컨트롤*/
-                            $('._sub-main .btn-box .more-box').addClass('hide')
+                            $('.sub-main .counting-area .more-box').addClass('hide')
                             if (st > headerDetailHeight) {
                                 headerDetail.removeClass('scroll-down').addClass('scroll-up');
                             }
                         }
                     } else {
+                        if (st < 10) {
+                            /*메인페이지 화살표 컨트롤*/
+                            $('.sub-main .counting-area .more-box').removeClass('hide')
+                        }
                         // Scroll Down
                         if (st + $(window).height() < $(document).height()) {
                             if (st < delta) {
