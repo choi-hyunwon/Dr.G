@@ -355,12 +355,12 @@
 
   let whatStep11, whatStep12, whatStep21, whatStep22;
   let whatSwiper = new Swiper('._whatSwiper', {
-      effect: 'slide',
+      effect: 'fade',
       autoplay: {
           enabled: false,
-          delay: 3000,
+          delay: 4000,
       },
-      speed: 1000,
+      speed: 500,
       loop: true,
       pagination: {
           el: "._whatPagination"
@@ -436,7 +436,7 @@
   let processStep2 = bodymovin.loadAnimation({
     container: processAni2,
     renderer: 'svg',
-    loop: true,
+    loop: false,
     autoplay: true,
     path: "../../img/analysis/progress-step2.json"
   });
@@ -454,13 +454,13 @@
     effect: 'fade',
     autoplay: {
       enabled: false,
-      delay: 4000,
+      delay: 3000,
     },
-    speed: 200,
-    pagination: {
+    speed: 500,
+  /*  pagination: {
       el: "._sliderPagination",
       clickable: true,
-    },
+    },*/
   });
 
   processSwiper.on('slideChange', function () {
@@ -468,7 +468,7 @@
     let stepLi = $('.analysis-sub-main .step-box li')
 
     if (processSwiper.realIndex === 0) {
-      processStep1.playSegments([0, 60], true)
+      processStep1.playSegments([0, 59], true)
       stepLi.eq(0).addClass('active').find('span').addClass('on')
       stepLi.eq(1).removeClass('active check bar').find('span').removeClass('on')
       stepLi.eq(2).removeClass('active bar').find('span').removeClass('on')
