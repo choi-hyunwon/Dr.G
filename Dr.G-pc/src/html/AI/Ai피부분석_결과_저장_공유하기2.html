@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
 @@include('../../html/include/common/head.html')
+<head>
+    <style>
+        .rainbow {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 18px;
+            background:url(../../img/@temp/temp-rainbow.png) no-repeat;
+            background-size: calc(100vw - 48px) 20px;
+        }
+    </style>
+</head>
 <body>
 <!-- s contents -->
 <div class="AI-wrap">
@@ -64,8 +78,9 @@
                                 <div class="state up">22</div>
                             </div>
                             <div class="bar">
-                                <div class="gradient" style="-webkit-mask-image: linear-gradient(to left, transparent 12%, black 12%);"></div>
-                                <div class="pos" data-score="88" style="left: 88%;">
+<!--                                <div class="gradient" style="-webkit-mask-image: linear-gradient(to left, transparent 12%, black 12%);"></div>-->
+                                <div class="rainbow" style="width: 50%"></div>
+                                <div class="pos align-right" data-score="50" style="left: 50%;">
                                     <span class="pin"></span>
                                     <span class="txt">매우 좋음</span>
                                 </div>
@@ -87,7 +102,7 @@
                                 <div class="state up">22</div>
                             </div>
                             <div class="bar">
-                                <div class="gradient" style="-webkit-mask-image: linear-gradient(to left, transparent 0%, black 0%);"></div>
+                                <div class="rainbow" style="width: 100%"></div>
                                 <div class="pos align-right" data-score="100" style="left: 100%;">
                                     <span class="pin"></span>
                                     <span class="txt">매우 좋음</span>
