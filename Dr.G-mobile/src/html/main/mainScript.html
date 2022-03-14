@@ -108,12 +108,10 @@
             path: "../../img/main/skin.json"
         });
 
-        animationMentoring.setSpeed(0.6);
-
         new Waypoint({
             element: document.querySelector('._analysisSection'),
             handler: function () {
-                animationAnalysis.playSegments([0,239], true);
+                animationAnalysis.playSegments([0,304], true);
             },
             offset: "50%"
         })
@@ -121,7 +119,7 @@
         new Waypoint({
             element: document.querySelector('._mentoringSection'),
             handler: function () {
-                animationMentoring.playSegments([0,270], true);
+                animationMentoring.playSegments([0,420], true);
             },
             offset: "50%"
         })

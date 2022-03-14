@@ -10,7 +10,7 @@
     <!-- s contents -->
     <div class="container">
         <div class="AI-wrap">
-            <div class="result-detail-view">
+            <div class="result-detail-view _copyArea">
                 <div class="heading"><img src="../../img/common/img-AI-symbol-bling.svg" alt=""><span>닥터지 Ai 피부분석 결과</span></div>
                 <div class="result">
                     <div class="heading">
@@ -204,7 +204,7 @@
                 </div>
                 <!-- s 추가 -- 2022.03.11 -->
                 <div class="btn-wrap">
-                    <a class="btn btn-md btn-light" href="#"><i class="icon ico-download"></i><span>저장하기</span></a>
+                    <a class="btn btn-md btn-light _copy" href="#"><i class="icon ico-download"></i><span>저장하기</span></a>
                     <a class="btn btn-md btn-light" href="#"><i class="icon ico-share"></i><span>공유하기</span></a>
                 </div>
                 <!-- e 추가 -- 2022.03.11 -->
@@ -230,6 +230,31 @@
             $(this).addClass('align-right')
         }
     })
+
+
+    // $('.select-img').on('change', function(e) {
+    // $('._copy').on('click', function(e) {
+    //     var fileObj = $(this);
+    //     drg.ImageUpload.setUploadType('image');
+    //     drg.ImageUpload.ajax(fileObj).done(function(d) {
+    //         alert(d.uploadedImageMap['default'].imagePath);    // 이미지경로
+    //         alert(d.uploadedImageMap['default'].originalFileName);  // 이미지명
+    //     }).fail(function(e) {
+    //         e.alertError();
+    //     }).always(function() {
+    //         e.target.value = '';
+    //     });
+    // });
+
+    $("._copy").on('click',function(){
+        html2canvas($('._copyArea')[0]).then(function (canvas) {
+            var img = document.createElement("a");
+            img.download = "result.png";
+            img.href = canvas.toDataURL();
+            document.body.appendChild(img);
+            img.click();
+        });
+    });
 </script>
 </body>
 </html>
