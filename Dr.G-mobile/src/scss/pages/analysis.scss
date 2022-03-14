@@ -1082,6 +1082,25 @@
       }
     }
 
+    .section-optimi{
+      .content{
+        .font-h4{
+          margin-bottom: vw(12);
+          .icon{
+            margin-right: vw(7);
+          }
+        }
+        .font-h6{
+          color: $gray-700;
+          margin-bottom: vw(8);
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+
     .section-tab {
       position: relative;
       z-index: 10;

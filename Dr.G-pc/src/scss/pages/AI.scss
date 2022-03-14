@@ -3078,6 +3078,24 @@
       }
     }
 
+    /*s 03.14 추가*/
+    .optimi{
+      .inner{
+        padding: 100px 0;
+        .font-h4{
+          margin-bottom: 12px;
+          .icon{
+            margin-right: 7px;
+          }
+        }
+        .font-h6{
+          color: $gray-700;
+        }
+      }
+
+    }
+    /*e 03.14 추가*/
+
     .tab {
       width: 100%;
       padding: 0;

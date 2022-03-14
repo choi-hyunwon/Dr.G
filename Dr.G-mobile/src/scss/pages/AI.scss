@@ -2908,6 +2908,28 @@
       }
     }
 
+    /*s 03.14 추가*/
+    .optimi{
+      .content{
+        padding: vw(60) vw(24);
+        .font-h4{
+          margin-bottom: vw(12);
+          .icon{
+            margin-right: vw(7);
+          }
+        }
+        .font-h6{
+          color: $gray-700;
+          margin-bottom: vw(8);
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+    /*e 03.14 추가*/
+
     .tab {
       width: vw(375);
       overflow-x: auto;
