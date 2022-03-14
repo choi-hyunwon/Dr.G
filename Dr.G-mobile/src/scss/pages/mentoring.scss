@@ -522,7 +522,6 @@
 
     .more {
       padding: vw(32) vw(24);
-
       > p {
         color: $gray-800;
         margin-bottom: vw(16);
@@ -637,12 +636,15 @@
               font-weight: 700;
             }
           }
+          &.text{
+            font-size: vw(16);
+          }
 
         }
       }
       .btn-box{
         padding: vw(20) vw(24) 0;
-        .more {
+        .more-box {
           display: flex;
           width: 100%;
           height: vw(24);
@@ -808,9 +810,10 @@
             &.item-1 {
               .item-img {
                 position: relative;
-                width: vw(310);
+                width: 100%;
                 height: auto;
                 margin: 0 auto;
+                top: vw(-80);
 
                 img {
                   width: 100%;

@@ -948,7 +948,7 @@
           margin-bottom: vw(8);
         }
         .font-h5{
-          line-height: 26px;
+          line-height: vw(26);
         }
       }
       .img-box{
@@ -1050,12 +1050,15 @@
               font-weight: 700;
             }
           }
+          &.text{
+            font-size: vw(16);
+          }
 
         }
       }
       .btn-box{
         padding: vw(20) vw(24) 0;
-        .more {
+        .more-box {
           display: flex;
           width: 100%;
           height: vw(24);
@@ -1069,6 +1072,11 @@
             background-size: cover;
             width: vw(24);
             height: vw(24);
+          }
+          &.hide{
+            .arrow{
+              display: none;
+            }
           }
         }
       }
@@ -1508,7 +1516,7 @@
         li {
           display: inline-block;
           width: vw(50);
-          padding-top: 50px;
+          padding-top: vw(50);
           //height: vw(67);
           margin-right: vw(36);
           position: relative;
