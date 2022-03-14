@@ -12,7 +12,7 @@
             <div class="popup-body">
                 <div class="scroll-container">
                     <div class="title">피부 고민 케어법을 알려드려요.</div>
-                    <div class="share-solution">
+                    <div class="share-solution _copyArea">
                         <div class="font-h4 font-bold">피부 고민 케어법을 알려드려요.</div>
                         <div class="box">
                             <div class="solution-card">
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div class="btn-wrap">
-                    <a class="btn btn-md btn-light" href="#"><i class="icon ico-download"></i><span>저장하기</span></a>
+                    <a class="btn btn-md btn-light _copy" href="#"><i class="icon ico-download"></i><span>저장하기</span></a>
                     <a class="btn btn-md btn-light" onclick="openPopup('_sharePopup')" href="#"><i class="icon ico-share"></i><span>공유하기</span></a>
                 </div>
             </div>
@@ -106,6 +106,30 @@
 <script>
     openPopup('_aiSolutionCarePopup')
     $("._aiSolutionCarePopup .scroll-container").mCustomScrollbar();
+
+    // $('.select-img').on('change', function(e) {
+    // $('._copy').on('click', function(e) {
+    //     var fileObj = $(this);
+    //     drg.ImageUpload.setUploadType('image');
+    //     drg.ImageUpload.ajax(fileObj).done(function(d) {
+    //         alert(d.uploadedImageMap['default'].imagePath);    // 이미지경로
+    //         alert(d.uploadedImageMap['default'].originalFileName);  // 이미지명
+    //     }).fail(function(e) {
+    //         e.alertError();
+    //     }).always(function() {
+    //         e.target.value = '';
+    //     });
+    // });
+
+    $("._copy").on('click',function(){
+        html2canvas($('._copyArea')[0]).then(function (canvas) {
+            var img = document.createElement("a");
+            img.download = "result.png";
+            img.href = canvas.toDataURL();
+            document.body.appendChild(img);
+            img.click();
+        });
+    });
 </script>
 </body>
 </html>

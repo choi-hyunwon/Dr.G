@@ -176,6 +176,17 @@
         path: "../../img/AI/face-edit.json"
     });
 
+    let iconAnalysisResult = document.querySelector('._aniAnalysisResult');
+
+    let animationAnalysisResult = bodymovin.loadAnimation({
+        container: iconAnalysisResult,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: "../../img/AI/stick-graph.json"
+    });
+
+
     var howSlider = new Swiper("._howSlider", {
         // autoplay: true,
         spaceBetween: 24,
@@ -191,12 +202,7 @@
         element: document.querySelector('._howSlider'),
         handler: function () {
             howSlider.autoplay.start();
-            countDown(100, 12, 0)
-            countUp(0, 88, 0)
-            setTimeout(function () {
-                countDown(100, 0, 1)
-                countUp(0, 100, 1)
-            }, 300)
+            animationAnalysisResult.playSegments([0,49], true);
             // console.log('how slider')
         },
         offset: "70%"
@@ -204,56 +210,11 @@
 
     howSlider.on('slideChange', function () {
         if(howSlider.realIndex === 0) {
-            countDown(100, 12, 0)
-            countUp(0, 88, 0)
-            setTimeout(function () {
-                countDown(100, 0, 1)
-                countUp(0, 100, 1)
-            }, 300)
+            animationAnalysisResult.playSegments([0,49], true);
         } else if(howSlider.realIndex === 1) {
             animationFace.playSegments([0,110], true);
         }
     });
-
-    var $score = $('._barChart .bar .pos');
-
-    $score.each(function () {
-        let data = $(this).data('score');
-        let numDate = 100 - Number(data);
-        $(this).siblings('.gradient').css({
-            'mask-image': 'linear-gradient(to left, transparent ' + numDate + '%, black ' + numDate + '%)',
-            '-webkit-mask-image': 'linear-gradient(to left, transparent ' + numDate + '%, black ' + numDate + '%)'
-        })
-        if (0 < data && data <= 5) {
-            $(this).addClass('align-left')
-        } else if (95 < data && data <= 100) {
-            $(this).addClass('align-right')
-        }
-    })
-
-    function countDown(from, to, idx) {
-        var start = from;
-        var countDown = setInterval(function () {
-            var mask = $('._barChart').find('.item').eq(idx).find('.mask');
-            var number = --start;
-            mask.css('width', number + '%');
-            if (start === to) {
-                clearInterval(countDown);
-            }
-        }, 8);
-    }
-
-    function countUp(from, to, idx) {
-        var start = from;
-        var countUp = setInterval(function () {
-            var mask = $('._barChart').find('.item').eq(idx).find('.pos');
-            var number = ++start;
-            mask.css('left', number + '%');
-            if (start === to) {
-                clearInterval(countUp);
-            }
-        }, 8);
-    }
 
     setInterval(function (){
         var badge = $('._badgeTab .badge')
