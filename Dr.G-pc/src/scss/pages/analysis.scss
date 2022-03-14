@@ -2173,6 +2173,8 @@
           position: relative;
           .page{
             text-align: center;
+            background-color: #E7EAFF;
+            overflow:hidden;
             .img_box{
               width: 580px;
               height: 468px;
@@ -2300,8 +2302,9 @@
               margin-right: 100px;
               display: none;
               opacity: 0;
-
-
+              svg{
+                border-radius: 20px;
+              }
 
               img {
                 width: 100%;
@@ -2319,7 +2322,7 @@
                 position: relative;
                 //opacity: 0.5;
                 color: /*$gray-fff*/ rgba(255, 255, 255, 0.5);
-                border-bottom: 1px solid rgba(255,255,255,0.5);
+                border-bottom: 1px solid rgba(255,255,255,0.1);
 
                 &:before{
                   display: inline-block;

@@ -278,7 +278,7 @@
       enabled: false,
       delay: 3000,
     },
-    speed: 1000,
+    speed: 500,
     pagination: {
       el: "._whatPagination"
     },
@@ -321,7 +321,7 @@
   let processStep2 = bodymovin.loadAnimation({
     container: processAni2,
     renderer: 'svg',
-    loop: true,
+    loop: false,
     autoplay: true,
     path: "../../img/analysis/progress-step2.json"
   });
@@ -339,9 +339,9 @@
     effect: 'slide',
     autoplay: {
       enabled: false,
-      delay: 4000,
+      delay: 3000,
     },
-    speed: 200,
+    speed: 500,
     pagination: {
       el: "._sliderPagination",
       clickable: true,
