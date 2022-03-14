@@ -3306,7 +3306,7 @@
 
                 svg {
                   position: relative;
-                  margin-top: vw(-6);
+                  margin-top: vw(-1);
                 }
               }
             }
@@ -3374,7 +3374,7 @@
 
             .item-info {
               .font-body-1 {
-                margin-bottom: vw(7);
+                margin-bottom: vw(9);
               }
 
               .font-h6 {
@@ -3399,7 +3399,7 @@
             &.item-2 {
               .item-img {
                 width: vw(279);
-                margin: vw(48) auto vw(35);
+                margin: vw(33) auto vw(31);
               }
             }
 
@@ -3597,8 +3597,6 @@
               }
 
               .item-img {
-                //display: none;
-                //opacity: 0;
                 background-color: $primary;
               }
 
@@ -3664,21 +3662,12 @@
                 .item-img {
                   position: relative;
                   width: vw(316);
-                  height: vw(218);
-                  margin: 0 auto vw(96);
+                  height: auto;
+                  margin: vw(-16) auto vw(83);
 
                   svg {
                     width: 100%;
                   }
-                }
-              }
-            }
-
-            &.swiper-slide-active {
-              .item {
-                .item-img {
-                  //opacity: 1;
-                  //display: block;
                 }
               }
             }
@@ -4305,11 +4294,8 @@
 
   /* 피부 고민 케어법 공유하기 */
   .share-solution {
-    padding: 0 vw(24);
-
     .font-h4 {
-      margin-bottom: vw(24);
-      margin-top: vw(24);
+      padding: vw(24) 0;
     }
 
     .box {
@@ -4378,11 +4364,14 @@
       }
     }
 
+    .copy-result {
+      padding: 0 vw(24) vw(40);
+    }
+
     > .btn-wrap {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: vw(32);
       padding-bottom: vw(48);
 
       .btn {
