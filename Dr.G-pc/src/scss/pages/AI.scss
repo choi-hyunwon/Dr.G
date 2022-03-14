@@ -4992,16 +4992,17 @@
                 border-radius: vw(18);
                 border: vw(2) solid $gray-200;
 
-                //.gray {
-                //  position: absolute;
-                //  width: 100%;
-                //  height: vw(12);
-                //  left: 0;
-                //  top: 0;
-                //  background: linear-gradient(90deg, #F8F8F8 0%, #F8F8F8 100%);
-                //  border-radius: vw(18);
-                //  z-index: 1;
-                //}
+                .rainbow {
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 18px;
+                  background-image:url(../img/AI/rainbow.png);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                }
 
                 .gradient {
                   position: absolute;

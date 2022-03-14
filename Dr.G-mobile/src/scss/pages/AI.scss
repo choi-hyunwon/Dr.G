@@ -311,7 +311,7 @@
               box-shadow: 0 vw(4) vw(4) rgba(34, 34, 34, 0.12);
               margin: 0 auto vw(24);
               background-color: #2fcab0;
-              border: vw(1) solid #36E2C5;
+              border: vw(1) solid #36e2c5;
 
               .icon-camera {
                 @include background-img($width: 32, $height: 32, $category: 'AI', $img: 'ico-camera.svg');
@@ -2833,7 +2833,7 @@
         &::after {
           content: '';
           position: absolute;
-          @include background-img ($width: 238, $height: 238, $category: 'AI', $img: 'bg-camera-frame.svg');
+          @include background-img($width: 238, $height: 238, $category: 'AI', $img: 'bg-camera-frame.svg');
           left: vw(-4);
           top: vw(-8);
         }
@@ -2899,8 +2899,8 @@
             height: vw(24);
           }
 
-          &.hide{
-            .arrow{
+          &.hide {
+            .arrow {
               display: none;
             }
           }
@@ -4240,38 +4240,57 @@
   }
 
   .result-detail-view {
-    > .heading {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      height: vw(90);
-      background-color: #fff;
-      padding: 0 vw(24);
+    .copy-area {
+      padding-bottom: vw(49);
 
-      img {
-        display: inline-block;
-        width: vw(60);
-        margin-right: vw(12);
-      }
+      > .heading {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: vw(90);
+        background-color: #fff;
+        padding: 0 vw(24);
 
-      span {
-        display: inline-block;
-        font-weight: bold;
-        font-size: vw(20);
-        line-height: vw(30);
+        img {
+          display: inline-block;
+          width: vw(60);
+          margin-right: vw(12);
+        }
+
+        span {
+          display: inline-block;
+          font-weight: bold;
+          font-size: vw(20);
+          line-height: vw(30);
+        }
       }
     }
 
     .result {
       .heading {
         background: $primary;
-        height: vw(459);
-        margin-bottom: vw(90);
+        //height: vw(459);
+        margin-bottom: vw(40);
+        padding-bottom: vw(40);
       }
 
       .analysis-result {
         .bar-chart-box {
-          padding: 0 vw(24) vw(17);
+          padding: 0 vw(24) 0;
+
+          .bar-chart {
+            .rainbow {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: 18px;
+              background-image: url(../img/AI/rainbow.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+          }
         }
       }
     }
@@ -4280,7 +4299,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: vw(32);
       padding-bottom: vw(48);
 
       .btn {
@@ -4690,8 +4708,8 @@
           width: fit-content;
           float: none;
           margin: 0 auto;
-          border-collapse : collapse;
-          border-spacing : 0;
+          border-collapse: collapse;
+          border-spacing: 0;
           padding: 0;
           border-style: none;
 
