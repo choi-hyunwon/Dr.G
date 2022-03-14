@@ -329,9 +329,9 @@ front.common = (function () {
                     } else if($('._AiSubMain').find('._scrollTabWrap').length) {
                         var tabContentOffset = $('.section-wrap').offset().top;
                         if (tabContentOffset > st) {
-                            $('._tab').removeClass('fixed').css('top', 'auto')
+                            $('._scrollTabWrap').removeClass('fixed').css('top', 'auto')
                         } else {
-                            $('._tab').addClass('fixed').css('top', 86 + 'px')
+                            $('._scrollTabWrap').addClass('fixed').css('top', 86 + 'px')
                         }
                         if (st < delta) {
                             header.removeClass('_scroll')
