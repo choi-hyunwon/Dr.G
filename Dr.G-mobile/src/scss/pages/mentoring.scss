@@ -811,7 +811,6 @@
             width: 100%;
             height: vw(563);
             padding-bottom: vw(302);
-            padding-top: vw(30);
 
             &.item-1 {
               .item-img {
@@ -819,7 +818,7 @@
                 width: 100%;
                 height: auto;
                 margin: 0 auto;
-                top: vw(-80);
+                top: vw(-50);
 
                 img {
                   width: 100%;
@@ -832,7 +831,7 @@
                 position: relative;
                 width: vw(250);
                 height: auto;
-                margin: 0 auto vw(90);
+                margin: vw(30) auto vw(90);
 
                 svg {
                   width: 100%;
@@ -843,7 +842,7 @@
             &.item-3 {
               .item-img {
                 position: relative;
-                width: vw(300);
+                width: vw(324);
                 height: auto;
                 margin: 0 auto;
 
