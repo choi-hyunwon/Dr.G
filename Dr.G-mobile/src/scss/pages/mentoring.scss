@@ -659,6 +659,12 @@
             width: vw(24);
             height: vw(24);
           }
+
+          &.hide{
+            .arrow{
+              display: none;
+            }
+          }
         }
       }
     }
