@@ -204,11 +204,12 @@
         }
       }
       .gauge-gradient{
+        text-align: center;
         .process{
           position: relative;
+          display: inline-block;
           svg {
             width: vw(214);
-            margin: auto;
             display: block;
             path {
               stroke-linecap: round;
@@ -247,6 +248,7 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
+            width: vw(120);
             .counter{
               font-size: vw(56);
               font-weight: 600;
@@ -269,7 +271,7 @@
               border-radius: 50%;
               &.dot1{
                 top: vw(48);
-                left: vw(98);
+                left: vw(40);
               }
               &.dot2{
                 top: vw(20);
@@ -278,7 +280,7 @@
               }
               &.dot3{
                 top: vw(48);
-                right: vw(98);
+                right: vw(40);
               }
 
             }
@@ -409,20 +411,22 @@
           }
         }
       }
-      .btn-sns-wrap{
+
+      .btn-box{
         text-align: center;
-        font-size: 0;
-        margin-bottom: vw(32);
-        .btn-sns-inner{
-          a{
-            display: inline-block;
-            margin-right: vw(12);
-            &:last-of-type{
-              margin-right: 0;
-            }
-          }
+        .btn-violet{
+          margin-bottom: vw(24);
         }
+        .btn_text{
+          font-size: vw(15);
+          color: $gray-900;
+          text-decoration: underline;
+          font-weight: 500;
+        }
+
       }
+
+
       .keyword{
         border: 1px solid $gray-400;
         border-radius: vw(16);
@@ -914,6 +918,26 @@
   }
   @keyframes smileGraph{
     0%{transform: rotateZ(-180deg);}
+  }
+
+  /*공유하기*/
+  .result-detail-view{
+    .copy-area{
+      padding-bottom: vw(32);
+      .heading{
+       height: vw(77);
+      }
+      .section-color{
+        .floating-box{
+          margin-top: vw(30);
+        }
+      }
+
+      .project-name{
+        text-align: center;
+        padding-top: 32px;
+      }
+    }
   }
 
 

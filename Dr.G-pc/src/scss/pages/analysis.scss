@@ -857,7 +857,7 @@
         background-position: top center;
         background-repeat: no-repeat;
         padding: vw(80) 0 0;
-        margin-bottom: 60px;
+        margin: 0 auto 60px;
 
         .font-h2 {
           text-align: center;
@@ -897,11 +897,13 @@
         }
 
         .gauge-gradient {
+          text-align: center;
           .process {
             position: relative;
+            display: inline-block;
 
             svg {
-              width: vw(214);
+              width: 214px;
               margin: auto;
               display: block;
 
@@ -1095,92 +1097,73 @@
         }
 
         .btn-box {
-          align-items: center;
+          position: relative;
+          text-align: center;
           height: 62px;
           margin-top: 60px;
           margin-bottom: 80px;
 
-          :nth-of-type(1){
-
-          }
-          :nth-of-type(2){
-            text-align: center;
-          }
-          :nth-of-type(3){
-            text-align: right;
-          }
-
-
-          .btn-sns-wrap {
-            display: inline-block;
-            .btn-sns-inner {
-
-              a {
-                display: inline-block;
-                .icon {
-                  width: 44px;
-                  height: 44px;
-                }
-
-                + a {
-                  margin-left: 12px;
-                }
-              }
-            }
-          }
-
-          .btn-violet {
-            width: 203px;
+          >.btn{
+            width: 277px;
             padding: 0;
+            +.btn{
+              margin-left: 8px;
+            }
           }
 
-          .btn_version {
-            position: relative;
-            padding-left: vw(16);
-            padding-right: vw(16);
-
-            .icon {
-              vertical-align: unset;
-            }
-
-            &.show {
-              border-radius: 100px 100px 0 100px;
+          .version{
+            position: absolute;
+            right: 0;
+            top: 15px;
+            .btn_version {
+              width: 124px;
+              position: relative;
+              padding: 0 15px;
 
               .icon {
-                @include background-img($width: 10, $height: 10, $category: 'common', $img: 'ico-minus-sm.svg')
+                vertical-align: unset;
+              }
+
+              &.show {
+                border-radius: 100px 100px 0 100px;
+
+                .icon {
+                  @include background-img($width: 10, $height: 10, $category: 'common', $img: 'ico-minus-sm.svg')
+                }
+
+                .version_box {
+                  display: block;
+                }
               }
 
               .version_box {
-                display: block;
-              }
-            }
-
-            .version_box {
-              position: absolute;
-              width: 228px;
-              background-color: #E7EAFF;
-              padding: 30px 16px 16px;
-              top: 15px;
-              right: -1px;
-              z-index: -1;
-              border-radius: vw(12);
-              display: none;
+                position: absolute;
+                width: 260px;
+                background-color: #E7EAFF;
+                padding: 30px 16px 16px;
+                top: 15px;
+                right: -1px;
+                z-index: -1;
+                border-radius: vw(12);
+                display: none;
 
 
-              li {
-                font-size: vw(13);
-                font-weight: 400;
-                line-height: 18px;
-                color: $gray-800;
-                margin-bottom: vw(8);
-                text-align: left;
+                li {
+                  font-size: vw(13);
+                  font-weight: 400;
+                  line-height: 18px;
+                  color: $gray-800;
+                  margin-bottom: vw(8);
+                  text-align: left;
 
-                &:last-of-type {
-                  margin-bottom: 0;
+                  &:last-of-type {
+                    margin-bottom: 0;
+                  }
                 }
               }
             }
           }
+
         }
 
         .keyword {
@@ -1729,6 +1712,40 @@
         margin: 0 auto;
       }
     }
+
+  /*공유하기*/
+  .result-detail-view{
+    .heading {
+      height: 77px;
+    }
+    .result {
+      .section-color{
+        padding-top: 56px;
+        height: 546px;
+        margin-bottom: 40px;
+        background: url("../img/analysis/bg_care_share.png") no-repeat center bottom / cover;
+        .font-h2{
+          font-size: 28px;
+          line-height: 39px;
+          margin-bottom: 32px;
+        }
+        .floating-box{
+          width: 280px;
+          height: 280px;
+          margin-top: 15px;
+        }
+      }
+
+      .project-name{
+        text-align: center;
+        padding-top: 32px;
+        margin-bottom: 40px;
+      }
+    }
+
+
+
+  }
 
 
   &.analysis-sub-main {

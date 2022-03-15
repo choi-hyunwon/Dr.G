@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <!-- s header 2022.03.11 추가 -->
+    @@include('../../html/include/common/header-detail.html')
+    <!-- e header -->
+
+    <!-- s contents -->
+    <div class="container">
+        <div class="AI-wrap analysis-wrap">
+            <div class="result-detail-view">
+                <div class="copy-area _copyArea">
+                    <div class="heading"><span>닥터지 성분분석 결과</span></div>
+                    <div class="result">
+                        <!-- s section-color -->
+                        <div class="section section-color">
+                            <p class="font-h2 font-bold">내 <span class="point">피부유형</span>과  얼마나<br>일치하는지 확인하세요.</p>
+                            <div class="gauge-gradient">
+                                <div id="progress" class="process">
+                                    <svg viewbox="0 0 100 58">
+                                        <linearGradient id="gradient">
+                                            <stop offset="0%" stop-color="#EA8181"/>
+                                            <stop offset="35%" stop-color="#ECDA7C"/>
+                                            <stop offset="70%" stop-color="#47D45E"/>
+                                            <stop offset="100%" stop-color="#2DAFF9"/>
+                                        </linearGradient>
+                                        <path class="bg" d="M 50,50 m -47,0 a 47,47 0 1 1 94,0" fill='none' />
+                                        <path class="numerical" d="M 50,50 m -47,0 a 47,47 0 1 1 94,0"  fill='none'/>
+                                    </svg>
+                                    <p class="font-poppins percent"><span class="counter">0</span><span class="unit">%</span></p>
+                                    <div class="dot-box">
+                                        <span class="dot dot1"></span>
+                                        <span class="dot dot2"></span>
+                                        <span class="dot dot3"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="floating-box">
+                                <img src="../../img/analysis/img-sample-4.png" alt="제품이미지">
+                            </div>
+                        </div>
+                        <!-- e section-color -->
+                        <div class="project-name">
+                            <p class="font-h4 font-bold">약산성 레드 블레미쉬 클리어<br> 수딩 폼 200ml</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- s 추가 -- 2022.03.11 -->
+                <div class="btn-wrap">
+                    <a class="btn btn-md btn-light _copy" href="#"><i class="icon ico-download"></i><span>저장하기</span></a>
+                    <a class="btn btn-md btn-light" href="#"><i class="icon ico-share"></i><span>공유하기</span></a>
+                </div>
+                <!-- e 추가 -- 2022.03.11 -->
+            </div>
+        </div>
+    </div>
+    <!-- e contents -->
+</div>
+<script>
+    /* 피부 상태 그래프 */
+    var $score = $('._barChart .bar .pos');
+    $score.each(function () {
+        let data = $(this).data('score');
+        let numDate = 100 - Number(data)
+        $(this).css('left', data + '%')
+        $(this).siblings('.rainbow').css('width',data+'%')
+        // $(this).siblings('.gradient').css({
+        //     'mask-image' : 'linear-gradient(to left, transparent ' + numDate + '%, black '+ numDate +'%)',
+        //     '-webkit-mask-image' : 'linear-gradient(to left, transparent ' + numDate + '%, black '+ numDate +'%)'
+        // })
+        if (0 < data && data <= 5) {
+            $(this).addClass('align-left')
+        } else if (95 < data && data <= 100) {
+            $(this).addClass('align-right')
+        }
+    })
+
+
+    // $('.select-img').on('change', function(e) {
+    // $('._copy').on('click', function(e) {
+    //     var fileObj = $(this);
+    //     drg.ImageUpload.setUploadType('image');
+    //     drg.ImageUpload.ajax(fileObj).done(function(d) {
+    //         alert(d.uploadedImageMap['default'].imagePath);    // 이미지경로
+    //         alert(d.uploadedImageMap['default'].originalFileName);  // 이미지명
+    //     }).fail(function(e) {
+    //         e.alertError();
+    //     }).always(function() {
+    //         e.target.value = '';
+    //     });
+    // });
+
+    $("._copy").on('click',function(){
+        html2canvas($('._copyArea')[0]).then(function (canvas) {
+            var img = document.createElement("a");
+            img.download = "result.png";
+            img.href = canvas.toDataURL();
+            document.body.appendChild(img);
+            img.click();
+        });
+    });
+</script>
+
+@@include('./_analysisScript.html')
+</body>
+</html>
