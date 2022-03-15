@@ -236,13 +236,15 @@
       let text = $('._sub-main .img-box .percent .counter');
       let gaugeText = text.html();
       let counter = parseInt(gaugeText);
-
-       if (counter < 74) {
-        text.html(counter + 1);
+        console.log(counter);
+        if (counter < 74) {
+        text.html(counter + 2);
       } else {
         clearInterval(mainCounter);
       }
-    }, 35);
+    }, 1000);
+
+
   });
 
   /*크림 텍스쳐*/
@@ -453,7 +455,6 @@
   let processSwiper = new Swiper("._processSwiper", {
     effect: 'fade',
     autoplay: {
-      enabled: false,
       delay: 3000,
     },
     speed: 500,
