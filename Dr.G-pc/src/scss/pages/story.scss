@@ -372,16 +372,28 @@
         position: absolute;
 
         &.swiper-button-disabled {
-          opacity: .7;
+          cursor: default;
         }
       }
 
       .btn-prev {
         left: -10px;
+
+        &.swiper-button-disabled {
+          .ico-nav-prev-gray {
+            background-image: url(../img/common/ico-nav-prev-gray-disabled.svg);
+          }
+        }
       }
 
       .btn-next {
         right: -10px;
+
+        &.swiper-button-disabled {
+          .ico-nav-next-gray {
+            background-image: url(../img/common/ico-nav-next-gray-disabled.svg);
+          }
+        }
       }
     }
 
