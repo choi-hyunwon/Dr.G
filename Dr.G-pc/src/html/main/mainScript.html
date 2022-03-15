@@ -56,7 +56,7 @@
             centeredSlides: true,
             loop: true,
             autoplay: true,
-            speed: 1000,
+            speed: 0,
             infinite: true,
             navigation: {
                 nextEl: "._sNext",
@@ -72,42 +72,65 @@
             var btnArrow = $('._arrow path');
             var bg = $('._suggestionBg');
 
+            $('.text-box').css({
+                'opacity' : '0',
+                'transition' : '.4s'
+            });
+            setTimeout(function (){
+                $('.text-box').css({
+                    'opacity' : '1',
+                    // 'transition' : '.4s'
+                });
+            },500)
+
             if(suggestionSlider.realIndex === 0) {
+                console.log('0')
                 smileMotif.css('fill','#05439')
-                desc.text('흡수 빠른 프로 비타민 D 함유')
-                name.text('더모이스처 베리어.D')
+                setTimeout(function (){
+                    desc.text('흡수 빠른 프로 비타민 D 함유')
+                    name.text('더모이스처 베리어.D')
+                },500)
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#EF620A')
                 btn.css('color','#ffffff')
                 btnArrow.css('stroke','#ffffff')
                 bg.css('background','linear-gradient(180deg, #B0D3FF 0%, rgba(176, 211, 255, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 1) {
+                console.log('1')
                 smileMotif.css('fill','#F15a00')
-                desc.text('잡티 잡는 파워 비타민C 앰플')
-                name.text('비타슈티컬 15 플러스 앰플')
+                setTimeout(function (){
+                    desc.text('잡티 잡는 파워 비타민C 앰플')
+                    name.text('비타슈티컬 15 플러스 앰플')
+                },500)
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#F5E618')
                 btn.css('color','#444444')
                 btnArrow.css('stroke','#444444')
                 bg.css('background','linear-gradient(180deg, #F8CCBF 0%, rgba(248, 204, 191, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 2) {
+                console.log('2')
                 smileMotif.css('fill','#008257')
-                desc.text('진정 강한 병풀 바이옴 시카 수딩 크림')
-                name.text('레드 블레미쉬 시카 수딩 크림')
+                setTimeout(function (){
+                    desc.text('진정 강한 병풀 바이옴 시카 수딩 크림')
+                    name.text('레드 블레미쉬 시카 수딩 크림')
+                },500)
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#FF4757')
                 btn.css('color','#FFFFFF')
                 btnArrow.css('stroke','#FFFFFF')
                 bg.css('background','linear-gradient(180deg, #9AE3BC 0%, rgba(154, 227, 188, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 3) {
+                console.log('3')
                 smileMotif.css('fill','#05439')
                 desc.text('흡수 빠른 프로 비타민 D 함유')
                 name.text('더모이스처 베리어.D')
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#EF620A')
+                btn.css('color','#FFFFFF')
                 btnArrow.css('stroke','#ffffff')
                 bg.css('background','linear-gradient(180deg, #B0D3FF 0%, rgba(176, 211, 255, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 4) {
+                console.log('4')
                 smileMotif.css('fill','#F15a00')
                 desc.text('잡티 잡는 파워 비타민C 앰플')
                 name.text('비타슈티컬 15 플러스 앰플')
@@ -117,6 +140,7 @@
                 btnArrow.css('stroke','#444444')
                 bg.css('background','linear-gradient(180deg, #F8CCBF 0%, rgba(248, 204, 191, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 5) {
+                console.log('5')
                 smileMotif.css('fill','#008257')
                 desc.text('진정 강한 병풀 바이옴 시카 수딩 크림')
                 name.text('레드 블레미쉬 시카 수딩 크림')
@@ -126,14 +150,17 @@
                 btnArrow.css('stroke','#FFFFFF')
                 bg.css('background','linear-gradient(180deg, #9AE3BC 0%, rgba(154, 227, 188, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 6) {
+                console.log('6')
                 smileMotif.css('fill','#05439')
                 desc.text('흡수 빠른 프로 비타민 D 함유')
                 name.text('더모이스처 베리어.D')
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#EF620A')
+                btn.css('color','#FFFFFF')
                 btnArrow.css('stroke','#ffffff')
                 bg.css('background','linear-gradient(180deg, #F8CCBF 0%, rgba(248, 204, 191, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 7) {
+                console.log('7')
                 smileMotif.css('fill','#F15a00')
                 desc.text('잡티 잡는 파워 비타민C 앰플')
                 name.text('비타슈티컬 15 플러스 앰플')
