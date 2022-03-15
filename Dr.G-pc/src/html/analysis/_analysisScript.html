@@ -455,6 +455,7 @@
   let processSwiper = new Swiper("._processSwiper", {
     effect: 'fade',
     autoplay: {
+      enabled: true,
       delay: 3000,
     },
     speed: 500,
@@ -469,7 +470,7 @@
     let stepLi = $('.analysis-sub-main .step-box li')
 
     if (processSwiper.realIndex === 0) {
-      processStep1.playSegments([0, 59], true)
+      processStep1.playSegments([0, 60], true)
       stepLi.eq(0).addClass('active').find('span').addClass('on')
       stepLi.eq(1).removeClass('active check bar').find('span').removeClass('on')
       stepLi.eq(2).removeClass('active bar').find('span').removeClass('on')

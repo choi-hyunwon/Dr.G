@@ -3,6 +3,7 @@
  v.0.1 선미 : ico-arrow-green-right 추가 및 pc 분리 -- 2022.02.04
  v.0.2 선미 : ico-plus-sm , ico-plus-sm PC추가  -- 2022.02.08
  v.0.3 주연 : sns 아이콘 사이즈 변경 -- 2022.02.08
+ v.0.4 선미 : .ico-optimi 추가 --2021.03.15
 |--------------------------------------------------------------------|
 */
 .icon {
@@ -329,4 +330,13 @@
 
 .ico-caution {
   @include background-img($width: 18, $height: 18, $category: 'common', $img: 'ico-caution.svg');
+}
+
+
+.ico-optimi {
+  @include background-img($width: 38, $height: 38, $category: 'common', $img: 'ico-optimi.svg');
+
+  &.ico-sm {
+    @include background-img($width: 26, $height: 26, $category: 'common', $img: 'ico-optimi.svg');
+  }
 }

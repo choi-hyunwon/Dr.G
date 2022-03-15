@@ -103,7 +103,7 @@
         let animationMentoring = bodymovin.loadAnimation({
             container: iconMentoring,
             renderer: 'svg',
-            loop: false,
+            loop: true,
             autoplay: true,
             path: "../../img/main/skin.json"
         });
@@ -119,7 +119,7 @@
         new Waypoint({
             element: document.querySelector('._mentoringSection'),
             handler: function () {
-                animationMentoring.playSegments([0,420], true);
+                animationMentoring.playSegments([0,268], true);
             },
             offset: "50%"
         })
