@@ -4213,12 +4213,14 @@
 
     .box {
       padding: vw(48) vw(24);
+      //height: vw(612);
+      height: calc(100 * var(--vh) - #{vw(137)});
       background-color: $gray-200;
 
       .list {
         .item {
           + .item {
-            margin-top: vw(14);
+            margin-top: vw(12);
           }
 
           .custom-checkbox {
@@ -4981,8 +4983,9 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: vw(657);
-    overflow-y: auto;
+    height: 100%;
+    //height: vw(657);
+    overflow-y: hidden;
 
     .circle {
       position: absolute;
