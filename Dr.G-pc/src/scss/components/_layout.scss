@@ -132,6 +132,8 @@
         align-items: center;
 
         .item {
+          position: relative;
+
           > a {
             position: relative;
             display: inline-block;
@@ -146,7 +148,7 @@
           }
 
           + .item {
-            padding-left: 48px;
+            margin-left: 48px;
           }
 
           &.hovering {
@@ -174,45 +176,47 @@
 
           &:nth-child(1) {
             .sub-menu {
-              padding-left: 161px;
+              left: 0;
+              transform: none;
+              //padding-left: 161px;
             }
           }
 
-          &:nth-child(2) {
-            .sub-menu {
-              padding-left: 104px;
-            }
-          }
-
-          &:nth-child(3) {
-            .sub-menu {
-              padding-left: 218px;
-            }
-          }
-
-          &:nth-child(4) {
-            .sub-menu {
-              padding-left: 494px;
-            }
-          }
-
-          &:nth-child(5) {
-            .sub-menu {
-              padding-left: 595px;
-            }
-          }
-
-          &:nth-child(6) {
-            .sub-menu {
-              padding-left: 645px;
-            }
-          }
-
-          &:nth-child(7) {
-            .sub-menu {
-              padding-left: 831px;
-            }
-          }
+          //&:nth-child(2) {
+          //  .sub-menu {
+          //    padding-left: 104px;
+          //  }
+          //}
+          //
+          //&:nth-child(3) {
+          //  .sub-menu {
+          //    padding-left: 218px;
+          //  }
+          //}
+          //
+          //&:nth-child(4) {
+          //  .sub-menu {
+          //    padding-left: 494px;
+          //  }
+          //}
+          //
+          //&:nth-child(5) {
+          //  .sub-menu {
+          //    padding-left: 595px;
+          //  }
+          //}
+          //
+          //&:nth-child(6) {
+          //  .sub-menu {
+          //    padding-left: 645px;
+          //  }
+          //}
+          //
+          //&:nth-child(7) {
+          //  .sub-menu {
+          //    padding-left: 831px;
+          //  }
+          //}
 
           &:last-child {
             > a {
@@ -245,17 +249,21 @@
       .sub-menu {
         display: none;
         position: absolute;
-        width: 100%;
         height: 61px;
         background-color: #fff;
-        left: 0;
-        top: 87px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 56px;
         z-index: 20;
         opacity: 0;
         align-items: center;
         transition: opacity 0.1s 0s linear, transform 0.2s 0s linear;
+        overflow: hidden;
 
         > li {
+          float: left;
+          white-space: nowrap;
+
           + li {
             margin-left: 40px;
           }

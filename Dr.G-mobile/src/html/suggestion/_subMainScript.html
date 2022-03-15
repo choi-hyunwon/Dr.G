@@ -19,7 +19,7 @@
         // });
 
         $('._tab a').on('click', function () {
-            subjectList.masonry('layout');
+            setGrid()
         });
 
         // filter tab click event
@@ -41,4 +41,37 @@
         })
 
     })
+
+    // 렌더링 후, 함수 추가 요청 -- 2022.03.15
+    function setGrid(){
+        $('._subjectList').masonry({
+            itemSelector: '._subjectList .item',
+            columnWidth: '._subjectList .sizer',
+            percentPosition: true
+        });
+    }
+
+    var $grid = $('._subjectList').masonry({
+        itemSelector: '._subjectList .item',
+        columnWidth: '._subjectList .sizer',
+        percentPosition: true
+    });
+
+    $('._btnMore').on( 'click', function() {
+        var elems = [ getItemElement(), getItemElement(), getItemElement() ];
+        var $elems = $( elems );
+        $grid.append( $elems ).masonry( 'appended', $elems );
+    });
+
+    function getItemElement() {
+        var elem = $(`<li class="item">
+                        <div class="item-inner">
+                            <div class="font-body-2"><span>248</span>번째 의견</div>
+                            <div class="font-body-1">여행용 미니어처 선크림을 만들어줘요.</div>
+                            <div class="link"><a href="#" class="_likeBtn"><i class="icon ico-like"></i><span class="num">28</span></a></div>
+                        </div>
+                    </li>>`)[0];
+        return elem;
+    }
+
 </script>
