@@ -411,6 +411,7 @@
 
         .text-box {
           margin-bottom: 30px;
+          transition: .3s;
 
           .p-title {
             font-weight: bold;
@@ -439,6 +440,7 @@
             white-space: nowrap;
             justify-content: center;
             align-items: center;
+            transition: .3s;
 
             svg {
               margin-left: 8px;

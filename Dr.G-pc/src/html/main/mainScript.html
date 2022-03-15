@@ -64,7 +64,17 @@
             }
         });
 
-        suggestionSlider.on('slideChange', function () {
+       suggestionSlider.on('slideChangeTransitionStart', function () {
+           $('.text-box').css('opacity','0');
+       })
+
+       suggestionSlider.on('slideChangeTransitionEnd', function () {
+           setTimeout(function (){
+               $('.text-box').css('opacity','1');
+           },300)
+       })
+
+       suggestionSlider.on('slideChange', function () {
             var smileMotif = $('._smileMotif').find('path');
             var desc = $('._desc');
             var name = $('._name');
@@ -72,22 +82,12 @@
             var btnArrow = $('._arrow path');
             var bg = $('._suggestionBg');
 
-            // $('.text-box').css({
-            //     'opacity' : '0',
-            // });
-            //
-            // setTimeout(function (){
-            //     $('.text-box').css({
-            //         'opacity' : '1',
-            //         // 'transition-delay' : '.7s',
-            //         'transition' : '.3s',
-            //     });
-            // },1000)
-
             if(suggestionSlider.realIndex === 0) {
                 smileMotif.css('fill','#05439')
-                desc.text('흡수 빠른 프로 비타민 D 함유')
-                name.text('더모이스처 베리어.D')
+                setTimeout(function (){
+                    desc.text('흡수 빠른 프로 비타민 D 함유')
+                    name.text('더모이스처 베리어.D')
+                },300)
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#EF620A')
                 btn.css('color','#ffffff')
@@ -95,8 +95,10 @@
                 bg.css('background','linear-gradient(180deg, #B0D3FF 0%, rgba(176, 211, 255, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 1) {
                 smileMotif.css('fill','#F15a00')
-                desc.text('잡티 잡는 파워 비타민C 앰플')
-                name.text('비타슈티컬 15 플러스 앰플')
+                setTimeout(function (){
+                    desc.text('잡티 잡는 파워 비타민C 앰플')
+                    name.text('비타슈티컬 15 플러스 앰플')
+                },300)
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#F5E618')
                 btn.css('color','#444444')
@@ -104,8 +106,10 @@
                 bg.css('background','linear-gradient(180deg, #F8CCBF 0%, rgba(248, 204, 191, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 2) {
                 smileMotif.css('fill','#008257')
-                desc.text('진정 강한 병풀 바이옴 시카 수딩 크림')
-                name.text('레드 블레미쉬 시카 수딩 크림')
+                setTimeout(function (){
+                    desc.text('진정 강한 병풀 바이옴 시카 수딩 크림')
+                    name.text('레드 블레미쉬 시카 수딩 크림')
+                },300)
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#FF4757')
                 btn.css('color','#FFFFFF')
@@ -113,8 +117,10 @@
                 bg.css('background','linear-gradient(180deg, #9AE3BC 0%, rgba(154, 227, 188, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 3) {
                 smileMotif.css('fill','#05439')
-                desc.text('흡수 빠른 프로 비타민 D 함유')
-                name.text('더모이스처 베리어.D')
+                setTimeout(function (){
+                    desc.text('흡수 빠른 프로 비타민 D 함유')
+                    name.text('더모이스처 베리어.D')
+                },300)
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#EF620A')
                 btn.css('color','#FFFFFF')
@@ -122,18 +128,21 @@
                 bg.css('background','linear-gradient(180deg, #B0D3FF 0%, rgba(176, 211, 255, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 4) {
                 smileMotif.css('fill','#F15a00')
-                desc.text('잡티 잡는 파워 비타민C 앰플')
-                name.text('비타슈티컬 15 플러스 앰플')
+                setTimeout(function (){
+                    desc.text('잡티 잡는 파워 비타민C 앰플')
+                    name.text('비타슈티컬 15 플러스 앰플')
+                },300)
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#F5E618')
                 btn.css('color','#444444')
                 btnArrow.css('stroke','#444444')
                 bg.css('background','linear-gradient(180deg, #F8CCBF 0%, rgba(248, 204, 191, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 5) {
-                console.log('5')
                 smileMotif.css('fill','#008257')
-                desc.text('진정 강한 병풀 바이옴 시카 수딩 크림')
-                name.text('레드 블레미쉬 시카 수딩 크림')
+                setTimeout(function (){
+                    desc.text('진정 강한 병풀 바이옴 시카 수딩 크림')
+                    name.text('레드 블레미쉬 시카 수딩 크림')
+                },300)
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#FF4757')
                 btn.css('color','#FFFFFF')
@@ -141,8 +150,10 @@
                 bg.css('background','linear-gradient(180deg, #9AE3BC 0%, rgba(154, 227, 188, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 6) {
                 smileMotif.css('fill','#05439')
-                desc.text('흡수 빠른 프로 비타민 D 함유')
-                name.text('더모이스처 베리어.D')
+                setTimeout(function (){
+                    desc.text('흡수 빠른 프로 비타민 D 함유')
+                    name.text('더모이스처 베리어.D')
+                },300)
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#EF620A')
                 btn.css('color','#FFFFFF')
@@ -150,8 +161,10 @@
                 bg.css('background','linear-gradient(180deg, #F8CCBF 0%, rgba(248, 204, 191, 0) 74.22%)')
             } else if(suggestionSlider.realIndex === 7) {
                 smileMotif.css('fill','#F15a00')
-                desc.text('잡티 잡는 파워 비타민C 앰플')
-                name.text('비타슈티컬 15 플러스 앰플')
+                setTimeout(function (){
+                    desc.text('잡티 잡는 파워 비타민C 앰플')
+                    name.text('비타슈티컬 15 플러스 앰플')
+                },300)
                 btn.attr('href', '${item.link}')
                 btn.css('background-color','#F5E618')
                 btn.css('color','#444444')
