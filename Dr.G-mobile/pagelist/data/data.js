@@ -358,6 +358,12 @@ data.mentoring = {
     list: [
         {
             stateClass: 'working',
+            url: '1111',
+            category: 'mentoring',
+            page: '1111'
+        },
+        {
+            stateClass: 'working',
             url: '스킨멘토링_서브메인',
             category: 'mentoring',
             page: '스킨멘토링_서브메인'
