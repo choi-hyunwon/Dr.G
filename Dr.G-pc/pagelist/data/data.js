@@ -87,7 +87,7 @@ data.main = {
     title: 'Main',
     list: [
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'main',
             category: 'main',
             page: 'main'
