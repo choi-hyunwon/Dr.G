@@ -170,7 +170,7 @@
       let gaugeText = text.html();
       let counter = parseInt(gaugeText);
 
-      if (counter !== 74) {
+      if (counter < 74) {
         text.html(counter + 1);
       } else {
         clearInterval(mainCounter);
@@ -275,7 +275,6 @@
   let whatSwiper = new Swiper('._whatSwiper', {
     effect: 'slide',
     autoplay: {
-      enabled: false,
       delay: 3000,
     },
     speed: 500,
