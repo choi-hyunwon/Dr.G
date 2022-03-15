@@ -498,7 +498,7 @@
               position: static;
               transform: none;
               opacity: .4;
-              transition: .8s;
+              transition: none;
               transform-origin: center 269px;
 
               .img {
@@ -514,6 +514,7 @@
             &.swiper-slide-active {
               .img-box {
                 opacity: 1;
+                transition: .7s;
                 transform: scale(1.509433962226);
               }
             }
