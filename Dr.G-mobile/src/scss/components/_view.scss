@@ -1022,7 +1022,7 @@
 
           th {
             vertical-align: middle;
-            padding: vw(16);
+            padding: vw(16) 0;
             width: 50%;
             border-top: vw(1) solid $gray-900;
             border-bottom: vw(1) solid $gray-400;
@@ -1085,6 +1085,11 @@
               font-size: vw(13);
             }
           }
+        }
+
+        &.hair{
+          background: $gray-fff url("../img/analysis/ico-colon.png") no-repeat center center;
+          background-size: vw(28) vw(28);
         }
       }
 

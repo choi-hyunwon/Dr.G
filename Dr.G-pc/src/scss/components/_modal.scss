@@ -829,6 +829,23 @@
                   }
                 }
               }
+
+              &.hair{
+                .area{
+                  + .area {
+                    &::before {
+                      content: '';
+                      position: absolute;
+                      left: -14px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      @include background-img($width: 28, $height: 28, $category: 'analysis', $img: 'ico-colon.svg');
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                    }
+                  }
+                }
+              }
             }
           }
         }
