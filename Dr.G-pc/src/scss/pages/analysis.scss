@@ -1891,14 +1891,14 @@
         .font-h4{
           margin-bottom: 12px;
           .icon{
-            margin-right: 7px;
+            margin-right: 2px;
+            vertical-align: text-bottom;
           }
         }
         .font-h6{
           color: $gray-700;
         }
       }
-
     }
 
     .section-tab {
@@ -2339,15 +2339,14 @@
             justify-content: center;
             .item-img {
               position: relative;
-              width: 476px;
-              height: 448px;
+              width: 437px;
+              height: 428px;
               margin-right: 100px;
               display: none;
               opacity: 0;
               svg{
                 border-radius: 20px;
               }
-
               img {
                 width: 100%;
               }
@@ -2411,6 +2410,7 @@
                 }
               }
             }
+
           }
           .swiper-slide-active {
             .item {
