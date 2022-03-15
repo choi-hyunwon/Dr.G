@@ -498,7 +498,6 @@
               position: static;
               transform: none;
               opacity: .4;
-              transition: .8s;
               transform-origin: center 269px;
 
               .img {
@@ -513,8 +512,9 @@
 
             &.swiper-slide-active {
               .img-box {
-                opacity: 1;
-                transform: scale(1.509433962226);
+                animation-duration: 1s;
+                animation-name: slidein;
+                animation-fill-mode: both;
               }
             }
           }
@@ -522,7 +522,19 @@
       }
     }
   }
+  @keyframes slidein {
+    from {
+      margin-left: 100px;
+      opacity: 0.4;
+      transform: scale(1.5);
+    }
 
+    to {
+      margin-left: 0;
+      opacity: 1;
+      transform: scale(1.5);
+    }
+  }
   /* 스토리 */
   .story {
     .story-heading-img-wrap {
