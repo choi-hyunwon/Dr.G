@@ -52,4 +52,15 @@
         })
 
     })
+
+    // 렌더링 후 함수 추가 요청 -- 2022.03.15
+    function setGrid(){
+        $('._subjectList').masonry({
+            itemSelector: '._subjectList .item',
+            columnWidth: '._subjectList .item',
+            gutter: 30,
+            percentPosition: false,
+            horizontalOrder: true
+        });
+    }
 </script>
