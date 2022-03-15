@@ -2,6 +2,12 @@ const data = {}
 data.guide = {
     title: 'Guide',
     list: [
+        {
+            stateClass: 'working',
+            url: '멘토G상담',
+            category: 'Guide',
+            page: '멘토G상담'
+        },
         // {
         //     stateClass: 'complete',
         //     url: 'animate-click-play',
@@ -356,12 +362,6 @@ data.AI = {
 data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
-        {
-            stateClass: 'working',
-            url: '1111',
-            category: 'mentoring',
-            page: '1111'
-        },
         {
             stateClass: 'working',
             url: '스킨멘토링_서브메인',
