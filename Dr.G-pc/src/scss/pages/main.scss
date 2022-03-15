@@ -411,6 +411,7 @@
 
         .text-box {
           margin-bottom: 30px;
+          transition: .3s;
 
           .p-title {
             font-weight: bold;
@@ -439,6 +440,7 @@
             white-space: nowrap;
             justify-content: center;
             align-items: center;
+            transition: .3s;
 
             svg {
               margin-left: 8px;
@@ -498,7 +500,7 @@
               position: static;
               transform: none;
               opacity: .4;
-              transition: .8s;
+              transition: none;
               transform-origin: center 269px;
 
               .img {
@@ -513,8 +515,9 @@
 
             &.swiper-slide-active {
               .img-box {
-                opacity: 1;
-                transform: scale(1.509433962226);
+                animation-duration: 1s;
+                animation-name: slidein;
+                animation-fill-mode: both;
               }
             }
           }
@@ -522,7 +525,19 @@
       }
     }
   }
+  @keyframes slidein {
+    from {
+      margin-left: 200px;
+      opacity: 0.4;
+      transform: scale(1.5);
+    }
 
+    to {
+      margin-left: 0;
+      opacity: 1;
+      transform: scale(1.5);
+    }
+  }
   /* 스토리 */
   .story {
     .story-heading-img-wrap {
