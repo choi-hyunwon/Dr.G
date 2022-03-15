@@ -99,13 +99,17 @@
       height: 451px;
 
       + .box-bg {
-        margin-bottom: 120px;
+        margin-bottom: 30px;
 
         .inner {
           .text-wrap {
-            padding: 93px 0 93px 70px;
+            padding: 93px 53px 93px 70px;
           }
         }
+      }
+
+      + .about__fnav {
+        margin-top: 120px;
       }
 
       .inner {
@@ -449,7 +453,9 @@
     .about__wrap .ctrls .swiper-button-next::after,
     .about__wrap .ctrls .swiper-button-prev::after {margin-top:-18.66666667px;}
   }
-  .sect .toggle-arrow {margin-top:30px; padding:0; display: inline-block; font-size: 13px;}
+  .sect .toggle-arrow {margin-top:30px; padding:0; display: inline-block; font-size: 13px;
+    color: #000;
+    font-weight: 400;}
   .sect .toggle-arrow > em {display:inline-block;width:26px;height:26px;background:#f6f6f6 url('../img/brand/btn_icon_arrow.svg') no-repeat 50% 50%;margin-right:6px;transform:rotate(180deg);transition:0.4s;}
   .sect .toggle-arrow > span {display:inline-block;line-height:26px;vertical-align:top;}
   .sect.folding > p {overflow-y:hidden;height:42px;}
