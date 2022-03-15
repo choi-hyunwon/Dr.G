@@ -1051,22 +1051,16 @@
             0% {
               transform: rotate(0)
             }
-            50% {
-              transform: rotate(180deg)
-            }
             100% {
-              transform: translateY(0)
+              transform: rotate(360deg)
             }
           }
           @keyframes left {
             0% {
               transform: rotate(0)
             }
-            50% {
-              transform: rotate(-180deg)
-            }
             100% {
-              transform: translateY(0)
+              transform: rotate(-360deg)
             }
           }
         }
