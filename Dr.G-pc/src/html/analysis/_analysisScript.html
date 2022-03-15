@@ -231,18 +231,23 @@
 
 
 /*|--------------s 서브메인----------------------------|*/
-    /*gauge number*/
-    let mainCounter = setInterval(function () {
-      let text = $('._sub-main .img-box .percent .counter');
-      let gaugeText = text.html();
-      let counter = parseInt(gaugeText);
-        console.log(counter);
-        if (counter < 74) {
-        text.html(counter + 2);
-      } else {
-        clearInterval(mainCounter);
-      }
-    }, 1000);
+      /*서브메인*/
+      /*gauge number*/
+      var counter = 0;
+      let mainCounter = setInterval(function () {
+          let text = $('._sub-main .img-box .percent .counter');
+          // let gaugeText = text.html();
+          // let counter = parseInt(gaugeText);
+          console.log(counter);
+          if (counter < 76) {
+              counter = counter+4
+              text.html(counter);
+          } else {
+              text.html(76);
+              counter = 0;
+              clearInterval(mainCounter);
+          }
+      }, 300);
 
 
   });
