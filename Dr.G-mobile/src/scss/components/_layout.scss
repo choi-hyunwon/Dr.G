@@ -412,6 +412,22 @@ body {
         padding-top: vw(60);
         padding-bottom: vw(48);
 
+        .section-optimi{
+          padding: vw(24);
+          background-color: #EDF8FF;
+          text-align: center;
+          .font-h5{
+            margin-bottom: vw(4);
+            color: $gray-800;
+            .icon{
+              margin-right: vw(4.5);
+            }
+          }
+          .font-body-1{
+            color: $gray-700;
+          }
+        }
+
         > ul {
           background-color: #d5f4ef;
 
