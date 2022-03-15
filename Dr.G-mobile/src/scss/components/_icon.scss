@@ -29,6 +29,7 @@
  v.0.27 선미 : .ico-minus-xs ,ico-plus-xs, ico-edit2 추가 --2021.01.21
  v.0.28 주연 : .ico-banner-close 추가 --2021.01.25
  v.0.29 주연 : .ico-menu 추가 --2021.02.25
+ v.0.30 선미 : .ico-optimi 추가 --2021.03.15
 |--------------------------------------------------------------------|
 */
 .icon {
@@ -313,4 +314,12 @@
 
 .ico-menu {
   @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-menu.svg');
+}
+
+.ico-optimi {
+  @include background-img($width: 30, $height: 30, $category: 'common', $img: 'ico-optimi.svg');
+
+  &.ico-sm {
+    @include background-img($width: 24, $height: 24, $category: 'common', $img: 'ico-optimi.svg');
+  }
 }
