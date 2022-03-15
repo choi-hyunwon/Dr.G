@@ -329,6 +329,12 @@
             background-color: #fff;
             padding: 0;
 
+            &.swiper-slide-prev {
+              .img-box {
+                transform: none;
+              }
+            }
+
             &.swiper-slide-active {
               .text-box {
                 transform: none;
