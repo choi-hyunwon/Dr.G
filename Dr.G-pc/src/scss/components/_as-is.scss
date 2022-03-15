@@ -154,31 +154,24 @@
 }
 
 /* custom */
-
-/*s 03.14 변경*/
 .l__wrap {
   min-width: 1242px;
-  background-color: #EDF8FF;
-  .inner{
-    padding: 15px 0;
-
-    .font-h7{
-      display: inline-block;
-      color: #666;
-      .icon{
-        margin-right: 7px;
-        width: 24px;
-        height: 18px;
-      }
-      &.font-bold{
-        color: #444;
-        margin-right: 16px;
-      }
-    }
-  }
 }
-/*e 03.14 변경*/
 
+.tab__uio__top .tab {
+  background-color: transparent;
+  overflow-x: visible;
+  overflow-y: visible;
+  border-bottom: 0;
+}
+
+.tab__uio__top .tab strong {
+  font-family: $poppins-semiBold;
+}
+
+.tab__uio__top .tab:first-child.active:before {
+  content: none;
+}
 
 .footer__in {
   min-width: 1242px;
