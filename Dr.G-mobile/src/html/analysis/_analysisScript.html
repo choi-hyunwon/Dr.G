@@ -280,19 +280,19 @@
   });
 
   let whatSwiper = new Swiper('._whatSwiper', {
-    effect: 'slide',
+    effect: 'fade',
     autoplay: {
-      delay: 3000,
+        delay: 4000,
     },
-    speed: 500,
-    pagination: {
+  speed: 0,
+  pagination: {
       el: "._whatPagination"
     },
   });
 
   whatSwiper.on('slideChange', function () {
-
-    if (whatSwiper.realIndex === 0) {
+      console.log(whatSwiper.realIndex);
+      if (whatSwiper.realIndex === 0) {
       whatStep1.playSegments([0, 90], true)
 
     } else if (whatSwiper.realIndex === 1) {
