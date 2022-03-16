@@ -17,3 +17,13 @@
 .color-yellow { color: $yellow;}
 .color-violet { color: $violet;}
 .color-red { color: $error !important;}
+
+.bg-gradient-red {
+  background: linear-gradient(90deg, #F4C480 0%, #EA8181 100%) !important;
+}
+.bg-gradient-blue {
+  background: linear-gradient(90deg, #47D4B2 0%, #47BDFF 100%) !important;
+}
+.bg-gradient-green {
+  background: linear-gradient(90deg, #BFD976 0%, #47D46E 100%) !important;
+}
