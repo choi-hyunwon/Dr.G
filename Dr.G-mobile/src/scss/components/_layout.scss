@@ -412,18 +412,21 @@ body {
         padding-top: vw(60);
         padding-bottom: vw(48);
 
-        .section-optimi{
+        .section-optimi {
           padding: vw(24);
           background-color: #EDF8FF;
           text-align: center;
-          .font-h5{
+
+          .font-h5 {
             margin-bottom: vw(4);
             color: $gray-800;
-            .icon{
+
+            .icon {
               margin-right: vw(4.5);
             }
           }
-          .font-body-1{
+
+          .font-body-1 {
             color: $gray-700;
           }
         }
@@ -1116,7 +1119,7 @@ body {
 
   .btn-chatbot {
     position: absolute;
-    right: vw(24);
+    right: vw(15);
     top: calc(100vh - 40.4%);
     top: calc(var(--vh, 1vh) * 100 - 40.4%);
     width: vw(48);
@@ -1172,7 +1175,7 @@ body {
     border-radius: 50%;
     background: $gray-800;
     top: 0;
-    right: 0;
+    right: vw(-5);
     font-weight: bold;
     font-size: vw(12);
     line-height: vw(16);
@@ -1193,7 +1196,6 @@ body {
       img {
         position: absolute;
         bottom: 0;
-        right: 0;
       }
     }
   }
@@ -1243,9 +1245,10 @@ body {
 }
 
 /* 멘토G상담 */
-.mentor-consulting{
+.mentor-consulting {
   display: none;
-  .header-close{
+
+  .header-close {
     z-index: 20;
     position: relative;
     width: 100%;
@@ -1259,7 +1262,7 @@ body {
   }
 
 
-  &.open{
+  &.open {
     display: block;
     position: fixed;
     z-index: 50;
