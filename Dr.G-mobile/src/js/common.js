@@ -799,7 +799,7 @@ $(function () {
 });
 
 function showPopup() {
-    $('.toast-dim').addClass('show fade').css('display', 'block');
+    $('.toast-dim').removeClass('hide').addClass('show fade').css('display', 'block');
 }
 
 function hidePopup() {
