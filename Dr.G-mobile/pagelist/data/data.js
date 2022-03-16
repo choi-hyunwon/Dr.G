@@ -4,8 +4,8 @@ data.guide = {
     list: [
         {
             stateClass: 'working',
-            url: '멘토G상담',
-            category: 'Guide',
+            url: 'mentorG',
+            category: 'guide',
             page: '멘토G상담'
         },
         // {
