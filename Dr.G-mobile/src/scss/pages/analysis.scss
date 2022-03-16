@@ -265,9 +265,13 @@
               text-align: right;
               width: vw(85);
               display: inline-block;
+              line-height: 1;
+              font-family: $poppins;
             }
             .unit{
               font-size: vw(40);
+              font-weight: 400;
+              margin-left: vw(2);
             }
           }
 
@@ -408,6 +412,11 @@
           }
         }
       }
+
+      >.divider{
+        margin: vw(16) 0 vw(32);
+      }
+
       &.open{
         .desc{
           .ingredient{
