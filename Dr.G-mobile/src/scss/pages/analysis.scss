@@ -32,6 +32,16 @@
             }
           }
         }
+
+        /*촬영가이드 확인 버튼*/
+        .font-body-1{
+          &.text{
+            a{
+              margin-top: vw(12);
+              display: inline-block;
+            }
+          }
+        }
         .step{
           display: inline-block;
           &.step-3{
