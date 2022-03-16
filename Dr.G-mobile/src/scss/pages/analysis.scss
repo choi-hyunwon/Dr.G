@@ -715,6 +715,7 @@
         margin: 0 vw(-24);
         -ms-overflow-style: none;
         scrollbar-width: none;
+        vertical-align: top;
         font-size: 0;
         &::-webkit-scrollbar{
           display: none;
@@ -1050,22 +1051,16 @@
             0% {
               transform: rotate(0)
             }
-            50% {
-              transform: rotate(180deg)
-            }
             100% {
-              transform: translateY(0)
+              transform: rotate(360deg)
             }
           }
           @keyframes left {
             0% {
               transform: rotate(0)
             }
-            50% {
-              transform: rotate(-180deg)
-            }
             100% {
-              transform: translateY(0)
+              transform: rotate(-360deg)
             }
           }
         }

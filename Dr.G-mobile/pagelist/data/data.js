@@ -2,6 +2,12 @@ const data = {}
 data.guide = {
     title: 'Guide',
     list: [
+        {
+            stateClass: 'working',
+            url: '멘토G상담',
+            category: 'Guide',
+            page: '멘토G상담'
+        },
         // {
         //     stateClass: 'complete',
         //     url: 'animate-click-play',
