@@ -3117,8 +3117,10 @@
     .optimi{
       .inner{
         padding: 100px 0;
-        .font-h4{
+        .title{
           margin-bottom: 12px;
+          font-size: 28px;
+          line-height: 39px;
           .icon{
             margin-right: 2px;
             vertical-align: text-bottom;
@@ -3368,7 +3370,7 @@
 
                 &:nth-child(2) {
                   img {
-                    margin-top: -10px;
+                    margin-top: -10.399px;
                   }
                 }
 
