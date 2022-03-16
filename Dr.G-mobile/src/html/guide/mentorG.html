@@ -1,26 +1,279 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
-    <!-- s contents -->
-    <div class="container view-details">
-        <div class="mentor-consulting">
-            <div class="header-details">
+    <!-- s header -->
+    @@include('../../html/include/common/header-white.html')
+    <!-- e header -->
+
+    <div class="container">
+        <div class="analysis-wrap analysis-sub-main sub-main _sub-main">
+            <!-- s section-color -->
+            <div class="section-color bg-violet">
+                <div class="text-box" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="font-h1 font-bold">1:1 성분분석</p>
+                    <p class="font-h5">모두가 좋다는 화장품,<br>내 피부에도 괜찮을까요?</p>
+                </div>
+
+                <div class="img-box">
+                    <p class="font-poppins percent"><span class="counter">0</span><span class="unit">%</span></p>
+                    <div class="img">
+                        <div class="img-main-texture"></div>
+                    </div>
+                </div>
+                <div class="counting-area">
+                    <div class="total-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <p class="total"><span class="num font-h1">2,300</span><span class="unit font-h2">여개의</span></p>
+                        <p class="text">제품을 분석할 수 있어요.</p>
+                    </div>
+                    <div class="btn-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <a href="#" class="btn btn-xl btn-block btn-black">성분분석 시작하기</a>
+                        <div class="more-box">
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--                <div class="chatbot-area">-->
+                <!--                    <div id="chatbot" class="btn-chatbot">-->
+                <!--                        <img src="../../img/common/btn-chatbot.png" alt="chatbot">-->
+                <!--                        <span class="tip">-->
+                <!--                            <em class="font-bold">푸석푸석 민감할 땐</em> <em class="font-bold color-primary">레드 블래미쉬 시카 수딩 크림</em><br/>-->
+                <!--                            <em class="color-light-gray">멘토G가 알려드려요!</em>-->
+                <!--                            <a href="#" class="btn-chatbot-close _chatClose"><span class="icon ico-chatbot-close"></span></a>-->
+                <!--                        </span>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+            </div>
+            <!-- e section-color -->
+
+            <!--s section-optimi -->
+            <div class="section section-optimi bg-gray">
+                <div class="content text-center">
+                    <p class="font-h4 font-bold"><i class="icon ico-optimi"></i> 닥터지 옵티미 서비스</p>
+                    <p class="font-h6">닥터지는 화장품 판독 서비스를 통해<br>잘못된 화장품 선택으로부터 여러분의 <br>피부건강을 지켜드립니다.</p>
+                    <p class="font-h6 font-bold">닥터지 Ai로 피부에 최적화된 화장품과<br>바른 라이프스타일을 찾아보세요.</p>
+                </div>
+            </div>
+            <!--e section-optimi -->
+
+            <!-- s section-tab -->
+            <div class="section-tab _section-tab">
+                <div class="tab _tab">
+                    <ul>
+                        <li class="item active"><a href="#">ABOUT</a></li>
+                        <li class="item"><a href="#">WHAT</a></li>
+                        <li class="item"><a href="#">PROCESS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- e section-tab -->
+
+            <!--s ABOUT -->
+            <div class="section section-about _section">
+                <div class="content">
+                    <p class="font-h2 font-bold h2-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">1:1 성분분석은<br>무엇인가요?</p>
+                    <p class="font-h5 font-bold color-violet"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        남들 다 좋다는 화장품,<br>왜 나에게는 맞지 않을까요?</p>
+                    <div class="desc">
+                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">내 피부유형에 얼마나 좋은지, 주의해야할
+                            성분은 없는지 나의 화장대를 점검해보세요.</p>
+                        <p class="_underline" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                            <span class="font-bold">닥터지는 물론 타 브랜드</span>까지 제품을<br>촬영하기만 하면 끝!</p>
+                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                            이렇게 쉽고 편리한 닥터지의 1:1 성분분석,<br>지금 바로 체험해보세요.</p>
+                    </div>
+
+                    <div class="img-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+                        <div class="img">
+                            <img src="../../img/analysis/img-main-about-phone.png" alt="핸드폰 이미지">
+                            <span class="product"></span>
+                            <span class="scan-line"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--e ABOUT -->
+
+            <!--s WHAT -->
+            <div class="section section-what _section">
+                <div class="content">
+                    <p class="font-h2 font-bold h2-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">그동안 화장품<br>선택하기 어려우셨죠?</p>
+                    <div class="desc">
+                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">스킨케어부터 헤어케어까지, 내 피부에 잘 맞는<br>제품을 닥터지가 찾아드릴게요.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                        <div class="step-swiper">
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide slide1"><span>헤어케어</span></div>
+                                <div class="swiper-slide slide2"><span>선케어</span></div>
+                                <div class="swiper-slide slide3"><span>클렌징/필링</span></div>
+                                <div class="swiper-slide slide4"><span>스킨케어</span></div>
+                                <div class="swiper-slide slide5"><span>바디케어</span></div>
+                                <div class="swiper-slide slide6"><span>마스크/팩</span></div>
+                            </div>
+                        </div>
+
+                        <div class="what-swiper _whatSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide page page1">
+                                    <div class="img_box _whatAni1"></div>
+                                    <div class="info-box">
+                                        <p class="font-h6">내 피부유형과 얼마나 일치하는지<br>확인하세요.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide page page2">
+                                    <div class="img_box _whatAni2"></div>
+                                    <div class="info-box">
+                                        <p class="font-h6">피부고민과 매핑된 성분을<br>확인하세요.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="what-pagination _whatPagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--e WHAT -->
+
+            <!--s PROCESS -->
+            <div class="section section-process _section">
+                <p class="font-h2 font-bold h2-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">어떻게 진행되나요?</p>
+
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <ul class="step-box _stepBox">
+                        <li class="step step1 active"><span class="on">제품촬영</span></li>
+                        <li class="step step2"><span>피부고민</span></li>
+                        <li class="step step3"><span>완료</span></li>
+                    </ul>
+
+                    <div class="slider-box">
+                        <div class="swiper-container slider _processSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item item-1">
+                                        <div class="item-img _processAni1"></div>
+                                        <div class="info-box">
+                                            <p class="color-violet font-poppins-semiBold">STEP 1</p>
+                                            <p class="font-h3 font-bold">제품 촬영 및 업로드</p>
+                                            <p class="font-h6">원하는 화장품의 제품명이 잘 보이도록<br>촬영해주세요.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item item-2">
+                                        <div class="item-img _processAni2"></div>
+                                        <div class="info-box">
+                                            <p class="color-violet font-poppins-semiBold">STEP 2</p>
+                                            <p class="font-h3 font-bold">성분 분석 진행</p>
+                                            <p class="font-h6">내 피부유형과 매치하여 전성분 분석을<br>바로 시작합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item item-3">
+                                        <div class="item-img _processAni3"></div>
+                                        <div class="info-box">
+                                            <p class="color-violet font-poppins-semiBold">STEP 3</p>
+                                            <p class="font-h3 font-bold">성분 분석 완료</p>
+                                            <p class="font-h6">피부유형과 일치율은 물론 내 피부고민에<br>좋은 성분, 주의성분까지 확인할 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-pagination _sliderPagination"></div>
+                    </div>
+
+                </div>
+            </div>
+            <!--e PROCESS -->
+
+            <!--s enrollment -->
+            <div class="section section-enrollment" >
+                <div class="content">
+                    <p class="font-h4 font-bold h4-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        내 피부를 위한 인생템 찾기,<br>닥터지와 함께해요.</p>
+                    <ul class="box"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <li>
+                            <p class="text">등록된 제품 수</p>
+                            <p class="font-poppins-semiBold color-violet num">2,300</p>
+                        </li>
+                        <li>
+                            <p class="text">등록된 브랜드 수</p>
+                            <p class="font-poppins-semiBold color-violet num">2,300</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--e enrollment -->
+
+        </div>
+
+        <!-- s chatbot -->
+        <div class="chatbot-area with-btn _chatBotArea">
+            <div id="chatbot" class="btn-chatbot">
+                <span class="btn-start"><span>성분분석<br/>시작하기</span></span>
+                <img src="../../img/common/btn-chatbot.png" alt="chatbot">
+                <span class="tip" style="display: inline">
+                    <em class="font-bold">푸석푸석 민감할 땐</em> <em class="font-bold color-primary">레드 블래미쉬 시카 수딩 크림</em><br/>
+                    <em class="color-light-gray">멘토G가 알려드려요!</em>
+                    <a href="#" class="btn-chatbot-close _chatClose"><span class="icon ico-chatbot-close"></span></a>
+                </span>
+            </div>
+        </div>
+        <!-- e chatbot -->
+
+
+        <!-- s 멘토G상담 -->
+        <div class="view-details mentor-consulting">
+            <div class="header-close">
                 <a href="#"><i class="icon ico-close"></i></a>
             </div>
             <div class="body-details">
                 <div class="box__drg__message_new" style="z-index:9999;">
-                    <div id="chatbot_iframe" style="display: block; width: 100%; height: 100vh; border-radius: 15px; z-index: 999;">
+                    <div id="chatbot_iframe"
+                         style="display: block; width: 100%; height: 100vh; border-radius: 15px; z-index: 999;">
 
                         <!-- <img src="/resources/assets/imgs/mentoG_error.jpg" style="width:100%;border-radius: 2em;border: 1px solid #ccc;" /> -->
-                        <iframe src="https://mentorg.dr-g.co.kr/chatbot?USER=" style="width:100%; height:90%; background-color:white; box-shadow: #8d93ab 5px 5px 30px;border: 0;" scrolling="no"></iframe>
+                        <iframe src="https://mentorg.dr-g.co.kr/chatbot?USER="
+                                style="width:100%; height:90%; background-color:white; box-shadow: #8d93ab 5px 5px 30px;border: 0;"
+                                scrolling="no"></iframe>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- e 멘토G상담 -->
+
     </div>
     <!-- e contents -->
+
+    <!-- s footer -->
+    @@include('../../html/include/common/footer.html')
+    <!-- e footer -->
 </div>
+
+@@include('../analysis/_analysisScript.html')
+
 </body>
 </html>
+
+
+<script>
+    $(document).ready(function () {
+        let chatbot = $('#chatbot')
+        let mentorG = $('.mentor-consulting')
+        chatbot.find('.tip').on('click',function (){
+            mentorG.addClass('open');
+           $('body').addClass('scrOff')
+
+        })
+        mentorG.find('.ico-close').on('click',function (){
+            mentorG.removeClass('open');
+           $('body').removeClass('scrOff')
+        })
+    })
+</script>

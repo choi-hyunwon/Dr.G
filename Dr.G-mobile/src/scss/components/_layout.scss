@@ -1242,7 +1242,36 @@ body {
   }
 }
 
+/* 멘토G상담 */
+.mentor-consulting{
+  display: none;
+  .header-close{
+    z-index: 20;
+    position: relative;
+    width: 100%;
+    height: 16vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 4.8vw;
+    line-height: 1.155;
+    background-color: #fff;
+  }
+
+
+  &.open{
+    display: block;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
 ::-webkit-scrollbar {
   display: none;
   width: 0 !important;
 }
+
+
