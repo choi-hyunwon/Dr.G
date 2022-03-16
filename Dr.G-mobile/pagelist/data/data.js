@@ -124,6 +124,12 @@ data.AI = {
     list: [
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_component',
+            category: 'AI',
+            page: 'Ai피부분석_component'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_서브메인',
             category: 'AI',
             page: 'Ai피부분석_서브메인'
