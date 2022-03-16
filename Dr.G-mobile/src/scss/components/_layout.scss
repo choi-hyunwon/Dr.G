@@ -1232,8 +1232,8 @@ body {
     height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(60)} - #{vw(80)});
 
     .btn-chatbot {
-      top: calc(100vh - 65.8%);
-      top: calc(var(--vh, 1vh) * 100 - 65.8%);
+      top: calc(100vh - 67%);
+      top: calc(var(--vh, 1vh) * 100 - 67%);
     }
 
     &.full {
