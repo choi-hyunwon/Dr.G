@@ -1037,11 +1037,11 @@
               position: absolute;
               display: inline-block;
               text-align: center;
-              line-height: 18px;
+              line-height: 19px;
               height: 20px;
               background: #FFFFFF;
               border: 1px solid $gray-400;
-              padding: 0 6px;
+              min-width: 36px;
               border-radius: 100px;
               font-family: $poppins-semiBold;
               font-style: normal;

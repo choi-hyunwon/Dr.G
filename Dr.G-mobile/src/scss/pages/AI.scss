@@ -1023,11 +1023,11 @@
               position: absolute;
               display: inline-block;
               text-align: center;
-              line-height: vw(18);
+              line-height: vw(19);
               height: vw(20);
               background: #FFFFFF;
               border: vw(1) solid $gray-400;
-              padding: 0 vw(6);
+              min-width: vw(36);
               border-radius: vw(100);
               font-family: $poppins-semiBold;
               font-style: normal;
