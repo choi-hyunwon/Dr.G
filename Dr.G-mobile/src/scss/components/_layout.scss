@@ -1109,6 +1109,30 @@ body {
 }
 
 /* 챗봇 */
+/*.chatbot-area {
+  position: fixed;
+  width: vw(12.8);
+  height: calc(100vh - #{vw(98)} - #{vw(60)});
+  height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(60)});
+  top: vw(60);
+  right: 0;
+  z-index: 10;
+
+  .btn-chatbot {
+    position: absolute;
+    right: vw(15);
+    top: calc(100vh - 40.4%);
+    top: calc(var(--vh, 1vh) * 100 - 40.4%);
+    width: vw(48);
+    height: vw(48);
+    z-index: 5;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: auto;
+    }*/
+
 .chatbot-area {
   position: fixed;
   width: vw(12.8);
@@ -1132,6 +1156,7 @@ body {
       width: 100%;
       height: auto;
     }
+
 
     .tip {
       display: none;

@@ -1891,6 +1891,7 @@
             left: -10px;
             &.swiper-button-disabled {
               background-image: url(../img/common/ico-nav-prev-gray-disabled.svg);
+              opacity: 1;
             }
           }
           &.swiper-button-next{
@@ -1898,6 +1899,7 @@
             right: -10px;
             &.swiper-button-disabled {
               background-image: url(../img/common/ico-nav-next-gray-disabled.svg);
+              opacity: 1;
             }
           }
         }
