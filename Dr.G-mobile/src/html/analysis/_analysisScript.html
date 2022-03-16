@@ -280,12 +280,14 @@
   });
 
   let whatSwiper = new Swiper('._whatSwiper', {
-    effect: 'slide',
+    effect: 'fade',
     autoplay: {
-      delay: 3000,
+        enabled: true,
+        delay: 4000,
     },
-    speed: 500,
-    pagination: {
+      speed: 500,
+      loop: true,
+      pagination: {
       el: "._whatPagination"
     },
   });
@@ -387,7 +389,7 @@
     },
     offset: "40%"
   })
-  /*---------s 서브메인 process------------*/
+  /*---------e 서브메인 process------------*/
 
 
   /*서브메인 voc*/

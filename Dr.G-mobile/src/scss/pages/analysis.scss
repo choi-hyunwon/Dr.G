@@ -1411,6 +1411,7 @@
           position: relative;
           .page{
             text-align: center;
+            //background-color: #e7eaff;
             .img_box{
               width: vw(262);
               height: vw(257);
@@ -1420,6 +1421,7 @@
               font-size: vw(15);
               color: $gray-800;
               margin-bottom: vw(20);
+              background-color: #e7eaff;
             }
           }
           .what-pagination{
@@ -1442,128 +1444,6 @@
       }
 
     }
-
-  /*  .section-process {
-
-      .step-box {
-
-        li {
-          &.check{
-            background: url("../img/analysis/ico-main-step-check.png") no-repeat 0 0 / 100% auto !important;
-            width: vw(46);
-          }
-          &:nth-of-type(1) {
-            background: url("../img/analysis/ico-main-step-check.png") no-repeat 0 0 / 100% auto;
-            width: vw(46);
-            &.active {
-              background: url("../img/analysis/ico-main-step1.png")  no-repeat 0 0 / 100% auto;
-            }
-            &:before{
-              display: none;
-            }
-
-          }
-          &:nth-of-type(2) {
-            background: url("../img/analysis/ico-main-step2-disabled.png") no-repeat 0 0 / 100% auto;
-            width: vw(46);
-            &.active {
-              background: url("../img/analysis/ico-main-step2.png")  no-repeat 0 0 / 100% auto;
-            }
-          }
-          &:nth-of-type(3) {
-            background: url("../img/analysis/ico-main-step3-disabled.png")  no-repeat 0 0 / 100% auto;
-            width: vw(46);
-            margin-right: 0;
-            &.active {
-              background: url("../img/analysis/ico-main-step3.png") no-repeat 0 0 / 100% auto;
-            }
-          }
-          &.bar{
-            &:before{
-              background-color: $yellow;
-            }
-          }
-          &:before {
-            content: '';
-            background: $gray-fff;
-            opacity: 0.5;
-            position: absolute;
-            left: vw(-36);
-            top: vw(22);
-            width: vw(36);
-            height: vw(1.5);
-          }
-        }
-      }
-      .process-swiper {
-        position: relative;
-        .swiper-wrapper{
-          .page {
-            background: $gray-fff;
-            .page-round {
-              overflow: hidden;
-              background: $violet;
-              border-radius: 0 0 vw(170) vw(170)/0 0 vw(60) vw(60);
-              width: 100%;
-              height: vw(310);
-              text-align: center;
-              padding-top: vw(24);
-              .img{
-                margin: 0 auto;
-                width: vw(235);
-                height: vw(230);
-                img{
-                  width: 100%;
-                  height: auto;
-                }
-
-              }
-            }
-            .info-box {
-              background: $gray-fff;
-              position: relative;
-              bottom: 0;
-              width: 100%;
-              text-align: center;
-              padding: vw(30) 0 vw(108);
-              p{
-                &:nth-of-type(1) {
-                  font-weight: 600;
-                  font-size: vw(15);
-                }
-                &:nth-of-type(2) {
-                  margin-bottom: vw(6);
-                  color: $gray-800;
-                }
-                &:nth-of-type(3) {
-                  color: $gray-700;
-                }
-              }
-            }
-          }
-        }
-        .process-pagination {
-          position: absolute;
-          z-index: 3;
-          bottom: vw(76);
-          text-align: center;
-          line-height: 1;
-
-          .swiper-pagination-bullet {
-            width: vw(8);
-            height: vw(8);
-            margin: 0 vw(6);
-            background-color: #e9f7ff!important;
-            opacity: 1;
-
-            &.swiper-pagination-bullet-active{
-              background-color: $violet!important;
-            }
-          }
-
-        }
-      }
-    }*/
 
     .section-process {
       background: #fff url("../img/analysis/bg-main-progress.png") no-repeat top center / contain;
