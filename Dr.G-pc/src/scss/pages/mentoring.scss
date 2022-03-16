@@ -890,7 +890,6 @@
       }
     }
 
-
     .section-process {
       position: relative;
       background: #edf8ff;
@@ -1890,10 +1889,16 @@
           &.swiper-button-prev {
             @include background-img($width: 32, $height: 32, $category: 'common', $img: 'ico-nav-prev-gray.svg');
             left: -10px;
+            &.swiper-button-disabled {
+              background-image: url(../img/common/ico-nav-prev-gray-disabled.svg);
+            }
           }
           &.swiper-button-next{
             @include background-img($width: 32, $height: 32, $category: 'common', $img: 'ico-nav-next-gray.svg');
             right: -10px;
+            &.swiper-button-disabled {
+              background-image: url(../img/common/ico-nav-next-gray-disabled.svg);
+            }
           }
         }
       }
