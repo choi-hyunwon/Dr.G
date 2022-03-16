@@ -811,7 +811,7 @@ function hidePopup() {
 
 function openPopup(className) {
     var target = `.${className}`;
-    $(target).addClass('show fade').css('display', 'block');
+    $(target).removeClass('hide').addClass('show fade').css('display', 'block');
 }
 
 function closePopup(className) {
