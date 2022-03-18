@@ -7,30 +7,36 @@
             containment: 'parent',
             axis: 'y',
             drag: function () {
-                var offset = $(this).offset();
-                var yPos = offset.top;
-                console.log('y :', yPos)
+                // var offset = $(this).offset();
+                // var yPos = offset.top;
+                // console.log('y :', yPos)
+            },
+            start: function() {
+                console.log("Drag Start");
+            },
+            stop: function() {
+                console.log("Drag Stop");
             }
         });
         var touchmoved = false;
         chatbot.on('touchmove', function (e) {
             touchmoved = true;
-            console.log('do moving stuff');
+            // console.log('do moving stuff');
         }).on('touchstart', function (e) {
             touchmoved = false;
-        }).find('img').on('click touchend', function (e) {
+        }).on('click touchend', function (e) {
             e.stopPropagation();
             e.preventDefault();
             e.stopImmediatePropagation();
             if (touchmoved != true) {
                 console.log('click touchend');
-                $(this).siblings('.tip').show();
+                $(this).find('img').siblings('.tip').show();
                 // do clicking stuff
             }
         });
-        chatbot.find('img').on('click', function () {
-            $(this).siblings('.tip').show();
-        })
+        // chatbot.find('img').on('click', function () {
+        //     $(this).siblings('.tip').show();
+        // })
 
         $('._chatClose').on('click', function () {
             chatbot.children('.tip').hide();
