@@ -2,12 +2,6 @@ const data = {}
 data.guide = {
     title: 'Guide',
     list: [
-        {
-            stateClass: 'working',
-            url: 'mentorG',
-            category: 'guide',
-            page: '멘토G상담'
-        },
         // {
         //     stateClass: 'complete',
         //     url: 'animate-click-play',
@@ -89,6 +83,19 @@ data.guide = {
     ]
 }
 
+data.etc = {
+    title: 'etc',
+    list: [
+        {
+            stateClass: 'complete',
+            url: '개인정보처리방침',
+            category: 'etc',
+            page: '개인정보처리방침'
+        },
+
+    ]
+}
+
 data.main = {
     title: 'Main',
     list: [
@@ -115,6 +122,12 @@ data.main = {
             url: 'gnb',
             category: 'guide',
             page: '전체 메뉴'
+        },
+        {
+            stateClass: 'complete',
+            url: 'mentorG',
+            category: 'main',
+            page: '멘토G상담-챗봇'
         },
     ]
 }
