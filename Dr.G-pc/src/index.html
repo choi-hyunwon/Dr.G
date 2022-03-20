@@ -121,6 +121,7 @@
     var template = Handlebars.compile(source) //컴파일
     $('.wrap_scroll')
         .append(template(data.guide))
+        .append(template(data.etc))
         .append(template(data.main))
         .append(template(data.AI))
         .append(template(data.mentoring))

@@ -83,6 +83,19 @@ data.guide = {
     ]
 }
 
+data.etc = {
+    title: 'etc',
+    list: [
+        {
+            stateClass: 'complete',
+            url: '개인정보처리방침',
+            category: 'etc',
+            page: '개인정보처리방침'
+        },
+
+    ]
+}
+
 data.main = {
     title: 'Main',
     list: [

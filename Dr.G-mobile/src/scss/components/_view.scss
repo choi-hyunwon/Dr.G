@@ -1100,6 +1100,9 @@
   /*개인정보 수집 및 이용 동의 공통*/
   .privacy-policy{
     padding: vw(20) vw(24);
+    >.divider{
+      margin: vw(48) 0;
+    }
     .step{
       margin-bottom: vw(32);
       >div{
@@ -1118,12 +1121,127 @@
           color: $gray-700;
         }
       }
+      .font-h5{
+        color: $gray-800;
+      }
+      .table-box{
+        margin:0 vw(-24);
+        .table-inner{
+          padding: 0 24px;
+          overflow-x: auto;
+
+          .table{
+            min-width: vw(655);
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 0;
+
+            &:after{
+              content: '';
+              display: block;
+              width: 100%;
+              height: 1px;
+              background-color: $gray-900;
+              position: absolute;
+              top:0;
+            }
+
+            thead{
+              tr{
+                th{
+                  border-right: 1px solid $gray-300;
+                  border-bottom: none;
+                  font-size: vw(13);
+                  padding: vw(15);
+                  text-align: center;
+                  &:last-of-type{
+                    border-right: none;
+                  }
+                }
+              }
+            }
+            tbody{
+              tr{
+                td{
+                  border: 1px solid $gray-300;
+                  color:$gray-700;
+                  font-size: vw(13);
+                  padding: vw(15);
+                  &:first-of-type{
+                    border-left: none;
+                  }
+                  &:last-of-type{
+                    border-right: none;
+                  }
+                }
+                &:last-of-type{
+                  td{
+                    border-bottom: 1px solid $gray-400;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.no-scroll{
+          margin: 0;
+          .table-inner{
+            padding: 0;
+            overflow-x: none;
+
+            .table{
+              min-width: unset;
+
+              thead{
+                tr{
+                  th{
+                    border-right: 1px solid $gray-300;
+                    border-bottom: none;
+                    font-size: vw(13);
+                    padding: vw(15);
+                    text-align: center;
+                    &:last-of-type{
+                      border-right: none;
+                    }
+                  }
+                }
+              }
+              tbody{
+                tr{
+                  td{
+                    border: 1px solid $gray-300;
+                    color:$gray-700;
+                    font-size: vw(13);
+                    padding: vw(15);
+                    &:first-of-type{
+                      border-left: none;
+                    }
+                    &:last-of-type{
+                      border-right: none;
+                    }
+                  }
+                  &:last-of-type{
+                    td{
+                      border-bottom: 1px solid $gray-400;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
       .list-with-dot{
         li{
           margin-bottom: 0;
           font-size: vw(15);
           line-height: vw(22);
           color: $gray-700;
+          &:after{
+            top: vw(10)
+          }
         }
       }
     }
