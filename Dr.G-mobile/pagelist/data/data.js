@@ -2,18 +2,6 @@ const data = {}
 data.guide = {
     title: 'Guide',
     list: [
-        // {
-        //     stateClass: 'complete',
-        //     url: 'animate-click-play',
-        //     category: 'guide',
-        //     page: 'animate-click-play'
-        // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'animate-scroll-play',
-        //     category: 'guide',
-        //     page: 'animate-scroll-play'
-        // },
         {
             stateClass: 'complete',
             url: 'button',
@@ -79,6 +67,12 @@ data.guide = {
             url: 'file',
             category: 'guide',
             page: 'file'
+        },
+        {
+            stateClass: 'complete',
+            url: 'loading',
+            category: 'guide',
+            page: 'loading'
         },
     ]
 }
