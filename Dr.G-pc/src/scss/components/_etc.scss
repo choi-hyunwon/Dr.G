@@ -495,6 +495,7 @@ body.scrOff {
       background-color: $gray-300;
       border-radius: 100px;
     }
+
     li {
       a {
         padding: 8px 0;
@@ -503,6 +504,7 @@ body.scrOff {
         line-height: 22px;
         color: $gray-700;
       }
+
       &.on {
         a {
           color: $primary;
@@ -557,10 +559,10 @@ body.scrOff {
   }
 }
 
-.analysis-wrap{
-  .s-select-box{
-    ul{
-      li{
+.analysis-wrap {
+  .s-select-box {
+    ul {
+      li {
         &.on {
           a {
             color: $violet;
@@ -590,10 +592,11 @@ body.scrOff {
     opacity: 1;
     width: 38px;
 
-    .mCSB_draggerContainer{
-      top:10px;
+    .mCSB_draggerContainer {
+      top: 10px;
       bottom: 10px;
     }
+
     .mCSB_dragger {
       .mCSB_dragger_bar {
         width: 6px;
@@ -606,6 +609,119 @@ body.scrOff {
         background-color: transparent;
         border-radius: 100px;
       }
+    }
+  }
+}
+
+.scanning-completed-common {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34, 34, 34, .2);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .smile-graph {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+    width: 52px;
+    height: 26px;
+
+    &::before { /*배경*/
+      position: absolute;
+      content: '';
+      width: inherit;
+      height: inherit;
+      border: 11px solid $gray-300;
+      border-top: none;
+      border-bottom-left-radius: 26px;
+      border-bottom-right-radius: 26px;
+      top: 0;
+      left: 0;
+    }
+
+    span { /*span 기준점*/
+      position: absolute;
+      z-index: 11;
+      top: 0;
+      left: 0;
+      border: 11px solid;
+      border-top: none !important;
+      width: inherit;
+      height: inherit;
+      border-top: none;
+      border-bottom-left-radius: 26px;
+      border-bottom-right-radius: 26px;
+      transform-origin: 50% 0;
+
+      &.value { /*실제 그래프*/
+        z-index: 1;
+        border-color: #ffe444;
+        animation: smileGraph 1s 0.5s;
+        animation-iteration-count: infinite;
+        transform: rotateZ(-360deg);
+      }
+    }
+  }
+
+  .smile-graph {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+    width: 52px;
+    height: 26px;
+
+    &::before { /*배경*/
+      position: absolute;
+      content: '';
+      width: inherit;
+      height: inherit;
+      border: 10px solid $gray-300;
+      border-top: none;
+      border-bottom-left-radius: 130px;
+      border-bottom-right-radius: 130px;
+      top: 0;
+      left: 0;
+    }
+
+    span { /*span 기준점*/
+      position: absolute;
+      z-index: 11;
+      top: 0;
+      left: 0;
+      border: 10px solid;
+      border-top: none !important;
+      width: inherit;
+      height: inherit;
+      border-top: none;
+      border-bottom-left-radius: 130px;
+      border-bottom-right-radius: 130px;
+      transform-origin: 50% 0;
+
+      &.value { /*실제 그래프*/
+        z-index: 1;
+        border-color: #ffe444;
+        animation: smileGraph 1s 0.5s;
+        animation-iteration-count: infinite;
+        transform: rotateZ(-360deg);
+      }
+    }
+  }
+
+  @keyframes smileGraph {
+    0% {
+      transform: rotateZ(-180deg);
     }
   }
 }

@@ -80,6 +80,12 @@ data.guide = {
             category: 'guide',
             page: 'file'
         },
+        {
+            stateClass: 'complete',
+            url: 'loading',
+            category: 'guide',
+            page: 'loading'
+        },
     ]
 }
 
