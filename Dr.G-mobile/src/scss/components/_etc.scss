@@ -531,3 +531,121 @@ body.scrOff {
     }
   }
 }
+
+.scanning-completed-common {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(34, 34, 34, .5);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    .img {
+      width: vw(60);
+      height: vw(60);
+      margin: 0 auto vw(28);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .font-h5 {
+      color: #fff;
+      text-align: center;
+    }
+  }
+
+  .btn-wrap {
+    position: absolute;
+    bottom: vw(76);
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 vw(24);
+  }
+
+  .dim {
+    background-color: rgba(34, 34, 34, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.smile-loading {
+      .smile-graph {
+        span { /*span 기준점*/
+          &.value { /*실제 그래프*/
+            transform: rotateZ(-360deg);
+            animation: smileGraph 3s infinite;
+            -webkit-animation: smileGraph 3s infinite;
+          }
+        }
+      }
+    }
+  }
+
+  .smile-graph {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+    width: vw(52);
+    height: vw(26);
+
+    &::before { /*배경*/
+      position: absolute;
+      content: '';
+      width: inherit;
+      height: inherit;
+      border: vw(10) solid $gray-300;
+      border-top: none;
+      border-bottom-left-radius: vw(130);
+      border-bottom-right-radius: vw(130);
+      top: 0;
+      left: 0;
+    }
+
+    span { /*span 기준점*/
+      position: absolute;
+      z-index: 11;
+      top: 0;
+      left: 0;
+      border: vw(10) solid;
+      border-top: none !important;
+      width: inherit;
+      height: inherit;
+      border-top: none;
+      border-bottom-left-radius: vw(130);
+      border-bottom-right-radius: vw(130);
+      transform-origin: 50% 0;
+
+      &.value { /*실제 그래프*/
+        z-index: 1;
+        border-color: #ffe444;
+        animation: smileGraph 1s 0.5s;
+        animation-iteration-count: infinite;
+        transform: rotateZ(-360deg);
+      }
+    }
+  }
+
+  @keyframes smileGraph {
+    0% {
+      transform: rotateZ(-180deg);
+    }
+  }
+}
