@@ -1,7 +1,8 @@
 <script>
     $(document).ready(function (){
-        /* 하단 버튼 */
+        // chatbot
         var chatbot = $('#chatbot');
+        console.log(chatbot)
         chatbot.draggable({
             containment: 'parent',
             axis: 'y',
@@ -12,11 +13,28 @@
             }
         });
 
-        chatbot.find('img').on('click',function (){
+        var touchmoved = false;
+        chatbot.on('touchmove', function (e) {
+            touchmoved = true;
+            console.log('do moving stuff');
+        }).on('touchstart', function (e) {
+            touchmoved = false;
+        }).find('img').on('click touchend', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            if (touchmoved != true) {
+                console.log('click touchend');
+                $(this).siblings('.tip').show();
+                // do clicking stuff
+            }
+        });
+
+        chatbot.find('img').on('click', function () {
             $(this).siblings('.tip').show();
         })
 
-        $('._chatClose').on('click',function (){
+        $('._chatClose').on('click', function () {
             chatbot.children('.tip').hide();
         })
 
@@ -65,12 +83,12 @@
         });
 
        suggestionSlider.on('slideChangeTransitionStart', function () {
-           $('.text-box').css('opacity','.3');
+           $('.customer-suggestion .text-box').css('opacity','.3');
        })
 
        suggestionSlider.on('slideChangeTransitionEnd', function () {
            setTimeout(function (){
-               $('.text-box').css('opacity','1');
+               $('.customer-suggestion .text-box').css('opacity','1');
            },300)
        })
 
