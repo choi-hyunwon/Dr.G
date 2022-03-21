@@ -704,7 +704,7 @@
     .heading {
       background: linear-gradient(to bottom, $primary calc(100% - #{vw(50)}), #fff vw(50));
       //background-color: $primary;
-      padding: vw(80) vw(24) 0;
+      padding: vw(40) vw(24) 0;
       margin-bottom: vw(56);
 
       > .font-body-1 {
@@ -734,7 +734,7 @@
           text-align: center;
           //align-items: center;
           //justify-content: center;
-          margin-bottom: vw(3);
+          //margin-bottom: vw(3);
           color: #fff;
 
           > .font-h2 {
@@ -745,6 +745,14 @@
         > .font-body-2 {
           color: #d5f4ef;
           text-align: center;
+        }
+
+        > .font-h6 {
+          text-align: center;
+          color: #FFFFFF;
+          line-height: vw(24);
+          margin-top: vw(16);
+          margin-bottom: vw(24);
         }
 
         .btn-tooltip {
@@ -786,7 +794,7 @@
         background: #ffffff;
         box-shadow: 0 vw(4) vw(12) rgba(34, 34, 34, 0.08);
         border-radius: vw(16);
-        padding: vw(24) vw(32);
+        padding: vw(56) vw(32) vw(22);
 
         > .font-h6 {
           margin-bottom: vw(50);

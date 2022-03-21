@@ -4630,14 +4630,16 @@
 
   /* 피부분석 결과 저장/공유하기 */
   .result-detail-view {
-    > .heading {
+    width: 375px;
+    margin: 0 auto;
+
+    .copy-area > .heading {
       display: flex;
       align-items: center;
       width: 100%;
       height: vw(90);
       background-color: #fff;
       padding: 0 vw(24);
-      border-bottom: 1px solid $gray-300;
 
       img {
         display: inline-block;
@@ -5124,6 +5126,32 @@
               }
             }
           }
+        }
+      }
+    }
+
+    .btn-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: vw(48);
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        font-weight: 500;
+        width: vw(123);
+
+
+        &.btn-black {
+          width: auto;
+          padding: 0 vw(36);;
+        }
+
+        + .btn {
+          margin-left: vw(12);
         }
       }
     }

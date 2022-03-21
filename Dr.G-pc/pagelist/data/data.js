@@ -113,6 +113,12 @@ data.AI = {
     list: [
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_샘플',
+            category: 'AI',
+            page: 'Ai피부분석_샘플'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_시작하기_팝업',
             category: 'AI',
             page: 'Ai피부분석_시작하기_팝업'

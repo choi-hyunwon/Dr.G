@@ -269,6 +269,12 @@ data.AI = {
         },
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_결과_저장_공유하기3',
+            category: 'AI',
+            page: 'Ai피부분석_결과_저장_공유하기3'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_결과_케어법_공유하기',
             category: 'AI',
             page: 'Ai피부분석_결과_케어법_공유하기'

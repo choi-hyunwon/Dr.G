@@ -658,3 +658,71 @@
     }
   }
 }
+
+.header-details {
+  width: 375px;
+  margin: 0 auto;
+  z-index: 20;
+  //transition: top 0.2s ease-in-out;
+  position: relative;
+  //width: 100%;
+  height: vw(60);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 vw(18);
+  line-height: 1.155;
+  background-color: #fff;
+
+  .btn-prev {
+    display: block;
+    position: absolute;
+    left: vw(17);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  + .body-details {
+    padding-top: 0;
+  }
+
+  &.scroll-up {
+    position: fixed;
+    left: 0;
+    top: vw(-60);
+
+    + .body-details {
+      padding-top: vw(60);
+    }
+
+    + .container {
+      .freesample-application-section {
+        padding: vw(80) vw(24) vw(24);
+      }
+
+      .skin-report-detail {
+        padding-top: vw(60);
+      }
+    }
+  }
+
+  &.scroll-down {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    + .body-details {
+      padding-top: vw(60);
+    }
+
+    + .container {
+      .freesample-application-section {
+        padding: vw(80) vw(24) vw(24);
+      }
+
+      .skin-report-detail {
+        padding-top: vw(60);
+      }
+    }
+  }
+}
