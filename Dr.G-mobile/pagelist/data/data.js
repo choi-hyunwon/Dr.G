@@ -143,6 +143,12 @@ data.AI = {
         },
         {
             stateClass: 'complete',
+            url: 'Ai피부분석_10대_선택_시',
+            category: 'AI',
+            page: 'Ai피부분석_10대_선택_시'
+        },
+        {
+            stateClass: 'complete',
             url: 'Ai피부분석_서브메인',
             category: 'AI',
             page: 'Ai피부분석_서브메인'

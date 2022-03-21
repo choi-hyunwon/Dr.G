@@ -26,14 +26,16 @@
       .modal-content {
         border-radius: vw(12);
         overflow: hidden;
+        border: 0;
 
         .modal-header {
           padding: vw(24) vw(24) 0 vw(24);
           border-bottom: none;
+          border: 0;
         }
 
         .modal-body {
-          padding: vw(0) vw(24) vw(24) vw(24);
+          padding: vw(0) vw(24) vw(24);
           text-align: left;
           color: $gray-800;
           font-size: vw(15);
@@ -62,7 +64,7 @@
             border-color: $gray-fff;
             border-radius: 0;
             font-weight: 400;
-            font-size: vw(13);
+            font-size: vw(15);
             padding: 0;
             margin: 0;
             width: 50%;
@@ -92,8 +94,8 @@
     }
 
     &.modal-sm {
-      width: vw(300);
-      max-width: vw(300);
+      width: vw(290);
+      max-width: vw(290);
       margin: 0 auto;
     }
   }

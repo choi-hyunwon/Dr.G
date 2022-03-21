@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+@@include('../../html/include/common/head.html')
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="guide popup">
+            <p class="title font-h2 font-bold">만 14세 이상인가요? </p>
+            <div class="box text-center">
+                <button type="button" class="btn" data-toggle="modal" data-target="#alertPopupType2">
+                    button
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="alertPopupType2" tabindex="-1" role="dialog"
+                     aria-labelledby="alertPopupType2" aria-hidden="true">
+                    <div class="modal-dialog modal-sm modal-dialog-centered alert-popup" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header"></div>
+                            <div class="modal-body">만 14세 이상인가요? </div>
+                            <div class="modal-footer">
+                                <a href="#" type="button" class="btn btn-close" data-dismiss="modal">아니오</a>
+                                <a href="#" type="button" class="btn">네</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="title font-h2 font-bold">이용약관 제 7조에 따라...</p>
+            <div class="box text-center">
+                <button type="button" class="btn" data-toggle="modal" data-target="#alertPopupType1">
+                    button
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="alertPopupType1" tabindex="-1" role="dialog"
+                     aria-labelledby="ModalCenterTitleOneButton" aria-hidden="true">
+                    <div class="modal-dialog modal-sm alert-popup modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            </div>
+                            <div class="modal-body">이용약관 제 7조에 따라 만 14세 미만의<br/>
+                                아동의 이용을 제한하고 있습니다.<br/>
+                                개인정보보호를 위해 양해 부탁드립니<br/>다. </div>
+                            <div class="modal-footer">
+                                <a href="#" type="button" class="btn one" data-dismiss="modal">닫기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal -->
+            </div>
+        </div>
+        @@include('../../html/include/common/footer.html')
+    </div>
+</div>
+<script>
+</script>
+</body>
+</html>
