@@ -5,6 +5,7 @@
  v.0.3 선미 : s-select-box > .on > a 색상 카테고리별 분류 / divider 추가 -- 2022.02.07
  v.0.4 선미 : .list-with-dot 추가 -- 2022.02.08
  v.0.5 선미 : .list-with-dot 간격수정, more-box 화살표 제거 -- 2022.02.25
+ v.0.6 선미 : privacy-policy 추가 -- 2022.03.22
 |--------------------------------------------------------------------|
 */
 .list-with-dot {
@@ -724,4 +725,165 @@ body.scrOff {
       transform: rotateZ(-180deg);
     }
   }
+}
+
+/*개인정보 수집 및 이용 동의 공통*/
+.privacy-policy{
+  .inner{
+    width: 1242px;
+    margin: 0 auto 160px;
+    .title{
+      text-align: center;
+      padding-top: 40px;
+      margin-bottom: 72px;
+    }
+  }
+  >.divider{
+    margin: 60px 0;
+  }
+  .step{
+    margin-bottom: 30px;
+    >div{
+      margin-bottom:12px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+
+    .font-h3{
+      color: $gray-900;
+    }
+    .font-body-1{
+      color: $gray-800;
+      font-weight: 500;
+
+
+      &.desc{
+        color: $gray-700;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+      }
+    }
+    .font-h5{
+      color: $gray-800;
+    }
+    .table-box{
+      .table-inner{
+        .table{
+          min-width: vw(655);
+          overflow: hidden;
+          position: relative;
+          margin-bottom: 0;
+
+          &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $gray-900;
+            position: absolute;
+            top:0;
+          }
+
+          thead{
+            tr{
+              th{
+                border-right: 1px solid $gray-300;
+                border-bottom: none;
+                font-size: vw(13);
+                padding: vw(15);
+                text-align: center;
+                &:last-of-type{
+                  border-right: none;
+                }
+              }
+            }
+          }
+          tbody{
+            tr{
+              td{
+                border: 1px solid $gray-300;
+                color:$gray-700;
+                font-size: vw(13);
+                padding: vw(15);
+                &:first-of-type{
+                  border-left: none;
+                }
+                &:last-of-type{
+                  border-right: none;
+                }
+              }
+              &:last-of-type{
+                td{
+                  border-bottom: 1px solid $gray-400;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.no-scroll{
+        margin: 0;
+        .table-inner{
+          padding: 0;
+          overflow-x: none;
+
+          .table{
+            min-width: unset;
+
+            thead{
+              tr{
+                th{
+                  border-right: 1px solid $gray-300;
+                  border-bottom: none;
+                  font-size: vw(13);
+                  padding: vw(15);
+                  text-align: center;
+                  &:last-of-type{
+                    border-right: none;
+                  }
+                }
+              }
+            }
+            tbody{
+              tr{
+                td{
+                  border: 1px solid $gray-300;
+                  color:$gray-700;
+                  font-size: vw(13);
+                  padding: vw(15);
+                  &:first-of-type{
+                    border-left: none;
+                  }
+                  &:last-of-type{
+                    border-right: none;
+                  }
+                }
+                &:last-of-type{
+                  td{
+                    border-bottom: 1px solid $gray-400;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .list-with-dot{
+      li{
+        margin-bottom: 0;
+        font-size: vw(15);
+        line-height: vw(22);
+        color: $gray-700;
+        &:after{
+          top: vw(10)
+        }
+      }
+    }
+  }
+
 }
