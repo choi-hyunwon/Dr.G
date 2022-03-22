@@ -388,7 +388,7 @@ data.mentoring = {
     title: '1:1스킨 멘토링',
     list: [
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '스킨멘토링_서브메인',
             category: 'mentoring',
             page: '스킨멘토링_서브메인'
@@ -478,7 +478,7 @@ data.analysis = {
     title: '1:1 성분분석',
     list: [
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: '성분분석_서브메인',
             category: 'analysis',
             page: '성분분석_서브메인'
@@ -658,13 +658,13 @@ data.analysis = {
             page: '성분분석_수정요청_입력란_완료팝업'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: '성분분석_개인정보_활용동의_팝업_회원',
             category: 'analysis',
             page: '성분분석_개인정보_활용동의_팝업_회원'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: '성분분석_개인정보_활용동의_팝업_비회원',
             category: 'analysis',
             page: '성분분석_개인정보_활용동의_팝업_비회원'

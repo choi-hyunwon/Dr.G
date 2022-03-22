@@ -15,11 +15,11 @@
 .color-red { color: $error !important;}
 
 .bg-gradient-red {
-  background: linear-gradient(90deg, #F24A4A 0%, #FFB9B9 100%) !important;
-}
-.bg-gradient-red-2 {
   background: linear-gradient(90deg, #FFB9B9 0%, #F24A4A 100%) !important;
 }
+//.bg-gradient-red-2 {
+//  background: linear-gradient(90deg, #FFB9B9 0%, #F24A4A 100%) !important;
+//}
 .bg-gradient-blue {
   background: linear-gradient(90deg, #CEFCF1 0%, #2DAFF9 100%) !important;
 }

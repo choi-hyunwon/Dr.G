@@ -242,10 +242,10 @@
         }
     });
 
-    $('.slide-tab .item a').on('click', function () {
-        let idx = $(this).parent().index()
-        // console.log(idx)
-        let offset = $('.section').eq(idx).offset();
+    $('._section-tab .item a').on('click', function () {
+        let idx = $(this).parent().index();
+        console.log(idx)
+        let offset = $('._section').eq(idx).offset();
         let headHeight = $('.header-white').height() + $('._tab').height()
 
         if ($('.header-white').hasClass('header-transparent')) {

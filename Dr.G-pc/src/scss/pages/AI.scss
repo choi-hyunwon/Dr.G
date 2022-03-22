@@ -1257,6 +1257,21 @@
                   }
                 }
 
+                &.up-red {
+                  color: $error;
+
+                  &::after {
+                    @include background-img($width: 16, $height: 16, $category: 'AI', $img: 'ico-up-red.svg');
+                  }
+                }
+
+
+                &.no-change {
+                  &::after {
+                    @include background-img($width: 16, $height: 16, $category: 'AI', $img: 'ico-minus.svg');
+                  }
+                }
+
                 &.down {
                   color: $error;
 

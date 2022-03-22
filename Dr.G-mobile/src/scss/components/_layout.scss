@@ -1136,8 +1136,10 @@ body {
 .chatbot-area {
   position: fixed;
   width: vw(12.8);
+  //height: calc(100vh - #{vw(98)} - #{vw(84)});
+  //height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(84)});
   height: calc(100vh - #{vw(98)} - #{vw(84)});
-  height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(84)});
+  height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(64)});
   top: vw(60);
   right: 0;
   z-index: 10;
@@ -1228,8 +1230,10 @@ body {
 
   &.main {
     top: vw(141);
-    height: calc(100vh - #{vw(98)} - #{vw(84)} - #{vw(80)});
-    height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(84)} - #{vw(80)});
+    //height: calc(100vh - #{vw(98)} - #{vw(84)} - #{vw(80)});
+    //height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(84)} - #{vw(80)});
+    height: calc(100vh - #{vw(98)} - #{vw(84)} - #{vw(60)});
+    height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(84)} - #{vw(60)});
 
     .btn-chatbot {
       top: calc(100vh - 67%);
