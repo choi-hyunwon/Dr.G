@@ -485,6 +485,12 @@ data.analysis = {
         },
         {
             stateClass: 'complete',
+            url: '성분분석_분석결과_공유하기2',
+            category: 'analysis',
+            page: '성분분석_분석결과_공유하기2'
+        },
+        {
+            stateClass: 'complete',
             url: '성분분석_분석결과_공유하기_팝업',
             category: 'analysis',
             page: '성분분석_분석결과_공유하기_팝업'
