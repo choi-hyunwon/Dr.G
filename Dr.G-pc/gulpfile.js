@@ -33,7 +33,6 @@ function copyLibJs() {
     let sourceLib = [
         'src/js/lib/jquery.js',
         'src/js/lib/bootstrap.js',
-        'src/js/lib/jquery.sticky.js',
         'src/js/lib/swiper.js',
         'src/js/lib/masonry.js',
         'src/js/lib/aos.js',

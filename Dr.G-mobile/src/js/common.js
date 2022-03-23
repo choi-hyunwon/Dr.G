@@ -232,11 +232,6 @@ front.common = (function () {
         $body.on('click', function () {
             $('._selectBox').removeClass('down');
         });
-
-        /* brand 탭 */
-        if($('.brand-wrap').find('._tab').length) {
-            $('._tab li')
-        }
     }
 
     var tab = function () {
