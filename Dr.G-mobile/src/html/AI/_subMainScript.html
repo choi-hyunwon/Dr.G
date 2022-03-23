@@ -15,14 +15,14 @@
         stop: function () {
             console.log("Drag Stop");
         },
-        cancel:'._clickable'
+        // cancel:'._clickable'
     });
 
-    chatbot.find('img').on('click', function () {
+    chatbot.find('img').on('touchmove', function () {
         $(this).siblings('.tip').show();
     })
 
-    $('._chatClose').on('click', function () {
+    $('._chatClose').on('touchmove', function () {
         chatbot.children('.tip').hide();
     })
 
