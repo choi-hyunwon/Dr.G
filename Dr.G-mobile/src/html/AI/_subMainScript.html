@@ -1,22 +1,28 @@
 <script>
     // chatbot
     var chatbot = $('#chatbot');
-
     chatbot.draggable({
         containment: 'parent',
         axis: 'y',
-        drag: function () {
-            var offset = $(this).offset();
-            var yPos = offset.top;
-            // console.log('y :', yPos)
-        }
+        // drag: function () {
+        //     var offset = $(this).offset();
+        //     var yPos = offset.top;
+        //     console.log('y :', yPos)
+        // },
+        start: function() {
+            console.log("Drag Start");
+        },
+        stop: function () {
+            console.log("Drag Stop");
+        },
+        cancel:'._clickable'
     });
 
-    chatbot.find('img').on('click',function (){
+    chatbot.find('img').on('click', function () {
         $(this).siblings('.tip').show();
     })
 
-    $('._chatClose').on('click',function (){
+    $('._chatClose').on('click', function () {
         chatbot.children('.tip').hide();
     })
 

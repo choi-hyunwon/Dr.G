@@ -1175,6 +1175,10 @@ body {
       right: vw(56);
       bottom: 0;
 
+      > span {
+        display: block;
+      }
+
       .btn-chatbot-close {
         position: absolute;
         top: vw(-8);

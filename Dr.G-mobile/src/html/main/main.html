@@ -219,11 +219,13 @@
     <!-- s chatbot -->
     <div class="chatbot-area main _chatBotArea">
         <div id="chatbot" class="btn-chatbot">
-            <img src="../../img/common/btn-chatbot.png" alt="chatbot">
+            <img src="../../img/common/btn-chatbot.png" alt="chatbot" onclick="console.log('말풍선')">
             <span class="tip" style="display: inline">
-                <em class="font-bold">푸석푸석 민감할 땐</em> <em class="font-bold color-primary">레드 블래미쉬 시카 수딩 크림</em><br/>
-                <em class="color-light-gray">멘토G가 알려드려요!</em>
-                <a href="#" class="btn-chatbot-close _chatClose"><span class="icon ico-chatbot-close"></span></a>
+                <span class="_clickable" onclick="console.log('챗봇 Open')">
+                    <em class="font-bold">푸석푸석 민감할 땐</em> <em class="font-bold color-primary">레드 블래미쉬 시카 수딩 크림</em><br/>
+                    <em class="color-light-gray">멘토G가 알려드려요!</em>
+                </span>
+                <a href="#" class="btn-chatbot-close _chatClose _clickable" onclick="console.log('닫기')"><span class="icon ico-chatbot-close"></span></a>
             </span>
         </div>
     </div>
