@@ -123,6 +123,18 @@ data.main = {
             category: 'main',
             page: '멘토G상담-챗봇'
         },
+        {
+            stateClass: 'complete',
+            url: 'mentorG-type2',
+            category: 'main',
+            page: '멘토G상담-챗봇 - 버튼이랑 같이 있는 경우'
+        },
+        {
+            stateClass: 'complete',
+            url: 'float-button',
+            category: 'main',
+            page: '버튼만 있는 경우'
+        },
     ]
 }
 

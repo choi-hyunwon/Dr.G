@@ -939,10 +939,9 @@
 
         .alert {
           position: relative;
-          padding: 0 0 0 vw(24);
-          font-weight: 500;
-          color: $gray-fff;
-          opacity: 0.7;
+          padding: vw(2) 0 0 vw(24);
+          font-weight: bold;
+          color: #FFE665;
 
           &:before {
             content: '';
@@ -1606,6 +1605,12 @@
             margin-top: 20px;
           }
         }
+
+        &.type2 {
+          .desc-box {
+            background-image: url("../img/analysis/img-noMatching2.png");
+          }
+        }
       }
 
       &.bg-white {
@@ -1808,6 +1813,18 @@
           &:last-of-type {
             margin-bottom: 60px;
           }
+        }
+      }
+
+      .caution-box {
+        margin-top: 120px;
+        padding-top: vw(24);
+        border-top: vw(1) solid $gray-300;
+
+        .font-body-2 {
+          color: $gray-600;
+          font-size: 13px;
+          line-height: 18px;
         }
       }
     }

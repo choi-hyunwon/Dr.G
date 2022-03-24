@@ -1,31 +1,4 @@
 <script>
-    // chatbot
-    var chatbot = $('#chatbot');
-    chatbot.draggable({
-        containment: 'parent',
-        axis: 'y',
-        // drag: function () {
-        //     var offset = $(this).offset();
-        //     var yPos = offset.top;
-        //     console.log('y :', yPos)
-        // },
-        start: function() {
-            console.log("Drag Start");
-        },
-        stop: function () {
-            console.log("Drag Stop");
-        },
-        // cancel:'._clickable'
-    });
-
-    chatbot.find('img').on('touchmove', function () {
-        $(this).siblings('.tip').show();
-    })
-
-    $('._chatClose').on('touchmove', function () {
-        chatbot.children('.tip').hide();
-    })
-
     // bubble slider
     // https://www.jqueryscript.net/slider/3D-Cover-Flow-Style-Image-Carousel-Plugin-with-jQuery-Cloud-9-Carousel.html
     let showcase = $("._showCase")

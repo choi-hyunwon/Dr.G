@@ -1,28 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 @@include('../../html/include/common/head.html')
 <body>
 <div class="wrap">
     <!-- s main banner -->
-    <div class="main-banner _mainBanner">
-        <div class="swiper-container _bannerSlider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="img"><img src="../../img/@temp/main/img-main-banner-1.png" alt="진정 순한 수분 토너"></div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="img"><img src="../../img/@temp/main/img-main-banner-2.png" alt="피부 건강 나눔 챌린지"></div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="img"><img src="../../img/@temp/main/img-main-banner-3.png" alt="더모이스처 배리어.D"></div>
-                </div>
-            </div>
-            <a class="swiper-pagination _bannerModalOpen" href="#">
-                <span class="swiper-counter _bannerSliderNum"></span>
-                <span class="btn-more"><i class="icon ico-plus"></i></span>
-            </a>
-        </div>
-    </div>
+<!--    <div class="main-banner _mainBanner">-->
+<!--        <div class="swiper-container _bannerSlider">-->
+<!--            <div class="swiper-wrapper">-->
+<!--                <div class="swiper-slide">-->
+<!--                    <div class="img"><img src="../../img/@temp/main/img-main-banner-1.png" alt="진정 순한 수분 토너"></div>-->
+<!--                </div>-->
+<!--                <div class="swiper-slide">-->
+<!--                    <div class="img"><img src="../../img/@temp/main/img-main-banner-2.png" alt="피부 건강 나눔 챌린지"></div>-->
+<!--                </div>-->
+<!--                <div class="swiper-slide">-->
+<!--                    <div class="img"><img src="../../img/@temp/main/img-main-banner-3.png" alt="더모이스처 배리어.D"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <a class="swiper-pagination _bannerModalOpen" href="#">-->
+<!--                <span class="swiper-counter _bannerSliderNum"></span>-->
+<!--                <span class="btn-more"><i class="icon ico-plus"></i></span>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
     <!-- e main banner -->
 
     <!-- s contents -->
@@ -38,7 +38,7 @@
                 <div class="heading-sub">간편하게 내 피부와 매칭률을 확인하세요.</div>
                 <div class="btn-wrap"><a href="#" class="btn-main"><span>1:1 성분분석 시작</span><span class="icon ico-arrow"></span></a></div>
                 <div class="animation-box _analysisAni"></div>
-<!--                <div class="animation-desc">성분을 스캔 중 입니다.<br/>잠시만 기다려주세요!</div>-->
+                <!--                <div class="animation-desc">성분을 스캔 중 입니다.<br/>잠시만 기다려주세요!</div>-->
             </div>
             <!-- s 성분분석 -->
 
@@ -216,20 +216,94 @@
     </div>
     <!-- e contents -->
 
-    <!-- s chatbot -->
-<!--    <div class="chatbot-area main _chatBotArea">-->
-<!--        <div id="chatbot" class="btn-chatbot">-->
-<!--            <img src="../../img/common/btn-chatbot.png" alt="chatbot" onclick="console.log('말풍선')">-->
-<!--            <span class="tip" style="display: inline">-->
-<!--                <span class="_clickable" onclick="console.log('챗봇 Open')">-->
-<!--                    <em class="font-bold">푸석푸석 민감할 땐</em> <em class="font-bold color-primary">레드 블래미쉬 시카 수딩 크림</em><br/>-->
-<!--                    <em class="color-light-gray">멘토G가 알려드려요!</em>-->
-<!--                </span>-->
-<!--                <a href="#" class="btn-chatbot-close _chatClose _clickable" onclick="console.log('닫기')"><span class="icon ico-chatbot-close"></span></a>-->
-<!--            </span>-->
-<!--        </div>-->
-<!--    </div>-->
-    <!-- e chatbot -->
+    <!-- s 멘토지 플로팅 배너 -->
+    <!--
+        1. 챗봇 노출 o / 버튼 x일 경우 (default)
+        2. main 페이지일 경우 .main 추가
+        3. 시작하기 버튼이 있는 페이지일 경우 .with-btn 추가
+    -->
+    <div class="mentor-draggable-area with-btn">
+        <div class="mentog_floating_bnr expands" onclick="console.log('1')" id="chatbot">
+            <span class="btn-start _clickable" onclick="console.log('4')"><span>Ai<br>시작하기</span></span>
+            <div class="mentog_floating_bnr_in">
+                <button type="button" class="_openMentor" onclick="console.log('2')"><span class="sr-only">멘토G</span></button>
+                <a href="#" class="mentog__exapnds _goChat" onclick="console.log('3')"><em><strong>푸석푸석 민감할 땐 <span class="color-primary">레드 블래미쉬시카 수딩 크림</span></strong><br>멘토G가 알려드려요!</em></a>
+            </div>
+        </div>
+    </div>
+    <!-- e 멘토지 플로팅 배너 -->
+    <!-- s 멘토지 상담 -->
+    <div class="view-details mentor-consulting _chat">
+        <div class="header-close">
+            <a class="_closeChat" href="#"><i class="icon ico-close"></i></a>
+        </div>
+        <div class="body-details">
+            <div class="box__drg__message_new" style="z-index:9999;">
+                <div id="chatbot_iframe"
+                     style="display: block; width: 100%; height: 100vh; border-radius: 15px; z-index: 999;">
+
+                    <!-- <img src="/resources/assets/imgs/mentoG_error.jpg" style="width:100%;border-radius: 2em;border: 1px solid #ccc;" /> -->
+                    <iframe src="https://mentorg.dr-g.co.kr/chatbot?USER="
+                            style="width:100%; height:90%; background-color:white; box-shadow: #8d93ab 5px 5px 30px;border: 0;"
+                            scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e 멘토지 상담 -->
+
+    <script>
+        $(document).ready(function (){
+            var chatbot = $('#chatbot');
+            var triggerMentor = $('._openMentor');
+            var triggerChat = $('._goChat');
+            var chat = $('._chat');
+
+            // draggable
+            chatbot.draggable({
+                containment: 'parent',
+                axis: 'y',
+                drag: function () {
+                    var offset = $(this).offset();
+                    var yPos = offset.top;
+                    console.log('y :', yPos)
+                },
+                start: function() {
+                    console.log("Drag Start");
+                },
+                stop: function () {
+                    console.log("Drag Stop");
+                },
+                cancel:'._goChat'
+            });
+
+            // open 말풍선
+            triggerMentor.on('touchmove click',function (){
+                chatbot.addClass('expands');
+                setTimeout(function (){
+                    chatbot.removeClass('expands');
+                },4000)
+            })
+
+            // open 채팅창
+            triggerChat.on('touchmove click',function (){
+                chat.addClass('open');
+                $('body').addClass('scrOff');
+            })
+
+            // close 채팅창
+            $('._closeChat').on('click',function (){
+                chat.removeClass('open');
+                $('body').removeClass('scrOff');
+            })
+
+            // 3초후 말풍선 닫힘
+            setTimeout(function (){
+                $('.mentog_floating_bnr').removeClass('expands');
+            },3000)
+        })
+    </script>
+    <!-- e 멘토지 플로팅 배너 -->
 
     <!-- s footer -->
     @@include('../../html/include/common/footer.html')
@@ -407,7 +481,6 @@
 </div>
 <!-- e 배너 팝업 -->
 
-@@include('../../html/include/common/notice.html')
-@@include('./mainScript.html')
+@@include('../main/mainScript.html')
 </body>
 </html>

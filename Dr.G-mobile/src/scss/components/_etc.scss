@@ -800,3 +800,161 @@ body.scrOff {
   }
 
 }
+
+/* as-is 챗봇 */
+.mentor-draggable-area {
+  position: fixed;
+  width: vw(12.8);
+  height: calc(100vh - #{vw(98)} - #{vw(84)});
+  height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(64)});
+  top: vw(60);
+  left: 0;
+  z-index: 10;
+
+  .mentog_floating_bnr {
+    top: calc(100vh - 40.4%);
+    top: calc(var(--vh, 1vh) * 100 - 40.4%);
+
+    /*position:absolute;*/
+    left: 4vw;
+    /*bottom:24.66666667vw;*/
+    transition: bottom 0.3s 0s linear;
+    width: 14.66666667vw;
+    z-index: 11;
+
+    .mentog_floating_bnr_in {
+      /*position:absolute;*/
+
+      button {
+        /*position:absolute;*/
+        width: 14.66666667vw;
+        height: 14.66666667vw;
+        border-radius: 7.33333333vw;
+        top: 0;
+        left: 0;
+        z-index: 13;
+        overflow: hidden;
+        background: #2fcab0 url(../img/common/cha_mento_g@2x.png) no-repeat 50% 100% !important;
+        background-size: 12.8vw 13.06666667vw !important;
+        border: 0;
+      }
+    }
+
+    .mentog__exapnds {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      min-width: 65.33333333vw;
+      height: 14.66666667vw;
+      width: 85vw;
+      pointer-events: none;
+      touch-action: none;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.2s 0s linear, transform 0.2s 0s linear;
+      background: #fff url('../img/common/icon_metorg_arr.svg') no-repeat 95% 50%;
+      background-size: 1.6vw 2.66666667vw;
+      border-radius: 7.33333333vw;
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.23;
+      letter-spacing: -0.33px;
+      text-align: left;
+      color: #000;
+      z-index: -1;
+
+      em {
+        display: block;
+        font-size: 2.93333333vw;
+        margin-left: 16.66666667vw;
+        padding-top: 2.86666667vw;
+        line-height: 4.8vw;
+        white-space: nowrap;
+      }
+    }
+
+    &.expands {
+      .mentog__exapnds {
+        pointer-events: fill;
+        touch-action: auto;
+        opacity: 1;
+        transform: translateX(0px);
+        transition: opacity 0.3s 0.2s linear, transform 0.3s 0s linear;
+      }
+    }
+  }
+
+  &.main {
+    top: vw(141);
+    height: calc(100vh - #{vw(98)} - #{vw(84)} - #{vw(60)});
+    height: calc(var(--vh, 1vh) * 100 - #{vw(98)} - #{vw(84)} - #{vw(60)});
+
+    .mentog_floating_bnr {
+      top: calc(100vh - 67%);
+      top: calc(var(--vh, 1vh) * 100 - 67%);
+    }
+  }
+
+  .btn-start {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: vw(60);
+    height: vw(60);
+    border-radius: 50%;
+    background: $gray-800;
+    top: 0;
+    left: vw(-5);
+    font-weight: bold;
+    font-size: vw(12);
+    line-height: vw(16);
+    color: #FFFFFF;
+
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &.with-btn {
+    .mentog_floating_bnr {
+      height: vw(120);
+      top: calc(100vh - 54.8%);
+      top: calc(var(--vh, 1vh) * 100 - 54.8%);
+
+      .mentog_floating_bnr_in {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.btn-start.single {
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: vw(60);
+  height: vw(60);
+  border-radius: 50%;
+  background: $gray-800;
+  bottom: vw(98);
+  left: vw(18);
+  font-weight: bold;
+  font-size: vw(12);
+  line-height: vw(16);
+  color: #FFFFFF;
+  z-index: 30;
+
+  span {
+    display: block;
+    text-align: center;
+  }
+}
