@@ -207,6 +207,12 @@ data.AI = {
             category: 'AI',
             page: 'Ai피부분석_결과_저장_공유하기2'
         },
+        // {
+        //     stateClass: 'complete',
+        //     url: 'Ai피부분석_결과_저장_공유하기3',
+        //     category: 'AI',
+        //     page: 'Ai피부분석_결과_저장_공유하기3'
+        // },
         {
             stateClass: 'complete',
             url: 'Ai피부분석_결과_케어법_공유하기',
@@ -483,12 +489,12 @@ data.analysis = {
             category: 'analysis',
             page: '성분분석_분석결과_공유하기'
         },
-        {
-            stateClass: 'complete',
-            url: '성분분석_분석결과_공유하기2',
-            category: 'analysis',
-            page: '성분분석_분석결과_공유하기2'
-        },
+        // {
+        //     stateClass: 'complete',
+        //     url: '성분분석_분석결과_공유하기2',
+        //     category: 'analysis',
+        //     page: '성분분석_분석결과_공유하기2'
+        // },
         {
             stateClass: 'complete',
             url: '성분분석_분석결과_공유하기_팝업',
