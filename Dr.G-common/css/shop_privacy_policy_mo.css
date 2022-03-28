@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+}
+
+ol, ul, dl {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* list */
+.list-with-dot li {
+    position: relative;
+    font-size: 3.4666666667vw;
+    line-height: 4.8vw;
+    letter-spacing: -0.0133333333vw;
+    color: #888888;
+    padding-left: 3.4666666667vw;
+    margin-bottom: 2.1333333333vw;
+}
+
+.list-with-dot li:last-child {
+    margin-bottom: 0;
+}
+
+.list-with-dot li::after {
+    content: "";
+    position: absolute;
+    width: 0.8vw;
+    height: 0.8vw;
+    left: 0;
+    top: 2.1333333333vw;
+    background-color: #888888;
+    border-radius: 50%;
+}
+
+/* 개인정보 수집 및 이용 동의 공통 */
+.privacy-policy {
+    padding: 5.3333333333vw 6.4vw;
+}
+
+.privacy-policy .font-h3 {
+    font-size: 5.8666666667vw;
+    line-height: 8.8vw;
+}
+
+.privacy-policy .font-h1 {
+    font-size: 4vw;
+    line-height: 5.8666666667vw;
+}
+
+.privacy-policy .font-h5 {
+    font-size: 4.8vw;
+    line-height: 7.4666666667vw;
+}
+
+.privacy-policy .font-body-1 {
+    font-size: 4vw;
+    line-height: 5.8666666667vw;
+}
+
+.privacy-policy .font-bold {
+    font-weight: bold;
+}
+
+.privacy-policy .table {
+    width: 100%;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+.privacy-policy > .divider {
+    margin: 12.8vw 0;
+}
+
+.privacy-policy .step {
+    margin-bottom: 8.5333333333vw;
+}
+
+.privacy-policy .step > div {
+    margin-bottom: 3.2vw;
+}
+
+.privacy-policy .step > div:last-of-type {
+    margin-bottom: 0;
+}
+
+.privacy-policy .step .font-h3 {
+    color: #222222;
+}
+
+.privacy-policy .step .font-body-1 {
+    color: #444444;
+}
+
+.privacy-policy .step .font-body-1.desc {
+    color: #666666;
+}
+
+.privacy-policy .step .font-h5 {
+    color: #444444;
+}
+
+.privacy-policy .step .table-box {
+    margin: 0 -6.4vw;
+}
+
+.privacy-policy .step .table-box .table-inner {
+    padding: 0 24px;
+    overflow-x: auto;
+}
+
+.privacy-policy .step .table-box .table-inner .table {
+    min-width: 174.6666666667vw;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.privacy-policy .step .table-box .table-inner .table:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #222222;
+    position: absolute;
+    top: 0;
+}
+
+.privacy-policy .step .table-box .table-inner .table thead tr th {
+    border-right: 1px solid #eeeeee;
+    border-bottom: none;
+    font-size: 3.4666666667vw;
+    padding: 4vw;
+    text-align: center;
+}
+
+.privacy-policy .step .table-box .table-inner .table thead tr th:last-of-type {
+    border-right: none;
+}
+
+.privacy-policy .step .table-box .table-inner .table tbody tr td {
+    border: 1px solid #eeeeee;
+    color: #666666;
+    font-size: 3.4666666667vw;
+    padding: 4vw;
+}
+
+.privacy-policy .step .table-box .table-inner .table tbody tr td:first-of-type {
+    border-left: none;
+}
+
+.privacy-policy .step .table-box .table-inner .table tbody tr td:last-of-type {
+    border-right: none;
+}
+
+.privacy-policy .step .table-box .table-inner .table tbody tr:last-of-type td {
+    border-bottom: 1px solid #dddddd;
+}
+
+.privacy-policy .step .table-box.no-scroll {
+    margin: 0;
+}
+
+.privacy-policy .step .table-box.no-scroll .table-inner {
+    padding: 0;
+    overflow-x: none;
+}
+
+.privacy-policy .step .table-box.no-scroll .table-inner .table {
+    min-width: unset;
+}
+
+.privacy-policy .step .table-box.no-scroll .table-inner .table thead tr th {
+    border-right: 1px solid #eeeeee;
+    border-bottom: none;
+    font-size: 3.4666666667vw;
+    padding: 4vw;
+    text-align: center;
+}
+
+.privacy-policy .step .table-box.no-scroll .table-inner .table thead tr th:last-of-type {
+    border-right: none;
+}
+
+.privacy-policy .step .table-box.no-scroll .table-inner .table tbody tr td {
+    border: 1px solid #eeeeee;
+    color: #666666;
+    font-size: 3.4666666667vw;
+    padding: 4vw;
+}
+
+.privacy-policy .step .table-box.no-scroll .table-inner .table tbody tr td:first-of-type {
+    border-left: none;
+}
+
+.privacy-policy .step .table-box.no-scroll .table-inner .table tbody tr td:last-of-type {
+    border-right: none;
+}
+
+.privacy-policy .step .table-box.no-scroll .table-inner .table tbody tr:last-of-type td {
+    border-bottom: 1px solid #dddddd;
+}
+
+.privacy-policy .step .list-with-dot li {
+    margin-bottom: 0;
+    font-size: 4vw;
+    line-height: 5.8666666667vw;
+    color: #666666;
+}
+
+.privacy-policy .step .list-with-dot li:after {
+    top: 2.6666666667vw;
+}
