@@ -863,6 +863,10 @@
                       fill: #f8e46b;
                     }
                   }
+
+                  .icon-polygon {
+                    background-image: url(../img/common/polygon-color-5.png);
+                  }
                 }
 
                 &.color-4 {
@@ -874,6 +878,10 @@
                       fill: #c9dd91;
                     }
                   }
+
+                  .icon-polygon {
+                    background-image: url(../img/common/polygon-color-4.png);
+                  }
                 }
 
                 &.color-3 {
@@ -883,6 +891,10 @@
                     path {
                       fill: #9fd1b0;
                     }
+                  }
+
+                  .icon-polygon {
+                    background-image: url(../img/common/polygon-color-3.png);
                   }
                 }
 
@@ -894,6 +906,10 @@
                       fill: #75cbd6;
                     }
                   }
+
+                  .icon-polygon {
+                    background-image: url(../img/common/polygon-color-2.png);
+                  }
                 }
 
                 &.color-1 {
@@ -904,15 +920,20 @@
                       fill: #50bff8;
                     }
                   }
+
+                  .icon-polygon {
+                    background-image: url(../img/common/polygon-color-1.png);
+                  }
                 }
 
-                svg {
+                svg, .icon-polygon {
                   position: absolute;
                   display: block;
-                  width: vw(6);
-                  height: vw(5);
+                  width: vw(7);
+                  height: vw(5.5);
                   bottom: vw(-3);
                   left: 50%;
+                  background-size: cover;
                 }
               }
 
@@ -925,7 +946,7 @@
                   transform: none;
                   left: 0;
 
-                  svg {
+                  svg,.icon-polygon {
                     left: auto;
                   }
                 }
@@ -962,7 +983,7 @@
                   transform: none;
                   right: 0;
 
-                  svg {
+                  svg,.icon-polygon {
                     left: auto;
                     right: vw(8);
                   }
