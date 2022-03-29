@@ -53,3 +53,44 @@
         </div>
     </div>
 </footer>
+
+<script>
+    var $scope = $('.l__language'),
+        $trigger,
+        $pickups,
+        actClass = 'act',
+        showClass = 'show',
+        enablePickups,
+        disablePickups;
+
+    $trigger = $scope.find('dt'),
+        $pickups = $scope.find('dd');
+
+    enablePickups = function(){
+        TweenMax.to($pickups,0.3,{
+            opacity:1,
+            y: 0
+        });
+        $trigger.addClass(actClass);
+        $pickups.addClass(showClass);
+    }
+
+    disablePickups = function(){
+        TweenMax.to($pickups,0.2,{
+            opacity:0,
+            y: -2
+        });
+        $trigger.removeClass(actClass);
+        $pickups.removeClass(showClass);
+    };
+
+    $trigger.on('click',function(){
+
+        var cond = $pickups.hasClass(showClass);
+        if(cond) return disablePickups();
+        enablePickups();
+
+    });
+
+    $pickups.on('mouseleave',disablePickups);
+</script>

@@ -125,7 +125,7 @@
 .l__footer .footer__in .l__language dl dt button span {margin-left:10px;font-weight:bold;}
 .l__footer .footer__in .l__language dl dt button:after {content:'';width:8px;height:6px;position:absolute;left:171px;top:17px;background:url('../img/common/btn_ico_arrbox_bottom_xs.svg') no-repeat 0 0;background-size:contain;transform:rotate(0deg);}
 .l__footer .footer__in .l__language dl dt.act button:after {transform:rotate(-180deg);}
-.l__footer .footer__in .l__language dl dd {position:absolute;bottom:0;left:0;display:block;width:100%;background:#fff;box-shadow:10px 10px 20px 0 rgba(0, 0, 0, 0.1);opacity:0;pointer-events:none;touch-action:none;}
+.l__footer .footer__in .l__language dl dd {position:absolute;bottom:0;margin:0;left:0;display:block;width:100%;background:#fff;box-shadow:10px 10px 20px 0 rgba(0, 0, 0, 0.1);opacity:0;pointer-events:none;touch-action:none;}
 .l__footer .footer__in .l__language dl dd.show {pointer-events:fill;touch-action:auto;}
 .l__footer .footer__in .l__language dl dd a {display:block;font-size:14px;font-weight:500;font-stretch:normal;font-style:normal;line-height:1;letter-spacing:-0.35px;text-align:left;color:#999;padding:10px 30px;}
 .l__footer .footer__in .l__language dl dd a:hover {color:#333;}
