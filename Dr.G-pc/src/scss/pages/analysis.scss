@@ -1185,6 +1185,7 @@
             width: 124px;
             position: relative;
             padding: 0 15px;
+            z-index: 2;
 
             .icon {
               vertical-align: unset;
@@ -1197,33 +1198,43 @@
                 @include background-img($width: 10, $height: 10, $category: 'common', $img: 'ico-minus-sm.svg')
               }
 
-              .version_box {
+              +.version_box {
                 display: block;
               }
             }
+          }
+          .version_box {
+            position: absolute;
+            z-index: 1;
+            width: 260px;
+            background-color: #E7EAFF;
+            padding: 30px 16px 16px;
+            top: 15px;
+            right: -1px;
+            border-radius: vw(12);
+            display: none;
 
-            .version_box {
-              position: absolute;
-              width: 260px;
-              background-color: #E7EAFF;
-              padding: 30px 16px 16px;
-              top: 15px;
-              right: -1px;
-              z-index: -1;
-              border-radius: vw(12);
-              display: none;
 
+            li {
+              font-size: 13px;
+              font-weight: 400;
+              line-height: 18px;
+              color: $gray-800;
+              text-align: left;
 
-              li {
-                font-size: vw(13);
-                font-weight: 400;
-                line-height: 18px;
-                color: $gray-800;
-                margin-bottom: vw(8);
-                text-align: left;
+              a{
+                display: block;
+                padding: 4px 0;
+              }
 
-                &:last-of-type {
-                  margin-bottom: 0;
+              &:first-of-type {
+                a{
+                  padding-top: 0;
+                }
+              }
+              &:last-of-type {
+                a{
+                  padding-bottom: 0;
                 }
               }
             }

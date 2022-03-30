@@ -420,12 +420,22 @@
           li {
             font-size: vw(13);
             color: $gray-800;
-            margin-bottom: vw(8);
 
-            &:last-of-type {
-              margin-bottom: 0;
+            a{
+              display: block;
+              padding: vw(4) 0;
             }
 
+            &:first-of-type {
+              a{
+                padding-top: 0;
+              }
+            }
+            &:last-of-type {
+              a{
+                padding-bottom: 0;
+              }
+            }
           }
         }
 
