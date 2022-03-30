@@ -98,7 +98,12 @@ data.etc = {
             category: 'etc',
             page: '개인정보처리방침'
         },
-
+        {
+            stateClass: 'complete',
+            url: '회원혜택_팝업',
+            category: 'etc',
+            page: '회원혜택_팝업'
+        },
     ]
 }
 
