@@ -401,6 +401,8 @@
         .btn_version {
           padding-left: vw(16);
           padding-right: vw(16);
+          position: relative;
+          z-index: 2;
 
           .icon {
             vertical-align: unset;
@@ -413,7 +415,7 @@
           text-align: left;
           position: relative;
           top: vw(-16);
-          z-index: -1;
+          z-index: 1;
           border-radius: vw(12);
           display: none;
 
