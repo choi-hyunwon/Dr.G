@@ -1095,5 +1095,21 @@
 
     }
 
+    /*첫검색 예외 버튼 100%*/
+    .footer-details{
+      &.bg-dark{
+        padding: 0;
+        .page-btn-wrap{
+          a{
+            padding: vw(19.5);
+            display: block;
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+      }
+    }
+
   }
 }
